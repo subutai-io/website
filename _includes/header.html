@@ -1,0 +1,140 @@
+<header id="header">
+    <div class="container">
+        <div class="logo">
+            <a href="{{ site.baseurl }}/">
+                <img alt="Porto" width="225" height="120" data-sticky-width="224"
+                     style="margin-bottom:20px; margin-top:20px;"
+                     data-sticky-height="95" src="{{ site.baseurl }}/img/logo.png">
+            </a>
+        </div>
+        <div class="search">
+            <input type="text" id="tipue_drop_input" placeholder="Search..." autocomplete="off"
+                   style="margin-top:35px;">
+
+            <ul id="tipue_drop_content"></ul>
+
+        </div>
+        <nav>
+            <ul class="nav nav-pills nav-top" style="margin-top:55px;">
+                <li></li>
+                <li><a href="{{ site.baseurl }}/contact-us/"><i class="fa fa-user"></i> Create an account</a></li>
+                <li class="phone">
+                    <span><i class="fa fa-sign-in"></i> Sign in</span>
+                </li>
+            </ul>
+        </nav>
+        <button class="btn btn-responsive-nav btn-inverse" data-toggle="collapse" data-target=".nav-main-collapse">
+            <i class="fa fa-bars"></i>
+        </button>
+    </div>
+    <div class="navbar-collapse nav-main-collapse collapse">
+        <div class="container">
+            <ul class="social-icons">
+                <li class="facebook"><a href="http://www.facebook.com/" target="_blank" title="Facebook">Facebook</a>
+                </li>
+                <li class="twitter"><a href="http://www.twitter.com/" target="_blank" title="Twitter">Twitter</a></li>
+                <li class="linkedin"><a href="http://www.linkedin.com/" target="_blank" title="Linkedin">Linkedin</a>
+                </li>
+            </ul>
+            <nav class="nav-main mega-menu">
+                <ul class="nav nav-pills nav-main" id="mainMenu">
+                    <li>
+                        <a title="Home" class="dropdown-toggle" href="{{ site.baseurl }}/">
+                            <i class="fa fa-home"></i> Home
+                        </a>
+
+                    </li>
+                    <li class="dropdown mega-menu-item mega-menu-fullwidth">
+                        <a class="dropdown-toggle" href="#">
+                            SSF Projects
+                            <i class="fa fa-angle-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <div class="mega-menu-content">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <ul class="sub-menu">
+                                                <li><span class="mega-menu-sub-title">HARDWARE PROJECTS</span>
+                                                    <ul class="sub-menu">
+                                                        {% for post in site.tags['hardware'] %}
+                                                        <li><a title="{{ post.title }}" href="{{ post.url }}">
+                                                            {{ post.title }}</a></li>
+                                                        {% endfor %}
+                                                    </ul>
+                                                    <a href="{{ site.baseurl }}/tag/hardware/">More Hardware
+                                                        Projects &nbsp;&nbsp;&nbsp;<i
+                                                                class="fa fa-angle-double-right"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <ul class="sub-menu">
+                                                <li><span class="mega-menu-sub-title">SOFTWARE PROJECTS</span>
+                                                    <ul class="sub-menu">
+                                                        {% for post in site.tags['software'] %}
+                                                        <li><a title="{{ post.title }}" href="{{ post.url }}">
+                                                            {{ post.title }}</a></li>
+                                                        {% endfor %}
+
+                                                    </ul>
+                                                    <a href="{{ site.baseurl }}/tag/software/">More Software
+                                                        Projects &nbsp;&nbsp; &nbsp;<i
+                                                                class="fa fa-angle-double-right"></i></a>
+
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <ul class="sub-menu">
+                                                <li><span class="mega-menu-sub-title">SUBUTAI PROJECTS</span>
+                                                    <ul class="sub-menu">
+                                                            {% for post in site.tags['subutai'] %}
+                                                            <li><a title="{{ post.title }}" href="{{ post.url }}">
+                                                                {{ post.title }}</a></li>
+                                                            {% endfor %}
+
+                                                        </ul>
+                                                        <a href="{{ site.baseurl }}/tag/subutai/">More Subutai Projects
+                                                            &nbsp;&nbsp;&nbsp;<i class="fa fa-angle-double-right"></i>
+                                                        </a>
+
+                                                </li>
+
+                                            </ul>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a title="Sponsorship" href="{{ site.baseurl }}/sponsorship/">Sponsorship </a>
+                    </li>
+                    <li>
+                        <a title="FAQs" href="{{ site.baseurl }}/faq/">FAQs </a>
+                    </li>
+                    <li class="dropdown">
+                        <a title="Contact Us" class="dropdown-toggle" href="{{ site.baseurl }}/contact-us/">
+                            Contact Us
+                            <i class="fa fa-angle-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a title="How to become a member ?" href="{{ site.baseurl }}/membership/"> How to become
+                                a member ?</a></li>
+                            <li><a title="How to become a Affiliate ?" href="{{ site.baseurl }}/forms/"> How to become a
+                                Affiliate ?</a></li>
+                            <li><a title="How to become a Sponsor ?" href="{{ site.baseurl }}/forms/"> How to become a
+                                Sponsor ?</a></li>
+                            <li><a title="How to support SSF ?" href="{{ site.baseurl }}/forms/"> How to support SSF
+                                ?</a></li>
+                        </ul>
+                    </li>
+
+
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>

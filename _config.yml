@@ -1,0 +1,16 @@
+# Site settings
+title: Subutai Social Foundation
+keywords: subutai,social,foundation,ssf
+description: >
+  Subutai Social Foundation Home Page
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "subutai.io"
+
+static-lastmod: Date.parse('2015-05-21')
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+paginate: 4
+paginate_path: ""

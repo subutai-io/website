@@ -1,0 +1,49 @@
+<!-- Basic -->
+<meta charset="utf-8">
+<title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+<meta name="keywords" content="{% if page.keywords %}{{ page.keywords }}{% else %}{{ site.keywords }}{% endif %}" />
+<meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+
+<!-- Mobile Metas -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Web Fonts  -->
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CShadows+Into+Light" rel="stylesheet" type="text/css">
+
+<!-- Vendor CSS -->
+<link rel="stylesheet" href="{{ site.baseurl }}/vendor/bootstrap/bootstrap.css">
+<link rel="stylesheet" href="{{ site.baseurl }}/vendor/fontawesome/css/font-awesome.css">
+<link rel="stylesheet" href="{{ site.baseurl }}/vendor/owlcarousel/owl.carousel.min.css" media="screen">
+<link rel="stylesheet" href="{{ site.baseurl }}/vendor/owlcarousel/owl.theme.default.min.css" media="screen">
+<link rel="stylesheet" href="{{ site.baseurl }}/vendor/magnific-popup/magnific-popup.css" media="screen">
+
+<!-- Theme CSS -->
+<link rel="stylesheet" href="{{ site.baseurl }}/css/theme.css">
+<link rel="stylesheet" href="{{ site.baseurl }}/css/theme-elements.css">
+<link rel="stylesheet" href="{{ site.baseurl }}/css/theme-blog.css">
+<link rel="stylesheet" href="{{ site.baseurl }}/css/theme-shop.css">
+<link rel="stylesheet" href="{{ site.baseurl }}/css/theme-animate.css">
+
+<!-- Current Page CSS -->
+<link rel="stylesheet" href="{{ site.baseurl }}/vendor/rs-plugin/css/settings.css" media="screen">
+<link rel="stylesheet" href="{{ site.baseurl }}/vendor/circle-flip-slideshow/css/component.css" media="screen">
+
+<!-- Skin CSS -->
+<link rel="stylesheet" href="{{ site.baseurl }}/css/skins/default.css">
+
+<!-- Theme Custom CSS -->
+<link rel="stylesheet" href="{{ site.baseurl }}/css/custom.css">
+
+<!-- Head Libs -->
+<script src="{{ site.baseurl }}/vendor/modernizr/modernizr.js"></script>
+
+<!--[if IE]>
+<link rel="stylesheet" href="{{ site.baseurl }}/css/ie.css">
+<![endif]-->
+
+<!--[if lte IE 8]>
+<script src="{{ site.baseurl }}/vendor/respond/respond.js"></script>
+<script src="{{ site.baseurl }}/vendor/excanvas/excanvas.js"></script>
+<![endif]-->
+
+{% if page.css %}{{ page.css }}{% endif %}
