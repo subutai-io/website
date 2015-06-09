@@ -139,7 +139,6 @@ scripts: >
             <div class="col-md-12">
 
                 <!--left side menu-->
-                <!--<div class="stickyPoint"></div>-->
                 <div class="projectResourcesMenuMobile">
 
                     {% if page.jira %}
@@ -260,7 +259,6 @@ scripts: >
                 <!-- project resources menu end -->
 
 
-                <!--<div class="col-sm-9">-->
                 <div class="portfolio-title">
                     <div class="portfolio-nav-all col-md-12">
                         <a href="{{ site.baseurl }}/projects" data-tooltip data-original-title="To projects"><i
@@ -280,11 +278,6 @@ scripts: >
                     <img class="img-thumbnail" src="{{site.baseurl }}/media/{{page.key}}/{{page.website.large_logo_64}}">
                 </div>
 
-
-                {% comment %}
------------------------------------------------------------------------------------
-                {% endcomment %}
-
                 <div class="col-sm-9">
                     <p class="projectDescription">{{ page.long_description }}</p>
 
@@ -294,7 +287,6 @@ scripts: >
                         {% if groups[0] != 'scope' %}
                         <ul class="nav navbar-nav">
                             <li class="dropdown">
-                                <!-- suda-->
                                 <a href="#" class="dropdown-toggle primary" data-toggle="dropdown" role="button" type="button" aria-expanded="false">{{ groups[0] }} <span class="caret"></span></a>
                                 <ul class="dropdown-menu" role="menu">
 
@@ -334,11 +326,11 @@ scripts: >
 
                         <ul class="nav navbar-nav">
                             <li class="dropdown">
-                                <!-- suda-->
+
                                 <a href="#" class="dropdown-toggle primary" data-toggle="dropdown" role="button" type="button" aria-expanded="false">Child projects <span class="caret"></span></a>
                                 <ul class="dropdown-menu" role="menu">
                                     {% for c in page.children %}
-                                    <li><a href="#">{{ c.name }}</a></li>
+                                    <li><a href="{{ c.website.website }}">{{ c.name }}</a></li>
                                     {% endfor %}
                                 </ul>
                             </li>
@@ -348,20 +340,18 @@ scripts: >
 
                         <ul class="nav navbar-nav">
                             <li class="dropdown">
-                                <!-- suda-->
-                                <a href="#" class="dropdown-toggle primary" data-toggle="dropdown" role="button" type="button" aria-expanded="false">Project categories <span class="caret"></span></a>
+
+                                <a href="#" class="dropdown-toggle primary" data-toggle="dropdown" role="button" type="button" aria-expanded="false">Tags <span class="caret"></span></a>
 
                                 <ul class="dropdown-menu" role="menu">
                                     {% for t in page.tags %}
-                                    <li><a href="#">{{ t }}</a></li>
+                                    <li><a href="{{ site.baseurl }}/projects/?category={{ t }}">{{ t }}</a></li>
                                     {% endfor %}
                                 </ul>
                             </li>
                         </ul>
                     </div>
                 </div>
-
-                <!--</div>-->
 
 
             </div>
@@ -438,7 +428,6 @@ scripts: >
             </div>
 
             <!-- right side menu-->
-            <!--<div class="stickyPoint"></div>-->
             <div class="rightSidebar">
                 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 
@@ -517,7 +506,7 @@ scripts: >
                         <div class="panel-heading" role="tab" id="headingThree">
                             <h4 class="panel-title">
                                 <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    Projects categories
+                                    Tags
                                 </a>
                             </h4>
                         </div>
@@ -535,14 +524,8 @@ scripts: >
                     </div>
                 </div>
             </div>
-
-            {% comment %}
-            -----------------------------------------------------------------------------------
-            {% endcomment %}
-
         </div>
         <!-- row end -->
-
     </div>
     <!-- container end -->
 </div>

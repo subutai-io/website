@@ -269,6 +269,7 @@ ul.nav-list.primary > li a {
 	transition: all 0.3s;
 	border-bottom: 1px solid #EDEDDE;
 	padding: 8px 0;
+	text-transform: capitalize;
 }
 
 ul.nav-list.primary > li a:before {
@@ -1053,6 +1054,7 @@ ul.sitemap.list ul {
 	display: inline-block;
 	height: 70px;
 	width: 70px;
+	margin: auto !important;
 }
 
 /* Responsive */
@@ -1398,6 +1400,7 @@ hr.invisible {
 .sort-destination.full-width .isotope-item {
 	width: 20%;
 	float: left;
+	padding: 3px;
 }
 
 .sort-destination.full-width .isotope-item.w2 {
