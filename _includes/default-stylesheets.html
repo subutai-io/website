@@ -1,7 +1,6 @@
-<!-- Basic -->
 <meta charset="utf-8">
 <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-<meta name="keywords" content="{% if page.keywords %}{{ page.keywords }}{% else %}{{ site.keywords }}{% endif %}" />
+<meta name="keywords" content="{% if page.keywords %}{{ page.keywords }}{% else %}{{ site.keywords }}{% endif %}">
 <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
 
 <!-- Mobile Metas -->
@@ -26,7 +25,6 @@
 
 <!-- Current Page CSS -->
 <link rel="stylesheet" href="{{ site.baseurl }}/vendor/rs-plugin/css/settings.css" media="screen">
-<link rel="stylesheet" href="{{ site.baseurl }}/vendor/circle-flip-slideshow/css/component.css" media="screen">
 
 <!-- Skin CSS -->
 <link rel="stylesheet" href="{{ site.baseurl }}/css/skins/default.css">
@@ -46,4 +44,4 @@
 <script src="{{ site.baseurl }}/vendor/excanvas/excanvas.js"></script>
 <![endif]-->
 
-{% if page.css %}{{ page.css }}{% endif %}
+{% if page.css %}{{ page.css | prepend: site.baseurl }}{% endif %}

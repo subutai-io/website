@@ -7,10 +7,6 @@ if [[ -z "$(which jsonnet)" ]]; then
   exit 1
 fi
 
-if [[ "$(which nodejs)" ]]; then
-    alias node="nodejs"
-fi
-
 if [[ -z "$(which node)" ]] || [[ -z "$(which npm)" ]]; then
     echo Can not find nodeJS or npm on your PATH
     echo https://nodejs.org/
@@ -83,6 +79,8 @@ EOF
 
   echo Generated $projects_dir/$now-$key.markdown ...
 done
+
+mkdir $
 
 rm $wkdir/_posts/projects/*
 

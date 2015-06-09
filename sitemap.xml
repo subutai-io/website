@@ -20,11 +20,13 @@ layout: null
   {% endfor %}
 
   {% for page in site.pages %}
+  {% if page.layout %}
   <url>
     <loc>{{ site.url }}{{ page.url }}</loc>
-    <lastmod>{% if page.lastmod %}{{ page.lastmod | date_to_xmlschema }}{% else %}{{ site.static-lastmod }}{% endif %}</lastmod>
+    <lastmod>{% if page.lastmod %}{{ page.lastmod | date_to_xmlschema }}{% else %}{{ site.static-lastmod | date_to_xmlschema }}{% endif %}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
+  {% endif %}
   {% endfor %}
 </urlset>

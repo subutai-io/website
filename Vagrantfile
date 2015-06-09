@@ -20,7 +20,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   # VirtualBox-specific configuration
   config.vm.provider "virtualbox" do |v|
-    v.customize ["modifyvm", :id, "--memory", 512]
+    v.customize ["modifyvm", :id, "--memory", 2048]
     v.customize ["modifyvm", :id, "--cpus", 2]
     v.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
     v.customize ["modifyvm", :id, "--natdnsproxy1", "on"]
@@ -28,14 +28,14 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   # VMWare-specific configuration
   config.vm.provider "vmware_fusion" do |v|
-    v.vmx["memsize"]="512"
+    v.vmx["memsize"]="2048"
     v.vmx["numvcpus"]="2"
   end
 
   # Parallels-specific configuration
   config.vm.provider "parallels" do |v|
     v.optimize_power_consumption = false
-    v.memory = 512
+    v.memory = 2048
     v.cpus = 2
   end
 end

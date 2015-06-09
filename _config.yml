@@ -2,15 +2,17 @@
 title: Subutai Social Foundation
 keywords: subutai,social,foundation,ssf
 description: >
-  Subutai Social Foundation Home Page
+  Subutai Social Foundation
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "subutai.io"
 
-static-lastmod: Date.parse('2015-05-21')
+static-lastmod: Date.parse('2015-06-05')
 
 # Build settings
 markdown: kramdown
 permalink: pretty
 
-paginate: 4
-paginate_path: ""
+exclude: [
+  'Vagrantfile', '*.iml', '*.md', 'node_modules/, *.sh', 'pages/about-us.html', 'pages/contact-us.html',
+  'pages/faq.html', 'pages/forms.html', 'pages/membership.html', 'pages/sponsorship.html', 'pages/legal.html'
+]

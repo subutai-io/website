@@ -1,13 +1,13 @@
 module Jekyll
   class CatsAndTags < Generator
     def generate(site)
-      site.categories.each do |category|
-        build_subpages(site, "category", category)
-      end
-
-      site.tags.each do |tag|
-        build_subpages(site, "tag", tag)
-      end
+      # site.categories.each do |category|
+      #   build_subpages(site, "category", category)
+      # end
+      #
+      # site.tags.each do |tag|
+      #   build_subpages(site, "tag", tag)
+      # end
     end
   end
 end

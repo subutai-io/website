@@ -1,5 +1,6 @@
-.vagrant
+.vagrant/
+node_modules/
+_site/
+.sass-cache/
 .idea/
 *.iml
-_site
-.sass-cache

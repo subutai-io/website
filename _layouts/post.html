@@ -1,5 +1,14 @@
 ---
 layout: default
+
+scripts: >
+    <script src="/js/post.js"></script>
+    <script src="/js/jquery.bxslider.js"></script>
+    <script src="/js/plugins/tweet-fetcher.js"></script>
+    <script>
+        twitterFetcher.fetch('606323790323318784', 'twitter', 10, true);
+        twitterFetcher.fetch('606326217512480768', 'twitter', 5, true, true, false);
+    </script>
 ---
 {% include header.html %}
 
@@ -10,8 +19,8 @@ layout: default
             <div class="row">
                 <div class="col-md-12">
                     <ul class="breadcrumb">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="{{ site.baseurl }}/projects">projects</a></li>
+                        <li><a href="{{ site.baseurl }}/">Home</a></li>
+                        <li><a href="{{ site.baseurl }}/projects">Projects</a></li>
                         <li class="active">{{ page.title }}</li>
                     </ul>
                 </div>
@@ -24,446 +33,518 @@ layout: default
         </div>
     </section>
 
-
-    <div class="container">
-
-        <div class="portfolio-title">
-            <div class="row clearfix">
-                <div class="portfolio-nav-all col-md-1">
-                    <a href="{{ site.baseurl }}/category/projects" data-tooltip data-original-title="To projects"><i
-                            class="fa fa-reply"></i></a>
-                </div>
-                <div class="col-md-10 center">
-                    <h2 class="shorter"></h2>
-                </div>
-                <div class="portfolio-nav col-md-1">
-                </div>
-            </div>
-        </div>
-        
-        <div class="row">
-            <h1>Overview</h1>
-            <p>{{ page.long_description }}</p>
-
-            {% if page.parent %}
-            <a href="{{ site.baseurl }}/projects/{{ page.parent }}" class="btn btn-primary"
-               role="button">Parent: {{ page.parent }} <i class="fa fa-arrow-circle-o-right"></i></a>
-            {% endif %}
-
-
-            {% if page.children %}
-            <hr/>
-            <h1 class="sectionTitle">Sub projects</h1>
-
-            <div>
-                {% for c in page.children %}
-
-                <p><a href="{{ site.baseurl }}/projects/{{ c.parent }}/{{ c.key }}"
-                      class="btn btn-primary" role="button">{{ c.name }} <i
-                        class="fa fa-arrow-circle-o-right"></i></a></p>
-
-                <p> {{ c.short_description }}</p>
-                {% endfor %}
-            </div>
-            {% endif %}
-
-
-            {% if project.hipchat.rooms %}
-            <hr/>
-            <h1>Hipchat rooms</h1>
-            {% for h in project.hipchat.rooms %}
-
-            <p><a href="{{ h.web }}">{{ h.name }}</a></p>
-
-            {% endfor %}
-            {% endif %}
-
-            <!-- Modal -->
-            <div class="modal fade" id="confluenceModal" tabindex="-1" role="dialog" aria-labelledby="confluenceModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                            {% for c in page.confluence.spaces %}
-                            <h4 class="modal-title" id="confluenceModalLabel">{{ c.name }}</h4>
-                        </div>
-                        <div class="modal-body">
-                            <p><strong>Space scope:</strong> {{ c.scope }}</p>
-                            <p><strong>Space type:</strong> {{ c.type }}</p>
-                            <p><strong>Space description:</strong> {{c.description }}</p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            <a href="{{ c.url }}" class="btn btn-primary" role="button">Take me to project space <i class="fa fa-arrow-circle-o-right"></i></a>
-                            {% endfor %}
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <!-- Modal -->
-            <div class="modal fade" id="jiraModal" tabindex="-1" role="dialog" aria-labelledby="jiraModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                            <h4 class="modal-title" id="jiraModalLabel">{{ page.jira.name }}</h4>
-                        </div>
-                        <div class="modal-body">
-                            <p><strong>Project description in Jira: </strong>{{ page.jira.description }}</p>
-                            <p><strong>Project scope in Jira: </strong>{{ page.jira.scope }}</p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            <a href="{{ page.jira.url }}" class="btn btn-primary" role="button">Project on Jira <i class="fa fa-arrow-circle-o-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <!-- Modal -->
-            <div class="modal fade" id="stashModal" tabindex="-1" role="dialog" aria-labelledby="stashModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                            <h4 class="modal-title" id="stashModalLabel">{{ page.stash.project.name }}</h4>
-                        </div>
-                        <div class="modal-body">
-                            <h5>Repos</h5>
-                            {% for p in page.stash.project.repositories %}
-                            <p><strong>Repository name: </strong>{{ p.name }}</p>
-                            <p><strong>Repository scope: </strong>{{ p.scope }}</p>
-                            <a href="{{ p.url }}" class="btn btn-primary" role="button">Repository <i class="fa fa-arrow-circle-o-right"></i></a>
-                            {% endfor %}
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            <a href="{{ page.stash.project.url }}" class="btn btn-primary" role="button">Project on Stash <i class="fa fa-arrow-circle-o-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-12"><br>
-
-                <div class="row atlassianBlock">
-                    <div class="col-md-4">
-                        <div class="col-md-12 infrastructure">
-                            <a type="button" data-toggle="modal" data-target="#jiraModal">
-                                <div class="infrastructure-box-icon">
-                                    <h4 class="infrastructure-product jira">JIRA</h4>
-                                </div>
-                            </a>
-                        </div>
-                        <br><br>
-
-                        <div class="col-md-12  infrastructure">
-                            <a type="button" data-toggle="modal" data-target="#confluenceModal">
-                                <div class="infrastructure-box-icon">
-                                    <h4 class="infrastructure-product confluence">Confluence</h4>
-                                </div>
-                            </a>
-                        </div>
-                        <br><br>
-
-                        <div class="col-md-12 infrastructure">
-                            <a type="button" data-toggle="modal" data-target="#stashModal">
-                                <div class="infrastructure-box-icon">
-                                    <h4 class="infrastructure-product stash">Stash</h4>
-                                </div>
-                            </a>
-                        </div>
-                        <br><br>
-
-                        <div class="col-md-12 infrastructure">
-                            <a type="button" data-toggle="modal" data-target="#bambooModal">
-                                <div class="infrastructure-box-icon">
-                                    <h4 class="infrastructure-product bamboo">Bamboo</h4>
-                                </div>
-                            </a>
-                        </div>
-                        <br><br>
-
-                    </div>
-                    <div class="col-md-4">
-                        <div class="col-md-12 infrastructure">
-                            <a type="button" data-toggle="modal" data-target="#cloverModal">
-                                <div class="infrastructure-box-icon">
-                                    <h4 class="infrastructure-product clover">Clover</h4>
-                                </div>
-                            </a>
-                        </div>
-                        <br><br>
-
-                        <div class="col-md-12 infrastructure">
-                            <a type="button" data-toggle="modal" data-target="#calendarModal">
-                                <div class="infrastructure-box-icon">
-                                    <h4 class="infrastructure-product team-calendar">TeamCalendars</h4>
-                                </div>
-                            </a>
-                        </div>
-                        <br><br>
-
-                        <div class="col-md-12 infrastructure">
-                            <a type="button" data-toggle="modal" data-target="#gliffyModal">
-                                <div class="infrastructure-box-icon">
-                                    <h4 class="infrastructure-product gliffy">Gliffy</h4>
-                                </div>
-                            </a>
-                        </div>
-                        <br><br>
-
-                        <div class="col-md-12 infrastructure">
-                            <a type="button" data-toggle="modal" data-target="#crowdModal">
-                                <div class="infrastructure-box-icon">
-                                    <h4 class="infrastructure-product crowd">Crowd</h4>
-                                </div>
-                            </a>
-                        </div>
-                        <br><br>
-
-                    </div>
-                    <div class="col-md-4">
-                        <div class="col-md-12 infrastructure">
-                            <a type="button" data-toggle="modal" data-target="#fisheyeModal">
-                                <div class="infrastructure-box-icon">
-                                    <h4 class="infrastructure-product fisheye">Fisheye</h4>
-                                </div>
-                            </a>
-                        </div>
-                        <br><br>
-
-                        <div class="col-md-12 infrastructure">
-                            <a type="button" data-toggle="modal" data-target="#crucibleModal">
-                                <div class="infrastructure-box-icon">
-                                    <h4 class="infrastructure-product crucible">Crucible</h4>
-                                </div>
-                            </a>
-                        </div>
-                        <br><br>
-
-                        <div class="col-md-12 infrastructure">
-                            <a type="button" data-toggle="modal" data-target="#ideaModal">
-                                <div class="infrastructure-box-icon">
-                                    <h4 class="infrastructure-product intelij-idea">IntelijIDEA</h4>
-                                </div>
-                            </a>
-                        </div>
-                        <br><br>
-
-                        <div class="col-md-12 infrastructure">
-                            <a type="button" href="{{ page.sonar.url }}">
-                                <div class="infrastructure-box-icon">
-                                    <h4 class="infrastructure-product sonar-qube">SonarQube</h4>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="container projectContainer">
 
         <div class="row">
-            <div class="center push-top">
-                <div class="owl-carousel" data-plugin-options='{"items": 6, "autoplay": true, "autoplayTimeout": 3000}'>
-                    <div>
-                        <a href="{{ site.baseurl }}/" title="Logo 1 "><img class="img-responsive" src="{{ site.baseurl }}/img/logos/logo-1.png" alt=""></a>
+
+            <div class="projectResourcesMenu">
+                <h4 class="resourceMenuTitle">Project resources menu</h4>
+                <div class="sliderVertical">
+                    {% if page.jira %}
+
+                    <div class="col-md-12 submenuHover" toggle-hov="jiraSubmenuHover" data-toggle="tooltip" data-placement="right" title="Jira">
+                        <a type="button" href="{{ page.jira.url }}" class="atlassianIcon" target="_blank">
+                            <img src="{{ site.baseurl }}/img/infrastructure/JIRA.png" alt="">
+                        </a>
+
                     </div>
-                    <div>
-                        <a href="{{ site.baseurl }}/" title="Logo 2 "><img class="img-responsive" src="{{ site.baseurl }}/img/logos/logo-2.png" alt="logo2"></a>
+                    {% endif %}
+
+                    {% if page.confluence %}
+                    <div class="col-md-12 submenuHover" toggle-hov="confluenceSubmenuHover" data-toggle="tooltip" data-placement="right" title="Confluence">
+
+                        <a type="button" class="atlassianIcon">
+                            <img src="{{ site.baseurl }}/img/infrastructure/Confluence.png" alt="">
+                        </a>
+
                     </div>
-                    <div>
-                        <a href="{{ site.baseurl }}/" title="Logo 3 "> <img class="img-responsive" src="{{ site.baseurl }}/img/logos/logo-3.png" alt="logo3"></a>
+                    {% endif %}
+
+                    {% if page.stash %}
+                    <div class="col-md-12 submenuHover" toggle-hov="stashSubmenuHover" data-toggle="tooltip" data-placement="right" title="Stash">
+
+                        <a type="button" class="atlassianIcon">
+                            <img src="{{ site.baseurl }}/img/infrastructure/Stash.png" alt="">
+                        </a>
                     </div>
-                    <div>
-                        <a href="{{ site.baseurl }}/" title="Logo 4 "> <img class="img-responsive" src="{{ site.baseurl }}/img/logos/logo-4.png" alt="logo4"></a>
+                    {% endif %}
+
+                    {% if page.sonar %}
+                    <div class="col-md-12 submenuHover" toggle-hov="sonarSubmenuHover" data-toggle="tooltip" data-placement="right" title="Sonar">
+                        <a type="button" href="{{ page.sonar.url }}" class="atlassianIcon" target="_blank">
+                            <img src="{{ site.baseurl }}/img/infrastructure/SonarQube.png" alt="">
+                        </a>
                     </div>
-                    <div>
-                        <a href="{{ site.baseurl }}/" title="Logo 5 "> <img class="img-responsive" src="{{ site.baseurl }}/img/logos/logo-5.png" alt="logo5"></a>
+                    {% endif %}
+
+                    {% if page.hipchat %}
+                    <div class="col-md-12 submenuHover" toggle-hov="hipchatSubmenuHover" data-toggle="tooltip" data-placement="right" title="HipChat">
+
+                        <a type="button" class="atlassianIcon">
+                            <img src="{{ site.baseurl }}/img/icons/atlassian-icons/Hipchat.png" alt="{{ h.name }}"/>
+                        </a>
                     </div>
-                    <div>
-                        <a href="{{ site.baseurl }}/" title="Logo 6 "> <img class="img-responsive" src="{{ site.baseurl }}/img/logos/logo-6.png" alt="logo6"></a>
+                    {% endif %}
+
+                    {% if page.upsource %}
+                    <div class="col-md-12 submenuHover" toggle-hov="upsourceSubmenuHover" data-toggle="tooltip" data-placement="right" title="Upsource">
+                        <a type="button" href="{{ page.upsource.url }}" class="atlassianIcon" target="_blank">
+                            <img src="{{ site.baseurl }}/img/icons/atlassian-icons/Upsource.png" alt="">
+                        </a>
                     </div>
-                    <div>
-                        <a href="{{ site.baseurl }}/" title="Logo 4 "><img class="img-responsive" src="{{ site.baseurl }}/img/logos/logo-4.png" alt="logo4"></a>
-                    </div>
-                    <div>
-                        <a href="{{ site.baseurl }}/" title="Logo 2 "><img class="img-responsive" src="{{ site.baseurl }}/img/logos/logo-2.png" alt="logo2"></a>
-                    </div>
+                    {% endif %}
                 </div>
-            </div>
-            <!--<div class="col-md-12 banners center">-->
-            <!--<h4>Banners</h4>-->
 
-            <!--{% for b in page.website.banner_media %}-->
-            <!--<div>{{ b }}</div>-->
-            <!--{% endfor %}-->
 
-            <!--</div>-->
-        </div>
+                <!--tooltips-->
+                <div class="projectResourcesSubmenu confluenceSubmenuHover">
+                    <ul class="submenuIconSet">
+                        {% for c in page.confluence.spaces %}
+                        <li>
+                            <a type="button" href="{{ c.url }}" class="confluenceSubitem subDesr" target="_blank"  data-toggle="tooltip" data-placement="top" title="{{ c.description }}">
+                                <img src="{{ site.basurl }}/img/confl.png">
+                            </a>
+                        </li>
 
-        <div class="row">
-            <div class="col-md-9">
-                <div class="tabs">
-                    <ul class="nav nav-tabs">
-                        <li class="active">
-                            <a href="#whois" data-toggle="tab"><i class="fa fa-star"></i> Who is involved </a>
-                        </li>
-                        {% if page.domains %}
-                        <li>
-                            <a href="#domains" data-toggle="tab"> Domains </a>
-                        </li>
-                        {% endif %}
-                        {% if page.hub %}
-                        <li>
-                            <a href="#hub" data-toggle="tab"> Hub </a>
-                        </li>
-                        {% endif %}
-                        {% if page.jarvis %}
-                        <li>
-                            <a href="#jarvis" data-toggle="tab"> Jarvis </a>
-                        </li>
-                        {% endif %}
-                        {% if page.keshing %}
-                        <li>
-                            <a href="#keshing" data-toggle="tab"> Keshing </a>
-                        </li>
-                        {% endif %}
-                        {% if page.list_archives %}
-                        <li>
-                            <a href="#list_archives" data-toggle="tab"> Archives </a>
-                        </li>
-                        {% endif %}
-                        {% if page.mail_lists %}
-                        <li>
-                            <a href="#mail_lists" data-toggle="tab"> Mail lists </a>
-                        </li>
-                        {% endif %}
-                        {% if page.nexus %}
-                        <li>
-                            <a href="#nexus" data-toggle="tab"> Nexus </a>
-                        </li>
-                        {% endif %}
-                        {% if page.ontologies %}
-                        <li>
-                            <a href="#ontologies" data-toggle="tab"> Ontologies </a>
-                        </li>
-                        {% endif %}
-                        {% if page.monitoring %}
-                        <li>
-                            <a href="#monitoring" data-toggle="tab"> Monitoring </a>
-                        </li>
-                        {% endif %}
+                        {% endfor %}
                     </ul>
-                    <div class="tab-content">
-                        <div id="whois" class="tab-pane active">
+                </div>
 
-                            {% for groups in page.security %}
-                            {% for g in groups %}
-                            <h1 class="sectionTitle">{{ g.displayName }}</h1>
-                            {% for t in g.teams %}
+                <div class="projectResourcesSubmenu stashSubmenuHover">
+                    <ul class="submenuIconSet">
+                        {% for p in page.stash.project.repositories %}
+                        <li data-toggle="tooltip" data-placement="top" title="{{ p.name }}">
+                            <a type="button" href="{{ p.url }}" class="stashSubitem subDesr" target="_blank">
+                                <img src="{{ site.baseurl }}/img/code.png">
+                            </a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
 
-                            <p>{{ t.displayName }}</p>
+                <div class="projectResourcesSubmenu hipchatSubmenuHover">
+                    <ul class="submenuIconSet">
+                        {% for h in page.hipchat.rooms %}
+                        <li data-toggle="tooltip" data-placement="top" title="{{ h.name }}">
+                            <a type="button" href="{{ h.web_url }}" class="hipchatSubitem subDesr" target="_blank">
+                                <img src="{{ site.baseurl }}/img/hip.png">
+                            </a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
 
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <div class="thumbnail">
-                                        <img data-src="holder.js/100%x200" alt="100%x200"
-                                             src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMjQyIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDI0MiAyMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxkZWZzLz48cmVjdCB3aWR0aD0iMjQyIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI0VFRUVFRSIvPjxnPjx0ZXh0IHg9IjkyLjQ2ODc1IiB5PSIxMDAiIHN0eWxlPSJmaWxsOiNBQUFBQUE7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LWZhbWlseTpBcmlhbCwgSGVsdmV0aWNhLCBPcGVuIFNhbnMsIHNhbnMtc2VyaWYsIG1vbm9zcGFjZTtmb250LXNpemU6MTFwdDtkb21pbmFudC1iYXNlbGluZTpjZW50cmFsIj4yNDJ4MjAwPC90ZXh0PjwvZz48L3N2Zz4="
-                                             data-holder-rendered="true"
-                                             style="height: 200px; width: 100%; display: block;">
 
-                                        <div class="caption">
-                                            <h3>{{ t.ldap-user.cn }}</h3>
+            <div class="col-md-12">
 
-                                            <p>- {{ t.ldap-user.email }}</p>
+                <!--left side menu-->
+                <!--<div class="stickyPoint"></div>-->
+                <div class="projectResourcesMenuMobile">
 
-                                            {% if t.blog_page %}
-                                            <p><i class="fa fa-paragraph"></i> {{ t.blog_page }}</p>
-                                            {% endif %}
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                    {% if page.jira %}
+                    <div class="col-md-12 submenuHover">
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle atlassianIcon" data-toggle="dropdown" role="button" aria-expanded="false">
+                                    <img src="{{ site.baseurl }}/img/infrastructure/JIRA.png" alt=""></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li>
+                                        <a type="button" href="{{ page.jira.url }}" class="confluenceSubitem subDesr" target="_blank">
+                                            Jira
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    {% endif %}
 
-                            {% endfor %}
-                            {% endfor %}
-                            {% endfor %}
+                    {% if page.confluence %}
+                    <div class="col-md-12 submenuHover">
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle atlassianIcon" data-toggle="dropdown" role="button" aria-expanded="false">
+                                    <img src="{{ site.baseurl }}/img/infrastructure/Confluence.png" alt=""></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    {% for c in page.confluence.spaces %}
+                                    <li>
+                                        <a type="button" href="{{ c.url }}" class="confluenceSubitem subDesr" target="_blank">
+                                            {{ c.name }}
+                                        </a>
+                                    </li>
+                                    {% endfor %}
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    {% endif %}
 
-                        </div>
+                    {% if page.stash %}
+                    <div class="col-md-12 submenuHover">
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle atlassianIcon" data-toggle="dropdown" role="button" aria-expanded="false">
+                                    <img src="{{ site.baseurl }}/img/infrastructure/Stash.png" alt=""></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    {% for p in page.stash.project.repositories %}
+                                    <li>
+                                        <a type="button" href="{{ p.url }}" class="confluenceSubitem subDesr" target="_blank">
+                                            {{ p.name }}
+                                        </a>
+                                    </li>
+                                    {% endfor %}
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    {% endif %}
 
-                        <div id="domains" class="tab-pane">
-                            <p>Domains</p>
-                            {{ page.domains }}
-                        </div>
+                    {% if page.sonar %}
+                    <div class="col-md-12 submenuHover">
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle atlassianIcon" data-toggle="dropdown" role="button" aria-expanded="false">
+                                    <img src="{{ site.baseurl }}/img/infrastructure/SonarQube.png" alt=""></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li>
+                                        <a type="button" href="{{ page.sonar.url }}" class="confluenceSubitem subDesr" target="_blank">
+                                            Sonar
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    {% endif %}
 
-                        <div id="hub" class="tab-pane">
-                            <p>Hub</p>
-                            {{ page.hub }}
-                        </div>
+                    {% if page.hipchat %}
+                    <div class="col-md-12 submenuHover">
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle atlassianIcon" data-toggle="dropdown" role="button" aria-expanded="false">
+                                    <img src="{{ site.baseurl }}/img/icons/atlassian-icons/Hipchat.png" alt=""></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    {% for h in page.hipchat.rooms %}
+                                    <li>
+                                        <a type="button" href="{{ h.web_url }}" class="confluenceSubitem subDesr" target="_blank">
+                                            Hipchat - {{ h.name }}
+                                        </a>
+                                    </li>
+                                    {% endfor %}
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    {% endif %}
 
-                        <div id="jarvis" class="tab-pane">
-                            <p>Jarvis</p>
-                            {{ page.jarvis }}
-                        </div>
+                    {% if page.upsource %}
+                    <div class="col-md-12 submenuHover">
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle atlassianIcon" data-toggle="dropdown" role="button" aria-expanded="false">
+                                    <img src="{{ site.baseurl }}/img/icons/atlassian-icons/Upsource.png" alt=""></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li>
+                                        <a type="button" href="{{ page.upsource.url }}" class="confluenceSubitem subDesr" target="_blank">
+                                            Sonar
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    {% endif %}
 
-                        <div id="keshing" class="tab-pane">
-                            <p>Keshing</p>
-                            {{ page.keshing }}
-                        </div>
+                </div>
+                <!-- project resources menu end -->
 
-                        <div id="list_archives" class="tab-pane">
-                            <p>Archives</p>
-                            {{ page.list_archives }}
-                        </div>
 
-                        <div id="mail_lists" class="tab-pane">
-                            <p>Mail lists</p>
-                            {{ page.mail_lists }}
-                        </div>
+                <!--<div class="col-sm-9">-->
+                <div class="portfolio-title">
+                    <div class="portfolio-nav-all col-md-12">
+                        <a href="{{ site.baseurl }}/projects" data-tooltip data-original-title="To projects"><i
+                                class="fa fa-reply"></i></a>
 
-                        <div id="nexus" class="tab-pane">
-                            <p>Nexus</p>
-                            {{ page.nexus }}
-                        </div>
+                        <h4>Project key: </h4> <h4 class="projectKey"><strong> {{ page.key }} </strong></h4>
+                        {% if page.parent %}
+                        <h4>Project parent: </h4> <h4 class="projectKey"><strong> <a href="{{ site.baseurl }}/projects/{{ page.parenturl }}">{{ page.parent }} </a></strong></h4>
+                        {% endif %}
 
-                        <div id="ontologies" class="tab-pane">
-                            <p>Ontologies</p>
-                            {{ page.ontologies }}
-                        </div>
 
-                        <div id="monitoring" class="tab-pane">
-                            <p>Monitoring</p>
-                            {{ page.monitoring }}
-                        </div>
                     </div>
                 </div>
 
-            </div>
-            <div class="col-md-3 related-projects">
-                <aside class="sidebar">
-                    <h4>PROJECT TAGS</h4>
-                    {% for t in page.tags %}
+                <!-- project title end -->
+                <div class="col-sm-3">
+                    <img class="img-thumbnail" src="{{site.baseurl }}/media/{{page.key}}/{{page.website.large_logo_64}}">
+                </div>
 
-                    <ul class="nav nav-list primary">
-                        <li><a href="{{ site.baseurl }}/tag/{{ t }}">{{ t }}</a></li>
-                    </ul>
+
+                {% comment %}
+-----------------------------------------------------------------------------------
+                {% endcomment %}
+
+                <div class="col-sm-9">
+                    <p class="projectDescription">{{ page.long_description }}</p>
+
+                    <div class="rightSidebarMobile">
+
+                        {% for groups in page.security %}
+                        {% if groups[0] != 'scope' %}
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <!-- suda-->
+                                <a href="#" class="dropdown-toggle primary" data-toggle="dropdown" role="button" type="button" aria-expanded="false">{{ groups[0] }} <span class="caret"></span></a>
+                                <ul class="dropdown-menu" role="menu">
+
+                                    {% for g in groups %}
+
+                                    {% for member in g.members %}
+                                    <li><a href="#">{{ member.ldap-user.cn }}</a></li>
+                                    {% endfor %}
+
+                                    {% if g.teams %}
+                                    {% for t in g.teams %}
+                                    {% if t.members%}
+                                    {% for member in t.members %}
+                                    <li><a href="#"> {{ member.ldap-user.cn }}</a></li>
+                                    {% endfor %}
+                                    {% endif %}
+                                    {% if  t.ldap-user %}
+                                    <li><a href="#">{{ t.ldap-user.cn }}</a> </li>
+                                    {%endif%}
+                                    {% endfor %}
+                                    {% endif %}
+
+                                    {% if g.ldap-user %}
+                                    <li><a href="#">{{ g.ldap-user.cn }}</a> </li>
+                                    {% endif %}
+
+                                    {% endfor %}
+                                </ul>
+
+
+                            </li>
+                        </ul>
+                        {% endif %}
+                        {% endfor %}
+
+                        {% if page.children %}
+
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <!-- suda-->
+                                <a href="#" class="dropdown-toggle primary" data-toggle="dropdown" role="button" type="button" aria-expanded="false">Child projects <span class="caret"></span></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    {% for c in page.children %}
+                                    <li><a href="#">{{ c.name }}</a></li>
+                                    {% endfor %}
+                                </ul>
+                            </li>
+                        </ul>
+                        {% endif %}
+
+
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <!-- suda-->
+                                <a href="#" class="dropdown-toggle primary" data-toggle="dropdown" role="button" type="button" aria-expanded="false">Project categories <span class="caret"></span></a>
+
+                                <ul class="dropdown-menu" role="menu">
+                                    {% for t in page.tags %}
+                                    <li><a href="#">{{ t }}</a></li>
+                                    {% endfor %}
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!--</div>-->
+
+
+            </div>
+            <div class="col-md-12">
+                <hr/>
+                <div id="bannerSlider" class="owl-carousel">
+
+                    {% if page.website.banner_media %}
+                    {% for b in page.website.banner_media %}
+
+                    <div><img src="{{ site.baseurl }}/media/banners/{{b}}" alt=""></div>
+
 
                     {% endfor %}
-                </aside>
+                    {% endif %}
+                </div>
+                <hr/>
             </div>
 
+            <div class="col-md-12">
+                <div class="tabs customTabsDesign fadeInUp">
+                    <ul class="nav nav-tabs">
+                        <li class="active">
+                            <a href="#downloads" data-toggle="tab"> <i class="fa fa-cloud-download"></i>Downloads </a>
+                        </li>
+                        <li>
+                            <a href="#news" data-toggle="tab"><i class="fa fa-newspaper-o"></i> News </a>
+                        </li>
+                        <li>
+                            <a href="#blogs" data-toggle="tab"><i class="fa fa-rss"></i> Blogs </a>
+                        </li>
+                        <li>
+                            <a href="#twitter" data-toggle="tab"> <i class="fa fa-twitter"></i>Twitter </a>
+                        </li>
+                        <li>
+                            <a href="#activity" data-toggle="tab"> <i class="fa fa-git"></i>Activity </a>
+                        </li>
 
-            {{ content }}
+                    </ul>
+                    <div class="tab-content">
+                        <div id="downloads" class="tab-pane active">
+                            {% for d in page.website.downloads %}
+                            <a href="{{ d.url }}">{{ d.description }}</a>
+                            {% endfor %}
+                        </div>
+                        <div id="news" class="tab-pane">
+                            {% for post in site.categories['news'] %}
+                            {% for tag in post.tags %}
+                            {% if tag == 'SS' %}
+                            <div>
+                                <a href="{{ post.url }}">{{ post.title }}</a>
+                                <div>{{ post.content | strip_html | strip_newlines | jsonify | replace:'\t','' | truncatewords: 10 }}</div>
+                                <div>{{ post.date | date_to_string }} <a href="{{ post.url }}">Read more</a></div>
+                            </div>
+                            {% endif %}
+                            {% endfor %}
+                            {% endfor %}
+                        </div>
+                        <div id="blogs" class="tab-pane">
+                            {% for b in page.website.blogs %}
+                            <p><a href="{{ b }}"><i class="fa fa-paragraph"></i> {{ b }}</a></p>
+                            {% endfor %}
+                        </div>
+                        <div id="twitter" class="tab-pane">
+                            No tweets
+                        </div>
+                        <div id="activity" class="tab-pane">
+                            <hidden id="activity_rep" value="{{ page.key }}"></hidden>
+                            Access to git commits denied
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- right side menu-->
+            <!--<div class="stickyPoint"></div>-->
+            <div class="rightSidebar">
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+                    {% for groups in page.security %}
+
+                    {% if groups[0] != 'scope' %}
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="heading{{ groups[0] }}">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse{{ groups[0] }}" aria-expanded="false" aria-controls="collapse{{ groups[0] }}">
+                                    {{ groups[0] | camelcase }}
+                                </a>
+                            </h4>
+                        </div>
+
+                        <div id="collapse{{ groups[0] }}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading{{group[0]}}">
+                            <div class="panel-body">
+                                <ul class="projectDevelopers">
+
+                                    {% for g in groups %}
+                                    {% for member in g.members %}
+                                    <i class="fa fa-user"></i> {{ member.ldap-user.cn }}
+                                    {% endfor %}
+
+
+                                    {% for t in g.teams %}
+                                    {% if t.members %}
+                                    {% for member in t.members %}
+                                    <i class="fa fa-user"></i> {{ member.ldap-user.cn }}
+                                    {% endfor %}
+                                    {% endif %}
+                                    {% if t.ldap-user %}
+                                    <i class="fa fa-user"></i> {{ t.ldap-user.cn }}
+                                    {% endif %}
+                                    {% endfor %}
+
+                                    {% if g.ldap-user %}
+                                    <i class="fa fa-user"></i> {{ g.ldap-user.cn }}
+                                    {% endif %}
+
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+
+                    {% if page.children %}
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                            <h4 class="panel-title">
+                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Child projects
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                            <div class="panel-body">
+                                <div>
+                                    {% for c in page.children %}
+
+                                    <ul class="nav nav-list primary">
+                                        <li><a href="{{ site.baseurl }}/projects/{{ c.website.website }}">{{ c.name }}</a></li>
+                                    </ul>
+
+                                    {% endfor %}
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    {% endif %}
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingThree">
+                            <h4 class="panel-title">
+                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Projects categories
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                {% for t in page.tags %}
+
+                                <ul class="nav nav-list primary">
+                                    <li><a href="{{ site.baseurl }}/projects/?category={{ t }}">{{ t }}</a></li>
+                                </ul>
+
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {% comment %}
+            -----------------------------------------------------------------------------------
+            {% endcomment %}
+
         </div>
+        <!-- row end -->
 
     </div>
-
+    <!-- container end -->
 </div>
 
 {% include footer.html %}
