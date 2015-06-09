@@ -1,16 +1,14 @@
 #!/bin/bash
 
-if [[ -z "$(which curl)" ]]; then
-  echo Can not find curl on your PATH
-  echo please run apt-get install curl
-  exit 1
-fi
-
 if [[ -z "$(which jsonnet)" ]]; then
   echo Can not find jsonnet on your PATH
   echo Add to your path or clone, build, and install from
   echo https://github.com/google/jsonnet
   exit 1
+fi
+
+if [[ "$(which nodejs)" ]]; then
+    alias node="nodejs"
 fi
 
 if [[ -z "$(which node)" ]] || [[ -z "$(which npm)" ]]; then
