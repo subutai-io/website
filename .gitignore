@@ -2,5 +2,6 @@
 node_modules/
 _site/
 .sass-cache/
+_posts/projects/
 .idea/
 *.iml
