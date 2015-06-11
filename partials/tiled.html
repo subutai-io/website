@@ -1,0 +1,35 @@
+<loop>
+    <div class="col-md-6" style="margin-bottom: 22px">
+        <div class="col-md-4">
+            <a href="{{ url }}" class="thumb-info secundary">
+                <div class="thumbnail-project">
+                    <img alt="" class="img-responsive" src="/media/{{ key }}/{{ img }}">
+                <span class="thumb-info-title">
+                    <span class="thumb-info-inner">{{ title }}</span>
+                    <span class="thumb-info-type">Learn More</span>
+                </span>
+                <span class="thumb-info-action">
+                    <span class="thumb-info-action-icon">
+                        <i class="fa fa-ellipsis-v"></i>
+                    </span>
+                </span>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-md-7">
+            <h5><a href="{{ url }}">{{ title }}</a></h5>
+
+            <p>{{ content }}</p>
+
+            <ul class="project-details">
+                <li>
+                    <ul class="list list-skills icons list-unstyled list-unstyled">
+                        <li><a href="{{ url }}"> Read more</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</loop>

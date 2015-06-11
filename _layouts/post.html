@@ -1,9 +1,14 @@
 ---
 layout: default
 
+css: >
+    <link href="/css/jquery.mCustomScrollbar.css" rel="stylesheet">
+
 scripts: >
     <script src="/js/post.js"></script>
     <script src="/js/jquery.bxslider.js"></script>
+    <script src="/js/jquery.mCustomScrollbar.js"></script>
+    <script src="/js/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="/js/plugins/tweet-fetcher.js"></script>
     <script>
         twitterFetcher.fetch('606323790323318784', 'twitter', 10, true);
@@ -100,12 +105,13 @@ scripts: >
                 <div class="projectResourcesSubmenu confluenceSubmenuHover">
                     <ul class="submenuIconSet">
                         {% for c in page.confluence.spaces %}
+                        {% if c.scope == 'public' %}
                         <li>
                             <a type="button" href="{{ c.url }}" class="confluenceSubitem subDesr" target="_blank"  data-toggle="tooltip" data-placement="top" title="{{ c.description }}">
                                 <img src="{{ site.basurl }}/img/confl.png">
                             </a>
                         </li>
-
+                        {% endif %}
                         {% endfor %}
                     </ul>
                 </div>
@@ -139,6 +145,7 @@ scripts: >
             <div class="col-md-12">
 
                 <!--left side menu-->
+                <!--<div class="stickyPoint"></div>-->
                 <div class="projectResourcesMenuMobile">
 
                     {% if page.jira %}
@@ -259,6 +266,7 @@ scripts: >
                 <!-- project resources menu end -->
 
 
+                <!--<div class="col-sm-9">-->
                 <div class="portfolio-title">
                     <div class="portfolio-nav-all col-md-12">
                         <a href="{{ site.baseurl }}/projects" data-tooltip data-original-title="To projects"><i
@@ -278,16 +286,17 @@ scripts: >
                     <img class="img-thumbnail" src="{{site.baseurl }}/media/{{page.key}}/{{page.website.large_logo_64}}">
                 </div>
 
+
                 <div class="col-sm-9">
                     <p class="projectDescription">{{ page.long_description }}</p>
 
                     <div class="rightSidebarMobile">
 
                         {% for groups in page.security %}
-                        {% if groups[0] != 'scope' %}
+                        {% if groups[0] == 'admins' or groups[0] == 'developers' or groups[0] == 'lead' %}
                         <ul class="nav navbar-nav">
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle primary" data-toggle="dropdown" role="button" type="button" aria-expanded="false">{{ groups[0] }} <span class="caret"></span></a>
+                                <a href="#" class="dropdown-toggle primary" data-toggle="dropdown" role="button" type="button" aria-expanded="false">{{ groups[0] | upcase }} <span class="caret"></span></a>
                                 <ul class="dropdown-menu" role="menu">
 
                                     {% for g in groups %}
@@ -326,11 +335,11 @@ scripts: >
 
                         <ul class="nav navbar-nav">
                             <li class="dropdown">
-
+                                <!-- suda-->
                                 <a href="#" class="dropdown-toggle primary" data-toggle="dropdown" role="button" type="button" aria-expanded="false">Child projects <span class="caret"></span></a>
                                 <ul class="dropdown-menu" role="menu">
                                     {% for c in page.children %}
-                                    <li><a href="{{ c.website.website }}">{{ c.name }}</a></li>
+                                    <li><a href="#">{{ c.name }}</a></li>
                                     {% endfor %}
                                 </ul>
                             </li>
@@ -340,18 +349,20 @@ scripts: >
 
                         <ul class="nav navbar-nav">
                             <li class="dropdown">
-
+                                <!-- suda-->
                                 <a href="#" class="dropdown-toggle primary" data-toggle="dropdown" role="button" type="button" aria-expanded="false">Tags <span class="caret"></span></a>
 
                                 <ul class="dropdown-menu" role="menu">
                                     {% for t in page.tags %}
-                                    <li><a href="{{ site.baseurl }}/projects/?category={{ t }}">{{ t }}</a></li>
+                                    <li><a href="#">{{ t }}</a></li>
                                     {% endfor %}
                                 </ul>
                             </li>
                         </ul>
                     </div>
                 </div>
+
+                <!--</div>-->
 
 
             </div>
@@ -428,44 +439,49 @@ scripts: >
             </div>
 
             <!-- right side menu-->
+            <!--<div class="stickyPoint"></div>-->
             <div class="rightSidebar">
                 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 
                     {% for groups in page.security %}
 
-                    {% if groups[0] != 'scope' %}
+                    {% if groups[0] == 'admins' or groups[0] == 'developers' or groups[0] == 'lead' %}
                     <div class="panel panel-default">
-                        <div class="panel-heading" role="tab" id="heading{{ groups[0] }}">
+                        <div class="panel-heading" role="tab" id="heading{{ groups[0] | capitalize }}">
                             <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse{{ groups[0] }}" aria-expanded="false" aria-controls="collapse{{ groups[0] }}">
-                                    {{ groups[0] | camelcase }}
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse{{ groups[0] | capitalize }}" aria-expanded="false" aria-controls="collapse{{ groups[0] | capitalize }}">
+                                    {{ groups[0] | capitalize }}
                                 </a>
                             </h4>
                         </div>
 
-                        <div id="collapse{{ groups[0] }}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading{{group[0]}}">
+                        <div id="collapse{{ groups[0] | capitalize }}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading{{ groups[0] | capitalize }}">
                             <div class="panel-body">
-                                <ul class="projectDevelopers">
+                                <ul class="projectDevelopers mCustomScrollbar" data-mcs-theme="minimal-dark">
 
                                     {% for g in groups %}
                                     {% for member in g.members %}
-                                    <i class="fa fa-user"></i> {{ member.ldap-user.cn }}
+                                    {% if member.ldap-user.cn %}
+                                    <li><i class="fa fa-user"></i> {{ member.ldap-user.cn }}</li>
+                                    {% endif %}
                                     {% endfor %}
 
 
                                     {% for t in g.teams %}
                                     {% if t.members %}
                                     {% for member in t.members %}
-                                    <i class="fa fa-user"></i> {{ member.ldap-user.cn }}
+                                    {% if member.ldap-user.cn %}
+                                    <li><i class="fa fa-user"></i> {{ member.ldap-user.cn }}</li>
+                                    {% endif %}
                                     {% endfor %}
                                     {% endif %}
-                                    {% if t.ldap-user %}
-                                    <i class="fa fa-user"></i> {{ t.ldap-user.cn }}
+                                    {% if t.ldap-user.cn %}
+                                    <li><i class="fa fa-user"></i> {{ t.ldap-user.cn }}</li>
                                     {% endif %}
                                     {% endfor %}
 
-                                    {% if g.ldap-user %}
-                                    <i class="fa fa-user"></i> {{ g.ldap-user.cn }}
+                                    {% if g.ldap-user.cn %}
+                                    <li><i class="fa fa-user"></i> {{ g.ldap-user.cn }}</li>
                                     {% endif %}
 
                                     {% endfor %}
@@ -524,8 +540,10 @@ scripts: >
                     </div>
                 </div>
             </div>
+
         </div>
         <!-- row end -->
+
     </div>
     <!-- container end -->
 </div>

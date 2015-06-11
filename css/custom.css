@@ -748,7 +748,7 @@ button:focus, button:active {
     box-shadow: none;
     outline: 0;
     margin: 0;
-    background: #fff url('img/search.png') no-repeat 15px 15px;
+    background: #fff url('../img/search.png') no-repeat 15px 15px;
 }
 #tipue_drop_input:focus
 {

@@ -18,6 +18,7 @@ var searcher = new Searcher();
 function main() {
 
     $.getJSON("/projects.json", function (data) {
+        titleMode = true; // default mode
         var category = getParameterByName("category");
 
         projects = data;
@@ -124,6 +125,7 @@ function filterProjects() {
 
 function build(page) {
     currPage = page || 1;
+
     $('#content').children().remove();
 
     var projectsToShow = [];
@@ -299,3 +301,5 @@ function Searcher() {
         }
     }
 }
+
+

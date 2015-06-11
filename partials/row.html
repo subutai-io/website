@@ -1,0 +1,14 @@
+<div class="row">
+    <div class="col-md-12 projectsTableHeader">
+        <div class="projectName col-md-3">Project name</div>
+        <div class="projectDesc col-md-5">Description</div>
+        <div class="projectTag col-md-4">Categories</div>
+    </div>
+    <loop>
+        <div class="col-md-12 projectRow">
+            <div class="col-md-3"><a href="{{ url }}"><img width="30px" src="/media/{{ key }}/{{ img }}" alt="{{ title }}"/>{{ title }}</a></div>
+            <div class="col-md-5">{{ content }}</div>
+            <div class="col-md-4">{{ tags }}</div>
+        </div>
+    </loop>
+</div>
