@@ -85,7 +85,7 @@ scripts: >
                     <div class="col-md-12 submenuHover" toggle-hov="hipchatSubmenuHover" data-toggle="tooltip" data-placement="right" title="HipChat">
 
                         <a type="button" class="atlassianIcon">
-                            <img src="{{ site.baseurl }}/img/icons/atlassian-icons/Hipchat.png" alt="{{ h.name }}"/>
+                            <img src="{{ site.baseurl }}/img/infrastructure/Hipchat.png" alt="{{ h.name }}"/>
                         </a>
                     </div>
                     {% endif %}
@@ -93,7 +93,7 @@ scripts: >
                     {% if page.upsource %}
                     <div class="col-md-12 submenuHover" toggle-hov="upsourceSubmenuHover" data-toggle="tooltip" data-placement="right" title="Upsource">
                         <a type="button" href="{{ page.upsource.url }}" class="atlassianIcon" target="_blank">
-                            <img src="{{ site.baseurl }}/img/icons/atlassian-icons/Upsource.png" alt="">
+                            <img src="{{ site.baseurl }}/img/infrastructure/Upsource.png" alt="">
                         </a>
                     </div>
                     {% endif %}
@@ -228,7 +228,7 @@ scripts: >
                         <ul class="nav navbar-nav">
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle atlassianIcon" data-toggle="dropdown" role="button" aria-expanded="false">
-                                    <img src="{{ site.baseurl }}/img/icons/atlassian-icons/Hipchat.png" alt=""></a>
+                                    <img src="{{ site.baseurl }}/img/infrastructure/Hipchat.png" alt=""></a>
                                 <ul class="dropdown-menu" role="menu">
                                     {% for h in page.hipchat.rooms %}
                                     <li>
@@ -248,7 +248,7 @@ scripts: >
                         <ul class="nav navbar-nav">
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle atlassianIcon" data-toggle="dropdown" role="button" aria-expanded="false">
-                                    <img src="{{ site.baseurl }}/img/icons/atlassian-icons/Upsource.png" alt=""></a>
+                                    <img src="{{ site.baseurl }}/img/infrastructure/Upsource.png" alt=""></a>
                                 <ul class="dropdown-menu" role="menu">
                                     <li>
                                         <a type="button" href="{{ page.upsource.url }}" class="confluenceSubitem subDesr" target="_blank">

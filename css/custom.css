@@ -1319,7 +1319,7 @@ hr {
 }
 .hipchatSubitem {
     padding-left: 50px;
-    background: url(/img/icons/atlassian-icons/Hipchat.png)no-repeat left;
+    background: url(/img/infrastructure/Hipchat.png)no-repeat left;
     background-size: 30px;
     color: #fff;
     padding-top: 10px;
@@ -1327,7 +1327,7 @@ hr {
 }
 .stashSubitem {
     padding-left: 50px;
-    background: url(/img/icons/atlassian-icons/Stash.png)no-repeat left;
+    background: url(/img/infrastructure/Stash.png)no-repeat left;
     background-size: 30px;
     color: #fff;
     padding-top: 10px;
