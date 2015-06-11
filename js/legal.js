@@ -1,7 +1,3 @@
-/**
- * Created by ubuntu on 5/29/15.
- */
-
 $(document).ready(function() {
 
     function changeTab() {

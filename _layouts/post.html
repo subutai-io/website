@@ -6,9 +6,8 @@ css: >
 
 scripts: >
     <script src="/js/post.js"></script>
-    <script src="/js/jquery.bxslider.js"></script>
-    <script src="/js/jquery.mCustomScrollbar.js"></script>
-    <script src="/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="/js/plugins/jquery.bxslider.js"></script>
+    <script src="/js/plugins/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="/js/plugins/tweet-fetcher.js"></script>
     <script>
         twitterFetcher.fetch('606323790323318784', 'twitter', 10, true);
@@ -471,7 +470,7 @@ scripts: >
                                     {% if t.members %}
                                     {% for member in t.members %}
                                     {% if member.ldap-user.cn %}
-                                    <li><i class="fa fa-user"></i> {{ member.ldap-user.cn }}</li>
+                                    <li><i class="fa fa-user"></i> {{ member.ldap-user.cn }}vvfd</li>
                                     {% endif %}
                                     {% endfor %}
                                     {% endif %}

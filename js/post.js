@@ -86,7 +86,7 @@ function initMedia() {
         var screenHeight = $(window).height();
         if(screenHeight <= 700) {
 
-            $('.projectDevelopers').css('overflow-y', 'scroll').css('height', '200px').mCustomScrollbar({
+            $('.projectsDevelopers').mCustomScrollbar({
                 axis:"y",
                 theme:"minimal-dark"
             });

@@ -362,9 +362,9 @@
 	'use strict';
 
 	// Sticky Menu
-	if (typeof theme.StickyMenu !== 'undefined') {
-		theme.StickyMenu.initialize();
-	}
+	//if (typeof theme.StickyMenu !== 'undefined') {
+	//	theme.StickyMenu.initialize();
+	//}
 
 	// Nav Menu
 	if (typeof theme.Nav !== 'undefined') {

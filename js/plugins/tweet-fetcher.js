@@ -1,7 +1,3 @@
-/**
- * Created by talas on 6/4/15.
- */
-
 /*********************************************************************
  *  #### Twitter Post Fetcher v10.0 ####
  *  Coded by Jason Mayes 2013. A present to all the developers out there.

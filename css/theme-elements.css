@@ -2992,7 +2992,7 @@ html .scroll-to-top {
 	text-align: center;
 	text-decoration: none;
 	min-width: 49px;
-	z-index: 1040;
+	z-index: 100000;
 }
 
 html .scroll-to-top:hover {

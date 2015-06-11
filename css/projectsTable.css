@@ -28,7 +28,7 @@
 }
 .projectsTableHeader {
     background-color: black;
-    padding: 20px 10px;
+    padding: 15px 10px;
     color: white;
     font-size: 22px;
 }
@@ -36,16 +36,18 @@
     border-left: 1px solid #eee;
     border-right: 1px solid #eee;
     border-bottom: 1px solid #eee;
-    padding: 20px 10px;
+    padding: 15px 10px;
+    min-height: 70px;
 }
 .projectRow:nth-child(odd) {
     background-color: lightgrey;
 }
 .projectRow div {
     color: #444;
+    text-align: left;
 }
 .projectRow a {
-  font-size: 20px;
+  font-size: 18px;
   text-align: left;
   line-height: 1.5;
   display: block;
@@ -55,4 +57,8 @@
     float: left;
     display: block;
     margin-right: 10px;
+}
+
+#content .col-md-7 {
+    text-align: left;
 }

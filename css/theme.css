@@ -95,7 +95,7 @@ body {
 
 #header .search {
 	float: right;
-	margin: 10px 0 0 15px;
+	margin: 0px 15px;
 	position: relative;
 }
 
@@ -135,7 +135,7 @@ body {
 
 #header nav {
 	float: right;
-	margin-top: 30px;
+	/*margin-top: 30px;*/
 }
 
 #header nav ul.nav-main {
@@ -152,7 +152,7 @@ body {
 	/*line-height: 4;*/
 	margin-left: 3px;
 	margin-right: 3px;
-	margin-top: 15px;
+	/*margin-top: 15px;*/
 	text-transform: uppercase;
 	font-weight: 700;
 	padding: 10px 13px;
@@ -399,10 +399,10 @@ body.sticky-menu-active #header {
 	box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
 	filter: none;
 }
-body.sticky-menu-active #header nav {
-	margin-top: 20px;
-	margin-bottom: -15px;
-}
+/*body.sticky-menu-active #header nav {*/
+	/*margin-top: 20px;*/
+	/*margin-bottom: -15px;*/
+/*}*/
 body.sticky-menu-active #header .search {
 	margin: 40px 0 0 15px;
 }
@@ -410,10 +410,10 @@ body.sticky-menu-active #header .social-icons {
 	margin-top: 20px;
 }
 
-body.sticky-menu-active #header nav ul.nav-main {
-	margin-bottom: 7px;
-	margin-top: -1px;
-}
+/*body.sticky-menu-active #header nav ul.nav-main {*/
+	/*margin-bottom: 7px;*/
+	/*margin-top: -1px;*/
+/*}*/
 
 body.sticky-menu-active.always-sticky #header {
 	top: 0;
@@ -989,6 +989,13 @@ body.sticky-menu-active #header.transparent.semi-transparent.font-color-light na
 		width: 100%;
 	}
 }
+
+#header .mega-menu {
+	margin-top: 45px;
+}
+body.sticky-menu-active #header .mega-menu {
+	margin-top: 30px;
+}
 /* Mega Menu (Signin/SignUp) */
 #header nav.mega-menu ul.nav-main .mega-menu-signin {
 	padding-left: 0;
@@ -1098,6 +1105,9 @@ body #header nav.mega-menu .mega-menu-signin ul.dropdown-menu li a, body #header
 
 /* Responsive */
 @media (max-width: 991px) {
+	#header .mega-menu {
+		margin-top: 0px;
+	}
 	#header nav.mega-menu ul.nav-main .mega-menu-signin {
 		margin-right: 0;
 	}
@@ -2079,8 +2089,6 @@ aside ul.nav-list > li > a {
 	background: #0e0e0e;
 	border-top: 4px solid #0e0e0e;
 	font-size: 0.9em;
-	position: relative;
-	clear: both;
 }
 
 #footer a:hover {
@@ -2134,7 +2142,7 @@ aside ul.nav-list > li > a {
 #footer .footer-ribbon {
 	background: #999;
 	position: absolute;
-	margin: -70px 0 0 14px;
+	margin: -50px 0 0 14px;
 	padding: 10px 20px 6px 20px;
 }
 
@@ -2251,9 +2259,7 @@ aside ul.nav-list > li > a {
 }
 
 #footer .footer-copyright {
-	background: #060606;
-	border-top: 4px solid #060606;
-	margin-top: 40px;
+	margin-top: 75px;
 	padding: 10px 0 0;
 }
 
