@@ -86,6 +86,10 @@ EOF
   echo Generated $projects_dir/$now-$key.markdown ...
 done
 
+if [[ ! -d "_posts/projects" ]]; then
+  mkdir "_posts/projects"
+fi
+
 rm $wkdir/_posts/projects/*
 
 mv $projects_dir/*.markdown $wkdir/_posts/projects
