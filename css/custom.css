@@ -747,7 +747,7 @@ button:focus, button:active {
     box-shadow: none;
     outline: 0;
     margin: 0;
-    background: #fff url('img/search.png') no-repeat 15px 15px;
+    background: #fff url('../img/search.png') no-repeat 15px 15px;
 }
 #tipue_drop_input:focus
 {
@@ -1414,16 +1414,6 @@ hr {
     float: left;
     text-decoration: none;
 }
-/*.twitter_reply_icon {*/
-    /*background: url("../img/twitterReply.png")no-repeat center;*/
-/*}*/
-/*.twitter_retweet_icon {*/
-    /*background: url("../img/twitterRetweet.png")no-repeat center;*/
-/*}*/
-/*.twitter_fav_icon {*/
-    /*background: url("../img/twitterFavourite.png")no-repeat center;*/
-/*}*/
-
 .featured .col-md-6, .col-md-12 {
     text-align: justify;
 }
