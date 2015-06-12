@@ -17,6 +17,7 @@ layout: null
     "img"      : "{{ post.website.large_logo_64 }}",
     "content"  : {{ post.short_description | strip_html | strip_newlines | jsonify | replace:'\t','' }}
 }
-{% endif %}{% unless forloop.last %},{% endunless %}
+{% unless forloop.last %},{% endunless %}
+{% endif %}
 {% endfor %}
 ]
