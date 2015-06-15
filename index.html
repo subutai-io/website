@@ -1,7 +1,7 @@
 ---
 layout: page
 
-scripts:
+scripts: >
   <script src="/vendor/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
   <script src="/vendor/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
   <script src="/js/theme.init.carousel.js"></script>
@@ -438,8 +438,8 @@ scripts:
           <h2 class="black"><strong>What</strong> is the community saying:</h2>
 
           <div class="row">
-            <div class="owl-carousel testimonials"
-                 data-plugin-options='{"items": 1, "autoplay": true,  "autoplayTimeout": 4000}'>
+            <div class="owl-carousel testimonials" id="testimonials"
+                 data-plugin-options='{"items": 1,  "autoplayTimeout": 30000, "autoplay": 30000}'>
               <div>
                 <div class="col-md-12 center">
                   <img src="{{ site.baseurl }}/img/clients/client-1.jpg"

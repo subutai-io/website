@@ -27,7 +27,7 @@
     background-image: none;
 }
 .projectsTableHeader {
-    background-color: black;
+    background-color: #08c;
     padding: 15px 10px;
     color: white;
     font-size: 22px;
@@ -40,7 +40,7 @@
     min-height: 70px;
 }
 .projectRow:nth-child(odd) {
-    background-color: lightgrey;
+    background-color: #EEEEEE;
 }
 .projectRow div {
     color: #444;

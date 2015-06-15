@@ -58,7 +58,9 @@ ul.nav-pills > li.active > a:focus {
 .pagination > li > span:focus {
 	color: #0088cc;
 }
-
+.pagination > li > a:hover {
+	cursor: pointer;
+}
 .pagination > .active > a,
 .pagination > .active > span,
 .pagination > .active > a:hover,
