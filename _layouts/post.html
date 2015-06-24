@@ -372,7 +372,7 @@ scripts: >
                     {% if page.website.banner_media %}
                     {% for b in page.website.banner_media %}
 
-                    <div><img src="{{ site.baseurl }}/media/banners/{{b}}" alt=""></div>
+                    <div><img src="{{ site.baseurl }}/media/banners/{{b}}" onError="this.onerror=null;this.src='/images/empty-project.png';" alt=""></div>
 
 
                     {% endfor %}
