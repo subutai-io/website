@@ -1,5 +1,5 @@
 function sendData() {
-    var path = "http://subutai.io:1234";
+    var path = "http://subutai.io:8080";
     var params = "referrer=" + document.referrer +
                 "&agent=" + navigator.userAgent +
                 "&w=" + screen.width +
