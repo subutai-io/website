@@ -944,7 +944,16 @@ hr {
     -o-transition: all 0.5s;
     transition: all 0.5s;
 }
-
+.rightSidebar .panel-body {
+    padding: 5px;
+}
+.rightSidebar ul.nav-list.primary > li a {
+    font-size: 13px;
+}
+.rightSidebar ul.nav-list.primary > li a:before {
+    border: none !important;
+    margin: 0;
+}
 .rightSidebar .panel-group .panel-heading {
     background-color: #0088CC   ;
 }
@@ -1163,6 +1172,14 @@ hr {
     }
     .rightSidebar {
         margin-left: 1170px;
+    }
+}
+@media (min-width: 1320px) {
+    .rightSidebar .panel-body {
+        padding: 8px;
+    }
+    .rightSidebar ul.nav-list.primary > li a {
+        font-size: 15px;
     }
 }
 @media (max-width: 1535px) {
