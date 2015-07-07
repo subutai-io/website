@@ -54,7 +54,6 @@ wkdir=$(dirname $0)
 projects_dir=$DESCR_PATH/projects
 teams_dir=$DESCR_PATH/teams
 
-
 for descriptor in `find $projects_dir -type f -regex '.*\.json'`; do
   filename=$(basename $descriptor)
   key=${filename%.json}
@@ -62,6 +61,8 @@ for descriptor in `find $projects_dir -type f -regex '.*\.json'`; do
   project_name=$(node -pe 'JSON.parse(process.argv[1]).name' "$(cat $projects_dir/$key.json)")
   url=$(node -pe 'JSON.parse(process.argv[1]).website.website' "$(cat $projects_dir/$key.json)")
   parent=$(node -pe 'JSON.parse(process.argv[1]).parent' "$(cat $projects_dir/$key.json)")
+  blog=$(curl -u dashbot:ghkf346LU538QZRD -X GET 'https://confluence.subutai.io/rest/api/content?type=blogpost&spaceKey='$key'' -A 'ssf')
+  blog=$(node -pe 'JSON.stringify('$blog')')
 
   if [ -n '$parent' ] && [ "$parent" != "undefined" ]; then
     pkey=${parent%.json}
@@ -74,6 +75,7 @@ for descriptor in `find $projects_dir -type f -regex '.*\.json'`; do
   sed -i 's/categories/tags/g' $projects_dir/$now-$key.markdown
   cat << EOF >> $projects_dir/$now-$key.markdown
 
+  blogs: $blog
   parenturl: $parent
   layout: post
   title:  "$project_name"
