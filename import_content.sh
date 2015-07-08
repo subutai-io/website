@@ -80,8 +80,8 @@ for descriptor in `find $projects_dir -type f -regex '.*\.json'`; do
                     JSON.stringify(blog2);
                 }
                 ')
-  echo $blogs > blogs.json
-  blogs=$(node_modules/.bin/json2yaml blogs.json)
+  echo $blogs > $DESCR_PATH/blogs.json
+  blogs=$(node_modules/.bin/json2yaml "$DESCR_PATH"/blogs.json)
   blogs=${blogs:4}
 
   if [ -n '$parent' ] && [ "$parent" != "undefined" ]; then
