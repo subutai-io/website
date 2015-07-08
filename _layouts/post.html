@@ -429,8 +429,25 @@ scripts: >
                             No tweets
                         </div>
                         <div id="activity" class="tab-pane">
-                            <hidden id="activity_rep" value="{{ page.key }}"></hidden>
-                            Access to git commits denied
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Commit ID</th>
+                                        <th>Message</th>
+                                        <th>Author</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                {% for b in page.commits %}
+                                    <tr>
+                                        <th>{{ b.displayId }}</th>
+                                        <th>{{ b.message }}</th>
+                                        <th>{{ b.author }}</th>
+                                    </tr>
+                                {% endfor %}
+                                </tbody>
+                            </table>
+
                         </div>
 
                     </div>
