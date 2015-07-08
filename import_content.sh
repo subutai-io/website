@@ -62,7 +62,26 @@ for descriptor in `find $projects_dir -type f -regex '.*\.json'`; do
   url=$(node -pe 'JSON.parse(process.argv[1]).website.website' "$(cat $projects_dir/$key.json)")
   parent=$(node -pe 'JSON.parse(process.argv[1]).parent' "$(cat $projects_dir/$key.json)")
   blog=$(curl -u dashbot:ghkf346LU538QZRD -X GET 'https://confluence.subutai.io/rest/api/content?type=blogpost&spaceKey='$key'' -A 'ssf')
-  blog=$(node -pe 'JSON.stringify('$blog')')
+  blogs=$(node -pe '
+                var blogs=[];
+                var blog2 = {};
+                if ('"$blog"'.results){
+                    for (var i=0; i<'"$blog"'.results.length; i++){
+                    var blog={};
+                    blog.title = '"$blog"'.results[i].title;
+                    blog.url = "https://confluence.subutai.io" + '"$blog"'.results[i]._links.webui;
+                    blogs.push(blog);
+                    }
+                    blog2.blogs = blogs;
+                    JSON.stringify(blog2);
+                }
+                else {
+                    blog2.blogs = [];
+                    JSON.stringify(blog2);
+                }
+                ')
+  echo $blogs > $projects_dir/blogs.json
+  blogs=$(node_modules/.bin/json2yaml $projects_dir/blogs.json)
 
   if [ -n '$parent' ] && [ "$parent" != "undefined" ]; then
     pkey=${parent%.json}
@@ -75,7 +94,7 @@ for descriptor in `find $projects_dir -type f -regex '.*\.json'`; do
   sed -i 's/categories/tags/g' $projects_dir/$now-$key.markdown
   cat << EOF >> $projects_dir/$now-$key.markdown
 
-  blogs: $blog
+  $blogs
   parenturl: $parent
   layout: post
   title:  "$project_name"
