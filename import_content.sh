@@ -61,16 +61,18 @@ for descriptor in `find $projects_dir -type f -regex '.*\.json'`; do
   project_name=$(node -pe 'JSON.parse(process.argv[1]).name' "$(cat $projects_dir/$key.json)")
   url=$(node -pe 'JSON.parse(process.argv[1]).website.website' "$(cat $projects_dir/$key.json)")
   parent=$(node -pe 'JSON.parse(process.argv[1]).parent' "$(cat $projects_dir/$key.json)")
-  commits=$(curl -u dashbot:ghkf346LU538QZRD -X GET 'https://stash.subutai.io/rest/api/1.0/projects/SSFSITE/repos/main/commits/?until=master' -A 'ssf')
+  commits=$(curl -u dashbot:ghkf346LU538QZRD -X GET 'https://stash.subutai.io/rest/api/1.0/projects/'$key'/repos/main/commits/?until=master' -A 'ssf')
   commits=$(node -pe '
             var commits=[];
             var commit = {};
             if ('"$commits"'.values){
                 for (var j=0; j<'"$commits"'.values.length; j++){
                 var cmt={};
+                cmt.id='"$commits"'.values[j].id;
                 cmt.message='"$commits"'.values[j].message;
                 cmt.author='"$commits"'.values[j].author.name;
                 cmt.displayId='"$commits"'.values[j].displayId;
+                cmt.url="https://stash.subutai.io/projects/'$key'/repos/main/commits/"+cmt.id;
                 commits.push(cmt);
                 }
                 commit.commits=commits;

@@ -440,7 +440,7 @@ scripts: >
                                 <tbody>
                                 {% for b in page.commits %}
                                     <tr>
-                                        <th>{{ b.displayId }}</th>
+                                        <th><a href="{{b.url}}">{{ b.displayId }}</a></th>
                                         <th>{{ b.message }}</th>
                                         <th>{{ b.author }}</th>
                                     </tr>
