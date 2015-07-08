@@ -421,8 +421,8 @@ scripts: >
                             {% endfor %}
                         </div>
                         <div id="blogs" class="tab-pane">
-                            {% for b in page.website.blogs %}
-                            <p><a href="{{ b }}"><i class="fa fa-paragraph"></i> {{ b }}</a></p>
+                            {% for b in page.blogs %}
+                            <p><a href="{{ b.url }}"><i class="fa fa-paragraph"></i> {{ b.title }}</a></p>
                             {% endfor %}
                         </div>
                         <div id="twitter" class="tab-pane">

@@ -80,8 +80,9 @@ for descriptor in `find $projects_dir -type f -regex '.*\.json'`; do
                     JSON.stringify(blog2);
                 }
                 ')
-  echo $blogs > $projects_dir/blogs.json
-  blogs=$(node_modules/.bin/json2yaml $projects_dir/blogs.json)
+  echo $blogs > blogs.json
+  blogs=$(node_modules/.bin/json2yaml blogs.json)
+  blogs=${blogs:4}
 
   if [ -n '$parent' ] && [ "$parent" != "undefined" ]; then
     pkey=${parent%.json}
@@ -94,7 +95,7 @@ for descriptor in `find $projects_dir -type f -regex '.*\.json'`; do
   sed -i 's/categories/tags/g' $projects_dir/$now-$key.markdown
   cat << EOF >> $projects_dir/$now-$key.markdown
 
-  $blogs
+$blogs
   parenturl: $parent
   layout: post
   title:  "$project_name"
