@@ -1,0 +1,27 @@
+---
+  blog-page: "http://foo.bar.com/blog/yigits"
+  external-projects: []
+  ldap-user: 
+    cn: "Dilshat Aliev"
+    email: "dilshat.aliev@critical-factor.com"
+    mobile: "+996 551 878 879"
+    sn: "Aliev"
+    uid: "yigits"
+  skills: []
+
+  userProfile: 
+    key: "yigits"
+    name: "yigits"
+    emailAddress: "ysapli@critical-factor.com"
+    displayName: "Yiğit Şaplı"
+    avatarUrl: 
+      16x16: "https://jira.subutai.io/secure/useravatar?size=xsmall&ownerId=yigits&avatarId=10610"
+      24x24: "https://jira.subutai.io/secure/useravatar?size=small&ownerId=yigits&avatarId=10610"
+      32x32: "https://jira.subutai.io/secure/useravatar?size=medium&ownerId=yigits&avatarId=10610"
+      48x48: "https://jira.subutai.io/secure/useravatar?ownerId=yigits&avatarId=10610"
+  layout: post
+  title:  "Dilshat Aliev"
+  date:   Date.parse('2015-07-09')
+  categories: members
+  permalink: /:categories/yigits/
+---

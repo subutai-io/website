@@ -1,0 +1,27 @@
+---
+  blog-page: "http://foo.bar.com/blog/makin"
+  external-projects: []
+  ldap-user: 
+    cn: "Jarvis Bot"
+    email: "infra@critical-factor.com mobile:: Kzk5NiA="
+    mobile: "+996 551 878 879"
+    sn: "jarvis"
+    uid: "makin"
+  skills: []
+
+  userProfile: 
+    key: "makin"
+    name: "makin"
+    emailAddress: "makin@critical-factor.com"
+    displayName: "Mustafa Akin"
+    avatarUrl: 
+      16x16: "https://jira.subutai.io/secure/useravatar?size=xsmall&avatarId=10122"
+      24x24: "https://jira.subutai.io/secure/useravatar?size=small&avatarId=10122"
+      32x32: "https://jira.subutai.io/secure/useravatar?size=medium&avatarId=10122"
+      48x48: "https://jira.subutai.io/secure/useravatar?avatarId=10122"
+  layout: post
+  title:  "Jarvis Bot"
+  date:   Date.parse('2015-07-09')
+  categories: members
+  permalink: /:categories/makin/
+---

@@ -1,0 +1,27 @@
+---
+  blog-page: "http://foo.bar.com/blog/istus"
+  external-projects: []
+  ldap-user: 
+    cn: "Kubatbek kyzy Aziza"
+    email: "osesan@critical-factor.com sn:: xZ5FUkVGTMSwxZ5BTg== cn:: T8SfdXpoYW4gxZ5FUkVGTMSwxZ5BTg=="
+    mobile: "+996"
+    sn: "kyzy Aziza"
+    uid: "istus"
+  skills: []
+
+  userProfile: 
+    key: "istus"
+    name: "istus"
+    emailAddress: "istus@critical-factor.com"
+    displayName: "Ilarion Stus"
+    avatarUrl: 
+      16x16: "https://jira.subutai.io/secure/useravatar?size=xsmall&avatarId=10122"
+      24x24: "https://jira.subutai.io/secure/useravatar?size=small&avatarId=10122"
+      32x32: "https://jira.subutai.io/secure/useravatar?size=medium&avatarId=10122"
+      48x48: "https://jira.subutai.io/secure/useravatar?avatarId=10122"
+  layout: post
+  title:  "Kubatbek kyzy Aziza"
+  date:   Date.parse('2015-07-09')
+  categories: members
+  permalink: /:categories/istus/
+---

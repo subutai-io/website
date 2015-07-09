@@ -62,11 +62,36 @@ for descriptor in `find $members_dir -type f -regex '.*\.json'`; do
 
   cn=$(node -pe 'JSON.parse(process.argv[1])["ldap-user"].cn' "$(cat $members_dir/$key.json)")
   uid=$(node -pe 'JSON.parse(process.argv[1])["ldap-user"].uid' "$(cat $members_dir/$key.json)")
+  userProfile=$(curl -u dashbot:ghkf346LU538QZRD -X GET 'https://jira.subutai.io/rest/api/2/user?key='$key'' -A 'ssf')
+  userProfile=$(node -pe '
+            var profile = {};
+            var userProfile = {};
+            if ('"$userProfile"'.key){
+                profile.key='"$userProfile"'.key;
+                profile.name='"$userProfile"'.name;
+                profile.emailAddress='"$userProfile"'.emailAddress;
+                profile.displayName='"$userProfile"'.displayName;
+                profile.avatarUrl='"$userProfile"'.avatarUrls;
+                userProfile.userProfile = profile;
+                JSON.stringify(userProfile);
+            }
+            else {
+                JSON.stringify(userProfile);
+            }
+           ')
+
+  echo -----------------------------------------------------------------------------------------------------------------
+  echo $userProfile
+  echo =================================================================================================================
+
+  echo $userProfile > $DESCR_PATH/userProfile.json
+  userProfile=$(node_modules/.bin/json2yaml "$DESCR_PATH"/userProfile.json)
+  userProfile=${userProfile:4}
 
   node_modules/.bin/json2yaml $members_dir/$key.json > $members_dir/$now-$key.markdown
   sed -i 's/categories/tags/g' $members_dir/$now-$key.markdown
   cat << EOF >> $members_dir/$now-$key.markdown
-
+$userProfile
   layout: post
   title:  "$cn"
   date:   Date.parse('$now')

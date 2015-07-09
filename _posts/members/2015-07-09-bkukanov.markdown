@@ -1,0 +1,27 @@
+---
+  blog-page: "http://foo.bar.com/blog/bkukanov"
+  external-projects: []
+  ldap-user: 
+    cn: "Ilarion Stus"
+    email: "cozen@havelsan.com.tr sn:: w7Z6ZW4= cn:: Y2VuayDDtnplbg=="
+    mobile: "+996"
+    sn: "Stus"
+    uid: "bkukanov"
+  skills: []
+
+  userProfile: 
+    key: "bkukanov"
+    name: "bkukanov"
+    emailAddress: "bkukanov@critical-factor.com"
+    displayName: "Bahtiar Kukanov"
+    avatarUrl: 
+      16x16: "https://jira.subutai.io/secure/useravatar?size=xsmall&avatarId=10122"
+      24x24: "https://jira.subutai.io/secure/useravatar?size=small&avatarId=10122"
+      32x32: "https://jira.subutai.io/secure/useravatar?size=medium&avatarId=10122"
+      48x48: "https://jira.subutai.io/secure/useravatar?avatarId=10122"
+  layout: post
+  title:  "Ilarion Stus"
+  date:   Date.parse('2015-07-09')
+  categories: members
+  permalink: /:categories/bkukanov/
+---
