@@ -82,7 +82,6 @@ for descriptor in `find $projects_dir -type f -regex '.*\.json'`; do
                 JSON.stringify(lastUpdate);
             }
            ')
-  echo $lastUpdates
   echo $lastUpdates > $DESCR_PATH/lastUpdates.json
   lastUpdates=$(node_modules/.bin/json2yaml "$DESCR_PATH"/lastUpdates.json)
   lastUpdates=${lastUpdates:4}
