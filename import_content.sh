@@ -61,6 +61,33 @@ for descriptor in `find $projects_dir -type f -regex '.*\.json'`; do
   project_name=$(node -pe 'JSON.parse(process.argv[1]).name' "$(cat $projects_dir/$key.json)")
   url=$(node -pe 'JSON.parse(process.argv[1]).website.website' "$(cat $projects_dir/$key.json)")
   parent=$(node -pe 'JSON.parse(process.argv[1]).parent' "$(cat $projects_dir/$key.json)")
+  lastUpdates=$(curl -u dashbot:ghkf346LU538QZRD -X GET 'https://confluence.subutai.io/rest/api/content/search?cql=lastModified%3E=now(%22-5d%22)%20and%20space='$key'' -A 'ssf')
+  lastUpdates=$(node -pe '
+            var lastUpdates=[];
+            var lastUpdate = {};
+            if ('"$lastUpdates"'.results){
+                for (var j=0; j<'"$lastUpdates"'.results.length; j++){
+                var lUpd={};
+                lUpd.id='"$lastUpdates"'.results[j].id;
+                lUpd.type='"$lastUpdates"'.results[j].type;
+                lUpd.title='"$lastUpdates"'.results[j].title;
+                lUpd.url="https://confluence.subutai.io"+'"$lastUpdates"'.results[j]._links.webui;
+                lastUpdates.push(lUpd);
+                }
+                lastUpdate.lastUpdates=lastUpdates;
+                JSON.stringify(lastUpdate);
+            }
+            else {
+                lastUpdate.lastUpdates=[];
+                JSON.stringify(lastUpdate);
+            }
+           ')
+  echo $lastUpdates
+  echo $lastUpdates > $DESCR_PATH/lastUpdates.json
+  lastUpdates=$(node_modules/.bin/json2yaml "$DESCR_PATH"/lastUpdates.json)
+  lastUpdates=${lastUpdates:4}
+
+
   commits=$(curl -u dashbot:ghkf346LU538QZRD -X GET 'https://stash.subutai.io/rest/api/1.0/projects/'$key'/repos/main/commits/?until=master' -A 'ssf')
   commits=$(node -pe '
             var commits=[];
@@ -121,6 +148,7 @@ for descriptor in `find $projects_dir -type f -regex '.*\.json'`; do
   sed -i 's/categories/tags/g' $projects_dir/$now-$key.markdown
   cat << EOF >> $projects_dir/$now-$key.markdown
 
+$lastUpdates
 $commits
 $blogs
   parenturl: $parent

@@ -419,6 +419,12 @@ scripts: >
                             {% endif %}
                             {% endfor %}
                             {% endfor %}
+
+                            <p>-----------------------------------------------------------------------------------------</p>
+
+                            {% for b in page.lastUpdates %}
+                            <p><a href="{{ b.url }}"><i class="fa fa-newspaper-o"></i> {{ b.title }}</a></p>
+                            {% endfor %}
                         </div>
                         <div id="blogs" class="tab-pane">
                             {% for b in page.blogs %}
