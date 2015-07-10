@@ -52,7 +52,66 @@ bash $DESCR_PATH/build.sh
 now=$(date +"%Y-%m-%d")
 wkdir=$(dirname $0)
 projects_dir=$DESCR_PATH/projects
-teams_dir=$DESCR_PATH/teams
+members_dir=$DESCR_PATH/generated/members
+
+bash $members_dir/generate.sh
+
+for descriptor in `find $members_dir -type f -regex '.*\.json'`; do
+  filename=$(basename $descriptor)
+  key=${filename%.json}
+
+  cn=$(node -pe 'JSON.parse(process.argv[1])["ldap-user"].cn' "$(cat $members_dir/$key.json)")
+  uid=$(node -pe 'JSON.parse(process.argv[1])["ldap-user"].uid' "$(cat $members_dir/$key.json)")
+  userProfile=$(curl -u dashbot:ghkf346LU538QZRD -X GET 'https://jira.subutai.io/rest/api/2/user?key='$key'' -A 'ssf')
+  userProfile=$(node -pe '
+            var profile = {};
+            var userProfile = {};
+            if ('"$userProfile"'.key){
+                profile.key='"$userProfile"'.key;
+                profile.name='"$userProfile"'.name;
+                profile.emailAddress='"$userProfile"'.emailAddress;
+                profile.displayName='"$userProfile"'.displayName;
+                profile.avatarUrl='"$userProfile"'.avatarUrls;
+                userProfile.userProfile = profile;
+                JSON.stringify(userProfile);
+            }
+            else {
+                JSON.stringify(userProfile);
+            }
+           ')
+
+  echo -----------------------------------------------------------------------------------------------------------------
+  echo $userProfile
+  echo =================================================================================================================
+
+  echo $userProfile > $DESCR_PATH/userProfile.json
+  userProfile=$(node_modules/.bin/json2yaml "$DESCR_PATH"/userProfile.json)
+  userProfile=${userProfile:4}
+
+  node_modules/.bin/json2yaml $members_dir/$key.json > $members_dir/$now-$key.markdown
+  sed -i 's/categories/tags/g' $members_dir/$now-$key.markdown
+  cat << EOF >> $members_dir/$now-$key.markdown
+$userProfile
+  layout: post
+  title:  "$cn"
+  date:   Date.parse('$now')
+  categories: members
+  permalink: /:categories/$uid/
+---
+EOF
+
+  echo Generated $members_dir/$now-$key.markdown ...
+done
+
+if [[ ! -d "_posts/members" ]]; then
+  mkdir "_posts/members"
+fi
+
+rm $wkdir/_posts/members/*
+
+mv $members_dir/*.markdown $wkdir/_posts/members
+
+
 
 for descriptor in `find $projects_dir -type f -regex '.*\.json'`; do
   filename=$(basename $descriptor)
@@ -82,7 +141,6 @@ for descriptor in `find $projects_dir -type f -regex '.*\.json'`; do
                 JSON.stringify(lastUpdate);
             }
            ')
-  echo $lastUpdates
   echo $lastUpdates > $DESCR_PATH/lastUpdates.json
   lastUpdates=$(node_modules/.bin/json2yaml "$DESCR_PATH"/lastUpdates.json)
   lastUpdates=${lastUpdates:4}
