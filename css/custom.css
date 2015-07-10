@@ -1443,3 +1443,37 @@ hr {
 .center {
     text-align: center !important;
 }
+#userProfile .customTabsDesign ul.nav-tabs li {
+    width: 0;
+    height: 0;
+    border-bottom: 60px solid #eee;
+    border-right: 75px solid transparent;
+    border-left: 100px solid #eee;
+    z-index: 1;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    transform: scale(.9999);
+}
+#userProfile .customTabsDesign ul.nav-tabs li:nth-child(2) {
+    margin-left: -40px;
+}
+#userProfile .customTabsDesign ul.nav-tabs li.active {
+    z-index: 5;
+    border-bottom: 60px solid #0088cc;
+    border-right: 75px solid transparent;
+    border-left: 100px solid #0088cc;
+}
+#userProfile .customTabsDesign ul.nav-tabs li.active a {
+    color: #FFFFFF;
+}
+#userProfile .customTabsDesign ul.nav-tabs li a {
+    background-color: transparent;
+    border: 0;
+    margin-left: -80px;
+    padding: 5px 20px;
+}
+@media (max-width: 1351px) and (min-width: 1281px) {
+    #userProfile .rightSidebar {
+        margin-left: 1060px;
+    }
+}
