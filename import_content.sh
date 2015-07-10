@@ -28,6 +28,14 @@ if [[ -z "$(which node_modules/.bin/json2yaml)" ]]; then
     fi
 fi
 
+if [[ -z "$(which node_modules/.bin/xml2json)" ]]; then
+    OUTUT="$(npm install xml2json)"
+
+    if [[ -n "$OUTPUT" ]] && [[ ! "$OUTPUT" =~ "npm ERR!" ]]; then
+        echo $OUTPUT
+        exit 2;
+    fi
+fi
 
 DESCR_PATH="./../project-descriptors";
 
@@ -62,6 +70,10 @@ for descriptor in `find $members_dir -type f -regex '.*\.json'`; do
 
   cn=$(node -pe 'JSON.parse(process.argv[1])["ldap-user"].cn' "$(cat $members_dir/$key.json)")
   uid=$(node -pe 'JSON.parse(process.argv[1])["ldap-user"].uid' "$(cat $members_dir/$key.json)")
+  userActivity=$(curl -u dashbot:ghkf346LU538QZRD -X GET 'https://confluence.subutai.io/activity?maxResults=5&streams=user+IS+'$key'' -A 'ssf')
+  echo $userActivity > $DESCR_PATH/userActivity.xml
+  cat "$DESCR_PATH"/userActivity.xml | node_modules/.bin/xml2json > $DESCR_PATH/userActivity.json
+  userActivity=$(cat "$DESCR_PATH"/userActivity.json)
   userProfile=$(curl -u dashbot:ghkf346LU538QZRD -X GET 'https://jira.subutai.io/rest/api/2/user?key='$key'' -A 'ssf')
   userProfile=$(node -pe '
             var profile = {};
@@ -72,6 +84,31 @@ for descriptor in `find $members_dir -type f -regex '.*\.json'`; do
                 profile.emailAddress='"$userProfile"'.emailAddress;
                 profile.displayName='"$userProfile"'.displayName;
                 profile.avatarUrl='"$userProfile"'.avatarUrls;
+                var userActivity = [];
+                var feed = '"$userActivity"'.feed;
+                if (feed.entry){
+                    if (feed.entry.length)
+                    {
+                        for (var i=0; i<feed.entry.length; i++)
+                        {
+                            var activity = {};
+                            activity.title=feed.entry[i].title;
+                            activity.published=feed.entry[i].published;
+                            activity.updates=feed.entry[i].updated;
+                            activity.summary=feed.entry[i].object;
+                            activity.link=feed.entry[i].link;
+                            userActivity.push(feed.entry[i]);
+                        }
+                    }
+                    else {
+                        userActivity.push(feed.entry);
+                    }
+                    profile.userActivity = activity;
+                }
+                else {
+                    profile.userActivity = activity;
+                }
+
                 userProfile.userProfile = profile;
                 JSON.stringify(userProfile);
             }
@@ -79,15 +116,10 @@ for descriptor in `find $members_dir -type f -regex '.*\.json'`; do
                 JSON.stringify(userProfile);
             }
            ')
-
-  echo -----------------------------------------------------------------------------------------------------------------
-  echo $userProfile
-  echo =================================================================================================================
-
   echo $userProfile > $DESCR_PATH/userProfile.json
   userProfile=$(node_modules/.bin/json2yaml "$DESCR_PATH"/userProfile.json)
   userProfile=${userProfile:4}
-
+  #node_modules/.bin/xml2json
   node_modules/.bin/json2yaml $members_dir/$key.json > $members_dir/$now-$key.markdown
   sed -i 's/categories/tags/g' $members_dir/$now-$key.markdown
   cat << EOF >> $members_dir/$now-$key.markdown
