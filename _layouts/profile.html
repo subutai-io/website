@@ -1,12 +1,7 @@
 ---
-layout: page
-title: Member
-permalink: /member/
-
-css: >
-
+layout: default
 ---
-
+{% include header.html %}
 
 <div role="main" class="main">
 
@@ -16,18 +11,19 @@ css: >
                 <div class="col-md-12">
                     <ul class="breadcrumb">
                         <li><a href="{{ site.baseurl }}/">Home</a></li>
-                        <li><a href="{{ site.baseurl }}/members">Members</a></li>
-                        <li class="active">Aleksandra Pavlenko</li>
+                        <li><a href="{{ site.baseurl }}/Members">Members</a></li>
+                        <li class="active">{{ page.title }}</li>
                     </ul>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    <h1>Aleksandra Pavlenko</h1>
+                    <h1>{{ page.title }}</h1>
                 </div>
             </div>
         </div>
     </section>
+
     <div class="container" id="userProfile">
         <div class="row">
             <div class="col-md-12">
@@ -71,8 +67,6 @@ css: >
                 <div class="col-md-1"></div>
             </div>
 
-            <!-- right side menu-->
-            <!--<div class="stickyPoint"></div>-->
             <div class="rightSidebar">
                 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 
@@ -120,5 +114,6 @@ css: >
         <!-- row end -->
 
     </div>
-    <!-- container end -->
 </div>
+
+{% include footer.html %}
