@@ -124,7 +124,7 @@ for descriptor in `find $members_dir -type f -regex '.*\.json'`; do
   sed -i 's/categories/tags/g' $members_dir/$now-$key.markdown
   cat << EOF >> $members_dir/$now-$key.markdown
 $userProfile
-  layout: post
+  layout: profile
   title:  "$cn"
   date:   Date.parse('$now')
   categories: members

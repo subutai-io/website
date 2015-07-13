@@ -2,6 +2,7 @@
 node_modules/
 _site/
 .sass-cache/
-_posts/
 .idea/
 *.iml
+.img_restored/
+*.log
