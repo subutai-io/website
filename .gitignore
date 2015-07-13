@@ -6,3 +6,5 @@ _site/
 *.iml
 .img_restored/
 *.log
+img/avatars
+_posts/
