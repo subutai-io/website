@@ -7,4 +7,6 @@ ssf/_site/
 *.iml
 .img_restored/
 *.log
-ssf/_posts/
+ssf/_posts/*.log
+img/avatars
+_posts/

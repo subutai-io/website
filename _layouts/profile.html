@@ -57,6 +57,7 @@ layout: page
                                 {% for activity in page.userProfile.userActivity %}
                                 <div>
                                     <a href="{{ activity.summary.link.href }}">{{activity.category.term}} {{ activity.summary.summary["$t"]}}</a>
+                                    <span><small type="date">at {{activity.updates}}</small></span>
                                 </div>
                                 {% endfor %}
                             </div>
