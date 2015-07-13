@@ -1,8 +1,10 @@
 .vagrant/
 node_modules/
 _site/
+ssf/_site/
 .sass-cache/
 .idea/
 *.iml
 .img_restored/
 *.log
+ssf/_posts/
