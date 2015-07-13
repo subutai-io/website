@@ -1,7 +1,6 @@
 ---
-layout: default
+layout: page
 ---
-{% include header.html %}
 
 <div role="main" class="main">
 
@@ -11,7 +10,7 @@ layout: default
                 <div class="col-md-12">
                     <ul class="breadcrumb">
                         <li><a href="{{ site.baseurl }}/">Home</a></li>
-                        <li><a href="{{ site.baseurl }}/Members">Members</a></li>
+                        <li><a href="{{ site.baseurl }}/members">Members</a></li>
                         <li class="active">{{ page.title }}</li>
                     </ul>
                 </div>
@@ -28,15 +27,15 @@ layout: default
         <div class="row">
             <div class="col-md-12">
                 <div class="col-sm-2">
-                    <img class="img-thumbnail" src="https://jira.subutai.io/secure/useravatar?avatarId=10122">
+                    <img class="img-thumbnail" style="width: 100px" src="{{page.userProfile.avatarUrl.48x48}}">
                 </div>
 
 
                 <div class="col-sm-9">
                     <div>
-                        <p><strong>Name: </strong>Aleksandra Pavlenko</p>
-                        <p><strong>Email: </strong>apavlenko@critical-factor.com</p>
-                        <p><strong>Mobile: </strong>+996 551 878 879</p>
+                        <p><strong>Name: </strong>{{ page.userProfile.displayName}}</p>
+                        <p><strong>Email: </strong>{{ page.userProfile.emailAddress}}</p>
+                        <p><strong>Mobile: </strong>{{ page.ldap-user.mobile}}</p>
                     </div>
                 </div>
                 <div class="col-md-1"></div>
@@ -55,7 +54,11 @@ layout: default
                         </ul>
                         <div class="tab-content">
                             <div id="activity" class="tab-pane active">
-                                activity here
+                                {% for activity in page.userProfile.userActivity %}
+                                <div>
+                                    <a href="{{ activity.summary.link.href }}">{{activity.category.term}} {{ activity.summary.summary["$t"]}}</a>
+                                </div>
+                                {% endfor %}
                             </div>
                             <div id="skills" class="tab-pane">
 
@@ -115,5 +118,3 @@ layout: default
 
     </div>
 </div>
-
-{% include footer.html %}

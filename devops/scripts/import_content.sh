@@ -75,6 +75,9 @@ for descriptor in `find $members_dir -type f -regex '.*\.json'`; do
   cat "$DESCR_PATH"/userActivity.xml | node_modules/.bin/xml2json > $DESCR_PATH/userActivity.json
   userActivity=$(cat "$DESCR_PATH"/userActivity.json)
   userProfile=$(curl -u dashbot:ghkf346LU538QZRD -X GET 'https://jira.subutai.io/rest/api/2/user?key='$key'' -A 'ssf')
+#  echo ---------------------------------------------------------------------------------------------------------------------------
+#  echo $userActivity
+#  echo ---------------------------------------------------------------------------------------------------------------------------
   userProfile=$(node -pe '
             var profile = {};
             var userProfile = {};
@@ -87,26 +90,19 @@ for descriptor in `find $members_dir -type f -regex '.*\.json'`; do
                 var userActivity = [];
                 var feed = '"$userActivity"'.feed;
                 if (feed.entry){
-                    if (feed.entry.length)
+                    for (var i=0; i<feed.entry.length; i++)
                     {
-                        for (var i=0; i<feed.entry.length; i++)
-                        {
-                            var activity = {};
-                            activity.title=feed.entry[i].title;
-                            activity.published=feed.entry[i].published;
-                            activity.updates=feed.entry[i].updated;
-                            activity.summary=feed.entry[i].object;
-                            activity.link=feed.entry[i].link;
-                            userActivity.push(feed.entry[i]);
-                        }
+                        var activity = {};
+                        activity.published=feed.entry[i].published;
+                        activity.updates=feed.entry[i].updated;
+                        activity.category=feed.entry[i].category;
+                        activity.summary=feed.entry[i]["activity:object"];
+                        userActivity.push(activity);
                     }
-                    else {
-                        userActivity.push(feed.entry);
-                    }
-                    profile.userActivity = activity;
+                    profile.userActivity = userActivity;
                 }
                 else {
-                    profile.userActivity = activity;
+                    profile.userActivity = userActivity;
                 }
 
                 userProfile.userProfile = profile;
