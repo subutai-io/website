@@ -1,5 +1,9 @@
 #!/bin/bash
 
+now=$(date +"%Y-%m-%d")
+wkdir=$(dirname $0)/../..
+
+
 if [[ -z "$(which curl)" ]]; then
   echo Can not find curl on your PATH
   echo please run apt-get install curl
@@ -19,7 +23,7 @@ if [[ -z "$(which node)" ]] || [[ -z "$(which npm)" ]]; then
     exit 1
 fi
 
-if [[ -z "$(which node_modules/.bin/json2yaml)" ]]; then
+if [[ -z "$(which $wkdir/node_modules/.bin/json2yaml)" ]]; then
     OUTUT="$(npm install json2yaml)"
 
     if [[ -n "$OUTPUT" ]] && [[ ! "$OUTPUT" =~ "npm ERR!" ]]; then
@@ -28,7 +32,7 @@ if [[ -z "$(which node_modules/.bin/json2yaml)" ]]; then
     fi
 fi
 
-if [[ -z "$(which node_modules/.bin/xml2json)" ]]; then
+if [[ -z "$(which $wkdir/node_modules/.bin/xml2json)" ]]; then
     OUTUT="$(npm install xml2json)"
 
     if [[ -n "$OUTPUT" ]] && [[ ! "$OUTPUT" =~ "npm ERR!" ]]; then
@@ -37,7 +41,7 @@ if [[ -z "$(which node_modules/.bin/xml2json)" ]]; then
     fi
 fi
 
-DESCR_PATH="./../project-descriptors";
+DESCR_PATH="./../../../project-descriptors";
 
 while [[ $# > 0 ]]
 do
@@ -57,12 +61,10 @@ done
 
 bash $DESCR_PATH/build.sh
 
-now=$(date +"%Y-%m-%d")
-wkdir=$(dirname $0)
 projects_dir=$DESCR_PATH/projects
 members_dir=$DESCR_PATH/generated/members
 
-bash $members_dir/generate.sh
+#bash $members_dir/generate.sh
 
 for descriptor in `find $members_dir -type f -regex '.*\.json'`; do
   filename=$(basename $descriptor)
@@ -72,12 +74,9 @@ for descriptor in `find $members_dir -type f -regex '.*\.json'`; do
   uid=$(node -pe 'JSON.parse(process.argv[1])["ldap-user"].uid' "$(cat $members_dir/$key.json)")
   userActivity=$(curl -u dashbot:ghkf346LU538QZRD -X GET 'https://confluence.subutai.io/activity?maxResults=5&streams=user+IS+'$key'' -A 'ssf')
   echo $userActivity > $DESCR_PATH/userActivity.xml
-  cat "$DESCR_PATH"/userActivity.xml | node_modules/.bin/xml2json > $DESCR_PATH/userActivity.json
+  cat "$DESCR_PATH"/userActivity.xml | $wkdir/node_modules/.bin/xml2json > $DESCR_PATH/userActivity.json
   userActivity=$(cat "$DESCR_PATH"/userActivity.json)
   userProfile=$(curl -u dashbot:ghkf346LU538QZRD -X GET 'https://jira.subutai.io/rest/api/2/user?key='$key'' -A 'ssf')
-#  echo ---------------------------------------------------------------------------------------------------------------------------
-#  echo $userActivity
-#  echo ---------------------------------------------------------------------------------------------------------------------------
   userProfile=$(node -pe '
             var profile = {};
             var userProfile = {};
@@ -113,10 +112,15 @@ for descriptor in `find $members_dir -type f -regex '.*\.json'`; do
             }
            ')
   echo $userProfile > $DESCR_PATH/userProfile.json
-  userProfile=$(node_modules/.bin/json2yaml "$DESCR_PATH"/userProfile.json)
+
+   userAvatar=$(node -pe '
+            '"$userProfile"'.userProfile.avatarUrls["48x48"];
+           ')
+
+  wget "$userAvatar" > "$wkdir"/img/avatars/"$key".png
+  userProfile=$($wkdir/node_modules/.bin/json2yaml "$DESCR_PATH"/userProfile.json)
   userProfile=${userProfile:4}
-  #node_modules/.bin/xml2json
-  node_modules/.bin/json2yaml $members_dir/$key.json > $members_dir/$now-$key.markdown
+  $wkdir/node_modules/.bin/json2yaml $members_dir/$key.json > $members_dir/$now-$key.markdown
   sed -i 's/categories/tags/g' $members_dir/$now-$key.markdown
   cat << EOF >> $members_dir/$now-$key.markdown
 $userProfile
@@ -132,7 +136,7 @@ EOF
 done
 
 if [[ ! -d "_posts/members" ]]; then
-  mkdir "_posts/members"
+  mkdir "$wkdir/_posts/members"
 fi
 
 rm $wkdir/_posts/members/*
@@ -170,7 +174,7 @@ for descriptor in `find $projects_dir -type f -regex '.*\.json'`; do
             }
            ')
   echo $lastUpdates > $DESCR_PATH/lastUpdates.json
-  lastUpdates=$(node_modules/.bin/json2yaml "$DESCR_PATH"/lastUpdates.json)
+  lastUpdates=$($wkdir/node_modules/.bin/json2yaml "$DESCR_PATH"/lastUpdates.json)
   lastUpdates=${lastUpdates:4}
 
 
@@ -197,7 +201,7 @@ for descriptor in `find $projects_dir -type f -regex '.*\.json'`; do
             }
            ')
   echo $commits > $DESCR_PATH/commits.json
-  commits=$(node_modules/.bin/json2yaml "$DESCR_PATH"/commits.json)
+  commits=$($wkdir/node_modules/.bin/json2yaml "$DESCR_PATH"/commits.json)
   commits=${commits:4}
 
   blog=$(curl -u dashbot:ghkf346LU538QZRD -X GET 'https://confluence.subutai.io/rest/api/content?type=blogpost&spaceKey='$key'' -A 'ssf')
@@ -220,7 +224,7 @@ for descriptor in `find $projects_dir -type f -regex '.*\.json'`; do
                 }
                 ')
   echo $blogs > $DESCR_PATH/blogs.json
-  blogs=$(node_modules/.bin/json2yaml "$DESCR_PATH"/blogs.json)
+  blogs=$($wkdir/node_modules/.bin/json2yaml "$DESCR_PATH"/blogs.json)
   blogs=${blogs:4}
 
   if [ -n '$parent' ] && [ "$parent" != "undefined" ]; then
@@ -230,7 +234,7 @@ for descriptor in `find $projects_dir -type f -regex '.*\.json'`; do
     parent=''
   fi
 
-  node_modules/.bin/json2yaml $projects_dir/$key.json > $projects_dir/$now-$key.markdown
+  $wkdir/node_modules/.bin/json2yaml $projects_dir/$key.json > $projects_dir/$now-$key.markdown
   sed -i 's/categories/tags/g' $projects_dir/$now-$key.markdown
   cat << EOF >> $projects_dir/$now-$key.markdown
 
@@ -250,7 +254,7 @@ EOF
 done
 
 if [[ ! -d "_posts/projects" ]]; then
-  mkdir "_posts/projects"
+  mkdir "$wkdir/_posts/projects"
 fi
 
 rm $wkdir/_posts/projects/*
