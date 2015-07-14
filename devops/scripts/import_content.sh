@@ -77,6 +77,13 @@ for descriptor in `find $members_dir -type f -regex '.*\.json'`; do
   cat "$DESCR_PATH"/userActivity.xml | $wkdir/node_modules/.bin/xml2json > $DESCR_PATH/userActivity.json
   userActivity=$(cat "$DESCR_PATH"/userActivity.json)
   userProfile=$(curl -u dashbot:ghkf346LU538QZRD -X GET 'https://jira.subutai.io/rest/api/2/user?key='$key'' -A 'ssf')
+
+  userAvatar=$(node -pe '
+            var url = '"$userProfile"'.avatarUrls["48x48"];
+            url;
+           ')
+  wget --user-agent="Mozilla/5.0 (Windows NT 6.3; rv:36.0) Gecko/20100101 Firefox/36.0" --http-user=dashbot --http-password=ghkf346LU538QZRD "$userAvatar" -O "$wkdir"/img/avatars/"$key".png
+
   userProfile=$(node -pe '
             var profile = {};
             var userProfile = {};
@@ -85,7 +92,6 @@ for descriptor in `find $members_dir -type f -regex '.*\.json'`; do
                 profile.name='"$userProfile"'.name;
                 profile.emailAddress='"$userProfile"'.emailAddress;
                 profile.displayName='"$userProfile"'.displayName;
-                profile.avatarUrl='"$userProfile"'.avatarUrls;
                 var userActivity = [];
                 var feed = '"$userActivity"'.feed;
                 if (feed.entry){
@@ -112,12 +118,6 @@ for descriptor in `find $members_dir -type f -regex '.*\.json'`; do
             }
            ')
   echo $userProfile > $DESCR_PATH/userProfile.json
-
-   userAvatar=$(node -pe '
-            '"$userProfile"'.userProfile.avatarUrls["48x48"];
-           ')
-
-  wget "$userAvatar" > "$wkdir"/img/avatars/"$key".png
   userProfile=$($wkdir/node_modules/.bin/json2yaml "$DESCR_PATH"/userProfile.json)
   userProfile=${userProfile:4}
   $wkdir/node_modules/.bin/json2yaml $members_dir/$key.json > $members_dir/$now-$key.markdown
