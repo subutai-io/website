@@ -1,12 +1,13 @@
 .vagrant/
 node_modules/
+
 _site/
 ssf/_site/
+ssf/_posts/
+ssf/img/avatars/
+
 .sass-cache/
 .idea/
 *.iml
 .img_restored/
 *.log
-ssf/_posts/*.log
-img/avatars
-_posts/

@@ -1,7 +1,34 @@
 #!/bin/bash
 
 now=$(date +"%Y-%m-%d")
-wkdir=$(dirname $0)/../..
+WKDIR=$(dirname $0)
+
+while [[ $# > 0 ]]
+do
+key="$1"
+
+case $key in
+    -p|--path)
+    DESCR_PATH="$2"
+    shift
+    ;;
+    -w|--wkdir)
+    WKDIR="$2"
+    shift
+    ;;
+    *)
+    # unknown option
+    ;;
+esac
+shift
+done
+
+
+DESCR_PATH=$WKDIR/../project-descriptors;
+JEKYLL_DIR=$WKDIR/ssf
+PROJECTS_DIR=$DESCR_PATH/projects
+MEMBERS_DIR=$DESCR_PATH/generated/members
+
 
 
 if [[ -z "$(which curl)" ]]; then
@@ -23,7 +50,7 @@ if [[ -z "$(which node)" ]] || [[ -z "$(which npm)" ]]; then
     exit 1
 fi
 
-if [[ -z "$(which $wkdir/node_modules/.bin/json2yaml)" ]]; then
+if [[ -z "$(which $WKDIR/node_modules/.bin/json2yaml)" ]]; then
     OUTUT="$(npm install json2yaml)"
 
     if [[ -n "$OUTPUT" ]] && [[ ! "$OUTPUT" =~ "npm ERR!" ]]; then
@@ -32,7 +59,7 @@ if [[ -z "$(which $wkdir/node_modules/.bin/json2yaml)" ]]; then
     fi
 fi
 
-if [[ -z "$(which $wkdir/node_modules/.bin/xml2json)" ]]; then
+if [[ -z "$(which $WKDIR/node_modules/.bin/xml2json)" ]]; then
     OUTUT="$(npm install xml2json)"
 
     if [[ -n "$OUTPUT" ]] && [[ ! "$OUTPUT" =~ "npm ERR!" ]]; then
@@ -41,40 +68,19 @@ if [[ -z "$(which $wkdir/node_modules/.bin/xml2json)" ]]; then
     fi
 fi
 
-DESCR_PATH="./../../../project-descriptors";
-
-while [[ $# > 0 ]]
-do
-key="$1"
-
-case $key in
-    -p|--path)
-    DESCR_PATH="$2"
-    shift
-    ;;
-    *)
-    # unknown option
-    ;;
-esac
-shift
-done
 
 bash $DESCR_PATH/build.sh
+bash $MEMBERS_DIR/generate.sh
 
-projects_dir=$DESCR_PATH/projects
-members_dir=$DESCR_PATH/generated/members
-
-#bash $members_dir/generate.sh
-
-for descriptor in `find $members_dir -type f -regex '.*\.json'`; do
+for descriptor in `find $MEMBERS_DIR -type f -regex '.*\.json'`; do
   filename=$(basename $descriptor)
   key=${filename%.json}
 
-  cn=$(node -pe 'JSON.parse(process.argv[1])["ldap-user"].cn' "$(cat $members_dir/$key.json)")
-  uid=$(node -pe 'JSON.parse(process.argv[1])["ldap-user"].uid' "$(cat $members_dir/$key.json)")
+  cn=$(node -pe 'JSON.parse(process.argv[1])["ldap-user"].cn' "$(cat $MEMBERS_DIR/$key.json)")
+  uid=$(node -pe 'JSON.parse(process.argv[1])["ldap-user"].uid' "$(cat $MEMBERS_DIR/$key.json)")
   userActivity=$(curl -u dashbot:ghkf346LU538QZRD -X GET 'https://confluence.subutai.io/activity?maxResults=5&streams=user+IS+'$key'' -A 'ssf')
   echo $userActivity > $DESCR_PATH/userActivity.xml
-  cat "$DESCR_PATH"/userActivity.xml | $wkdir/node_modules/.bin/xml2json > $DESCR_PATH/userActivity.json
+  cat "$DESCR_PATH"/userActivity.xml | $WKDIR/node_modules/.bin/xml2json > $DESCR_PATH/userActivity.json
   userActivity=$(cat "$DESCR_PATH"/userActivity.json)
   userProfile=$(curl -u dashbot:ghkf346LU538QZRD -X GET 'https://jira.subutai.io/rest/api/2/user?key='$key'' -A 'ssf')
   userProfile=$(node -pe '
@@ -117,12 +123,12 @@ for descriptor in `find $members_dir -type f -regex '.*\.json'`; do
             '"$userProfile"'.userProfile.avatarUrls["48x48"];
            ')
 
-  wget "$userAvatar" > "$wkdir"/img/avatars/"$key".png
-  userProfile=$($wkdir/node_modules/.bin/json2yaml "$DESCR_PATH"/userProfile.json)
+  wget "$userAvatar" > $WKDIR/ssf/img/avatars/$key.png
+  userProfile=$($WKDIR/node_modules/.bin/json2yaml "$DESCR_PATH"/userProfile.json)
   userProfile=${userProfile:4}
-  $wkdir/node_modules/.bin/json2yaml $members_dir/$key.json > $members_dir/$now-$key.markdown
-  sed -i 's/categories/tags/g' $members_dir/$now-$key.markdown
-  cat << EOF >> $members_dir/$now-$key.markdown
+  $WKDIR/node_modules/.bin/json2yaml $MEMBERS_DIR/$key.json > $MEMBERS_DIR/$now-$key.markdown
+  sed -i 's/categories/tags/g' $MEMBERS_DIR/$now-$key.markdown
+  cat << EOF >> $MEMBERS_DIR/$now-$key.markdown
 $userProfile
   layout: profile
   title:  "$cn"
@@ -132,26 +138,30 @@ $userProfile
 ---
 EOF
 
-  echo Generated $members_dir/$now-$key.markdown ...
+  echo Generated $MEMBERS_DIR/$now-$key.markdown ...
 done
 
-if [[ ! -d "_posts/members" ]]; then
-  mkdir "$wkdir/_posts/members"
+if [[ ! -d "$JEKYLL_DIR/_posts" ]]; then
+  mkdir "$JEKYLL_DIR/_posts"
 fi
 
-rm $wkdir/_posts/members/*
+if [[ ! -d "$JEKYLL_DIR/_posts/members" ]]; then
+  mkdir "$JEKYLL_DIR/_posts/members"
+fi
 
-mv $members_dir/*.markdown $wkdir/_posts/members
+rm JEKYLL_DIR/_posts/members/*
+
+mv $MEMBERS_DIR/*.markdown $JEKYLL_DIR/_posts/members
 
 
 
-for descriptor in `find $projects_dir -type f -regex '.*\.json'`; do
+for descriptor in `find $PROJECTS_DIR -type f -regex '.*\.json'`; do
   filename=$(basename $descriptor)
   key=${filename%.json}
 
-  project_name=$(node -pe 'JSON.parse(process.argv[1]).name' "$(cat $projects_dir/$key.json)")
-  url=$(node -pe 'JSON.parse(process.argv[1]).website.website' "$(cat $projects_dir/$key.json)")
-  parent=$(node -pe 'JSON.parse(process.argv[1]).parent' "$(cat $projects_dir/$key.json)")
+  project_name=$(node -pe 'JSON.parse(process.argv[1]).name' "$(cat $PROJECTS_DIR/$key.json)")
+  url=$(node -pe 'JSON.parse(process.argv[1]).website.website' "$(cat $PROJECTS_DIR/$key.json)")
+  parent=$(node -pe 'JSON.parse(process.argv[1]).parent' "$(cat $PROJECTS_DIR/$key.json)")
   lastUpdates=$(curl -u dashbot:ghkf346LU538QZRD -X GET 'https://confluence.subutai.io/rest/api/content/search?cql=lastModified%3E=now(%22-5d%22)%20and%20space='$key'' -A 'ssf')
   lastUpdates=$(node -pe '
             var lastUpdates=[];
@@ -174,7 +184,7 @@ for descriptor in `find $projects_dir -type f -regex '.*\.json'`; do
             }
            ')
   echo $lastUpdates > $DESCR_PATH/lastUpdates.json
-  lastUpdates=$($wkdir/node_modules/.bin/json2yaml "$DESCR_PATH"/lastUpdates.json)
+  lastUpdates=$($WKDIR/node_modules/.bin/json2yaml "$DESCR_PATH"/lastUpdates.json)
   lastUpdates=${lastUpdates:4}
 
 
@@ -201,7 +211,7 @@ for descriptor in `find $projects_dir -type f -regex '.*\.json'`; do
             }
            ')
   echo $commits > $DESCR_PATH/commits.json
-  commits=$($wkdir/node_modules/.bin/json2yaml "$DESCR_PATH"/commits.json)
+  commits=$($WKDIR/node_modules/.bin/json2yaml "$DESCR_PATH"/commits.json)
   commits=${commits:4}
 
   blog=$(curl -u dashbot:ghkf346LU538QZRD -X GET 'https://confluence.subutai.io/rest/api/content?type=blogpost&spaceKey='$key'' -A 'ssf')
@@ -224,19 +234,19 @@ for descriptor in `find $projects_dir -type f -regex '.*\.json'`; do
                 }
                 ')
   echo $blogs > $DESCR_PATH/blogs.json
-  blogs=$($wkdir/node_modules/.bin/json2yaml "$DESCR_PATH"/blogs.json)
+  blogs=$($WKDIR/node_modules/.bin/json2yaml "$DESCR_PATH"/blogs.json)
   blogs=${blogs:4}
 
   if [ -n '$parent' ] && [ "$parent" != "undefined" ]; then
     pkey=${parent%.json}
-    parent=$(node -pe 'JSON.parse(process.argv[1]).website.website' "$(cat $projects_dir/$pkey.json)")
+    parent=$(node -pe 'JSON.parse(process.argv[1]).website.website' "$(cat $PROJECTS_DIR/$pkey.json)")
   else
     parent=''
   fi
 
-  $wkdir/node_modules/.bin/json2yaml $projects_dir/$key.json > $projects_dir/$now-$key.markdown
-  sed -i 's/categories/tags/g' $projects_dir/$now-$key.markdown
-  cat << EOF >> $projects_dir/$now-$key.markdown
+  $WKDIR/node_modules/.bin/json2yaml $PROJECTS_DIR/$key.json > $PROJECTS_DIR/$now-$key.markdown
+  sed -i 's/categories/tags/g' $PROJECTS_DIR/$now-$key.markdown
+  cat << EOF >> $PROJECTS_DIR/$now-$key.markdown
 
 $lastUpdates
 $commits
@@ -250,13 +260,13 @@ $blogs
 ---
 EOF
 
-  echo Generated $projects_dir/$now-$key.markdown ...
+  echo Generated $PROJECTS_DIR/$now-$key.markdown ...
 done
 
-if [[ ! -d "_posts/projects" ]]; then
-  mkdir "$wkdir/_posts/projects"
+if [[ ! -d "$JEKYLL_DIR/_posts/projects" ]]; then
+  mkdir "$JEKYLL_DIR/_posts/projects"
 fi
 
-rm $wkdir/_posts/projects/*
+rm $JEKYLL_DIR/_posts/projects/*
 
-mv $projects_dir/*.markdown $wkdir/_posts/projects
+mv $PROJECTS_DIR/*.markdown $JEKYLL_DIR/_posts/projects

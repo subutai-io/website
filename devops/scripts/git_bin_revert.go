@@ -1,7 +1,6 @@
 package main
 
 import (
-    "fmt"
     "log"
     "bufio"
     "os"
@@ -23,12 +22,11 @@ func main() {
 
     initLog( path )
 
-    gitPath := path
-    if !searchGitBinFile( &gitPath ) {
+    if !searchGitBinFile( &path ) {
         log.Fatalf( "Cannot find in %d closest dirs: %s", MAX_DEPTH, FILE_SEARCHED )
     }
 
-    inFile, err := os.Open( filepath.Join(gitPath, FILE_SEARCHED) )
+    inFile, err := os.Open( filepath.Join(path, FILE_SEARCHED) )
 
     if err != nil {
         log.Fatalf("error openning file: %v", err)
@@ -38,25 +36,28 @@ func main() {
     scanner := bufio.NewScanner(inFile)
     scanner.Split(bufio.ScanLines)
 
-    os.MkdirAll( filepath.Join( path, FILES_RESTORED_DIR ) ,0775);
+    os.MkdirAll( filepath.Join( path, FILES_RESTORED_DIR ) ,0775 );
 
 
     for scanner.Scan() {
         vals := strings.Split(scanner.Text(), "|")
-        fmt.Printf("Copying %s --> %s\n",
-            filepath.Join( gitPath, ".git", "bin-cache", "wf", vals[2] ),
-            filepath.Join( path, FILES_RESTORED_DIR, vals[0] ))
 
-        //CopyFile( filepath.Join( gitPath, ".git", "bin-cache", "wf", vals[2] ), filepath.Join( path, FILES_RESTORED_DIR, vals[0] ) )
-        //if _, err := os.Stat(filename); os.IsNotExist(err) {
-        //    fmt.Printf("no such file or directory: %s", filename)
-        //    return
-        //}
+        pathSrc := filepath.Join( path, ".git", "bin-cache", "wf", vals[2] )
+        pathDest := filepath.Join( path, FILES_RESTORED_DIR, vals[0] )
 
-        //os.Copy()
+        log.Printf("Copying %s --> %s\n", pathSrc, pathDest)
 
-        //vals[2] // find
-        //vals[0] // path
+        state, err := createIfNotExists( filepath.Dir( pathDest ) )
+
+        if !state || err != nil {
+            log.Printf("Couldn't create a directory %s, err: %s\n", filepath.Dir( pathDest ), err)
+        } else {
+            copyFile( pathSrc, pathDest )
+        }
+
+
+        //CopyFile( filepath.Join( path, ".git", "bin-cache", "wf", vals[2] ),
+        //    filepath.Join( path, FILES_RESTORED_DIR, vals[0] ) )
     }
 }
 
@@ -81,59 +82,70 @@ func searchGitBinFile( path *string ) bool {
             return true
         }
 
-        *path = filepath.Join(*path, "../")
+        dir, _ := filepath.Split(*path)
+
+        if dir == "" {
+            return false
+        }
+
+        *path = filepath.Dir( dir )
     }
 
     return false
 }
 
-func CopyFile( src, dst string ) (err error) {
-    sfi, err := os.Stat(src)
+func createIfNotExists( path string ) ( bool, error ) {
+    exists, err := exists( path )
+
     if err != nil {
-        return
+        return false, err
     }
-    if !sfi.Mode().IsRegular() {
-        return fmt.Errorf("CopyFile: non-regular source file %s (%q)", sfi.Name(), sfi.Mode().String())
-    }
-    dfi, err := os.Stat(dst)
-    if err != nil {
-        if !os.IsNotExist(err) {
-            return
+
+    if !exists {
+        dir, _ := filepath.Split( path )
+
+        if dir == "" {
+            return false, nil
         }
-    } else {
-        if !dfi.Mode().IsRegular() {
-            return fmt.Errorf("CopyFile: non-regular destination file %s (%q)", dfi.Name(), dfi.Mode().String())
+
+        report, err := createIfNotExists( filepath.Dir( dir ) )
+
+        if err != nil || !report {
+            return false, err
         }
-        if os.SameFile(sfi, dfi) {
-            return
-        }
+
+        os.Mkdir( path ,0775 )
     }
-    if err = os.Link(src, dst); err == nil {
-        return
-    }
-    err = copyFileContents(src, dst)
-    return
+
+    return true, err
 }
 
-func copyFileContents( src, dst string ) (err error) {
-    in, err := os.Open(src)
+func exists( path string ) ( bool, error ) {
+    _, err := os.Stat(path)
+    if err == nil { return true, nil }
+    if os.IsNotExist(err) { return false, nil }
+    return true, err
+}
+
+func copyFile( src, dest string ) {
+    r, err := os.Open(src)
     if err != nil {
-        return
+        panic(err)
     }
-    defer in.Close()
-    out, err := os.Create(dst)
+    defer r.Close()
+
+    w, err := os.Create(dest)
     if err != nil {
-        return
+        panic(err)
     }
-    defer func() {
-        cerr := out.Close()
-        if err == nil {
-            err = cerr
-        }
-    }()
-    if _, err = io.Copy(out, in); err != nil {
-        return
+    defer w.Close()
+
+    n, err := io.Copy(w, r)
+    if err != nil {
+        panic(err)
     }
-    err = out.Sync()
+
+    log.Println(n)
+
     return
 }
