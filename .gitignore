@@ -5,6 +5,7 @@ _site/
 ssf/_site/
 ssf/_posts/
 ssf/img/avatars/
+project-descriptors/
 
 .sass-cache/
 .idea/

@@ -2,6 +2,7 @@
 
 now=$(date +"%Y-%m-%d")
 WKDIR=$(dirname $0)
+DESCR_PATH=$WKDIR/../project-descriptors;
 
 while [[ $# > 0 ]]
 do
@@ -23,13 +24,26 @@ esac
 shift
 done
 
-
-DESCR_PATH=$WKDIR/../project-descriptors;
 JEKYLL_DIR=$WKDIR/ssf
 PROJECTS_DIR=$DESCR_PATH/projects
 MEMBERS_DIR=$DESCR_PATH/generated/members
 
 
+if [[ ! -d "$JEKYLL_DIR/_posts" ]]; then
+  mkdir "$JEKYLL_DIR/_posts"
+fi
+
+if [[ ! -d "$JEKYLL_DIR/_posts/members" ]]; then
+  mkdir "$JEKYLL_DIR/_posts/members"
+fi
+
+if [[ ! -d "$JEKYLL_DIR/_posts/projects" ]]; then
+  mkdir "$JEKYLL_DIR/_posts/projects"
+fi
+
+if [[ ! -d "$JEKYLL_DIR/img/avatars" ]]; then
+  mkdir "$JEKYLL_DIR/img/avatars"
+fi
 
 if [[ -z "$(which curl)" ]]; then
   echo Can not find curl on your PATH
@@ -88,7 +102,8 @@ for descriptor in `find $MEMBERS_DIR -type f -regex '.*\.json'`; do
             var url = '"$userProfile"'.avatarUrls["48x48"];
             url;
            ')
-  wget --user-agent="Mozilla/5.0 (Windows NT 6.3; rv:36.0) Gecko/20100101 Firefox/36.0" --http-user=dashbot --http-password=ghkf346LU538QZRD "$userAvatar" -O "$wkdir"/img/avatars/"$key".png
+
+  wget --user-agent="ssf" --http-user=dashbot --http-password=ghkf346LU538QZRD "$userAvatar" -O $JEKYLL_DIR/img/avatars/$key.png
 
   userProfile=$(node -pe '
             var profile = {};
@@ -124,7 +139,7 @@ for descriptor in `find $MEMBERS_DIR -type f -regex '.*\.json'`; do
             }
            ')
   echo $userProfile > $DESCR_PATH/userProfile.json
-  userProfile=$($wkdir/node_modules/.bin/json2yaml "$DESCR_PATH"/userProfile.json)
+  userProfile=$($WKDIR/node_modules/.bin/json2yaml "$DESCR_PATH"/userProfile.json)
   userProfile=${userProfile:4}
   $WKDIR/node_modules/.bin/json2yaml $MEMBERS_DIR/$key.json > $MEMBERS_DIR/$now-$key.markdown
   sed -i 's/categories/tags/g' $MEMBERS_DIR/$now-$key.markdown
@@ -141,19 +156,9 @@ EOF
   echo Generated $MEMBERS_DIR/$now-$key.markdown ...
 done
 
-if [[ ! -d "$JEKYLL_DIR/_posts" ]]; then
-  mkdir "$JEKYLL_DIR/_posts"
-fi
-
-if [[ ! -d "$JEKYLL_DIR/_posts/members" ]]; then
-  mkdir "$JEKYLL_DIR/_posts/members"
-fi
 
 rm JEKYLL_DIR/_posts/members/*
-
 mv $MEMBERS_DIR/*.markdown $JEKYLL_DIR/_posts/members
-
-
 
 for descriptor in `find $PROJECTS_DIR -type f -regex '.*\.json'`; do
   filename=$(basename $descriptor)
@@ -262,10 +267,6 @@ EOF
 
   echo Generated $PROJECTS_DIR/$now-$key.markdown ...
 done
-
-if [[ ! -d "$JEKYLL_DIR/_posts/projects" ]]; then
-  mkdir "$JEKYLL_DIR/_posts/projects"
-fi
 
 rm $JEKYLL_DIR/_posts/projects/*
 
