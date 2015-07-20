@@ -1,0 +1,253 @@
+---
+  tags: 
+    - "Java"
+    - "JEE"
+    - "DevOps"
+    - "AppServer"
+    - "Subutai"
+  confluence: 
+    spaces: 
+      - 
+        description: "Documentation for AppStalk"
+        hipchat: 
+          - 
+            notify: 
+              - "Blog post is created"
+              - "Page is created"
+              - "Page is updated"
+            room: "General Notifications"
+        key: "APPSTALK"
+        name: "AppStalk"
+        scope: "public"
+        type: "documentation"
+        url: "https://confluence.subutai.io/display/APPSTALK"
+  hipchat: 
+    rooms: 
+      - 
+        name: "AppStalk"
+        web_url: "https://hipchat.subutai.io/chat"
+  jira: 
+    description: "End-To-End DevOps for J2EE and Java Applications on Subutai Social"
+    key: "APPSTALK"
+    name: "AppStalk"
+    security scope: "public"
+    url: "https://jira.subutai.io/projects/APPSTALK"
+  key: "APPSTALK"
+  long_description: "Think of an Elastic Beanstalk like service that runs on your own Subutai Social environment. AppStalk not only starts, stops, runs, and scales your Java and JEE applications, it goes further by handling the entire DevOps lifecycle from source repository to production cloud environment. AppStalk will support as many application servers as needed to support users of the Subutai Social platform. Presently we are targeting Tomcat, TomEE, and Weblogic Server."
+  name: "AppStalk"
+  security: 
+    admins: 
+      displayName: "AppStalk Administrators"
+      generate-flat-group: true
+      members: 
+        - 
+          blog-page: "http://foo.bar.com/blog/daralbaev"
+          external-projects: []
+          ldap-user: 
+            cn: "damir aralbaev"
+            email: "daralbaev@critical-factor.com"
+            mobile: ""
+            sn: "aralbaev"
+            uid: "daralbaev"
+          skills: []
+        - 
+          blog-page: "http://foo.bar.com/blog/tonyuquq"
+          external-projects: []
+          ldap-user: 
+            cn: "Kok Tonyuquq"
+            email: "tonyuquq@critical-factor.com"
+            mobile: ""
+            sn: "Tonyuquq"
+            uid: "tonyuquq"
+          skills: []
+      teams: ""
+      type: "flat"
+      uniqueIdentifier: "appstalk-administrators"
+    developers: 
+      displayName: "AppStalk Developers"
+      generate-flat-group: true
+      members: ""
+      teams: 
+        - 
+          displayName: "AppStalk Administrators"
+          generate-flat-group: true
+          members: 
+            - 
+              blog-page: "http://foo.bar.com/blog/daralbaev"
+              external-projects: []
+              ldap-user: 
+                cn: "damir aralbaev"
+                email: "daralbaev@critical-factor.com"
+                mobile: ""
+                sn: "aralbaev"
+                uid: "daralbaev"
+              skills: []
+            - 
+              blog-page: "http://foo.bar.com/blog/tonyuquq"
+              external-projects: []
+              ldap-user: 
+                cn: "Kok Tonyuquq"
+                email: "tonyuquq@critical-factor.com"
+                mobile: ""
+                sn: "Tonyuquq"
+                uid: "tonyuquq"
+              skills: []
+          teams: ""
+          type: "flat"
+          uniqueIdentifier: "appstalk-administrators"
+      type: "composite"
+      uniqueIdentifier: "appstalk-developers"
+    lead: 
+      blog-page: "http://foo.bar.com/blog/bkelceoglu"
+      external-projects: []
+      ldap-user: 
+        cn: "Beyazit Kelceoglu"
+        email: "bkelceoglu@critical-factor.com"
+        mobile: "+90 532 671 91 62"
+        sn: "Kelceoglu"
+        uid: "bkelceoglu"
+      skills: []
+    scope: "public"
+    users: 
+      displayName: "AppStalk Users Team"
+      generate-flat-group: true
+      members: ""
+      teams: 
+        - 
+          displayName: "AppStalk Developers"
+          generate-flat-group: true
+          members: ""
+          teams: 
+            - 
+              displayName: "AppStalk Administrators"
+              generate-flat-group: true
+              members: 
+                - 
+                  blog-page: "http://foo.bar.com/blog/daralbaev"
+                  external-projects: []
+                  ldap-user: 
+                    cn: "damir aralbaev"
+                    email: "daralbaev@critical-factor.com"
+                    mobile: ""
+                    sn: "aralbaev"
+                    uid: "daralbaev"
+                  skills: []
+                - 
+                  blog-page: "http://foo.bar.com/blog/tonyuquq"
+                  external-projects: []
+                  ldap-user: 
+                    cn: "Kok Tonyuquq"
+                    email: "tonyuquq@critical-factor.com"
+                    mobile: ""
+                    sn: "Tonyuquq"
+                    uid: "tonyuquq"
+                  skills: []
+              teams: ""
+              type: "flat"
+              uniqueIdentifier: "appstalk-administrators"
+          type: "composite"
+          uniqueIdentifier: "appstalk-developers"
+      type: "composite"
+      uniqueIdentifier: "appstalk-users"
+  short_description: "End-To-End DevOps for J2EE and Java Applications on Subutai Social"
+  stash: 
+    project: 
+      key: "APPSTALK"
+      name: "AppStalk"
+      repositories: 
+        - 
+          name: "main"
+          notifications: 
+            hipchat: 
+              room: "General Notifications"
+              triggers: 
+                - "push"
+          scope: "public"
+          url: "https://stash.subutai.io/projects/APPSTALK/repos/main/browse"
+        - 
+          name: "weblogic plugin"
+          notifications: 
+            hipchat: 
+              room: "General Notifications"
+              triggers: 
+                - "push"
+          scope: "public"
+          url: "https://stash.subutai.io/projects/APPSTALK/repos/weblogic-plugin/browse"
+        - 
+          name: "tomee plugin"
+          notifications: 
+            hipchat: 
+              room: "General Notifications"
+              triggers: 
+                - "push"
+          scope: "public"
+          url: "https://stash.subutai.io/projects/APPSTALK/repos/tomee-plugin/browse"
+      url: "https://stash.subutai.io/projects/APPSTALK"
+  type: "simple"
+  website: 
+    banner_media: 
+      - "Appstalk_1.jpg"
+      - "Appstalk_2.jpg"
+      - "Appstalk_3.jpg"
+    blogs: 
+      - "http://www.lipsum.com/"
+      - "http://www.lipsum.com/"
+    downloads: 
+      - 
+        description: "AppStalk download page"
+        url: "https://confluence.subutai.io/display/APPSTALK/AppStalk"
+    favicon: "favicon.png"
+    large_logo_64: "appstalk_large_logo.png"
+    medium_logo_48: "appstalk_medium_logo.png"
+    small_logo_32: "appstalk_small_logo.png"
+    twitter: "#"
+    website: "appstalk"
+
+
+  lastUpdates: 
+    - 
+      id: "22938013"
+      type: "blogpost"
+      title: "Icon blog (This is for testing Conf API) 2"
+      url: "https://confluence.subutai.io/display/APPSTALK/2015/07/07/Icon+blog+%28This+is+for+testing+Conf+API%29+2"
+    - 
+      id: "22937992"
+      type: "blogpost"
+      title: "Icon blog (This is for testing Conf API)"
+      url: "https://confluence.subutai.io/pages/viewpage.action?pageId=22937992"
+    - 
+      id: "22938010"
+      type: "page"
+      title: "Icon blog (This is for testing Conf API) 2"
+      url: "https://confluence.subutai.io/display/APPSTALK/Icon+blog+%28This+is+for+testing+Conf+API%29+2"
+    - 
+      id: "22937603"
+      type: "page"
+      title: "AppStalk"
+      url: "https://confluence.subutai.io/display/APPSTALK/AppStalk"
+    - 
+      id: "att22938048"
+      type: "attachment"
+      title: "appstalk_large_logo.png"
+      url: "https://confluence.subutai.io/display/APPSTALK/AppStalk?preview=%2F22937603%2F22938048%2Fappstalk_large_logo.png"
+  commits: 
+    - 
+      id: "404ec03c961f864c959b76b7dab75ef12e183c80"
+      message: "first"
+      author: "bkelceoglu"
+      displayId: "404ec03c961"
+      url: "https://stash.subutai.io/projects/APPSTALK/repos/main/commits/404ec03c961f864c959b76b7dab75ef12e183c80"
+  blogs: 
+    - 
+      title: "Icon blog (This is for testing Conf API)"
+      url: "https://confluence.subutai.io/pages/viewpage.action?pageId=22937992"
+    - 
+      title: "Icon blog (This is for testing Conf API) 2"
+      url: "https://confluence.subutai.io/display/APPSTALK/2015/07/07/Icon+blog+%28This+is+for+testing+Conf+API%29+2"
+  parenturl: 
+  layout: post
+  title:  "AppStalk"
+  date:   Date.parse('2015-07-11')
+  categories: projects
+  permalink: /:categories/appstalk/
+---

@@ -1,0 +1,220 @@
+---
+  tags: 
+    - "AI"
+    - "Java"
+    - "subutai"
+    - "software"
+    - "bigdata"
+    - "SSF"
+  confluence: 
+    spaces: 
+      - 
+        description: "Documentation for Jarvis"
+        hipchat: 
+          - 
+            notify: 
+              - "Blog post is created"
+              - "Page is created"
+              - "Page is updated"
+            room: "General Notifications"
+        key: "JARVIS"
+        name: "Jarvis"
+        scope: "public"
+        type: "documentation"
+        url: "https://confluence.subutai.io/display/JAR"
+  hipchat: 
+    rooms: 
+      - 
+        name: "Jarvis"
+        web_url: "https://hipchat.subutai.io/chat"
+  key: "JARVIS"
+  long_description: "Communication alone is not enough to really form a capable interactive community. Jarvis collects information as we work at the SSF to help improve the way we teach ourselves, conduct online research, organize and teach back our knowledge to new comers. Jarvis also tracks progress on projects and checks for code quality to enable meritocracy at the SSF."
+  name: "Jarvis"
+  security: 
+    admins: 
+      displayName: "Jarvis Administrators"
+      generate-flat-group: true
+      members: 
+        - 
+          blog-page: "http://foo.bar.com/blog/daralbaev"
+          external-projects: []
+          ldap-user: 
+            cn: "damir aralbaev"
+            email: "daralbaev@critical-factor.com"
+            mobile: ""
+            sn: "aralbaev"
+            uid: "daralbaev"
+          skills: []
+        - 
+          blog-page: "http://foo.bar.com/blog/tonyuquq"
+          external-projects: []
+          ldap-user: 
+            cn: "Kok Tonyuquq"
+            email: "tonyuquq@critical-factor.com"
+            mobile: ""
+            sn: "Tonyuquq"
+            uid: "tonyuquq"
+          skills: []
+      teams: ""
+      type: "flat"
+      uniqueIdentifier: "jarvis-admins"
+    developers: 
+      displayName: "Jarvis Developers"
+      generate-flat-group: true
+      members: ""
+      teams: 
+        - 
+          displayName: "Jarvis Administrators"
+          generate-flat-group: true
+          members: 
+            - 
+              blog-page: "http://foo.bar.com/blog/daralbaev"
+              external-projects: []
+              ldap-user: 
+                cn: "damir aralbaev"
+                email: "daralbaev@critical-factor.com"
+                mobile: ""
+                sn: "aralbaev"
+                uid: "daralbaev"
+              skills: []
+            - 
+              blog-page: "http://foo.bar.com/blog/tonyuquq"
+              external-projects: []
+              ldap-user: 
+                cn: "Kok Tonyuquq"
+                email: "tonyuquq@critical-factor.com"
+                mobile: ""
+                sn: "Tonyuquq"
+                uid: "tonyuquq"
+              skills: []
+          teams: ""
+          type: "flat"
+          uniqueIdentifier: "jarvis-admins"
+      type: "composite"
+      uniqueIdentifier: "jarvis-developers"
+    lead: 
+      blog-page: "http://foo.bar.com/blog/tonyuquq"
+      external-projects: []
+      ldap-user: 
+        cn: "Kok Tonyuquq"
+        email: "tonyuquq@critical-factor.com"
+        mobile: ""
+        sn: "Tonyuquq"
+        uid: "tonyuquq"
+      skills: []
+    scope: "public"
+    users: 
+      displayName: "Jarvis Team"
+      generate-flat-group: true
+      members: ""
+      teams: 
+        - 
+          displayName: "Jarvis Developers"
+          generate-flat-group: true
+          members: ""
+          teams: 
+            - 
+              displayName: "Jarvis Administrators"
+              generate-flat-group: true
+              members: 
+                - 
+                  blog-page: "http://foo.bar.com/blog/daralbaev"
+                  external-projects: []
+                  ldap-user: 
+                    cn: "damir aralbaev"
+                    email: "daralbaev@critical-factor.com"
+                    mobile: ""
+                    sn: "aralbaev"
+                    uid: "daralbaev"
+                  skills: []
+                - 
+                  blog-page: "http://foo.bar.com/blog/tonyuquq"
+                  external-projects: []
+                  ldap-user: 
+                    cn: "Kok Tonyuquq"
+                    email: "tonyuquq@critical-factor.com"
+                    mobile: ""
+                    sn: "Tonyuquq"
+                    uid: "tonyuquq"
+                  skills: []
+              teams: ""
+              type: "flat"
+              uniqueIdentifier: "jarvis-admins"
+          type: "composite"
+          uniqueIdentifier: "jarvis-developers"
+      type: "composite"
+      uniqueIdentifier: "jarvis"
+  short_description: "AI tool to combines our collective knowledge here at the SSF"
+  stash: 
+    project: 
+      key: "JARVIS"
+      name: "Jarvis"
+      repositories: 
+        - 
+          name: "Core"
+          notifications: 
+            hipchat: 
+              room: "General Notifications"
+              triggers: 
+                - "push"
+          scope: "public"
+          url: "https://stash.subutai.io/projects/JARVIS/repos/core/browse"
+        - 
+          name: "confluence-rest-api"
+          notifications: 
+            hipchat: 
+              room: "General Notifications"
+              triggers: 
+                - "push"
+          scope: "public"
+          url: "https://stash.subutai.io/projects/JARVIS/repos/confluence-rest-api/browse"
+        - 
+          name: "firefox plugin"
+          notifications: 
+            hipchat: 
+              room: "General Notifications"
+              triggers: 
+                - "push"
+          scope: "public"
+          url: "https://stash.subutai.io/projects/JARVIS/repos/firefox-plugin/browse"
+        - 
+          name: "JIRA workflow plugin"
+          notifications: 
+            hipchat: 
+              room: "General Notifications"
+              triggers: 
+                - "push"
+          scope: "public"
+          url: "https://stash.subutai.io/projects/JARVIS/repos/jira-workflow-plugin/browse"
+      url: "https://stash.subutai.io/projects/JARVIS"
+  type: "simple"
+  website: 
+    banner_media: 
+      - "Jarvis_1.jpg"
+      - "Jarvis_2.jpg"
+      - "Jarvis_3.jpg"
+    blogs: 
+      - "http://www.lipsum.com/"
+      - "http://www.lipsum.com/"
+    downloads: 
+      - 
+        description: "Jarvis download page"
+        url: "https://confluence.subutai.io/display/JARVIS/Jarvis"
+    favicon: "favicon.png"
+    large_logo_64: "jarvis_large_logo.png"
+    medium_logo_48: "jarvis_medium_logo.png"
+    small_logo_32: "jarvis_small_logo.png"
+    twitter: "#"
+    website: "jarvis"
+
+
+  lastUpdates: []
+  commits: []
+  blogs: []
+  parenturl: 
+  layout: post
+  title:  "Jarvis"
+  date:   Date.parse('2015-07-11')
+  categories: projects
+  permalink: /:categories/jarvis/
+---

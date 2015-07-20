@@ -1,0 +1,283 @@
+---
+  tags: 
+    - "subutai"
+    - "C++"
+    - "daemon"
+    - "software"
+    - "MQTT"
+  key: "SSAGENT"
+  long_description: "A daemon running on Subutai managed resource hosts which connects via MQTT to the Subutai Management Server to control."
+  name: "Subutai Social Agent"
+  parent: "SS"
+  security: 
+    admins: 
+      displayName: "Subutai Social Agent Administrators"
+      generate-flat-group: true
+      members: 
+        - 
+          blog-page: "http://foo.bar.com/blog/tonyuquq"
+          external-projects: []
+          ldap-user: 
+            cn: "Kok Tonyuquq"
+            email: "tonyuquq@critical-factor.com"
+            mobile: ""
+            sn: "Tonyuquq"
+            uid: "tonyuquq"
+          skills: []
+      teams: ""
+      type: "flat"
+      uniqueIdentifier: "ss_agent-admins"
+    developers: 
+      displayName: "Subtuai Socrial Agent Developers"
+      generate-flat-group: true
+      members: 
+        - 
+          blog-page: "http://foo.bar.com/blog/ocsahin"
+          external-projects: []
+          ldap-user: 
+            cn: "Ozlem Ceren Sahin"
+            email: "ocsahin@havelsan.com.tr"
+            mobile: ""
+            sn: "Ceren Sahin"
+            uid: "ocsahin"
+          skills: []
+        - 
+          blog-page: "http://foo.bar.com/blog/msavochkin"
+          external-projects: []
+          ldap-user: 
+            cn: "Mikhail Savochkin"
+            email: "msavochkin@critical-factor.com"
+            mobile: ""
+            sn: "Savochkin"
+            uid: "msavochkin"
+          skills: []
+      teams: 
+        - 
+          displayName: "Subutai Social Agent Administrators"
+          generate-flat-group: true
+          members: 
+            - 
+              blog-page: "http://foo.bar.com/blog/tonyuquq"
+              external-projects: []
+              ldap-user: 
+                cn: "Kok Tonyuquq"
+                email: "tonyuquq@critical-factor.com"
+                mobile: ""
+                sn: "Tonyuquq"
+                uid: "tonyuquq"
+              skills: []
+          teams: ""
+          type: "flat"
+          uniqueIdentifier: "ss_agent-admins"
+      type: "composite"
+      uniqueIdentifier: "ss_agent-devs"
+    lead: 
+      blog-page: "http://foo.bar.com/blog/tonyuquq"
+      external-projects: []
+      ldap-user: 
+        cn: "Kok Tonyuquq"
+        email: "tonyuquq@critical-factor.com"
+        mobile: ""
+        sn: "Tonyuquq"
+        uid: "tonyuquq"
+      skills: []
+    scope: "public"
+    users: 
+      displayName: "Subutai Social Agent Team"
+      generate-flat-group: true
+      members: ""
+      teams: 
+        - 
+          displayName: "Subtuai Socrial Agent Developers"
+          generate-flat-group: true
+          members: 
+            - 
+              blog-page: "http://foo.bar.com/blog/ocsahin"
+              external-projects: []
+              ldap-user: 
+                cn: "Ozlem Ceren Sahin"
+                email: "ocsahin@havelsan.com.tr"
+                mobile: ""
+                sn: "Ceren Sahin"
+                uid: "ocsahin"
+              skills: []
+            - 
+              blog-page: "http://foo.bar.com/blog/msavochkin"
+              external-projects: []
+              ldap-user: 
+                cn: "Mikhail Savochkin"
+                email: "msavochkin@critical-factor.com"
+                mobile: ""
+                sn: "Savochkin"
+                uid: "msavochkin"
+              skills: []
+          teams: 
+            - 
+              displayName: "Subutai Social Agent Administrators"
+              generate-flat-group: true
+              members: 
+                - 
+                  blog-page: "http://foo.bar.com/blog/tonyuquq"
+                  external-projects: []
+                  ldap-user: 
+                    cn: "Kok Tonyuquq"
+                    email: "tonyuquq@critical-factor.com"
+                    mobile: ""
+                    sn: "Tonyuquq"
+                    uid: "tonyuquq"
+                  skills: []
+              teams: ""
+              type: "flat"
+              uniqueIdentifier: "ss_agent-admins"
+          type: "composite"
+          uniqueIdentifier: "ss_agent-devs"
+      type: "composite"
+      uniqueIdentifier: "ss_agent"
+  short_description: "An MQTT based resource host managment agent."
+  stash: 
+    project: 
+      key: "SS_AGENT"
+      name: "Subutai Social Agent"
+      repositories: 
+        - 
+          name: "main"
+          notifications: 
+            hipchat: 
+              room: "Subutai Notifications"
+              triggers: 
+                - "push"
+          scope: "public"
+          url: "https://stash.subutai.io/projects/SS_AGENT/repos/main/browse"
+      url: "https://stash.subutai.io/projects/SS_AGENT"
+  type: "child"
+  website: 
+    banner_media: 
+      - "SS agent_1.jpg"
+      - "SS agent_2.jpg"
+      - "SS agent_3.jpg"
+    blogs: 
+      - "http://www.lipsum.com/"
+      - "http://www.lipsum.com/"
+      - "http://www.lipsum.com/"
+      - "http://www.lipsum.com/"
+    downloads: 
+      - 
+        description: "Lorem ipsum"
+        url: "http://www.lipsum.com/"
+      - 
+        description: "Lorem ipsum"
+        url: "http://www.lipsum.com/"
+    favicon: "favicon.png"
+    large_logo_64: "ss_large_logo.png"
+    medium_logo_48: "ss_medium_logo.png"
+    small_logo_32: "ss_small_logo.png"
+    twitter: "#"
+    website: "subutai-social/agent"
+
+
+  lastUpdates: []
+  commits: 
+    - 
+      id: "faf5b3aaa2e275f0cb922ff4478907bae487a659"
+      message: "Merge pull request #1 in AGENT/main from fix-folderPaths to master\n\n* commit '84f000436fccca1f8de2d293425d0f42dc60c469':\n changed default file paths to old one"
+      author: "Ozlem Ceren Sahin"
+      displayId: "faf5b3aaa2e"
+      url: "https://stash.subutai.io/projects/SS_AGENT/repos/main/commits/faf5b3aaa2e275f0cb922ff4478907bae487a659"
+    - 
+      id: "84f000436fccca1f8de2d293425d0f42dc60c469"
+      message: "changed default file paths to old one"
+      author: "Emin INAL"
+      displayId: "84f000436fc"
+      url: "https://stash.subutai.io/projects/SS_AGENT/repos/main/commits/84f000436fccca1f8de2d293425d0f42dc60c469"
+    - 
+      id: "ecc34a7321b6c4b512e8d7af9b0c33743deba86d"
+      message: "fixes"
+      author: "msavochkin"
+      displayId: "ecc34a7321b"
+      url: "https://stash.subutai.io/projects/SS_AGENT/repos/main/commits/ecc34a7321b6c4b512e8d7af9b0c33743deba86d"
+    - 
+      id: "3d99dbba238fb0d9a9fde5ab9e30597dc13f5e2d"
+      message: "fixed command execution"
+      author: "msavochkin"
+      displayId: "3d99dbba238"
+      url: "https://stash.subutai.io/projects/SS_AGENT/repos/main/commits/3d99dbba238fb0d9a9fde5ab9e30597dc13f5e2d"
+    - 
+      id: "7cbfcf86861a0586aa7e5d894a5f4ed63292c29d"
+      message: "minor updates"
+      author: "msavochkin"
+      displayId: "7cbfcf86861"
+      url: "https://stash.subutai.io/projects/SS_AGENT/repos/main/commits/7cbfcf86861a0586aa7e5d894a5f4ed63292c29d"
+    - 
+      id: "5c6ded1bd196aa6277e47b3732bf468e1cf3da06"
+      message: "Added Stress test program"
+      author: "msavochkin"
+      displayId: "5c6ded1bd19"
+      url: "https://stash.subutai.io/projects/SS_AGENT/repos/main/commits/5c6ded1bd196aa6277e47b3732bf468e1cf3da06"
+    - 
+      id: "2c5e976fa2dfb08b1cf36b2b0da3f952d186589a"
+      message: "architectural improvements"
+      author: "msavochkin"
+      displayId: "2c5e976fa2d"
+      url: "https://stash.subutai.io/projects/SS_AGENT/repos/main/commits/2c5e976fa2dfb08b1cf36b2b0da3f952d186589a"
+    - 
+      id: "e10579eb0566e60597269370349cab889facf4de"
+      message: "minor changes"
+      author: "msavochkin"
+      displayId: "e10579eb056"
+      url: "https://stash.subutai.io/projects/SS_AGENT/repos/main/commits/e10579eb0566e60597269370349cab889facf4de"
+    - 
+      id: "e59d85dee312cbe7971a2199bd2517852100bf64"
+      message: "Minor changes, code style, command handler design changed"
+      author: "msavochkin"
+      displayId: "e59d85dee31"
+      url: "https://stash.subutai.io/projects/SS_AGENT/repos/main/commits/e59d85dee312cbe7971a2199bd2517852100bf64"
+    - 
+      id: "a634b0ccde69e064a373a4273deacbe2cbe7905b"
+      message: "Building version created. Now project can be compiled without errors\nbut it's not effective, since some necessary functions has been\ncutten off"
+      author: "msavochkin"
+      displayId: "a634b0ccde6"
+      url: "https://stash.subutai.io/projects/SS_AGENT/repos/main/commits/a634b0ccde69e064a373a4273deacbe2cbe7905b"
+    - 
+      id: "3099f6103dc4533e4fe436b7c46c38fb0ccd8807"
+      message: "links in readme"
+      author: "msavochkin"
+      displayId: "3099f6103dc"
+      url: "https://stash.subutai.io/projects/SS_AGENT/repos/main/commits/3099f6103dc4533e4fe436b7c46c38fb0ccd8807"
+    - 
+      id: "2b22f38e6b9721b6b113ee97b265289d3d87d244"
+      message: "markdown in readme"
+      author: "msavochkin"
+      displayId: "2b22f38e6b9"
+      url: "https://stash.subutai.io/projects/SS_AGENT/repos/main/commits/2b22f38e6b9721b6b113ee97b265289d3d87d244"
+    - 
+      id: "b37d6ff75f96848f28fc3990ed3932a98421ed75"
+      message: "readme updated"
+      author: "msavochkin"
+      displayId: "b37d6ff75f9"
+      url: "https://stash.subutai.io/projects/SS_AGENT/repos/main/commits/b37d6ff75f96848f28fc3990ed3932a98421ed75"
+    - 
+      id: "1e390bf7f017bd1f8c1c9e9f749832379082f9a4"
+      message: "readme updated"
+      author: "msavochkin"
+      displayId: "1e390bf7f01"
+      url: "https://stash.subutai.io/projects/SS_AGENT/repos/main/commits/1e390bf7f017bd1f8c1c9e9f749832379082f9a4"
+    - 
+      id: "775e4b6c75b938a381306c8efc3d07108d598890"
+      message: "layout"
+      author: "msavochkin"
+      displayId: "775e4b6c75b"
+      url: "https://stash.subutai.io/projects/SS_AGENT/repos/main/commits/775e4b6c75b938a381306c8efc3d07108d598890"
+    - 
+      id: "ba1c18cae13f26694ceb26b214a3c914603bac4a"
+      message: "Initial Commit"
+      author: "msavochkin"
+      displayId: "ba1c18cae13"
+      url: "https://stash.subutai.io/projects/SS_AGENT/repos/main/commits/ba1c18cae13f26694ceb26b214a3c914603bac4a"
+  blogs: []
+  parenturl: subutai-social
+  layout: post
+  title:  "Subutai Social Agent"
+  date:   Date.parse('2015-07-11')
+  categories: projects
+  permalink: /:categories/subutai-social/agent/
+---

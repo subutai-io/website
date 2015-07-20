@@ -1,0 +1,347 @@
+---
+  tags: 
+    - "apt"
+    - "security"
+    - "SSL"
+    - "software"
+  confluence: 
+    spaces: 
+      - 
+        description: "Kurjun Docs and Collaboration"
+        hipchat: 
+          - 
+            notify: 
+              - "Blog post is created"
+              - "Page is created"
+              - "Page is updated"
+            room: "General Notifications"
+        key: "KURJUN"
+        name: "Kurjun"
+        scope: "public"
+        type: "documentation"
+        url: "https://confluence.subutai.io/display/KURJUN"
+  hipchat: 
+    rooms: 
+      - 
+        name: "General At SSF"
+        web_url: "https://hipchat.subutai.io/chat"
+  jira: 
+    description: "A secure, dynamically configurable repository manager"
+    key: "KURJUN"
+    name: "Kurjun"
+    security scope: "public"
+    url: "https://jira.subutai.io/projects/KURJUN"
+  key: "KURJUN"
+  long_description: "Kurjun uses bi-directional authentication to secure private software package repositories which can proxy, cache, and even unify multiple other repositories."
+  name: "Kurjun"
+  security: 
+    admins: 
+      displayName: "Kurjun Administrators"
+      generate-flat-group: true
+      members: 
+        - 
+          blog-page: "http://foo.bar.com/blog/daralbaev"
+          external-projects: []
+          ldap-user: 
+            cn: "damir aralbaev"
+            email: "daralbaev@critical-factor.com"
+            mobile: ""
+            sn: "aralbaev"
+            uid: "daralbaev"
+          skills: []
+        - 
+          blog-page: "http://foo.bar.com/blog/tonyuquq"
+          external-projects: []
+          ldap-user: 
+            cn: "Kok Tonyuquq"
+            email: "tonyuquq@critical-factor.com"
+            mobile: ""
+            sn: "Tonyuquq"
+            uid: "tonyuquq"
+          skills: []
+      teams: ""
+      type: "flat"
+      uniqueIdentifier: "kurjun-admins"
+    developers: 
+      displayName: "Kurjun Developers"
+      generate-flat-group: true
+      members: ""
+      teams: 
+        - 
+          displayName: "Kurjun Administrators"
+          generate-flat-group: true
+          members: 
+            - 
+              blog-page: "http://foo.bar.com/blog/daralbaev"
+              external-projects: []
+              ldap-user: 
+                cn: "damir aralbaev"
+                email: "daralbaev@critical-factor.com"
+                mobile: ""
+                sn: "aralbaev"
+                uid: "daralbaev"
+              skills: []
+            - 
+              blog-page: "http://foo.bar.com/blog/tonyuquq"
+              external-projects: []
+              ldap-user: 
+                cn: "Kok Tonyuquq"
+                email: "tonyuquq@critical-factor.com"
+                mobile: ""
+                sn: "Tonyuquq"
+                uid: "tonyuquq"
+              skills: []
+          teams: ""
+          type: "flat"
+          uniqueIdentifier: "kurjun-admins"
+      type: "composite"
+      uniqueIdentifier: "kurjun-devs"
+    lead: 
+      blog-page: "http://foo.bar.com/blog/tonyuquq"
+      external-projects: []
+      ldap-user: 
+        cn: "Kok Tonyuquq"
+        email: "tonyuquq@critical-factor.com"
+        mobile: ""
+        sn: "Tonyuquq"
+        uid: "tonyuquq"
+      skills: []
+    scope: "public"
+    users: 
+      displayName: "Kurjun Team"
+      generate-flat-group: true
+      members: ""
+      teams: 
+        - 
+          displayName: "Kurjun Developers"
+          generate-flat-group: true
+          members: ""
+          teams: 
+            - 
+              displayName: "Kurjun Administrators"
+              generate-flat-group: true
+              members: 
+                - 
+                  blog-page: "http://foo.bar.com/blog/daralbaev"
+                  external-projects: []
+                  ldap-user: 
+                    cn: "damir aralbaev"
+                    email: "daralbaev@critical-factor.com"
+                    mobile: ""
+                    sn: "aralbaev"
+                    uid: "daralbaev"
+                  skills: []
+                - 
+                  blog-page: "http://foo.bar.com/blog/tonyuquq"
+                  external-projects: []
+                  ldap-user: 
+                    cn: "Kok Tonyuquq"
+                    email: "tonyuquq@critical-factor.com"
+                    mobile: ""
+                    sn: "Tonyuquq"
+                    uid: "tonyuquq"
+                  skills: []
+              teams: ""
+              type: "flat"
+              uniqueIdentifier: "kurjun-admins"
+          type: "composite"
+          uniqueIdentifier: "kurjun-devs"
+      type: "composite"
+      uniqueIdentifier: "kurjun"
+  short_description: "A secure, dynamically configurable repository manager"
+  stash: 
+    project: 
+      key: "KURJUN"
+      name: "Kurjun"
+      repositories: 
+        - 
+          name: "main"
+          notifications: 
+            hipchat: 
+              room: "General Notifications"
+              triggers: 
+                - "push"
+          scope: "public"
+          url: "https://stash.subutai.io/projects/KURJUN/repos/main/browse"
+      url: "https://stash.subutai.io/projects/KURJUN"
+  type: "simple"
+  website: 
+    banner_media: 
+      - "Kurjun_1.jpg"
+      - "Kurjun_2.jpg"
+      - "Kurjun_3.jpg"
+    blogs: 
+      - "http://www.lipsum.com/"
+      - "http://www.lipsum.com/"
+    downloads: 
+      - 
+        description: "Lorem ipsum"
+        url: "http://www.lipsum.com/"
+    favicon: "favicon.png"
+    large_logo_64: "kurjun_large_logo.png"
+    medium_logo_48: "kurjun_medium_logo.png"
+    small_logo_32: "kurjun_small_logo.png"
+    twitter: "#"
+    website: "kurjun"
+
+
+  lastUpdates: []
+  commits: 
+    - 
+      id: "e2f7f461d28811d7aeab9dfbf244db183071ff29"
+      message: "test package does not exist in repo, update package name"
+      author: "Azilet Beishenaliev"
+      displayId: "e2f7f461d28"
+      url: "https://stash.subutai.io/projects/KURJUN/repos/main/commits/e2f7f461d28811d7aeab9dfbf244db183071ff29"
+    - 
+      id: "2b4023ab25663967d4fdcb084c42404405321504"
+      message: "Merge pull request #5 in KURJUN/main from releases-index-parser to master\n\n* commit '1f4ac22185cf1b71c2d4f1ce22607b5c1f275b42':\n throw exception on parse error as per interface signature\n add parsers for clear-signed release file and with detached signature\n make `path' final in default release file impl\n fix bundle activator\n add release index file parser"
+      author: "aziletb"
+      displayId: "2b4023ab256"
+      url: "https://stash.subutai.io/projects/KURJUN/repos/main/commits/2b4023ab25663967d4fdcb084c42404405321504"
+    - 
+      id: "1f4ac22185cf1b71c2d4f1ce22607b5c1f275b42"
+      message: "throw exception on parse error as per interface signature"
+      author: "Azilet Beishenaliev"
+      displayId: "1f4ac22185c"
+      url: "https://stash.subutai.io/projects/KURJUN/repos/main/commits/1f4ac22185cf1b71c2d4f1ce22607b5c1f275b42"
+    - 
+      id: "904ec66e28b0f69a24675cd016931c939d99c933"
+      message: "add parsers for clear-signed release file and with detached signature"
+      author: "Azilet Beishenaliev"
+      displayId: "904ec66e28b"
+      url: "https://stash.subutai.io/projects/KURJUN/repos/main/commits/904ec66e28b0f69a24675cd016931c939d99c933"
+    - 
+      id: "aa56fda57156c20c24b390a0c7cb81d94204684a"
+      message: "make `path' final in default release file impl"
+      author: "Azilet Beishenaliev"
+      displayId: "aa56fda5715"
+      url: "https://stash.subutai.io/projects/KURJUN/repos/main/commits/aa56fda57156c20c24b390a0c7cb81d94204684a"
+    - 
+      id: "d3a7798619f7ae4b8f757c6c552b0a652a2db1eb"
+      message: "fix bundle activator"
+      author: "Azilet Beishenaliev"
+      displayId: "d3a7798619f"
+      url: "https://stash.subutai.io/projects/KURJUN/repos/main/commits/d3a7798619f7ae4b8f757c6c552b0a652a2db1eb"
+    - 
+      id: "8944773a6d1d42039298955f54d4e99b056c18f8"
+      message: "add release index file parser"
+      author: "Azilet Beishenaliev"
+      displayId: "8944773a6d1"
+      url: "https://stash.subutai.io/projects/KURJUN/repos/main/commits/8944773a6d1d42039298955f54d4e99b056c18f8"
+    - 
+      id: "74826593bf1978a9e544f8c17c62ca83a9a3dbe0"
+      message: "Merge pull request #4 in KURJUN/main from osgi-compatibility to master\n\n* commit '44d26c3162977e4bd607b1908d629141b12015a1':\n add comments in pom\n add bundle activator for dbfile meta store\n add bundle activator for nosql metadata store\n add bundle activator for SQL DB package metadata store\n add file system store bundle activator\n rename package to `impl' so that package is not exported\n add bundle activator for S3 file store\n add OSGi bundle compatibility in parent pom\n use junit version defined in parent pom file"
+      author: "aziletb"
+      displayId: "74826593bf1"
+      url: "https://stash.subutai.io/projects/KURJUN/repos/main/commits/74826593bf1978a9e544f8c17c62ca83a9a3dbe0"
+    - 
+      id: "44d26c3162977e4bd607b1908d629141b12015a1"
+      message: "add comments in pom"
+      author: "Azilet Beishenaliev"
+      displayId: "44d26c31629"
+      url: "https://stash.subutai.io/projects/KURJUN/repos/main/commits/44d26c3162977e4bd607b1908d629141b12015a1"
+    - 
+      id: "20c4f5c8f8275d76aad3bc0180f2571dbed08caa"
+      message: "add bundle activator for dbfile meta store"
+      author: "Azilet Beishenaliev"
+      displayId: "20c4f5c8f82"
+      url: "https://stash.subutai.io/projects/KURJUN/repos/main/commits/20c4f5c8f8275d76aad3bc0180f2571dbed08caa"
+    - 
+      id: "befb46c2e70477383fc8de45e7249cb12b646c82"
+      message: "add bundle activator for nosql metadata store"
+      author: "Azilet Beishenaliev"
+      displayId: "befb46c2e70"
+      url: "https://stash.subutai.io/projects/KURJUN/repos/main/commits/befb46c2e70477383fc8de45e7249cb12b646c82"
+    - 
+      id: "4ea912ee5a1eb9af7d7169bf1c1b037169a9075f"
+      message: "add bundle activator for SQL DB package metadata store"
+      author: "Azilet Beishenaliev"
+      displayId: "4ea912ee5a1"
+      url: "https://stash.subutai.io/projects/KURJUN/repos/main/commits/4ea912ee5a1eb9af7d7169bf1c1b037169a9075f"
+    - 
+      id: "9d1a5512c7d2699bef4ed6cbb9d0e9b8c92312ba"
+      message: "add file system store bundle activator\n\nservice persistent identifiers introduced as constants in each\nimplementation module a file store. this is needed to correctly\nidentify specific implementation bundle from configuring bundle"
+      author: "Azilet Beishenaliev"
+      displayId: "9d1a5512c7d"
+      url: "https://stash.subutai.io/projects/KURJUN/repos/main/commits/9d1a5512c7d2699bef4ed6cbb9d0e9b8c92312ba"
+    - 
+      id: "c3a66d514ca3b287ad8e111e98ec79e5a4165910"
+      message: "rename package to `impl' so that package is not exported"
+      author: "Azilet Beishenaliev"
+      displayId: "c3a66d514ca"
+      url: "https://stash.subutai.io/projects/KURJUN/repos/main/commits/c3a66d514ca3b287ad8e111e98ec79e5a4165910"
+    - 
+      id: "7a92a5b6c0c791921d284c8052709c0b7984376d"
+      message: "add bundle activator for S3 file store"
+      author: "Azilet Beishenaliev"
+      displayId: "7a92a5b6c0c"
+      url: "https://stash.subutai.io/projects/KURJUN/repos/main/commits/7a92a5b6c0c791921d284c8052709c0b7984376d"
+    - 
+      id: "92d71c7c27d7c782d2b8325f8f5b2b853aa03438"
+      message: "add OSGi bundle compatibility in parent pom\n\nconvert control file parser and packages index handler modules"
+      author: "Azilet Beishenaliev"
+      displayId: "92d71c7c27d"
+      url: "https://stash.subutai.io/projects/KURJUN/repos/main/commits/92d71c7c27d7c782d2b8325f8f5b2b853aa03438"
+    - 
+      id: "da6e4554c28cb642233d93567ecb7ee4c3b504db"
+      message: "use junit version defined in parent pom file"
+      author: "Azilet Beishenaliev"
+      displayId: "da6e4554c28"
+      url: "https://stash.subutai.io/projects/KURJUN/repos/main/commits/da6e4554c28cb642233d93567ecb7ee4c3b504db"
+    - 
+      id: "f9dd27606f5834b995068f0a5f6388d6665b6c13"
+      message: "skip packges index test on connection problems"
+      author: "Azilet Beishenaliev"
+      displayId: "f9dd27606f5"
+      url: "https://stash.subutai.io/projects/KURJUN/repos/main/commits/f9dd27606f5834b995068f0a5f6388d6665b6c13"
+    - 
+      id: "329228ddbad51b741da9e2c4bbf82fa7e09dbd1f"
+      message: "Merge pull request #3 in KURJUN/main from packages-index to master\n\n* commit '0e4c6fefe01f07bfc76551ba9af285dc396e520f':\n minor refactoring\n add packages index file parser (gz and bzip2 formats)\n add basic packages index builder\n add fields to metadata: recommends, enhances, preDepends\n fix test logger properties"
+      author: "aziletb"
+      displayId: "329228ddbad"
+      url: "https://stash.subutai.io/projects/KURJUN/repos/main/commits/329228ddbad51b741da9e2c4bbf82fa7e09dbd1f"
+    - 
+      id: "8bfa53fa952d859b7f4c82a8017e62de0df2c8f8"
+      message: "Merge pull request #2 in KURJUN/main from file-and-metadata-stores to master\n\n* commit '4a1702ceda7f89074294a347514388bab4e72d8b':\n refactor unit tests\n add list operation to metadata store api"
+      author: "aziletb"
+      displayId: "8bfa53fa952"
+      url: "https://stash.subutai.io/projects/KURJUN/repos/main/commits/8bfa53fa952d859b7f4c82a8017e62de0df2c8f8"
+    - 
+      id: "0e4c6fefe01f07bfc76551ba9af285dc396e520f"
+      message: "minor refactoring"
+      author: "Azilet Beishenaliev"
+      displayId: "0e4c6fefe01"
+      url: "https://stash.subutai.io/projects/KURJUN/repos/main/commits/0e4c6fefe01f07bfc76551ba9af285dc396e520f"
+    - 
+      id: "04a8b1674e6a0918369165f3ff53878aa011dbb3"
+      message: "add packages index file parser (gz and bzip2 formats)"
+      author: "Azilet Beishenaliev"
+      displayId: "04a8b1674e6"
+      url: "https://stash.subutai.io/projects/KURJUN/repos/main/commits/04a8b1674e6a0918369165f3ff53878aa011dbb3"
+    - 
+      id: "13ece9887723aebeac91439c1af6318cb342fa62"
+      message: "add basic packages index builder"
+      author: "Azilet Beishenaliev"
+      displayId: "13ece988772"
+      url: "https://stash.subutai.io/projects/KURJUN/repos/main/commits/13ece9887723aebeac91439c1af6318cb342fa62"
+    - 
+      id: "e2c9730ff22729685c350061a762a26fbc67729a"
+      message: "add fields to metadata: recommends, enhances, preDepends\n\npriority types, some refactoring"
+      author: "Azilet Beishenaliev"
+      displayId: "e2c9730ff22"
+      url: "https://stash.subutai.io/projects/KURJUN/repos/main/commits/e2c9730ff22729685c350061a762a26fbc67729a"
+    - 
+      id: "a23c44edb5d779cbb99ce9256d1a1a6e5d7dda74"
+      message: "fix test logger properties"
+      author: "Azilet Beishenaliev"
+      displayId: "a23c44edb5d"
+      url: "https://stash.subutai.io/projects/KURJUN/repos/main/commits/a23c44edb5d779cbb99ce9256d1a1a6e5d7dda74"
+  blogs: []
+  parenturl: 
+  layout: post
+  title:  "Kurjun"
+  date:   Date.parse('2015-07-11')
+  categories: projects
+  permalink: /:categories/kurjun/
+---

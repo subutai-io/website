@@ -1,0 +1,18 @@
+---
+  blog-page: "http://foo.bar.com/blog/sonar-bot"
+  external-projects: []
+  ldap-user: 
+    cn: "Sonar Bot"
+    email: "tzununbekov@critical-factor.com"
+    mobile: "+996 551 878 879"
+    sn: "Bot"
+    uid: "sonar-bot"
+  skills: []
+
+}
+  layout: post
+  title:  "Sonar Bot"
+  date:   Date.parse('2015-07-11')
+  categories: members
+  permalink: /:categories/sonar-bot/
+---

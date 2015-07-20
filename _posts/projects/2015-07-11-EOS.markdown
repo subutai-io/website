@@ -1,0 +1,167 @@
+---
+  tags: 
+    - "Hardware"
+    - "Parallella"
+    - "Acceleration"
+    - "Computer Vision"
+  confluence: 
+    spaces: 
+      - 
+        description: "Documentation for Eye of Sauron"
+        hipchat: 
+          - 
+            notify: 
+              - "Blog post is created"
+              - "Page is created"
+              - "Page is updated"
+            room: "General Notifications"
+        key: "EOS"
+        name: "Eye of Sauron"
+        scope: "public"
+        type: "documentation"
+        url: "https://confluence.subutai.io/display/EOS"
+  hipchat: 
+    rooms: 
+      - 
+        name: "General At SSF"
+        web_url: "https://hipchat.subutai.io/chat"
+  jira: 
+    description: "Hardware accelerated computer vision on Parallella"
+    key: "EOS"
+    name: "Eye of Sauron"
+    security scope: "public"
+    url: "https://jira.subutai.io/projects/EOS"
+  key: "EOS"
+  long_description: "The Eye of Sauron project aims to hardware accelerate various computer vision algorithms using the unique capabilities of the Parallella board's Xilinx Zynq based programmable logic, and its multi-core Epiphany processor."
+  name: "Eye of Sauron"
+  security: 
+    admins: 
+      displayName: "Sauron Administrators"
+      generate-flat-group: true
+      members: 
+        - 
+          blog-page: "http://foo.bar.com/blog/tonyuquq"
+          external-projects: []
+          ldap-user: 
+            cn: "Kok Tonyuquq"
+            email: "tonyuquq@critical-factor.com"
+            mobile: ""
+            sn: "Tonyuquq"
+            uid: "tonyuquq"
+          skills: []
+      teams: ""
+      type: "flat"
+      uniqueIdentifier: "eos-admins"
+    developers: 
+      displayName: "Sauron Developers"
+      generate-flat-group: true
+      members: ""
+      teams: 
+        - 
+          displayName: "Sauron Administrators"
+          generate-flat-group: true
+          members: 
+            - 
+              blog-page: "http://foo.bar.com/blog/tonyuquq"
+              external-projects: []
+              ldap-user: 
+                cn: "Kok Tonyuquq"
+                email: "tonyuquq@critical-factor.com"
+                mobile: ""
+                sn: "Tonyuquq"
+                uid: "tonyuquq"
+              skills: []
+          teams: ""
+          type: "flat"
+          uniqueIdentifier: "eos-admins"
+      type: "composite"
+      uniqueIdentifier: "eos-developers"
+    lead: 
+      blog-page: "http://foo.bar.com/blog/tonyuquq"
+      external-projects: []
+      ldap-user: 
+        cn: "Kok Tonyuquq"
+        email: "tonyuquq@critical-factor.com"
+        mobile: ""
+        sn: "Tonyuquq"
+        uid: "tonyuquq"
+      skills: []
+    scope: "public"
+    users: 
+      displayName: "Sauron Team"
+      generate-flat-group: true
+      members: ""
+      teams: 
+        - 
+          displayName: "Sauron Developers"
+          generate-flat-group: true
+          members: ""
+          teams: 
+            - 
+              displayName: "Sauron Administrators"
+              generate-flat-group: true
+              members: 
+                - 
+                  blog-page: "http://foo.bar.com/blog/tonyuquq"
+                  external-projects: []
+                  ldap-user: 
+                    cn: "Kok Tonyuquq"
+                    email: "tonyuquq@critical-factor.com"
+                    mobile: ""
+                    sn: "Tonyuquq"
+                    uid: "tonyuquq"
+                  skills: []
+              teams: ""
+              type: "flat"
+              uniqueIdentifier: "eos-admins"
+          type: "composite"
+          uniqueIdentifier: "eos-developers"
+      type: "composite"
+      uniqueIdentifier: "eos"
+  short_description: "Hardware accelerated computer vision on Parallella"
+  stash: 
+    project: 
+      key: "EOS"
+      name: "Eye of Sauron"
+      repositories: 
+        - 
+          name: "main"
+          notifications: 
+            hipchat: 
+              room: "General Notifications"
+              triggers: 
+                - "push"
+          scope: "public"
+          url: "https://stash.subutai.io/projects/EOS/repos/main/browse"
+      url: "https://stash.subutai.io/projects/EOS"
+  type: "proposed"
+  website: 
+    banner_media: 
+      - "EOS_1.jpg"
+      - "EOS_2.jpg"
+      - "EOS_3.jpg"
+    blogs: 
+      - "http://www.lipsum.com/"
+      - "http://www.lipsum.com/"
+    downloads: 
+      - 
+        description: "Eye of Sauron download page"
+        url: "https://confluence.subutai.io/display/EOS/Eye of Sauron"
+    favicon: "favicon.png"
+    large_logo_64: "eos_large_logo.png"
+    medium_logo_48: "eos_medium_logo.png"
+    small_logo_32: "eos_small_logo.png"
+    twitter: "#"
+    website: "eye-of-sauron"
+
+
+  lastUpdates: []
+  commits: []
+  blogs: []
+  parenturl: 
+  layout: post
+  title:  "Eye of Sauron"
+  date:   Date.parse('2015-07-11')
+  categories: projects
+  permalink: /:categories/eye-of-sauron/
+---

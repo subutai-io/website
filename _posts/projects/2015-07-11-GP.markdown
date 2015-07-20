@@ -1,0 +1,190 @@
+---
+  tags: 
+    - "git"
+    - "software"
+  confluence: 
+    spaces: 
+      - 
+        description: "Documentation for Git-bin plugin"
+        hipchat: 
+          - 
+            notify: 
+              - "Blog post is created"
+              - "Page is created"
+              - "Page is updated"
+            room: "General Notifications"
+        key: "GP"
+        name: "Git-bin plugin"
+        scope: "public"
+        type: "documentation"
+        url: "https://confluence.subutai.io/display/GP/Git-bin+plugin"
+  jira: 
+    description: "A git plugin that allow to store large and binary files on local or network storage"
+    key: "GP"
+    name: "Git-bin plugin"
+    security scope: "public"
+    url: "https://jira.subutai.io/projects/GP"
+  key: "GP"
+  long_description: "A git plugin that allow to store large and binary files on local or network storage"
+  name: "GIT-BIN Plugin"
+  security: 
+    admins: 
+      displayName: "Git-bin Plugin Administrators"
+      generate-flat-group: true
+      members: 
+        - 
+          blog-page: "http://foo.bar.com/blog/msavochkin"
+          external-projects: []
+          ldap-user: 
+            cn: "Mikhail Savochkin"
+            email: "msavochkin@critical-factor.com"
+            mobile: ""
+            sn: "Savochkin"
+            uid: "msavochkin"
+          skills: []
+        - 
+          blog-page: "http://foo.bar.com/blog/tonyuquq"
+          external-projects: []
+          ldap-user: 
+            cn: "Kok Tonyuquq"
+            email: "tonyuquq@critical-factor.com"
+            mobile: ""
+            sn: "Tonyuquq"
+            uid: "tonyuquq"
+          skills: []
+      teams: ""
+      type: "flat"
+      uniqueIdentifier: "gp-admins"
+    developers: 
+      displayName: "Git-bin Plugin Developers"
+      generate-flat-group: true
+      members: ""
+      teams: 
+        - 
+          displayName: "Git-bin Plugin Administrators"
+          generate-flat-group: true
+          members: 
+            - 
+              blog-page: "http://foo.bar.com/blog/msavochkin"
+              external-projects: []
+              ldap-user: 
+                cn: "Mikhail Savochkin"
+                email: "msavochkin@critical-factor.com"
+                mobile: ""
+                sn: "Savochkin"
+                uid: "msavochkin"
+              skills: []
+            - 
+              blog-page: "http://foo.bar.com/blog/tonyuquq"
+              external-projects: []
+              ldap-user: 
+                cn: "Kok Tonyuquq"
+                email: "tonyuquq@critical-factor.com"
+                mobile: ""
+                sn: "Tonyuquq"
+                uid: "tonyuquq"
+              skills: []
+          teams: ""
+          type: "flat"
+          uniqueIdentifier: "gp-admins"
+      type: "composite"
+      uniqueIdentifier: "gp-devs"
+    lead: 
+      blog-page: "http://foo.bar.com/blog/tonyuquq"
+      external-projects: []
+      ldap-user: 
+        cn: "Kok Tonyuquq"
+        email: "tonyuquq@critical-factor.com"
+        mobile: ""
+        sn: "Tonyuquq"
+        uid: "tonyuquq"
+      skills: []
+    scope: "public"
+    users: 
+      displayName: "Git-bin Plugin Team"
+      generate-flat-group: true
+      members: ""
+      teams: 
+        - 
+          displayName: "Git-bin Plugin Developers"
+          generate-flat-group: true
+          members: ""
+          teams: 
+            - 
+              displayName: "Git-bin Plugin Administrators"
+              generate-flat-group: true
+              members: 
+                - 
+                  blog-page: "http://foo.bar.com/blog/msavochkin"
+                  external-projects: []
+                  ldap-user: 
+                    cn: "Mikhail Savochkin"
+                    email: "msavochkin@critical-factor.com"
+                    mobile: ""
+                    sn: "Savochkin"
+                    uid: "msavochkin"
+                  skills: []
+                - 
+                  blog-page: "http://foo.bar.com/blog/tonyuquq"
+                  external-projects: []
+                  ldap-user: 
+                    cn: "Kok Tonyuquq"
+                    email: "tonyuquq@critical-factor.com"
+                    mobile: ""
+                    sn: "Tonyuquq"
+                    uid: "tonyuquq"
+                  skills: []
+              teams: ""
+              type: "flat"
+              uniqueIdentifier: "gp-admins"
+          type: "composite"
+          uniqueIdentifier: "gp-devs"
+      type: "composite"
+      uniqueIdentifier: "gp"
+  short_description: "A git plugin that allow to store large and binary files on local or network storage"
+  stash: 
+    project: 
+      key: "GP"
+      name: "Git-bin plugin"
+      repositories: 
+        - 
+          name: "main"
+          notifications: 
+            hipchat: 
+              room: "General Notifications"
+              triggers: 
+                - "push"
+          scope: "public"
+          url: "https://stash.subutai.io/projects/GP/repos/git-bin/browse"
+      url: "https://stash.subutai.io/projects/GP"
+  type: "simple"
+  website: 
+    banner_media: 
+      - "git-bin_1.jpg"
+      - "git-bin_2.jpg"
+      - "git-bin_3.jpg"
+    blogs: 
+      - "http://www.lipsum.com/"
+      - "http://www.lipsum.com/"
+    downloads: 
+      - 
+        description: "Lorem ipsum"
+        url: "http://www.lipsum.com/"
+    favicon: "favicon.png"
+    large_logo_64: "gp_large_logo.png"
+    medium_logo_48: "gp_medium_logo.png"
+    small_logo_32: "gp_small_logo.png"
+    twitter: "#"
+    website: "git-bin"
+
+
+  lastUpdates: []
+  commits: []
+  blogs: []
+  parenturl: 
+  layout: post
+  title:  "GIT-BIN Plugin"
+  date:   Date.parse('2015-07-11')
+  categories: projects
+  permalink: /:categories/git-bin/
+---

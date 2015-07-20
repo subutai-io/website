@@ -1,0 +1,27 @@
+---
+  blog-page: "http://foo.bar.com/blog/kisik"
+  external-projects: []
+  ldap-user: 
+    cn: "Kazim Isik"
+    email: "kisik@critical-factor.com"
+    mobile: ""
+    sn: "Isik"
+    uid: "kisik"
+  skills: []
+
+  userProfile: 
+    key: "kisik"
+    name: "kisik"
+    emailAddress: "kisik@critical-factor.com"
+    displayName: "Kazim Isik"
+    avatarUrl: 
+      16x16: "https://jira.subutai.io/secure/useravatar?size=xsmall&avatarId=10122"
+      24x24: "https://jira.subutai.io/secure/useravatar?size=small&avatarId=10122"
+      32x32: "https://jira.subutai.io/secure/useravatar?size=medium&avatarId=10122"
+      48x48: "https://jira.subutai.io/secure/useravatar?avatarId=10122"
+  layout: post
+  title:  "Kazim Isik"
+  date:   Date.parse('2015-07-11')
+  categories: members
+  permalink: /:categories/kisik/
+---

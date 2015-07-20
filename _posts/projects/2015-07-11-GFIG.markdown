@@ -1,0 +1,349 @@
+---
+  tags: 
+    - "Guice"
+    - "Java"
+    - "configuration"
+    - "software"
+  confluence: 
+    spaces: 
+      - 
+        description: "Documentation for GuicyFig"
+        hipchat: 
+          - 
+            notify: 
+              - "Blog post is created"
+              - "Page is created"
+              - "Page is updated"
+            room: "General Notifications"
+        key: "GFIG"
+        name: "GuicyFig"
+        scope: "public"
+        type: "documentation"
+        url: "https://confluence.subutai.io/display/GFIG"
+  hipchat: 
+    rooms: 
+      - 
+        name: "GFIG"
+        web_url: "https://hipchat.subutai.io/chat"
+  jira: 
+    description: "Elegant object oriented Google Guice configuration"
+    key: "GFIG"
+    name: "GuicyFig"
+    security scope: "public"
+    url: "https://jira.subutai.io/projects/GFIG"
+  key: "GFIG"
+  long_description: "A sweet type safe, object oriented, and dynamic configuration library for Google Guice based on Archaius. Write a configuration interface for your module and let GuicyFig handle configuration mappings. A notification API lets you respond to configuration changes."
+  name: "GuicyFig"
+  security: 
+    admins: 
+      displayName: "Guicy Fig Administrators"
+      generate-flat-group: true
+      members: 
+        - 
+          blog-page: "http://foo.bar.com/blog/daralbaev"
+          external-projects: []
+          ldap-user: 
+            cn: "damir aralbaev"
+            email: "daralbaev@critical-factor.com"
+            mobile: ""
+            sn: "aralbaev"
+            uid: "daralbaev"
+          skills: []
+        - 
+          blog-page: "http://foo.bar.com/blog/tonyuquq"
+          external-projects: []
+          ldap-user: 
+            cn: "Kok Tonyuquq"
+            email: "tonyuquq@critical-factor.com"
+            mobile: ""
+            sn: "Tonyuquq"
+            uid: "tonyuquq"
+          skills: []
+      teams: ""
+      type: "flat"
+      uniqueIdentifier: "gfig-admins"
+    developers: 
+      displayName: "Guicy Fig Developers"
+      generate-flat-group: true
+      members: ""
+      teams: 
+        - 
+          displayName: "Guicy Fig Administrators"
+          generate-flat-group: true
+          members: 
+            - 
+              blog-page: "http://foo.bar.com/blog/daralbaev"
+              external-projects: []
+              ldap-user: 
+                cn: "damir aralbaev"
+                email: "daralbaev@critical-factor.com"
+                mobile: ""
+                sn: "aralbaev"
+                uid: "daralbaev"
+              skills: []
+            - 
+              blog-page: "http://foo.bar.com/blog/tonyuquq"
+              external-projects: []
+              ldap-user: 
+                cn: "Kok Tonyuquq"
+                email: "tonyuquq@critical-factor.com"
+                mobile: ""
+                sn: "Tonyuquq"
+                uid: "tonyuquq"
+              skills: []
+          teams: ""
+          type: "flat"
+          uniqueIdentifier: "gfig-admins"
+      type: "composite"
+      uniqueIdentifier: "gfig-devs"
+    lead: 
+      blog-page: "http://foo.bar.com/blog/tonyuquq"
+      external-projects: []
+      ldap-user: 
+        cn: "Kok Tonyuquq"
+        email: "tonyuquq@critical-factor.com"
+        mobile: ""
+        sn: "Tonyuquq"
+        uid: "tonyuquq"
+      skills: []
+    scope: "public"
+    users: 
+      displayName: "Guicy Fig Team"
+      generate-flat-group: true
+      members: ""
+      teams: 
+        - 
+          displayName: "Guicy Fig Developers"
+          generate-flat-group: true
+          members: ""
+          teams: 
+            - 
+              displayName: "Guicy Fig Administrators"
+              generate-flat-group: true
+              members: 
+                - 
+                  blog-page: "http://foo.bar.com/blog/daralbaev"
+                  external-projects: []
+                  ldap-user: 
+                    cn: "damir aralbaev"
+                    email: "daralbaev@critical-factor.com"
+                    mobile: ""
+                    sn: "aralbaev"
+                    uid: "daralbaev"
+                  skills: []
+                - 
+                  blog-page: "http://foo.bar.com/blog/tonyuquq"
+                  external-projects: []
+                  ldap-user: 
+                    cn: "Kok Tonyuquq"
+                    email: "tonyuquq@critical-factor.com"
+                    mobile: ""
+                    sn: "Tonyuquq"
+                    uid: "tonyuquq"
+                  skills: []
+              teams: ""
+              type: "flat"
+              uniqueIdentifier: "gfig-admins"
+          type: "composite"
+          uniqueIdentifier: "gfig-devs"
+      type: "composite"
+      uniqueIdentifier: "gfig"
+  short_description: "Elegant object oriented Google Guice configuration"
+  sonar: 
+    url: "https://sonar.subutai.io/dashboard/index/2999"
+  stash: 
+    project: 
+      key: "GFIG"
+      name: "GuicyFig"
+      repositories: 
+        - 
+          name: "main"
+          notifications: 
+            hipchat: 
+              room: "General Notifications"
+              triggers: 
+                - "push"
+          scope: "public"
+          url: "https://stash.subutai.io/projects/GFIG/repos/main/browse"
+      url: "https://stash.subutai.io/projects/GFIG"
+  type: "simple"
+  website: 
+    banner_media: 
+      - "Guicyfig_1.jpg"
+      - "Guicyfig_2.jpg"
+      - "Guicyfig_3.jpg"
+    blogs: 
+      - "http://www.lipsum.com/"
+      - "http://www.lipsum.com/"
+    downloads: 
+      - 
+        description: "GuicyFig download page"
+        url: "https://confluence.subutai.io/display/GFIG/GuicyFig"
+    favicon: "favicon.png"
+    large_logo_64: "gfig_large_logo.png"
+    medium_logo_48: "gifg_medium_logo.png"
+    small_logo_32: "gifg_small_logo.png"
+    twitter: "#"
+    website: "guicyfig"
+
+
+  lastUpdates: []
+  commits: 
+    - 
+      id: "ffe248d77d018f8e9d3d6613f5720e02d45399fd"
+      message: "fixing test failures on jenkins machine"
+      author: "Alex Karasulu"
+      displayId: "ffe248d77d0"
+      url: "https://stash.subutai.io/projects/GFIG/repos/main/commits/ffe248d77d018f8e9d3d6613f5720e02d45399fd"
+    - 
+      id: "c155f2d85bab6347ca6226a386fd6506c0816b5d"
+      message: "seems this test is failing on sonar and no time to figure out why"
+      author: "Alex Karasulu"
+      displayId: "c155f2d85ba"
+      url: "https://stash.subutai.io/projects/GFIG/repos/main/commits/c155f2d85bab6347ca6226a386fd6506c0816b5d"
+    - 
+      id: "1135e49a052b80310b403d075259b0f2ee56642b"
+      message: "fixing issue with releases: see http://stackoverflow.com/questions/16650698/maven-release-plugin-prepare-creates-tag-of-snapshot-version-instead-of-releas"
+      author: "Alex Karasulu"
+      displayId: "1135e49a052"
+      url: "https://stash.subutai.io/projects/GFIG/repos/main/commits/1135e49a052b80310b403d075259b0f2ee56642b"
+    - 
+      id: "00d5d419de6e9cbc8a72958a49620ed21afceeb4"
+      message: "Merge branch 'master' of http://stash.safehaus.org/scm/gfig/main"
+      author: "Alex Karasulu"
+      displayId: "00d5d419de6"
+      url: "https://stash.subutai.io/projects/GFIG/repos/main/commits/00d5d419de6e9cbc8a72958a49620ed21afceeb4"
+    - 
+      id: "d1d364af2f2102c184d8342d5240454b9a5e8b6f"
+      message: "cleanup"
+      author: "Alex Karasulu"
+      displayId: "d1d364af2f2"
+      url: "https://stash.subutai.io/projects/GFIG/repos/main/commits/d1d364af2f2102c184d8342d5240454b9a5e8b6f"
+    - 
+      id: "f7e330c68abf558d3190c7936d3c392c14d4f407"
+      message: "Modifying parent pom for info"
+      author: "Yigit Sapli"
+      displayId: "f7e330c68ab"
+      url: "https://stash.subutai.io/projects/GFIG/repos/main/commits/f7e330c68abf558d3190c7936d3c392c14d4f407"
+    - 
+      id: "926b1c8128b8be8b59bb7c10ea20c0033566ba3f"
+      message: "[maven-release-plugin] prepare for next development iteration"
+      author: "Alex Karasulu"
+      displayId: "926b1c8128b"
+      url: "https://stash.subutai.io/projects/GFIG/repos/main/commits/926b1c8128b8be8b59bb7c10ea20c0033566ba3f"
+    - 
+      id: "af6dd7f4961a1ebf4542eeff34b362f76f0e2ae5"
+      message: "[maven-release-plugin] prepare release guicyfig-3.4.0"
+      author: "Alex Karasulu"
+      displayId: "af6dd7f4961"
+      url: "https://stash.subutai.io/projects/GFIG/repos/main/commits/af6dd7f4961a1ebf4542eeff34b362f76f0e2ae5"
+    - 
+      id: "87b5ec3bab50648960ec974a6331fea999c7a96d"
+      message: "adding enum test for bypass"
+      author: "Alex Karasulu"
+      displayId: "87b5ec3bab5"
+      url: "https://stash.subutai.io/projects/GFIG/repos/main/commits/87b5ec3bab50648960ec974a6331fea999c7a96d"
+    - 
+      id: "3ff7a0546abc4ac06a2b3611505e80a9fc226ebe"
+      message: "Merge pull request #7 in GFIG/main from enumsupport to master\n\n* commit '739b75b8f5810bdd5f0609d46c2c19e46fa62e05':\n fixing various bugs and enum support"
+      author: "Alex Karasulu"
+      displayId: "3ff7a0546ab"
+      url: "https://stash.subutai.io/projects/GFIG/repos/main/commits/3ff7a0546abc4ac06a2b3611505e80a9fc226ebe"
+    - 
+      id: "739b75b8f5810bdd5f0609d46c2c19e46fa62e05"
+      message: "fixing various bugs and enum support"
+      author: "Alex Karasulu"
+      displayId: "739b75b8f58"
+      url: "https://stash.subutai.io/projects/GFIG/repos/main/commits/739b75b8f5810bdd5f0609d46c2c19e46fa62e05"
+    - 
+      id: "0a50e30203ec9b1a9910df9b02ac3c0fa6dc1b37"
+      message: "Merge pull request #6 in GFIG/main from ~TNINE/guicyfig:enumsupport to master\n\n* commit 'f3639df148a60bbe9c4cbd06fe53ab0b0a88ed75':\n Updated comment to demonstrate issue\n Tests still failing. Need to review override wiring path\n Initial commit of enum support. Need to refactor classes to allow for dynamic type overrides at runtime"
+      author: "Alex Karasulu"
+      displayId: "0a50e30203e"
+      url: "https://stash.subutai.io/projects/GFIG/repos/main/commits/0a50e30203ec9b1a9910df9b02ac3c0fa6dc1b37"
+    - 
+      id: "f3639df148a60bbe9c4cbd06fe53ab0b0a88ed75"
+      message: "Updated comment to demonstrate issue"
+      author: "Todd Nine"
+      displayId: "f3639df148a"
+      url: "https://stash.subutai.io/projects/GFIG/repos/main/commits/f3639df148a60bbe9c4cbd06fe53ab0b0a88ed75"
+    - 
+      id: "58dc8455511fbdee883dccc9ed3d87c75417635b"
+      message: "Tests still failing. Need to review override wiring path"
+      author: "Todd Nine"
+      displayId: "58dc8455511"
+      url: "https://stash.subutai.io/projects/GFIG/repos/main/commits/58dc8455511fbdee883dccc9ed3d87c75417635b"
+    - 
+      id: "e5ce412e69d91e6a668cec57c9dd2406786b2e82"
+      message: "Initial commit of enum support. Need to refactor classes to allow for dynamic type overrides at runtime"
+      author: "Todd Nine"
+      displayId: "e5ce412e69d"
+      url: "https://stash.subutai.io/projects/GFIG/repos/main/commits/e5ce412e69d91e6a668cec57c9dd2406786b2e82"
+    - 
+      id: "a98dc26fc0235b16925f05ab5e7a30e66e457996"
+      message: "[maven-release-plugin] prepare for next development iteration"
+      author: "Alex Karasulu"
+      displayId: "a98dc26fc02"
+      url: "https://stash.subutai.io/projects/GFIG/repos/main/commits/a98dc26fc0235b16925f05ab5e7a30e66e457996"
+    - 
+      id: "0c00ad885075e8722b5b0aab43cb8a1302ad538e"
+      message: "[maven-release-plugin] prepare release guicyfig-3.3"
+      author: "Alex Karasulu"
+      displayId: "0c00ad88507"
+      url: "https://stash.subutai.io/projects/GFIG/repos/main/commits/0c00ad885075e8722b5b0aab43cb8a1302ad538e"
+    - 
+      id: "7a7bd5f96b7ee09adb24c31f9cf134c7e1d272d0"
+      message: "looks like some debugging code from times past that was never committed"
+      author: "Alex Karasulu"
+      displayId: "7a7bd5f96b7"
+      url: "https://stash.subutai.io/projects/GFIG/repos/main/commits/7a7bd5f96b7ee09adb24c31f9cf134c7e1d272d0"
+    - 
+      id: "6b9150740818dfd3c54bc18a1ab85c35cb794fec"
+      message: "Using a Collection argument constructor instead of using the Set subtype and adding some more javadocs."
+      author: "Alex Karasulu"
+      displayId: "6b915074081"
+      url: "https://stash.subutai.io/projects/GFIG/repos/main/commits/6b9150740818dfd3c54bc18a1ab85c35cb794fec"
+    - 
+      id: "834d220ae8eec0aa9ee39faba1f031198928b8f4"
+      message: "fixing NPE when attempting to null out bypass or override"
+      author: "Alex Karasulu"
+      displayId: "834d220ae8e"
+      url: "https://stash.subutai.io/projects/GFIG/repos/main/commits/834d220ae8eec0aa9ee39faba1f031198928b8f4"
+    - 
+      id: "7def05118442d90e51bce515634087d9932051b1"
+      message: "[maven-release-plugin] prepare for next development iteration"
+      author: "Alex Karasulu"
+      displayId: "7def0511844"
+      url: "https://stash.subutai.io/projects/GFIG/repos/main/commits/7def05118442d90e51bce515634087d9932051b1"
+    - 
+      id: "8bdfdb541dbbb5d336d1b1a099c9369fccd5c8af"
+      message: "[maven-release-plugin] prepare release guicyfig-3.2"
+      author: "Alex Karasulu"
+      displayId: "8bdfdb541db"
+      url: "https://stash.subutai.io/projects/GFIG/repos/main/commits/8bdfdb541dbbb5d336d1b1a099c9369fccd5c8af"
+    - 
+      id: "072d35a52a7321e9eb9b84b24ce03667c882796c"
+      message: " o added more test coverage\n o making setOverride and setBypass return boolean to report if the\n environment matched to apply the new override or bypass\n o added code to also send out notifications if the bypass and override\n changes change the total effective values returned by options"
+      author: "Alex Karasulu"
+      displayId: "072d35a52a7"
+      url: "https://stash.subutai.io/projects/GFIG/repos/main/commits/072d35a52a7321e9eb9b84b24ce03667c882796c"
+    - 
+      id: "4ff70168d48ad8be2fbe8897cdc42f7822e22874"
+      message: "[maven-release-plugin] prepare for next development iteration"
+      author: "Alex Karasulu"
+      displayId: "4ff70168d48"
+      url: "https://stash.subutai.io/projects/GFIG/repos/main/commits/4ff70168d48ad8be2fbe8897cdc42f7822e22874"
+    - 
+      id: "a06403f6e466a61ba1ffab655e7ed33e95d275e2"
+      message: "[maven-release-plugin] prepare release guicyfig-3.1"
+      author: "Alex Karasulu"
+      displayId: "a06403f6e46"
+      url: "https://stash.subutai.io/projects/GFIG/repos/main/commits/a06403f6e466a61ba1ffab655e7ed33e95d275e2"
+  blogs: []
+  parenturl: 
+  layout: post
+  title:  "GuicyFig"
+  date:   Date.parse('2015-07-11')
+  categories: projects
+  permalink: /:categories/guicyfig/
+---

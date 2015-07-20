@@ -1,0 +1,416 @@
+---
+  tags: 
+    - "Java"
+    - "performance-testing"
+    - "stress-testing"
+    - "testing"
+    - "software"
+    - "judo-chop"
+  confluence: 
+    spaces: 
+      - 
+        description: "Documentation for JudoChop"
+        hipchat: 
+          - 
+            notify: 
+              - "Blog post is created"
+              - "Page is created"
+              - "Page is updated"
+            room: "General Notifications"
+        key: "CHOP"
+        name: "JudoChop"
+        scope: "public"
+        type: "documentation"
+        url: "https://confluence.subutai.io/display/CHOP"
+  hipchat: 
+    rooms: 
+      - 
+        name: "Chop"
+        web_url: "https://hipchat.subutai.io/chat"
+  jira: 
+    description: "An annotation driven cluster stress testing framework"
+    key: "CHOP"
+    name: "JudoChop"
+    security scope: "public"
+    url: "https://jira.subutai.io/projects/CHOP"
+  key: "CHOP"
+  long_description: "Judo Chop is a simple distributed performance testing framework designed to pound the heck out of anything you want to give a REALLY BAD DAY! Performance testing has never been easier. Just annotate your JUnit tests with TimeChop or IterationChop annotations telling Judo Chop how to chop it up. Judo Chop uses your own project's JUnit Test Cases as drivers to bombard your application, service, or server."
+  name: "JudoChop"
+  security: 
+    admins: 
+      displayName: "Judo Chop Administrators"
+      generate-flat-group: true
+      members: 
+        - 
+          blog-page: "http://foo.bar.com/blog/daralbaev"
+          external-projects: []
+          ldap-user: 
+            cn: "damir aralbaev"
+            email: "daralbaev@critical-factor.com"
+            mobile: ""
+            sn: "aralbaev"
+            uid: "daralbaev"
+          skills: []
+        - 
+          blog-page: "http://foo.bar.com/blog/tonyuquq"
+          external-projects: []
+          ldap-user: 
+            cn: "Kok Tonyuquq"
+            email: "tonyuquq@critical-factor.com"
+            mobile: ""
+            sn: "Tonyuquq"
+            uid: "tonyuquq"
+          skills: []
+        - 
+          blog-page: "http://foo.bar.com/blog/yigits"
+          external-projects: []
+          ldap-user: 
+            cn: "Yigit Sapli"
+            email: "ysapli@critical-factor.com"
+            mobile: ""
+            sn: "Sapli"
+            uid: "yigits"
+          skills: []
+      type: "flat"
+      uniqueIdentifier: "chop-admins"
+    developers: 
+      displayName: "Judo Chop Developers"
+      generate-flat-group: true
+      members: 
+        - 
+          blog-page: "http://foo.bar.com/blog/aasanaliev"
+          external-projects: []
+          ldap-user: 
+            cn: "Askat Asanaliev"
+            email: "aasanaliev@critical-factor.com"
+            mobile: ""
+            sn: "Asanaliev"
+            uid: "aasanaliev"
+          skills: []
+        - 
+          blog-page: "http://foo.bar.com/blog/bicak.cs"
+          external-projects: []
+          ldap-user: 
+            cn: "Furkan BÄ±Ã§ak"
+            email: "fbicak@havelsan.com.tr"
+            mobile: ""
+            sn: "BÄ±Ã§ak"
+            uid: "bicak.cs"
+          skills: []
+      teams: 
+        - 
+          displayName: "Judo Chop Administrators"
+          generate-flat-group: true
+          members: 
+            - 
+              blog-page: "http://foo.bar.com/blog/daralbaev"
+              external-projects: []
+              ldap-user: 
+                cn: "damir aralbaev"
+                email: "daralbaev@critical-factor.com"
+                mobile: ""
+                sn: "aralbaev"
+                uid: "daralbaev"
+              skills: []
+            - 
+              blog-page: "http://foo.bar.com/blog/tonyuquq"
+              external-projects: []
+              ldap-user: 
+                cn: "Kok Tonyuquq"
+                email: "tonyuquq@critical-factor.com"
+                mobile: ""
+                sn: "Tonyuquq"
+                uid: "tonyuquq"
+              skills: []
+            - 
+              blog-page: "http://foo.bar.com/blog/yigits"
+              external-projects: []
+              ldap-user: 
+                cn: "Yigit Sapli"
+                email: "ysapli@critical-factor.com"
+                mobile: ""
+                sn: "Sapli"
+                uid: "yigits"
+              skills: []
+          type: "flat"
+          uniqueIdentifier: "chop-admins"
+      type: "composite"
+      uniqueIdentifier: "chop-devs"
+    lead: 
+      blog-page: "http://foo.bar.com/blog/tonyuquq"
+      external-projects: []
+      ldap-user: 
+        cn: "Kok Tonyuquq"
+        email: "tonyuquq@critical-factor.com"
+        mobile: ""
+        sn: "Tonyuquq"
+        uid: "tonyuquq"
+      skills: []
+    scope: "public"
+    users: 
+      displayName: "Judo Chop Team"
+      generate-flat-group: true
+      members: ""
+      teams: 
+        - 
+          displayName: "Judo Chop Developers"
+          generate-flat-group: true
+          members: 
+            - 
+              blog-page: "http://foo.bar.com/blog/aasanaliev"
+              external-projects: []
+              ldap-user: 
+                cn: "Askat Asanaliev"
+                email: "aasanaliev@critical-factor.com"
+                mobile: ""
+                sn: "Asanaliev"
+                uid: "aasanaliev"
+              skills: []
+            - 
+              blog-page: "http://foo.bar.com/blog/bicak.cs"
+              external-projects: []
+              ldap-user: 
+                cn: "Furkan BÄ±Ã§ak"
+                email: "fbicak@havelsan.com.tr"
+                mobile: ""
+                sn: "BÄ±Ã§ak"
+                uid: "bicak.cs"
+              skills: []
+          teams: 
+            - 
+              displayName: "Judo Chop Administrators"
+              generate-flat-group: true
+              members: 
+                - 
+                  blog-page: "http://foo.bar.com/blog/daralbaev"
+                  external-projects: []
+                  ldap-user: 
+                    cn: "damir aralbaev"
+                    email: "daralbaev@critical-factor.com"
+                    mobile: ""
+                    sn: "aralbaev"
+                    uid: "daralbaev"
+                  skills: []
+                - 
+                  blog-page: "http://foo.bar.com/blog/tonyuquq"
+                  external-projects: []
+                  ldap-user: 
+                    cn: "Kok Tonyuquq"
+                    email: "tonyuquq@critical-factor.com"
+                    mobile: ""
+                    sn: "Tonyuquq"
+                    uid: "tonyuquq"
+                  skills: []
+                - 
+                  blog-page: "http://foo.bar.com/blog/yigits"
+                  external-projects: []
+                  ldap-user: 
+                    cn: "Yigit Sapli"
+                    email: "ysapli@critical-factor.com"
+                    mobile: ""
+                    sn: "Sapli"
+                    uid: "yigits"
+                  skills: []
+              type: "flat"
+              uniqueIdentifier: "chop-admins"
+          type: "composite"
+          uniqueIdentifier: "chop-devs"
+      type: "composite"
+      uniqueIdentifier: "chop"
+  short_description: "An annotation driven cluster stress testing framework"
+  stash: 
+    project: 
+      key: "CHOP"
+      name: "JudoChop"
+      repositories: 
+        - 
+          name: "main"
+          notifications: 
+            hipchat: 
+              room: "General Notifications"
+              triggers: 
+                - "push"
+          scope: "public"
+          url: "https://stash.subutai.io/projects/CHOP/repos/main/browse"
+      url: "https://stash.subutai.io/projects/CHOP"
+  type: "simple"
+  website: 
+    banner_media: 
+      - "Judochop_1.jpg"
+      - "Judochop_2.jpg"
+      - "Judochop_3.jpg"
+    blogs: 
+      - "http://www.lipsum.com/"
+      - "http://www.lipsum.com/"
+    downloads: 
+      - 
+        description: "Lorem ipsum"
+        url: "http://www.lipsum.com/"
+    favicon: "favicon.png"
+    large_logo_64: "chop_large_logo.png"
+    medium_logo_48: "chop_medium_logo.png"
+    small_logo_32: "chop_small_logo.png"
+    twitter: "#"
+    website: "judochop"
+
+
+  lastUpdates: []
+  commits: 
+    - 
+      id: "1167f8b9e59fc9e84a7313f2a10b0faaac404416"
+      message: "fixing issue with releases and bumping up version of jj: see http://stackoverflow.com/questions/16650698/maven-release-plugin-prepare-creates-tag-of-snapshot-version-instead-of-releas"
+      author: "Alex Karasulu"
+      displayId: "1167f8b9e59"
+      url: "https://stash.subutai.io/projects/CHOP/repos/main/commits/1167f8b9e59fc9e84a7313f2a10b0faaac404416"
+    - 
+      id: "0abb992214ed5d27bd42746fabe41f758a6d8638"
+      message: "Merge pull request #57 in CHOP/main from coord-safetynet to master\n\n* commit '8db93a54bb0753fecee6da44122c3f3e20f924d3':\n Client ssh library is reorganized - several bugs are fixed - several new classes are introduced - parallel execution of SSH commands are made more solid - related changes in webapp coordinator\n safety net checkpoint for coordinator, kinda backup"
+      author: "Yiğit Şaplı"
+      displayId: "0abb992214e"
+      url: "https://stash.subutai.io/projects/CHOP/repos/main/commits/0abb992214ed5d27bd42746fabe41f758a6d8638"
+    - 
+      id: "8db93a54bb0753fecee6da44122c3f3e20f924d3"
+      message: "Client ssh library is reorganized\n - several bugs are fixed\n - several new classes are introduced\n - parallel execution of SSH commands are made more solid\n - related changes in webapp coordinator"
+      author: "Yigit Sapli"
+      displayId: "8db93a54bb0"
+      url: "https://stash.subutai.io/projects/CHOP/repos/main/commits/8db93a54bb0753fecee6da44122c3f3e20f924d3"
+    - 
+      id: "4c55874671ec0096badd4f2e0928c4fc6d0c466c"
+      message: "Merge pull request #56 in CHOP/main from coordinator-setup to master\n\n* commit '0bf6cd85a12642b9d7360f9859b19e2062b7ebaf':\n - minor fixes in EC2InstanceManager and AmazonIpRuleManager - getting Instances with id collection implemented in EC2InstanceManager - minor fixes in chop-example pom.xml and stack.json\n fixing misuse of Preconditions in CoordinatedCluster.add()\n fixing faulty parsing of provider params keys\n failIfCommitNecessary parameter in plugin is false by default and couple of configuration fixes in chop-example\n - resolved dependency conflict of stax which caused aws sdk to fail - fixing -d option on webapp - reducing embedded ES initialization pause to 1000 msecs - setup stack operation is blocking until issues are resolved - other minor fixes in amazon and coordinator\n preparing for actual setup"
+      author: "Yiğit Şaplı"
+      displayId: "4c55874671e"
+      url: "https://stash.subutai.io/projects/CHOP/repos/main/commits/4c55874671ec0096badd4f2e0928c4fc6d0c466c"
+    - 
+      id: "e584e6066e73a678edf3facbdc692f511feced42"
+      message: "safety net checkpoint for coordinator, kinda backup"
+      author: "Yigit Sapli"
+      displayId: "e584e6066e7"
+      url: "https://stash.subutai.io/projects/CHOP/repos/main/commits/e584e6066e73a678edf3facbdc692f511feced42"
+    - 
+      id: "0bf6cd85a12642b9d7360f9859b19e2062b7ebaf"
+      message: " - minor fixes in EC2InstanceManager and AmazonIpRuleManager\n - getting Instances with id collection implemented in\n EC2InstanceManager\n - minor fixes in chop-example pom.xml and stack.json"
+      author: "Yigit Sapli"
+      displayId: "0bf6cd85a12"
+      url: "https://stash.subutai.io/projects/CHOP/repos/main/commits/0bf6cd85a12642b9d7360f9859b19e2062b7ebaf"
+    - 
+      id: "8a08ac1230b9713f7b4ea5763e9ba5fe970c114b"
+      message: "fixing misuse of Preconditions in CoordinatedCluster.add()"
+      author: "Yigit Sapli"
+      displayId: "8a08ac1230b"
+      url: "https://stash.subutai.io/projects/CHOP/repos/main/commits/8a08ac1230b9713f7b4ea5763e9ba5fe970c114b"
+    - 
+      id: "8fb7e191734f6a1daa19fdef6f12b6f497fd6db2"
+      message: "fixing faulty parsing of provider params keys"
+      author: "Yigit Sapli"
+      displayId: "8fb7e191734"
+      url: "https://stash.subutai.io/projects/CHOP/repos/main/commits/8fb7e191734f6a1daa19fdef6f12b6f497fd6db2"
+    - 
+      id: "8e3feb40f71cb2548c1b97217eb3842be6318465"
+      message: "failIfCommitNecessary parameter in plugin is false by default and couple of configuration fixes in chop-example"
+      author: "Yigit Sapli"
+      displayId: "8e3feb40f71"
+      url: "https://stash.subutai.io/projects/CHOP/repos/main/commits/8e3feb40f71cb2548c1b97217eb3842be6318465"
+    - 
+      id: "73153788c8c8bc11e5ca3a0723dea55fb5d48f61"
+      message: " - resolved dependency conflict of stax which caused aws sdk to fail\n - fixing -d option on webapp\n - reducing embedded ES initialization pause to 1000 msecs\n - setup stack operation is blocking until issues are resolved\n - other minor fixes in amazon and coordinator"
+      author: "Yigit Sapli"
+      displayId: "73153788c8c"
+      url: "https://stash.subutai.io/projects/CHOP/repos/main/commits/73153788c8c8bc11e5ca3a0723dea55fb5d48f61"
+    - 
+      id: "3e69fe7b5222d3e75cff046661a309ca1dd6b03b"
+      message: "preparing for actual setup"
+      author: "Yigit Sapli"
+      displayId: "3e69fe7b522"
+      url: "https://stash.subutai.io/projects/CHOP/repos/main/commits/3e69fe7b5222d3e75cff046661a309ca1dd6b03b"
+    - 
+      id: "e1ef0bbd63ce6b2ed2538d7c111e3b3ff854bfd8"
+      message: "fixing a small bug in UploadResource that caused runner.jar to be treated as a directory"
+      author: "Yigit Sapli"
+      displayId: "e1ef0bbd63c"
+      url: "https://stash.subutai.io/projects/CHOP/repos/main/commits/e1ef0bbd63ce6b2ed2538d7c111e3b3ff854bfd8"
+    - 
+      id: "02e39c55ca8172e7ff68dd0eef3298194d31abff"
+      message: " - fixed bugs in CoordinatorUtils.getRunnerJar\n - changed argument media type in UploadResource\n - fixed corruption of runner.jar while deploying to coordinator\n - related changes in tests and DeployMojo"
+      author: "Yigit Sapli"
+      displayId: "02e39c55ca8"
+      url: "https://stash.subutai.io/projects/CHOP/repos/main/commits/02e39c55ca8172e7ff68dd0eef3298194d31abff"
+    - 
+      id: "44268d3fa16e91704e0ea2d39fa2fcd6f05073e5"
+      message: "- putting resources inside runner.jar in runner plugin goal\n- modified BasicModule.getId and related classes because negative hash\n codes cause problems in ES\n- few other minor fixes"
+      author: "Yigit Sapli"
+      displayId: "44268d3fa16"
+      url: "https://stash.subutai.io/projects/CHOP/repos/main/commits/44268d3fa16e91704e0ea2d39fa2fcd6f05073e5"
+    - 
+      id: "8573089244526b53798c4aa7b7c41a9a65559038"
+      message: "Webapp. Runners status UI."
+      author: "Askat Asanaliev"
+      displayId: "85730892445"
+      url: "https://stash.subutai.io/projects/CHOP/repos/main/commits/8573089244526b53798c4aa7b7c41a9a65559038"
+    - 
+      id: "8a83367825e3e3f0fe8a5b5045c94269b3bf8309"
+      message: "Merge pull request #55 in CHOP/main from coordinator-refactor to master\n\n* commit '8640a2934ea3bc3c5dfd85ebf878f894ce66f4b6':\n getting CoordinatedStack object in webapp PropertiesResource\n committing changes again on plugin that seem to be somehow overwritten\n - Reorganized coordinator and related stack classes so they are cleaner - Runner Count is put inside CoordinatedStack - ChopUiModule is now singleton - Did other modifications due to refactoring"
+      author: "Yiğit Şaplı"
+      displayId: "8a83367825e"
+      url: "https://stash.subutai.io/projects/CHOP/repos/main/commits/8a83367825e3e3f0fe8a5b5045c94269b3bf8309"
+    - 
+      id: "8640a2934ea3bc3c5dfd85ebf878f894ce66f4b6"
+      message: "getting CoordinatedStack object in webapp PropertiesResource"
+      author: "Yigit Sapli"
+      displayId: "8640a2934ea"
+      url: "https://stash.subutai.io/projects/CHOP/repos/main/commits/8640a2934ea3bc3c5dfd85ebf878f894ce66f4b6"
+    - 
+      id: "30fcd180f7b0ff09e897f783025c9bb7ef9eb04f"
+      message: "committing changes again on plugin that seem to be somehow overwritten"
+      author: "Yigit Sapli"
+      displayId: "30fcd180f7b"
+      url: "https://stash.subutai.io/projects/CHOP/repos/main/commits/30fcd180f7b0ff09e897f783025c9bb7ef9eb04f"
+    - 
+      id: "5bb077378bd1e96634bdbdbd44917fac47d5bfed"
+      message: "Merge branch 'master' of https://stash.safehaus.org/scm/chop/main into coordinator-refactor\n\nConflicts:\n\tstack/src/main/java/org/apache/usergrid/chop/stack/SetupStackState.java\n\twebapp/src/main/java/org/apache/usergrid/chop/webapp/ChopUiModule.java\n\twebapp/src/main/java/org/apache/usergrid/chop/webapp/coordinator/StackCoordinator.java\n\twebapp/src/main/java/org/apache/usergrid/chop/webapp/coordinator/rest/SetupResource.java\n\twebapp/src/main/java/org/apache/usergrid/chop/webapp/coordinator/rest/UploadResource.java\n\twebapp/src/main/java/org/apache/usergrid/chop/webapp/dao/model/BasicModule.java"
+      author: "Yigit Sapli"
+      displayId: "5bb077378bd"
+      url: "https://stash.subutai.io/projects/CHOP/repos/main/commits/5bb077378bd1e96634bdbdbd44917fac47d5bfed"
+    - 
+      id: "c0e9f595824017672e0d944df683964644ba0d41"
+      message: "- Reorganized coordinator and related stack classes so they are cleaner\n- Runner Count is put inside CoordinatedStack\n- ChopUiModule is now singleton\n- Did other modifications due to refactoring"
+      author: "Yigit Sapli"
+      displayId: "c0e9f595824"
+      url: "https://stash.subutai.io/projects/CHOP/repos/main/commits/c0e9f595824017672e0d944df683964644ba0d41"
+    - 
+      id: "33e90057365f3e822d97bbe54f031edf23d91430"
+      message: "disabling hard coded test - please fix this asap Askhat"
+      author: "Alex Karasulu"
+      displayId: "33e90057365"
+      url: "https://stash.subutai.io/projects/CHOP/repos/main/commits/33e90057365f3e822d97bbe54f031edf23d91430"
+    - 
+      id: "9fd9de0dfcb455f0a12cb98c974734b39e63ac02"
+      message: "changes ...\n\n o adding new rest resource to pull properties for runners from ui\n o adding capability to include percentage information in stats\n THIS SEEMED TO BE OVERWRITTEN AND I REDID IT!"
+      author: "Alex Karasulu"
+      displayId: "9fd9de0dfcb"
+      url: "https://stash.subutai.io/projects/CHOP/repos/main/commits/9fd9de0dfcb455f0a12cb98c974734b39e63ac02"
+    - 
+      id: "fa04b470abdbf9a1b2a4d2be1bf54176e9841b33"
+      message: "Fixing merge error"
+      author: "Alex Karasulu"
+      displayId: "fa04b470abd"
+      url: "https://stash.subutai.io/projects/CHOP/repos/main/commits/fa04b470abdbf9a1b2a4d2be1bf54176e9841b33"
+    - 
+      id: "394baed9b7af6b3b44685768f912426e9ce05c33"
+      message: "Merge branch 'master' of ssh://stash.safehaus.org:7999/chop/main\n\nConflicts:\n\twebapp/src/main/java/org/apache/usergrid/chop/webapp/ChopUiFig.java"
+      author: "Alex Karasulu"
+      displayId: "394baed9b7a"
+      url: "https://stash.subutai.io/projects/CHOP/repos/main/commits/394baed9b7af6b3b44685768f912426e9ce05c33"
+    - 
+      id: "b33aa36dd3cc2605dbc5da9bdd2940150305b905"
+      message: "adding username, password and endpoint to properties file for project so runner can use the coordinator fig"
+      author: "Alex Karasulu"
+      displayId: "b33aa36dd3c"
+      url: "https://stash.subutai.io/projects/CHOP/repos/main/commits/b33aa36dd3cc2605dbc5da9bdd2940150305b905"
+  blogs: []
+  parenturl: 
+  layout: post
+  title:  "JudoChop"
+  date:   Date.parse('2015-07-11')
+  categories: projects
+  permalink: /:categories/judochop/
+---

@@ -1,0 +1,248 @@
+---
+  tags: 
+    - "hardware"
+    - "stress-testing"
+    - "performance-testing"
+    - "judo-chop"
+    - "internet-of-things"
+  confluence: 
+    spaces: 
+      - 
+        description: "Documentation for OdroidAttack"
+        hipchat: 
+          - 
+            notify: 
+              - "Blog post is created"
+              - "Page is created"
+              - "Page is updated"
+            room: "General Notifications"
+        key: "ODROID"
+        name: "OdroidAttack"
+        scope: "public"
+        type: "documentation"
+        url: "https://confluence.subutai.io/display/DROIDS"
+  hipchat: 
+    rooms: 
+      - 
+        name: "General At SSF"
+        web_url: "https://hipchat.subutai.io/chat"
+  jira: 
+    description: "Odroids on Subutai as stress test load gerators"
+    key: "ODROID"
+    name: "OdroidAttack"
+    security scope: "public"
+    url: "https://jira.subutai.io/projects/DROIDS"
+  key: "ODROID"
+  long_description: "This project aims to enable Odroids as Subutai Social resource hosts controlled by Judo Chop to bombard a Subutai Social environment. It will come in very handy when testing the performance and elasticity of a cluster stack of an application running in a Subutai environment."
+  name: "OdroidAttack"
+  security: 
+    admins: 
+      displayName: "Odroids Attack Administrators"
+      generate-flat-group: true
+      members: 
+        - 
+          blog-page: "http://foo.bar.com/blog/bugra"
+          external-projects: []
+          ldap-user: 
+            cn: "Bugra Cakmak"
+            email: "bcakmak@havelsan.com.tr"
+            mobile: ""
+            sn: "Cakmak"
+            uid: "bugra"
+          skills: []
+        - 
+          blog-page: "http://foo.bar.com/blog/daralbaev"
+          external-projects: []
+          ldap-user: 
+            cn: "damir aralbaev"
+            email: "daralbaev@critical-factor.com"
+            mobile: ""
+            sn: "aralbaev"
+            uid: "daralbaev"
+          skills: []
+        - 
+          blog-page: "http://foo.bar.com/blog/tonyuquq"
+          external-projects: []
+          ldap-user: 
+            cn: "Kok Tonyuquq"
+            email: "tonyuquq@critical-factor.com"
+            mobile: ""
+            sn: "Tonyuquq"
+            uid: "tonyuquq"
+          skills: []
+      teams: ""
+      type: "flat"
+      uniqueIdentifier: "droids-admins"
+    developers: 
+      displayName: "Odroids Attack Developers"
+      generate-flat-group: true
+      members: 
+        - 
+          blog-page: "http://foo.bar.com/blog/bbal"
+          external-projects: []
+          ldap-user: 
+            cn: "Bilal Bal"
+            email: "bbal@havelsan.com.tr"
+            mobile: ""
+            sn: "Bal"
+            uid: "bbal"
+          skills: []
+      teams: 
+        - 
+          displayName: "Odroids Attack Administrators"
+          generate-flat-group: true
+          members: 
+            - 
+              blog-page: "http://foo.bar.com/blog/bugra"
+              external-projects: []
+              ldap-user: 
+                cn: "Bugra Cakmak"
+                email: "bcakmak@havelsan.com.tr"
+                mobile: ""
+                sn: "Cakmak"
+                uid: "bugra"
+              skills: []
+            - 
+              blog-page: "http://foo.bar.com/blog/daralbaev"
+              external-projects: []
+              ldap-user: 
+                cn: "damir aralbaev"
+                email: "daralbaev@critical-factor.com"
+                mobile: ""
+                sn: "aralbaev"
+                uid: "daralbaev"
+              skills: []
+            - 
+              blog-page: "http://foo.bar.com/blog/tonyuquq"
+              external-projects: []
+              ldap-user: 
+                cn: "Kok Tonyuquq"
+                email: "tonyuquq@critical-factor.com"
+                mobile: ""
+                sn: "Tonyuquq"
+                uid: "tonyuquq"
+              skills: []
+          teams: ""
+          type: "flat"
+          uniqueIdentifier: "droids-admins"
+      type: "composite"
+      uniqueIdentifier: "droids-devs"
+    lead: 
+      blog-page: "http://foo.bar.com/blog/tonyuquq"
+      external-projects: []
+      ldap-user: 
+        cn: "Kok Tonyuquq"
+        email: "tonyuquq@critical-factor.com"
+        mobile: ""
+        sn: "Tonyuquq"
+        uid: "tonyuquq"
+      skills: []
+    scope: "public"
+    users: 
+      displayName: "Odroids Attack Team"
+      generate-flat-group: true
+      members: ""
+      teams: 
+        - 
+          displayName: "Odroids Attack Developers"
+          generate-flat-group: true
+          members: 
+            - 
+              blog-page: "http://foo.bar.com/blog/bbal"
+              external-projects: []
+              ldap-user: 
+                cn: "Bilal Bal"
+                email: "bbal@havelsan.com.tr"
+                mobile: ""
+                sn: "Bal"
+                uid: "bbal"
+              skills: []
+          teams: 
+            - 
+              displayName: "Odroids Attack Administrators"
+              generate-flat-group: true
+              members: 
+                - 
+                  blog-page: "http://foo.bar.com/blog/bugra"
+                  external-projects: []
+                  ldap-user: 
+                    cn: "Bugra Cakmak"
+                    email: "bcakmak@havelsan.com.tr"
+                    mobile: ""
+                    sn: "Cakmak"
+                    uid: "bugra"
+                  skills: []
+                - 
+                  blog-page: "http://foo.bar.com/blog/daralbaev"
+                  external-projects: []
+                  ldap-user: 
+                    cn: "damir aralbaev"
+                    email: "daralbaev@critical-factor.com"
+                    mobile: ""
+                    sn: "aralbaev"
+                    uid: "daralbaev"
+                  skills: []
+                - 
+                  blog-page: "http://foo.bar.com/blog/tonyuquq"
+                  external-projects: []
+                  ldap-user: 
+                    cn: "Kok Tonyuquq"
+                    email: "tonyuquq@critical-factor.com"
+                    mobile: ""
+                    sn: "Tonyuquq"
+                    uid: "tonyuquq"
+                  skills: []
+              teams: ""
+              type: "flat"
+              uniqueIdentifier: "droids-admins"
+          type: "composite"
+          uniqueIdentifier: "droids-devs"
+      type: "composite"
+      uniqueIdentifier: "droids"
+  short_description: "Odroids on Subutai as stress test load gerators"
+  stash: 
+    project: 
+      key: "ODROID"
+      name: "OdroidAttack"
+      repositories: 
+        - 
+          name: "main"
+          notifications: 
+            hipchat: 
+              room: "General Notifications"
+              triggers: 
+                - "push"
+          scope: "public"
+          url: "https://stash.subutai.io/projects/ODROID/repos/main/browse"
+      url: "https://stash.subutai.io/projects/ODROID"
+  type: "simple"
+  website: 
+    banner_media: 
+      - "Odroidattack_1.jpg"
+      - "Odroidattack_2.jpg"
+      - "Odroidattack_3.jpg"
+    blogs: 
+      - "http://www.lipsum.com/"
+      - "http://www.lipsum.com/"
+    downloads: 
+      - 
+        description: "Lorem ipsum"
+        url: "http://www.lipsum.com/"
+    favicon: "favicon.png"
+    large_logo_64: "odroid_large_logo.png"
+    medium_logo_48: "odroid_medium_logo.png"
+    small_logo_32: "odroid_small_logo.png"
+    twitter: "#"
+    website: "odroidattack"
+
+
+  lastUpdates: []
+  commits: []
+  blogs: []
+  parenturl: 
+  layout: post
+  title:  "OdroidAttack"
+  date:   Date.parse('2015-07-11')
+  categories: projects
+  permalink: /:categories/odroidattack/
+---

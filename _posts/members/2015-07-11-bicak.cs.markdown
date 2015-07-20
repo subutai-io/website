@@ -1,0 +1,47 @@
+---
+  blog-page: "http://foo.bar.com/blog/bicak.cs"
+  external-projects: []
+  ldap-user: 
+    cn: "Furkan BÄ±Ã§ak"
+    email: "fbicak@havelsan.com.tr"
+    mobile: ""
+    sn: "BÄ±Ã§ak"
+    uid: "bicak.cs"
+  skills: []
+
+  userProfile: 
+    key: "bicak.cs"
+    name: "bicak.cs"
+    emailAddress: "fbicak@havelsan.com.tr"
+    displayName: "Furkan Bıçak"
+    avatarUrl: 
+      16x16: "https://jira.subutai.io/secure/useravatar?size=xsmall&avatarId=10122"
+      24x24: "https://jira.subutai.io/secure/useravatar?size=small&avatarId=10122"
+      32x32: "https://jira.subutai.io/secure/useravatar?size=medium&avatarId=10122"
+      48x48: "https://jira.subutai.io/secure/useravatar?avatarId=10122"
+    userActivity: 
+      title: 
+        type: "html"
+        $t: "&amp;lt;a href=&quot;https://jira.subutai.io/secure/ViewProfile.jspa?name=bicak.cs&quot; class=&quot;activity-item-user activity-item-author&quot;&amp;gt;Furkan Bıçak&amp;lt;/a&amp;gt; updated the Epic Link of &amp;lt;a href=&quot;https://jira.subutai.io/browse/SS-2976&quot;&amp;gt;&amp;lt;span class=&apos;resolved-link&apos;&amp;gt;SS-2976&amp;lt;/span&amp;gt; - Environment creation never completes&amp;lt;/a&amp;gt;"
+      published: "2015-04-09T12:07:05.879Z"
+      updates: "2015-04-09T12:07:05.879Z"
+      link: 
+        - 
+          href: "https://jira.subutai.io/browse/SS-2976"
+          rel: "alternate"
+        - 
+          href: "https://jira.subutai.io/images/icons/issuetypes/bug.png"
+          rel: "http://streams.atlassian.com/syndication/icon"
+          title: "Bug"
+        - 
+          href: "https://jira.subutai.io/s/en_USbvl1xr/64018/11/1.0/_/download/resources/jira.webresources:global-static/wiki-renderer.css"
+          rel: "http://streams.atlassian.com/syndication/css"
+        - 
+          href: "https://jira.subutai.io/plugins/servlet/streamscomments/issues/SS-2976"
+          rel: "http://streams.atlassian.com/syndication/reply-to"
+  layout: post
+  title:  "Furkan BÄ±Ã§ak"
+  date:   Date.parse('2015-07-11')
+  categories: members
+  permalink: /:categories/bicak.cs/
+---
