@@ -1157,6 +1157,14 @@ hr {
         float: none;
         border-bottom: 1px dashed #eee;
     }
+    .commitsTable {
+        table-layout: fixed;
+        font-size: 13px;
+    }
+    .commitsTable th, .commitsTable td {
+        overflow: hidden;
+        border: 1px solid #DDDDDD;
+    }
 }
 @media (min-width: 992px) {
     .container {
