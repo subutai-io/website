@@ -26,7 +26,7 @@ if (profileJSON.key){
     else {
         profile.userActivity = userActivity;
     }
-
+    userProfile = {}
     userProfile.userProfile = profile;
     console.log( JSON.stringify(userProfile) );
 }

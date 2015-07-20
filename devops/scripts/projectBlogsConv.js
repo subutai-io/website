@@ -8,6 +8,7 @@ if ( blogJSON.results ){
         blog.url = "https://confluence.subutai.io" + blogJSON.results[i]._links.webui;
         blogs.push(blog);
     }
+    blog = {}
     blog.blogs = blogs;
     console.log( JSON.stringify( blog ) );
 }

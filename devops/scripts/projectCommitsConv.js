@@ -11,6 +11,7 @@ if ( commitsJSON.values ){
         cmt.url = "https://stash.subutai.io/projects/'$key'/repos/main/commits/"+cmt.id;
         commits.push(cmt);
     }
+    commit = {}
     commit.commits = commits;
     console.log( JSON.stringify( commit ) );
 }
