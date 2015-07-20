@@ -2,7 +2,6 @@
 
 now=$(date +"%Y-%m-%d")
 WKDIR=$(dirname $0)
-DEVOPS=$WKDIR/devops/scripts
 
 while [[ $# > 0 ]]
 do
@@ -25,6 +24,7 @@ esac
 shift
 done
 
+DEVOPS=$WKDIR/devops/scripts
 JEKYLL_DIR=$WKDIR/ssf
 PROJECTS_DIR=$DESCR_PATH/projects
 MEMBERS_DIR=$DESCR_PATH/generated/members
@@ -97,7 +97,7 @@ for descriptor in `find $MEMBERS_DIR -type f -regex '.*\.json'`; do
   userProfile=$(curl -u dashbot:ghkf346LU538QZRD -X GET "https://jira.subutai.io/rest/api/2/user?key=$key" -A 'ssf')
   userAvatar=$(node -pe 'JSON.parse(process.argv[1]).avatarUrls["48x48"]' "$(echo $userProfile)")
 
-  userProfile=$(node userJSONConv.js "$userProfile" "$userActivity" | $WKDIR/node_modules/.bin/json2yaml )
+  userProfile=$(node $DEVOPS/userJSONConv.js "$userProfile" "$userActivity" | $WKDIR/node_modules/.bin/json2yaml )
 
   $WKDIR/node_modules/.bin/json2yaml $MEMBERS_DIR/$key.json > $MEMBERS_DIR/$now-$key.markdown
 
@@ -129,13 +129,13 @@ for descriptor in `find $PROJECTS_DIR -type f -regex '.*\.json'`; do
   parent=$(node -pe 'JSON.parse(process.argv[1]).parent' "$(cat $PROJECTS_DIR/$key.json)")
 
   lastUpdates=$(curl -u dashbot:ghkf346LU538QZRD -X GET "https://confluence.subutai.io/rest/api/content/search?cql=lastModified%3E=now(%22-15d%22)%20and%20space=$key" -A 'ssf')
-  lastUpdates=$(node projectUpdatesConv.js "$lastUpdates" | $WKDIR/node_modules/.bin/json2yaml)
+  lastUpdates=$(node $DEVOPS/projectUpdatesConv.js "$lastUpdates" | $WKDIR/node_modules/.bin/json2yaml)
 
   commits=$(curl -u dashbot:ghkf346LU538QZRD -X GET "https://stash.subutai.io/rest/api/1.0/projects/$key/repos/main/commits/?until=master" -A 'ssf')
-  commits=$(node projectCommitsConv.js "$commits" | $WKDIR/node_modules/.bin/json2yaml)
+  commits=$(node $DEVOPS/projectCommitsConv.js "$commits" | $WKDIR/node_modules/.bin/json2yaml)
 
   blogs=$(curl -u dashbot:ghkf346LU538QZRD -X GET "https://confluence.subutai.io/rest/api/content?type=blogpost&spaceKey=$key" -A 'ssf')
-  blogs=$(node projectBlogsConv.js "$blogs" | $WKDIR/node_modules/.bin/json2yaml)
+  blogs=$(node $DEVOPS/projectBlogsConv.js "$blogs" | $WKDIR/node_modules/.bin/json2yaml)
 
   if [ -n '$parent' ] && [ "$parent" != "undefined" ]; then
     pkey=${parent%.json}
