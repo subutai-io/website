@@ -54,10 +54,6 @@ func main() {
         } else {
             copyFile( pathSrc, pathDest )
         }
-
-
-        //CopyFile( filepath.Join( path, ".git", "bin-cache", "wf", vals[2] ),
-        //    filepath.Join( path, FILES_RESTORED_DIR, vals[0] ) )
     }
 }
 
