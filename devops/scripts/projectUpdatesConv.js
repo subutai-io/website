@@ -10,6 +10,7 @@ if ( updatesJSON.results ){
         lUpd.url="https://confluence.subutai.io" + updatesJSON.results[j]._links.webui;
         lastUpdates.push(lUpd);
     }
+    lastUpdate = {}
     lastUpdate.lastUpdates = lastUpdates;
     console.log( JSON.stringify( lastUpdate ) );
 }
