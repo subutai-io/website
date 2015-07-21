@@ -1484,3 +1484,37 @@ hr {
         margin-left: 1060px;
     }
 }
+/*#thanks .item {*/
+    /*background-size: cover;*/
+    /*/!*display: block;*!/*/
+    /*/!*min-height: 500px;*!/*/
+    /*color: white;*/
+/*}*/
+/*#thanks .jb {*/
+    /*background: url(../img/jb.jpg) center no-repeat;*/
+/*}*/
+/*#thanks .at {*/
+    /*background: url(../img/at.jpg) center no-repeat;*/
+/*}*/
+#thanks {
+    margin-top: -35px;
+    width: 100%;
+}
+#thanks img {
+    width: 100%;
+    height: 300px;
+}
+#thanks .item {
+    transition-property: opacity;
+}
+#thanks .item,
+#thanks .active.left,
+#thanks .active.right {
+    opacity: 0;
+}
+
+#thanks .active,
+#thanks .next.left,
+#thanks .prev.right {
+    opacity: 1;
+}
