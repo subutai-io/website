@@ -494,22 +494,22 @@ scripts: >
                      <div class="panel panel-default">
                         <div class="panel-heading" role="tab" id="headingAdmins">
                             <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseAdmins" aria-expanded="false" aria-controls="collapse{{ page.security.admins[0] | capitalize }}">
-                                    {{ "admins" | capitalize }}
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseAdmins" aria-expanded="false" aria-controls="collapseAdmins">
+                                    Admins
                                 </a>
                             </h4>
                         </div>
 
-                        <div id="collapseAdmins" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading{{ page.security.admins[0] | capitalize }}">
+                        <div id="collapseAdmins" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingAdmins">
                             <div class="panel-body">
                                 <ul class="projectDevelopers mCustomScrollbar" data-mcs-theme="minimal-dark">
-
+                                    {{ page.security.admins.members }}
                                     {% assign team = false %}
                                     {% if page.security.admins.teams %}
                                         {% for t in page.security.developers.teams %}
                                             {% if t.members %}
-                                                {% assign team = true %}
                                                 {% for mem in t.members %}
+                                                    {% assign team = true %}
                                                     <li><i class="fa fa-user"></i> {{ mem.ldap-user.cn }}</li>
                                                 {% endfor %}
                                             {% endif %}
@@ -535,23 +535,23 @@ scripts: >
 
 
                     <div class="panel panel-default">
-                        <div class="panel-heading" role="tab" id="heading{{ developers | capitalize }}">
+                        <div class="panel-heading" role="tab" id="headingDevelopers">
                             <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseDevelopers" aria-expanded="false" aria-controls="collapse{{ page.security.developers[0] | capitalize }}">
-                                    {{ "developers" | capitalize }}
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseDevelopers" aria-expanded="false" aria-controls="collapseDevelopers">
+                                    Developers
                                 </a>
                             </h4>
                         </div>
 
-                        <div id="collapseDevelopers" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading{{ page.security.developers[0] | capitalize }}">
+                        <div id="collapseDevelopers" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingDevelopers">
                             <div class="panel-body">
                                 <ul class="projectDevelopers mCustomScrollbar" data-mcs-theme="minimal-dark">
                                     {% assign team = false %}
                                     {% if page.security.developers.teams %}
                                         {% for t in page.security.developers.teams %}
                                             {% if t.members %}
-                                                {% assign team = true %}
                                                 {% for mem in t.members %}
+                                                    {% assign team = true %}
                                                     <li><i class="fa fa-user"></i> {{ mem.ldap-user.cn }}</li>
                                                 {% endfor %}
                                             {% endif %}
@@ -578,21 +578,23 @@ scripts: >
                     </div>
 
                     <div class="panel panel-default">
-                        <div class="panel-heading" role="tab" id="heading{{ lead | capitalize }}">
+                        <div class="panel-heading" role="tab" id="headingLead">
                             <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseLead" aria-expanded="false" aria-controls="collapse{{ page.security.lead[0] | capitalize }}">
-                                    {{ "lead" | capitalize }}
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseLead" aria-expanded="false" aria-controls="collapseLead">
+                                    Lead
                                 </a>
                             </h4>
                         </div>
 
-                        <div id="collapseLead" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading{{ page.security.lead[0] | capitalize }}">
+                        <div id="collapseLead" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingLead">
                             <div class="panel-body">
-                                {% if page.security.lead.ldap-user.cn %}
-                                <li><i class="fa fa-user"></i> {{ page.security.lead.ldap-user.cn }}</li>
-                                {% else %}
-                                <li><i class="fa fa-user"></i> NO USER! | </li>
-                                {% endif %}
+                                <ul class="nav nav-list primary">
+                                    {% if page.security.lead.ldap-user.cn %}
+                                    <li><i class="fa fa-user"></i> {{ page.security.lead.ldap-user.cn }}</li>
+                                    {% else %}
+                                    <li><i class="fa fa-user"></i> NO USER! | </li>
+                                    {% endif %}
+                                </ul>
                             </div>
                         </div>
                     </div>
