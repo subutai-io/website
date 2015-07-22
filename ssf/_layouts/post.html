@@ -403,11 +403,18 @@ scripts: >
                     </ul>
                     <div class="tab-content">
                         <div id="downloads" class="tab-pane active">
+                        {% if page.website.downloads %}
                             {% for d in page.website.downloads %}
                             <a href="{{ d.url }}">{{ d.description }}</a>
                             {% endfor %}
+
+                        {% else %}
+                            no donwloads yet
+                        {% endif %}
                         </div>
+
                         <div id="news" class="tab-pane">
+                        {% if page.commits %}
                             {% for post in site.categories['news'] %}
                             {% for tag in post.tags %}
                             {% if tag == 'SS' %}
@@ -420,41 +427,57 @@ scripts: >
                             {% endfor %}
                             {% endfor %}
 
-                            <p>-----------------------------------------------------------------------------------------</p>
-
                             {% for b in page.lastUpdates %}
                             <p><a href="{{ b.url }}"><i class="fa fa-newspaper-o"></i> {{ b.title }}</a></p>
                             {% endfor %}
+                        {% else %}
+                        no news yet
+                        {% endif %}
                         </div>
+
+
                         <div id="blogs" class="tab-pane">
+                        {% if page.blogs %}
+                            {% assign flag = true %}
                             {% for b in page.blogs %}
                             <p><a href="{{ b.url }}"><i class="fa fa-rss-square"></i> {{ b.title }}</a></p>
+                            {% assign flag = false %}
                             {% endfor %}
+                            {% if flag %}
+                                no blogs yet
+                            {% endif %}
+                        {% endif %}
                         </div>
+
                         <div id="twitter" class="tab-pane">
                             No tweets
                         </div>
+
                         <div id="activity" class="tab-pane">
+                        {% if page.commits %}
                             <table class="table">
                                 <thead>
-                                    <tr>
-                                        <th>Commit ID</th>
-                                        <th>Message</th>
-                                        <th>Author</th>
-                                    </tr>
+                                <tr>
+                                    <th>Commit ID</th>
+                                    <th>Message</th>
+                                    <th>Author</th>
+                                </tr>
                                 </thead>
                                 <tbody>
                                 {% for b in page.commits %}
-                                    <tr>
-                                        <th><a href="{{b.url}}">{{ b.displayId }}</a></th>
-                                        <th>{{ b.message }}</th>
-                                        <th>{{ b.author }}</th>
-                                    </tr>
+                                <tr>
+                                    <th><a href="{{b.url}}">{{ b.displayId }}</a></th>
+                                    <th>{{ b.message }}</th>
+                                    <th>{{ b.author }}</th>
+                                </tr>
                                 {% endfor %}
                                 </tbody>
                             </table>
-
+                        {% else %}
+                            no activity yet
+                        {% endif %}
                         </div>
+
 
                     </div>
                 </div>
@@ -465,54 +488,116 @@ scripts: >
             <div class="rightSidebar">
                 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 
-                    {% for groups in page.security %}
 
-                    {% if groups[0] == 'admins' or groups[0] == 'developers' or groups[0] == 'lead' %}
-                    <div class="panel panel-default">
-                        <div class="panel-heading" role="tab" id="heading{{ groups[0] | capitalize }}">
+
+                     <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingAdmins">
                             <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse{{ groups[0] | capitalize }}" aria-expanded="false" aria-controls="collapse{{ groups[0] | capitalize }}">
-                                    {{ groups[0] | capitalize }}
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseAdmins" aria-expanded="false" aria-controls="collapse{{ page.security.admins[0] | capitalize }}">
+                                    {{ "admins" | capitalize }}
                                 </a>
                             </h4>
                         </div>
 
-                        <div id="collapse{{ groups[0] | capitalize }}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading{{ groups[0] | capitalize }}">
+                        <div id="collapseAdmins" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading{{ page.security.admins[0] | capitalize }}">
                             <div class="panel-body">
                                 <ul class="projectDevelopers mCustomScrollbar" data-mcs-theme="minimal-dark">
 
-                                    {% for g in groups %}
-                                    {% for member in g.members %}
-                                    {% if member.ldap-user.cn %}
-                                    <li><i class="fa fa-user"></i> {{ member.ldap-user.cn }}</li>
-                                    {% endif %}
-                                    {% endfor %}
-
-
-                                    {% for t in g.teams %}
-                                    {% if t.members %}
-                                    {% for member in t.members %}
-                                    {% if member.ldap-user.cn %}
-                                    <li><i class="fa fa-user"></i> {{ member.ldap-user.cn }}</li>
-                                    {% endif %}
-                                    {% endfor %}
-                                    {% endif %}
-                                    {% if t.ldap-user.cn %}
-                                    <li><i class="fa fa-user"></i> {{ t.ldap-user.cn }}</li>
-                                    {% endif %}
-                                    {% endfor %}
-
-                                    {% if g.ldap-user.cn %}
-                                    <li><i class="fa fa-user"></i> {{ g.ldap-user.cn }}</li>
+                                    {% assign team = false %}
+                                    {% if page.security.admins.teams %}
+                                        {% for t in page.security.developers.teams %}
+                                            {% if t.members %}
+                                                {% assign team = true %}
+                                                {% for mem in t.members %}
+                                                    <li><i class="fa fa-user"></i> {{ mem.ldap-user.cn }}</li>
+                                                {% endfor %}
+                                            {% endif %}
+                                        {% endfor %}
                                     {% endif %}
 
-                                    {% endfor %}
+                                    {% if page.security.admins.members or page.security.admins.teams.members or page.security.admins.ldap-user %}
+                                        {% if page.security.admins.members %}
+                                            {% for member in page.security.admins.members %}
+                                                {% if member.ldap-user.cn %}
+                                                    <li><i class="fa fa-user"></i> {{ member.ldap-user.cn }}</li>
+                                                {% endif %}
+                                            {% endfor %}
+                                        {% endif %}
+
+                                    {% else %}
+                                    <li><i class="fa fa-user"></i> NO USER! | </li>
+                                    {% endif %}
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    {% endif %}
-                    {% endfor %}
+
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="heading{{ developers | capitalize }}">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseDevelopers" aria-expanded="false" aria-controls="collapse{{ page.security.developers[0] | capitalize }}">
+                                    {{ "developers" | capitalize }}
+                                </a>
+                            </h4>
+                        </div>
+
+                        <div id="collapseDevelopers" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading{{ page.security.developers[0] | capitalize }}">
+                            <div class="panel-body">
+                                <ul class="projectDevelopers mCustomScrollbar" data-mcs-theme="minimal-dark">
+                                    {% assign team = false %}
+                                    {% if page.security.developers.teams %}
+                                        {% for t in page.security.developers.teams %}
+                                            {% if t.members %}
+                                                {% assign team = true %}
+                                                {% for mem in t.members %}
+                                                    <li><i class="fa fa-user"></i> {{ mem.ldap-user.cn }}</li>
+                                                {% endfor %}
+                                            {% endif %}
+                                        {% endfor %}
+                                    {% endif %}
+
+                                    {% if page.security.developers.members or team or page.security.developers.ldap-user %}
+                                        {% if page.security.developers.members %}
+                                            {% for member in page.security.developers.members %}
+                                                {% if member.ldap-user.cn %}
+                                                    <li><i class="fa fa-user"></i> {{ member.ldap-user.cn }}</li>
+                                                {% endif %}
+                                            {% endfor %}
+                                        {% endif %}
+
+
+                                    {% else %}
+                                    <li><i class="fa fa-user"></i> NO USER! | </li>
+                                    {% endif %}
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="heading{{ lead | capitalize }}">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseLead" aria-expanded="false" aria-controls="collapse{{ page.security.lead[0] | capitalize }}">
+                                    {{ "lead" | capitalize }}
+                                </a>
+                            </h4>
+                        </div>
+
+                        <div id="collapseLead" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading{{ page.security.lead[0] | capitalize }}">
+                            <div class="panel-body">
+                                {% if page.security.lead.ldap-user.cn %}
+                                <li><i class="fa fa-user"></i> {{ page.security.lead.ldap-user.cn }}</li>
+                                {% else %}
+                                <li><i class="fa fa-user"></i> NO USER! | </li>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+
+
+
 
                     {% if page.children %}
                     <div class="panel panel-default">
@@ -571,3 +656,4 @@ scripts: >
 </div>
 
 {% include footer.html %}
+
