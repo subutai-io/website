@@ -903,7 +903,6 @@ hr {
 .customTabsDesign .tab-content {
     margin-top: -2px;
     min-height: 300px;
-    padding: 50px;
     text-align: left;
     font-size: 17px;
     box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.04);
@@ -1156,6 +1155,14 @@ hr {
         width: 100% !important;
         float: none;
         border-bottom: 1px dashed #eee;
+    }
+    .commitsTable {
+        table-layout: fixed;
+        font-size: 13px;
+    }
+    .commitsTable th, .commitsTable td {
+        overflow: hidden;
+        border: 1px solid #DDDDDD;
     }
 }
 @media (min-width: 992px) {
@@ -1476,4 +1483,46 @@ hr {
     #userProfile .rightSidebar {
         margin-left: 1060px;
     }
+}
+.partnerLogo img {
+    width: 100%;
+    margin: 45px 0;
+}
+.atlassianProducts div {
+    text-align: center;
+}
+.atlassianProducts .col-md-12:first-child {
+    margin-bottom: 32px;
+}
+
+.thanks h3 {
+    margin-bottom: 10px;
+}
+.partnerDesc {
+    text-align: left;
+}
+.thanksContainer {
+    padding-bottom: 50px;
+}
+.footerLinks {
+    display: block;
+    margin-top: 20px;
+    padding: 0;
+    color: #08c;
+}
+.footerLinks li a {
+    text-decoration: none;
+    font-size: 12.6px;
+}
+.footerLinks li a:hover {
+    text-decoration: underline;
+}
+.confluenceLogo img {width: 78%;}
+.jiraLogo img {  width: 88%;}
+.stashLogo img {  width: 150%;}
+.hipchatLogo img {  width: 90%;}
+.crowdLogo img {  width: 103%;}
+
+.usedProductsJB div {
+    padding: 0 !important;
 }
