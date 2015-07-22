@@ -1490,3 +1490,20 @@ hr {
 .atlassianProducts .col-md-7 img, .atlassianProducts .col-md-5 img, .atlassianProducts .col-md-4 img {
     width: 70%;
 }
+.thanksContainer {
+    padding-bottom: 50px;
+
+}
+.footerLinks {
+    display: block;
+    margin-top: 20px;
+    padding: 0;
+    color: #08c;
+}
+.footerLinks li a {
+    text-decoration: none;
+    font-size: 12.6px;
+}
+.footerLinks li a:hover {
+    text-decoration: underline;
+}

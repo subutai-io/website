@@ -14,5 +14,5 @@ permalink: pretty
 
 exclude: [
   'Vagrantfile', '*.iml', '*.md', 'node_modules/, *.sh', 'pages/about-us.html', 'pages/contact-us.html',
-  'pages/faq.html', 'pages/forms.html', 'pages/membership.html', 'pages/legal.html'
+  'pages/faq.html', 'pages/forms.html', 'pages/membership.html', 'pages/sponsorship.html', 'pages/legal.html'
 ]
