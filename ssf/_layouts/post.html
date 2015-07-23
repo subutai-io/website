@@ -409,12 +409,13 @@ scripts: >
                             {% endfor %}
 
                         {% else %}
-                            no donwloads yet
+                            no downloads yet
                         {% endif %}
                         </div>
 
                         <div id="news" class="tab-pane">
                         {% if page.commits %}
+                            {% assign flag = true %} 
                             {% for post in site.categories['news'] %}
                             {% for tag in post.tags %}
                             {% if tag == 'SS' %}
@@ -429,10 +430,12 @@ scripts: >
 
 
                             {% for b in page.lastUpdates %}
+                            {% assign flag = false %}
                             <p><a href="{{ b.url }}" target="_blank"><i class="fa fa-newspaper-o"></i> {{ b.title }}</a></p>
                             {% endfor %}
-                        {% else %}
-                        no news yet
+                            {% if flag %}
+                                no news yet
+                            {% endif %}
                         {% endif %}
                         </div>
 
@@ -503,36 +506,46 @@ scripts: >
                         <div id="collapseAdmins" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingAdmins">
                             <div class="panel-body">
                                 <ul class="projectDevelopers mCustomScrollbar" data-mcs-theme="minimal-dark">
-                                    {{ page.security.admins.members }}
+
+                                    {% assign members = false %}
                                     {% assign team = false %}
-                                    {% if page.security.admins.teams %}
-                                        {% for t in page.security.developers.teams %}
-                                            {% if t.members %}
-                                                {% for mem in t.members %}
-                                                    {% assign team = true %}
-                                                    <li><i class="fa fa-user"></i> {{ mem.ldap-user.cn }}</li>
+                                    {% assign ldap = false %}
+                                    {% if page.security.admins %}
+                                        {% for admin in page.security.admins %}
+                                            {% if admin.members %}
+                                                {% for member in admin.members %}
+                                                    {% assign members = true %}
+                                                    <li><i class="fa fa-user"></i> {{ member.ldap-user.cn }}</li>
                                                 {% endfor %}
                                             {% endif %}
+
+                                            {% if admin.teams %}
+                                                {% for teams in admin.teams %}
+                                                    {% if teams.members %}
+                                                        {% for member in teams.members %}
+                                                            {% assign team = true %}
+                                                            <li><i class="fa fa-user"></i> {{ member.ldap-user.cn }}</li>
+                                                        {% endfor %}
+                                                    {% endif %}
+                                                {% endfor %}
+                                            {% endif %}
+
+                                            {% if admin.ldap-user %}
+                                                {% for member in admin.ldap-user %}
+                                                    {% assign ldap = true %}
+                                                    <li><i class="fa fa-user"></i> {{ admin.ldap-user.cn }}</li>
+                                                {% endfor %}
+                                            {% endif %}
+
                                         {% endfor %}
-                                    {% endif %}
-
-                                    {% if page.security.admins.members or page.security.admins.teams.members or page.security.admins.ldap-user %}
-                                        {% if page.security.admins.members %}
-                                            {% for member in page.security.admins.members %}
-                                                {% if member.ldap-user.cn %}
-                                                    <li><i class="fa fa-user"></i> {{ member.ldap-user.cn }}</li>
-                                                {% endif %}
-                                            {% endfor %}
-                                        {% endif %}
-
-                                    {% else %}
+                                    {% if members == false and team == false and ldap == false %}
                                     <li><i class="fa fa-user"></i> NO USER! | </li>
+                                    {% endif %}
                                     {% endif %}
                                 </ul>
                             </div>
                         </div>
                     </div>
-
 
                     <div class="panel panel-default">
                         <div class="panel-heading" role="tab" id="headingDevelopers">
@@ -546,30 +559,42 @@ scripts: >
                         <div id="collapseDevelopers" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingDevelopers">
                             <div class="panel-body">
                                 <ul class="projectDevelopers mCustomScrollbar" data-mcs-theme="minimal-dark">
-                                    {% assign team = false %}
-                                    {% if page.security.developers.teams %}
-                                        {% for t in page.security.developers.teams %}
-                                            {% if t.members %}
-                                                {% for mem in t.members %}
-                                                    {% assign team = true %}
-                                                    <li><i class="fa fa-user"></i> {{ mem.ldap-user.cn }}</li>
+
+                                    {% if page.security.developers %}
+                                        {% assign members = false %}
+                                        {% assign team = false %}
+                                        {% assign ldap = false %}
+
+                                        {% for developer in page.security.developers %}
+                                            {% if developer.members %}
+                                                {% for member in developer.members %}
+                                                    {% assign members = true %}
+                                                    <li><i class="fa fa-user"></i> {{ member.ldap-user.cn }}</li>
                                                 {% endfor %}
                                             {% endif %}
+
+                                            {% if developer.teams %}
+                                                {% for teams in developer.teams %}
+                                                    {% if teams.members %}
+                                                        {% for member in teams.members %}
+                                                            {% assign team = true %}
+                                                            <li><i class="fa fa-user"></i> {{ member.ldap-user.cn }}</li>
+                                                        {% endfor %}
+                                                    {% endif %}
+                                                {% endfor %}
+                                            {% endif %}
+
+                                            {% if developer.ldap-user %}
+                                                {% for member in developer.ldap-user %}
+                                                    {% assign ldap = true %}
+                                                    <li><i class="fa fa-user"></i> {{ developer.ldap-user.cn }}</li>
+                                                {% endfor %}
+                                            {% endif %}
+
                                         {% endfor %}
-                                    {% endif %}
-
-                                    {% if page.security.developers.members or team or page.security.developers.ldap-user %}
-                                        {% if page.security.developers.members %}
-                                            {% for member in page.security.developers.members %}
-                                                {% if member.ldap-user.cn %}
-                                                    <li><i class="fa fa-user"></i> {{ member.ldap-user.cn }}</li>
-                                                {% endif %}
-                                            {% endfor %}
+                                        {% if members == false and team == false and ldap == false %}
+                                        <li><i class="fa fa-user"></i> NO USER! | </li>
                                         {% endif %}
-
-
-                                    {% else %}
-                                    <li><i class="fa fa-user"></i> NO USER! | </li>
                                     {% endif %}
 
                                 </ul>
@@ -589,8 +614,12 @@ scripts: >
                         <div id="collapseLead" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingLead">
                             <div class="panel-body">
                                 <ul class="nav nav-list primary">
-                                    {% if page.security.lead.ldap-user.cn %}
-                                    <li><i class="fa fa-user"></i> {{ page.security.lead.ldap-user.cn }}</li>
+                                    {% if page.security.lead %}
+                                        {% for lead in page.security.lead %}
+                                            {% if lead.ldap-user.cn %}
+                                            <li><i class="fa fa-user"></i> {{ lead.ldap-user.cn }}</li>
+                                            {% endif %}
+                                        {% endfor %}
                                     {% else %}
                                     <li><i class="fa fa-user"></i> NO USER! | </li>
                                     {% endif %}
