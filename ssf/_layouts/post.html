@@ -470,9 +470,9 @@ scripts: >
                                 <tbody>
                                 {% for b in page.commits %}
                                 <tr>
-                                    <th><a href="{{b.url}}">{{ b.displayId }}</a></th>
-                                    <th>{{ b.message }}</th>
-                                    <th>{{ b.author }}</th>
+                                    <td><a href="{{b.url}}">{{ b.displayId }}</a></td>
+                                    <td>{{ b.message }}</td>
+                                    <td>{{ b.author }}</td>
                                 </tr>
                                 {% endfor %}
                                 </tbody>
