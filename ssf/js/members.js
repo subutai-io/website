@@ -157,8 +157,39 @@ function pagination() {
     maxPages = Math.ceil(filteredProjects.length / projectsPerPage[titleMode]);
 
     var pages = [];
-    for (var i = 1; i <= maxPages; i++) {
+    var interrupted = false;
+    for (var i = currPage; i <= currPage + 2 && i <= maxPages; i++) {
+        if (!interrupted)
+        if (i - 2 > 0 && i -2 != 1 && currPage ==i)
+        {
+            i = i - 3;
+            pages.push("...");
+            i++;
+            pages.push(i);
+            i++;
+            pages.push(i);
+            i++;
+            interrupted = true;
+        }
+        if (i==2 && currPage ==2)
+        {
+            pages.push(i-1);
+        }
+        if (i==3 && currPage ==3)
+        {
+            pages.push(i-2);
+            pages.push(i-1);
+
+        }
         pages.push(i);
+        if (i == maxPages)
+        {
+            break;
+        }
+        if (i == currPage + 2 && i!= maxPages)
+        {
+            pages.push("...");
+        }
     }
 
     buildElement("/partials/pagination.html", pages, "#pagination");
