@@ -1526,3 +1526,13 @@ hr {
 .usedProductsJB div {
     padding: 0 !important;
 }
+.thumb-info img {
+    margin: auto;
+}
+#member {
+    border: 1px dotted #EEEEEE;
+    padding: 30px 0;
+}
+#member .thumbnail-project {
+    border: none;
+}

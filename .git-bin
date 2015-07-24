@@ -40,8 +40,8 @@ ssf/img/infrastructure/Jira_logo.png|19b662ba062aa24487415157974cfee6|db8593e1-8
 ssf/media/PARACAM/paracam_large_logo.png|73bbdbf9837b2b3ad6809a1be2c4bd31|a067d501-31af-4a9d-85f4-03c2c3085769
 ssf/media/GFIG/gfig_large_logo.png|581e30095590bc551d41f7b6e085a48a|7fca0ec6-fa8a-4984-8285-656266f40e6a
 ssf/media/GFIG/gifg_large_logo.jpg|c1e8c19e6059ce5d40b3572a2985045e|91c5b864-2421-4383-94fc-c6e4281e311f
-ssf/media/SSF_WEB/ssf_large_logo.jpg|83393e36d7a6b68798ac527929a55fbe|250b6f38-906b-44e3-a6c6-7fe7ab2d2bef
-ssf/media/SSF_WEB/ssf_large_logo.png|ef21742c6b068e46b7bf96aa8fd6c82d|8ed80a32-610c-42f0-a5da-33b78e51484b
+ssf/media/SSFSITE/ssf_large_logo.jpg|83393e36d7a6b68798ac527929a55fbe|250b6f38-906b-44e3-a6c6-7fe7ab2d2bef
+ssf/media/SSFSITE/ssf_large_logo.png|ef21742c6b068e46b7bf96aa8fd6c82d|8ed80a32-610c-42f0-a5da-33b78e51484b
 ssf/media/CHOP/chop_large_logo.png|4938736b91ef9b5cb5dd671a399f3d9e|633f07be-fa51-4b8d-9b85-2862b74d22dc
 ssf/media/banners/SSsocial_2.jpg|307f7900f5b4aa49970db68e97b8ef98|397952c1-9f39-434b-a55d-f06158c2ab42
 ssf/media/banners/Keshig_1.jpg|8363f64aa2ea8596fe542cfb2321710f|9dd7686e-3c75-49c5-92d4-04c03b242bdc
@@ -91,19 +91,19 @@ ssf/media/banners/Kurjun_1.jpg|853978946fda8ce715162750fe238046|201c6178-28ad-4d
 ssf/media/banners/Guicyfig_3.jpg|65baba492d1d5cb019efad86917a9360|645b7acb-42db-4335-8e30-79a67a2c72e3
 ssf/media/banners/Paracam_2.jpg|1755890a1754151efd16b362768f11dd|cdee26b8-f2cc-4323-9584-6b2e1735d878
 ssf/media/banners/Jarvis_2.jpg|029e5eaad41e136b5ebdf9074115ca21|20bb5153-ce24-48ad-85fa-048db9e4daa8
-ssf/media/SS_KESHIG/Keshig.png|01665a98289ea27dbb3cdd798249c0e7|8106cc06-d555-4129-88e7-f30555d6b8d2
+ssf/media/SSKESHIG/Keshig.png|01665a98289ea27dbb3cdd798249c0e7|8106cc06-d555-4129-88e7-f30555d6b8d2
 ssf/media/EOS/eos_large_logo.png|a7c99c5bf6829d73825b438e2235560c|5146629a-1cde-47fd-94da-b1d9a0f5fe30
-ssf/media/SS_AGENT/ss_large_logo.png|2d5feb69031a4663e2f76ea55a2951f5|583590d9-7dcb-473d-be14-b4dc093de65f
+ssf/media/SSAGENT/ss_large_logo.png|2d5feb69031a4663e2f76ea55a2951f5|583590d9-7dcb-473d-be14-b4dc093de65f
 ssf/media/ODROID/odroid_large_logo.jpg|29493a2d6f2f3df095acc4a933e95611|375e3ad8-27f6-41da-8175-2aead94aa3fc
 ssf/media/ODROID/odroid_large_logo.png|0647f3a514a37a93a54e247c1cc899ab|9ab80b48-e7bf-44b9-9fc7-6f1e410422fb
-ssf/media/SS_PLUGINS/ssp_large_logo.png|aa216a01cd9631f05724639a486828d2|f73aaedf-8ccc-42ad-9637-80431cb40d37
-ssf/media/SS_PLUGINS/ssp_large_logo.jpg|3c032c9b90f4ae73024b3af8cc594ca0|154b88f9-ccfc-4f33-8516-5b6c3cf12243
+ssf/media/SSPLUGINS/ssp_large_logo.png|aa216a01cd9631f05724639a486828d2|f73aaedf-8ccc-42ad-9637-80431cb40d37
+ssf/media/SSPLUGINS/ssp_large_logo.jpg|3c032c9b90f4ae73024b3af8cc594ca0|154b88f9-ccfc-4f33-8516-5b6c3cf12243
 ssf/media/TOOLING/tooling_large_logo.jpg|89b3b14e272e39a5a6dbd1e5c19ffa59|b1ff2606-7879-42b2-93be-4660e7351e99
 ssf/media/TOOLING/tooling_large_logo.png|95c6c22904f988c64277497f29526aea|aeca8314-dcd3-4b13-a38d-8f6383fee16c
 ssf/media/GP/gp_large_logo.png|58ba8dbd3be04cbeabc8bd17c57301e6|8bd31755-1526-4d41-8de6-210b80699286
 ssf/media/KURJUN/kurjun_large_logo.png|cbecb856e633e3cd79c7c1e3040bf62d|6bb4a53f-b4ca-4c8e-ac7a-d2241fdf21a8
 ssf/media/KURJUN/kurjun_large_logo.jpg|2933e25205584ed60f8f8ce6a31baa07|3c39bcb4-6e2e-49e2-ad4f-9ecf1346de61
-ssf/media/SS_HUB/SS HUB.png|43fbeaf1487ebef76d4300306a8320af|defa9102-7a1e-4f5c-9705-612d8544cb25
+ssf/media/SSHUB/SS HUB.png|43fbeaf1487ebef76d4300306a8320af|defa9102-7a1e-4f5c-9705-612d8544cb25
 ssf/media/SS_HUB/ss_large_logo.png|f23d2c1219dc9fe86f5a252f5a96a756|d8d1c99a-d436-48ad-b06f-883858625a0b
 ssf/media/APPSTALK/appstalk_large_logo.png|c76eea7fedecf38fe505b419daefc13c|5fbf83d8-13eb-4d1c-bd4c-7dbeb0c8a413
 ssf/media/DOBRYNYA/dobrynya_large_logo.jpg|d0c21d1e65e020d8e0d9828215bd14ed|70f532ec-f544-45a2-8551-b1babe427309
@@ -111,4 +111,18 @@ ssf/media/DOBRYNYA/dobrynya_large_logo.png|89a584ef9190885113a10509502d4101|26ae
 ssf/media/JARVIS/jarvis_large_logo.png|a880436bc8858c387d40f0386ffe9827|bc5225cb-9a1e-4bb8-8e57-4747cbffcbaf
 ssf/media/SS/ss_large_logo2.png|3f101f6cbd16a23dc9e6bf3a6370e6a0|71c1cfe5-0759-4e4a-8ed5-b233ece1ee4e
 ssf/media/SS/ss_large_logo.png|673df3c4a0e284c14e5e0edbb05ba028|bca0c178-4b21-4e04-9999-5c0277537a75
-ssf/media/JETTY_JAM/Project Jettyjam.jpg|102c05341f5f086d5d15e004d5824357|85e7b4b5-4f80-4cda-9539-b4665b411b02
+ssf/media/JETTYJAM/Project Jettyjam.jpg|102c05341f5f086d5d15e004d5824357|85e7b4b5-4f80-4cda-9539-b4665b411b02
+ssf/img/partner-logoset/Atlassian-logo.png|61e162ade34fdf09185c33ec2f58ea15|4ceeec1b-ef25-4ac7-9207-0c83513ff276
+ssf/img/partner-logoset/FishEye.png|46841824ecf64fb25cb069578ea49be1|c14a42ae-cebb-4128-aa0d-69409021d2da
+ssf/img/partner-logoset/Stash.png|0aca487616474ed9fd936f1b36a7fd38|667d1c2d-234d-41e2-8991-a85d36633da4
+ssf/img/partner-logoset/HipChat.png|e5cf88b161b18ca0a017ee71a535324f|39205926-2165-4df6-aa86-d2da8d8d34d8
+ssf/img/partner-logoset/Jira.png|c972208e941212f8378183dc46438803|6024a86e-4cd6-4bdc-aab7-c981affd398f
+ssf/img/partner-logoset/Bamboo.png|e8139d765eb367ea3d50e6fcae4be468|caf17044-f888-4e9e-ada2-ec15394ee400
+ssf/img/partner-logoset/Crucible.png|2dd05e336bbdf00a314351c84b667082|342e946e-5cd5-48a1-b0ad-81849662a55a
+ssf/img/partner-logoset/Confluence.png|df1578fee73fe064a1036325482c3bf7|387d8606-9ae9-44d9-8b60-5d2c311c72a0
+ssf/img/partner-logoset/Jetbrains.png|8a262eec6d7ce2391cdbcdf964285525|2aaec77b-95fc-4082-badf-e79a23e80eda
+ssf/img/partner-logoset/logo_intellij_idea.png|1c87568c1f5180af252141bb7bc02ed8|9f35abe3-6ff4-4b3e-bf17-f938ea9b9620
+ssf/img/partner-logoset/Crowd.png|046fab8799f901e8835d3dbbeea8b718|f7da503c-8c8a-4e90-ba0b-03037ed12dd5
+ssf/img/partner-logoset/Clover.png|86aa47aa067667446bbff29b43ee388d|5b3a941f-dfef-4ae6-a000-cecff344e6d5
+ssf/img/partner-logoset/logo_upsource.png|a513ac33b392c655ab504e622f35d7fc|453659a0-84f2-4755-be04-08f313f5a1b7
+ssf/img/partner-logoset/HipChat.png|eb4171f2f54be68e154239f5633c6bc5|98b7839f-e8bd-45cd-ae5a-9424116cfb57

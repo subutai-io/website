@@ -133,21 +133,22 @@ function build(page) {
     for (var i = (currPage - 1) * projectsPerPage[titleMode];
          i < filteredProjects.length && i < currPage * projectsPerPage[titleMode]; i++) {
 
-        filteredProjects[i]['tags'] = "";
+        filteredProjects[i]['tags'] = "test";
 
-        for (var j = 0; j < filteredProjects[i].categories.length; j++) {
-            filteredProjects[i]['tags'] += filteredProjects[i].categories[j] + " ";
-        }
+        //for (var j = 0; j < filteredProjects[i].categories.length; j++) {
+        //    filteredProjects[i]['tags'] += filteredProjects[i].categories[j] + " ";
+        //}
 
         projectsToShow.push(filteredProjects[i]);
     }
 
+
     if (titleMode) {
-        buildElement("/partials/tiled.html", projectsToShow, "#content");
+        buildElement("/partials/members_tiled.html", projectsToShow, "#content");
         $('#content .col-md-6:odd').after('<hr/>');
     }
     else {
-        buildElement("/partials/row.html", projectsToShow, "#content");
+        buildElement("/partials/members_row.html", projectsToShow, "#content");
     }
 
     pagination();

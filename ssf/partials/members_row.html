@@ -1,0 +1,15 @@
+<div class="row">
+    <div class="col-md-12 projectsTableHeader">
+        <div class="projectName col-md-6">Member</div>
+        <div class="projectDesc col-md-6">Details</div>
+    </div>
+    <loop>
+        <div class="col-md-12 projectRow">
+            <div class="col-md-6"><a href="{{ url }}">
+                <img width="30px" src="/img/avatars/{{ uid }}.png" alt="{{ title }}"
+                     onError="this.onerror=null;this.src='/img/empty-project.png';"/>{{ title }}
+            </a></div>
+            <div class="col-md-6">{{ content }}</div>
+        </div>
+    </loop>
+</div>
