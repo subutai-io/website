@@ -15,6 +15,8 @@ fi
 
 git checkout master && git pull
 git bin --init=s3://subutai-website
+bash devops/scripts/githook.sh -w $WKDIR
+
 
 pushd $path
   git checkout master && git pull
