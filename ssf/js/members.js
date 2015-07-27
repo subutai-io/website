@@ -163,6 +163,10 @@ function pagination() {
         if (!interrupted)
         if (i - 2 > 0 && i -2 != 1 && currPage ==i)
         {
+            if (i > 3 )
+            {
+                pages.push(1);
+            }
             i = i - 3;
             pages.push("...");
             i++;
@@ -187,9 +191,13 @@ function pagination() {
         {
             break;
         }
-        if (i == currPage + 2 && i!= maxPages)
+        if (i == currPage + 2 && i < maxPages - 1)
         {
             pages.push("...");
+        }
+        if (i == currPage + 2 && i < maxPages)
+        {
+            pages.push(maxPages);
         }
     }
 
