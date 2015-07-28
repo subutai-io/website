@@ -11,17 +11,22 @@ import (
 )
 
 const LOG_FILE = "git-bin-revert.log"
-const MAX_DEPTH = 3
+
+// max depth to search file
+const MAX_DEPTH = 4
+
 const FILE_SEARCHED = ".git-bin"
 const FILES_RESTORED_DIR = ".img_restored"
 
 func main() {
-    // filepath of file
+    // get filepath of file
     _, path, _, _ := runtime.Caller(0)
     path = filepath.Dir( path )
 
+    // create log in the same path with running file
     initLog( path )
 
+    // modify path to the FILE_SEARCHED path
     if !searchGitBinFile( &path ) {
         log.Fatalf( "Cannot find in %d closest dirs: %s", MAX_DEPTH, FILE_SEARCHED )
     }
@@ -29,7 +34,7 @@ func main() {
     inFile, err := os.Open( filepath.Join(path, FILE_SEARCHED) )
 
     if err != nil {
-        log.Fatalf("error openning file: %v", err)
+        log.Fatalf("Error openning file: %v", err)
     }
     defer inFile.Close()
 
@@ -38,7 +43,7 @@ func main() {
 
     os.MkdirAll( filepath.Join( path, FILES_RESTORED_DIR ) ,0775 );
 
-
+    // read "FILE_SEARCHED" lines 1 by 1
     for scanner.Scan() {
         vals := strings.Split(scanner.Text(), "|")
 
