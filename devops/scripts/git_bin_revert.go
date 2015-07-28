@@ -1,3 +1,8 @@
+/*
+ * Recreates all binary files stored via git-bin plugin, using .git-bin file
+ * in a "FILES_RESTORED_DIR" directory
+ */
+
 package main
 
 import (
