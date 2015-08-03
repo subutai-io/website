@@ -27,7 +27,7 @@ done
 DEVOPS=$WKDIR/devops/scripts
 JEKYLL_DIR=$WKDIR/ssf
 PROJECTS_DIR=$DESCR_PATH/projects
-MEMBERS_DIR=$DESCR_PATH/generated/members
+MEMBERS_DIR=$DESCR_PATH/generated
 
 
 if [[ ! -d "$JEKYLL_DIR/_posts" ]]; then
@@ -84,7 +84,10 @@ if [[ -z "$(which $WKDIR/node_modules/.bin/xml2json)" ]]; then
 fi
 
 bash $DESCR_PATH/build.sh
-bash $MEMBERS_DIR/generate.sh
+
+pushd $MEMBERS_DIR
+  bash generate.sh
+popd
 
 for descriptor in `find $MEMBERS_DIR -type f -regex '.*\.json'`; do
   filename=$(basename $descriptor)
@@ -116,7 +119,7 @@ EOF
 done
 
 
-rm JEKYLL_DIR/_posts/members/*
+rm $JEKYLL_DIR/_posts/members/*
 mv $MEMBERS_DIR/*.markdown $JEKYLL_DIR/_posts/members
 
 

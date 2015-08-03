@@ -14,7 +14,12 @@ if [[ ! -d "$WKDIR/project-descriptors" ]]; then
 fi
 
 git checkout master && git pull
-git bin --init=s3://subutai-website
+
+if [[ ! -d "$WKDIR/.git/bin-cache" ]]; then
+  echo "Git bin inited"
+  git bin --init=s3://subutai-website
+  git bin --sync
+fi
 bash devops/scripts/githook.sh -w $WKDIR
 
 
