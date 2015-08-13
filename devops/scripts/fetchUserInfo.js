@@ -1,6 +1,6 @@
 var key = process.argv[2];
 var date = process.argv[3];
-var filename = key + ".json"
+var filename = key + ".json";
 var cn;
 var uid;
 
@@ -117,7 +117,7 @@ function appendToLiquid( json, filename ) {
     var output = J2Y.stringify( jsonConcat( nativeObject, json ) );
     output += "\n---"
 
-    fs.writeFile(process.cwd() + POSTS_PATH + filename, output, function(err) {
+    fs.writeFile(process.cwd() + POSTS_PATH + key + ".markdown", output, function(err) {
         if (err) throw err;
     });
 }

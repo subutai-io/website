@@ -92,7 +92,7 @@ if [[ -z "$(which $WKDIR/node_modules/.bin/yamljs)" ]]; then
   fi
 fi
 
-bash $DESCR_PATH/build.sh
+#bash $DESCR_PATH/build.sh
 
 #pushd $MEMBERS_DIR
 #  bash generate.sh
