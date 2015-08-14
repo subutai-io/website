@@ -1,7 +1,6 @@
 var key = process.argv[2];
 var date = process.argv[3];
 var filename = key + ".json";
-var destFilename = date + "-" + key + ".markdown";
 var projectName;
 var url;
 var parent;
@@ -12,11 +11,12 @@ var POSTS_PATH = "/ssf/_posts/projects/";
 var URL_LAST_UPDATES = "https://confluence.subutai.io/rest/api/content/search?cql=lastModified%3E=now(%22-15d%22)%20and%20space=%s"
 var URL_COMMITS = "https://stash.subutai.io/rest/api/1.0/projects/%s/repos/main/commits/?until=master"
 var URL_BLOGS = "https://confluence.subutai.io/rest/api/content?type=blogpost&spaceKey=%s"
+
 var fs = require("fs");
 var CURL = require("node-curl");
 var async = require("async");
 var util = require("util");
-var YAML = require('yamljs');
+var yaml2json = require('yaml-to-json');
 var J2Y = require('json2yaml');
 
 
@@ -145,24 +145,29 @@ async.parallel([
 
             jekyllProperties.parenturl = infoJSON.website.website;
 
-            final();
+            appendToLiquid( jekyllProperties, util.format( "%s-%s.markdown", date, key ) );
         });
     }
     else {
-        final();
+        appendToLiquid( jekyllProperties, util.format( "%s-%s.markdown", date, key ) );
     }
 });
 
-function final() {
-    nativeObject = YAML.load(process.cwd() + POSTS_PATH + destFilename);
-
-    var output = J2Y.stringify( jsonConcat( nativeObject, jekyllProperties ) );
-    output += "\n---"
-
-    fs.writeFile(process.cwd() + POSTS_PATH + destFilename, output, function(err) {
+function appendToLiquid( json, filename ) {
+    fs.readFile( process.cwd() + POSTS_PATH + filename, function (err, data) {
         if (err) throw err;
+
+        var nativeObject = yaml2json(data);
+
+
+        var output = J2Y.stringify( jsonConcat( nativeObject[0], json ) );
+
+        fs.writeFile(process.cwd() + POSTS_PATH + filename, output, function(err) {
+            if (err) throw err;
+        });
     });
 }
+
 function jsonConcat(o1, o2) {
     for (var key in o2) {
         o1[key] = o2[key];

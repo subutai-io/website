@@ -72,6 +72,14 @@ if [[ -z "$(which $WKDIR/node_modules/.bin/json2yaml)" ]]; then
     echo $OUTPUT
     exit 2;
   fi
+
+
+  OUTUT="$(npm install node-curl)"
+
+  if [[ -n "$OUTPUT" ]] && [[ ! "$OUTPUT" =~ "npm ERR!" ]]; then
+    echo $OUTPUT
+    exit 2;
+  fi
 fi
 
 if [[ -z "$(which $WKDIR/node_modules/.bin/xml2json)" ]]; then
@@ -83,8 +91,8 @@ if [[ -z "$(which $WKDIR/node_modules/.bin/xml2json)" ]]; then
   fi
 fi
 
-if [[ -z "$(which $WKDIR/node_modules/.bin/yamljs)" ]]; then
-  OUTUT="$(npm install yamljs)"
+if [[ -z "$(which $WKDIR/node_modules/.bin/yaml2json)" ]]; then
+  OUTUT="$(npm install yaml-to-json)"
 
   if [[ -n "$OUTPUT" ]] && [[ ! "$OUTPUT" =~ "npm ERR!" ]]; then
     echo $OUTPUT
@@ -92,14 +100,13 @@ if [[ -z "$(which $WKDIR/node_modules/.bin/yamljs)" ]]; then
   fi
 fi
 
-#bash $DESCR_PATH/build.sh
+bash $DESCR_PATH/build.sh
 
 #pushd $MEMBERS_DIR
 #  bash generate.sh
 #popd
 
 rm $JEKYLL_DIR/_posts/members/*
-#mv $MEMBERS_DIR/*.markdown $JEKYLL_DIR/_posts/members
 
 for descriptor in `find $MEMBERS_DIR -type f -regex '.*\.json'`; do
   filename=$(basename $descriptor)
@@ -108,31 +115,11 @@ for descriptor in `find $MEMBERS_DIR -type f -regex '.*\.json'`; do
   $WKDIR/node_modules/.bin/json2yaml $MEMBERS_DIR/$key.json > $JEKYLL_DIR/_posts/members/$now-$key.markdown
 
   result=$(node $DEVOPS/fetchUserInfo.js $key $now)
-#  cn=$(node -pe 'JSON.parse(process.argv[1])["ldap-user"].cn' "$(cat $MEMBERS_DIR/$key.json)")
-#  uid=$(node -pe 'JSON.parse(process.argv[1])["ldap-user"].uid' "$(cat $MEMBERS_DIR/$key.json)")
-#
-#  userActivity=$(curl -u dashbot:ghkf346LU538QZRD -X GET "https://confluence.subutai.io/activity?maxResults=5&streams=user+IS+$key" -A 'ssf' | $WKDIR/node_modules/.bin/xml2json)
-#  userProfile=$(curl -u dashbot:ghkf346LU538QZRD -X GET "https://jira.subutai.io/rest/api/2/user?key=$key" -A 'ssf')
-#  userAvatar=$(node -pe 'JSON.parse(process.argv[1]).avatarUrls["48x48"]' "$(echo $userProfile)")
-#
-#  userProfile=$(node $DEVOPS/userJSONConv.js "$userProfile" "$userActivity" | $WKDIR/node_modules/.bin/json2yaml )
-
-#  cat << EOF >> $MEMBERS_DIR/$now-$key.markdown
-#
-#${userProfile:4}
-#  layout: profile
-#  title:  "$cn"
-#  date:   Date.parse('$now')
-#  categories: members
-#  permalink: /:categories/$uid/
-#---
-#EOF
-#  wget --user-agent="ssf" --http-user=dashbot --http-password=ghkf346LU538QZRD "$userAvatar" -O $JEKYLL_DIR/img/avatars/$key.png
+  wget --user-agent="ssf" --http-user=dashbot --http-password=ghkf346LU538QZRD "$result" -O $JEKYLL_DIR/img/avatars/$key.png
   echo Generated $MEMBERS_DIR/$now-$key.markdown ...
 done
 
 rm $JEKYLL_DIR/_posts/projects/*
-#mv $PROJECTS_DIR/*.markdown $JEKYLL_DIR/_posts/projects
 
 for descriptor in `find $PROJECTS_DIR -type f -regex '.*\.json'`; do
   filename=$(basename $descriptor)
@@ -141,44 +128,6 @@ for descriptor in `find $PROJECTS_DIR -type f -regex '.*\.json'`; do
   $WKDIR/node_modules/.bin/json2yaml $PROJECTS_DIR/$key.json > $JEKYLL_DIR/_posts/projects/$now-$key.markdown
 
   result=$(node $DEVOPS/fetchProjectInfo.js $key $now)
-  echo $result
-
-  exit
-#  project_name=$(node -pe 'JSON.parse(process.argv[1]).name' "$(cat $PROJECTS_DIR/$key.json)")
-#  url=$(node -pe 'JSON.parse(process.argv[1]).website.website' "$(cat $PROJECTS_DIR/$key.json)")
-#  parent=$(node -pe 'JSON.parse(process.argv[1]).parent' "$(cat $PROJECTS_DIR/$key.json)")
-#
-#  lastUpdates=$(curl -u dashbot:ghkf346LU538QZRD -X GET "https://confluence.subutai.io/rest/api/content/search?cql=lastModified%3E=now(%22-15d%22)%20and%20space=$key" -A 'ssf')
-#  lastUpdates=$(node $DEVOPS/projectUpdatesConv.js "$lastUpdates" | $WKDIR/node_modules/.bin/json2yaml)
-#
-#  commits=$(curl -u dashbot:ghkf346LU538QZRD -X GET "https://stash.subutai.io/rest/api/1.0/projects/$key/repos/main/commits/?until=master" -A 'ssf')
-#  commits=$(node $DEVOPS/projectCommitsConv.js "$commits" | $WKDIR/node_modules/.bin/json2yaml)
-#
-#  blogs=$(curl -u dashbot:ghkf346LU538QZRD -X GET "https://confluence.subutai.io/rest/api/content?type=blogpost&spaceKey=$key" -A 'ssf')
-#  blogs=$(node $DEVOPS/projectBlogsConv.js "$blogs" | $WKDIR/node_modules/.bin/json2yaml)
-#
-#  if [ -n '$parent' ] && [ "$parent" != "undefined" ]; then
-#    pkey=${parent%.json}
-#    parent=$(node -pe 'JSON.parse(process.argv[1]).website.website' "$(cat $PROJECTS_DIR/$pkey.json)")
-#  else
-#    parent=''
-#  fi
-#
-#  $WKDIR/node_modules/.bin/json2yaml $PROJECTS_DIR/$key.json > $PROJECTS_DIR/$now-$key.markdown
-#  sed -i 's/categories/tags/g' $PROJECTS_DIR/$now-$key.markdown
-#  cat << EOF >> $PROJECTS_DIR/$now-$key.markdown
-#
-#${lastUpdates:4}
-#${commits:4}
-#${blogs:4}
-#  parenturl: $parent
-#  layout: post
-#  title:  "$project_name"
-#  date:   Date.parse('$now')
-#  categories: projects
-#  permalink: /:categories/$url/
-#---
-#EOF
 
   echo Generated $PROJECTS_DIR/$now-$key.markdown ...
 done

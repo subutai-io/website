@@ -15,7 +15,7 @@ var parser = require("xml2json");
 var CURL = require("node-curl");
 var async = require("async");
 var util = require("util");
-var YAML = require('yamljs');
+var yaml2json = require('yaml-to-json');
 var J2Y = require('json2yaml');
 
 var profileJSON;
@@ -83,6 +83,8 @@ async.parallel([
     var profile = {};
     var userProfile = {};
 
+    console.log( profileJSON.avatarUrls["48x48"] );
+
     if (profileJSON.key){
         profile.key = profileJSON.key;
         profile.name = profileJSON.name;
@@ -112,13 +114,16 @@ async.parallel([
 });
 
 function appendToLiquid( json, filename ) {
-    nativeObject = YAML.load(process.cwd() + POSTS_PATH + filename);
 
-    var output = J2Y.stringify( jsonConcat( nativeObject, json ) );
-    output += "\n---"
-
-    fs.writeFile(process.cwd() + POSTS_PATH + key + ".markdown", output, function(err) {
+    fs.readFile( process.cwd() + POSTS_PATH + filename, function (err, data) {
         if (err) throw err;
+        var nativeObject = yaml2json(data);
+
+        var output = J2Y.stringify(jsonConcat(nativeObject, json));
+
+        fs.writeFile(process.cwd() + POSTS_PATH + key + ".markdown", output, function (err) {
+            if (err) throw err;
+        });
     });
 }
 
