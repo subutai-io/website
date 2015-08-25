@@ -9,7 +9,7 @@ var J2Y = require('json2yaml');
 var filename = process.argv[2];
 
 
-var URL_LAST_UPDATES = "https://confluence.subutai.io/rest/api/content/search?cql=lastModified%3E=now(%22-15d%22)%20and%20space=%s"
+var URL_LAST_UPDATES = "https://confluence.subutai.io/rest/api/content/search?cql=lastModified%3E=now(%22-15d%22)%20and%20space=%s&limit=10"
 var URL_COMMITS = "https://stash.subutai.io/rest/api/1.0/projects/%s/repos/main/commits/?until=master&limit=10"
 var URL_BLOGS = "https://confluence.subutai.io/rest/api/content?type=blogpost&spaceKey=%s"
 
@@ -210,9 +210,9 @@ function appendToLiquid( json ) {
     var output = J2Y.stringify( jsonConcat( organizeMembers( nativeObject ), json) );
     output += "\n---";
 
-    //fs.writeFile(process.cwd() + filename, output, function (err) {
-    //    if (err) throw err;
-    //});
+    fs.writeFile(process.cwd() + filename, output, function (err) {
+        if (err) throw err;
+    });
 }
 
 function jsonConcat(o1, o2) {
@@ -224,14 +224,17 @@ function jsonConcat(o1, o2) {
 
 
 function organizeMembers( json ) {
+    var teams = {};
+    for( var i = 0; i < json.security.admins.length; i++ )
+        teams.admins = inspectTeams( json.security.admins[i] );
 
-    for( var i = 0; i < json.security.admins.length; i++ ) {
-        //console.log( json.security.admins[i] );
+    for( var i = 0; i < json.security.developers.length; i++ )
+        teams.developers = inspectTeams( json.security.developers[i] );
 
-        var teams = inspectTeams( json.security.admins[i] );
-    }
+    for( var i = 0; i < json.security.lead.length; i++ )
+        teams.lead = inspectTeams( json.security.lead[i] );
 
-    console.log( teams );
+    json.teams = teams;
 
     return json;
 }

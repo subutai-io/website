@@ -35,6 +35,13 @@ fs.readFile( process.cwd() + filename, function (err, data) {
     nativeObject = yaml2json(data);
     nativeObject = nativeObject[0]; // @todo workaround @important! might be useless after library upgrade
 
+
+    if( nativeObject.bot == "true" ) {
+        fs.unlink( process.cwd() + filename );
+        return;
+    }
+
+
     // get date from the filename
     var dateParts = filename.split("-");
     if( dateParts < 4 ) {
@@ -71,13 +78,12 @@ function parallel( uid ) {
             var curl = CURL.create();
             curl( util.format(CONFLUENCE_ACTIVITY, uid), {
                 USERAGENT: "ssf"
-                //,USERNAME: "dashbot"
-                //,PASSWORD: "ghkf346LU538QZRD"
+                ,USERNAME: "dashbot"
+                ,PASSWORD: "ghkf346LU538QZRD"
             }, function (err) {
                 if (err) throw err;
 
                 var activity = parser.toJson(this.body);
-
                 activityJSON = JSON.parse(activity);
 
                 this.close()
@@ -89,11 +95,11 @@ function parallel( uid ) {
             var curl = CURL.create();
             curl( util.format(JIRA_ACTIVITY, uid), {
                 USERAGENT: "ssf"
-                //,USERNAME: "dashbot"
-                //,PASSWORD: "ghkf346LU538QZRD"
+                ,USERNAME: "dashbot"
+                ,PASSWORD: "ghkf346LU538QZRD"
             }, function (err) {
                 if (err) throw err;
-
+                console.log( this.body );
                 profileJSON = JSON.parse(this.body);
 
                 this.close();

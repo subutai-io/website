@@ -91,7 +91,8 @@ for descriptor in `find $MEMBERS_DIR -type f -regex '.*\.markdown'`; do
 
 
   result=$(node $DEVOPS/fetchUserInfo.js ${descriptor:1})
-
+  echo $result
+  exit
 #  Download avatars
   wget --user-agent="ssf" --http-user=dashbot --http-password=ghkf346LU538QZRD "$result" -O $JEKYLL_DIR/img/avatars/$key.png
   echo Updated $descriptor ...
@@ -101,6 +102,6 @@ for descriptor in `find $PROJECTS_DIR -type f -regex '.*\.markdown'`; do
   filename=$(basename $descriptor)
 
   result=$(node $DEVOPS/fetchProjectInfo.js ${descriptor:1})
-
+  echo $result
   echo Updated $descriptor ...
 done
