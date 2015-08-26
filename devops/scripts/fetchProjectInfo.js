@@ -9,9 +9,9 @@ var J2Y = require('json2yaml');
 var filename = process.argv[2];
 
 
-var URL_LAST_UPDATES = "https://confluence.subutai.io/rest/api/content/search?cql=lastModified%3E=now(%22-15d%22)%20and%20space=%s&limit=10"
-var URL_COMMITS = "https://stash.subutai.io/rest/api/1.0/projects/%s/repos/main/commits/?until=master&limit=10"
-var URL_BLOGS = "https://confluence.subutai.io/rest/api/content?type=blogpost&spaceKey=%s"
+var URL_LAST_UPDATES = "https://confluence.subutai.io/rest/api/content/search?cql=lastModified%3E=now(%22-15d%22)%20and%20space=%s&limit=10";
+var URL_COMMITS = "https://stash.subutai.io/rest/api/1.0/projects/%s/repos/main/commits/?until=master&limit=10";
+var URL_BLOGS = "https://confluence.subutai.io/rest/api/content?type=blogpost&spaceKey=%s";
 
 var nativeObject;
 
@@ -225,16 +225,25 @@ function jsonConcat(o1, o2) {
 
 function organizeMembers( json ) {
     var teams = {};
-    for( var i = 0; i < json.security.admins.length; i++ )
-        teams.admins = inspectTeams( json.security.admins[i] );
+    teams.admins = [];
+    for( var i = 0; i < json.security.admins.length; i++ ) {
+        var tmp = inspectTeams( json.security.admins[i] );
+        addInNotExist( teams.admins, tmp );
+    }
 
-    for( var i = 0; i < json.security.developers.length; i++ )
-        teams.developers = inspectTeams( json.security.developers[i] );
+    teams.developers = [];
+    for( var i = 0; i < json.security.developers.length; i++ ) {
+        tmp = inspectTeams( json.security.developers[i] );
+        addInNotExist( teams.developers, tmp );
+    }
 
-    for( var i = 0; i < json.security.lead.length; i++ )
-        teams.lead = inspectTeams( json.security.lead[i] );
+    teams.lead = [];
+    for( var i = 0; i < json.security.lead.length; i++ ) {
+        tmp = inspectTeams( json.security.lead[i] );
+        addInNotExist( teams.lead, tmp );
+    }
 
-    json.teams = teams;
+    json.security = teams;
 
     return json;
 }
@@ -248,11 +257,8 @@ function inspectTeams( json ) {
     if( json.teams ) {
         for( var i = 0; i < json.teams.length; i++ ) {
             var newArray = inspectTeams( json.teams[i] );
-            for( var j = 0; j < newArray.length; j++ ) {
-                if( array.indexOf( newArray[j] ) == -1 ) {
-                    array.push(newArray[j]);
-                }
-            }
+
+            addInNotExist( array, newArray );
         }
     }
 
@@ -261,4 +267,19 @@ function inspectTeams( json ) {
     }
 
     return array;
+}
+
+function addInNotExist( initArr, arr ) {
+    for( var i = 0; i < arr.length; i++ ) {
+        if( arrayObjectIndexOf( initArr, arr[i], "ldap-user" ) == -1 ) {
+            initArr.push( arr[i] );
+        }
+    }
+}
+
+function arrayObjectIndexOf(myArray, searchTerm, property) {
+    for(var i = 0, len = myArray.length; i < len; i++) {
+        if (myArray[i][property]["uid"] == searchTerm[property]["uid"]) return i;
+    }
+    return -1;
 }

@@ -19,7 +19,8 @@ $(document).ready(function () {
 
         var toggled = $(this).attr('toggle-hov');
 
-        $('.' + toggled).find('ul').css('min-width', $('.' + toggled).find('ul').children().length * 53);
+        var width = $('.' + toggled).find('ul').children().length * 41 + 25
+        $('.' + toggled).find('ul').css('min-width', width > 600 ? 600 : width);
 
         $('.' + toggled).toggleClass('visibleDiv');
 

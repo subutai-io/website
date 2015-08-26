@@ -47,14 +47,20 @@ scripts: >
                     {% if page.jira %}
 
                     <div class="col-md-12 submenuHover" toggle-hov="jiraSubmenuHover" data-toggle="tooltip" data-placement="right" title="Jira">
-                        <a type="button" href="{{ page.jira.url }}" class="atlassianIcon" target="_blank">
+                        <a type="button" class="atlassianIcon">
                             <img src="{{ site.baseurl }}/img/infrastructure/JIRA.png" alt="">
                         </a>
 
                     </div>
                     {% endif %}
 
-                    {% if page.confluence %}
+                    {% assign flag = false %}
+                    {% for c in page.confluence.spaces %}
+                    {% if c.scope == 'public' %}
+                    {% assign flag = true %}
+                    {% endif %}
+                    {% endfor %}
+                    {% if page.confluence && flag %}
                     <div class="col-md-12 submenuHover" toggle-hov="confluenceSubmenuHover" data-toggle="tooltip" data-placement="right" title="Confluence">
 
                         <a type="button" class="atlassianIcon">
@@ -64,7 +70,15 @@ scripts: >
                     </div>
                     {% endif %}
 
-                    {% if page.stash %}
+                    {% assign flag = false %}
+                    {% for p in page.stash.projects %}
+                    {% for t in p.repositories %}
+                    {% if t.scope == "public" %}
+                    {% assign flag = true %}
+                    {% endif %}
+                    {% endfor %}
+                    {% endfor %}
+                    {% if page.stash and flag %}
                     <div class="col-md-12 submenuHover" toggle-hov="stashSubmenuHover" data-toggle="tooltip" data-placement="right" title="Stash">
 
                         <a type="button" class="atlassianIcon">
@@ -73,9 +87,15 @@ scripts: >
                     </div>
                     {% endif %}
 
-                    {% if page.sonar %}
+                    {% assign flag = false %}
+                    {% for s in page.sonar.projects %}
+                    {% if s.scope == "public" %}
+                    {% assign flag = true %}
+                    {% endif %}
+                    {% endfor %}
+                    {% if page.sonar and flag %}
                     <div class="col-md-12 submenuHover" toggle-hov="sonarSubmenuHover" data-toggle="tooltip" data-placement="right" title="Sonar">
-                        <a type="button" href="{{ page.sonar.url }}" class="atlassianIcon" target="_blank">
+                        <a type="button" class="atlassianIcon" target="_blank">
                             <img src="{{ site.baseurl }}/img/infrastructure/SonarQube.png" alt="">
                         </a>
                     </div>
@@ -92,7 +112,7 @@ scripts: >
 
                     {% if page.upsource %}
                     <div class="col-md-12 submenuHover" toggle-hov="upsourceSubmenuHover" data-toggle="tooltip" data-placement="right" title="Upsource">
-                        <a type="button" href="{{ page.upsource.url }}" class="atlassianIcon" target="_blank">
+                        <a type="button" class="atlassianIcon" target="_blank">
                             <img src="{{ site.baseurl }}/img/infrastructure/Upsource.png" alt="">
                         </a>
                     </div>
@@ -101,10 +121,24 @@ scripts: >
 
 
                 <!--tooltips-->
+                <div class="projectResourcesSubmenu jiraSubmenuHover">
+                    <ul class="submenuIconSet">
+                        {% for c in page.jira.projects %}
+
+                        <li>
+                            <a type="button" href="{{ c.url }}" class="jiraSubitem subDesr" target="_blank"  data-toggle="tooltip" data-placement="top" title="{{ c.name }}">
+                                <img src="{{ site.basurl }}/img/confl.png">
+                            </a>
+                        </li>
+
+                        {% endfor %}
+                    </ul>
+                </div>
+
                 <div class="projectResourcesSubmenu confluenceSubmenuHover">
                     <ul class="submenuIconSet">
                         {% for c in page.confluence.spaces %}
-                        {% if c.scope == 'public' %}
+                        {% if c.scope == "public" %}
                         <li>
                             <a type="button" href="{{ c.url }}" class="confluenceSubitem subDesr" target="_blank"  data-toggle="tooltip" data-placement="top" title="{{ c.description }}">
                                 <img src="{{ site.basurl }}/img/confl.png">
@@ -117,12 +151,16 @@ scripts: >
 
                 <div class="projectResourcesSubmenu stashSubmenuHover">
                     <ul class="submenuIconSet">
-                        {% for p in page.stash.project.repositories %}
-                        <li data-toggle="tooltip" data-placement="top" title="{{ p.name }}">
-                            <a type="button" href="{{ p.url }}" class="stashSubitem subDesr" target="_blank">
+                        {% for p in page.stash.projects %}
+                        {% for t in p.repositories %}
+                        {% if t.scope == "public" %}
+                        <li data-toggle="tooltip" data-placement="top" title="{{ t.name }}">
+                            <a type="button" href="{{ t.url }}" class="stashSubitem subDesr" target="_blank">
                                 <img src="{{ site.baseurl }}/img/code.png">
                             </a>
                         </li>
+                        {% endif %}
+                        {% endfor %}
                         {% endfor %}
                     </ul>
                 </div>
@@ -132,6 +170,32 @@ scripts: >
                         {% for h in page.hipchat.rooms %}
                         <li data-toggle="tooltip" data-placement="top" title="{{ h.name }}">
                             <a type="button" href="{{ h.web_url }}" class="hipchatSubitem subDesr" target="_blank">
+                                <img src="{{ site.baseurl }}/img/hip.png">
+                            </a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+
+                <div class="projectResourcesSubmenu sonarSubmenuHover">
+                    <ul class="submenuIconSet">
+                        {% for s in page.sonar.projects %}
+                        {% if s.scope == "public" %}
+                        <li data-toggle="tooltip" data-placement="top" title="{{ s.name }}">
+                            <a type="button" href="{{ s.url }}" class="sonarSubitem subDesr" target="_blank">
+                                <img src="{{ site.baseurl }}/img/hip.png">
+                            </a>
+                        </li>
+                        {% endif %}
+                        {% endfor %}
+                    </ul>
+                </div>
+
+                <div class="projectResourcesSubmenu upsourceSubmenuHover">
+                    <ul class="submenuIconSet">
+                        {% for s in page.upsource.projects %}
+                        <li data-toggle="tooltip" data-placement="top" title="{{ s.name }}">
+                            <a type="button" href="{{ s.url }}" class="upsourceSubitem subDesr" target="_blank">
                                 <img src="{{ site.baseurl }}/img/hip.png">
                             </a>
                         </li>
@@ -154,18 +218,31 @@ scripts: >
                                 <a href="#" class="dropdown-toggle atlassianIcon" data-toggle="dropdown" role="button" aria-expanded="false">
                                     <img src="{{ site.baseurl }}/img/infrastructure/JIRA.png" alt=""></a>
                                 <ul class="dropdown-menu" role="menu">
+
+                                    {% for c in page.jira.projects %}
+
                                     <li>
-                                        <a type="button" href="{{ page.jira.url }}" class="confluenceSubitem subDesr" target="_blank">
-                                            Jira
+                                        <a type="button" href="{{ c.url }}" class="confluenceSubitem subDesr" target="_blank">
+                                            Jira - {{ c.name }}
                                         </a>
                                     </li>
+
+                                    {% endfor %}
+
                                 </ul>
                             </li>
                         </ul>
                     </div>
                     {% endif %}
 
-                    {% if page.confluence %}
+
+                    {% assign flag = false %}
+                    {% for c in page.confluence.spaces %}
+                    {% if c.scope == 'public' %}
+                    {% assign flag = true %}
+                    {% endif %}
+                    {% endfor %}
+                    {% if page.confluence and flag %}
                     <div class="col-md-12 submenuHover">
                         <ul class="nav navbar-nav">
                             <li class="dropdown">
@@ -173,11 +250,13 @@ scripts: >
                                     <img src="{{ site.baseurl }}/img/infrastructure/Confluence.png" alt=""></a>
                                 <ul class="dropdown-menu" role="menu">
                                     {% for c in page.confluence.spaces %}
+                                    {% if c.scope == "public" %}
                                     <li>
                                         <a type="button" href="{{ c.url }}" class="confluenceSubitem subDesr" target="_blank">
-                                            {{ c.name }}
+                                            Confluence - {{ c.name }}
                                         </a>
                                     </li>
+                                    {% endif %}
                                     {% endfor %}
                                 </ul>
                             </li>
@@ -185,19 +264,32 @@ scripts: >
                     </div>
                     {% endif %}
 
-                    {% if page.stash %}
+
+                    {% assign flag = false %}
+                    {% for p in page.stash.projects %}
+                    {% for t in p.repositories %}
+                    {% if t.scope == "public" %}
+                    {% assign flag = true %}
+                    {% endif %}
+                    {% endfor %}
+                    {% endfor %}
+                    {% if page.stash and flag %}
                     <div class="col-md-12 submenuHover">
                         <ul class="nav navbar-nav">
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle atlassianIcon" data-toggle="dropdown" role="button" aria-expanded="false">
                                     <img src="{{ site.baseurl }}/img/infrastructure/Stash.png" alt=""></a>
                                 <ul class="dropdown-menu" role="menu">
-                                    {% for p in page.stash.project.repositories %}
+                                    {% for p in page.stash.projects %}
+                                    {% for t in p.repositories %}
+                                    {% if t.scope == "public" %}
                                     <li>
-                                        <a type="button" href="{{ p.url }}" class="confluenceSubitem subDesr" target="_blank">
-                                            {{ p.name }}
+                                        <a type="button" href="{{ t.url }}" class="confluenceSubitem subDesr" target="_blank">
+                                            Stash - {{ t.name }}
                                         </a>
                                     </li>
+                                    {% endif %}
+                                    {% endfor %}
                                     {% endfor %}
                                 </ul>
                             </li>
@@ -205,18 +297,28 @@ scripts: >
                     </div>
                     {% endif %}
 
-                    {% if page.sonar %}
+                    {% assign flag = false %}
+                    {% for s in page.sonar.projects %}
+                    {% if s.scope == "public" %}
+                    {% assign flag = true %}
+                    {% endif %}
+                    {% endfor %}
+                    {% if page.sonar and flag %}
                     <div class="col-md-12 submenuHover">
                         <ul class="nav navbar-nav">
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle atlassianIcon" data-toggle="dropdown" role="button" aria-expanded="false">
                                     <img src="{{ site.baseurl }}/img/infrastructure/SonarQube.png" alt=""></a>
                                 <ul class="dropdown-menu" role="menu">
+                                    {% for s in page.sonar.projects %}
+                                    {% if s.scope == "public" %}
                                     <li>
-                                        <a type="button" href="{{ page.sonar.url }}" class="confluenceSubitem subDesr" target="_blank">
-                                            Sonar
+                                        <a type="button" href="{{ s.url }}" class="confluenceSubitem subDesr" target="_blank">
+                                            Sonar - {{ s.name }}
                                         </a>
                                     </li>
+                                    {% endif %}
+                                    {% endfor %}
                                 </ul>
                             </li>
                         </ul>
@@ -250,11 +352,13 @@ scripts: >
                                 <a href="#" class="dropdown-toggle atlassianIcon" data-toggle="dropdown" role="button" aria-expanded="false">
                                     <img src="{{ site.baseurl }}/img/infrastructure/Upsource.png" alt=""></a>
                                 <ul class="dropdown-menu" role="menu">
+                                    {% for s in page.upsource.projects %}
                                     <li>
-                                        <a type="button" href="{{ page.upsource.url }}" class="confluenceSubitem subDesr" target="_blank">
-                                            Sonar
+                                        <a type="button" href="{{ s.url }}" class="confluenceSubitem subDesr" target="_blank">
+                                            Upsource - {{ s.name }}
                                         </a>
                                     </li>
+                                    {% endfor %}
                                 </ul>
                             </li>
                         </ul>
@@ -291,44 +395,55 @@ scripts: >
 
                     <div class="rightSidebarMobile">
 
-                        {% for groups in page.security %}
-                        {% if groups[0] == 'admins' or groups[0] == 'developers' or groups[0] == 'lead' %}
+
                         <ul class="nav navbar-nav">
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle primary" data-toggle="dropdown" role="button" type="button" aria-expanded="false">{{ groups[0] | upcase }} <span class="caret"></span></a>
+                                <a href="#" class="dropdown-toggle primary" data-toggle="dropdown" role="button" type="button" aria-expanded="false">Admins <span class="caret"></span></a>
                                 <ul class="dropdown-menu" role="menu">
 
-                                    {% for g in groups %}
-
-                                    {% for member in g.members %}
-                                    <li><a href="#">{{ member.ldap-user.cn }}</a></li>
-                                    {% endfor %}
-
-                                    {% if g.teams %}
-                                    {% for t in g.teams %}
-                                    {% if t.members%}
-                                    {% for member in t.members %}
-                                    <li><a href="#"> {{ member.ldap-user.cn }}</a></li>
-                                    {% endfor %}
+                                    {% if page.security.admins %}
+                                        {% for admin in page.security.admins %}
+                                        <li><a href="{{ site.baseurl }}{{ site.members_path }}/{{ admin.ldap-user.uid }}"><i class="fa fa-user"></i> {{ admin["ldap-user"].cn | capitalize }}</a></li>
+                                        {% endfor %}
+                                    {% else %}
+                                        <li>No admins! </li>
                                     {% endif %}
-                                    {% if  t.ldap-user %}
-                                    <li><a href="#">{{ t.ldap-user.cn }}</a> </li>
-                                    {%endif%}
-                                    {% endfor %}
-                                    {% endif %}
-
-                                    {% if g.ldap-user %}
-                                    <li><a href="#">{{ g.ldap-user.cn }}</a> </li>
-                                    {% endif %}
-
-                                    {% endfor %}
                                 </ul>
-
-
                             </li>
                         </ul>
-                        {% endif %}
-                        {% endfor %}
+
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle primary" data-toggle="dropdown" role="button" type="button" aria-expanded="false">Developers <span class="caret"></span></a>
+                                <ul class="dropdown-menu" role="menu">
+
+                                    {% if page.security.developers %}
+                                        {% for admin in page.security.developers %}
+                                        <li><a href="{{ site.baseurl }}{{ site.members_path }}/{{ admin.ldap-user.uid }}"><i class="fa fa-user"></i> {{ admin["ldap-user"].cn | capitalize }}</a></li>
+                                        {% endfor %}
+                                    {% else %}
+                                        <li>No developers! </li>
+                                    {% endif %}
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle primary" data-toggle="dropdown" role="button" type="button" aria-expanded="false">Lead <span class="caret"></span></a>
+                                <ul class="dropdown-menu" role="menu">
+
+                                    {% if page.security.lead %}
+                                        {% for admin in page.security.lead %}
+                                        <li><a href="{{ site.baseurl }}{{ site.members_path }}/{{ admin.ldap-user.uid }}"><i class="fa fa-user"></i> {{ admin["ldap-user"].cn | capitalize }}</a></li>
+                                        {% endfor %}
+                                    {% else %}
+                                        <li>No lead! </li>
+                                    {% endif %}
+                                </ul>
+                            </li>
+                        </ul>
+
 
                         {% if page.children %}
 
@@ -374,7 +489,6 @@ scripts: >
 
                     <div><img src="{{ site.baseurl }}/media/banners/{{b}}" onError="this.onerror=null;this.src='/img/empty-project.png';" alt=""></div>
 
-
                     {% endfor %}
                     {% endif %}
                 </div>
@@ -397,7 +511,7 @@ scripts: >
                             <a href="#twitter" data-toggle="tab"> <i class="fa fa-twitter"></i>Twitter </a>
                         </li>
                         <li>
-                            <a href="#activity" data-toggle="tab"> <i class="fa fa-git"></i>Activity </a>
+                            <a href="#activity" data-toggle="tab"> <i class="fa fa-plus"></i>Activity </a>
                         </li>
 
                     </ul>
@@ -409,52 +523,28 @@ scripts: >
                             {% endfor %}
 
                         {% else %}
-                            no downloads yet
+                            <div style="text-align: center">No download links, please proceed to Confluence for more info</div>
                         {% endif %}
                         </div>
 
                         <div id="news" class="tab-pane">
-                        {% if page.commits %}
-                            {% assign flag = true %} 
-                            {% for post in site.categories['news'] %}
-                            {% for tag in post.tags %}
-                            {% if tag == 'SS' %}
-                            <div>
-                                <a href="{{ post.url }}" target="_blank">{{ post.title }}</a>
-                                <div>{{ post.content | strip_html | strip_newlines | jsonify | replace:'\t','' | truncatewords: 10 }}</div>
-                                <div>{{ post.date | date_to_string }} <a href="{{ post.url }}">Read more</a></div>
-                            </div>
-                            {% endif %}
-                            {% endfor %}
-                            {% endfor %}
-
-
-                            {% for b in page.lastUpdates %}
-                            {% assign flag = false %}
-                            <p><a href="{{ b.url }}" target="_blank"><i class="fa fa-newspaper-o"></i> {{ b.title }}</a></p>
-                            {% endfor %}
-                            {% if flag %}
-                                no news yet
-                            {% endif %}
-                        {% endif %}
+                            <div style="text-align: center">No news, please proceed to Confluence for more info</div>
                         </div>
 
 
                         <div id="blogs" class="tab-pane">
-                        {% if page.blogs %}
-                            {% assign flag = true %}
-                            {% for b in page.blogs %}
+                        {% assign flag = true %}
+                        {% for b in page.blogs %}
                             <p><a href="{{ b.url }}"><i class="fa fa-rss-square"></i> {{ b.title }}</a></p>
-                            {% assign flag = false %}
-                            {% endfor %}
-                            {% if flag %}
-                                no blogs yet
-                            {% endif %}
+                        {% assign flag = false %}
+                        {% endfor %}
+                        {% if flag %}
+                            <div style="text-align: center">No blogs</div>
                         {% endif %}
                         </div>
 
                         <div id="twitter" class="tab-pane">
-                            No tweets
+                            <div style="text-align: center">No tweets</div>
                         </div>
 
                         <div id="activity" class="tab-pane">
@@ -462,23 +552,29 @@ scripts: >
                             <table class="table">
                                 <thead>
                                 <tr>
-                                    <th>Commit ID</th>
+                                    <th>Name</th>
                                     <th>Message</th>
-                                    <th>Author</th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 {% for b in page.commits %}
                                 <tr>
-                                    <td><a href="{{b.url}}">{{ b.displayId }}</a></td>
-                                    <td>{{ b.message }}</td>
-                                    <td>{{ b.author }}</td>
+                                    <td>Git</td>
+                                    <td><a href="{{b.url}}">{{ b.displayId }}</a> {{ b.message }}</td>
                                 </tr>
                                 {% endfor %}
+
+                                {% for b in page.lastUpdates %}
+                                <tr>
+                                    <td>Activity</td>
+                                    <td><a href="{{ b.url }}">{{ b.title }}</a></td>
+                                </tr>
+                                {% endfor %}
+
                                 </tbody>
                             </table>
                         {% else %}
-                            no activity yet
+                            <div style="text-align: center">No activity</div>
                         {% endif %}
                         </div>
 
@@ -507,40 +603,12 @@ scripts: >
                             <div class="panel-body">
                                 <ul class="projectDevelopers mCustomScrollbar" data-mcs-theme="minimal-dark">
 
-                                    {% assign members = false %}
-                                    {% assign team = false %}
-                                    {% assign ldap = false %}
                                     {% if page.security.admins %}
                                         {% for admin in page.security.admins %}
-                                            {% if admin.members %}
-                                                {% for member in admin.members %}
-                                                    {% assign members = true %}
-                                                    <li><i class="fa fa-user"></i> {{ member.ldap-user.cn }}</li>
-                                                {% endfor %}
-                                            {% endif %}
-
-                                            {% if admin.teams %}
-                                                {% for teams in admin.teams %}
-                                                    {% if teams.members %}
-                                                        {% for member in teams.members %}
-                                                            {% assign team = true %}
-                                                            <li><i class="fa fa-user"></i> {{ member.ldap-user.cn }}</li>
-                                                        {% endfor %}
-                                                    {% endif %}
-                                                {% endfor %}
-                                            {% endif %}
-
-                                            {% if admin.ldap-user %}
-                                                {% for member in admin.ldap-user %}
-                                                    {% assign ldap = true %}
-                                                    <li><i class="fa fa-user"></i> {{ admin.ldap-user.cn }}</li>
-                                                {% endfor %}
-                                            {% endif %}
-
+                                        <li><a href="{{ site.baseurl }}{{ site.members_path }}/{{ admin.ldap-user.uid }}"><i class="fa fa-user"></i> {{ admin["ldap-user"].cn | capitalize }}</a></li>
                                         {% endfor %}
-                                    {% if members == false and team == false and ldap == false %}
-                                    <li>No member! </li>
-                                    {% endif %}
+                                    {% else %}
+                                    <li>No admins! </li>
                                     {% endif %}
                                 </ul>
                             </div>
@@ -561,42 +629,12 @@ scripts: >
                                 <ul class="projectDevelopers mCustomScrollbar" data-mcs-theme="minimal-dark">
 
                                     {% if page.security.developers %}
-                                        {% assign members = false %}
-                                        {% assign team = false %}
-                                        {% assign ldap = false %}
-
-                                        {% for developer in page.security.developers %}
-                                            {% if developer.members %}
-                                                {% for member in developer.members %}
-                                                    {% assign members = true %}
-                                                    <li><i class="fa fa-user"></i> {{ member.ldap-user.cn }}</li>
-                                                {% endfor %}
-                                            {% endif %}
-
-                                            {% if developer.teams %}
-                                                {% for teams in developer.teams %}
-                                                    {% if teams.members %}
-                                                        {% for member in teams.members %}
-                                                            {% assign team = true %}
-                                                            <li><i class="fa fa-user"></i> {{ member.ldap-user.cn }}</li>
-                                                        {% endfor %}
-                                                    {% endif %}
-                                                {% endfor %}
-                                            {% endif %}
-
-                                            {% if developer.ldap-user %}
-                                                {% for member in developer.ldap-user %}
-                                                    {% assign ldap = true %}
-                                                    <li><i class="fa fa-user"></i> {{ developer.ldap-user.cn }}</li>
-                                                {% endfor %}
-                                            {% endif %}
-
+                                        {% for admin in page.security.developers %}
+                                        <li><a href="{{ site.baseurl }}{{ site.members_path }}/{{ admin.ldap-user.uid }}"><i class="fa fa-user"></i> {{ admin["ldap-user"].cn | capitalize }}</a></li>
                                         {% endfor %}
-                                        {% if members == false and team == false and ldap == false %}
-                                        <li> No member  </li>
-                                        {% endif %}
+                                    {% else %}
+                                        <li>No developers! </li>
                                     {% endif %}
-
                                 </ul>
                             </div>
                         </div>
@@ -615,20 +653,16 @@ scripts: >
                             <div class="panel-body">
                                 <ul class="nav nav-list primary">
                                     {% if page.security.lead %}
-                                        {% for lead in page.security.lead %}
-                                            {% if lead.ldap-user.cn %}
-                                            <li><i class="fa fa-user"></i> {{ lead.ldap-user.cn }}</li>
-                                            {% endif %}
+                                        {% for admin in page.security.lead %}
+                                        <li><a href="{{ site.baseurl }}{{ site.members_path }}/{{ admin.ldap-user.uid }}"><i class="fa fa-user"></i> {{ admin["ldap-user"].cn | capitalize }}</a></li>
                                         {% endfor %}
                                     {% else %}
-                                    <li> No <memberpr></memberpr> </li>
+                                        <li>No lead! </li>
                                     {% endif %}
                                 </ul>
                             </div>
                         </div>
                     </div>
-
-
 
 
                     {% if page.children %}
@@ -644,11 +678,9 @@ scripts: >
                             <div class="panel-body">
                                 <div>
                                     {% for c in page.children %}
-
                                     <ul class="nav nav-list primary">
                                         <li><a href="{{ site.baseurl }}/projects/{{ c.website.website }}">{{ c.name }}</a></li>
                                     </ul>
-
                                     {% endfor %}
                                 </div>
 

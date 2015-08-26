@@ -59,12 +59,14 @@ scripts: >
                         </ul>
                         <div class="tab-content">
                             <div id="activity" class="tab-pane active">
+                                <table>
                                 {% for activity in page.userProfile.userActivity %}
                                 <div>
                                     <a href="{{ activity.summary.link.href }}">{{activity.category.term}} {{ activity.summary.summary["$t"]}}</a>
-                                    <span><small type="date">at {{activity.updates}}</small></span>
+                                    <span><small type="date">at {{activity.updates | date: "%m %d %Y" }}</small></span>
                                 </div>
                                 {% endfor %}
+                                </table>
                             </div>
                         </div>
                     </div>
@@ -86,10 +88,16 @@ scripts: >
 
                         <div id="teams" class="panel-collapse collapse" role="tabpanel" aria-labelledby="teams">
                             <div class="panel-body">
-                                <!--<ul class="nav nav-list primary">-->
-                                    <!--<li><a href="">Management</a></li>-->
-                                    <!--<li><a href="">HR</a></li>-->
-                                <!--</ul>-->
+                                <ul class="projectDevelopers mCustomScrollbar" data-mcs-theme="minimal-dark">
+                                    {% assign flag = true %}
+                                    {% for team in page.teams %}
+                                    {% assign flag = false %}
+                                        <li>{{ team.displayName }}</li>
+                                    {% endfor %}
+                                    {% if flag %}
+                                        <li>No teams</li>
+                                    {% endif %}
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -105,10 +113,16 @@ scripts: >
 
                         <div id="projects" class="panel-collapse collapse" role="tabpanel" aria-labelledby="projects">
                             <div class="panel-body">
-                                <!--<ul class="nav nav-list primary">-->
-                                    <!--<li><a href="">Subutai Social Foundation</a></li>-->
-                                    <!--<li><a href="">Project management</a></li>-->
-                                <!--</ul>-->
+                                <ul class="nav nav-list primary">
+                                    {% assign flag = true %}
+                                    {% for project in page.projects %}
+                                    {% assign flag = false %}
+                                        <li><a href="{{ site.baseurl }}/projects/{{ project.website.website }}">{{ project.name }}</a></li>
+                                    {% endfor %}
+                                    {% if flag %}
+                                        <li>No projects</li>
+                                    {% endif %}
+                                </ul>
                             </div>
                         </div>
                     </div>

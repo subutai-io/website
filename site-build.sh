@@ -13,7 +13,7 @@ if [[ ! -d "$WKDIR/project-descriptors" ]]; then
   fi
 fi
 
-git checkout master && git pull
+#git checkout master && git pull
 
 if [[ ! -d "$WKDIR/.git/bin-cache" ]]; then
   echo "hooks added"
@@ -24,24 +24,9 @@ if [[ ! -d "$WKDIR/.git/bin-cache" ]]; then
 fi
 
 
-pushd $path
-  git checkout master && git pull
-popd
+#pushd $path
+#  git checkout master && git pull
+#popd
 
 bash devops/scripts/import_content.sh -w $WKDIR -p $path
 bash devops/scripts/fetch_content.sh -w $WKDIR -p $path
-
-#echo Choose the following:
-#echo [1] Jekyll serve
-#echo [2] Jekyll build
-#
-#read chose
-#
-#if [[ $chose == 1 ]]; then
-#  jekyll s --source ssf/
-#fi
-#if [[ $chose == 2 ]]; then
-#  echo Destination path:
-#  read $dest
-#  jekyll b --source $WKDIR/ssf/ --destination $dest
-#fi

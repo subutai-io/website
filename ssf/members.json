@@ -7,11 +7,12 @@ layout: null
 "title"    : "{{ post.title | escape }}",
 "uid"      : "{{ post.ldap-user.uid | escape }}",
 "categories" : [
-{% for t in post.tags %}
-"{{ t }}"
+{% for t in post.projects %}
+"{{ t.key }}"
 {% unless forloop.last %},{% endunless %}
 {% endfor %}
 ],
+"content" : "{{ post.ldap-user.email }}",
 "url"      : "{{ site.baseurl }}{{ post.url }}"
 }
 {% unless forloop.last %},{% endunless %}

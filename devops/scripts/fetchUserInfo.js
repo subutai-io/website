@@ -12,6 +12,7 @@ var filename = process.argv[2];
 
 var CONFLUENCE_ACTIVITY = "https://confluence.subutai.io/activity?maxResults=5&streams=user+IS+%s";
 var JIRA_ACTIVITY = "https://jira.subutai.io/rest/api/2/user?key=%s";
+var DEFAULT_IMG = "https://jira.subutai.io/secure/useravatar?avatarId=10122";
 
 
 var nativeObject;
@@ -99,7 +100,7 @@ function parallel( uid ) {
                 ,PASSWORD: "ghkf346LU538QZRD"
             }, function (err) {
                 if (err) throw err;
-                console.log( this.body );
+
                 profileJSON = JSON.parse(this.body);
 
                 this.close();
@@ -112,7 +113,10 @@ function parallel( uid ) {
             throw err;
         }
 
-        console.log( profileJSON.avatarUrls["48x48"] );
+        if( !profileJSON.avatarUrls || !profileJSON.avatarUrls["48x48"] )
+            console.log( DEFAULT_IMG );
+        else
+            console.log( profileJSON.avatarUrls["48x48"] );
 
         var profile = {};
 
@@ -141,9 +145,9 @@ function parallel( uid ) {
             }
 
             jekyllProperties.userProfile = profile;
-
-            appendToLiquid( jekyllProperties );
         }
+
+        appendToLiquid( jekyllProperties );
     });
 }
 
@@ -151,6 +155,8 @@ function appendToLiquid( json ) {
 
     var output = J2Y.stringify( jsonConcat(nativeObject, json) );
     output += "\n---";
+
+    console.log(output);
 
     fs.writeFile(process.cwd() + filename, output, function (err) {
         if (err) throw err;

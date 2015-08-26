@@ -8,7 +8,7 @@ var currPage = 1;
 var titleMode = false;
 var projectsPerPage = [];
 projectsPerPage[titleMode] = 10;
-projectsPerPage[!titleMode] = 10;
+projectsPerPage[!titleMode] = 9;
 
 var tags = {};
 
@@ -133,19 +133,13 @@ function build(page) {
     for (var i = (currPage - 1) * projectsPerPage[titleMode];
          i < filteredProjects.length && i < currPage * projectsPerPage[titleMode]; i++) {
 
-        filteredProjects[i]['tags'] = "test";
-
-        //for (var j = 0; j < filteredProjects[i].categories.length; j++) {
-        //    filteredProjects[i]['tags'] += filteredProjects[i].categories[j] + " ";
-        //}
-
         projectsToShow.push(filteredProjects[i]);
     }
 
 
     if (titleMode) {
         buildElement("/partials/members_tiled.html", projectsToShow, "#content");
-        $('#content .col-md-6:odd').after('<hr/>');
+        $('#content .col-md-4:nth-child(3n)').after('<hr/>');
     }
     else {
         buildElement("/partials/members_row.html", projectsToShow, "#content");
@@ -341,5 +335,3 @@ function Searcher() {
         }
     }
 }
-
-

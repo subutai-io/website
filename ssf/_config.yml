@@ -7,6 +7,8 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "subutai.io"
 
 static-lastmod: Date.parse('2015-06-05')
+members_path: /members
+img_path: /img
 
 # Build settings
 markdown: kramdown
