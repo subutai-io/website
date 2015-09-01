@@ -1,0 +1,183 @@
+/*NURDIN START*/
+html, body {
+    overflow-x: visible;
+}
+
+.gbg {
+    background-color: #f6f6f6;
+}
+
+/*WELCOME ROW*/
+.studCol {
+    margin-top: 50px;
+    text-align: right;
+    color: #0086ca;
+}
+
+.studCol span {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 52px;
+    line-height: 47px;
+}
+
+.studCol p {
+    margin-top: 20px;
+    font-size: 26px;
+    line-height: 29px;
+    color: #0086ca;
+}
+
+.studBorder-blue {
+    height: 376px;
+    border: 9px solid #0086ca;
+}
+
+.studBorder-left {
+    padding-top: 160px;
+    text-align: right;
+}
+
+.stud-img {
+    background: url("../img/student-page/img-student.png") no-repeat right top;
+    height: 579px;
+    position: relative;
+    bottom: 221px;
+}
+
+.black-text {
+    font-size: 22px;
+    color: #171717;
+}
+
+/*IF U ARE ROW*/
+
+.if-u-row {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.if-u {
+    font-weight: 700;
+    color: #171717;
+    line-height: 31px;
+    font-size: 30px;
+    float: none;
+}
+
+.interested {
+    margin-bottom: 50px;
+    background: url("../img/student-page/icon__interested.svg") center no-repeat;
+    height: 102px;
+}
+
+.grow {
+    margin-bottom: 50px;
+    background: url("../img/student-page/icon__grow.svg") center no-repeat;
+    height: 102px;
+}
+
+.change {
+    margin-bottom: 50px;
+    background: url("../img/student-page/icon__change.svg") center no-repeat;
+    height: 102px;
+}
+
+.if-u-text {
+    font-size: 22px;
+    color: #171717;
+}
+
+/*Blue background*/
+.bbg {
+    background-color: #0086ca;
+}
+
+.white-text {
+    color: #fff;
+}
+
+.white-text p {
+    color: #fff;
+    font-size: 17px;
+    line-height: 24px;
+    margin-top: 40px;
+}
+
+.knowledge {
+    margin-bottom: 50px;
+    background: url("../img/student-page/icon__knowledge.svg") center no-repeat;
+    height: 102px;
+}
+
+.hands {
+    margin-bottom: 50px;
+    background: url("../img/student-page/icon__hands.svg") center no-repeat;
+    height: 102px;
+}
+
+.mentorship {
+    margin-bottom: 50px;
+    background: url("../img/student-page/icon__mentorship.svg") center no-repeat;
+    height: 102px;
+}
+
+/*Workon*/
+
+.workon {
+    padding-left: 30px;
+    padding-right: 30px;
+    display: table;
+    color: #171717;
+    height: 385px;
+}
+
+.workon p {
+    margin-top: 30px;
+    color: #171717;
+    font-size: 17px;
+    line-height: 24px;
+}
+
+.vcentered {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.workon-blue {
+    padding-left: 30px;
+    display: table;
+    color: #fff;
+    background-color: #0086ca;
+    height: 385px;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 30px;
+}
+
+.blue-img1 {
+    background: url("../img/student-page/img-blue-01.jpg") no-repeat;
+}
+
+.blue-img2 {
+    background: url("../img/student-page/img-blue-02.jpg") no-repeat;
+}
+
+.blue-img5 {
+    background-size: cover;
+    background: url("../img/student-page/img-blue-05.jpg") no-repeat center center;
+    padding-left: 510px;
+    height: 487px;
+}
+
+.zigzag {
+    background: url("../img/student-page/zigzag-seperator.svg") no-repeat;
+    height: 7px;
+    width: 720px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.tools-diagram {
+    background: url("../img/student-page/img-tools-diagram.svg") no-repeat center center;
+    height: 505px;
+}

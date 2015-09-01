@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 17.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 937 505" enable-background="new 0 0 937 505" xml:space="preserve">
+<g>
+	<g>
+		<path fill="#F6F6F6" d="M637,50c0,2.8-2.2,5-5,5H368c-2.8,0-5-2.2-5-5V5c0-2.8,2.2-5,5-5h264c2.8,0,5,2.2,5,5V50z"/>
+		<path fill="none" stroke="#CACACA" stroke-miterlimit="10" d="M637.5,50.5c0,2.8-2.2,5-5,5h-264c-2.8,0-5-2.2-5-5v-45
+			c0-2.8,2.2-5,5-5h264c2.8,0,5,2.2,5,5V50.5z"/>
+	</g>
+	<g>
+		<text transform="matrix(1.0346 0 0 1 479.3994 38.7139)" fill="#171717" font-family="'PTSans-Bold'" font-size="25.3978">SSF</text>
+	</g>
+	<g>
+		<path fill="#F6F6F6" d="M637,180c0,2.8-2.2,5-5,5H368c-2.8,0-5-2.2-5-5v-45c0-2.8,2.2-5,5-5h264c2.8,0,5,2.2,5,5V180z"/>
+		<path fill="none" stroke="#CACACA" stroke-miterlimit="10" d="M636.5,180.5c0,2.8-2.2,5-5,5h-264c-2.8,0-5-2.2-5-5v-45
+			c0-2.8,2.2-5,5-5h264c2.8,0,5,2.2,5,5V180.5z"/>
+	</g>
+	<g>
+		<text transform="matrix(1.0346 0 0 1 412.1182 166.3477)" fill="#171717" font-family="'PTSans-Bold'" font-size="25.3978">Communication</text>
+	</g>
+	<g>
+		<path fill="#F6F6F6" d="M937,180c0,2.8-2.2,5-5,5H668c-2.8,0-5-2.2-5-5v-45c0-2.8,2.2-5,5-5h264c2.8,0,5,2.2,5,5V180z"/>
+		<path fill="none" stroke="#CACACA" stroke-miterlimit="10" d="M936.5,180.5c0,2.8-2.2,5-5,5h-264c-2.8,0-5-2.2-5-5v-45
+			c0-2.8,2.2-5,5-5h264c2.8,0,5,2.2,5,5V180.5z"/>
+	</g>
+	<g>
+		<text transform="matrix(1.0346 0 0 1 722.8125 166.3477)" fill="#171717" font-family="'PTSans-Bold'" font-size="25.3978">Infrastructure</text>
+	</g>
+	<g>
+		<path fill="#F6F6F6" d="M337,180c0,2.8-2.2,5-5,5H68c-2.8,0-5-2.2-5-5v-45c0-2.8,2.2-5,5-5h264c2.8,0,5,2.2,5,5V180z"/>
+		<path fill="none" stroke="#CACACA" stroke-miterlimit="10" d="M336.5,180.5c0,2.8-2.2,5-5,5h-264c-2.8,0-5-2.2-5-5v-45
+			c0-2.8,2.2-5,5-5h264c2.8,0,5,2.2,5,5V180.5z"/>
+	</g>
+	<g>
+		<text transform="matrix(1.0346 0 0 1 128.9351 166.3477)" fill="#171717" font-family="'PTSans-Bold'" font-size="25.3978">Project tools</text>
+	</g>
+	<line fill="none" stroke="#CACACA" stroke-miterlimit="10" x1="497.5" y1="55" x2="497.5" y2="130"/>
+	<g>
+		<g>
+			<path fill="#F6F6F6" d="M337,268c0,2.8-2.2,5-5,5H68c-2.8,0-5-2.2-5-5v-45c0-2.8,2.2-5,5-5h264c2.8,0,5,2.2,5,5V268z"/>
+			<path fill="none" stroke="#CACACA" stroke-miterlimit="10" d="M336.5,268.5c0,2.8-2.2,5-5,5h-264c-2.8,0-5-2.2-5-5v-45
+				c0-2.8,2.2-5,5-5h264c2.8,0,5,2.2,5,5V268.5z"/>
+		</g>
+		<g>
+			<text transform="matrix(1.0346 0 0 1 178.8994 256.7139)" fill="#171717" font-family="'PTSans-Bold'" font-size="25.3978">Jira</text>
+		</g>
+	</g>
+	<g>
+		<path fill="#F6F6F6" d="M194,355c0,2.8-2.2,5-5,5H6c-2.8,0-5-2.2-5-5v-45c0-2.8,2.2-5,5-5h183c2.8,0,5,2.2,5,5V355z"/>
+		<path fill="none" stroke="#CACACA" stroke-miterlimit="10" d="M193.5,355.5c0,2.8-2.2,5-5,5H5.5c-2.8,0-5-2.2-5-5v-45
+			c0-2.8,2.2-5,5-5h183c2.8,0,5,2.2,5,5V355.5z"/>
+	</g>
+	<g>
+		<text transform="matrix(1.0346 0 0 1 35.0801 340.3477)" fill="#171717" font-family="'PTSans-Bold'" font-size="25.3978">Confluence</text>
+	</g>
+	<g>
+		<path fill="#F6F6F6" d="M395,355c0,2.8-2.2,5-5,5H207c-2.8,0-5-2.2-5-5v-45c0-2.8,2.2-5,5-5h183c2.8,0,5,2.2,5,5V355z"/>
+		<path fill="none" stroke="#CACACA" stroke-miterlimit="10" d="M394.5,355.5c0,2.8-2.2,5-5,5h-183c-2.8,0-5-2.2-5-5v-45
+			c0-2.8,2.2-5,5-5h183c2.8,0,5,2.2,5,5V355.5z"/>
+	</g>
+	<g>
+		<text transform="matrix(1.0346 0 0 1 267.2305 340.3477)" fill="#171717" font-family="'PTSans-Bold'" font-size="25.3978">Stash</text>
+	</g>
+	<g>
+		<path fill="#F6F6F6" d="M395,427c0,2.8-2.2,5-5,5H241c-2.8,0-5-2.2-5-5v-45c0-2.8,2.2-5,5-5h149c2.8,0,5,2.2,5,5V427z"/>
+		<path fill="none" stroke="#CACACA" stroke-miterlimit="10" d="M394.5,427.5c0,2.8-2.2,5-5,5h-149c-2.8,0-5-2.2-5-5v-45
+			c0-2.8,2.2-5,5-5h149c2.8,0,5,2.2,5,5V427.5z"/>
+	</g>
+	<g>
+		<text transform="matrix(1.0346 0 0 1 289.5596 410.7905)" fill="#171717" font-family="'PTSans-Bold'" font-size="20">Sonar</text>
+	</g>
+	<g>
+		<path fill="#F6F6F6" d="M395,499c0,2.8-2.2,5-5,5H241c-2.8,0-5-2.2-5-5v-45c0-2.8,2.2-5,5-5h149c2.8,0,5,2.2,5,5V499z"/>
+		<path fill="none" stroke="#CACACA" stroke-miterlimit="10" d="M394.5,499.5c0,2.8-2.2,5-5,5h-149c-2.8,0-5-2.2-5-5v-45
+			c0-2.8,2.2-5,5-5h149c2.8,0,5,2.2,5,5V499.5z"/>
+	</g>
+	<g>
+		<text transform="matrix(1.0346 0 0 1 274.2476 482.7905)" fill="#171717" font-family="'PTSans-Bold'" font-size="20">Upsource</text>
+	</g>
+	<line fill="none" stroke="#CACACA" stroke-miterlimit="10" x1="197.5" y1="185" x2="197.5" y2="218"/>
+	<line fill="none" stroke="#CACACA" stroke-miterlimit="10" x1="197.5" y1="273" x2="197.5" y2="290"/>
+	<polyline fill="none" stroke="#CACACA" stroke-miterlimit="10" points="797.5,130 797.5,99 797.5,98.5 197.5,98.5 197.5,99 
+		197.5,130 	"/>
+	<polyline fill="none" stroke="#CACACA" stroke-miterlimit="10" points="124.5,306 124.5,289.5 274.5,289.5 274.5,306 	"/>
+	<polyline fill="none" stroke="#CACACA" stroke-miterlimit="10" points="236,477.5 219.5,477.5 219.5,360 	"/>
+	<line fill="none" stroke="#CACACA" stroke-miterlimit="10" x1="220" y1="405.5" x2="236" y2="405.5"/>
+	<g>
+		<path fill="#F6F6F6" d="M636,255c0,2.8-2.2,5-5,5H482c-2.8,0-5-2.2-5-5v-45c0-2.8,2.2-5,5-5h149c2.8,0,5,2.2,5,5V255z"/>
+		<path fill="none" stroke="#CACACA" stroke-miterlimit="10" d="M635.5,254.5c0,2.8-2.2,5-5,5h-149c-2.8,0-5-2.2-5-5v-45
+			c0-2.8,2.2-5,5-5h149c2.8,0,5,2.2,5,5V254.5z"/>
+	</g>
+	<g>
+		<text transform="matrix(1.0346 0 0 1 525.0039 241.252)" fill="#171717" font-family="'PTSans-Bold'" font-size="20">Zimbra</text>
+	</g>
+	<g>
+		<path fill="#F6F6F6" d="M636,324c0,2.8-2.2,5-5,5H482c-2.8,0-5-2.2-5-5v-45c0-2.8,2.2-5,5-5h149c2.8,0,5,2.2,5,5V324z"/>
+		<path fill="none" stroke="#CACACA" stroke-miterlimit="10" d="M635.5,324.5c0,2.8-2.2,5-5,5h-149c-2.8,0-5-2.2-5-5v-45
+			c0-2.8,2.2-5,5-5h149c2.8,0,5,2.2,5,5V324.5z"/>
+	</g>
+	<g>
+		<text transform="matrix(1.0346 0 0 1 520.731 307.7905)" fill="#171717" font-family="'PTSans-Bold'" font-size="20">HipChat</text>
+	</g>
+	<polyline fill="none" stroke="#CACACA" stroke-miterlimit="10" points="477,302.5 460.5,302.5 460.5,185 	"/>
+	<line fill="none" stroke="#CACACA" stroke-miterlimit="10" x1="461" y1="230.5" x2="477" y2="230.5"/>
+	<g>
+		<path fill="#F6F6F6" d="M936,252c0,2.8-2.2,5-5,5H782c-2.8,0-5-2.2-5-5v-45c0-2.8,2.2-5,5-5h149c2.8,0,5,2.2,5,5V252z"/>
+		<path fill="none" stroke="#CACACA" stroke-miterlimit="10" d="M935.5,252.5c0,2.8-2.2,5-5,5h-149c-2.8,0-5-2.2-5-5v-45
+			c0-2.8,2.2-5,5-5h149c2.8,0,5,2.2,5,5V252.5z"/>
+	</g>
+	<g>
+		<text transform="matrix(1.0346 0 0 1 826.4927 239.0474)" fill="#171717" font-family="'PTSans-Bold'" font-size="20">Keshig</text>
+	</g>
+	<g>
+		<path fill="#F6F6F6" d="M936,324c0,2.8-2.2,5-5,5H782c-2.8,0-5-2.2-5-5v-45c0-2.8,2.2-5,5-5h149c2.8,0,5,2.2,5,5V324z"/>
+		<path fill="none" stroke="#CACACA" stroke-miterlimit="10" d="M935.5,324.5c0,2.8-2.2,5-5,5h-149c-2.8,0-5-2.2-5-5v-45
+			c0-2.8,2.2-5,5-5h149c2.8,0,5,2.2,5,5V324.5z"/>
+	</g>
+	<g>
+		<text transform="matrix(1.0346 0 0 1 793.2104 309.7139)" fill="#171717" font-family="'PTSans-Bold'" font-size="20">Subutai Social</text>
+	</g>
+	<line fill="none" stroke="#CACACA" stroke-miterlimit="10" x1="761" y1="302.5" x2="777" y2="302.5"/>
+	<line fill="none" stroke="#CACACA" stroke-miterlimit="10" x1="761" y1="230.5" x2="777" y2="230.5"/>
+	<g>
+		<path fill="#F6F6F6" d="M936,399c0,2.8-2.2,5-5,5H782c-2.8,0-5-2.2-5-5v-45c0-2.8,2.2-5,5-5h149c2.8,0,5,2.2,5,5V399z"/>
+		<path fill="none" stroke="#CACACA" stroke-miterlimit="10" d="M935.5,399.5c0,2.8-2.2,5-5,5h-149c-2.8,0-5-2.2-5-5v-45
+			c0-2.8,2.2-5,5-5h149c2.8,0,5,2.2,5,5V399.5z"/>
+	</g>
+	<g>
+		<text transform="matrix(1.0346 0 0 1 831.9355 385.7139)" fill="#171717" font-family="'PTSans-Bold'" font-size="20">Jarvis</text>
+	</g>
+	<g>
+		<path fill="#F6F6F6" d="M936,471c0,2.8-2.2,5-5,5H782c-2.8,0-5-2.2-5-5v-45c0-2.8,2.2-5,5-5h149c2.8,0,5,2.2,5,5V471z"/>
+		<path fill="none" stroke="#CACACA" stroke-miterlimit="10" d="M935.5,471.5c0,2.8-2.2,5-5,5h-149c-2.8,0-5-2.2-5-5v-45
+			c0-2.8,2.2-5,5-5h149c2.8,0,5,2.2,5,5V471.5z"/>
+	</g>
+	<g>
+		<text transform="matrix(1.0346 0 0 1 826.6172 457.2139)" fill="#171717" font-family="'PTSans-Bold'" font-size="20">Kurjun</text>
+	</g>
+	<polyline fill="none" stroke="#CACACA" stroke-miterlimit="10" points="777,449.5 760.5,449.5 760.5,185 	"/>
+	<line fill="none" stroke="#CACACA" stroke-miterlimit="10" x1="761" y1="377.5" x2="777" y2="377.5"/>
+</g>
+</svg>
