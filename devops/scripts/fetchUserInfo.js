@@ -92,60 +92,60 @@ function parallel( uid ) {
                 callback();
             });
         },
-        function (callback) {
-            var curl = CURL.create();
-            curl( util.format(JIRA_ACTIVITY, uid), {
-                USERAGENT: "ssf"
-                ,USERNAME: "dashbot"
-                ,PASSWORD: "ghkf346LU538QZRD"
-            }, function (err) {
-                if (err) throw err;
-
-                profileJSON = JSON.parse(this.body);
-
-                this.close();
-
-                callback();
-            });
-        }
+        //function (callback) {
+        //    var curl = CURL.create();
+        //    curl( util.format(JIRA_ACTIVITY, uid), {
+        //        USERAGENT: "ssf"
+        //        ,USERNAME: "dashbot"
+        //        ,PASSWORD: "ghkf346LU538QZRD"
+        //    }, function (err) {
+        //        if (err) throw err;
+        //
+        //        profileJSON = JSON.parse(this.body);
+        //
+        //        this.close();
+        //
+        //        callback();
+        //    });
+        //}
     ], function (err) {
         if (err) {
             throw err;
         }
 
-        if( !profileJSON.avatarUrls || !profileJSON.avatarUrls["48x48"] )
-            console.log( DEFAULT_IMG );
-        else
-            console.log( profileJSON.avatarUrls["48x48"] );
+        //if( !profileJSON.avatarUrls || !profileJSON.avatarUrls["48x48"] )
+        //    console.log( DEFAULT_IMG );
+        //else
+        //    console.log( profileJSON.avatarUrls["48x48"] );
 
         var profile = {};
 
-        if (profileJSON.key){
-            profile.key = profileJSON.key;
-            profile.name = profileJSON.name;
-            profile.emailAddress = profileJSON.emailAddress;
-            profile.displayName = profileJSON.displayName;
-
-            var userActivity = [];
-            var feed = activityJSON.feed;
-            if ( feed.entry ){
-                for (var i = 0; i < feed.entry.length; i++)
-                {
-                    var activity = {};
-                    activity.published = feed.entry[i].published;
-                    activity.updates = feed.entry[i].updated;
-                    activity.category = feed.entry[i].category;
-                    activity.summary = feed.entry[i]["activity:object"];
-                    userActivity.push(activity);
-                }
-                profile.userActivity = userActivity;
-            }
-            else {
-                profile.userActivity = userActivity;
-            }
-
-            jekyllProperties.userProfile = profile;
-        }
+        //if (profileJSON.key){
+        //    profile.key = profileJSON.key;
+        //    profile.name = profileJSON.name;
+        //    profile.emailAddress = profileJSON.emailAddress;
+        //    profile.displayName = profileJSON.displayName;
+        //
+        //    var userActivity = [];
+        //    var feed = activityJSON.feed;
+        //    if ( feed.entry ){
+        //        for (var i = 0; i < feed.entry.length; i++)
+        //        {
+        //            var activity = {};
+        //            activity.published = feed.entry[i].published;
+        //            activity.updates = feed.entry[i].updated;
+        //            activity.category = feed.entry[i].category;
+        //            activity.summary = feed.entry[i]["activity:object"];
+        //            userActivity.push(activity);
+        //        }
+        //        profile.userActivity = userActivity;
+        //    }
+        //    else {
+        //        profile.userActivity = userActivity;
+        //    }
+        //
+        //    jekyllProperties.userProfile = profile;
+        //}
 
         appendToLiquid( jekyllProperties );
     });
@@ -155,8 +155,6 @@ function appendToLiquid( json ) {
 
     var output = J2Y.stringify( jsonConcat(nativeObject, json) );
     output += "\n---";
-
-    console.log(output);
 
     fs.writeFile(process.cwd() + filename, output, function (err) {
         if (err) throw err;

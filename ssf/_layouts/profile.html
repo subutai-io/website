@@ -1,135 +1,56 @@
 ---
 layout: page
-
-css: >
-    <link href="/css/jquery.mCustomScrollbar.css" rel="stylesheet">
-
-scripts: >
-    <script src="/js/profile.js"></script>
-    <script src="/js/plugins/jquery.mCustomScrollbar.concat.min.js"></script>
 ---
 
-<div role="main" class="main">
-
-    <section class="page-top">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <ul class="breadcrumb">
-                        <li><a href="{{ site.baseurl }}/">Home</a></li>
-                        <li class="active">{{ page.title }}</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <h1>{{ page.title }}</h1>
-
-                </div>
-            </div>
+<div class="container-fluid space-blue">
+    <div class="container space-content">
+        <div class="b-member-avatar text-center">
+            <img class="b-member-avatar__img b-member-avatar__img_circle"
+                 src="{{ site.baseurl }}/img/avatars/{{ uid }}.png"
+                 onError="this.onerror=null;this.src='../../assets/img/empty-avatar.svg';" alt="">
         </div>
-    </section>
+        <div class="row space-header text-center"><h1 class="space-header__h1">{{ page.ldap-user.cn}}</h1></div>
+        <div class="row space-stat space-stat__p space-stat-margin">
+            <p>{{ page.ldap-user.email}}</p>
 
-    <div class="container memberContainer" id="userProfile">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="col-sm-2">
-                    <img class="img-thumbnail" style="width: 100px" src="{{ site.baseurl }}/img/avatars/{{page.userProfile.key}}.png">
-                </div>
-
-
-                <div class="col-sm-9">
-                    <div>
-                        <p><strong>Name: </strong>{{ page.userProfile.displayName}}</p>
-                        <p><strong>Email: </strong>{{ page.userProfile.emailAddress}}</p>
-                        <p><strong>Mobile: </strong>{{ page.ldap-user.mobile}}</p>
-                    </div>
-                </div>
-                <div class="col-md-1"></div>
-            </div>
-
-            <div class="col-md-12">
-                <div class="col-md-11">
-                    <div class="tabs customTabsDesign fadeInUp">
-                        <ul class="nav nav-tabs">
-                            <li class="active pull-left">
-                                <a href="#activity" data-toggle="tab"> <i class="fa fa-line-chart"></i>Activity </a>
-                            </li>
-                        </ul>
-                        <div class="tab-content">
-                            <div id="activity" class="tab-pane active">
-                                <table>
-                                {% for activity in page.userProfile.userActivity %}
-                                <div>
-                                    <a href="{{ activity.summary.link.href }}">{{activity.category.term}} {{ activity.summary.summary["$t"]}}</a>
-                                    <span><small type="date">at {{activity.updates | date: "%m %d %Y" }}</small></span>
-                                </div>
-                                {% endfor %}
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-1"></div>
-            </div>
-
-            <div class="rightSidebar">
-                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-
-                    <div class="panel panel-default">
-                        <div class="panel-heading" role="tab">
-                            <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion" href="#teams" aria-expanded="false" aria-controls="teams">
-                                    Teams
-                                </a>
-                            </h4>
-                        </div>
-
-                        <div id="teams" class="panel-collapse collapse" role="tabpanel" aria-labelledby="teams">
-                            <div class="panel-body">
-                                <ul class="projectDevelopers mCustomScrollbar" data-mcs-theme="minimal-dark">
-                                    {% assign flag = true %}
-                                    {% for team in page.teams %}
-                                    {% assign flag = false %}
-                                        <li>{{ team.displayName }}</li>
-                                    {% endfor %}
-                                    {% if flag %}
-                                        <li>No teams</li>
-                                    {% endif %}
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="panel panel-default">
-                        <div class="panel-heading" role="tab">
-                            <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion" href="#projects" aria-expanded="false" aria-controls="projects">
-                                    Projects
-                                </a>
-                            </h4>
-                        </div>
-
-                        <div id="projects" class="panel-collapse collapse" role="tabpanel" aria-labelledby="projects">
-                            <div class="panel-body">
-                                <ul class="nav nav-list primary">
-                                    {% assign flag = true %}
-                                    {% for project in page.projects %}
-                                    {% assign flag = false %}
-                                        <li><a href="{{ site.baseurl }}/projects/{{ project.website.website }}">{{ project.name }}</a></li>
-                                    {% endfor %}
-                                    {% if flag %}
-                                        <li>No projects</li>
-                                    {% endif %}
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+            <p>{{ page.ldap-user.mobile}}</p>
         </div>
-        <!-- row end -->
+    </div>
+</div>
+<div class="container project-content text-center">
+    <div class="project-header">
+            {% assign flag = true %}
+            {% for project in page.projects %}
+            {% assign flag = false %}
+        <loop>
+            <div class="col-md-offset-1 col-md-5 project-content__block">
+                <div class="project-content-block">
+                    <div class="project-content-block__logo project-content-block-logo">
+                        <div class="project-content-block-logo__white">
+                            <img alt="" class="project-content-block-logo__img" src="/{{ project.website.logo }}" onError="this.onerror=null;this.src='/assets/img/logos/project-empty.png';">
+                        </div>
+                    </div>
+                    <div class="project-content-block-header">
+                        <div class="project-content-block-header__text">{{ project.key }}</div>
+                    </div>
+                    <div class="project-content-block-text">
+                        <div class="project-content-block-text__inner">
+                            {{ project.short_description }}
+                        </div>
+                    </div>
+                    <div class="project-content-block-btn">
+                        <a href="{{site.baseurl }}/projects/{{project.website.website}}" class="project-content-block-btn__more">
+                            More
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </loop>
+            {% endfor %}
+            {% if flag %}
+        No projects
+            {% endif %}
 
     </div>
+
 </div>

@@ -8,7 +8,7 @@ var currPage = 1;
 var titleMode = false;
 var projectsPerPage = [];
 projectsPerPage[titleMode] = 10;
-projectsPerPage[!titleMode] = 9;
+projectsPerPage[!titleMode] = 12;
 
 var tags = {};
 

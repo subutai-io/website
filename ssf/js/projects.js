@@ -5,10 +5,9 @@ var filteredProjects;
 
 var currPage = 1;
 
-var titleMode = false;
+var titleMode = true;
 var projectsPerPage = [];
-projectsPerPage[titleMode] = 10;
-projectsPerPage[!titleMode] = 4;
+projectsPerPage[titleMode] = 40;
 
 var tags = {};
 
@@ -20,6 +19,23 @@ function main() {
     $.getJSON("/projects.json", function (data) {
         titleMode = true; // default mode
         var category = getParameterByName("category");
+
+
+        if (category == 'cloud') {
+            $('#header_name').text("Cloud computing projects");
+        }
+        if (category == 'security') {
+            $('#header_name').text("Cyber security projects");
+        }
+        if (category == 'bigdata') {
+            $('#header_name').text("Big data projects");
+        }
+        if (category == 'configuration') {
+            $('#header_name').text("Software defined everything projects");
+        }
+        if (category == 'internet-of-things') {
+            $('#header_name').text("Internet of things projects");
+        }
 
         projects = data;
 
@@ -141,14 +157,9 @@ function build(page) {
 
         projectsToShow.push(filteredProjects[i]);
     }
-
-    if (titleMode) {
-        buildElement("/partials/tiled.html", projectsToShow, "#content");
-        $('#content .col-md-6:odd').after('<hr/>');
-    }
-    else {
-        buildElement("/partials/row.html", projectsToShow, "#content");
-    }
+console.log(projectsToShow);
+    buildElement("/partials/tiled.html", projectsToShow, "#content");
+    $('#content .col-md-6:odd').after('<hr/>');
 
     pagination();
 }

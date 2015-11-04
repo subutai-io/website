@@ -7,42 +7,11 @@
 <!-- Mobile Metas -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Web Fonts  -->
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CShadows+Into+Light" rel="stylesheet" type="text/css">
+<!--Libs-->
+<link href="{{ site.baseurl }}/css/libs/bootstrap.min.css" rel="stylesheet">
+<link href="{{ site.baseurl }}/css/libs/font-awesome.min.css" rel="stylesheet">
 
-<!-- Vendor CSS -->
-<link rel="stylesheet" href="{{ site.baseurl }}/vendor/bootstrap/bootstrap.min.css">
-<link rel="stylesheet" href="{{ site.baseurl }}/vendor/fontawesome/css/font-awesome.css">
-<link rel="stylesheet" href="{{ site.baseurl }}/vendor/owlcarousel/owl.carousel.min.css" media="screen">
-<link rel="stylesheet" href="{{ site.baseurl }}/vendor/owlcarousel/owl.theme.default.min.css" media="screen">
-<link rel="stylesheet" href="{{ site.baseurl }}/vendor/magnific-popup/magnific-popup.css" media="screen">
-
-<!-- Theme CSS -->
-<link rel="stylesheet" href="{{ site.baseurl }}/css/theme.css">
-<link rel="stylesheet" href="{{ site.baseurl }}/css/theme-elements.css">
-<link rel="stylesheet" href="{{ site.baseurl }}/css/theme-blog.css">
-<link rel="stylesheet" href="{{ site.baseurl }}/css/theme-shop.css">
-<link rel="stylesheet" href="{{ site.baseurl }}/css/theme-animate.css">
-
-<!-- Current Page CSS -->
-<link rel="stylesheet" href="{{ site.baseurl }}/vendor/rs-plugin/css/settings.css" media="screen">
-
-<!-- Skin CSS -->
-<link rel="stylesheet" href="{{ site.baseurl }}/css/skins/default.css">
-
-<!-- Theme Custom CSS -->
-<link rel="stylesheet" href="{{ site.baseurl }}/css/custom.css">
-
-<!-- Head Libs -->
-<script src="{{ site.baseurl }}/vendor/modernizr/modernizr.js"></script>
-
-<!--[if IE]>
-<link rel="stylesheet" href="{{ site.baseurl }}/css/ie.css">
-<![endif]-->
-
-<!--[if lte IE 8]>
-<script src="{{ site.baseurl }}/vendor/respond/respond.js"></script>
-<script src="{{ site.baseurl }}/vendor/excanvas/excanvas.js"></script>
-<![endif]-->
+<!--Current CSS-->
+<link href="{{ site.baseurl }}/css/style.css" rel="stylesheet">
 
 {% if page.css %}{{ page.css | prepend: site.baseurl }}{% endif %}

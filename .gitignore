@@ -4,7 +4,7 @@ node_modules/
 _site/
 ssf/_site/
 ssf/_posts/
-ssf/img/avatars/
+ssf/media/avatars/
 project-descriptors/
 
 .sass-cache/

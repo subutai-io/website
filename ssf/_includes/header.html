@@ -1,50 +1,51 @@
-<header id="header">
-    <div class="container">
-        <div class="col-md-3">
-            <div class="logo">
-                <a href="{{ site.baseurl }}/">
-                    <img alt="SSF" src="{{ site.baseurl }}/img/logo.png">
+<header>
+    <div class="container-fluid b-fixed">
+        <div class="container b-header-nav text-center">
+            <div class="b-nav-logo">
+                <a href="{{ site.baseurl }}">
+                    <img src="{{ site.baseurl }}/assets/elements/header-logo-small.svg" class="b-nav-logo__item"/>
                 </a>
             </div>
-
-            <button class="btn btn-responsive-nav btn-inverse" data-toggle="collapse" data-target=".nav-main-collapse">
-                <i class="fa fa-bars"></i>
-            </button>
-        </div>
-        <div class="col-md-9">
-            <div class="navbar-collapse nav-main-collapse collapse">
-
-                <nav class="nav-main mega-menu">
-                    <ul class="nav nav-pills nav-main" id="mainMenu">
-                        <li>
-                            <a title="Home" class="dropdown-toggle" href="{{ site.baseurl }}/">
-                                <i class="fa fa-home"></i> Home
-                            </a>
-                        </li>
-                        <li>
-                            <a title="Projects" class="dropdown-toggle" href="{{ site.baseurl }}/projects/">
-                                Projects
-                            </a>
-                        </li>
-                        <!--<li>-->
-                            <!--<a title="Projects" class="dropdown-toggle" href="{{ site.baseurl }}/members/">-->
-                                <!--Members-->
-                            <!--</a>-->
-                        <!--</li>-->
-                        <li>
-                            <a title="Thanks" class="dropdown-toggle" href="{{ site.baseurl }}/thanks/">
-                                Thanks
-                            </a>
-                        </li>
-                        <li>
-                            <div class="search">
-                                <input type="text" id="tipue_drop_input" placeholder="Search..." autocomplete="off">
-                                <ul id="tipue_drop_content"></ul>
-                            </div>
-                        </li>
-                    </ul>
-                </nav>
+            <div class="b-nav-menu">
+                <ul class="b-nav-menu__list">
+                    <a href="{{ site.baseurl }}/index.html"><li>Home</li></a>
+                    <a href="{{ site.baseurl }}/projects/"><li>Projects</li></a>
+                    <a href="{{ site.baseurl }}/members/"><li>Members</li></a>
+                    <a href="{{ site.baseurl }}/about-us/"><li>About</li></a>
+                </ul>
+            </div>
+            <div class="b-nav-button">
+                <a data-toggle="modal" data-target="#modal-join" class="b-nav-button__join">Join</a>
             </div>
         </div>
     </div>
 </header>
+
+<div class="modal fade" id="modal-join" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content text-center">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            </div>
+            <h2>Be <span class="moto-underline">water</span> my friend</h2>
+
+            <div class="form-join">
+                <span>Join</span>
+
+                <form role="form">
+                    <div class="form-group">
+                        <input type="email" class="form-control" id="modal-InputName" placeholder="Name">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" id="modal-InputLast" placeholder="Last name">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" id="modal-InputEmail1" placeholder="Email">
+                    </div>
+                    <button type="submit" class="btn btn-default">Sign up</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

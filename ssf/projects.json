@@ -14,7 +14,7 @@ layout: null
                     ],
     "url"      : "{{ site.baseurl }}{{ post.url }}",
     "key"      : "{{ post.key }}",
-    "img"      : "{{ post.website.large_logo_64 }}",
+    "img"      : "/{{ post.website.logo }}",
     "content"  : {{ post.short_description | strip_html | strip_newlines | jsonify | replace:'\t','' }}
 }
 {% unless forloop.last %},{% endunless %}

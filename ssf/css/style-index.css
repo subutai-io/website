@@ -1,0 +1,17 @@
+.b-fixed {
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+footer {
+    position: absolute;
+}
+html, body {
+    overflow: hidden;
+    height: 100%;
+}
+
+.body {
+    height: 100%;
+}

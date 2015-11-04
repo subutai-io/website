@@ -1,35 +1,12 @@
 <loop>
-    <div class="col-md-4" id="member">
-        <div class="col-md-4">
-            <a href="{{ url }}" class="thumb-info secundary">
-                <div class="thumbnail-project">
-                    <img alt="" class="img-responsive" src="/img/avatars/{{ uid }}.png" onError="this.onerror=null;this.src='/img/empty-project.png';">
-                <!--<span class="thumb-info-title">-->
-                    <!--<span class="thumb-info-inner">{{ title }}</span>-->
-                    <!--<span class="thumb-info-type">Learn More</span>-->
-                <!--</span>-->
-                <!--<span class="thumb-info-action">-->
-                    <!--<span class="thumb-info-action-icon">-->
-                        <!--<i class="fa fa-ellipsis-v"></i>-->
-                    <!--</span>-->
-                <!--</span>-->
-                </div>
-            </a>
+    <div class="b-member" id="member">
+        <div class="b-member-avatar">
+            <a href="{{ url }}">
+                <img class="b-member-avatar__img" src="{{ site.baseurl }}/img/avatars/{{ uid }}.png" onError="this.onerror=null;this.src='../assets/img/empty-avatar.svg';" alt="">
+        </a>
         </div>
-
-        <div class="col-md-7">
-            <h5><a href="{{ url }}">{{ title }}</a></h5>
-
-            <p>{{ content }}</p>
-
-            <ul class="project-details">
-                <li>
-                    <ul class="list list-skills icons list-unstyled list-unstyled">
-                        <li><a href="{{ url }}"> Read more</a></li>
-                    </ul>
-                </li>
-            </ul>
+        <div class="b-member-name">
+            <a href="{{ url }}" class="b-member-name__content">{{ title }}</a>
         </div>
-
     </div>
 </loop>

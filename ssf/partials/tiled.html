@@ -1,35 +1,24 @@
 <loop>
-    <div class="col-md-6" style="margin-bottom: 22px">
-        <div class="col-md-4">
-            <a href="{{ url }}" class="thumb-info secundary">
-                <div class="thumbnail-project">
-                    <img alt="" class="img-responsive" src="/media/{{ key }}/{{ img }}" onError="this.onerror=null;this.src='/img/empty-project.png';">
-                <span class="thumb-info-title">
-                    <span class="thumb-info-inner">{{ title }}</span>
-                    <span class="thumb-info-type">Learn More</span>
-                </span>
-                <span class="thumb-info-action">
-                    <span class="thumb-info-action-icon">
-                        <i class="fa fa-ellipsis-v"></i>
-                    </span>
-                </span>
+    <div class="col-md-offset-1 col-md-5 project-content__block">
+        <div class="project-content-block">
+            <div class="project-content-block__logo project-content-block-logo">
+                <div class="project-content-block-logo__white">
+                    <img alt="" class="project-content-block-logo__img" src="{{ img }}" onError="this.onerror=null;this.src='/assets/img/logos/project-empty.png';">
                 </div>
-            </a>
+            </div>
+            <div class="project-content-block-header">
+                <div class="project-content-block-header__text">{{ title }}</div>
+            </div>
+            <div class="project-content-block-text">
+                <div class="project-content-block-text__inner">
+                    {{ content }}
+                </div>
+            </div>
+            <div class="project-content-block-btn">
+                <a href="{{ url }}" class="project-content-block-btn__more">
+                    More
+                </a>
+            </div>
         </div>
-
-        <div class="col-md-7">
-            <h5><a href="{{ url }}">{{ title }}</a></h5>
-
-            <p>{{ content }}</p>
-
-            <ul class="project-details">
-                <li>
-                    <ul class="list list-skills icons list-unstyled list-unstyled">
-                        <li><a href="{{ url }}"> Read more</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-
     </div>
 </loop>

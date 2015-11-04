@@ -76,7 +76,7 @@ bash $DESCR_PATH/build.sh
 
 echo "Generating members descriptors"
 pushd $MEMBERS_DIR
-  go run generate.go members teams projects
+  go run generate.go members teams projects website
 popd
 
 

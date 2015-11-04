@@ -1,37 +1,4 @@
-<!-- jQuery -->
-<script src="{{ site.baseurl }}/vendor/jquery/jquery.js"></script>
-
-<!-- Bootstrap Core JavaScript -->
-<script src="{{ site.baseurl }}/vendor/bootstrap/bootstrap.min.js"></script>
-
-<!-- Vendor -->
-<script src="{{ site.baseurl }}/vendor/jquery.appear/jquery.appear.js"></script>
-<script src="{{ site.baseurl }}/vendor/common/common.js"></script>
-<script src="{{ site.baseurl }}/vendor/jquery.validation/jquery.validation.js"></script>
-<script src="{{ site.baseurl }}/vendor/owlcarousel/owl.carousel.js"></script>
-<script src="{{ site.baseurl }}/vendor/vide/vide.js"></script>
-
-<!-- Theme Base, Components and Settings -->
-<script src="{{ site.baseurl }}/js/theme.js"></script>
-
-<!-- Theme Custom -->
-<script src="{{ site.baseurl }}/js/theme.init.js"></script>
-
-<script src="{{ site.baseurl }}/js/plugins/custom-search.js"></script>
-
-<script src="{{ site.baseurl }}/js/plugins/analytics.js"></script>
-
-<script type="text/javascript">
-	var search = new SimpleJekyllSearch;
-    var a = search.init({
-      searchInput: document.getElementById('tipue_drop_input'),
-      resultsContainer: document.getElementById('tipue_drop_content'),
-      dataSource: '/search.json',
-      searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
-      noResultsText: 'No results found',
-      limit: 10,
-      fuzzy: false
-    });
-</script>
+<script src="/js/libs/jquery-2.1.4.min.js"></script>
+<script src="{{ site.baseurl }}/js/libs/bootstrap.min.js"></script>
 
 {% if page.scripts %}{{ page.scripts | prepend: site.baseurl }}{% endif %}
