@@ -2,9 +2,7 @@
     <div class="container-fluid b-fixed">
         <div class="container b-header-nav text-center">
             <div class="b-nav-logo">
-                <a href="{{ site.baseurl }}">
-                    <img src="{{ site.baseurl }}/assets/elements/header-logo-small.svg" class="b-nav-logo__item"/>
-                </a>
+                <a class="b-nav-logo__item" href="{{ site.baseurl }}/index.html"></a>
             </div>
             <div class="b-nav-menu">
                 <ul class="b-nav-menu__list">
@@ -14,8 +12,20 @@
                     <a href="{{ site.baseurl }}/about-us/"><li>About</li></a>
                 </ul>
             </div>
-            <div class="b-nav-button">
-                <a data-toggle="modal" data-target="#modal-join" class="b-nav-button__join">Join</a>
+            <div class="b-nav-mobile">
+                <div class="b-nav-mobile__hamburger">
+                    <a href="#" id="js-menu-open">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    </a>
+                </div>
+                <ul class="b-nav-mobile__list">
+                    <a href="{{ site.baseurl }}/index.html"><li>Home</li></a>
+                    <a href="{{ site.baseurl }}/projects/"><li>Projects</li></a>
+                    <a href="{{ site.baseurl }}/members/"><li>Members</li></a>
+                    <a href="{{ site.baseurl }}/about-us/"><li>About</li></a>
+                </ul>
             </div>
         </div>
     </div>
