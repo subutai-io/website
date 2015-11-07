@@ -769,6 +769,7 @@ footer a {
 }
 
 footer a:hover {
+    color: #fff;
     text-decoration: underline;
 }
 
@@ -1428,7 +1429,9 @@ footer li {
     text-align: left;
     color: #4d4d4d;
 }
-
+.b-section-content-header__h1_center {
+    text-align: center;
+}
 .b-section-content-header__h1_white {
     color: #fff;
 }
@@ -1574,4 +1577,18 @@ footer li {
 .content-project {
     font-size: 0;
 }
-
+.b-thanks-bg__gray {
+    background-color: #f2f7fc;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+}
+.b-thanks-margin {
+    padding-bottom: 25px;
+}
+.b-thanks-logo-margin {
+    padding-bottom: 15px;
+}
+.b-section-content-header_margin {
+    margin-bottom: 25px;
+}
