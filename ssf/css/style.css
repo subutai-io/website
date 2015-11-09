@@ -569,6 +569,7 @@ section {
     height: 90px;
     border-radius: 50%;
     transition: all 0.4s;
+    border: 3px solid #fff;
 }
 
 .slider-control:hover {
@@ -1488,6 +1489,61 @@ footer li {
 .carousel-indicators {
     bottom: 80px;
 }
+@media (max-width: 1350px) {
+    .b-section-content_section-1 {
+        padding-top: 150px;
+    }
+    .b-section-content_section-2 {
+        padding-top: 110px;
+    }
+    .carousel-main {
+        margin-top: 30px;
+    }
+    .carousel-svg {
+        position: absolute;
+        top: 90px
+    }
+    .carousel-text {
+        margin-top: 175px;
+    }
+    .slider-control {
+        top: 30px;
+        width: 66px;
+        height: 66px;
+    }
+    .parallelogram {
+        height: 40%;
+    }
+    .section-4 .caption {
+        bottom: 40%;
+    }
+    .section-4 .caption h1 {
+        margin-bottom: 10px;
+        font-size: 45pt;
+    }
+    .section-4 .caption h2 {
+        font-size: 25pt;
+        margin-bottom: 50px;
+    }
+    .section-4 .caption h3 {
+        font-size: 14pt;
+        margin-bottom: 20px;
+    }
+    .b-footer-col {
+        margin-top: 0;
+        margin-bottom: 5px;
+    }
+    footer {
+        min-height: 170px;
+    }
+    .section-4 .caption .button-join {
+        min-width: 140px;
+        padding: 5px 10px 5px 10px;
+        font-size: 14pt;
+    }
+}
+
+
 @media (max-width: 767px) {
     .b-section-content_section-1,
     .b-section-content_section-2 {
@@ -1526,9 +1582,13 @@ footer li {
     }
 
     .slider-control {
+        border: 2px solid #fff;
         width: 40px;
         height: 40px;
         top: 40px
+    }
+    .slider-control:hover {
+        border: 2px solid #4d4d4d;
     }
 
     .slider-control.left {
