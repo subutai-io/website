@@ -1,5 +1,8 @@
 ---
 layout: page
+
+scripts: >
+    <script src="/js/usersAmount.js"></script>
 ---
 
 <div class="container-fluid space-blue space-blue_bg-project" style="background:#255fb5 url('{{site.baseurl }}{{page.website.banner_img}}') no-repeat center">
@@ -8,7 +11,7 @@ layout: page
         <div class="row space-stat space-stat_conf">
             <div class="space-stat__num text-center">
                 <div class="space-stat-num">
-                    <div class="space-stat-num__h1">30</div>
+                    <div class="space-stat-num__h1" id="members_amount">0</div>
                     <div class="space-stat-num__h2">members</div>
                 </div>
                 <div class="space-stat-num">

@@ -105,3 +105,5 @@ for descriptor in `find $PROJECTS_DIR -type f -regex '.*\.markdown'`; do
 
   echo Updated $descriptor ...
 done
+
+node $DEVOPS/countUsers.js
