@@ -1,7 +1,22 @@
 var members = {};
+var projects = {};
 var category = getParameterByName("category");
 
 {{insert}}
+
+var url = document.URL;
+var projectPage = false;
+
+for( var key in projects )
+{
+    if( url.indexOf( key ) != -1 )
+    {
+        projectPage = true;
+        $('#members_amount').text( projects[key] );
+    }
+}
+
+if( !projectPage )
 
 if (category == 'cloud') {
     $('#members_amount').text(members['cloud']);

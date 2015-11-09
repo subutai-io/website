@@ -7,8 +7,8 @@ var PATH_TO_JS = "/ssf/js/usersAmount.js";
 
 var files = fs.readdirSync(process.cwd() + PATH);
 var members = {};
+var projects = {};
 members["all"] = [];
-var output = {};
 
 for ( var i = 0; i < files.length; i++ )
 {
@@ -23,14 +23,36 @@ for ( var i = 0; i < files.length; i++ )
         {
             if( json.security.admins[j].bot == "false" )
             {
-                filterByTags(json.tags, json.security.admins[j]["ldap-user"].uid);
+                var member = json.security.admins[j]["ldap-user"].uid;
+                filterByTags(json.tags, member);
+
+                if( !projects[json.website.website] )
+                {
+                    projects[json.website.website] = [];
+                }
+
+                if( projects[json.website.website].indexOf(member) == -1 )
+                {
+                    projects[json.website.website].push(member);
+                }
             }
         }
         for( var j = 0; j < json.security.developers.length; j++ )
         {
             if( json.security.developers[j].bot == "false" )
             {
-                filterByTags( json.tags, json.security.developers[j]["ldap-user"].uid );
+                var member = json.security.developers[j]["ldap-user"].uid;
+                filterByTags( json.tags, member );
+
+                if( !projects[json.website.website] )
+                {
+                    projects[json.website.website] = [];
+                }
+
+                if( projects[json.website.website].indexOf(member) == -1 )
+                {
+                    projects[json.website.website].push(member);
+                }
             }
         }
     }
@@ -43,7 +65,15 @@ for( var key in members )
     if( members.hasOwnProperty(key) )
     {
         str += "members['" + key + "'] = " + members[key].length;
-        output[key] = members[key].length;
+    }
+    str += ";\n";
+}
+
+for( var key in projects )
+{
+    if( projects.hasOwnProperty(key) )
+    {
+        str += "projects['" + key + "'] = " + projects[key].length;
     }
     str += ";\n";
 }

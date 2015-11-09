@@ -4,6 +4,7 @@ layout: null
 [
 {% for post in site.categories['members'] %}
 {
+{% if !post.bot %}
 "title"    : "{{ post.title | escape }}",
 "uid"      : "{{ post.ldap-user.uid | escape }}",
 "categories" : [
@@ -14,6 +15,7 @@ layout: null
 ],
 "content" : "{{ post.ldap-user.email }}",
 "url"      : "{{ site.baseurl }}{{ post.url }}"
+{% endif %}
 }
 {% unless forloop.last %},{% endunless %}
 {% endfor %}
