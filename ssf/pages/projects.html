@@ -8,6 +8,7 @@ description: ssf projects
 
 scripts: >
     <script src="/js/projects.js"></script>
+    <script src="/js/usersAmount.js"></script>
     <script src="/js/plugins/chosen/chosen.jquery.min.js"></script>
 ---
 
@@ -17,7 +18,7 @@ scripts: >
         <div class="row space-stat">
             <div class="space-stat__num text-center">
                 <div class="space-stat-num">
-                    <div class="space-stat-num__h1">30</div>
+                    <div class="space-stat-num__h1" id="members_amount">0</div>
                     <div class="space-stat-num__h2">members</div>
                 </div>
                 <div class="space-stat-num">
@@ -47,5 +48,5 @@ scripts: >
     </div>
 
 
-    <div id="content" class="text-center"></div>
+    <div class="content-project" id="content" class="text-center"></div>
 </div>

@@ -15,3 +15,37 @@ html, body {
 .body {
     height: 100%;
 }
+footer {
+    background-color: #fff;
+    color: #4d4d4d;
+}
+footer a,
+.b-footer-col__h1 {
+    color: #4d4d4d;
+}
+footer a:hover {
+    color: #4d4d4d;
+}
+.b-footer-logo svg path {
+    fill: #4d4d4d;
+}
+@media (max-width: 767px) {
+    .body {
+        padding-top: 35px;
+        overflow: auto;
+    }
+    .b-fixed {
+        top: 0;
+    }
+    section {
+        height: auto;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .section-2 {
+        padding-bottom: 90px;
+    }
+    footer {
+        position: relative;
+    }
+}

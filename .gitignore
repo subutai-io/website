@@ -12,3 +12,5 @@ project-descriptors/
 *.iml
 .img_restored/
 *.log
+
+ssf/js/usersAmount.js
