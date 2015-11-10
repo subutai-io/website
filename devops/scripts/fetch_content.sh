@@ -79,9 +79,9 @@ fi
 
 
 # Update descriptors
-
+mkdir $JEKYLL_DIR/media/avatars
 for descriptor in `find $MEMBERS_DIR -type f -regex '.*\.markdown'`; do
-#  echo "start" # @todo for testing
+
   filename=$(basename $descriptor)
   key=${filename%.json}
   key=$(echo $key | cut -c 12- | sed -r 's/.markdown//g')
@@ -92,18 +92,19 @@ for descriptor in `find $MEMBERS_DIR -type f -regex '.*\.markdown'`; do
 
 
   result=$(node $DEVOPS/fetchUserInfo.js ${descriptor:1})
-
+  echo $key
+    echo $result
 #  Download avatars
-#  wget --user-agent="ssf" --http-user=dashbot --http-password=ghkf346LU538QZRD $result -O $JEKYLL_DIR/media/avatars/$key.png
+#  wget --user-agent="ssf" --http-user=websitebot --http-password=W$bot0- $result -O $JEKYLL_DIR/media/avatars/$key.png
   echo Updated $descriptor ...
 done
 
-for descriptor in `find $PROJECTS_DIR -type f -regex '.*\.markdown'`; do
-  filename=$(basename $descriptor)
-
-  result=$(node $DEVOPS/fetchProjectInfo.js ${descriptor:1})
-
-  echo Updated $descriptor ...
-done
-
-node $DEVOPS/countUsers.js
+#for descriptor in `find $PROJECTS_DIR -type f -regex '.*\.markdown'`; do
+#  filename=$(basename $descriptor)
+#
+#  result=$(node $DEVOPS/fetchProjectInfo.js ${descriptor:1})
+#
+#  echo Updated $descriptor ...
+#done
+#
+#node $DEVOPS/countUsers.js
