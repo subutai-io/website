@@ -14,7 +14,7 @@ apt-get -y install build-essential
 apt-get -y install unzip
 apt-get -y install golang
 apt-get -y install git
-apt-get -y install libcurl4-openssl-dev
+apt-get -y install libcurl4-openssl-dev curl
 apt-get -y install ruby2.2
 apt-get -y install ruby2.2-dev
 apt-get -y install nodejs-legacy npm
