@@ -1,42 +1,27 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-# Vagrantfile API/syntax version. Don't touch unless you know what you're doing!
-VAGRANTFILE_API_VERSION = "2"
+# All Vagrant configuration is done below. The "2" in Vagrant.configure
+# configures the configuration version (we support older styles for
+# backwards compatibility). Please don't change it unless you know what
+# you're doing.
+Vagrant.configure(2) do |config|
 
-Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
-
-  # Every Vagrant virtual environment requires a box to build off of.
-  config.vm.box = "istus/jekyll-site"
-  config.vm.box_version = "1.0"
+  # Every Vagrant development environment requires a box. You can search for
+  # boxes at https://atlas.hashicorp.com/search.
+  config.vm.box = "daralbaev/basic"
   config.vm.hostname = "site-dev"
+  config.vm.provision :shell, :path => "bootstrap.sh"
 
-  # Map localhost:4000 to port 4000 inside the VM
-  config.vm.network :forwarded_port, guest: 4000, host: 4000
+  # Create a forwarded port mapping which allows access to a specific port
+  # within the machine from a port on the host machine. In the example below,
+  # accessing "localhost:8080" will access port 80 on the guest machine.
+  # config.vm.network "forwarded_port", guest: 80, host: 8080
+  config.vm.network "forwarded_port", guest: 4000, host: 4000
 
-  # Create a shared folder between guest and host
-  config.vm.synced_folder ".", "/vagrant", create: true
-
-  config.ssh.forward_agent = true
-
-  # VirtualBox-specific configuration
-  config.vm.provider "virtualbox" do |v|
-    v.customize ["modifyvm", :id, "--memory", 2048]
-    v.customize ["modifyvm", :id, "--cpus", 2]
-    v.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
-    v.customize ["modifyvm", :id, "--natdnsproxy1", "on"]
-  end
-
-  # VMWare-specific configuration
-  config.vm.provider "vmware_fusion" do |v|
-    v.vmx["memsize"]="2048"
-    v.vmx["numvcpus"]="2"
-  end
-
-  # Parallels-specific configuration
-  config.vm.provider "parallels" do |v|
-    v.optimize_power_consumption = false
-    v.memory = 2048
-    v.cpus = 2
-  end
+  # Share an additional folder to the guest VM. The first argument is
+  # the path on the host to the actual folder. The second argument is
+  # the path on the guest to mount the folder. And the optional third
+  # argument is a set of non-required options.
+  # config.vm.synced_folder "../data", "/vagrant_data"
 end
