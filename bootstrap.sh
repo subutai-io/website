@@ -10,20 +10,19 @@ apt-add-repository -y ppa:brightbox/ruby-ng
 apt-get -y -qq update
 
 #install ruby with build tools so we can use gems
-apt-get -y install build-essential
-apt-get -y install unzip
-apt-get -y install golang
-apt-get -y install git
+apt-get -y install build-essential unzip golang
 apt-get -y install libcurl4-openssl-dev curl
-apt-get -y install ruby2.2
-apt-get -y install ruby2.2-dev
+apt-get -y install ruby2.2 ruby2.2-dev
 apt-get -y install nodejs-legacy npm
 
 #install requirements (jekyll)
 gem update --system
-echo "gem: --no-ri --no-rdoc" > ~/.gemrc
+echo "gem: --no-ri --no-rdoc --no-document" > ~/.gemrc
 gem install bundler
 gem install jekyll -v 2.5.3
+
+#
+npm install json2yaml xml2json yaml-to-json node-curl
 
 curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"
 unzip awscli-bundle.zip
