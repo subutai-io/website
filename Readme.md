@@ -9,7 +9,7 @@ the website from the [SSF Website Project](https://confluence.subutai.io/x/F4AWA
 Clone this project to your local machine and make sure you have a hypervisor
 and vagrant installed. If you don't have one of the non-free hypervisors you can
 install VirtualBox which is free. Once you have these prerequisites installed
-you can fire up the ['subutai/jekyll-site'](https://atlas.hashicorp.com/subutai/boxes/jekyll-site) vagrant box associated with this project by issueing the
+you can fire up the ['subutai/basic'] vagrant box associated with this project by issueing the
 following command within the directory you cloned this project into:
 
     vagrant up
