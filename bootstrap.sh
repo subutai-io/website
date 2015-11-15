@@ -21,9 +21,6 @@ echo "gem: --no-ri --no-rdoc --no-document" > ~/.gemrc
 gem install bundler
 gem install jekyll -v 2.5.3
 
-#
-npm install json2yaml xml2json yaml-to-json node-curl
-
 curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"
 unzip awscli-bundle.zip
 ./awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws
