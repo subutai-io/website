@@ -68,7 +68,7 @@ if [[ -z "$(which $WKDIR/node_modules/.bin/xml2json)" ]]; then
   fi
 fi
 
-if [[ -z "$(which $WKDIR/node_modules/.bin/yaml2json)" ]]; then
+if [[ -z "$(which $WKDIR/node_modules/.bin/yaml-to-json)" ]]; then
   OUTUT="$(npm install yaml-to-json)"
 
   if [[ -n "$OUTPUT" ]] && [[ ! "$OUTPUT" =~ "npm ERR!" ]]; then
