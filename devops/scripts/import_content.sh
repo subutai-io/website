@@ -51,7 +51,7 @@ if [[ ! -d "$JEKYLL_DIR/_posts/projects" ]]; then
 fi
 
 if [[ ! -d "$JEKYLL_DIR/img/avatars" ]]; then
-  echo "creating $JEKYLL_DIR/img/avatars"
+  echo "creating $JEKYLL_DIR/media/avatars"
   mkdir "$JEKYLL_DIR/img/avatars"
 fi
 

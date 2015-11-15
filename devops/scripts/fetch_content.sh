@@ -51,7 +51,7 @@ if [[ -z "$(which $WKDIR/node_modules/.bin/json2yaml)" ]]; then
   fi
 
 
-  OUTUT="$(npm install node-curl)"
+  OUTUT="$(npm install node-libcurl)"
 
   if [[ -n "$OUTPUT" ]] && [[ ! "$OUTPUT" =~ "npm ERR!" ]]; then
     echo $OUTPUT
