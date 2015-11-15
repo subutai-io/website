@@ -28,5 +28,5 @@ fi
 #  git checkout master && git pull
 #popd
 
-bash devops/scripts/import_content.sh -w $WKDIR -p $path
+#bash devops/scripts/import_content.sh -w $WKDIR -p $path
 bash devops/scripts/fetch_content.sh -w $WKDIR -p $path

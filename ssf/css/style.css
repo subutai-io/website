@@ -1032,7 +1032,8 @@ footer li {
 .project-content-block-logo {
     position: absolute;
     top: -75px;
-    left: 39%;
+    left: 50%;
+    margin-left: -48px;
 }
 
 .project-content-block__logo {
@@ -1086,18 +1087,10 @@ footer li {
 .project-content-block-btn {
     position: absolute;
     bottom: -25px;
-    left: 39%;
+    left: 50%;
+    margin-left: -53px;
 }
 
-@media (max-width: 767px) {
-    .project-content-block-logo {
-        left: 42.5%;
-    }
-
-    .project-content-block-btn {
-        left: 42.5%;
-    }
-}
 
 .project-content-block-btn__more {
     display: block;
@@ -1489,7 +1482,7 @@ footer li {
 .carousel-indicators {
     bottom: 80px;
 }
-@media (max-width: 1350px) {
+@media (max-width: 1400px) {
     .b-section-content_section-1 {
         padding-top: 150px;
     }
