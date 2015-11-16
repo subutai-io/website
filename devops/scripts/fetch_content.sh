@@ -49,8 +49,9 @@ if [[ -z "$(which $WKDIR/node_modules/.bin/json2yaml)" ]]; then
     echo $OUTPUT
     exit 2;
   fi
+fi
 
-
+if [[ -z "$(which $WKDIR/node_modules/node-libcurl/node_modules/.bin/node-gyp)" ]]; then
   OUTUT="$(npm install node-libcurl)"
 
   if [[ -n "$OUTPUT" ]] && [[ ! "$OUTPUT" =~ "npm ERR!" ]]; then
@@ -59,16 +60,7 @@ if [[ -z "$(which $WKDIR/node_modules/.bin/json2yaml)" ]]; then
   fi
 fi
 
-if [[ -z "$(which $WKDIR/node_modules/.bin/xml2json)" ]]; then
-  OUTUT="$(npm install xml2json)"
-
-  if [[ -n "$OUTPUT" ]] && [[ ! "$OUTPUT" =~ "npm ERR!" ]]; then
-    echo $OUTPUT
-    exit 2;
-  fi
-fi
-
-if [[ -z "$(which $WKDIR/node_modules/.bin/yaml-to-json)" ]]; then
+if [[ -z "$(which $WKDIR/node_modules/.bin/yaml2json)" ]]; then
   OUTUT="$(npm install yaml-to-json)"
 
   if [[ -n "$OUTPUT" ]] && [[ ! "$OUTPUT" =~ "npm ERR!" ]]; then

@@ -1,5 +1,4 @@
 var fs = require("fs");
-var parser = require("xml2json");
 var Curl = require("node-libcurl").Curl;
 var async = require("async");
 var util = require("util");
@@ -96,9 +95,10 @@ function parallel(uid) {
                 callback();
             });
 
-            curl.on('error', function (err) {
+            curl.on('error', function () {
                 curl.close.bind(curl);
-                throw err;
+                console.log( util.inspect( arguments ) );
+                this.close();
             });
         }
     ], function (err) {
@@ -122,6 +122,8 @@ function appendToLiquid(json) {
 
     fs.writeFile(process.cwd() + filename, output, function (err) {
         if (err) throw err;
+
+        console.log("\nFile updated: " + filename);
     });
 }
 
