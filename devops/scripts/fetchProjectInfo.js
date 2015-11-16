@@ -124,7 +124,11 @@ function parallel(cf, stash) {
                 callback();
             });
 
-            curl.on('error', curl.close.bind(curl));
+            curl.on('error', function () {
+                curl.close.bind(curl);
+                console.log( util.inspect( arguments ) );
+                this.close();
+            });
         },
         function (callback) {
 
@@ -166,7 +170,11 @@ function parallel(cf, stash) {
                 callback();
             });
 
-            curl.on('error', curl.close.bind(curl));
+            curl.on('error', function () {
+                curl.close.bind(curl);
+                console.log( util.inspect( arguments ) );
+                this.close();
+            });
         },
         function (callback) {
 
@@ -204,7 +212,11 @@ function parallel(cf, stash) {
                 callback();
             });
 
-            curl.on('error', curl.close.bind(curl));
+            curl.on('error', function () {
+                curl.close.bind(curl);
+                console.log( util.inspect( arguments ) );
+                this.close();
+            });
         },
     ], function (err) {
         appendToLiquid(jekyllProperties);
