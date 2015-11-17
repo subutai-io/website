@@ -10,7 +10,7 @@ var J2Y = require('json2yaml');
 var filename = process.argv[2];
 
 
-var CONFLUENCE_ACTIVITY = "https://confluence.subutai.io/activity?maxResults=5&streams=user+IS+%s";
+//var CONFLUENCE_ACTIVITY = "https://confluence.subutai.io/activity?maxResults=5&streams=user+IS+%s";
 var JIRA_ACTIVITY = "https://jira.subutai.io/rest/api/2/user?key=%s";
 var DEFAULT_IMG = "https://jira.subutai.io/secure/useravatar?avatarId=10122";
 
@@ -33,9 +33,13 @@ fs.readFile( process.cwd() + filename, function (err, data) {
         data = data.toString().substring(0, detectLiquid);
     }
 
+    if( data.length == 0 ) {
+        fs.unlink( process.cwd() + filename );
+        return;
+    }
+
     nativeObject = yaml2json(data);
     nativeObject = nativeObject[0]; // @todo workaround @important! might be useless after library upgrade
-
 
     if( nativeObject.bot == "true" ) {
         fs.unlink( process.cwd() + filename );
@@ -72,80 +76,33 @@ fs.readFile( process.cwd() + filename, function (err, data) {
 // make curl rest calls in parallel
 function parallel( uid ) {
     var profileJSON;
-    var activityJSON;
 
     async.parallel([
         function (callback) {
             var curl = CURL.create();
-            curl( util.format(CONFLUENCE_ACTIVITY, uid), {
+            curl( util.format(JIRA_ACTIVITY, uid), {
                 USERAGENT: "ssf"
-                ,USERNAME: "dashbot"
-                ,PASSWORD: "ghkf346LU538QZRD"
+                ,USERNAME: "websitebot"
+                ,PASSWORD: "W$bot0-"
             }, function (err) {
                 if (err) throw err;
 
-                var activity = parser.toJson(this.body);
-                activityJSON = JSON.parse(activity);
+                profileJSON = JSON.parse(this.body);
 
-                this.close()
+                this.close();
 
                 callback();
             });
-        },
-        //function (callback) {
-        //    var curl = CURL.create();
-        //    curl( util.format(JIRA_ACTIVITY, uid), {
-        //        USERAGENT: "ssf"
-        //        ,USERNAME: "dashbot"
-        //        ,PASSWORD: "ghkf346LU538QZRD"
-        //    }, function (err) {
-        //        if (err) throw err;
-        //
-        //        profileJSON = JSON.parse(this.body);
-        //
-        //        this.close();
-        //
-        //        callback();
-        //    });
-        //}
+        }
     ], function (err) {
         if (err) {
             throw err;
         }
 
-        //if( !profileJSON.avatarUrls || !profileJSON.avatarUrls["48x48"] )
-        //    console.log( DEFAULT_IMG );
-        //else
-        //    console.log( profileJSON.avatarUrls["48x48"] );
-
-        var profile = {};
-
-        //if (profileJSON.key){
-        //    profile.key = profileJSON.key;
-        //    profile.name = profileJSON.name;
-        //    profile.emailAddress = profileJSON.emailAddress;
-        //    profile.displayName = profileJSON.displayName;
-        //
-        //    var userActivity = [];
-        //    var feed = activityJSON.feed;
-        //    if ( feed.entry ){
-        //        for (var i = 0; i < feed.entry.length; i++)
-        //        {
-        //            var activity = {};
-        //            activity.published = feed.entry[i].published;
-        //            activity.updates = feed.entry[i].updated;
-        //            activity.category = feed.entry[i].category;
-        //            activity.summary = feed.entry[i]["activity:object"];
-        //            userActivity.push(activity);
-        //        }
-        //        profile.userActivity = userActivity;
-        //    }
-        //    else {
-        //        profile.userActivity = userActivity;
-        //    }
-        //
-        //    jekyllProperties.userProfile = profile;
-        //}
+        if( !profileJSON.avatarUrls || !profileJSON.avatarUrls["48x48"] )
+            console.log( DEFAULT_IMG );
+        else
+            console.log( profileJSON.avatarUrls["48x48"] );
 
         appendToLiquid( jekyllProperties );
     });

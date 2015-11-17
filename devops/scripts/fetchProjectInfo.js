@@ -96,9 +96,7 @@ function parallel( cf, stash ) {
 
             var curl = CURL.create()
             curl(util.format(URL_LAST_UPDATES, cf), {
-                USERAGENT: "ssf",
-                USERNAME: "dashbot",
-                PASSWORD: "ghkf346LU538QZRD"
+                USERAGENT: "ssf"
             }, function(err) {
                 if (err) throw err;
 
@@ -134,9 +132,7 @@ function parallel( cf, stash ) {
 
             var curl = CURL.create();
             curl(util.format(URL_COMMITS, stash), {
-                USERAGENT: "ssf",
-                USERNAME: "dashbot",
-                PASSWORD: "ghkf346LU538QZRD"
+                USERAGENT: "ssf"
             }, function(err) {
                 if (err) throw err;
 
@@ -173,9 +169,7 @@ function parallel( cf, stash ) {
 
             var curl = CURL.create()
             curl(util.format(URL_BLOGS, cf), {
-                USERAGENT: "ssf",
-                USERNAME: "dashbot",
-                PASSWORD: "ghkf346LU538QZRD"
+                USERAGENT: "ssf"
             }, function(err) {
                 if (err) throw err;
 
