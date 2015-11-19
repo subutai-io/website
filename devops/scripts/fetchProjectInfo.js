@@ -126,7 +126,7 @@ function parallel(cf, stash) {
 
             curl.on('error', function () {
                 curl.close.bind(curl);
-                console.log( util.inspect( arguments ) );
+                console.log(util.inspect(arguments));
                 this.close();
             });
         },
@@ -172,7 +172,7 @@ function parallel(cf, stash) {
 
             curl.on('error', function () {
                 curl.close.bind(curl);
-                console.log( util.inspect( arguments ) );
+                console.log(util.inspect(arguments));
                 this.close();
             });
         },
@@ -214,7 +214,7 @@ function parallel(cf, stash) {
 
             curl.on('error', function () {
                 curl.close.bind(curl);
-                console.log( util.inspect( arguments ) );
+                console.log(util.inspect(arguments));
                 this.close();
             });
         },
