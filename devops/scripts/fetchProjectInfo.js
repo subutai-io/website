@@ -49,7 +49,7 @@ fs.readFile(process.cwd() + filename, function (err, data) {
     date = date[date.length - 1];
     // date retrieved
 
-    // get concluence and stash keys
+    // get confluence and stash keys
     var cf = undefined;
 
     if (nativeObject.confluence && nativeObject.confluence.spaces) {
@@ -191,7 +191,7 @@ function parallel(cf, stash) {
 
             curl.on('end', function (statusCode, body, headers) {
 
-                var blogJSON = JSON.parse(this.body);
+                var blogJSON = JSON.parse(body);
 
                 var blogs = [];
                 var blog = {};
