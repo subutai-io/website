@@ -16,45 +16,44 @@ var searcher = new Searcher();
 
 function main() {
 
-    $.getJSON("/projects.json", function (data) {
+    $.getJSON("/projects.json", function(data) {
         titleMode = true; // default mode
         var category = getParameterByName("category");
 
 
-        if (category == 'cloud') {
+        if (category === 'cloud') {
             $('#header_name').text("Cloud computing projects");
         }
-        if (category == 'security') {
+        if (category === 'security') {
             $('#header_name').text("Cyber security projects");
         }
-        if (category == 'bigdata') {
+        if (category === 'bigdata') {
             $('#header_name').text("Big data projects");
         }
-        if (category == 'configuration') {
+        if (category === 'configuration') {
             $('#header_name').text("Software defined everything projects");
         }
-        if (category == 'internet-of-things') {
+        if (category === 'internet-of-things') {
             $('#header_name').text("Internet of things projects");
         }
 
         projects = data;
 
-        if( category.length > 0 ) {
+        if (category.length > 0) {
             filteredProjects = [];
-            projects.forEach(function (e) {
-                e.categories.forEach(function (t) {
-                    if (t == category)
+            projects.forEach(function(e) {
+                e.categories.forEach(function(t) {
+                    if (t === category)
                         filteredProjects.push(e);
 
                 });
             });
-        }
-        else
+        } else
             filteredProjects = projects;
 
-        projects.forEach(function (e) {
-            e.categories.forEach(function (t) {
-                t in tags ? tags[t]++ : tags[t] = 1;
+        projects.forEach(function(e) {
+            e.categories.forEach(function(t) {
+                tags[t] = t in tags ? tags[t]++ : 1;
             });
         });
 
@@ -70,7 +69,7 @@ function main() {
     });
 }
 
-$('#mode').click(function (e) {
+$('#mode').click(function(e) {
     if (!titleMode) {
         $('#mode').text('Table View');
     } else {
@@ -82,11 +81,11 @@ $('#mode').click(function (e) {
     build();
 });
 
-$("#search-input").keyup(function (event) {
+$("#search-input").keyup(function(event) {
     filterProjects();
 });
 
-$("#cats").change(function (event) {
+$("#cats").change(function(event) {
     filterProjects();
 });
 
@@ -96,15 +95,14 @@ function filterProjects() {
     var criteria = $('#search-input').val();
     if (criteria) {
         filteredProjectsTmp = searcher.search(projects, criteria);
-    }
-    else {
+    } else {
         filteredProjectsTmp = projects;
     }
 
     var selectedTags = $("#cats").chosen().val();
 
 
-    if (selectedTags == null) {
+    if (selectedTags === null) {
         filteredProjects = filteredProjectsTmp;
         build();
         return;
@@ -113,13 +111,13 @@ function filterProjects() {
     filteredProjects = [];
 
 
-    filteredProjectsTmp.forEach(function (e) {
+    filteredProjectsTmp.forEach(function(e) {
         var catMatched = false;
 
         for (var i = 0; i < selectedTags.length; i++) {
-            e.categories.forEach(function (t) {
+            e.categories.forEach(function(t) {
 
-                if (t == selectedTags[i])
+                if (t === selectedTags[i])
                     catMatched = true;
 
             });
@@ -128,7 +126,7 @@ function filterProjects() {
             if (!catMatched)
                 break;
 
-            if( i != selectedTags.length - 1 )
+            if (i != selectedTags.length - 1)
                 catMatched = false;
         }
 
@@ -146,18 +144,17 @@ function build(page) {
 
     var projectsToShow = [];
 
-    for (var i = (currPage - 1) * projectsPerPage[titleMode];
-         i < filteredProjects.length && i < currPage * projectsPerPage[titleMode]; i++) {
+    for (var i = (currPage - 1) * projectsPerPage[titleMode]; i < filteredProjects.length && i < currPage * projectsPerPage[titleMode]; i++) {
 
-        filteredProjects[i]['tags'] = "";
+        filteredProjects[i].tags = "";
 
         for (var j = 0; j < filteredProjects[i].categories.length; j++) {
-            filteredProjects[i]['tags'] += filteredProjects[i].categories[j] + " ";
+            filteredProjects[i].tags += filteredProjects[i].categories[j] + " ";
         }
 
         projectsToShow.push(filteredProjects[i]);
     }
-console.log(projectsToShow);
+    console.log(projectsToShow);
     buildElement("/partials/tiled.html", projectsToShow, "#content");
     $('#content .col-md-6:odd').after('<hr/>');
 
@@ -175,10 +172,10 @@ function pagination() {
     buildElement("/partials/pagination.html", pages, "#pagination");
 
     $("#pagination a:contains('" + currPage + "')").closest("li").addClass("disabled");
-    if( currPage == 1 )
+    if (currPage === 1)
         $("#pagination li a .fa-chevron-left").closest("li").addClass("disabled");
 
-    if( currPage == maxPages )
+    if (currPage === maxPages)
         $("#pagination li a .fa-chevron-right").closest("li").addClass("disabled");
 
     $("#pagination li a .fa-chevron-left").closest("a").attr("onclick", "build(" + (currPage - 1) + ")");
@@ -190,7 +187,7 @@ function buildElement(tmpl, elements, insertion) {
 
     $.ajax({
         url: tmpl,
-        success: function (tpl) {
+        success: function(tpl) {
 
             var loop = tpl.replace(/(\r\n|\n|\r|\t)/gm, "").replace();
 
@@ -203,8 +200,7 @@ function buildElement(tmpl, elements, insertion) {
                 for (var i = 0; i < elements.length; i++) {
                     result += buildElementReg(loop, elements[i]);
                 }
-            }
-            else {
+            } else {
                 result = buildElementReg(loop, elements);
             }
 
@@ -217,13 +213,12 @@ function buildElement(tmpl, elements, insertion) {
 
 function buildElementReg(tpl, elements) {
     if (Object.prototype.toString.call(elements) === "[object Object]") {
-        for (e in elements) {
+        for (var e in elements) {
             tpl = tpl.replace(new RegExp("{{ " + e + " }}", "g"), elements[e]);
         }
 
         return tpl;
-    }
-    else {
+    } else {
         return tpl.replace(new RegExp("{{ val }}", "g"), elements);
     }
 }
@@ -241,15 +236,14 @@ function FuzzySearchStrategy() {
     }
 
     var self = this;
-    self.matches = function (string, crit) {
+    self.matches = function(string, crit) {
         if ('string' != typeof string) {
             return !1;
-        }
-        else {
+        } else {
             string = string.trim();
             return !!string.match(createFuzzyRegExpFromString(crit));
         }
-    }
+    };
 }
 
 function LiteralSearchStrategy() {
@@ -258,11 +252,10 @@ function LiteralSearchStrategy() {
     }
 
     var self = this;
-    self.matches = function (string, crit) {
+    self.matches = function(string, crit) {
         if ('string' != typeof string) {
             return !1;
-        }
-        else {
+        } else {
             string = string.trim();
             return doMatch(string, crit);
         }
@@ -293,22 +286,21 @@ function Searcher() {
         matches = [],
         fuzzy = !1,
         limit = 20,
-        fuzzySearchStrategy = new FuzzySearchStrategy,
-        literalSearchStrategy = new LiteralSearchStrategy;
+        fuzzySearchStrategy = new FuzzySearchStrategy(),
+        literalSearchStrategy = new LiteralSearchStrategy();
 
-    self.setFuzzy = function (_fuzzy) {
+    self.setFuzzy = function(_fuzzy) {
         fuzzy = !!_fuzzy;
     };
-    self.setLimit = function (_limit) {
-        limit = parseInt(_limit, 20) || limit
+    self.setLimit = function(_limit) {
+        limit = parseInt(_limit, 20) || limit;
     };
-    self.search = function (data, crit) {
+    self.search = function(data, crit) {
         if (crit) {
             matches.length = 0;
             return findMatches(data, crit, getSearchStrategy());
-        }
-        else {
+        } else {
             return [];
         }
-    }
+    };
 }
