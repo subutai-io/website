@@ -11,7 +11,6 @@ html, body {
     overflow: hidden;
     height: 100%;
 }
-
 .body {
     height: 100%;
 }
@@ -19,8 +18,7 @@ footer {
     background-color: #fff;
     color: #4d4d4d;
 }
-footer a,
-.b-footer-col__h1 {
+footer a, .b-footer-col__h1 {
     color: #4d4d4d;
 }
 footer a:hover {

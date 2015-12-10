@@ -10,47 +10,37 @@ var members = {};
 var projects = {};
 members["all"] = [];
 
-for ( var i = 0; i < files.length; i++ )
-{
-    var content = fs.readFileSync( process.cwd() + PATH + files[i] );
-    var jsonConverted = yaml2json( content );
+for (var i = 0; i < files.length; i++) {
+    var content = fs.readFileSync(process.cwd() + PATH + files[i]);
+    var jsonConverted = yaml2json(content);
     var json = jsonConverted[0];
 
 
-    if( json.security )
-    {
-        for( var j = 0; j < json.security.admins.length; j++ )
-        {
-            if( json.security.admins[j].bot == "false" )
-            {
+    if (json.security) {
+        for (var j = 0; j < json.security.admins.length; j++) {
+            if (json.security.admins[j].bot == "false") {
                 var member = json.security.admins[j]["ldap-user"].uid;
                 filterByTags(json.tags, member);
 
-                if( !projects[json.website.website] )
-                {
+                if (!projects[json.website.website]) {
                     projects[json.website.website] = [];
                 }
 
-                if( projects[json.website.website].indexOf(member) == -1 )
-                {
+                if (projects[json.website.website].indexOf(member) == -1) {
                     projects[json.website.website].push(member);
                 }
             }
         }
-        for( var j = 0; j < json.security.developers.length; j++ )
-        {
-            if( json.security.developers[j].bot == "false" )
-            {
+        for (var j = 0; j < json.security.developers.length; j++) {
+            if (json.security.developers[j].bot == "false") {
                 var member = json.security.developers[j]["ldap-user"].uid;
-                filterByTags( json.tags, member );
+                filterByTags(json.tags, member);
 
-                if( !projects[json.website.website] )
-                {
+                if (!projects[json.website.website]) {
                     projects[json.website.website] = [];
                 }
 
-                if( projects[json.website.website].indexOf(member) == -1 )
-                {
+                if (projects[json.website.website].indexOf(member) == -1) {
                     projects[json.website.website].push(member);
                 }
             }
@@ -60,50 +50,41 @@ for ( var i = 0; i < files.length; i++ )
 
 var str = "";
 
-for( var key in members )
-{
-    if( members.hasOwnProperty(key) )
-    {
+for (var key in members) {
+    if (members.hasOwnProperty(key)) {
         str += "members['" + key + "'] = " + members[key].length;
     }
     str += ";\n";
 }
 
-for( var key in projects )
-{
-    if( projects.hasOwnProperty(key) )
-    {
+for (var key in projects) {
+    if (projects.hasOwnProperty(key)) {
         str += "projects['" + key + "'] = " + projects[key].length;
     }
     str += ";\n";
 }
 
-var content = String(fs.readFileSync( process.cwd() + PATH_TO_INGOT ));
+var content = String(fs.readFileSync(process.cwd() + PATH_TO_INGOT));
 
-var out = content.replace( "{{insert}}", str );
+var out = content.replace("{{insert}}", str);
 
-fs.writeFile(process.cwd() + PATH_TO_JS, out, function( err ) {
-    if(err) {
+fs.writeFile(process.cwd() + PATH_TO_JS, out, function (err) {
+    if (err) {
         return console.log(err);
     }
 });
 
-function filterByTags( tags, member )
-{
-    if( members["all"].indexOf(member) == -1 )
+function filterByTags(tags, member) {
+    if (members["all"].indexOf(member) == -1)
         members["all"].push(member);
 
-    if( tags )
-    {
-        for( var i = 0; i < tags.length; i++ )
-        {
-            if( !members[tags[i]] )
-            {
+    if (tags) {
+        for (var i = 0; i < tags.length; i++) {
+            if (!members[tags[i]]) {
                 members[tags[i]] = [];
             }
 
-            if( members[tags[i]].indexOf(member) == -1 )
-            {
+            if (members[tags[i]].indexOf(member) == -1) {
                 members[tags[i]].push(member);
             }
         }

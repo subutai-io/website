@@ -1,23 +1,24 @@
 ---
 layout: null
 ---
+
 [
 {% for post in site.categories['projects'] %}
-{% if post.website %}
 {
-    "title"    : "{{ post.title | escape }}",
-    "categories" : [
-                    {% for t in post.tags %}
-                    "{{ t }}"
-                    {% unless forloop.last %},{% endunless %}
-                    {% endfor %}
-                    ],
-    "url"      : "{{ site.baseurl }}{{ post.url }}",
-    "key"      : "{{ post.key }}",
-    "img"      : "/{{ post.website.logo }}",
-    "content"  : {{ post.short_description | strip_html | strip_newlines | jsonify | replace:'\t','' }}
-}
+{% if post.website %}
+"title": "{{ post.title | escape }}",
+"categories": [
+{% for t in post.tags %}
+"{{ t }}"
 {% unless forloop.last %},{% endunless %}
+{% endfor %}
+],
+"url": "{{ site.baseurl }}{{ post.url }}",
+"key": "{{ post.key }}",
+"img"      : "/{{ site.baseurl }}{{ post.website.logo }}",
+"content": {{ post.short_description | strip_html | strip_newlines | jsonify | replace: '\t', '' }}
 {% endif %}
+}
+{% unless forloop.last %}, {% endunless %}
 {% endfor %}
 ]

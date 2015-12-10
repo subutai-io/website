@@ -12,9 +12,14 @@ scripts: >
     <script src="/js/plugins/chosen/chosen.jquery.min.js"></script>
 ---
 
+
 <div class="container-fluid space-blue">
     <div class="container space-content">
-        <div class="row space-header text-center"><h1 class="space-header__h1"><span class="underline-white" id="header_name"></span></h1></div>
+        <div class="row space-header text-center">
+            <h1 class="space-header__h1">
+                <span class="underline-white" id="header_name"></span>
+            </h1>
+        </div>
         <div class="row space-stat">
             <div class="space-stat__num text-center">
                 <div class="space-stat-num">
@@ -37,8 +42,7 @@ scripts: >
         </div>
         <div class="col-md-5">
 
-            <select id="cats" data-placeholder="Filter by categories..." multiple
-                    class="chosen-select form-control"></select>
+            <select id="cats" data-placeholder="Filter by categories..." multiple class="chosen-select form-control"></select>
         </div>
         <div class="col-md-2">
             <button type="button" class="btn btn-default" aria-label="Left Align" id="mode">
