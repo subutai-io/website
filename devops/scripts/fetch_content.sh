@@ -91,12 +91,12 @@ for descriptor in `find $MEMBERS_DIR -type f -regex '.*\.markdown'`; do
   echo Updated $descriptor ...
 done
 
-#for descriptor in `find $PROJECTS_DIR -type f -regex '.*\.markdown'`; do
-#  filename=$(basename $descriptor)
-#
-#  result=$(node $DEVOPS/fetchProjectInfo.js ${descriptor:1})
-#
-#  echo Updated $descriptor ...
-#done
-#
-#node $DEVOPS/countUsers.js
+for descriptor in `find $PROJECTS_DIR -type f -regex '.*\.markdown'`; do
+  filename=$(basename $descriptor)
+
+  result=$(node $DEVOPS/fetchProjectInfo.js ${descriptor:1})
+
+  echo Updated $descriptor ...
+done
+
+node $DEVOPS/countUsers.js
