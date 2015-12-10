@@ -2,43 +2,59 @@
     <div class="container-fluid b-fixed">
         <div class="container b-header-nav text-center">
             <div class="b-nav-logo">
-                <a class="b-nav-logo__item" href="{{ site.baseurl }}/index.html"></a>
+                <a class="b-nav-logo__item" href="{{ "/index.html" | prepend: site.baseurl }}"></a>
             </div>
             <div class="b-nav-menu">
                 <ul class="b-nav-menu__list">
-                    <a href="{{ site.baseurl }}/index.html"><li>Home</li></a>
-                    <a href="{{ site.baseurl }}/projects/"><li>Projects</li></a>
-                    <a href="{{ site.baseurl }}/members/"><li>Members</li></a>
-                    <a href="{{ site.baseurl }}/about-us/"><li>About</li></a>
+                    <a href="{{ "/index.html" | prepend: site.baseurl }}">
+                        <li>Home</li>
+                    </a>
+                    <a href="{{ "/projects/" | prepend: site.baseurl }}">
+                        <li>Projects</li>
+                    </a>
+                    <a href="{{ "/members/" | prepend: site.baseurl }}">
+                        <li>Members</li>
+                    </a>
+                    <a href="{{ "/about-us/" | prepend: site.baseurl }}">
+                        <li>About</li>
+                    </a>
                 </ul>
             </div>
             <div class="b-nav-mobile">
                 <div class="b-nav-mobile__hamburger">
                     <a href="#" id="js-menu-open">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
                     </a>
                 </div>
                 <ul class="b-nav-mobile__list">
-                    <a href="{{ site.baseurl }}/index.html"><li>Home</li></a>
-                    <a href="{{ site.baseurl }}/projects/"><li>Projects</li></a>
-                    <a href="{{ site.baseurl }}/members/"><li>Members</li></a>
-                    <a href="{{ site.baseurl }}/about-us/"><li>About</li></a>
+                    <a href="{{ "/index.html" | prepend: site.baseurl }}">
+                        <li>Home</li>
+                    </a>
+                    <a href="{{ "/projects/" | prepend: site.baseurl }}">
+                        <li>Projects</li>
+                    </a>
+                    <a href="{{ "/members/" | prepend: site.baseurl }}">
+                        <li>Members</li>
+                    </a>
+                    <a href="{{ "/about-us/" | prepend: site.baseurl }}">
+                        <li>About</li>
+                    </a>
                 </ul>
             </div>
         </div>
     </div>
 </header>
 
-<div class="modal fade" id="modal-join" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-     aria-hidden="true">
+<div class="modal fade" id="modal-join" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content text-center">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
             </div>
-            <h2>Be <span class="moto-underline">water</span> my friend</h2>
+            <h2>Be
+                <span class="moto-underline">water</span> my friend</h2>
 
             <div class="form-join">
                 <span>Join</span>
