@@ -1,0 +1,16 @@
+include ../logo/logo
+include ../main-menu/main-menu
+
+mixin header-inner(data)
+	header.header.header__inner-page
+		.header__inner
+			.header__logo
+				+logo()
+
+			.header__menu
+				a(href="#").button Getting started
+			
+			.header__menu
+				+main-menu(mainMenu.default)
+
+			.clear

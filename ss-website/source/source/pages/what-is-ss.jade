@@ -1,0 +1,31 @@
+include ../modules/head/head
+include ../modules/footer/footer
+include ../modules/browsehappy/browsehappy
+include ../modules/header-inner/header-inner
+include ../modules/getting-started-main/getting-started-main
+include ../modules/what-is-ss-content/what-is-ss-content
+
+
+doctype html
+html(class="no-js" lang="ru")
+
+	head
+		+head(head.home)
+
+	body.page
+		+browsehappy(browsehappy)
+		
+		.page__header
+			+header-inner()
+
+		.page__content
+			+what-is-ss-content()
+
+		+getting-started-main()
+
+		.page__footer
+			+footer()
+		
+		//- Scripts
+		script(src='js/plugins.min.js')
+		script(src='js/main.min.js')

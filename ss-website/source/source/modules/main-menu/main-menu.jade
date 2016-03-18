@@ -1,0 +1,9 @@
+
+mixin main-menu(data)
+	nav.main-menu.js-link-sroll
+		ul
+			each ent, num in data
+				li.main-menu__item
+					a(href="#{ent.url}").main-menu__link= ent.title
+		.clear
+							

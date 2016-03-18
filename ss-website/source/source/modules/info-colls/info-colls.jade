@@ -1,0 +1,10 @@
+mixin info-colls(data)
+	.info-colls
+		each ent, num in data		
+			.info-colls__item
+				.info-colls-item
+					.info-colls-item__img
+						img(src="/img/content/#{ent.img}.png")
+
+					.info-colls-item__text!= ent.text
+

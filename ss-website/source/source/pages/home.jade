@@ -1,0 +1,32 @@
+include ../modules/head/head
+include ../modules/footer/footer
+include ../modules/browsehappy/browsehappy
+include ../modules/main-slide/main-slide
+include ../modules/ss-main-info/ss-main-info
+include ../modules/possibilities-main/possibilities-main
+include ../modules/getting-started-main/getting-started-main
+
+
+doctype html
+html(class="no-js" lang="ru")
+
+	head
+		+head(head.home)
+
+	body.page
+		+browsehappy(browsehappy)
+		
+		+main-slide()
+
+		+ss-main-info()
+
+		+possibilities-main()
+
+		+getting-started-main()
+
+		.page__footer
+			+footer()
+		
+		//- Scripts
+		script(src='js/plugins.min.js')
+		script(src='js/main.min.js')

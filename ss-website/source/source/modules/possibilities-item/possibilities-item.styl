@@ -1,0 +1,92 @@
+.possibilities-item
+	position: relative;
+	width: 330px;
+	height: 110px;
+	box-sizing: border-box;
+	padding: 20px 30px;
+	line-height: normal;
+	font-size: 12px;
+	color: white
+	position: relative;
+
+	&:hover
+		z-index: 2;
+
+	&__background
+		width: 100%;
+		height: 100%;
+		background: navy
+		position: absolute;
+		left: 0;
+		top: 0;
+		transition: background-color .2s,transform .2s;
+		z-index: 1;
+
+	&:hover &__background
+		background-color: white;
+		transform: scale(1.12);
+
+	&__foreground
+		position: relative;
+		z-index: 5;
+
+	&__img
+		float: left;
+		width: 53px;
+		height: 52px;
+		margin: 6px 0 0 0;
+		overflow: hidden;
+		background-image: url(../img/possibilities-items.png);
+		background-repeat: no-repeat;
+		background-position: 0 0;
+
+		&_network
+			background-position: 0 -186px;
+
+		&_be-google
+			background-position: 0 -63px;
+
+		&_be-amazon
+			background-position: 0 -248px;
+
+		&_defence
+			background-position: 0 -126px;
+
+		&_idea
+			background-position: 0 -310px;
+
+
+	&__info
+		margin: 0 0 0 75px;
+		transition: transform .2s;
+
+	&:hover &__info
+		color: gray
+		transform: translate(0,-28px);
+
+	&__title
+		font-size: 14px;
+		padding: 0 0 10px 0;
+		margin: 0 0 0 0;
+		font-family: ubuntumedium;
+
+	&:hover &__title
+		opacity: 0;
+
+	&__text
+		padding: 0 0 10px 0;
+		margin: 0 0 0 0;
+		line-height: 18px;
+
+	&__lern-more
+		font-size: 13px;
+		text-decoration: none;
+		opacity: 0;
+		transition: opacity .2s;
+
+		&:hover
+			text-decoration: underline;
+
+	&:hover &__lern-more
+		opacity: 1;
+

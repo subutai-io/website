@@ -1,0 +1,27 @@
+.main-menu
+	ul-reset()
+
+	&__item
+		padding 5px 50px 0 0
+		list-style none
+		font-family ubuntu
+		font-size 14px
+		float left
+		position relative
+
+	&__link
+		&
+		&:visited
+			display block
+			text-decoration none
+			color white
+			transition background 300ms ease-in-out 0s
+
+		&:hover
+			color white
+			text-decoration underline
+
+	&__item:hover &__submenu
+		visibility visible
+		opacity 1
+

@@ -1,0 +1,80 @@
+
+html, body
+	height 100%
+
+
+.page
+	// Стили для body
+
+	&__content
+		transition 125ms all ease-in-out
+		background $base-bg-color
+		position relative
+		z-index 2
+		width: 960px;
+		margin: 0 auto;
+		letter-spacing: 1px;
+
+	&__row
+		height: 100%;
+
+	&__wrapper
+		min-height 100%
+		margin-bottom -50px
+		height: 100%;
+
+	&__title
+		text-align: center;
+		padding: 30px 0 50px 0;
+
+	* html &__wrapper
+		height 100%
+
+	&__buffer
+		height 50px
+
+	&__header
+		//margin-bottom 50px
+
+	&__main
+		max-width $content-width
+		margin 0 auto
+		padding-bottom 60px
+
+	&__bread-crumbs
+		//
+
+	&__cover
+		position absolute
+		left 0
+		top 0
+		right 0
+		bottom 0
+		z-index 9999
+		background-color rgba(#000, 0.3)
+		transition 125ms all ease-in-out
+		visibility hidden
+		opacity 0
+
+.center-paragraf
+	text-align: center;
+
+	& img
+		margin: 20px 0;
+
+.image-coll
+	text-align: center;
+	margin: 30px 0 0 0;
+
+.text-blocks
+	margin: 40px 0;
+
+	&__coll
+		width: 465px;
+
+		&_left
+			float: left;
+
+		&_right
+			float: right;
+
