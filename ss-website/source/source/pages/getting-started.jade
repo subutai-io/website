@@ -1,10 +1,9 @@
 include ../modules/head/head
 include ../modules/footer/footer
 include ../modules/browsehappy/browsehappy
-include ../modules/main-slide/main-slide
-include ../modules/ss-main-info/ss-main-info
-include ../modules/possibilities-main/possibilities-main
-include ../modules/getting-started-main/getting-started-main
+include ../modules/header-inner/header-inner
+include ../modules/sidebar/sidebar
+include ../modules/demo/demo
 
 
 doctype html
@@ -13,16 +12,19 @@ html(class="no-js" lang="ru")
 	head
 		+head()
 
-	body.page
+	body.page.page_background-gray
 		+browsehappy(browsehappy)
 		
-		+main-slide()
+		.page__header
+			+header-inner()
 
-		+ss-main-info()
+		.page-docs
+			+sidebar()
 
-		+possibilities-main()
+			.page-docs__content
+				+demo()
 
-		+getting-started-main()
+			.clear
 
 		.page__footer
 			+footer()

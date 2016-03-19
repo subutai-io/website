@@ -1,26 +1,25 @@
 include ../modules/head/head
 include ../modules/footer/footer
 include ../modules/browsehappy/browsehappy
-include ../modules/main-slide/main-slide
-include ../modules/ss-main-info/ss-main-info
-include ../modules/possibilities-main/possibilities-main
+include ../modules/header-inner/header-inner
 include ../modules/getting-started-main/getting-started-main
+include ../modules/crazy-possibilities/crazy-possibilities
 
 
 doctype html
 html(class="no-js" lang="ru")
 
 	head
-		+head(head.home)
+		+head()
 
 	body.page
 		+browsehappy(browsehappy)
 		
-		+main-slide()
+		.page__header
+			+header-inner()
 
-		+ss-main-info()
-
-		+possibilities-main()
+		.page__content
+			+crazy-possibilities(crazyPossibilities.default)
 
 		+getting-started-main()
 

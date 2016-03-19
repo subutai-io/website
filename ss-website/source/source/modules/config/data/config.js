@@ -1,4 +1,4 @@
 "config": {
-	"projectName": "Gulp-front",
+	"projectName": "Subutai Social",
 	"useSocialMetaTags": true
 }

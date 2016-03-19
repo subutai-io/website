@@ -2,16 +2,7 @@ include ../possibilities-item/possibilities-item
 
 mixin possibilities-list(data)
 	ul.possibilities-list
-		li.possibilities-list__item
-			+possibilities-item('service')
-		li.possibilities-list__item
-			+possibilities-item('network')
-		li.possibilities-list__item
-			+possibilities-item('be-google')
-		li.possibilities-list__item
-			+possibilities-item('be-amazon')
-		li.possibilities-list__item
-			+possibilities-item('defence')
-		li.possibilities-list__item
-			+possibilities-item('idea')
+		each ent, num in data
+			li.possibilities-list__item
+				+possibilities-item(ent)
 

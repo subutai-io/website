@@ -1,0 +1,13 @@
+
+mixin crazy-possibility(data)
+	.crazy-possibilty
+		.crazy-possibilty__img
+			.crazy-possibilty__img__inner
+				+icon(data.icon)
+
+		.crazy-possibilty__info
+			h2.crazy-possibilty__title!= data.title
+			p.crazy-possibilty__text!= data.text
+
+		.clear
+
