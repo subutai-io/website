@@ -1,9 +1,15 @@
 
 mixin crazy-possibility(data)
-	.crazy-possibilty
+	-var possibilityId = "";
+	if data.id
+		-possibilityId = data.id
+
+	.crazy-possibilty(id=possibilityId)
+
 		.crazy-possibilty__img
-			.crazy-possibilty__img__inner
-				+icon(data.icon)
+			.crazy-possibilty-img
+				.crazy-possibilty-img__inner
+					+icon(data.icon)
 
 		.crazy-possibilty__info
 			h2.crazy-possibilty__title!= data.title

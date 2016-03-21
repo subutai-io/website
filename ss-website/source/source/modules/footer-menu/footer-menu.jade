@@ -1,6 +1,6 @@
 mixin footer-menu(data)
 	ul.footer-menu.js-link-sroll
-		li.footer-menu__item
-			a(href="#ss-info") About
-		li.footer-menu__item
-			a(href="#possibilities-main") Crazy possibilities
+		each ent, num in data
+			li.footer-menu__item
+				a(href="#{ent.url}")= ent.title
+

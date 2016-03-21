@@ -3,11 +3,12 @@ include ../modules/footer/footer
 include ../modules/browsehappy/browsehappy
 include ../modules/header-inner/header-inner
 include ../modules/sidebar/sidebar
+include ../modules/page-title/page-title
 include ../modules/demo/demo
 
 
 doctype html
-html(class="no-js" lang="ru")
+html(class="no-js" lang="en")
 
 	head
 		+head()
@@ -22,7 +23,14 @@ html(class="no-js" lang="ru")
 			+sidebar()
 
 			.page-docs__content
-				+demo()
+				//-+demo()
+
+				.content-wrapper
+
+					+page-title({"title": "Page is under construction"})
+
+					section
+						p We are working on something very interesting and we will release it soon!
 
 			.clear
 

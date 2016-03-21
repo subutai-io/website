@@ -2,7 +2,7 @@
 	"default": [
 		{
 			"title":"About",
-			"url":"what-is-ss.html",
+			"url":"about.html",
 		},
 		{
 			"title":"Who is Subutai?",
