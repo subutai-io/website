@@ -16,17 +16,15 @@ html(class="no-js" lang="en")
 	body.page
 		+browsehappy(browsehappy)
 		
-		+main-slide()
+		.page__slider.js-blockScroll
+			+main-slide()
 
-		+ss-main-info()
+			+ss-main-info()
 
-		+possibilities-main()
+			+possibilities-main()
 
-		+getting-started-main()
+			+getting-started-main()
 
-		.page__footer
-			+footer()
-		
 		//- Scripts
 		script(src='js/plugins.min.js')
 		script(src='js/main.min.js')

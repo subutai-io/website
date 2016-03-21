@@ -6,10 +6,20 @@
 	flex-direction: column;
 	justify-content: center;
 
+	&_inner
+		height: 200px;
+
 	&__info
 		width: 570px;
 		margin: 0 auto;
 		position: relative;
+		height: 100%;
+
+	&_inner &__info
+		width: 960px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 
 	&-info
 		color: white
