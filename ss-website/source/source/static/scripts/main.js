@@ -41,4 +41,7 @@ $(document).ready(function() {
 	// Here insert modules scripts
 	//= require ../../../tmp/modules.js
 
+	if($('.js-blockScroll').length > 0) {
+		var blockScroller = $('.js-blockScroll').blockScroll();
+	}
 });

@@ -2,22 +2,24 @@
 	position: relative;
 	padding: 0 0 0 0;
 	margin: 0 0 0 0;
+	vertical-align: middle;
 
 	&__img
-		float: left;
+		vertical-align: middle;
+		display: inline-block;
+
+	&-img
 		width: 157px;
 		height: 157px;
 		border 1px dashed gray
 		border-radius: 50%;
 		text-align: center;
-		display: flex;
-		justify-content: center;
-		align-items: center;
 
 		&__inner
 			border-radius: 50%;
 			height: 114px;
 			width: 114px;
+			margin: 22px;
 			background-color: #f5f7f8;
 
 		& svg
@@ -25,8 +27,11 @@
 			height: 100%;
 
 	&__info
-		padding: 0 0 0 0;
-		margin: 0 0 0 230px;
+		padding: 0 0 0 73px;
+		vertical-align: middle;
+		display: inline-block;
+		box-sizing: border-box;
+		width: 730px;
 
 	&__title
 		padding: 0 0 10px 0;

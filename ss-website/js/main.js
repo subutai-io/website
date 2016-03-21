@@ -195,4 +195,7 @@ $(document).ready(function() {
 	});
 	
 
+	if($('.js-blockScroll').length > 0) {
+		var blockScroller = $('.js-blockScroll').blockScroll();
+	}
 });

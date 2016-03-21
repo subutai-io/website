@@ -3,58 +3,62 @@ include ../info-colls/info-colls
 
 mixin what-is-ss-content(data)
 
-	h1 What is Subutai Social?
+	.content-block
+		h1 What is Subutai Social?
 
-	.align-image-center
-		figure.image-captioned
-			img(src="/img/ss-info-img.png", alt="")
-			figcaption Everyone's personal computer won't just be a laptop, tablet, or wearable device: adaptive clouds will fluidly connect their owners with everything surrounding them!
+		.align-image-center
+			figure.image-captioned
+				img(src="/img/ss-info-img.png", alt="")
+				figcaption Everyone's personal computer won't just be a laptop, tablet, or wearable device: adaptive clouds will fluidly connect their owners with everything surrounding them!
 
-	p Subutai Social is all about cloud computing; Infrastructure-as-a-Service (IaaS) to be more precise. What that means, is that when you, lets say need to test a new software product but your machine doesn't fulfill the minimum requirements, it might be more cost-effective or even free to test the application through an IaaS. 
+		p Subutai Social is all about cloud computing; Infrastructure-as-a-Service (IaaS) to be more precise. What that means, is that when you, lets say need to test a new software product but your machine doesn't fulfill the minimum requirements, it might be more cost-effective or even free to test the application through an IaaS. 
 
-	p.center-paragraf
-		a(href="#").button.button_gray-text Getting started
+		p.center-paragraf
+			a(href="#").button.button_gray-text Getting started
 
-	.text-blocks
-		.text-blocks__coll.text-blocks__coll_left.image-coll
-			img(src="/img/cube.png")
+	.content-block
+		.text-blocks
+			.text-blocks__coll.text-blocks__coll_left.image-coll
+				img(src="/img/cube.png")
 
-		.text-blocks__coll.text-blocks__coll_right
-			p Subutai Social tries to combine the best of all worlds fluidly and elegantly to stimulate creativity. Ubuntu leads the pack in Cloud OS deployment. SS uses the new Ubuntu Snappy Core for it's P2P Cloud, IoT Appliance, and IoT Gateway OS: soon LXD will be used for container management when 16.04 is available.
+			.text-blocks__coll.text-blocks__coll_right
+				p Subutai Social tries to combine the best of all worlds fluidly and elegantly to stimulate creativity. Ubuntu leads the pack in Cloud OS deployment. SS uses the new Ubuntu Snappy Core for it's P2P Cloud, IoT Appliance, and IoT Gateway OS: soon LXD will be used for container management when 16.04 is available.
 
-		.clear
+			.clear
 
-	.text-blocks
-		.text-blocks__coll.text-blocks__coll_left
-			p SS's IaaS layer aims to offer an environment as close as possible to the poster child of IaaS, AWS. We will attempt to mirror as many of the AWS services available on Amazon as social services: services people can barter into with their own resources. Likewise our PaaS layer mimics the poster child of PaaS, Google App Engine (GAE). SS's default PaaS layer of choice is AppScale: a free, scalable and open source implementation of the GAE API.
+		.text-blocks
+			.text-blocks__coll.text-blocks__coll_left
+				p SS's IaaS layer aims to offer an environment as close as possible to the poster child of IaaS, AWS. We will attempt to mirror as many of the AWS services available on Amazon as social services: services people can barter into with their own resources. Likewise our PaaS layer mimics the poster child of PaaS, Google App Engine (GAE). SS's default PaaS layer of choice is AppScale: a free, scalable and open source implementation of the GAE API.
 
-		.text-blocks__coll.text-blocks__coll_right.image-coll
-			img(src="/img/square.png")
+			.text-blocks__coll.text-blocks__coll_right.image-coll
+				img(src="/img/square.png")
 
-		.clear
+			.clear
 
-	p.center-paragraf
-		| Subutai Social connects people and their resources together to enable
-		br
-		| everyone to learn, build, and gain experience on these best of breed platforms 
-		br
-		| to participate in the creative cloud economy regardless of their environment.
+		p.center-paragraf
+			| Subutai Social connects people and their resources together to enable
+			br
+			| everyone to learn, build, and gain experience on these best of breed platforms 
+			br
+			| to participate in the creative cloud economy regardless of their environment.
 
 	h2.page__title So what does this mean in real life?
 
 	+info-colls(info_colls.default)
 
-	h2.page__title Torrent is also part of p2p technology, but for sharing files
+	.content-block
+		h2.page__title Torrent is also part of p2p technology, but for sharing files
 
-	p If you've ever rapidly downloaded files via torrent, you've already experienced the power gained by p2p technology for file sharing. The files download much faster right? That's because separate parts of the file are downloaded in parallel from different peers instead of downloading the whole file from a single server that everyone pulls from. The cumulative bandwidth of all peers speed up the download without causing traffic congestion at a single server. Torrent peers participate in a single public swarm for p2p file sharing.
+		p If you've ever rapidly downloaded files via torrent, you've already experienced the power gained by p2p technology for file sharing. The files download much faster right? That's because separate parts of the file are downloaded in parallel from different peers instead of downloading the whole file from a single server that everyone pulls from. The cumulative bandwidth of all peers speed up the download without causing traffic congestion at a single server. Torrent peers participate in a single public swarm for p2p file sharing.
 
-	p.align-image-center
-		img(src="/img/content/clouds1.png")
+		p.align-image-center
+			img(src="/img/content/clouds1.png")
 
-	h2.page__title Subutai Social is p2p technology for sharing of hardware resources
+	.content-block
+		h2.page__title Subutai Social is p2p technology for sharing of hardware resources
 
-	p Imagine being able to use p2p technologies to share more than just files, but any hardware resource, with ONLY those peers you trust. You may create virtual cloud environments connected to devices with resources shared across several peers on your own swarm. The ability to share any hardware resource (i.e. disk, network, memory, and processors) allows p2p cloud environments to gain resources and grow beyond what's available locally at a single peer. Unimaginable services start to seem possible when one considers the limitless potential of p2p cloud computing.
+		p Imagine being able to use p2p technologies to share more than just files, but any hardware resource, with ONLY those peers you trust. You may create virtual cloud environments connected to devices with resources shared across several peers on your own swarm. The ability to share any hardware resource (i.e. disk, network, memory, and processors) allows p2p cloud environments to gain resources and grow beyond what's available locally at a single peer. Unimaginable services start to seem possible when one considers the limitless potential of p2p cloud computing.
 
-	p.align-image-center
-		img(src="/img/content/clouds2.png")
+		p.align-image-center
+			img(src="/img/content/clouds2.png")
 

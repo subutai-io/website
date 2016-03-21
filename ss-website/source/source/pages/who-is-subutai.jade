@@ -2,12 +2,12 @@ include ../modules/head/head
 include ../modules/footer/footer
 include ../modules/browsehappy/browsehappy
 include ../modules/header-inner/header-inner
-include ../modules/getting-started-main/getting-started-main
+include ../modules/getting-started-main/getting-started-inner
 include ../modules/who-is-subutai/who-is-subutai
 
 
 doctype html
-html(class="no-js" lang="ru")
+html(class="no-js" lang="en")
 
 	head
 		+head()
@@ -21,7 +21,7 @@ html(class="no-js" lang="ru")
 		.page__content
 			+who-is-subutai()
 
-		+getting-started-main()
+		+getting-started-inner()
 
 		.page__footer
 			+footer()

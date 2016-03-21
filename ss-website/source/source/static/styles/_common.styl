@@ -16,7 +16,8 @@ html, body
 		letter-spacing: 1px;
 
 	&__row
-		height: 100%;
+		height: 100%!important;
+		padding: 0!important;
 
 	&__wrapper
 		min-height 100%
@@ -38,8 +39,13 @@ html, body
 		&__content
 			background-color: #FFF;
 			max-width: 840px;
-			padding: 60px 80px 20px;
+			padding: 60px 80px;
 			margin: 0 0 0 300px;
+			padding-bottom: 20000px;
+			margin-bottom: -20000px;
+
+	&__slider
+		height: 100%;
 
 	* html &__wrapper
 		height 100%

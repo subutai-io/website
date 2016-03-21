@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru" class="no-js">
+<html lang="en" class="no-js">
 
 	<head>
 		<meta charset="utf-8" />
@@ -59,12 +59,14 @@
 
 		<!--[if gt IE 8]><!-->
 		<script src="js/jquery-2.1.4.min.js"></script>
+		<script src="js/jquery.mousewheel.min.js"></script>
+		<script src="js/blockScroll.js"></script>
 		<!--<![endif]-->
 	</head>
 
 	<body class="page">
 		<!--[if lt IE 8]>
-		<p class="browsehappy">Вы используете<strong>устаревший</strong> браузер. Пожалуйста<a href="http://browsehappy.com" target="_blank">обновите браузер</a> для лучшего отображения сайта.</p><![endif]-->
+		<p class="browsehappy">You are using an<strong>outdated</strong> browser. Please<a href="http://browsehappy.com" target="_blank">upgrade your browser</a> to improve your experience.</p><![endif]-->
 		<div class="page__header">
 			<header class="header header__inner-page">
 				<div class="header__inner">
@@ -80,10 +82,10 @@
 						<nav class="main-menu js-link-sroll">
 							<ul>
 								<li class="main-menu__item">
-									<a href="what-is-ss.html" class="main-menu__link">What is SS ?</a>
+									<a href="about.html" class="main-menu__link">About</a>
 								</li>
 								<li class="main-menu__item">
-									<a href="who-is-subutai.html" class="main-menu__link">About Subutai Social</a>
+									<a href="who-is-subutai.html" class="main-menu__link">Who is Subutai?</a>
 								</li>
 								<li class="main-menu__item">
 									<a href="crazy-possibilities.html" class="main-menu__link">Crazy possibilities</a>
@@ -102,12 +104,14 @@
 				<div class="crazy-possibilties__list">
 					<div class="crazy-possibilties-list">
 						<div class="crazy-possibilties-list__item">
-							<div class="crazy-possibilty">
+							<div id="socialized-services" class="crazy-possibilty">
 								<div class="crazy-possibilty__img">
-									<div class="crazy-possibilty__img__inner">
-										<svg class="icon icon_socialized_service">
-											<use xlink:href="/img/icons.svg#socialized_service"></use>
-										</svg>
+									<div class="crazy-possibilty-img">
+										<div class="crazy-possibilty-img__inner">
+											<svg class="icon icon_ss-site-socialized-services">
+												<use xlink:href="/img/icons.svg#ss-site-socialized-services"></use>
+											</svg>
+										</div>
 									</div>
 								</div>
 								<div class="crazy-possibilty__info">
@@ -119,12 +123,14 @@
 							</div>
 						</div>
 						<div class="crazy-possibilties-list__item">
-							<div class="crazy-possibilty">
+							<div id="content-distribution" class="crazy-possibilty">
 								<div class="crazy-possibilty__img">
-									<div class="crazy-possibilty__img__inner">
-										<svg class="icon icon_content_distr">
-											<use xlink:href="/img/icons.svg#content_distr"></use>
-										</svg>
+									<div class="crazy-possibilty-img">
+										<div class="crazy-possibilty-img__inner">
+											<svg class="icon icon_ss-site-content-distribution">
+												<use xlink:href="/img/icons.svg#ss-site-content-distribution"></use>
+											</svg>
+										</div>
 									</div>
 								</div>
 								<div class="crazy-possibilty__info">
@@ -136,12 +142,14 @@
 							</div>
 						</div>
 						<div class="crazy-possibilties-list__item">
-							<div class="crazy-possibilty">
+							<div id="own-google" class="crazy-possibilty">
 								<div class="crazy-possibilty__img">
-									<div class="crazy-possibilty__img__inner">
-										<svg class="icon icon_google">
-											<use xlink:href="/img/icons.svg#google"></use>
-										</svg>
+									<div class="crazy-possibilty-img">
+										<div class="crazy-possibilty-img__inner">
+											<svg class="icon icon_ss-site-own-google">
+												<use xlink:href="/img/icons.svg#ss-site-own-google"></use>
+											</svg>
+										</div>
 									</div>
 								</div>
 								<div class="crazy-possibilty__info">
@@ -153,12 +161,14 @@
 							</div>
 						</div>
 						<div class="crazy-possibilties-list__item">
-							<div class="crazy-possibilty">
+							<div id="own-amazon" class="crazy-possibilty">
 								<div class="crazy-possibilty__img">
-									<div class="crazy-possibilty__img__inner">
-										<svg class="icon icon_amazon">
-											<use xlink:href="/img/icons.svg#amazon"></use>
-										</svg>
+									<div class="crazy-possibilty-img">
+										<div class="crazy-possibilty-img__inner">
+											<svg class="icon icon_ss-site-own-amazon">
+												<use xlink:href="/img/icons.svg#ss-site-own-amazon"></use>
+											</svg>
+										</div>
 									</div>
 								</div>
 								<div class="crazy-possibilty__info">
@@ -170,12 +180,14 @@
 							</div>
 						</div>
 						<div class="crazy-possibilties-list__item">
-							<div class="crazy-possibilty">
+							<div id="cyber-defence" class="crazy-possibilty">
 								<div class="crazy-possibilty__img">
-									<div class="crazy-possibilty__img__inner">
-										<svg class="icon icon_collective_cyber">
-											<use xlink:href="/img/icons.svg#collective_cyber"></use>
-										</svg>
+									<div class="crazy-possibilty-img">
+										<div class="crazy-possibilty-img__inner">
+											<svg class="icon icon_ss-site-cyber-defence">
+												<use xlink:href="/img/icons.svg#ss-site-cyber-defence"></use>
+											</svg>
+										</div>
 									</div>
 								</div>
 								<div class="crazy-possibilty__info">
@@ -187,12 +199,14 @@
 							</div>
 						</div>
 						<div class="crazy-possibilties-list__item">
-							<div class="crazy-possibilty">
+							<div id="virtual-office" class="crazy-possibilty">
 								<div class="crazy-possibilty__img">
-									<div class="crazy-possibilty__img__inner">
-										<svg class="icon icon_virtual_office">
-											<use xlink:href="/img/icons.svg#virtual_office"></use>
-										</svg>
+									<div class="crazy-possibilty-img">
+										<div class="crazy-possibilty-img__inner">
+											<svg class="icon icon_ss-site-virtual-office">
+												<use xlink:href="/img/icons.svg#ss-site-virtual-office"></use>
+											</svg>
+										</div>
 									</div>
 								</div>
 								<div class="crazy-possibilty__info">
@@ -204,12 +218,14 @@
 							</div>
 						</div>
 						<div class="crazy-possibilties-list__item">
-							<div class="crazy-possibilty">
+							<div id="virtual-electronics" class="crazy-possibilty">
 								<div class="crazy-possibilty__img">
-									<div class="crazy-possibilty__img__inner">
-										<svg class="icon icon_virtual_electronics">
-											<use xlink:href="/img/icons.svg#virtual_electronics"></use>
-										</svg>
+									<div class="crazy-possibilty-img">
+										<div class="crazy-possibilty-img__inner">
+											<svg class="icon icon_ss-site-virtual-electronics">
+												<use xlink:href="/img/icons.svg#ss-site-virtual-electronics"></use>
+											</svg>
+										</div>
 									</div>
 								</div>
 								<div class="crazy-possibilty__info">
@@ -225,13 +241,12 @@
 				</div>
 			</div>
 		</div>
-		<div class="getting-started-main">
+		<div class="getting-started-main getting-started-main_inner">
 			<div class="getting-started-main__info">
 				<div class="getting-started-main-info">
-					<h1 class="getting-started-main-info__title">GETTING STARTED</h1>
-					<p class="getting-started-main-info__text">Subutai Social is Open Source product, you can install on every major platform. Even if you stuck, our smart and fast support team can help</p>
+					<p class="getting-started-main-info__text">If you feel crazy enough to get involved with any of those Crazy Possibilities let us know!</p>
 					<p class="getting-started-main-info__button">
-						<a href="#" class="button">Install</a>
+						<a href="getting-started.html" class="button">Getting started</a>
 					</p>
 				</div>
 			</div>
@@ -242,19 +257,19 @@
 					<div class="footer__menu">
 						<ul class="footer-menu js-link-sroll">
 							<li class="footer-menu__item">
-								<a href="#ss-info">About Subutai Social</a>
+								<a href="about.html">About</a>
 							</li>
 							<li class="footer-menu__item">
-								<a href="#possibilities-main">Crazy possibilities</a>
+								<a href="who-is-subutai.html">Who is Subutai?</a>
+							</li>
+							<li class="footer-menu__item">
+								<a href="crazy-possibilities.html">Crazy possibilities</a>
 							</li>
 						</ul>
 						<div class="clear"></div>
 					</div>
 					<div class="footer__social">
 						<ul class="footer-social">
-							<li class="footer-social__item">
-								<a href="#" class="footer-social-item footer-social-item_hz"></a>
-							</li>
 							<li class="footer-social__item">
 								<a href="#" class="footer-social-item footer-social-item_facebook"></a>
 							</li>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru" class="no-js">
+<html lang="en" class="no-js">
 
 	<head>
 		<meta charset="utf-8" />
@@ -59,194 +59,196 @@
 
 		<!--[if gt IE 8]><!-->
 		<script src="js/jquery-2.1.4.min.js"></script>
+		<script src="js/jquery.mousewheel.min.js"></script>
+		<script src="js/blockScroll.js"></script>
 		<!--<![endif]-->
 	</head>
 
 	<body class="page">
 		<!--[if lt IE 8]>
-		<p class="browsehappy">Вы используете<strong>устаревший</strong> браузер. Пожалуйста<a href="http://browsehappy.com" target="_blank">обновите браузер</a> для лучшего отображения сайта.</p><![endif]-->
-		<div class="main-slide page__row">
-			<div class="main-slide__background main-slide__clouds-bg"></div>
-			<div class="main-slide__background main-slide__gradient-bg"></div>
-			<div class="main-slide__content">
-				<header class="header">
-					<div class="header__logo">
-						<a href="index.html" class="logo">
-							<img src="img/logo.png" class="logo__img" />
-						</a>
+		<p class="browsehappy">You are using an<strong>outdated</strong> browser. Please<a href="http://browsehappy.com" target="_blank">upgrade your browser</a> to improve your experience.</p><![endif]-->
+		<div class="page__slider js-blockScroll">
+			<div class="main-slide page__row">
+				<div class="main-slide__background main-slide__clouds-bg"></div>
+				<div class="main-slide__background main-slide__gradient-bg"></div>
+				<div class="main-slide__content">
+					<header class="header">
+						<div class="header__logo">
+							<a href="index.html" class="logo">
+								<img src="img/logo.png" class="logo__img" />
+							</a>
+						</div>
+						<div class="header__menu">
+							<a href="getting-started.html" class="button">Getting started</a>
+						</div>
+						<div class="header__menu">
+							<nav class="main-menu js-link-sroll">
+								<ul>
+									<li class="main-menu__item">
+										<a href="about.html" class="main-menu__link">About</a>
+									</li>
+									<li class="main-menu__item">
+										<a href="who-is-subutai.html" class="main-menu__link">Who is Subutai?</a>
+									</li>
+									<li class="main-menu__item">
+										<a href="crazy-possibilities.html" class="main-menu__link">Crazy possibilities</a>
+									</li>
+								</ul>
+								<div class="clear"></div>
+							</nav>
+						</div>
+						<div class="clear"></div>
+					</header>
+					<div class="main-slide-content">
+						<h1 class="main-slide-content__title">A new era in computing is coming </h1>
+						<p class="main-slide-content__text">Everyone's personal computer won't just be a laptop, tablet, or wearable device: adaptive clouds will fluidly connect their owners with everything surrounding them!</p>
+						<div class="main-slide-content__button">
+							<a href="getting-started.html" class="button">Join the Subutai Social Revolution</a>
+						</div>
 					</div>
-					<div class="header__menu">
-						<a href="getting-started.html" class="button">Getting started</a>
+				</div>
+			</div>
+			<div id="ss-info" class="ss-main-info page__row">
+				<div class="ss-main-info__text">
+					<div class="ss-main-info-text">
+						<h1 class="ss-main-info-text__title">Subutai Social is a new p2p cloud and fog “IoT” computing platform.</h1>
+						<p class="ss-main-info-text__text">With the help of the Subutai Social individuals from all over the globe come together to create secure virtual environments and share physical machine resources across peers.</p>
+						<p class="ss-main-info-text__button">
+							<a href="about.html" class="button button_gray-text">Read more</a>
+						</p>
 					</div>
-					<div class="header__menu">
-						<nav class="main-menu js-link-sroll">
-							<ul>
-								<li class="main-menu__item">
-									<a href="what-is-ss.html" class="main-menu__link">What is SS ?</a>
+				</div>
+			</div>
+			<div id="possibilities-main" class="possibilities-main page__row">
+				<div class="possibilities-main__inner">
+					<div class="possibilities-main__title">LEARN OUR CRAZY POSSIBILITIES</div>
+					<div class="possibilities-main__list">
+						<ul class="possibilities-list">
+							<li class="possibilities-list__item">
+								<div class="possibilities-item">
+									<div class="possibilities-item__background"></div>
+									<div class="possibilities-item__foreground">
+										<div class="possibilities-item__img possibilities-item__img_service"></div>
+										<div class="possibilities-item__info">
+											<h2 class="possibilities-item__title">Socialized Services</h2>
+											<p class="possibilities-item__text">P2P is all about sharing, and sharing is a social activity.</p>
+											<a href="crazy-possibilities.html#socialized-services" class="possibilities-item__lern-more">Learn more ...</a>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="possibilities-list__item">
+								<div class="possibilities-item">
+									<div class="possibilities-item__background"></div>
+									<div class="possibilities-item__foreground">
+										<div class="possibilities-item__img possibilities-item__img_network"></div>
+										<div class="possibilities-item__info">
+											<h2 class="possibilities-item__title">Content Distribution Network</h2>
+											<p class="possibilities-item__text">Content distribution is already possible even using dynamic resource host...</p>
+											<a href="crazy-possibilities.html#content-distribution" class="possibilities-item__lern-more">Learn more ...</a>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="possibilities-list__item">
+								<div class="possibilities-item">
+									<div class="possibilities-item__background"></div>
+									<div class="possibilities-item__foreground">
+										<div class="possibilities-item__img possibilities-item__img_be-google"></div>
+										<div class="possibilities-item__info">
+											<h2 class="possibilities-item__title">Be Your Own Google</h2>
+											<p class="possibilities-item__text">AppScale has been integrated with Subutai Social to provide a Google...</p>
+											<a href="crazy-possibilities.html#own-google" class="possibilities-item__lern-more">Learn more ...</a>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="possibilities-list__item">
+								<div class="possibilities-item">
+									<div class="possibilities-item__background"></div>
+									<div class="possibilities-item__foreground">
+										<div class="possibilities-item__img possibilities-item__img_be-amazon"></div>
+										<div class="possibilities-item__info">
+											<h2 class="possibilities-item__title">Be Your Own Amazon</h2>
+											<p class="possibilities-item__text">Subutai Social's IaaS layer is in fact a socialized infrastructure as a service.</p>
+											<a href="crazy-possibilities.html#own-amazon" class="possibilities-item__lern-more">Learn more ...</a>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="possibilities-list__item">
+								<div class="possibilities-item">
+									<div class="possibilities-item__background"></div>
+									<div class="possibilities-item__foreground">
+										<div class="possibilities-item__img possibilities-item__img_defence"></div>
+										<div class="possibilities-item__info">
+											<h2 class="possibilities-item__title">Collective Cyber Defence</h2>
+											<p class="possibilities-item__text">Socially security exists in society and among nations.</p>
+											<a href="crazy-possibilities.html#cyber-defence" class="possibilities-item__lern-more">Learn more ...</a>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="possibilities-list__item">
+								<div class="possibilities-item">
+									<div class="possibilities-item__background"></div>
+									<div class="possibilities-item__foreground">
+										<div class="possibilities-item__img possibilities-item__img_idea"></div>
+										<div class="possibilities-item__info">
+											<h2 class="possibilities-item__title">IDEA: Virtual Office</h2>
+											<p class="possibilities-item__text">Excited about building applications that can run across peer-to-peer...</p>
+											<a href="crazy-possibilities.html#virtual-office" class="possibilities-item__lern-more">Learn more ...</a>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+			<div class="getting-started-main">
+				<div class="getting-started-main__info">
+					<div class="getting-started-main-info">
+						<h1 class="getting-started-main-info__title">GETTING STARTED</h1>
+						<p class="getting-started-main-info__text">Subutai Social is Open Source product, you can install on every major platform. Even if you stuck, our smart and fast support team can help</p>
+						<p class="getting-started-main-info__button">
+							<a href="getting-started.html" class="button">Install</a>
+						</p>
+					</div>
+				</div>
+				<footer class="footer">
+					<div class="footer__inner">
+						<div class="footer__menu">
+							<ul class="footer-menu js-link-sroll">
+								<li class="footer-menu__item">
+									<a href="about.html">About</a>
 								</li>
-								<li class="main-menu__item">
-									<a href="who-is-subutai.html" class="main-menu__link">About Subutai Social</a>
+								<li class="footer-menu__item">
+									<a href="who-is-subutai.html">Who is Subutai?</a>
 								</li>
-								<li class="main-menu__item">
-									<a href="crazy-possibilities.html" class="main-menu__link">Crazy possibilities</a>
+								<li class="footer-menu__item">
+									<a href="crazy-possibilities.html">Crazy possibilities</a>
 								</li>
 							</ul>
 							<div class="clear"></div>
-						</nav>
-					</div>
-					<div class="clear"></div>
-				</header>
-				<div class="main-slide-content">
-					<h1 class="main-slide-content__title">A new era in computing is coming </h1>
-					<p class="main-slide-content__text">Everyone's personal computer won't just be a laptop, tablet, or wearable device: adaptive clouds will fluidly connect their owners with everything surrounding them!</p>
-					<div class="main-slide-content__button">
-						<a href="#" class="button">Join the Subutai Social Revolution</a>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div id="ss-info" class="ss-main-info page__row">
-			<div class="ss-main-info__text">
-				<div class="ss-main-info-text">
-					<h1 class="ss-main-info-text__title">Subutai Social is a striving new p2p cloud and fog “IoT” computing platform.</h1>
-					<p class="ss-main-info-text__text">With help of Subutai Social individuals all over the globe come together to create secure virtual environments and share physical machine resources across peers.</p>
-					<p class="ss-main-info-text__button">
-						<a href="#" class="button button_gray-text">Read more</a>
-					</p>
-				</div>
-			</div>
-		</div>
-		<div id="possibilities-main" class="possibilities-main page__row">
-			<div class="possibilities-main__inner">
-				<div class="possibilities-main__title">LEARN OUR CRAZY POSSIBILITIES</div>
-				<div class="possibilities-main__list">
-					<ul class="possibilities-list">
-						<li class="possibilities-list__item">
-							<div class="possibilities-item">
-								<div class="possibilities-item__background"></div>
-								<div class="possibilities-item__foreground">
-									<div class="possibilities-item__img possibilities-item__img_service"></div>
-									<div class="possibilities-item__info">
-										<h2 class="possibilities-item__title">Socialized Services</h2>
-										<p class="possibilities-item__text">P2P is all about sharing, and sharing is a social activity.</p>
-										<a href="#" class="possibilities-item__lern-more">Learn more ...</a>
-									</div>
-								</div>
-							</div>
-						</li>
-						<li class="possibilities-list__item">
-							<div class="possibilities-item">
-								<div class="possibilities-item__background"></div>
-								<div class="possibilities-item__foreground">
-									<div class="possibilities-item__img possibilities-item__img_network"></div>
-									<div class="possibilities-item__info">
-										<h2 class="possibilities-item__title">Content Distribution Network</h2>
-										<p class="possibilities-item__text">Content distribution is already possible even using dynamic resource host...</p>
-										<a href="#" class="possibilities-item__lern-more">Learn more ...</a>
-									</div>
-								</div>
-							</div>
-						</li>
-						<li class="possibilities-list__item">
-							<div class="possibilities-item">
-								<div class="possibilities-item__background"></div>
-								<div class="possibilities-item__foreground">
-									<div class="possibilities-item__img possibilities-item__img_be-google"></div>
-									<div class="possibilities-item__info">
-										<h2 class="possibilities-item__title">Be Your Own Google</h2>
-										<p class="possibilities-item__text">AppScale has been integrated with Subutai Social to provide a Google...</p>
-										<a href="#" class="possibilities-item__lern-more">Learn more ...</a>
-									</div>
-								</div>
-							</div>
-						</li>
-						<li class="possibilities-list__item">
-							<div class="possibilities-item">
-								<div class="possibilities-item__background"></div>
-								<div class="possibilities-item__foreground">
-									<div class="possibilities-item__img possibilities-item__img_be-amazon"></div>
-									<div class="possibilities-item__info">
-										<h2 class="possibilities-item__title">Be Your Own Amazon</h2>
-										<p class="possibilities-item__text">Subutai Social's IaaS layer is in fact a socialized infrastructure as a service.</p>
-										<a href="#" class="possibilities-item__lern-more">Learn more ...</a>
-									</div>
-								</div>
-							</div>
-						</li>
-						<li class="possibilities-list__item">
-							<div class="possibilities-item">
-								<div class="possibilities-item__background"></div>
-								<div class="possibilities-item__foreground">
-									<div class="possibilities-item__img possibilities-item__img_defence"></div>
-									<div class="possibilities-item__info">
-										<h2 class="possibilities-item__title">Collective Cyber Defence</h2>
-										<p class="possibilities-item__text">Socially security exists in society and among nations.</p>
-										<a href="#" class="possibilities-item__lern-more">Learn more ...</a>
-									</div>
-								</div>
-							</div>
-						</li>
-						<li class="possibilities-list__item">
-							<div class="possibilities-item">
-								<div class="possibilities-item__background"></div>
-								<div class="possibilities-item__foreground">
-									<div class="possibilities-item__img possibilities-item__img_idea"></div>
-									<div class="possibilities-item__info">
-										<h2 class="possibilities-item__title">IDEA: Virtual Office</h2>
-										<p class="possibilities-item__text">Excited about building applications that can run across peer-to-peer...</p>
-										<a href="#" class="possibilities-item__lern-more">Learn more ...</a>
-									</div>
-								</div>
-							</div>
-						</li>
-					</ul>
-				</div>
-				<div class="clear"></div>
-			</div>
-		</div>
-		<div class="getting-started-main">
-			<div class="getting-started-main__info">
-				<div class="getting-started-main-info">
-					<h1 class="getting-started-main-info__title">GETTING STARTED</h1>
-					<p class="getting-started-main-info__text">Subutai Social is Open Source product, you can install on every major platform. Even if you stuck, our smart and fast support team can help</p>
-					<p class="getting-started-main-info__button">
-						<a href="#" class="button">Install</a>
-					</p>
-				</div>
-			</div>
-		</div>
-		<div class="page__footer">
-			<footer class="footer">
-				<div class="footer__inner">
-					<div class="footer__menu">
-						<ul class="footer-menu js-link-sroll">
-							<li class="footer-menu__item">
-								<a href="#ss-info">About Subutai Social</a>
-							</li>
-							<li class="footer-menu__item">
-								<a href="#possibilities-main">Crazy possibilities</a>
-							</li>
-						</ul>
+						</div>
+						<div class="footer__social">
+							<ul class="footer-social">
+								<li class="footer-social__item">
+									<a href="#" class="footer-social-item footer-social-item_facebook"></a>
+								</li>
+								<li class="footer-social__item">
+									<a href="#" class="footer-social-item footer-social-item_twitter"></a>
+								</li>
+							</ul>
+							<div class="clear"></div>
+						</div>
+						<span class="to-top-arrow footer__arrow js-to-top-arrow"></span>
 						<div class="clear"></div>
 					</div>
-					<div class="footer__social">
-						<ul class="footer-social">
-							<li class="footer-social__item">
-								<a href="#" class="footer-social-item footer-social-item_hz"></a>
-							</li>
-							<li class="footer-social__item">
-								<a href="#" class="footer-social-item footer-social-item_facebook"></a>
-							</li>
-							<li class="footer-social__item">
-								<a href="#" class="footer-social-item footer-social-item_twitter"></a>
-							</li>
-						</ul>
-						<div class="clear"></div>
-					</div>
-					<span class="to-top-arrow footer__arrow js-to-top-arrow"></span>
-					<div class="clear"></div>
-				</div>
-			</footer>
+				</footer>
+			</div>
 		</div>
 		<script src="js/plugins.min.js"></script>
 		<script src="js/main.min.js"></script>
