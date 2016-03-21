@@ -1,11 +1,11 @@
 "mainMenu": {
 	"default": [
 		{
-			"title":"What is SS ?",
+			"title":"About",
 			"url":"what-is-ss.html",
 		},
 		{
-			"title":"About Subutai Social",
+			"title":"Who is Subutai?",
 			"url":"who-is-subutai.html",
 		},
 		{
