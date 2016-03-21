@@ -405,6 +405,8 @@ h6
     line-height: normal;
 
     margin: 1.2em 0 1.2em;
+
+    color: #303644;
 }
 
 h1
@@ -543,10 +545,10 @@ q q
 
 blockquote
 {
-    margin: 0 0 22px;
-    padding: 11px;
+    margin: 0 0 22px 30px;
+    padding: 11px 11px 11px 37px;
 
-    border-left: 5px solid #eee;
+    border-left: 1px solid #666;
 }
 
 blockquote p:last-child,

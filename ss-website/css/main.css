@@ -881,6 +881,108 @@ input[type='button'].button_block
     color: #000;
 }
 
+.crazy-possibilties
+{
+    position: relative;
+
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+
+.crazy-possibilties__list
+{
+    padding: 0 0 0 0;
+}
+
+.crazy-possibilties-list
+{
+    padding: 0 0 0 0;
+}
+
+.crazy-possibilties-list__item
+{
+    padding: 0 0 40px 0;
+}
+
+.crazy-possibilty
+{
+    position: relative;
+
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+
+.crazy-possibilty__img
+{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display:    -moz-box;
+    display: -ms-flexbox;
+    display:         flex;
+    float: left;
+
+    width: 157px;
+    height: 157px;
+
+    text-align: center;
+
+    border: 1px dashed #303644;
+    border-radius: 50%;
+
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+       -moz-box-pack: center;
+    -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+    -ms-flex-align: center;
+            align-items: center;
+}
+
+.crazy-possibilty__img__inner
+{
+    width: 114px;
+    height: 114px;
+
+    border-radius: 50%;
+    background-color: #f5f7f8;
+}
+
+.crazy-possibilty__img svg
+{
+    width: 100%;
+    height: 100%;
+}
+
+.crazy-possibilty__info
+{
+    margin: 0 0 0 230px;
+    padding: 0 0 0 0;
+}
+
+.crazy-possibilty__title
+{
+    font-size: 16px;
+
+    margin: 0 0 0 0;
+    padding: 0 0 10px 0;
+
+    color: #303644;
+}
+
+.crazy-possibilty__text
+{
+    font-size: 14px;
+    line-height: 22px;
+
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+
+    color: #303644;
+}
+
 .footer
 {
     background: #fff;
@@ -2182,7 +2284,7 @@ input[type='reset'] .styler[disabled]
 
 .header__inner
 {
-    width: 1100px;
+    max-width: 1100px;
     margin: 0 auto;
     padding: 0 0 20px 0;
 }
@@ -2460,6 +2562,8 @@ input[type='reset'] .styler[disabled]
 
     margin: 0 0 0 0;
     padding: 0 0 20px 0;
+
+    color: #fff;
 }
 
 .main-slide-content__text
@@ -2891,7 +2995,7 @@ html.remodal-is-locked
             box-sizing: border-box;
     width: 330px;
     height: 110px;
-    padding: 20px 30px;
+    padding: 20px 11px 20px 30px;
 
     color: #fff;
 }
@@ -3003,6 +3107,8 @@ html.remodal-is-locked
 
     margin: 0 0 0 0;
     padding: 0 0 10px 0;
+
+    color: #fff;
 }
 
 .possibilities-item:hover .possibilities-item__title
@@ -3014,8 +3120,11 @@ html.remodal-is-locked
 {
     line-height: 18px;
 
-    margin: 0 0 0 0;
-    padding: 0 0 10px 0;
+    overflow: hidden;
+
+    height: 36px;
+    margin: 0 0 10px 0;
+    padding: 0 0 0 0;
 }
 
 .possibilities-item__lern-more
@@ -3333,13 +3442,21 @@ html.remodal-is-locked
 
 .sidebar
 {
-    padding-top: 14px;
-}
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
 
-.sidebar-menu
-{
-    border: 1px solid #dadada;
-    background: #fff;
+    float: left;
+
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 300px;
+    min-height: 100%;
+    padding: 50px 0 0 10px;
+
+    background-color: #404651;
 }
 
 .sidebar-menu ul
@@ -3362,9 +3479,16 @@ html.remodal-is-locked
 {
     font-size: 14px;
 
-    padding: 0 0 4px 0;
+    padding: 0 0 0 0;
 
     list-style: none;
+
+    color: #fff;
+}
+
+.sidebar-menu__link
+{
+    color: #fff;
 }
 
 .sidebar-menu__link,
@@ -3374,19 +3498,23 @@ html.remodal-is-locked
 
     display: block;
 
-    padding: 6px 20px 8px;
+    padding: 6px 27px 8px;
 
     text-decoration: none;
+
+    color: #fff;
 }
 
 .sidebar-menu__link:hover
 {
     text-decoration: underline;
+
+    color: #fff;
 }
 
 .sidebar-menu__submenu
 {
-    padding: 0 20px 0 40px;
+    padding: 0 20px 0 27px;
 }
 
 .social-icons
@@ -3567,6 +3695,29 @@ body
     padding: 30px 0 50px 0;
 
     text-align: center;
+}
+
+.page_background-gray
+{
+    background-color: #dce1e5;
+}
+
+.page-docs
+{
+    position: relative;
+
+    overflow: hidden;
+
+    min-height: 100%;
+}
+
+.page-docs__content
+{
+    max-width: 840px;
+    margin: 0 0 0 300px;
+    padding: 60px 80px 20px;
+
+    background-color: #fff;
 }
 
 * html .page__wrapper
