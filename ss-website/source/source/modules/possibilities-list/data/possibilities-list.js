@@ -8,9 +8,9 @@
 		},
 		{
 			"id": "content-distribution",
-			"title":"Content Distribution Network",
+			"title":"Content Distribution",
 			"icon":"network",
-			"text":"Content distribution is already possible even using dynamic resource host..."
+			"text":"Content distribution is already here today using dynamic resource host..."
 		},
 		{
 			"id": "own-google",

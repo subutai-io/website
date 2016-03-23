@@ -640,8 +640,8 @@ input[type='button'].button_block
 .button_size_default:visited
 {
     color: #fff;
-    border-color: #078dd0;
-    background-color: transparent;
+    border-color: #2681a5;
+    background-color: #078dd0;
 }
 
 .button:focus,
@@ -652,8 +652,8 @@ input[type='button'].button_block
 .button_size_default:active
 {
     color: #fff;
-    border-color: #078dd0;
-    background-color: #078dd0;
+    border-color: #2681a5;
+    background-color: #2681a5;
 }
 
 .button:active,
@@ -680,8 +680,8 @@ input[type='button'].button_block
 .button_size_default.button[disabled]:active
 {
     color: #fff;
-    border-color: #078dd0;
-    background-color: transparent;
+    border-color: #2681a5;
+    background-color: #078dd0;
 }
 
 .button_gray-text,
