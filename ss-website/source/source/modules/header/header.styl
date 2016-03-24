@@ -1,15 +1,37 @@
 .header
 	width: 100%;
 	padding: 20px 0 0 0;
+	+below($media-screen-md)
+		padding 20px 20px 0 20px
+		box-sizing border-box
+	+below($media-screen-sm)
+		padding 20px
+		box-sizing border-box
 
 	&__inner
 		max-width: 1100px;
 		margin: 0 auto;
 		padding: 0 0 20px 0;
-
+		+below($media-screen-sm)
+			padding 0
 	&__logo
 		float: left;
+	&__bars-icon
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		font-size: 28px;
+		display: none;
+		color blue
+		+below($media-screen-sm)
+			display: block;
 
 	&__menu
 		float: right;
-
+		&_button
+			+below($media-screen-sm)
+				margin-right 40px
+			+below($media-screen-xs)
+				float none
+				display inline-block
+				margin-top 20px

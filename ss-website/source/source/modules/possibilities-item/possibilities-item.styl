@@ -8,6 +8,8 @@
 	font-size: 12px;
 	color: white
 	position: relative;
+	+below($media-screen-xs)
+		width 100%
 
 	&:hover
 		z-index: 2;
@@ -15,12 +17,20 @@
 	&__background
 		width: 100%;
 		height: 100%;
-		background: navy
+		background: aqua
 		position: absolute;
 		left: 0;
 		top: 0;
 		transition: background-color .2s,transform .2s;
 		z-index: 1;
+
+	&__link
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 10;
 
 	&:hover &__background
 		background-color: white;

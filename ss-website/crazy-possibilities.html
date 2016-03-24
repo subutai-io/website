@@ -75,11 +75,18 @@
 							<img src="img/logo.png" class="logo__img" />
 						</a>
 					</div>
-					<div class="header__menu">
+					<div class="header__menu header__menu_button">
 						<a href="getting-started.html" class="button">Getting started</a>
 					</div>
+					<div class="header__bars-icon js-show-menu">
+						<i class="fa fa-bars"></i>
+					</div>
 					<div class="header__menu">
-						<nav class="main-menu js-link-sroll">
+						<nav class="main-menu js-link-sroll js-top-menu">
+							<div class="header__bars-icon js-show-menu">
+								<i class="fa fa-bars"></i>
+							</div>
+							<div class="main-menu__title">Menu</div>
 							<ul>
 								<li class="main-menu__item">
 									<a href="about.html" class="main-menu__link">About</a>
@@ -116,10 +123,8 @@
 								</div>
 								<div class="crazy-possibilty__info">
 									<h2 class="crazy-possibilty__title">Socialized Services</h2>
-									<p class="crazy-possibilty__text">P2P is all about sharing, and sharing is a social activity. Sharing
-									in even small groups has its advantages. However sharing en mass could lead to amazing possibilities.
-									Socialized computing services where you contribute resources to participate could have a profound
-									impact on our lives and on the way we use the Internet.</p>
+									<p class="crazy-possibilty__text">P2P is all about sharing, and sharing is a social activity. Sharing in even small groups has its advantages. However sharing en mass could lead to amazing possibilities. Socialized computing services where you contribute resources to participate
+										could have a profound impact on our lives and on the way we use the Internet.</p>
 								</div>
 								<div class="clear"></div>
 							</div>
@@ -137,18 +142,11 @@
 								</div>
 								<div class="crazy-possibilty__info">
 									<h2 class="crazy-possibilty__title">Content Distribution</h2>
-									<p class="crazy-possibilty__text">Content distribution as a collective service is already possible 
-									with Subutai Social. Public Docker images, Debian packages, or just about any kind of file, for common infrastructure or for your applications are distributable via P2P file sharing across peers. Subutai
-									Social's Kurjun repository let's you publically publish, or privately share files using global
-									or exclusive swarms respectively.
-
-									The verified site and content hosting service built into the Hub allows for safe content distribution
-									across peers dynamically based on where on the Internet that data is needed most. 
-
-									Currently we're researching ways to go a step further. We would like to go to the next level. We have
-									been looking at providing generalized content distritubtion in the form of a file system. We are 
-									investigating the integration of various file systems which could adapt well to the P2P model like 
-									the Interplanetary File System (IPFS).</p>
+									<p class="crazy-possibilty__text">Content distribution as a collective service is already possible with Subutai Social. Public Docker images, Debian packages, or just about any kind of file, for common infrastructure or for your applications are distributable via P2P file sharing
+										across peers. Subutai Social's Kurjun repository let's you publically publish, or privately share files using global or exclusive swarms respectively.
+										<br> The verified site and content hosting service built into the Hub allows for safe content distribution across peers dynamically based on where on the Internet that data is needed most.
+										<br> Currently we're researching ways to go a step further. We would like to go to the next level. We have been looking at providing generalized content distritubtion in the form of a file system. We are investigating the integration of various
+										file systems which could adapt well to the P2P model like the Interplanetary File System (IPFS).</p>
 								</div>
 								<div class="clear"></div>
 							</div>
@@ -166,7 +164,8 @@
 								</div>
 								<div class="crazy-possibilty__info">
 									<h2 class="crazy-possibilty__title">Be Your Own Google</h2>
-									<p class="crazy-possibilty__text">AppScale has been integrated with Subutai Social to provide a Google App Engine compatible PaaS layer. Applications written and deployed to GAE can also be run on Subutai Social with the AppScale plugin. That means you can write PHP, Python, Java, and Go based GAE applications to run on Subutai Social while distributing the application on peers across the Internet.</p>
+									<p class="crazy-possibilty__text">AppScale has been integrated with Subutai Social to provide a Google App Engine compatible PaaS layer. Applications written and deployed to GAE can also be run on Subutai Social with the AppScale plugin. That means you can write PHP, Python,
+										Java, and Go based GAE applications to run on Subutai Social while distributing the application on peers across the Internet.</p>
 								</div>
 								<div class="clear"></div>
 							</div>
@@ -184,16 +183,9 @@
 								</div>
 								<div class="crazy-possibilty__info">
 									<h2 class="crazy-possibilty__title">Be Your Own Amazon</h2>
-									<p class="crazy-possibilty__text">
-										By using p2p technologies to combine resources on computers, Subutai Social already provides
-										an infrastructure as a service cloud environment. Users of Subutai Social can create cloud 
-										environments effectively appearing as virtual data centers. The more computing resources you
-										throw into your peer[s] and the number of peers supporting your environment the bigger the 
-										virtual data center. Scaling a peer with more resources and scaling the number of peers 
-										themselves give Subutai Social it's elastic cloud capabilities. Higher level infrastructure 
-										services are built on this such as an S3 compatible clone. Subutai Social aims to model and
-										implement as many Amazon compatible services as possible.
-								</p>
+									<p class="crazy-possibilty__text">By using p2p technologies to combine resources on computers, Subutai Social already provides an infrastructure as a service cloud environment. Users of Subutai Social can create cloud environments effectively appearing as virtual data centers.
+										The more computing resources you throw into your peer[s] and the number of peers supporting your environment the bigger the virtual data center. Scaling a peer with more resources and scaling the number of peers themselves give Subutai Social
+										it's elastic cloud capabilities. Higher level infrastructure services are built on this such as an S3 compatible clone. Subutai Social aims to model and implement as many Amazon compatible services as possible.</p>
 								</div>
 								<div class="clear"></div>
 							</div>
@@ -212,11 +204,8 @@
 								<div class="crazy-possibilty__info">
 									<h2 class="crazy-possibilty__title">Collective Cyber Defence</h2>
 									<p class="crazy-possibilty__text">Socially security exists in society and among nations. Why can't people collaborating across peer networks benefit as well? We already enable sharing threat information and offer dynamic sharing to provide defensive capabilities against DDoS.
-
-									SS has built in analytics to detect fraud and cyber threats. The SS Hub offers additional free
-									services to enhance the analytics and diagnostics needed to detect bottlenecks and threats. Subutai running on acclerated routers also assist in detection and counter measures. However in the future
-									we would like to take a big step in cyber security: we are working on a legal framework and protocol
-									to enable offensive capabilities to defend against attackers to make the Internet a safer place.</p>
+										SS has built in analytics to detect fraud and cyber threats. The SS Hub offers additional free services to enhance the analytics and diagnostics needed to detect bottlenecks and threats. Subutai running on acclerated routers also assist in detection
+										and counter measures. However in the future we would like to take a big step in cyber security: we are working on a legal framework and protocol to enable offensive capabilities to defend against attackers to make the Internet a safer place.</p>
 								</div>
 								<div class="clear"></div>
 							</div>
@@ -294,10 +283,29 @@
 					<div class="footer__social">
 						<ul class="footer-social">
 							<li class="footer-social__item">
-								<a href="#" class="footer-social-item footer-social-item_facebook"></a>
+								<a href="#" class="footer-social-item">
+									<i class="fa fa-facebook-official"></i>
+								</a>
 							</li>
 							<li class="footer-social__item">
-								<a href="#" class="footer-social-item footer-social-item_twitter"></a>
+								<a href="#" class="footer-social-item">
+									<i class="fa fa-twitter"></i>
+								</a>
+							</li>
+							<li class="footer-social__item">
+								<a href="#" class="footer-social-item">
+									<i class="fa fa-google-plus"></i>
+								</a>
+							</li>
+							<li class="footer-social__item">
+								<a href="#" class="footer-social-item">
+									<i class="fa fa-linkedin"></i>
+								</a>
+							</li>
+							<li class="footer-social__item">
+								<a href="#" class="footer-social-item">
+									<i class="fa fa-github-alt"></i>
+								</a>
 							</li>
 						</ul>
 						<div class="clear"></div>

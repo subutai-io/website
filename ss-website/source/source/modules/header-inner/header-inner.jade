@@ -7,9 +7,12 @@ mixin header-inner(data)
 			.header__logo
 				+logo()
 
-			.header__menu
+			.header__menu.header__menu_button
 				a(href="getting-started.html").button Getting started
-			
+
+			.header__bars-icon.js-show-menu
+				i.fa.fa-bars
+
 			.header__menu
 				+main-menu(mainMenu.default)
 

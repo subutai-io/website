@@ -1,11 +1,16 @@
 .main-slide-content
-	position: relative;
 	color: white
 	width: 370px;
 	padding: 0 20px 0 20px;
 	position: absolute;
 	bottom: 30%;
 	right: 0;
+	+below($media-screen-xs)
+		position relative
+		bottom auto
+		width auto
+		padding 20px
+
 
 	&__title
 		font-size: 22px;

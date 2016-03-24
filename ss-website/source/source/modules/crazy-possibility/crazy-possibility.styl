@@ -3,6 +3,8 @@
 	padding: 0 0 0 0;
 	margin: 0 0 0 0;
 	vertical-align: middle;
+	+below($media-screen-sm)
+		text-align center
 
 	&__img
 		vertical-align: middle;
@@ -31,7 +33,9 @@
 		vertical-align: middle;
 		display: inline-block;
 		box-sizing: border-box;
-		width: 730px;
+		max-width: 730px;
+		+below($media-screen-sm)
+			padding 20px 0 0
 
 	&__title
 		padding: 0 0 10px 0;
@@ -45,4 +49,5 @@
 		line-height: 22px;
 		padding: 0 0 0 0;
 		margin: 0 0 0 0;
-
+		+below($media-screen-sm)
+			text-align left

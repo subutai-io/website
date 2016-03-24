@@ -9,7 +9,7 @@
 			"url":"who-is-subutai.html",
 		},
 		{
-			"title": "Crazy possibilities",
+			"title": "Social Cloud Computing",
 			"url": "crazy-possibilities.html",
 		}
 	]

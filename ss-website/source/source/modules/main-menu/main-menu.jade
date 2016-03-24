@@ -1,6 +1,9 @@
 
 mixin main-menu(data)
-	nav.main-menu.js-link-sroll
+	nav.main-menu.js-link-sroll.js-top-menu
+		.header__bars-icon.js-show-menu
+			i.fa.fa-bars
+		.main-menu__title Menu
 		ul
 			each ent, num in data
 				li.main-menu__item

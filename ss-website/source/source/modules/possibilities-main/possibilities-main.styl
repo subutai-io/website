@@ -9,6 +9,10 @@
 	&__inner
 		width: 1000px;
 		margin: 0 auto;
+		+below($media-screen-sm)
+			width: 100%;
+			padding: 20px;
+			box-sizing: border-box;
 
 	&__title
 		font-size: 24px;
@@ -20,9 +24,15 @@
 		width: 300px;
 		display: inline-block;
 		margin: 130px 0 0 0;
+		+below($media-screen-xs)
+			margin 0
 
 	&__list
 		float: right;
 		width: 670px;
 		display: inline-block;
-
+		+below($media-screen-sm)
+			width auto
+			float none
+		+below($media-screen-xs)
+			width 100%
