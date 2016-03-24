@@ -11,13 +11,17 @@ html, body
 		background $base-bg-color
 		position relative
 		z-index 2
-		width: 960px;
+		max-width: 960px;
 		margin: 0 auto;
 		letter-spacing: 1px;
+		+below($media-screen-sm)
+			padding 0 20px
 
 	&__row
 		height: 100%!important;
 		padding: 0!important;
+		+below($media-screen-sm)
+			height auto!important
 
 	&__wrapper
 		min-height 100%
@@ -90,7 +94,7 @@ html, body
 	margin: 40px 0;
 
 	&__coll
-		width: 465px;
+		max-width: 465px;
 
 		&_left
 			float: left;

@@ -3,12 +3,17 @@
 	background-image: url(../img/ss-info-img.png);
 	background-repeat: no-repeat;
 	background-position: 50% 100%;
-
+	+below($media-screen-xs)
+		background-size contain
 	&__text
 		width: 570px;
 		margin: 0 auto;
 		position: relative;
 		height: 100%;
+		+below($media-screen-sm)
+			height 700px
+		+below($media-screen-xs)
+			width auto
 
 	&-text
 		color: gray
@@ -16,6 +21,10 @@
 		position: absolute;
 		top: 15%;
 		left: 0;
+		+below($media-screen-xs)
+			position relative
+			top 0
+			padding 20px 20px 120px
 
 		&__title
 			font-size: 22px;
@@ -29,4 +38,6 @@
 			padding: 0 0 20px 0;
 			margin: 0 0 0 0;
 			text-align: left;
+			+below($media-screen-xs)
+				padding 0
 

@@ -41,7 +41,18 @@ $(document).ready(function() {
 	// Here insert modules scripts
 	//= require ../../../tmp/modules.js
 
-	if($('.js-blockScroll').length > 0) {
+	if($('.js-blockScroll').length > 0 && $(window).width() > 1160) {
 		var blockScroller = $('.js-blockScroll').blockScroll();
 	}
+
+	$('.js-show-menu').on('click', function() {
+		if($('.js-top-menu').hasClass('js-top-menu_opened')) {
+			$('.js-top-menu').animate({'right': '-260px'}, 300);
+			$('.js-top-menu').removeClass('js-top-menu_opened');
+		} else {
+			$('.js-top-menu').animate({'right': 0}, 300);
+			$('.js-top-menu').addClass('js-top-menu_opened');
+		}
+	});
 });
+

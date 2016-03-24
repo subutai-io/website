@@ -5,18 +5,22 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	+below($media-screen-sm)
+		height auto
 
 	&_inner
 		height: 200px;
 
 	&__info
-		width: 570px;
+		max-width: 570px;
 		margin: 0 auto;
 		position: relative;
 		height: 100%;
+		+below($media-screen-sm)
+			padding 20px
 
 	&_inner &__info
-		width: 960px;
+		max-width: 960px;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;

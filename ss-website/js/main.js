@@ -39,6 +39,11 @@ $(document).ready(function() {
 	$('.content-wrapper table').basictable({baseClass: 'table'});
 
 	// Here insert modules scripts
+	$('.alert__close').on('click', function() {
+		$(this).closest('.alert').fadeOut();
+	});
+	
+	
 	// Accordion
 	$('.accordion').each(function(index, el) {
 		var $that = $(this);
@@ -77,11 +82,6 @@ $(document).ready(function() {
 				$item.removeClass('accordion__item_active');
 			}
 		});
-	});
-	
-	
-	$('.alert__close').on('click', function() {
-		$(this).closest('.alert').fadeOut();
 	});
 	
 	
@@ -195,7 +195,18 @@ $(document).ready(function() {
 	});
 	
 
-	if($('.js-blockScroll').length > 0) {
+	if($('.js-blockScroll').length > 0 && $(window).width() > 1160) {
 		var blockScroller = $('.js-blockScroll').blockScroll();
 	}
+
+	$('.js-show-menu').on('click', function() {
+		if($('.js-top-menu').hasClass('js-top-menu_opened')) {
+			$('.js-top-menu').animate({'right': '-260px'}, 300);
+			$('.js-top-menu').removeClass('js-top-menu_opened');
+		} else {
+			$('.js-top-menu').animate({'right': 0}, 300);
+			$('.js-top-menu').addClass('js-top-menu_opened');
+		}
+	});
 });
+

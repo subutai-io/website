@@ -7,7 +7,10 @@
 		height: 100%;
 		top: 0;
 		left: 0;
-
+		+below($media-screen-sm)
+			height 500px
+		+below($media-screen-xs)
+			height 100%
 	&__clouds-bg
 		background-image: url(../img/clouds.jpg);
 		background-position: 0 0;
@@ -21,10 +24,14 @@
 
 	&__content
 		height: 100%;
-		width: 960px;
+		max-width: 960px;
 		margin: 0 auto;
 		position: relative;
 		background-image: url(../img/main-slide-bg.png);
 		background-position: 0 100%;
 		background-repeat: no-repeat;
-
+		+below($media-screen-sm)
+			height 500px
+		+below($media-screen-xs)
+			background none
+			height 100%
