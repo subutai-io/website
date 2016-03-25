@@ -5,6 +5,9 @@
 	background-position: 50% 100%;
 	+below($media-screen-xs)
 		background-size contain
+	+hd(anti-overlap: true)
+		background-size: 50%;
+
 	&__text
 		width: 570px;
 		margin: 0 auto;
@@ -25,6 +28,8 @@
 			position relative
 			top 0
 			padding 20px 20px 120px
+		+hd(anti-overlap: true)
+			top: 20%;
 
 		&__title
 			font-size: 22px;
