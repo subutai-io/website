@@ -54,5 +54,17 @@ $(document).ready(function() {
 			$('.js-top-menu').addClass('js-top-menu_opened');
 		}
 	});
+
+	$('.page-docs').bind('swiperight', swipeOpenMenu);
+	$('.page-docs').bind('swipeleft', swipeCloseMenu);
+
+	function swipeOpenMenu( event ){
+		$('.sidebar').stop().animate({'left': 0}, 300);
+	}
+
+	function swipeCloseMenu( event ){
+		$('.sidebar').stop().animate({'left': '-265px'}, 300);
+	}
+
 });
 

@@ -37,6 +37,9 @@
 // Browser feature detection library for HTML5/CSS3
 //= require plugins/modernizr/modernizr-2.8.3.min.js
 
+// JQuery Swipe Plugin
+//= require plugins/jgestures.js
+
 
 //////////////////////////////////////////////////////////////////////////////
 // Optionals plugins

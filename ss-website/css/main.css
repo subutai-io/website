@@ -3503,9 +3503,32 @@ html.remodal-is-locked
             box-sizing: border-box;
     width: 300px;
     min-height: 100%;
-    padding: 50px 0 0 10px;
+    padding: 50px 35px 0 10px;
 
     background-color: #404651;
+}
+
+.sidebar__mobile-icon
+{
+    font-size: 25px;
+
+    position: absolute;
+    top: 50%;
+    right: 5px;
+
+    display: none;
+
+    width: 30px;
+    height: 30px;
+    margin-top: -15px;
+
+    -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+         -o-transform: rotate(90deg);
+            transform: rotate(90deg);
+    text-align: center;
+
+    color: #fff;
 }
 
 .sidebar-menu ul
@@ -7216,6 +7239,37 @@ body
     }
 }
 
+@media only screen and (min-width: 1801px)
+{
+    .main-slide-content
+    {
+        bottom: 40%;
+
+        width: 60%;
+    }
+
+    .main-slide-content__title
+    {
+        font-size: 28px;
+    }
+
+    .main-slide-content__text
+    {
+        font-size: 20px;
+    }
+
+    .ss-main-info
+    {
+        -webkit-background-size: 50% 50%;
+                background-size: 50%;
+    }
+
+    .ss-main-info-text
+    {
+        top: 20%;
+    }
+}
+
 @media only screen and (max-width: 1024px)
 {
     .header
@@ -7441,6 +7495,23 @@ body
         width: 100%;
     }
 
+    .sidebar
+    {
+        position: absolute;
+        top: 0;
+        left: -265px;
+
+        float: none;
+        overflow-y: auto;
+
+        height: 100%;
+    }
+
+    .sidebar__mobile-icon
+    {
+        display: block;
+    }
+
     .ss-main-info
     {
         -webkit-background-size: contain;
@@ -7463,6 +7534,12 @@ body
     .ss-main-info-text__text
     {
         padding: 0;
+    }
+
+    .page-docs__content
+    {
+        margin-left: 35px;
+        padding: 30px 20px 20000px 20px;
     }
 }
 
