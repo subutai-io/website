@@ -1,14 +1,24 @@
 .crazy-possibilty
 	position: relative;
-	padding: 0 0 0 0;
+	padding: 25px;
 	margin: 0 0 0 0;
 	vertical-align: middle;
+	border: 1px dashed #a9afbb;
+	border-radius: 20px;
 	+below($media-screen-sm)
 		text-align center
+
+	&_col
+		//
 
 	&__img
 		vertical-align: middle;
 		display: inline-block;
+
+	&_col &__img
+		display: block;
+		text-align: center;
+		margin: 0 0 20px 0;
 
 	&-img
 		width: 157px;
@@ -16,12 +26,13 @@
 		border 1px dashed gray
 		border-radius: 50%;
 		text-align: center;
+		display: inline-block;
 
 		&__inner
 			border-radius: 50%;
-			height: 114px;
-			width: 114px;
-			margin: 22px;
+			height: 124px;
+			width: 124px;
+			margin: 16px;
 			background-color: #f5f7f8;
 
 		& svg
@@ -37,11 +48,35 @@
 		+below($media-screen-sm)
 			padding 20px 0 0
 
+	&_col &__info
+		display: block;
+		max-width: 100%;
+		margin: 0;
+		padding-left: 0;
+
 	&__title
-		padding: 0 0 10px 0;
+		position absolute
+		top -25px
+		left 0
+		width 100%
+		height 50px
 		margin: 0 0 0 0;
-		font-size: 16px;
+		box-sizing border-box
+		padding 5px 0
+		font-size 16px
+		font-weight 700
 		color: gray
+		line-height normal
+		text-align center
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		&__inner
+			background $base-bg-color
+			display: inline-block;
+			background $base-bg-color
+			padding: 0 20px;
 
 	&__text
 		font-size: 14px;

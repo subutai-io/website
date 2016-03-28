@@ -909,14 +909,32 @@ input[type='button'].button_block
     padding: 0 0 50px 0;
 }
 
+.crazy-possibilties-list__item_col
+{
+    display: inline-block;
+
+    width: 48%;
+    margin: 0 3% 0 0;
+
+    vertical-align: top;
+}
+
+.crazy-possibilties-list__item_col:nth-child(odd)
+{
+    margin-right: 0;
+}
+
 .crazy-possibilty
 {
     position: relative;
 
     margin: 0 0 0 0;
-    padding: 0 0 0 0;
+    padding: 25px;
 
     vertical-align: middle;
+
+    border: 1px dashed #a9afbb;
+    border-radius: 20px;
 }
 
 .crazy-possibilty__img
@@ -926,8 +944,19 @@ input[type='button'].button_block
     vertical-align: middle;
 }
 
+.crazy-possibilty_col .crazy-possibilty__img
+{
+    display: block;
+
+    margin: 0 0 20px 0;
+
+    text-align: center;
+}
+
 .crazy-possibilty-img
 {
+    display: inline-block;
+
     width: 157px;
     height: 157px;
 
@@ -939,9 +968,9 @@ input[type='button'].button_block
 
 .crazy-possibilty-img__inner
 {
-    width: 114px;
-    height: 114px;
-    margin: 22px;
+    width: 124px;
+    height: 124px;
+    margin: 16px;
 
     border-radius: 50%;
     background-color: #f5f7f8;
@@ -966,14 +995,63 @@ input[type='button'].button_block
     vertical-align: middle;
 }
 
+.crazy-possibilty_col .crazy-possibilty__info
+{
+    display: block;
+
+    max-width: 100%;
+    margin: 0;
+    padding-left: 0;
+}
+
 .crazy-possibilty__title
 {
     font-size: 16px;
+    font-weight: 700;
+    line-height: normal;
 
+    position: absolute;
+    top: -25px;
+    left: 0;
+
+    display: -webkit-box;
+    display: -webkit-flex;
+    display:    -moz-box;
+    display: -ms-flexbox;
+    display:         flex;
+
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 100%;
+    height: 50px;
     margin: 0 0 0 0;
-    padding: 0 0 10px 0;
+    padding: 5px 0;
+
+    text-align: center;
 
     color: #303644;
+
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+       -moz-box-pack: center;
+    -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+    -ms-flex-align: center;
+            align-items: center;
+}
+
+.crazy-possibilty__title__inner
+{
+    display: inline-block;
+
+    padding: 0 20px;
+
+    background: #fff;
+    background: #fff;
 }
 
 .crazy-possibilty__text
@@ -7260,8 +7338,8 @@ body
 
     .ss-main-info
     {
-        -webkit-background-size: 50% 50%;
-                background-size: 50%;
+        -webkit-background-size: 40% 40%;
+                background-size: 40%;
     }
 
     .ss-main-info-text
