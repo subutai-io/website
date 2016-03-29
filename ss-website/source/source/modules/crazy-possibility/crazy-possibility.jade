@@ -4,7 +4,10 @@ mixin crazy-possibility(data)
 	if data.id
 		-possibilityId = data.id
 
-	.crazy-possibilty(id=possibilityId)
+	.crazy-possibilty(id=possibilityId, class="crazy-possibilty_" + data.display)
+
+		h2.crazy-possibilty__title
+			.crazy-possibilty__title__inner!= data.title
 
 		.crazy-possibilty__img
 			.crazy-possibilty-img
@@ -12,7 +15,6 @@ mixin crazy-possibility(data)
 					+icon(data.icon)
 
 		.crazy-possibilty__info
-			h2.crazy-possibilty__title!= data.title
 			p.crazy-possibilty__text!= data.text
 
 		.clear
