@@ -909,32 +909,22 @@ input[type='button'].button_block
     padding: 0 0 50px 0;
 }
 
-.crazy-possibilties-list__item_col
-{
-    display: inline-block;
-
-    width: 48%;
-    margin: 0 3% 0 0;
-
-    vertical-align: top;
-}
-
-.crazy-possibilties-list__item_col:nth-child(odd)
-{
-    margin-right: 0;
-}
-
 .crazy-possibilty
 {
     position: relative;
 
     margin: 0 0 0 0;
-    padding: 25px;
 
     vertical-align: middle;
 
-    border: 1px dashed #a9afbb;
     border-radius: 20px;
+}
+
+.crazy-possibilty_row
+{
+    padding: 25px;
+
+    border: 1px dashed #a9afbb;
 }
 
 .crazy-possibilty__img
@@ -942,15 +932,6 @@ input[type='button'].button_block
     display: inline-block;
 
     vertical-align: middle;
-}
-
-.crazy-possibilty_col .crazy-possibilty__img
-{
-    display: block;
-
-    margin: 0 0 20px 0;
-
-    text-align: center;
 }
 
 .crazy-possibilty-img
@@ -995,21 +976,23 @@ input[type='button'].button_block
     vertical-align: middle;
 }
 
-.crazy-possibilty_col .crazy-possibilty__info
-{
-    display: block;
-
-    max-width: 100%;
-    margin: 0;
-    padding-left: 0;
-}
-
 .crazy-possibilty__title
 {
     font-size: 16px;
     font-weight: 700;
     line-height: normal;
 
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    margin: 0 0 0 0;
+    padding: 5px 0;
+
+    color: #303644;
+}
+
+.crazy-possibilty_row .crazy-possibilty__title
+{
     position: absolute;
     top: -25px;
     left: 0;
@@ -1020,17 +1003,10 @@ input[type='button'].button_block
     display: -ms-flexbox;
     display:         flex;
 
-    -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
-            box-sizing: border-box;
     width: 100%;
     height: 50px;
-    margin: 0 0 0 0;
-    padding: 5px 0;
 
     text-align: center;
-
-    color: #303644;
 
     -webkit-box-pack: center;
     -webkit-justify-content: center;
@@ -1044,7 +1020,7 @@ input[type='button'].button_block
             align-items: center;
 }
 
-.crazy-possibilty__title__inner
+.crazy-possibilty_row .crazy-possibilty__title__inner
 {
     display: inline-block;
 
@@ -2693,7 +2669,23 @@ input[type='reset'] .styler[disabled]
 
 .main-slide-content__button
 {
+    margin: 0 0 25px 0;
+
     text-align: center;
+}
+
+.memory-block
+{
+    font-size: 13px;
+
+    padding: 10px 15px;
+
+    border: 1px solid #fff;
+}
+
+.memory-block a
+{
+    color: #fff;
 }
 
 html.remodal-is-locked
@@ -7286,12 +7278,41 @@ body
 
 .text-blocks
 {
-    margin: 40px 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display:    -moz-box;
+    display: -ms-flexbox;
+    display:         flex;
+    overflow: hidden;
+
+    margin: 40p 465pxx 0;
 }
 
 .text-blocks__coll
 {
-    max-width: 465px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display:    -moz-box;
+    display: -ms-flexbox;
+    display:         flex;
+
+    width: 50%;
+
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+       -moz-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+       -moz-box-pack: center;
+    -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+    -ms-flex-align: center;
+            align-items: center;
 }
 
 .text-blocks__coll_left

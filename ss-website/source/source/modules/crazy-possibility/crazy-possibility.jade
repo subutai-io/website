@@ -6,15 +6,14 @@ mixin crazy-possibility(data)
 
 	.crazy-possibilty(id=possibilityId, class="crazy-possibilty_" + data.display)
 
-		h2.crazy-possibilty__title
-			.crazy-possibilty__title__inner!= data.title
-
 		.crazy-possibilty__img
 			.crazy-possibilty-img
 				.crazy-possibilty-img__inner
 					+icon(data.icon)
 
 		.crazy-possibilty__info
+			h2.crazy-possibilty__title
+				.crazy-possibilty__title__inner!= data.title
 			p.crazy-possibilty__text!= data.text
 
 		.clear
