@@ -2640,7 +2640,7 @@ input[type='reset'] .styler[disabled]
 {
     position: absolute;
     right: 0;
-    bottom: 30%;
+    bottom: 20%;
 
     width: 370px;
     padding: 0 20px 0 20px;
@@ -2678,6 +2678,8 @@ input[type='reset'] .styler[disabled]
 {
     font-size: 13px;
 
+    position: relative;
+
     padding: 10px 15px;
 
     border: 1px solid #fff;
@@ -2686,6 +2688,18 @@ input[type='reset'] .styler[disabled]
 .memory-block a
 {
     color: #fff;
+}
+
+.memory-block__link
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
 }
 
 html.remodal-is-locked
