@@ -10,7 +10,7 @@
 		},
 		{
 			"title": "Social Cloud Computing",
-			"url": "crazy-possibilities.html",
+			"url": "social-cloud-computing.html",
 		}
 	]
 }
