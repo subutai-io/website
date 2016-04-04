@@ -2,7 +2,7 @@
 	"default": [
 		{
 			"text":"Wanna make some coin? Maybe some extra beer money? You can sell resources on your laptop or desktops that are sitting around collecting dust. Put em to use on your own peer. To help out we built a peer tracker, resource search engine, and a bazaar where you can trade or sell resources to your heart's content: Subutai Social Hub.",
-			"img":"students-coll"
+			"img":"students-money"
 		},
 		{
 			"text": "Running out of space for the family photos no one's willing to clean up? Create a distributed storage network across the machines of family members. Don't deal with mom trying to figure out how to send you photos of your kids again. Share with your own dropbox distributed across family and friends!",
