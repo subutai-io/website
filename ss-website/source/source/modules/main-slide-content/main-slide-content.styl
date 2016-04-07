@@ -5,11 +5,16 @@
 	position: absolute;
 	bottom: 20%;
 	right: 0;
+	+below($media-screen-sm)
+		position relative
+		float right
+		bottom auto
 	+below($media-screen-xs)
 		position relative
 		bottom auto
 		width auto
 		padding 20px
+		float none
 	+hd(anti-overlap: true)
 		bottom: 40%;
 		width: 60%;
@@ -34,6 +39,8 @@
 	&__button
 		text-align: center;
 		margin: 0 0 25px 0;
+		+below($media-screen-xs)
+			width 100%
 
 .memory-block
 	background-color rgba(255, 255, 255, 0.5)
