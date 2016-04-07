@@ -7558,6 +7558,14 @@ body
         float: right;
     }
 
+    .main-slide-content
+    {
+        position: relative;
+        bottom: auto;
+
+        float: right;
+    }
+
     .possibilities-list__item
     {
         display: -webkit-box;
@@ -7642,6 +7650,11 @@ body
         float: none;
 
         margin: 40px 0 0;
+    }
+
+    .header__menu_button .button
+    {
+        width: 100%;
     }
 
     .header__menu_button .button
