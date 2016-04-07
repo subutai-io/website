@@ -1,0 +1,59 @@
+include ../modules/head/head
+include ../modules/footer/footer
+include ../modules/browsehappy/browsehappy
+include ../modules/header-inner/header-inner
+include ../modules/sidebar/sidebar
+include ../modules/page-title/page-title
+include ../modules/demo/demo
+include ../modules/accordion/accordion
+
+
+doctype html
+html(class="no-js" lang="en")
+
+	head
+		+head()
+
+	body.page.page_background-gray
+		+browsehappy(browsehappy)
+		
+		.page__header
+			+header-inner()
+
+		.page-docs
+			+sidebar()
+
+			.page-docs__content
+				//-+demo()
+
+				.content-wrapper
+
+					+page-title({"title": "Tutorials"})
+
+					section
+						p
+						+accordion()
+							+accordion-item({"title": "1\) Cross peer environment creation", "open": true})
+								video(width="100%", height="450", controls="controls", poster="video/duel.jpg")
+									source(src="https://s3.amazonaws.com/uploads.hipchat.com/529982/3522547/RgyDW4RMvFoauGL/playbook_CrossPeerEnviOnRemotePeer.ogv", type='video/ogg; codecs="theora, vorbis"')
+							
+							+accordion-item({"title": "2\) User management"})
+								video(width="100%", height="450", controls="controls", poster="video/duel.jpg")
+									source(src="https://s3.amazonaws.com/uploads.hipchat.com/529982/3522547/KUjQaDlXV1pH18E/UserRegistration.ogv", type='video/ogg; codecs="theora, vorbis"')
+
+							+accordion-item({"title": "3\) Multi host envrionment creation"})
+								video(width="100%", height="450", controls="controls", poster="video/duel.jpg")
+									source(src="https://s3.amazonaws.com/uploads.hipchat.com/529982/3522547/Q3kT3syrOIfJZcf/playbook_CrossPeerWithTwoHosts.ogv", type='video/ogg; codecs="theora, vorbis"')
+
+							+accordion-item({"title": "4\) Registration to HUB"})
+								video(width="100%", height="450", controls="controls", poster="video/duel.jpg")
+									source(src="https://s3.amazonaws.com/uploads.hipchat.com/529982/3522547/HSJHbGHjRsb0Mxz/PeerRegistration.ogv", type='video/ogg; codecs="theora, vorbis"')
+
+			.clear
+
+		.page__footer
+			+footer()
+		
+		//- Scripts
+		script(src='js/plugins.min.js')
+		script(src='js/main.min.js')
