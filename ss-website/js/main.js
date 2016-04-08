@@ -39,6 +39,11 @@ $(document).ready(function() {
 	$('.content-wrapper table').basictable({baseClass: 'table'});
 
 	// Here insert modules scripts
+	$('.alert__close').on('click', function() {
+		$(this).closest('.alert').fadeOut();
+	});
+	
+	
 	// Accordion
 	$('.accordion').each(function(index, el) {
 		var $that = $(this);
@@ -65,7 +70,6 @@ $(document).ready(function() {
 			event.preventDefault();
 	
 			var $item = $(this).parent();
-			console.log('lololo');
 			$('video').trigger('pause');
 	
 			if (!$item.hasClass('accordion__item_active')) {
@@ -88,11 +92,6 @@ $(document).ready(function() {
 		$(window.location.hash).children('.accordion__content').show();
 	}
 	
-	
-	
-	$('.alert__close').on('click', function() {
-		$(this).closest('.alert').fadeOut();
-	});
 	
 	
 	$('.browsehappy').click(function() {
