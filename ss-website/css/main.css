@@ -3351,27 +3351,6 @@ html.remodal-is-locked
     opacity: 1;
 }
 
-.possibilities-list
-{
-    font-size: 0;
-    line-height: 0;
-
-    position: relative;
-
-    margin: 0 0 0 0;
-    padding: 0 0 0 0;
-}
-
-.possibilities-list__item
-{
-    display: inline-block;
-
-    margin: 0 0 0 0;
-    padding: 0 3px 3px 0;
-
-    list-style: none;
-}
-
 .possibilities-main
 {
     position: relative;
@@ -3521,6 +3500,27 @@ html.remodal-is-locked
     background: #0074d9;
 }
 
+.possibilities-list
+{
+    font-size: 0;
+    line-height: 0;
+
+    position: relative;
+
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+
+.possibilities-list__item
+{
+    display: inline-block;
+
+    margin: 0 0 0 0;
+    padding: 0 3px 3px 0;
+
+    list-style: none;
+}
+
 .scroll-top
 {
     position: fixed;
@@ -3647,9 +3647,7 @@ html.remodal-is-locked
     position: absolute;
     z-index: 2;
     top: 0;
-    left: 0;
-
-    float: left;
+    left: -300px;
 
     -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
@@ -7285,18 +7283,17 @@ body
 {
     position: relative;
 
-    overflow: hidden;
-
-    min-height: 100%;
+    height: 100%;
 }
 
 .page-docs__content
 {
+    position: relative;
+
     max-width: 840px;
+    min-height: 100%;
     margin: 0 0 0 300px;
-    margin-bottom: -20000px;
     padding: 60px 80px;
-    padding-bottom: 20000px;
 
     background-color: #fff;
 }
@@ -7513,6 +7510,11 @@ body
         padding: 0;
     }
 
+    .header__logo
+    {
+        float: none;
+    }
+
     .header__bars-icon
     {
         display: block;
@@ -7583,15 +7585,6 @@ body
         float: right;
     }
 
-    .possibilities-list__item
-    {
-        display: -webkit-box;
-        display: -webkit-flex;
-        display:    -moz-box;
-        display: -ms-flexbox;
-        display:         flex;
-    }
-
     .possibilities-main__inner
     {
         -webkit-box-sizing: border-box;
@@ -7606,6 +7599,15 @@ body
         float: none;
 
         width: auto;
+    }
+
+    .possibilities-list__item
+    {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display:    -moz-box;
+        display: -ms-flexbox;
+        display:         flex;
     }
 
     .ss-main-info__text
@@ -7682,11 +7684,6 @@ body
         width: 100%;
     }
 
-    .possibilities-list__item
-    {
-        display: block;
-    }
-
     .possibilities-main__title
     {
         margin: 0;
@@ -7697,11 +7694,16 @@ body
         width: 100%;
     }
 
+    .possibilities-list__item
+    {
+        display: block;
+    }
+
     .sidebar
     {
         position: absolute;
         top: 0;
-        left: -265px;
+        left: -300px;
 
         float: none;
         overflow-y: auto;
@@ -7741,7 +7743,7 @@ body
     .page-docs__content
     {
         margin-left: 35px;
-        padding: 30px 20px 20000px 20px;
+        padding: 30px 20px 0 20px;
     }
 }
 

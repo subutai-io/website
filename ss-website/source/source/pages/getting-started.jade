@@ -20,10 +20,10 @@ html(class="no-js" lang="en")
 			+header-inner()
 
 		.page-docs
-			+sidebar()
 
 			.page-docs__content
 				//-+demo()
+				+sidebar()
 
 				.content-wrapper
 
@@ -51,10 +51,10 @@ html(class="no-js" lang="en")
 							li Subutai Social Management host (MH) Template Image
 							li OS Specific Subutai Social P2P Executable
 							li Subutai Social Tray Application
-			.clear
+			.page__footer
+				+footer()
 
-		.page__footer
-			+footer()
+			.clear
 		
 		//- Scripts
 		script(src='js/plugins.min.js')

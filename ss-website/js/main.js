@@ -79,6 +79,14 @@ $(document).ready(function() {
 		});
 	});
 	
+	if(window.location.hash.length > 0) {
+		$('.accordion__item_active').removeClass('accordion__item_active');
+		$('.accordion__content').hide();
+		$(window.location.hash).addClass('accordion__item_active');
+		$(window.location.hash).children('.accordion__content').show();
+	}
+	
+	
 	
 	$('.alert__close').on('click', function() {
 		$(this).closest('.alert').fadeOut();
@@ -213,11 +221,11 @@ $(document).ready(function() {
 	$('.page-docs').bind('swipeleft', swipeCloseMenu);
 
 	function swipeOpenMenu( event ){
-		$('.sidebar').stop().animate({'left': 0}, 300);
+		$('.sidebar').stop().animate({'left': '-35px'}, 300);
 	}
 
 	function swipeCloseMenu( event ){
-		$('.sidebar').stop().animate({'left': '-265px'}, 300);
+		$('.sidebar').stop().animate({'left': '-300px'}, 300);
 	}
 
 });
