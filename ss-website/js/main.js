@@ -79,6 +79,9 @@ $(document).ready(function() {
 		});
 	});
 	
+	console.log(window.location.hash);
+	
+	
 	
 	$('.alert__close').on('click', function() {
 		$(this).closest('.alert').fadeOut();

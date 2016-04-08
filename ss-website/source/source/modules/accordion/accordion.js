@@ -37,3 +37,6 @@ $('.accordion').each(function(index, el) {
 		}
 	});
 });
+
+console.log(window.location.hash);
+
