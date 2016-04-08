@@ -59,11 +59,11 @@ $(document).ready(function() {
 	$('.page-docs').bind('swipeleft', swipeCloseMenu);
 
 	function swipeOpenMenu( event ){
-		$('.sidebar').stop().animate({'left': 0}, 300);
+		$('.sidebar').stop().animate({'left': '-35px'}, 300);
 	}
 
 	function swipeCloseMenu( event ){
-		$('.sidebar').stop().animate({'left': '-265px'}, 300);
+		$('.sidebar').stop().animate({'left': '-300px'}, 300);
 	}
 
 });

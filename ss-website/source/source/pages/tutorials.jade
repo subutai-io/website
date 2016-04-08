@@ -21,10 +21,10 @@ html(class="no-js" lang="en")
 			+header-inner()
 
 		.page-docs
-			+sidebar()
 
 			.page-docs__content
 				//-+demo()
+				+sidebar()
 
 				.content-wrapper
 
@@ -49,10 +49,10 @@ html(class="no-js" lang="en")
 								video(width="100%", height="450", controls="controls")
 									source(src="https://s3.amazonaws.com/uploads.hipchat.com/529982/3522632/WmFOKkpttWX2lGf/PeerRegistration.mp4", type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"')
 
-			.clear
+			.page__footer
+				+footer()
 
-		.page__footer
-			+footer()
+			.clear
 		
 		//- Scripts
 		script(src='js/plugins.min.js')

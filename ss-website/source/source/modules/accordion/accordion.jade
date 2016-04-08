@@ -11,7 +11,7 @@ mixin accordion-item(data)
 	if data.id
 		- itemId = data.id
 
-	li(class=classes, id=itemId).accordion__item&attributes(attributes)
+	li(class=classes, id=itemId)&attributes(attributes)
 		.accordion__header= data.title
 		.accordion__content
 			block

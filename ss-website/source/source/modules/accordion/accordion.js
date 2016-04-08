@@ -38,5 +38,10 @@ $('.accordion').each(function(index, el) {
 	});
 });
 
-console.log(window.location.hash);
+if(window.location.hash.length > 0) {
+	$('.accordion__item_active').removeClass('accordion__item_active');
+	$('.accordion__content').hide();
+	$(window.location.hash).addClass('accordion__item_active');
+	$(window.location.hash).children('.accordion__content').show();
+}
 

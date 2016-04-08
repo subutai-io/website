@@ -36,20 +36,19 @@ html, body
 		background-color: #dce1e5;
 
 	&-docs
-		min-height: 100%;
-		overflow: hidden;
+		height: 100%;
 		position: relative;
 
 		&__content
 			background-color: #FFF;
 			max-width: 840px;
+			min-height: 100%;
+			position: relative;
 			padding: 60px 80px;
 			margin: 0 0 0 300px;
-			padding-bottom: 20000px;
-			margin-bottom: -20000px;
 			+below($media-screen-xs)
 				margin-left: 35px;
-				padding: 30px 20px 20000px 20px;
+				padding: 30px 20px 0 20px;
 
 	&__slider
 		height: 100%;
