@@ -65,6 +65,8 @@ $(document).ready(function() {
 			event.preventDefault();
 	
 			var $item = $(this).parent();
+			console.log('lololo');
+			$('video').trigger('pause');
 	
 			if (!$item.hasClass('accordion__item_active')) {
 				$items.removeClass('accordion__item_active');
