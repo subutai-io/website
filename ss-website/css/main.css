@@ -3351,6 +3351,27 @@ html.remodal-is-locked
     opacity: 1;
 }
 
+.possibilities-list
+{
+    font-size: 0;
+    line-height: 0;
+
+    position: relative;
+
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+
+.possibilities-list__item
+{
+    display: inline-block;
+
+    margin: 0 0 0 0;
+    padding: 0 3px 3px 0;
+
+    list-style: none;
+}
+
 .possibilities-main
 {
     position: relative;
@@ -3498,27 +3519,6 @@ html.remodal-is-locked
 {
     color: #fff;
     background: #0074d9;
-}
-
-.possibilities-list
-{
-    font-size: 0;
-    line-height: 0;
-
-    position: relative;
-
-    margin: 0 0 0 0;
-    padding: 0 0 0 0;
-}
-
-.possibilities-list__item
-{
-    display: inline-block;
-
-    margin: 0 0 0 0;
-    padding: 0 3px 3px 0;
-
-    list-style: none;
 }
 
 .scroll-top
@@ -7585,6 +7585,15 @@ body
         float: right;
     }
 
+    .possibilities-list__item
+    {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display:    -moz-box;
+        display: -ms-flexbox;
+        display:         flex;
+    }
+
     .possibilities-main__inner
     {
         -webkit-box-sizing: border-box;
@@ -7599,15 +7608,6 @@ body
         float: none;
 
         width: auto;
-    }
-
-    .possibilities-list__item
-    {
-        display: -webkit-box;
-        display: -webkit-flex;
-        display:    -moz-box;
-        display: -ms-flexbox;
-        display:         flex;
     }
 
     .ss-main-info__text
@@ -7684,6 +7684,11 @@ body
         width: 100%;
     }
 
+    .possibilities-list__item
+    {
+        display: block;
+    }
+
     .possibilities-main__title
     {
         margin: 0;
@@ -7692,11 +7697,6 @@ body
     .possibilities-main__list
     {
         width: 100%;
-    }
-
-    .possibilities-list__item
-    {
-        display: block;
     }
 
     .sidebar
