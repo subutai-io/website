@@ -24,6 +24,7 @@ $('.accordion').each(function(index, el) {
 		event.preventDefault();
 
 		var $item = $(this).parent();
+		$('video').trigger('pause');
 
 		if (!$item.hasClass('accordion__item_active')) {
 			$items.removeClass('accordion__item_active');
