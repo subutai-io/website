@@ -1,0 +1,12 @@
+
+mixin download(data)
+
+	.button.button_circle.download(title=data.title)
+		i.fa(class=data.icon)
+		//-span.text= data.title
+		.download-menu
+			ul
+				each ent, num in data.links
+					li.download-menu__item
+						a(href=ent.href)= ent.title
+
