@@ -15,7 +15,7 @@ html(class="no-js" lang="en")
 
 	body.page.page_background-gray
 		+browsehappy(browsehappy)
-		
+
 		.page__header
 			+header-inner()
 
@@ -33,6 +33,10 @@ html(class="no-js" lang="en")
 						p.getting-started-main-info__text
 							| Subutai Social can directly install onto bare metal, but for convenience we've packaged everything into a virtual machine. We did this so you don't have to change anything and it's effortless to install and remove. We made some easy to use installers to take the hassle out of setting up everything for Windows and Mac OS X users. *Nix users please see the
 							a(href="https://github.com/subutai-io/subos/blob/master/Readme.md") Readme.md
+						p.getting-started-main-info__text
+							| Subutai Social is ready for beta-testing
+						p.getting-started-main-info__text
+							| We are pleased to announce that the public beta release of Subutai Social is now available. This beta release is made available to allow a broad user base to test and evaluate the next major version of Subutai Social. Here's a great opportunity to help us make the next release the best ever.
 						p.getting-started-main-info__text-install Network installers:
 						.getting-started-main-info__button
 							+download({"icon": "fa-apple", "title": "Mac", "links": [{"href": "https://cdn.subut.ai:8338/kurjun/raw-files/raw.ff7ef0cd2e3b562c6955f81771e8b9f7/download", "title": "Net Installer"}, {"href": "https://cdn.subut.ai:8338/kurjun/raw-files/raw.2d3f21018a11b16ac698c9af1b9c11a1/download", "title": "Net Installer Dev"}, {"href": "https://cdn.subut.ai:8338/kurjun/raw-files/raw.88c1ca4b5f49fe2b6a63e20eaddd69eb/download", "title": "Net Installer Master"}]})
@@ -55,7 +59,7 @@ html(class="no-js" lang="en")
 				+footer()
 
 			.clear
-		
+
 		//- Scripts
 		script(src='js/plugins.min.js')
 		script(src='js/main.min.js')
