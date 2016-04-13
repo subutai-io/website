@@ -543,7 +543,7 @@
     white-space: nowrap;
     text-decoration: none;
 
-    border: 1px solid #078dd0;
+    border: 1px solid #266cd3;
     border-radius: 2px;
     background-color: transparent;
     background-image: none;
@@ -640,8 +640,8 @@ input[type='button'].button_block
 .button_size_default:visited
 {
     color: #fff;
-    border-color: #2681a5;
-    background-color: #078dd0;
+    border-color: #2264b2;
+    background-color: #266cd3;
 }
 
 .button:focus,
@@ -652,8 +652,8 @@ input[type='button'].button_block
 .button_size_default:active
 {
     color: #fff;
-    border-color: #2681a5;
-    background-color: #2681a5;
+    border-color: #2264b2;
+    background-color: #2264b2;
 }
 
 .button:active,
@@ -680,15 +680,15 @@ input[type='button'].button_block
 .button_size_default.button[disabled]:active
 {
     color: #fff;
-    border-color: #2681a5;
-    background-color: #078dd0;
+    border-color: #2264b2;
+    background-color: #266cd3;
 }
 
 .button_gray-text,
 .button_gray-text:visited
 {
     color: #303644;
-    border-color: #078dd0;
+    border-color: #266cd3;
     background-color: transparent;
 }
 
@@ -697,8 +697,8 @@ input[type='button'].button_block
 .button_gray-text:active
 {
     color: #fff;
-    border-color: #078dd0;
-    background-color: #078dd0;
+    border-color: #266cd3;
+    background-color: #266cd3;
 }
 
 .button_gray-text:active
@@ -716,7 +716,7 @@ input[type='button'].button_block
 .button_gray-text.button[disabled]:active
 {
     color: #303644;
-    border-color: #078dd0;
+    border-color: #266cd3;
     background-color: transparent;
 }
 
@@ -2372,7 +2372,7 @@ input[type='reset'] .styler[disabled]
 
     width: 70px;
     height: 70px;
-    margin: 0 25 0 0;
+    margin: 0 25px 0 0;
 
     border-radius: 50px;
 }
@@ -2507,7 +2507,7 @@ input[type='reset'] .styler[disabled]
 
     display: none;
 
-    color: #078dd0;
+    color: #266cd3;
 }
 
 .header__menu
@@ -7370,6 +7370,8 @@ body
 
 .page__title
 {
+    font-style: italic;
+
     padding: 30px 0 50px 0;
 
     text-align: center;
