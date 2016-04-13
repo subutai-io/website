@@ -99,14 +99,14 @@ $(document).ready(function() {
 	});
 	
 	
-	
-	
-	
 	$('.js-to-top-arrow').click(function(){
 		event.preventDefault();
 		window.scrollTo(0, 0);
 		window.location.hash = '';
 	});
+	
+	
+	
 	
 	
 	$('.js-link-sroll a[href^="#"]').on('click',function (event) {
