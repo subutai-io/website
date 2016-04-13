@@ -4,6 +4,7 @@ include ../modules/browsehappy/browsehappy
 include ../modules/header-inner/header-inner
 include ../modules/getting-started-main/getting-started-inner
 include ../modules/crazy-possibilities/crazy-possibilities
+include ../modules/analytics/analytics
 
 
 doctype html
@@ -29,3 +30,4 @@ html(class="no-js" lang="en")
 		//- Scripts
 		script(src='js/plugins.min.js')
 		script(src='js/main.min.js')
+		+analytics()
