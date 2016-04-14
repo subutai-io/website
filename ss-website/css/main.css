@@ -521,7 +521,7 @@
     white-space: nowrap;
     text-decoration: none;
 
-    border: 1px solid #078dd0;
+    border: 1px solid #266cd3;
     border-radius: 2px;
     background-color: transparent;
     background-image: none;
@@ -618,8 +618,8 @@ input[type='button'].button_block
 .button_size_default:visited
 {
     color: #fff;
-    border-color: #2681a5;
-    background-color: #078dd0;
+    border-color: #2264b2;
+    background-color: #266cd3;
 }
 
 .button:focus,
@@ -630,8 +630,8 @@ input[type='button'].button_block
 .button_size_default:active
 {
     color: #fff;
-    border-color: #2681a5;
-    background-color: #2681a5;
+    border-color: #2264b2;
+    background-color: #2264b2;
 }
 
 .button:active,
@@ -658,15 +658,15 @@ input[type='button'].button_block
 .button_size_default.button[disabled]:active
 {
     color: #fff;
-    border-color: #2681a5;
-    background-color: #078dd0;
+    border-color: #2264b2;
+    background-color: #266cd3;
 }
 
 .button_gray-text,
 .button_gray-text:visited
 {
     color: #303644;
-    border-color: #078dd0;
+    border-color: #266cd3;
     background-color: transparent;
 }
 
@@ -675,8 +675,8 @@ input[type='button'].button_block
 .button_gray-text:active
 {
     color: #fff;
-    border-color: #078dd0;
-    background-color: #078dd0;
+    border-color: #266cd3;
+    background-color: #266cd3;
 }
 
 .button_gray-text:active
@@ -694,7 +694,7 @@ input[type='button'].button_block
 .button_gray-text.button[disabled]:active
 {
     color: #303644;
-    border-color: #078dd0;
+    border-color: #266cd3;
     background-color: transparent;
 }
 
@@ -1017,6 +1017,107 @@ input[type='button'].button_block
     padding: 0 0 0 0;
 
     color: #303644;
+}
+
+.download
+{
+    position: relative;
+}
+
+.download:hover .download-menu
+{
+    display: block;
+}
+
+.download-menu
+{
+    line-height: normal;
+
+    position: absolute;
+    z-index: 999;
+    top: 100%;
+    left: 50%;
+
+    display: none;
+
+    width: 160px;
+    margin-left: -80px;
+
+    -webkit-transition: 125ms all ease-in-out;
+         -o-transition: 125ms all ease-in-out;
+            transition: 125ms all ease-in-out;
+
+    border: 1px solid #ccceee;
+    border-radius: 2px;
+    background-color: #fff;
+    -webkit-box-shadow: 0 0 2px 2px rgba(0,0,0,.1);
+            box-shadow: 0 0 2px 2px rgba(0,0,0,.1);
+}
+
+.download-menu:before
+{
+    position: absolute;
+    bottom: 100%;
+    left: 75px;
+
+    content: '';
+
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #ccceee;
+    border-left: 10px solid transparent;
+}
+
+.download-menu:after
+{
+    position: absolute;
+    bottom: 100%;
+    left: 77px;
+
+    content: '';
+
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid #f8fbfd;
+    border-left: 8px solid transparent;
+}
+
+.download-menu ul
+{
+    margin: 0;
+    padding: 0;
+}
+
+.download-menu__item
+{
+    font-size: 14px;
+
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+
+    list-style: none;
+
+    text-align: left;
+
+    border-bottom: 1px solid #303644;
+}
+
+.download-menu__item:last-child
+{
+    border-bottom: none;
+}
+
+.download-menu__item a
+{
+    line-height: 32px;
+
+    display: inline-block;
+
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 100%;
+    padding: 0 10px;
+
+    text-decoration: none;
 }
 
 .footer
@@ -2378,7 +2479,7 @@ input[type='reset'] .styler[disabled]
 
     width: 70px;
     height: 70px;
-    margin: 0 25 0 0;
+    margin: 0 25px 0 0;
 
     border-radius: 50px;
 }
@@ -2424,6 +2525,113 @@ input[type='reset'] .styler[disabled]
 .getting-started-main-info__text-install
 {
     font-size: 20px;
+}
+
+.github-button,
+.github-button:visited
+{
+    font-size: 0;
+
+    display: inline-block;
+
+    padding: 3px 10px;
+
+    -webkit-transition: .3s background ease-in-out;
+         -o-transition: .3s background ease-in-out;
+            transition: .3s background ease-in-out;
+    text-decoration: none;
+    text-decoration: none;
+
+    color: #fff;
+    border: 1px solid transparent;
+    border-radius: 2px;
+}
+
+.github-button:hover
+{
+    text-decoration: none;
+
+    color: #333;
+    background: #fff;
+}
+
+.github-button:hover svg
+{
+    fill: #333;
+}
+
+.github-button__text,
+.github-button__icon
+{
+    display: inline-block;
+
+    vertical-align: middle;
+}
+
+.github-button__text
+{
+    font-family: 'Noto Serif', serif;
+    font-size: 16px;
+}
+
+.github-button__icon
+{
+    margin-right: 7px;
+
+    -webkit-transition: all 300ms ease-in-out 0s;
+         -o-transition: all 300ms ease-in-out 0s;
+            transition: all 300ms ease-in-out 0s;
+}
+
+.github-button__icon svg
+{
+    width: 16px;
+    height: 16px;
+
+    fill: #fff;
+}
+
+.header
+{
+    width: 100%;
+    padding: 20px 0 0 0;
+}
+
+.header__inner
+{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 0 20px 0;
+}
+
+.header__logo
+{
+    float: left;
+}
+
+.header__bars-icon
+{
+    font-size: 28px;
+
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
+    display: none;
+
+    color: #266cd3;
+}
+
+.header__menu
+{
+    float: right;
+}
+
+.header__inner-page
+{
+    width: 100%;
+
+    background-color: #303644;
 }
 
 .header-presentation
@@ -7274,6 +7482,8 @@ body
 
 .page__title
 {
+    font-style: italic;
+
     padding: 30px 0 50px 0;
 
     text-align: center;

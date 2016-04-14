@@ -4,7 +4,8 @@ include ../modules/browsehappy/browsehappy
 include ../modules/header-inner/header-inner
 include ../modules/sidebar/sidebar
 include ../modules/page-title/page-title
-include ../modules/demo/demo
+include ../modules/download/download
+include ../modules/analytics/analytics
 
 
 doctype html
@@ -15,7 +16,7 @@ html(class="no-js" lang="en")
 
 	body.page.page_background-gray
 		+browsehappy(browsehappy)
-		
+
 		.page__header
 			+header-inner()
 
@@ -52,7 +53,8 @@ html(class="no-js" lang="en")
 				+footer()
 
 			.clear
-		
+
 		//- Scripts
 		script(src='js/plugins.min.js')
 		script(src='js/main.min.js')
+		+analytics()
