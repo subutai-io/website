@@ -1,0 +1,69 @@
+include ../modules/head/head
+include ../modules/footer/footer
+include ../modules/browsehappy/browsehappy
+include ../modules/header-inner/header-inner
+include ../modules/sidebar/sidebar
+include ../modules/page-title/page-title
+include ../modules/demo/demo
+
+
+doctype html
+html(class="no-js" lang="en")
+
+    head
+        +head()
+
+    body.page.page_background-gray
+        +browsehappy(browsehappy)
+
+        .page__header
+            +header-inner()
+
+        .page-docs
+
+            .page-docs__content
+                //-+demo()
+                +sidebar()
+
+                .content-wrapper
+
+                    +page-title({"title": "First launch"})
+
+                    section
+                        h3.getting-started-main-info__h3 Overview
+                        p.getting-started-main-info__text For easy use of SS, we have Tray application.
+                        p.getting-started-main-info__text This application allows non technical users to manage their containers and see information about their environments, peers, balance etc.
+                        p.getting-started-main-info__text It is already provided with Subutai Social installer and can be launched in way usual for OS.
+                        h3.getting-started-main-info__h3 Subutai Social Management Console launching steps
+                        ol
+                            li Open Tray Application
+                            li Click on Tray context menu icon
+                            li
+                                | Press Launch and choose Launch SS console
+                                br
+                                | Or open mannually in your browser with next URL:
+                                a(href="https://localhost:9999") https://localhost:9999
+                            li
+                                | Login as admin
+                                br
+                                | * Note that default username and password for admin account are <strong> admin</strong> and <strong>secret</strong>
+                        h3.getting-started-main-info__h3 Changing password on admin account steps
+                        p.getting-started-main-info__text To change password for admin account you need to:
+                        ol
+                            li Enter Subutai Social Management Console
+                            li Go to User Identity/User Management
+                            li
+                                | Click edit button
+                                img(src="img/getting-started/first-lauch-edit-icon.png")
+                            li
+                                | Enter new password and confirm it
+                                img(src="img/getting-started/first-lauch-popup.png")
+                            li Press Save user
+            .page__footer
+                +footer()
+
+            .clear
+
+        //- Scripts
+        script(src='js/plugins.min.js')
+        script(src='js/main.min.js')

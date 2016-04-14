@@ -1,0 +1,55 @@
+include ../modules/head/head
+include ../modules/footer/footer
+include ../modules/browsehappy/browsehappy
+include ../modules/header-inner/header-inner
+include ../modules/sidebar/sidebar
+include ../modules/page-title/page-title
+include ../modules/demo/demo
+
+
+doctype html
+html(class="no-js" lang="en")
+
+    head
+        +head()
+
+    body.page.page_background-gray
+        +browsehappy(browsehappy)
+
+        .page__header
+            +header-inner()
+
+        .page-docs
+
+            .page-docs__content
+                //-+demo()
+                +sidebar()
+
+                .content-wrapper
+
+                    +page-title({"title": "Subutai Social E2E plugin"})
+
+                    section
+                        h3.getting-started-main-info__h3 Overview
+                        p.getting-started-main-info__text We have added security with end to end encryption. Users will have excessive number keys in Subutai Social infrastructure which would bring some certain pain to manage them. Subutai Social security scheme is designed in a way that if adversary steal one key-ring of  certain host he is capable to act only in this key-ring's role is spread. This is additional security layer handled by Subutai Social management, but adds some additional overwhelm for new users who didn't get used to deal with it.
+                        p.getting-started-main-info__text Subutai Social E2E plugin removes all  the tedious and dangerous steps required to manage peer, resource, and container host keys. This decreases the chance for human error, increase security end to end, and will have users up and running quickly making the user experience much better.
+                        h3.getting-started-main-info__h3 Key creation steps
+                        ol
+                            li
+                                | Go to Subutai Social E2E browser plugin by clicking on
+                                img(src="img/getting-started/ss-e2e-plugin-icon.png").getting-started-main-info__img
+                                |  on Chrome menu and clicking on
+                                img(src="img/getting-started/ss-e2e-plugin-options.png").getting-started-main-info__img
+                            li
+                                | Enter email and click Generate in pop-up appearing on first enter to Subutai Social E2E plugin
+                                img(src="img/getting-started/ss-e2e-plugin-popup.png").getting-started-main-info__img
+                        p.getting-started-main-info__text Now all encryption and key management will be automatically managed by plugin.
+                        p *If you are already in the Subutai Social Management Console, refresh the tab (Ctrl + F5) and plugin will do all job for you from now on.
+            .page__footer
+                +footer()
+
+            .clear
+
+        //- Scripts
+        script(src='js/plugins.min.js')
+        script(src='js/main.min.js')
