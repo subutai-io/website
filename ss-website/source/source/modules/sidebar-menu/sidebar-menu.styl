@@ -14,6 +14,7 @@
 		padding 0 0 0 0
 		list-style none
 		color: #fff;
+		position: relative;
 
 	&__link
 		color: #fff;
@@ -31,4 +32,18 @@
 
 	&__submenu
 		padding 0 20px 0 27px
+		display: none;
+
+	&__arrow
+		position: absolute;
+		right: 10px;
+		top: 13px;
+		font-size: 14px;
+		transition 125ms all ease-in-out
+
+	&__item_active &__submenu
+		display: block;
+
+	&__item_active &__arrow
+		transform: rotate(90deg)
 
