@@ -48,10 +48,41 @@
 			]
 		},
 		{
-			"title":"Tutorials",
-			"url":"tutorials.html",
+			"title": "Tutorials",
+			"url": "tutorials.html",
 			"icon": "text",
-			"submenu": false
+			"submenu": [
+				{
+					"title": "Installation",
+					"url": "tutorials-installation.html",
+					"icon": "text",
+				},
+				{
+					"title": "User identity management",
+					"url": "tutorials-user-id-management.html",
+					"icon": "text",
+				},
+				{
+					"title": "Environment management",
+					"url": "tutorials-environment-management.html",
+					"icon": "text",
+				},
+				{
+					"title": "Hub registration",
+					"url": "tutorials-hub-registration.html",
+					"icon": "text",
+				},
+				{
+					"title": "Kurjun management",
+					"url": "tutorials-kurjun-management.html",
+					"icon": "text",
+				},
+				{
+					"title": "Plugins management",
+					"url": "tutorials-plugins-management.html",
+					"icon": "text",
+				},
+			]
 		}
 	]
 }
