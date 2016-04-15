@@ -2617,6 +2617,21 @@ input[type='reset'] .styler[disabled]
     margin: 0 0 40px 0;
 }
 
+.logo,
+.logo:visited
+{
+    font-family: 'Ubuntu', sans-serif;
+
+    text-decoration: none;
+
+    color: #fff;
+}
+
+.logo:hover
+{
+    color: #e6e6e6;
+}
+
 .input-group
 {
     padding-bottom: 13px;
@@ -2653,21 +2668,6 @@ input[type='reset'] .styler[disabled]
 .input-group .jq-radio
 {
     margin: 0 10px 0 0;
-}
-
-.logo,
-.logo:visited
-{
-    font-family: 'Ubuntu', sans-serif;
-
-    text-decoration: none;
-
-    color: #fff;
-}
-
-.logo:hover
-{
-    color: #e6e6e6;
 }
 
 .main-menu ul
@@ -3806,7 +3806,7 @@ html.remodal-is-locked
 
 .sidebar-menu__item
 {
-    font-size: 14px;
+    font-size: 16px;
 
     position: relative;
 
@@ -3825,11 +3825,9 @@ html.remodal-is-locked
 .sidebar-menu__link,
 .sidebar-menu__link:visited
 {
-    font-weight: bold;
-
     display: block;
 
-    padding: 6px 27px 8px;
+    padding: 8px 25px 0;
 
     text-decoration: none;
 
@@ -3848,6 +3846,17 @@ html.remodal-is-locked
     display: none;
 
     padding: 0 20px 0 27px;
+}
+
+.sidebar-menu__submenu .sidebar-menu__item
+{
+    font-size: 14px;
+}
+
+.sidebar-menu__submenu .sidebar-menu__link,
+.sidebar-menu__submenu .sidebar-menu__link:visited
+{
+    padding: 3px 25px;
 }
 
 .sidebar-menu__arrow
