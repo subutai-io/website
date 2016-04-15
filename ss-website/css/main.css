@@ -2632,6 +2632,21 @@ input[type='reset'] .styler[disabled]
     color: #e6e6e6;
 }
 
+.logo,
+.logo:visited
+{
+    font-family: 'Ubuntu', sans-serif;
+
+    text-decoration: none;
+
+    color: #fff;
+}
+
+.logo:hover
+{
+    color: #e6e6e6;
+}
+
 .input-group
 {
     padding-bottom: 13px;
