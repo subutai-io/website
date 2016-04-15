@@ -6,6 +6,7 @@ include ../modules/sidebar/sidebar
 include ../modules/page-title/page-title
 include ../modules/demo/demo
 include ../modules/download/download
+include ../modules/analytics/analytics
 
 
 doctype html
@@ -85,3 +86,4 @@ html(class="no-js" lang="en")
 		//- Scripts
 		script(src='js/plugins.min.js')
 		script(src='js/main.min.js')
+		+analytics()
