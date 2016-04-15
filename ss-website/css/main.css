@@ -3808,6 +3808,8 @@ html.remodal-is-locked
 {
     font-size: 14px;
 
+    position: relative;
+
     padding: 0 0 0 0;
 
     list-style: none;
@@ -3843,7 +3845,35 @@ html.remodal-is-locked
 
 .sidebar-menu__submenu
 {
+    display: none;
+
     padding: 0 20px 0 27px;
+}
+
+.sidebar-menu__arrow
+{
+    font-size: 14px;
+
+    position: absolute;
+    top: 13px;
+    right: 10px;
+
+    -webkit-transition: 125ms all ease-in-out;
+         -o-transition: 125ms all ease-in-out;
+            transition: 125ms all ease-in-out;
+}
+
+.sidebar-menu__item_active .sidebar-menu__submenu
+{
+    display: block;
+}
+
+.sidebar-menu__item_active .sidebar-menu__arrow
+{
+    -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+         -o-transform: rotate(90deg);
+            transform: rotate(90deg);
 }
 
 .social-icons

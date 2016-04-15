@@ -1,4 +1,4 @@
-/*$(document).on('click', '.sidebar-menu__link', function () {
+$(document).on('click', '.sidebar-menu__link', function () {
 	if ($(this).next('.sidebar-menu__submenu').length > 0) {
 		if ($(this).parent().hasClass('sidebar-menu__item_active')) {
 			$(this).parent().removeClass('sidebar-menu__item_active');
@@ -11,5 +11,5 @@
 		}
 		return false;
 	}
-});*/
+});
 
