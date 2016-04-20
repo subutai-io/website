@@ -8,5 +8,5 @@ mixin download(data)
 			ul
 				each ent, num in data.links
 					li.download-menu__item
-						a(href=ent.href)= ent.title
+						a(href=ent.href, onclick=ent.action)= ent.title
 
