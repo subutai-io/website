@@ -12,71 +12,62 @@ include ../modules/analytics/analytics
 doctype html
 html(class="no-js" lang="en")
 
-    head
-        +head()
+	head
+		+head()
 
-    body.page.page_background-gray
-        +browsehappy(browsehappy)
+	body.page.page_background-gray
+		+browsehappy(browsehappy)
 
-        .page__header
-            +header-inner()
+		.page__header
+			+header-inner()
 
-        .page-docs
+		.page-docs
 
-            .page-docs__content
-                //-+demo()
-                +sidebar('tutorials.html')
+			.page-docs__content
+				//-+demo()
+				+sidebar('tutorials.html')
 
-                .content-wrapper
+				.content-wrapper
 
-                    +page-title({"title": "Tutorials: Environment management"})
+					+page-title({"title": "Tutorials: Environment management"})
 
-                    section
-                        p
-                        +accordion()
-                            +accordion-item({"title": "1\) Cross peer environment creation", "open": true, "id": "CrossPeerEnviOnRemotePeer"})
-                                video(width="100%", height="450", controls="controls", preload="none")
-                                    source(src="https://cdn.subut.ai:8338/kurjun/raw-files/raw.cd2a80a05b85fdcde008f19958d1ab86/download", type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"')
+					section
+						p
+						+accordion()
+							+accordion-item({"title": "1\) Cross peer environment creation", "open": true, "id": "CrossPeerEnviOnRemotePeer"})
+								iframe(width="100%" height="450" src="https://www.youtube.com/embed/Uo4w9SB2gmE?version=3&enablejsapi=1" frameborder="0" allowfullscreen)
 
-                            +accordion-item({"title": "2\) Multi host envrionment creation", "id": "CrossPeerWithTwoHosts"})
-                                video(width="100%", height="450", controls="controls", preload="none")
-                                    source(src="https://cdn.subut.ai:8338/kurjun/raw-files/raw.cd5b997405f772113bfbcc1436f825d3/download", type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"')
+							+accordion-item({"title": "2\) Multi host envrionment creation", "id": "CrossPeerWithTwoHosts"})
+								iframe(width="100%" height="450" src="https://www.youtube.com/embed/mLpOYQwxJKI?version=3&enablejsapi=1" frameborder="0" allowfullscreen)
 
-                            +accordion-item({"title": "3\) Environment Console", "id": "pingContainers"})
-                                video(width="100%", height="450", controls="controls", preload="none")
-                                    source(src="https://cdn.subut.ai:8338/kurjun/raw-files/raw.957174206a99b1f1f91673cfef7dc59c/download", type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"')
+							+accordion-item({"title": "3\) Environment Console", "id": "pingContainers"})
+								iframe(width="100%" height="450" src="https://www.youtube.com/embed/L_TNC7ijsCQ?version=3&enablejsapi=1" frameborder="0" allowfullscreen)
 
-                            +accordion-item({"title": "4\) Grow envrionment", "id": "GrowContainer"})
-                                video(width="100%", height="450", controls="controls", preload="none")
-                                    source(src="https://cdn.subut.ai:8338/kurjun/raw-files/raw.aaab1be841d7d0ad1160169c2376858c/download", type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"')
+							+accordion-item({"title": "4\) Grow envrionment", "id": "GrowContainer"})
+								iframe(width="100%" height="450" src="https://www.youtube.com/embed/G89NQXvaf_c?version=3&enablejsapi=1" frameborder="0" allowfullscreen)
 
-                            +accordion-item({"title": "5\) Container Manipulation", "id": "StopRemoveContainer"})
-                                video(width="100%", height="450", controls="controls", preload="none")
-                                    source(src="https://cdn.subut.ai:8338/kurjun/raw-files/raw.79ad1a41c1008bc00abd68b00a5df407/download", type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"')
+							+accordion-item({"title": "5\) Container Manipulation", "id": "StopRemoveContainer"})
+								iframe(width="100%" height="450" src="https://www.youtube.com/embed/lNBDlYFV9wo?version=3&enablejsapi=1" frameborder="0" allowfullscreen)
 
-                            +accordion-item({"title": "6\) Set Environment Domain", "id": "SetDomainToContainer"})
-                                video(width="100%", height="450", controls="controls", preload="none")
-                                    source(src="https://cdn.subut.ai:8338/kurjun/raw-files/raw.2e6986ddcfe6c3263e898950b93f78dc/download", type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"')
+							+accordion-item({"title": "6\) Set Environment Domain", "id": "SetDomainToContainer"})
+								iframe(width="100%" height="450" src="https://www.youtube.com/embed/wJN1VdO_DQs?version=3&enablejsapi=1" frameborder="0" allowfullscreen)
 
-                            +accordion-item({"title": "7\) Share Environment", "id": "ShareEnvironment"})
-                                video(width="100%", height="450", controls="controls", preload="none")
-                                    source(src="https://cdn.subut.ai:8338/kurjun/raw-files/raw.5d21415c9f6b56a5436c48ea6cbc8e83/download", type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"')
+							+accordion-item({"title": "7\) Share Environment", "id": "ShareEnvironment"})
+								iframe(width="100%" height="450" src="https://www.youtube.com/embed/cXSRxIPi0lw?version=3&enablejsapi=1" frameborder="0" allowfullscreen)
 
-                            +accordion-item({"title": "8\) Container Sizes", "id": "ChooseTheSizeOfContainers"})
-                                video(width="100%", height="450", controls="controls", preload="none")
-                                    source(src="https://cdn.subut.ai:8338/kurjun/raw-files/raw.324e1122e3080c96748fdccf389f97ec/download", type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"')
+							+accordion-item({"title": "8\) Container Sizes", "id": "ChooseTheSizeOfContainers"})
+								iframe(width="100%" height="450" src="https://www.youtube.com/embed/jBaeuKHdZv8?version=3&enablejsapi=1" frameborder="0" allowfullscreen)
 
-                            +accordion-item({"title": "9\) Tokens Environment PGP Key", "id": "TokensEnvironmentPgpKey"})
-                                video(width="100%", height="450", controls="controls", preload="none")
-                                    source(src="https://cdn.subut.ai:8338/kurjun/raw-files/raw.13841937ba3866c406098f766e7fed61/download", type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"')
+							+accordion-item({"title": "9\) Tokens Environment PGP Key", "id": "TokensEnvironmentPgpKey"})
+								iframe(width="100%" height="450" src="https://www.youtube.com/embed/iK2QfXpBvto?version=3&enablejsapi=1" frameborder="0" allowfullscreen)
 
 
-            .page__footer
-                +footer()
+			.page__footer
+				+footer()
 
-            .clear
+			.clear
 
-        //- Scripts
-        script(src='js/plugins.min.js')
-        script(src='js/main.min.js')
-        +analytics()
+		//- Scripts
+		script(src='js/plugins.min.js')
+		script(src='js/main.min.js')
+		+analytics()
