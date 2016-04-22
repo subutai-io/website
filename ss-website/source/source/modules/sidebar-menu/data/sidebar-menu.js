@@ -11,7 +11,7 @@
 					"icon": "text",
 				},
 				{
-					"title":"Subutai Social E2E plugin",
+					"title":"Browser Plugin",
 					"url":"ss-e2e-plugin.html",
 					"icon": "text",
 				},
@@ -21,27 +21,27 @@
 					"icon": "text",
 				},
 				{
-					"title":"Registering peer in Subutai Social Hub",
+					"title":"Register Peers on Hub",
 					"url":"registering-peer-ss.html",
 					"icon": "text",
 				},
 				{
-					"title":"Environment creation",
+					"title":"Environment Creation",
 					"url":"environment-creation.html",
 					"icon": "text",
 				},
 				{
-					"title":"Peer registration",
+					"title":"Peer to Peer Setup",
 					"url":"peer-registration.html",
 					"icon": "text",
 				},
 				{
-					"title":"Plugin installation",
+					"title":"Management Plugins",
 					"url":"plugin-installation.html",
 					"icon": "text",
 				},
 				{
-					"title":"Registering users",
+					"title":"Registering Users",
 					"url":"registering-users.html",
 					"icon": "text",
 				},
