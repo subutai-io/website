@@ -65,7 +65,11 @@ $(document).ready(function() {
 			event.preventDefault();
 	
 			var $item = $(this).parent();
-			$('video').trigger('pause');
+			//$('video').trigger('pause');
+			//$('.accordion__item_active iframe').attr('src', $('.accordion__item_active iframe').attr('src'));
+			$('.accordion__item_active iframe').each(function() {
+				this.contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
+			});
 	
 			if (!$item.hasClass('accordion__item_active')) {
 				$items.removeClass('accordion__item_active');

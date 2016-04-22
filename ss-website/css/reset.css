@@ -592,6 +592,12 @@ hr
     border-top: 1px solid #ccc;
 }
 
+section li
+{
+    font-size: 16px;
+    line-height: 34px;
+}
+
 table
 {
     width: 100%;
