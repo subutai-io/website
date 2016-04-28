@@ -1,6 +1,7 @@
-mixin footer-menu(data)
+mixin footer-menu()
 	ul.footer-menu.js-link-sroll
-		each ent, num in data
-			li.footer-menu__item
-				a(href="#{ent.url}")= ent.title
+		li.footer-menu__item
+			a(href="thanks.html").title Thanks
+		li.footer-menu__item
+			a(href="tribute-to-Dennis-Ritchie.html").title Tribute
 
