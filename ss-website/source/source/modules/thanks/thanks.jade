@@ -1,0 +1,37 @@
+
+mixin thanks()
+
+	.thanks
+		h1
+			| Special thanks to the following companies
+			br
+			| for contributing the necessary tools
+		.thanks__bg-gray
+			.thanks__logo-main
+				+icon('logo-attlassians')
+			.thanks__raw
+				.thanks__logo
+					+icon('logo-stash')
+				.thanks__logo
+					+icon('logo-hipchat')
+			.thanks__raw
+				.thanks__logo
+					+icon('logo-confluence')
+				.thanks__logo
+					+icon('logo-jira')
+
+		.thanks__bg-gray
+			.thanks__logo-main
+				+icon('logo-jetbrains')
+			.thanks__raw
+				.thanks__logo
+					+icon('logo-intellejidea')
+				.thanks__logo
+					+icon('logo-upsource')
+
+		.thanks__bg-gray.thanks__bg-gray_none
+			.thanks__raw
+				.thanks__logo
+					img(src="img/content/bitrock-logo.png")
+				.thanks__logo
+					img(src="img/content/gramatik-logo.jpg").icon_logo-gramatik
