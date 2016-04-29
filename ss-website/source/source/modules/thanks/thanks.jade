@@ -8,7 +8,8 @@ mixin thanks()
 			| for contributing the necessary tools
 		.thanks__bg-gray
 			.thanks__logo-main
-				+icon('logo-attlassians')
+				a(href='https://www.atlassian.com', target='_blank')
+					+icon('logo-attlassians')
 			.thanks__raw
 				.thanks__logo
 					+icon('logo-stash')
@@ -22,7 +23,8 @@ mixin thanks()
 
 		.thanks__bg-gray
 			.thanks__logo-main
-				+icon('logo-jetbrains')
+				a(href='https://www.jetbrains.com', target='_blank')
+					+icon('logo-jetbrains')
 			.thanks__raw
 				.thanks__logo
 					+icon('logo-intellejidea')
@@ -32,6 +34,7 @@ mixin thanks()
 		.thanks__bg-gray.thanks__bg-gray_none
 			.thanks__raw
 				.thanks__logo
-					img(src="img/content/bitrock-logo.png")
+					a(href='http://www.bitrock.com', target='_blank')
+						img(src="img/content/bitrock-logo.png")
 				.thanks__logo
 					img(src="img/content/gramatik-logo.jpg").icon_logo-gramatik

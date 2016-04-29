@@ -43,7 +43,7 @@ html(class="no-js" lang="en")
 							p.getting-started-main-info__text-install Network installers:
 							.getting-started-main-info__button
 								+download({
-									"icon": "fa-apple",
+									"icon": "fa fa-apple",
 									"title": "Mac",
 									"links": [{
 										"href": "http://cdn.subut.ai:8080/kurjun/rest/raw/download?name=subutai-network-installer.pkg",
@@ -63,6 +63,24 @@ html(class="no-js" lang="en")
 									i.fa.fa-windows
 									span COMING SOON
 
+							.getting-started-main-info__button
+								+download({
+									"icon": "fa-e2e",
+									"title": "E2E plugin",
+									"links": [{
+										"href": "https://github.com/subutai-io/browsers/releases/download/2.0.7/e2e-plugin_v2.0.7.safariextz",
+										"title": "Safari",
+										"action": "ga('send', 'event', 'downloads', 'e2e-plugin_v2.0.7.safariextz', 'Safari');"
+									}, {
+										"href": "https://github.com/subutai-io/browsers/releases/download/2.0.7/e2e-plugin.firefox_v2.0.7.xpi",
+										"title": "Firefox",
+										"action": "ga('send', 'event', 'downloads', 'e2e-plugin.firefox_v2.0.7.xpi', 'Firefox');"
+									}, {
+										"href": "https://chrome.google.com/webstore/detail/subutai-social-e2e-plugin/kpmiofpmlciacjblommkcinncmneeoaa",
+										"title": "Chrome",
+										"action": "ga('send', 'event', 'downloads', 'subutai-network-installer-master.pkg', 'Chrome');"
+									}]
+								})
 								.clear
 							p.getting-started-main-info__text
 								| After installation you should be ready to share resources. The following components are installed onto your system if not already present:
