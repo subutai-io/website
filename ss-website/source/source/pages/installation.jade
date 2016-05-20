@@ -59,10 +59,24 @@ html(class="no-js" lang="en")
 										"action": "ga('send', 'event', 'downloads', 'subutai-network-installer-master.pkg', 'Mac');"
 									}]
 								})
-								.button.button_circle.download.in-progress
-									i.fa.fa-windows
-									span COMING SOON
-							p.getting-started-main-info__text-install E2E plugin:
+								+download({
+									"icon": "fa fa-windows",
+									"title": "Windows",
+									"links": [{
+										"href": "http://cdn.subut.ai:8080/kurjun/rest/raw/download?name=subutai-network-installer.exe",
+										"title": "Net Installer",
+										"action": "ga('send', 'event', 'downloads', 'subutai-network-installer.exe', 'Win');"
+									}, {
+										"href": "http://cdn.subut.ai:8080/kurjun/rest/raw/download?name=subutai-network-installer-dev.exe",
+										"title": "Net Installer Dev",
+										"action": "ga('send', 'event', 'downloads', 'subutai-network-installer-dev.exe', 'Win');"
+									}, {
+										"href": "http://cdn.subut.ai:8080/kurjun/rest/raw/download?name=subutai-network-installer-master.exe",
+										"title": "Net Installer Master",
+										"action": "ga('send', 'event', 'downloads', 'subutai-network-installer-master.exe', 'Win');"
+									}]
+								})
+                            p.getting-started-main-info__text-install E2E plugin:
 							.getting-started-main-info__button
 								+download({
 									"icon": "fa-e2e",
