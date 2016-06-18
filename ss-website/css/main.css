@@ -1127,7 +1127,8 @@ input[type='button'].button_block
     border-bottom: none;
 }
 
-.download-menu__item a
+.download-menu__item a,
+.download-menu__item span
 {
     line-height: 32px;
 
@@ -1139,7 +1140,16 @@ input[type='button'].button_block
     width: 100%;
     padding: 0 10px;
 
+    cursor: pointer;
     text-decoration: none;
+
+    color: #40485b;
+}
+
+.download-menu__item a:hover,
+.download-menu__item span:hover
+{
+    color: #616d89;
 }
 
 .footer
@@ -7694,6 +7704,11 @@ body
     background: url('../img/content/e2e-logo.png');
     background-repeat: no-repeat;
     background-position: center center;
+}
+
+.mac-download-popup
+{
+    display: none;
 }
 
 @font-face
