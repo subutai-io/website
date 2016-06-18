@@ -8,7 +8,6 @@ include ../modules/demo/demo
 include ../modules/download/download
 include ../modules/analytics/analytics
 
-
 doctype html
 html(class="no-js" lang="en")
 
@@ -47,14 +46,17 @@ html(class="no-js" lang="en")
 									"title": "Mac",
 									"links": [{
 										"href": "http://cdn.subut.ai:8080/kurjun/rest/raw/download?name=subutai-network-installer.pkg",
+										"popup": true,
 										"title": "Net Installer",
 										"action": "ga('send', 'event', 'downloads', 'subutai-network-installer.pkg', 'Mac');"
 									}, {
 										"href": "http://cdn.subut.ai:8080/kurjun/rest/raw/download?name=subutai-network-installer-dev.pkg",
+										"popup": true,
 										"title": "Net Installer Dev",
 										"action": "ga('send', 'event', 'downloads', 'subutai-network-installer-dev.pkg', 'Mac');"
 									}, {
 										"href": "http://cdn.subut.ai:8080/kurjun/rest/raw/download?name=subutai-network-installer-master.pkg",
+										"popup": true,
 										"title": "Net Installer Master",
 										"action": "ga('send', 'event', 'downloads', 'subutai-network-installer-master.pkg', 'Mac');"
 									}]
@@ -76,6 +78,7 @@ html(class="no-js" lang="en")
 										"action": "ga('send', 'event', 'downloads', 'subutai-network-installer-master.exe', 'Win');"
 									}]
 								})
+
 							p.getting-started-main-info__text-install E2E plugin:
 							.getting-started-main-info__button
 								+download({
