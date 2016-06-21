@@ -1127,8 +1127,7 @@ input[type='button'].button_block
     border-bottom: none;
 }
 
-.download-menu__item a,
-.download-menu__item span
+.download-menu__item a
 {
     line-height: 32px;
 
@@ -1140,16 +1139,7 @@ input[type='button'].button_block
     width: 100%;
     padding: 0 10px;
 
-    cursor: pointer;
     text-decoration: none;
-
-    color: #40485b;
-}
-
-.download-menu__item a:hover,
-.download-menu__item span:hover
-{
-    color: #616d89;
 }
 
 .footer
