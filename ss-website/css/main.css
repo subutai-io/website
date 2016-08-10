@@ -2454,6 +2454,17 @@ input[type='reset'] .styler[disabled]
     font-size: 20px;
 }
 
+.getting-started-main-info__text_note
+{
+    font-size: 14px;
+    line-height: 20px;
+
+    margin-top: 0;
+    padding: 10px;
+
+    border: 1px solid #ff4136;
+}
+
 .github-button,
 .github-button:visited
 {
@@ -3512,66 +3523,6 @@ html.remodal-is-locked
     list-style: none;
 }
 
-.possibilities-main
-{
-    position: relative;
-
-    display: -webkit-box;
-    display: -webkit-flex;
-    display:    -moz-box;
-    display: -ms-flexbox;
-    display:         flex;
-            flex-direction: column;
-
-    background: #041b4d;
-    background: -webkit-linear-gradient(315deg, #041b4d 0%, #041b4d 37%, #0082c4 100%);
-    background:      -o-linear-gradient(315deg, #041b4d 0%, #041b4d 37%, #0082c4 100%);
-    background:         linear-gradient(135deg, #041b4d 0%, #041b4d 37%, #0082c4 100%);
-
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-       -moz-box-orient: vertical;
-       -moz-box-direction: normal;
-        -ms-flex-direction: column;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-       -moz-box-pack: center;
-    -ms-flex-pack: center;
-            justify-content: center;
-}
-
-.possibilities-main__inner
-{
-    width: 1000px;
-    margin: 0 auto;
-}
-
-.possibilities-main__title
-{
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 36px;
-
-    display: inline-block;
-    float: left;
-
-    width: 300px;
-    margin: 130px 0 0 0;
-
-    text-transform: uppercase;
-
-    color: #fff;
-}
-
-.possibilities-main__list
-{
-    display: inline-block;
-    float: right;
-
-    width: 670px;
-}
-
 .pseudo-dropdown
 {
     font-size: 13px;
@@ -3685,6 +3636,66 @@ html.remodal-is-locked
     height: 10px;
 
     fill: #fff;
+}
+
+.possibilities-main
+{
+    position: relative;
+
+    display: -webkit-box;
+    display: -webkit-flex;
+    display:    -moz-box;
+    display: -ms-flexbox;
+    display:         flex;
+            flex-direction: column;
+
+    background: #041b4d;
+    background: -webkit-linear-gradient(315deg, #041b4d 0%, #041b4d 37%, #0082c4 100%);
+    background:      -o-linear-gradient(315deg, #041b4d 0%, #041b4d 37%, #0082c4 100%);
+    background:         linear-gradient(135deg, #041b4d 0%, #041b4d 37%, #0082c4 100%);
+
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+       -moz-box-orient: vertical;
+       -moz-box-direction: normal;
+        -ms-flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+       -moz-box-pack: center;
+    -ms-flex-pack: center;
+            justify-content: center;
+}
+
+.possibilities-main__inner
+{
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.possibilities-main__title
+{
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+
+    display: inline-block;
+    float: left;
+
+    width: 300px;
+    margin: 130px 0 0 0;
+
+    text-transform: uppercase;
+
+    color: #fff;
+}
+
+.possibilities-main__list
+{
+    display: inline-block;
+    float: right;
+
+    width: 670px;
 }
 
 .search-widget
@@ -7694,11 +7705,6 @@ body
     background: url('../img/content/e2e-logo.png');
     background-repeat: no-repeat;
     background-position: center center;
-}
-
-.mac-download-popup
-{
-    display: none;
 }
 
 @font-face
