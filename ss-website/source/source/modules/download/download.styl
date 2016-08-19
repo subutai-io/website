@@ -10,39 +10,30 @@
 		position: absolute;
 		top: 100%;
 		left: 50%;
-		border: 1px solid #CCCEEE;
-		background-color: #fff;
+		/*border: 1px solid #CCCEEE;*/
+		background-color: #303644;
 		border-radius: 2px;
 		z-index: 999;
 		width: 160px;
+		margin-top: 8px;
 		margin-left: -80px;
 		box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.1);
 		transition: 125ms all ease-in-out;
-
-		&:before
-			content: "";
-			position: absolute;
-			bottom: 100%;
-			left: 75px;
-			border-bottom: 10px solid #ccceee;
-			border-left: 10px solid transparent;
-			border-right: 10px solid transparent;
 
 		&:after
 			content: "";
 			position: absolute;
 			bottom: 100%;
-			left: 77px;
-			border-bottom: 8px solid #f8fbfd;
+			left: 71px;
+			border-bottom: 8px solid #303644;
 			border-left: 8px solid transparent;
 			border-right: 8px solid transparent;
 
 		& ul
 			margin: 0;
-			padding: 0;
+			padding: 2px 0;
 
 		&__item
-			border-bottom: 1px solid #303644
 			padding: 0 0 0 0;
 			margin: 0 0 0 0;
 			font-size: 14px;
@@ -59,4 +50,7 @@
 				padding: 0 10px;
 				width: 100%;
 				box-sizing: border-box;
-
+				color #fff;
+				&:hover
+					background-color #404651
+					color #fff
