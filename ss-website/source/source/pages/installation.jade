@@ -75,15 +75,15 @@ html(class="no-js" lang="en")
 										"action": "ga('send', 'event', 'downloads', 'subutai-network-installer-master.exe', 'Win');"
 									}]
 								})
-								+download({
-									"icon": "fa fa-linux",
-									"title": "Linux",
-									"links": [{
-										"href": "https://cdn.subut.ai:8338/kurjun/rest/raw/get?name=subutai-launcher",
-										"title": "Net Installer",
-										"action": "ga('send', 'event', 'downloads', 'subutai-network-installer.exe', 'Win');"
-									}]
-								})
+								//-+download({
+									//-"icon": "fa fa-linux",
+									//-"title": "Linux",
+									//-"links": [{
+										//-"href": "https://cdn.subut.ai:8338/kurjun/rest/raw/get?name=subutai-launcher",
+										//-"title": "Net Installer",
+										//-"action": "ga('send', 'event', 'downloads', 'subutai-network-installer.exe', 'Win');"
+									//-}]
+								//-})
 							p.getting-started-main-info__text_note
 								| Net Installer Dev - is the latest developer package from the dev branch
 								<br>
@@ -92,7 +92,7 @@ html(class="no-js" lang="en")
 								| Net Installer - is the stable version of Subutai for users
 								<br>
 								i
-									| *Please note, that «Net Installer Dev» is the only actual package during current beta test period
+									| *The latest changes on the dev branch (between weekly releases) are available via the dev installers.
 
 							p.getting-started-main-info__text-install E2E plugin:
 							.getting-started-main-info__button

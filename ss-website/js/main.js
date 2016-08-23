@@ -39,16 +39,6 @@ $(document).ready(function() {
 	$('.content-wrapper table').basictable({baseClass: 'table'});
 
 	// Here insert modules scripts
-	$('.alert__close').on('click', function() {
-		$(this).closest('.alert').fadeOut();
-	});
-	
-	
-	$('.browsehappy').click(function() {
-		$(this).slideUp();
-	});
-	
-	
 	// Accordion
 	$('.accordion').each(function(index, el) {
 		var $that = $(this);
@@ -101,6 +91,16 @@ $(document).ready(function() {
 		$(window.location.hash).children('.accordion__content').show();
 	}
 	
+	
+	
+	$('.alert__close').on('click', function() {
+		$(this).closest('.alert').fadeOut();
+	});
+	
+	
+	$('.browsehappy').click(function() {
+		$(this).slideUp();
+	});
 	
 	
 	
