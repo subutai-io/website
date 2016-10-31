@@ -1,0 +1,64 @@
+include ../modules/head/head
+include ../modules/footer/footer
+include ../modules/browsehappy/browsehappy
+include ../modules/header-inner/header-inner
+include ../modules/sidebar/sidebar
+include ../modules/page-title/page-title
+include ../modules/demo/demo
+include ../modules/download/download
+include ../modules/analytics/analytics
+
+
+doctype html
+html(class="no-js" lang="en")
+
+	head
+		+head()
+
+	body.page.page_background-gray
+		+browsehappy(browsehappy)
+
+		.page__header
+			+header-inner()
+
+		.page-docs
+
+			.page-docs__content
+				//-+demo()
+				+sidebar('getting-started.html')
+
+				.content-wrapper
+
+					+page-title({"title": "Ubuntu/Debian Tray/P2P packages"})
+
+					section
+						section
+							p.getting-started-main-info__text-install Packages:
+							.getting-started-main-info__button
+								+download({
+									"icon": "fa fa-link",
+									"title": "Ubuntu/Debian Tray/P2P ",
+									"links": [{
+										"href": "https://cdn.subut.ai:8338/kurjun/rest/raw/mike/subutai-p2p_4.0.4_amd64.deb",
+										"title": "Ubuntu",
+										"action": "ga('send', 'event', 'downloads', 'subutai-network-installer.pkg', 'Ubuntu');"
+									}, {
+										"href": "https://cdn.subut.ai:8338/kurjun/rest/raw/lezh1k/subutai-tray_4.0.4_amd64.deb",
+										"title": "Debian Tray",
+										"action": "ga('send', 'event', 'downloads', 'subutai-tray_4.0.4_amd64.deb', 'Debian');"
+									}]
+								})
+								p.getting-started-main-info__text
+								p.getting-started-main-info__text-install User guide
+								p.getting-started-main-info__text
+									a(href="https://github.com/subutai-io/tray/wiki/User-guide") Linux
+
+			.page__footer
+				+footer()
+
+			.clear
+
+		//- Scripts
+		script(src='js/plugins.min.js')
+		script(src='js/main.min.js')
+		+analytics()

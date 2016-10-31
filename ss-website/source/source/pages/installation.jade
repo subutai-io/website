@@ -11,130 +11,158 @@ include ../modules/analytics/analytics
 doctype html
 html(class="no-js" lang="en")
 
-	head
-		+head()
+    head
+        +head()
 
-	body.page.page_background-gray
-		+browsehappy(browsehappy)
-		
-		.page__header
-			+header-inner()
+    body.page.page_background-gray
+        +browsehappy(browsehappy)
 
-		.page-docs
+        .page__header
+            +header-inner()
 
-			.page-docs__content
-				//-+demo()
-				+sidebar('getting-started.html')
+        .page-docs
 
-				.content-wrapper
+            .page-docs__content
+                //-+demo()
+                +sidebar('getting-started.html')
 
-					+page-title({"title": "Installation"})
+                .content-wrapper
 
-					section
-						section
-							p.getting-started-main-info__text
-								| Subutai Social can directly install onto bare metal, but for convenience we've packaged everything into a virtual machine. We did this so you don't have to change anything and it's effortless to install and remove. We made some easy to use installers to take the hassle out of setting up everything for Windows and Mac OS X users. *Nix users please see the
-								a(href="https://github.com/subutai-io/subos/blob/master/Readme.md") Readme.md
-							p.getting-started-main-info__text
-								| Subutai Social is ready for beta-testing
-							p.getting-started-main-info__text
-								| We are pleased to announce that the public beta release of Subutai Social is now available. This beta release is made available to allow a broad user base to test and evaluate the next major version of Subutai Social. Here's a great opportunity to help us make the next release the best ever.
-							p.getting-started-main-info__text-install Network installers:
-							.getting-started-main-info__button
-								+download({
-									"icon": "fa fa-apple",
-									"title": "Mac",
-									"links": [{
-										"href": "https://cdn.subut.ai:8338/kurjun/rest/raw/download?name=subutai-network-installer.pkg",
-										"title": "Net Installer",
-										"action": "ga('send', 'event', 'downloads', 'subutai-network-installer.pkg', 'Mac');"
-									}, {
-										"href": "https://cdn.subut.ai:8338/kurjun/rest/raw/download?name=subutai-network-installer-dev.pkg",
-										"title": "Net Installer Dev",
-										"action": "ga('send', 'event', 'downloads', 'subutai-network-installer-dev.pkg', 'Mac');"
-									}, {
-										"href": "https://cdn.subut.ai:8338/kurjun/rest/raw/download?name=subutai-network-installer-master.pkg",
-										"title": "Net Installer Master",
-										"action": "ga('send', 'event', 'downloads', 'subutai-network-installer-master.pkg', 'Mac');"
-									}]
-								})
-								+download({
-									"icon": "fa fa-windows",
-									"title": "Windows",
-									"links": [{
-										"href": "https://cdn.subut.ai:8338/kurjun/rest/raw/download?name=subutai-network-installer.exe",
-										"title": "Net Installer",
-										"action": "ga('send', 'event', 'downloads', 'subutai-network-installer.exe', 'Win');"
-									}, {
-										"href": "https://cdn.subut.ai:8338/kurjun/rest/raw/download?name=subutai-network-installer-dev.exe",
-										"title": "Net Installer Dev",
-										"action": "ga('send', 'event', 'downloads', 'subutai-network-installer-dev.exe', 'Win');"
-									}, {
-										"href": "https://cdn.subut.ai:8338/kurjun/rest/raw/download?name=subutai-network-installer-master.exe",
-										"title": "Net Installer Master",
-										"action": "ga('send', 'event', 'downloads', 'subutai-network-installer-master.exe', 'Win');"
-									}]
-								})
-								+download({
-									"icon": "fa fa-linux",
-									"title": "Linux",
-									"links": [{
-										"href": "https://cdn.subut.ai:8338/kurjun/rest/raw/mike/subutai-p2p_4.0.4_amd64.deb",
-										"title": "P2P Debian Package",
-										"action": "ga('send', 'event', 'downloads', 'subutai-network-installer.exe', 'Win');"
-									},
-									{
-										"href": "https://cdn.subut.ai:8338/kurjun/rest/raw/lezh1k/subutai-tray_4.0.4_amd64.deb",
-										"title": "Tray Debian Package",
-										"action": "ga('send', 'event', 'downloads', 'subutai-network-installer.exe', 'Win');"
-									}]
-								})
-							p.getting-started-main-info__text_note
-								| Net Installer Dev - is the latest developer package from the dev branch
-								<br>
-								| Net Installer Master - is a developer package from the master branch
-								<br>
-								| Net Installer - is the stable version of Subutai for users
-								<br>
-								i
-									| *The latest changes on the dev branch (between weekly releases) are available via the dev installers.
+                    +page-title({"title": "Installation"})
 
-							p.getting-started-main-info__text-install E2E plugin:
-							.getting-started-main-info__button
-								+download({
-									"icon": "fa-e2e",
-									"title": "E2E plugin",
-									"links": [{
-										"href": "https://github.com/subutai-io/browsers/releases/download/2.0.7/e2e-plugin_v2.0.7.safariextz",
-										"title": "Safari",
-										"action": "ga('send', 'event', 'downloads', 'e2e-plugin_v2.0.7.safariextz', 'Safari');"
-									}, {
-										"href": "https://github.com/subutai-io/browsers/releases/download/2.0.7/e2e-plugin.firefox_v2.0.7.xpi",
-										"title": "Firefox",
-										"action": "ga('send', 'event', 'downloads', 'e2e-plugin.firefox_v2.0.7.xpi', 'Firefox');"
-									}, {
-										"href": "https://chrome.google.com/webstore/detail/subutai-social-e2e-plugin/kpmiofpmlciacjblommkcinncmneeoaa",
-										"title": "Chrome",
-										"action": "ga('send', 'event', 'downloads', 'subutai-network-installer-master.pkg', 'Chrome');"
-									}]
-								})
-								.clear
-							p.getting-started-main-info__text
-								| After installation you should be ready to share resources. The following components are installed onto your system if not already present:
-							ol
-								li Google Chrome Browser
-								li VirtualBox Hypervisor
-								li Subutai Social E2E Browser Plugin for Chrome
-								li Subutai Social Resource host (RH) VM Image for Virtual Box
-								li Subutai Social Management host (MH) Template Image
-								li OS Specific Subutai Social P2P Executable
-								li Subutai Social Tray Application
-			.page__footer
-				+footer()
+                    section
+                        section
+                            p.getting-started-main-info__text
+                                | Subutai Social can directly install onto bare metal, but for convenience we've packaged everything into a virtual machine. We did this so you don't have to change anything and it's effortless to install and remove. We made some easy to use installers to take the hassle out of setting up everything for Windows and Mac OS X users. *Nix users please see the
+                                a(href="https://github.com/subutai-io/subos/blob/master/Readme.md") Readme.md
+                            p.getting-started-main-info__text
+                                | Subutai Social is ready for beta-testing
+                            p.getting-started-main-info__text
+                                | We are pleased to announce that the public beta release of Subutai Social is now available. This beta release is made available to allow a broad user base to test and evaluate the next major version of Subutai Social. Here's a great opportunity to help us make the next release the best ever.
+                            p.getting-started-main-info__text-install Network installers:
+                            .getting-started-main-info__button
+                                +download({
+                                    "icon": "fa fa-apple",
+                                    "title": "Mac",
+                                    "links": [{
+                                        "href": "https://cdn.subut.ai:8338/kurjun/rest/raw/download?name=subutai-network-installer.pkg",
+                                        "title": "Net Installer",
+                                        "action": "ga('send', 'event', 'downloads', 'subutai-network-installer.pkg', 'Mac');"
+                                    }, {
+                                        "href": "https://cdn.subut.ai:8338/kurjun/rest/raw/download?name=subutai-network-installer-dev.pkg",
+                                        "title": "Net Installer Dev",
+                                        "action": "ga('send', 'event', 'downloads', 'subutai-network-installer-dev.pkg', 'Mac');"
+                                    }, {
+                                        "href": "https://cdn.subut.ai:8338/kurjun/rest/raw/download?name=subutai-network-installer-master.pkg",
+                                        "title": "Net Installer Master",
+                                        "action": "ga('send', 'event', 'downloads', 'subutai-network-installer-master.pkg', 'Mac');"
+                                    }]
+                                })
+                                +download({
+                                    "icon": "fa fa-windows",
+                                    "title": "Windows",
+                                    "links": [{
+                                        "href": "https://cdn.subut.ai:8338/kurjun/rest/raw/download?name=subutai-network-installer.exe",
+                                        "title": "Net Installer",
+                                        "action": "ga('send', 'event', 'downloads', 'subutai-network-installer.exe', 'Win');"
+                                    }, {
+                                        "href": "https://cdn.subut.ai:8338/kurjun/rest/raw/download?name=subutai-network-installer-dev.exe",
+                                        "title": "Net Installer Dev",
+                                        "action": "ga('send', 'event', 'downloads', 'subutai-network-installer-dev.exe', 'Win');"
+                                    }, {
+                                        "href": "https://cdn.subut.ai:8338/kurjun/rest/raw/download?name=subutai-network-installer-master.exe",
+                                        "title": "Net Installer Master",
+                                        "action": "ga('send', 'event', 'downloads', 'subutai-network-installer-master.exe', 'Win');"
+                                    }]
+                                })
+                                +download({
+                                    "icon": "fa fa-linux",
+                                    "title": "Linux",
+                                    "links": [{
+                                        "href": "https://cdn.subut.ai:8338/kurjun/rest/raw/get?name=subutai-launcher",
+                                        "title": "Net Installer",
+                                        "action": "ga('send', 'event', 'downloads', 'subutai-network-installer.exe', 'Win');"
+                                    }]
+                                })
+                            p.getting-started-main-info__text_note
+                                | Net Installer Dev - is the latest developer package from the dev branch
+                                <br>
+                                | Net Installer Master - is a developer package from the master branch
+                                <br>
+                                | Net Installer - is the stable version of Subutai for users
+                                <br>
+                                i
+                                    | *The latest changes on the dev branch (between weekly releases) are available via the dev installers.
 
-			.clear
-		
-		//- Scripts
-		script(src='js/plugins.min.js')
-		script(src='js/main.min.js')
-		+analytics()
+                            p.getting-started-main-info__text-install E2E plugin:
+                            .getting-started-main-info__button
+                                +download({
+                                    "icon": "fa-e2e",
+                                    "title": "E2E plugin",
+                                    "links": [{
+                                        "href": "https://github.com/subutai-io/browsers/releases/download/2.0.7/e2e-plugin_v2.0.7.safariextz",
+                                        "title": "Safari",
+                                        "action": "ga('send', 'event', 'downloads', 'e2e-plugin_v2.0.7.safariextz', 'Safari');"
+                                    }, {
+                                        "href": "https://github.com/subutai-io/browsers/releases/download/2.0.7/e2e-plugin.firefox_v2.0.7.xpi",
+                                        "title": "Firefox",
+                                        "action": "ga('send', 'event', 'downloads', 'e2e-plugin.firefox_v2.0.7.xpi', 'Firefox');"
+                                    }, {
+                                        "href": "https://chrome.google.com/webstore/detail/subutai-social-e2e-plugin/kpmiofpmlciacjblommkcinncmneeoaa",
+                                        "title": "Chrome",
+                                        "action": "ga('send', 'event', 'downloads', 'subutai-network-installer-master.pkg', 'Chrome');"
+                                    }]
+                                })
+                                .clear
+
+                            p.getting-started-main-info__text-install Ubuntu/Debian Tray/P2P Packages:
+                            .getting-started-main-info__button
+                                +download({
+                                    "icon": "fa-tray",
+                                    "title": "Ubuntu/Debian Tray ",
+                                    "links": [{
+                                        "href": "https://cdn.subut.ai:8338/kurjun/rest/raw/lezh1k/subutai-tray_4.0.4_amd64.deb",
+                                        "title": "Tray Package",
+                                        "action": "ga('send', 'event', 'downloads', 'subutai-tray_4.0.4_amd64.deb', 'Ubuntu/Debian Tray Package');"
+                                    }]
+                                })
+                                +download({
+                                    "icon": "fa-p2p",
+                                    "title": "Ubuntu/Debian P2P ",
+                                    "links": [{
+                                        "href": "https://cdn.subut.ai:8338/kurjun/rest/raw/mike/subutai-p2p_4.0.4_amd64.deb",
+                                        "title": "P2P Package",
+                                        "action": "ga('send', 'event', 'downloads', 'subutai-p2p_4.0.4_amd64.deb', 'Ubuntu/Debian P2P Package');"
+                                    }]
+                                })
+
+                            p.getting-started-main-info__text_note
+                                | Launch sudo dpkg -i p2p.deb
+                                br
+                                | Launch sudo dpkg -i tray.deb
+                                br
+                                | After installation complete you will be able to launch tray application by this command : subutai-tray
+                                br
+                                i
+                                    | *For more information, go to the
+                                    a(href="https://github.com/subutai-io/tray/wiki/User-guide") Guide
+
+                            p.getting-started-main-info__text
+                                | After installation you should be ready to share resources. The following components are installed onto your system if not already present:
+                            ol
+                                li Google Chrome Browser
+                                li VirtualBox Hypervisor
+                                li Subutai Social E2E Browser Plugin for Chrome
+                                li Subutai Social Resource host (RH) VM Image for Virtual Box
+                                li Subutai Social Management host (MH) Template Image
+                                li OS Specific Subutai Social P2P Executable
+                                li Subutai Social Tray Application
+            .page__footer
+                +footer()
+
+            .clear
+
+        //- Scripts
+        script(src='js/plugins.min.js')
+        script(src='js/main.min.js')
+        +analytics()

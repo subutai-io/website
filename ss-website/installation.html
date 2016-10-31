@@ -228,10 +228,7 @@
 									<div class="download-menu">
 										<ul>
 											<li class="download-menu__item">
-												<a href="https://cdn.subut.ai:8338/kurjun/rest/raw/mike/subutai-p2p_4.0.4_amd64.deb" onclick="ga('send', 'event', 'downloads', 'subutai-network-installer.exe', 'Win');">P2P Debian Package</a>
-											</li>
-											<li class="download-menu__item">
-												<a href="https://cdn.subut.ai:8338/kurjun/rest/raw/lezh1k/subutai-tray_4.0.4_amd64.deb" onclick="ga('send', 'event', 'downloads', 'subutai-network-installer.exe', 'Win');">Tray Debian Package</a>
+												<a href="https://cdn.subut.ai:8338/kurjun/rest/raw/get?name=subutai-launcher" onclick="ga('send', 'event', 'downloads', 'subutai-network-installer.exe', 'Win');">Net Installer</a>
 											</li>
 										</ul>
 									</div>
@@ -264,6 +261,37 @@
 								</div>
 								<div class="clear"></div>
 							</div>
+							<p class="getting-started-main-info__text-install">Ubuntu/Debian Tray/P2P Packages:</p>
+							<div class="getting-started-main-info__button">
+								<div title="Ubuntu/Debian Tray " class="button button_circle download">
+									<i class="fa-tray"></i>
+									<div class="download-menu">
+										<ul>
+											<li class="download-menu__item">
+												<a href="https://cdn.subut.ai:8338/kurjun/rest/raw/lezh1k/subutai-tray_4.0.4_amd64.deb" onclick="ga('send', 'event', 'downloads', 'subutai-tray_4.0.4_amd64.deb', 'Ubuntu/Debian Tray Package');">Tray Package</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div title="Ubuntu/Debian P2P " class="button button_circle download">
+									<i class="fa-p2p"></i>
+									<div class="download-menu">
+										<ul>
+											<li class="download-menu__item">
+												<a href="https://cdn.subut.ai:8338/kurjun/rest/raw/mike/subutai-p2p_4.0.4_amd64.deb" onclick="ga('send', 'event', 'downloads', 'subutai-p2p_4.0.4_amd64.deb', 'Ubuntu/Debian P2P Package');">P2P Package</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<p class="getting-started-main-info__text_note">Launch sudo dpkg -i p2p.deb
+								<br>Launch sudo dpkg -i tray.deb
+								<br>After installation complete you will be able to launch tray application by this command : subutai-tray
+								<br>
+								<i>*For more information, go to the
+									<a href="https://github.com/subutai-io/tray/wiki/User-guide">Guide</a>
+								</i>
+							</p>
 							<p class="getting-started-main-info__text">After installation you should be ready to share resources. The following components are installed onto your system if not already present:</p>
 							<ol>
 								<li>Google Chrome Browser</li>
