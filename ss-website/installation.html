@@ -261,7 +261,7 @@
 								</div>
 								<div class="clear"></div>
 							</div>
-							<p class="getting-started-main-info__text-install">Ubuntu/Debian Tray/P2P Packages:</p>
+							<p class="getting-started-main-info__text-install">Ubuntu/Debian Tray Packages:</p>
 							<div class="getting-started-main-info__button">
 								<div title="Ubuntu/Debian Tray " class="button button_circle download">
 									<i class="fa-tray"></i>
@@ -273,38 +273,29 @@
 											<li class="download-menu__item">
 												<a href="https://cdn.subut.ai:8338/kurjun/rest/raw/download?name=subutai-tray-dev.deb" onclick="ga('send', 'event', 'downloads', 'subutai-tray-dev.deb', 'Ubuntu/Debian Tray Package Dev');">Tray Package Dev</a>
 											</li>
-											<li class="download-menu__item">
-												<a href="#" onclick="ga('send', 'event', 'downloads', 'subutai-tray_4.0.4_amd64.deb', 'Ubuntu/Debian Tray Package Master - will be available soon');" class="download-menu-item_disabled">Tray Package Master</a>
-											</li>
-										</ul>
-									</div>
-								</div>
-								<div title="Ubuntu/Debian P2P " class="button button_circle download">
-									<i class="fa-p2p"></i>
-									<div class="download-menu">
-										<ul>
-											<li class="download-menu__item">
-												<a href="https://cdn.subut.ai:8338/kurjun/rest/raw/get?name=subutai-p2p_4.0.13_amd64.deb" onclick="ga('send', 'event', 'downloads', 'subutai-p2p_4.0.13_amd64.deb', 'Ubuntu/Debian P2P Package');">P2P Package</a>
-											</li>
-											<li class="download-menu__item">
-												<a href="#" onclick="ga('send', 'event', 'downloads', 'subutai-p2p_4.0.4_amd64.deb', 'Ubuntu/Debian P2P Package Dev - will be available soon');" class="download-menu-item_disabled">P2P Package Dev</a>
-											</li>
-											<li class="download-menu__item">
-												<a href="#" onclick="ga('send', 'event', 'downloads', 'subutai-p2p_4.0.4_amd64.deb', 'Ubuntu/Debian P2P Package Master - will be available soon');" class="download-menu-item_disabled">P2P Package Master</a>
-											</li>
 										</ul>
 									</div>
 								</div>
 							</div>
-							<p class="getting-started-main-info__text_caution">Dev and Master Packages will be available soon</p>
-							<p class="getting-started-main-info__text_note">Launch sudo dpkg -i p2p.deb
-								<br>Launch sudo dpkg -i tray.deb
-								<br>After installation complete you will be able to launch tray application by this command : subutai-tray
+							<p class="getting-started-main-info__text_note">Launch &nbsp;<code>sudo dpkg -i p2p.deb</code>
+								<br>Launch &nbsp;<code>sudo dpkg -i tray.deb</code>
+								<br>
+								<br>After installation complete you will be able to launch tray application by this command: &nbsp;<code>subutai-tray</code>
 								<br>
 								<i>*For more information, go to the
 									<a href="https://github.com/subutai-io/tray/wiki/User-guide">Guide</a>
 								</i>
 							</p>
+							<p class="getting-started-main-info__text-install">Ubuntu/Debian P2P Package:</p>
+							<p class="getting-started-main-info__text_note">To install latest p2p package you need to add PPA repository into your Ubuntu Linux software sources list by executing following commands:
+								<br><code>sudo add-apt-repository ppa:subutai-social/subutai</code>
+								<br><code>sudo apt-get update</code>
+								<br>
+								<br>Now you can install stable p2p by running
+								<br><code>sudo apt-get install subutai-p2p</code>
+								<br>
+								<br>If you wish to install development package with latest changes you can do the following:
+								<br><code>sudo apt-get install subutai-p2p-dev</code></p>
 							<p class="getting-started-main-info__text">After installation you should be ready to share resources. The following components are installed onto your system if not already present:</p>
 							<ol>
 								<li>Google Chrome Browser</li>
