@@ -49,13 +49,13 @@ html(class="no-js" lang="en")
                                         "title": "Net Installer",
                                         "action": "ga('send', 'event', 'downloads', 'subutai-network-installer.pkg', 'Mac');"
                                     }, {
-                                        "href": "https://cdn.subut.ai:8338/kurjun/rest/raw/download?name=subutai-network-installer-dev.pkg",
+                                        "href": "https://devcdn.subut.ai:8338/kurjun/rest/raw/download?name=SubutaiLauncher-dev.pkg",
                                         "title": "Net Installer Dev",
-                                        "action": "ga('send', 'event', 'downloads', 'subutai-network-installer-dev.pkg', 'Mac');"
+                                        "action": "ga('send', 'event', 'downloads', 'SubutaiLauncher-dev.pkg', 'Mac');"
                                     }, {
-                                        "href": "https://cdn.subut.ai:8338/kurjun/rest/raw/download?name=subutai-network-installer-master.pkg",
+                                        "href": "https://mastercdn.subut.ai:8338/kurjun/rest/raw/download?name=SubutaiLauncher-master.pkg",
                                         "title": "Net Installer Master",
-                                        "action": "ga('send', 'event', 'downloads', 'subutai-network-installer-master.pkg', 'Mac');"
+                                        "action": "ga('send', 'event', 'downloads', 'SubutaiLauncher-master.pkg', 'Mac');"
                                     }]
                                 })
                                 +download({
@@ -79,10 +79,18 @@ html(class="no-js" lang="en")
                                     "icon": "fa fa-linux",
                                     "title": "Linux",
                                     "links": [{
-                                        "href": "#",
-                                        "class": "download-menu-item_disabled",
+                                        "href": "https://cdn.subut.ai:8338/kurjun/rest/raw/download?name=subutai-launcher.deb",
                                         "title": "Net Installer",
-                                        "action": "ga('send', 'event', 'downloads', 'subutai-network-installer.exe', 'Win');"
+                                        "class": "download-menu-item_disabled",
+                                        "action": "ga('send', 'event', 'downloads', 'subutai-launcher.deb', 'Win');"
+                                    }, {
+                                        "href": "https://devcdn.subut.ai:8338/kurjun/rest/raw/download?name=subutai-launcher-dev.deb",
+                                        "title": "Net Installer Dev",
+                                        "action": "ga('send', 'event', 'downloads', 'subutai-launcher-dev.deb', 'Win');"
+                                    }, {
+                                        "href": "https://mastercdn.subut.ai:8338/kurjun/rest/raw/download?name=subutai-launcher-master.deb",
+                                        "title": "Net Installer Master",
+                                        "action": "ga('send', 'event', 'downloads', 'subutai-launcher-master.deb', 'Win');"
                                     }]
                                 })
                             p.getting-started-main-info__text_caution
