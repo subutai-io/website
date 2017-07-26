@@ -1,4 +1,4 @@
 "config": {
-	"projectName": "Subutai Social",
+	"projectName": "Subutai",
 	"useSocialMetaTags": true
 }
