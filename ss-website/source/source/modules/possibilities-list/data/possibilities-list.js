@@ -16,13 +16,13 @@
 			"id": "own-google",
 			"title":"Be Your Own Google",
 			"icon":"be-google",
-			"text":"AppScale has been integrated with Subutai Social to provide a Google..."
+			"text":"AppScale has been integrated with Subutai to provide a Google..."
 		},
 		{
 			"id": "own-amazon",
 			"title":"Be Your Own Amazon",
 			"icon":"be-amazon",
-			"text":"Subutai Social's IaaS layer is in fact a socialized infrastructure as a service."
+			"text":"Subutai's IaaS layer is in fact a socialized infrastructure as a service."
 		},
 		{
 			"id": "cyber-defence",

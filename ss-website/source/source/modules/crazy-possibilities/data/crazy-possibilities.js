@@ -12,7 +12,7 @@
 			"title":"Content Distribution",
 			"icon":"ss-site-content-distribution",
 			"display":"col",
-			"text":"Content distribution as a collective service is already possible with Subutai Social. Public Docker images, Debian packages, or just about any kind of file, for common infrastructure or for your applications are distributable via P2P file sharing across peers. Subutai Social's Kurjun repository let's you publically publish, or privately share files using global or exclusive swarms respectively.<br> The verified site and content hosting service built into the Hub allows for safe content distribution across peers dynamically based on where on the Internet that data is needed most.<br> Currently we're researching ways to go a step further. We would like to go to the next level. We have been looking at providing generalized content distritubtion in the form of a file system. We are investigating the integration of various file systems which could adapt well to the P2P model like the Interplanetary File System (IPFS)."
+			"text":"Content distribution as a collective service is already possible with Subutai. Public Docker images, Debian packages, or just about any kind of file, for common infrastructure or for your applications are distributable via P2P file sharing across peers. Subutai's Kurjun repository let's you publically publish, or privately share files using global or exclusive swarms respectively.<br> The verified site and content hosting service built into the Hub allows for safe content distribution across peers dynamically based on where on the Internet that data is needed most.<br> Currently we're researching ways to go a step further. We would like to go to the next level. We have been looking at providing generalized content distritubtion in the form of a file system. We are investigating the integration of various file systems which could adapt well to the P2P model like the Interplanetary File System (IPFS)."
 		},
 		{
 			"id": "cyber-defence",
@@ -26,21 +26,21 @@
 			"title":"Be Your Own Google",
 			"icon":"ss-site-own-google",
 			"display":"col",
-			"text":"AppScale has been integrated with Subutai Social to provide a Google App Engine compatible PaaS layer. Applications written and deployed to GAE can also be run on Subutai Social with the AppScale plugin. That means you can write PHP, Python, Java, and Go based GAE applications to run on Subutai Social while distributing the application on peers across the Internet."
+			"text":"AppScale has been integrated with Subutai to provide a Google App Engine compatible PaaS layer. Applications written and deployed to GAE can also be run on Subutai with the AppScale plugin. That means you can write PHP, Python, Java, and Go based GAE applications to run on Subutai while distributing the application on peers across the Internet."
 		},
 		{
 			"id": "own-amazon",
 			"title":"Be Your Own Amazon",
 			"icon":"ss-site-own-amazon",
 			"display":"col",
-			"text":"By using p2p technologies to combine resources on computers, Subutai Social already provides an infrastructure as a service cloud environment. Users of Subutai Social can create cloud environments effectively appearing as virtual data centers. The more computing resources you throw into your peer[s] and the number of peers supporting your environment the bigger the virtual data center. Scaling a peer with more resources and scaling the number of peers themselves give Subutai Social it's elastic cloud capabilities. Higher level infrastructure services are built on this such as an S3 compatible clone. Subutai Social aims to model and implement as many Amazon compatible services as possible."
+			"text":"By using p2p technologies to combine resources on computers, Subutai already provides an infrastructure as a service cloud environment. Users of Subutai can create cloud environments effectively appearing as virtual data centers. The more computing resources you throw into your peer[s] and the number of peers supporting your environment the bigger the virtual data center. Scaling a peer with more resources and scaling the number of peers themselves give Subutai it's elastic cloud capabilities. Higher level infrastructure services are built on this such as an S3 compatible clone. Subutai aims to model and implement as many Amazon compatible services as possible."
 		},
 		{
 			"id": "virtual-office",
 			"title":"IDEA: Virtual Office",
 			"icon":"ss-site-virtual-office",
 			"display":"col",
-			"text":"We're very excited about building applications that can run across peer-to-peer cloud infrastructures for distributed startup teams and SME's with several branch offices. Not only do you tie people and SOHO offices together, but you enable them with common back office and productivity applications they need. Native built in social cloud services and the AppScale based PaaS layer can be utilized to quickly build your next ultimate application on Subutai Social."
+			"text":"We're very excited about building applications that can run across peer-to-peer cloud infrastructures for distributed startup teams and SME's with several branch offices. Not only do you tie people and SOHO offices together, but you enable them with common back office and productivity applications they need. Native built in social cloud services and the AppScale based PaaS layer can be utilized to quickly build your next ultimate application on Subutai."
 		},
 		{
 			"id": "virtual-electronics",

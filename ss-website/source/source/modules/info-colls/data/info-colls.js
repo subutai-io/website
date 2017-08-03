@@ -1,7 +1,7 @@
 "info_colls": {
 	"default": [
 		{
-			"text":"Wanna make some coin? Maybe some extra beer money? You can sell resources on your laptop or desktops that are sitting around collecting dust. Put em to use on your own peer. To help out we built a peer tracker, resource search engine, and a bazaar where you can trade or sell resources to your heart's content: <a href=\"https://optimal-dynamics.com/ss-hub.html\" target=\"_blank\">Subutai Social Hub</a>.",
+			"text":"Wanna make some coin? Maybe some extra beer money? You can sell resources on your laptop or desktops that are sitting around collecting dust. Put em to use on your own peer. To help out we built a peer tracker, resource search engine, and a bazaar where you can trade or sell resources to your heart's content: <a href=\"https://optimal-dynamics.com/ss-hub.html\" target=\"_blank\">Subutai Hub</a>.",
 			"img":"students-money"
 		},
 		{
@@ -9,7 +9,7 @@
 			"img": "companys-coll"
 		},
 		{
-			"text": "Some say the cloud reduces costs. Yeah sure if you're living in 1990! Obviously those kinds of people are the same ones that think Amazon is a place for buying books. We work in teams so we share resources for building shared and private infrastructure: lots of distributed startups can use Subutai Social.",
+			"text": "Some say the cloud reduces costs. Yeah sure if you're living in 1990! Obviously those kinds of people are the same ones that think Amazon is a place for buying books. We work in teams so we share resources for building shared and private infrastructure: lots of distributed startups can use Subutai.",
 			"img": "students-coll"
 		}
 	]
