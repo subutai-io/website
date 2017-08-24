@@ -8552,3 +8552,51 @@ code
                 transform: rotate(359deg);
     }
 }
+
+.tab-buttons {
+    display: inline-block;
+    width: 120px;
+    height: 40px;
+
+
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    color: #333333;
+
+    border: 1px solid transparent;
+    border-radius: 20px;
+    text-align: center;
+    line-height: 38px;
+    box-sizing: border-box;
+
+}
+
+.tab-buttons:hover{
+    border-color: #068dd0;
+}
+
+
+.download-button {
+    display: inline-block;
+    width: 120px;
+    height: 40px;
+    background-color: #266cd3;
+
+
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    color: #ffffff;
+
+    border-radius: 4px;
+    text-align: center;
+    line-height: 40px;
+    box-sizing: border-box;
+
+}
+
+.download-button:hover {
+    background-color: #2264b2;
+}
+
