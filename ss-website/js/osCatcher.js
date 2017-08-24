@@ -188,4 +188,15 @@
     };
 }(this));
 
-console.log("OS: "+jscd.os);
+var opersys = jscd.os;
+var osVersion = opersys.toLowerCase();
+
+if (osVersion.indexOf("linux")!==-1) {
+    openOSTab(event, "linux");
+}
+else if (osVersion.indexOf("windows")!==-1) {
+    openOSTab(event, "windows");
+}
+else {
+    openOSTab(event, "mac");
+}
