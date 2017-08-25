@@ -8569,10 +8569,15 @@ code
     text-align: center;
     line-height: 38px;
     box-sizing: border-box;
+    text-decoration: none;
 
 }
 
 .tab-buttons:hover{
+    border-color: #068dd0;
+}
+
+.tab-buttons.active{
     border-color: #068dd0;
 }
 

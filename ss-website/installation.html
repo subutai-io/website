@@ -202,9 +202,9 @@
 							<p class="getting-started-main-info__text-install">Download Subutai</p>
 
 							<div class='buttons'>
-								<a class='tab-buttons ss-tablinks' onclick="openOSTab(event, 'windows')">Windows</a>
-								<a class='tab-buttons ss-tablinks' onclick="openOSTab(event,'mac')">Mac</a>
-								<a class='tab-buttons ss-tablinks' onclick="openOSTab(event,'linux')">Linux</a>
+								<a class='tab-buttons ss-tablinks' onclick="openOSTab(event, 'windows')" id="windowsos">Windows</a>
+								<a class='tab-buttons ss-tablinks' onclick="openOSTab(event,'mac')" id="macos">Mac</a>
+								<a class='tab-buttons ss-tablinks' onclick="openOSTab(event,'linux')" id="linuxos">Linux</a>
 							</div>
 
 							<div id="windows" class="subutaiTabContent">
@@ -420,9 +420,17 @@ sudo apt-get install -f
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js"></script>
 		<script>hljs.initHighlightingOnLoad();</script>
 		<script>
-        function openOSTab( evt, osType ) {
-            var i, tabcontent, tablinks;
 
+//        $('.tab-buttons').click(function(){
+//            if($(this).hasClass('active')){
+//                $(this).removeClass('active')
+//            } else {
+//                $(this).addClass('active')
+//            }
+//        });
+
+        function openOSTab( event, osType ) {
+            var i, tabcontent, tablinks;
             tabcontent = document.getElementsByClassName("subutaiTabContent");
             for (i = 0; i < tabcontent.length; i++) {
                 tabcontent[i].style.display = "none";
@@ -433,6 +441,15 @@ sudo apt-get install -f
                 tablinks[i].className = tablinks[i].className.replace(" active", "");
             }
             document.getElementById(osType).style.display = "block";
+            if (event)
+						{
+                $(event.target).addClass('active');
+            }
+            else
+						{
+                var ssButton = document.getElementById(osType+'os');
+                ssButton.className += " active";
+						}
         }
 		</script>
 		<script src="js/osCatcher.js"></script>
