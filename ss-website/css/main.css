@@ -8557,7 +8557,7 @@ code
     display: inline-block;
     width: 120px;
     height: 40px;
-
+    cursor: pointer;
 
     font-family: 'Ubuntu', sans-serif;
     font-size: 15px;
