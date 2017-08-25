@@ -61,6 +61,9 @@
 		<script src="js/jquery-2.1.4.min.js"></script>
 		<script src="js/jquery.mousewheel.min.js"></script>
 		<script src="js/blockScroll.js"></script>
+
+		<link rel="stylesheet"
+					href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
 		<!--<![endif]-->
 	</head>
 
@@ -205,14 +208,13 @@
 							</div>
 
 							<div id="windows" class="subutaiTabContent">
-								<h3>Windows</h3>
-								<p>Supported Versions: Windows 8.1, 10</p>
+								<p><strong>Supported Versions:</strong> Windows 8.1, 10</p>
 								<p>Just double click on the MSI package and install it. This should create a desktop icon for the SubutaiLauncher. Double clicking on it will start the installation wizard.</p>
 								<p>Watch the getting started on Windows video.</p>
 							</div>
 
 							<div id="mac" class="subutaiTabContent">
-								<p>Supported Versions: Sierra, and High Sierra</p>
+								<p><strong>Supported Versions:</strong> Sierra, and High Sierra</p>
 									<p>Just double click on the Mac OS Subutai Package and install it. Then start SubutaiLauncher from Launchpad or the Applications folder in the Finder.
 									Watch the getting started on Mac OS video.
 									(embed the video into the tab when you finish making it).
@@ -220,10 +222,17 @@
 							</div>
 
 							<div id="linux" class="subutaiTabContent">
-								<p>Supported Versions: Ubuntu 16.04, 16.10, 17.04</p>
+								<p><strong>Supported Versions:</strong> Ubuntu 16.04, 16.10, 17.04</p>
 								<p>Just double clicking on the Debian package should bring up the Ubuntu Software Center which asks if you want to install the Launcher. Just accept and you should be able to run `/opt/subutai/bin/SubutaiLauncher` to get started.</p>
 								<p>If you’re going to install on the command line then run the following commands in a term</p>
 
+								<pre><code class="bash">
+#!/bin/bash
+
+sudo dpkg -i /path/to/SubutaiLauncher.deb
+sudo apt-get install -f
+/opt/subutai/bin/SubutaiLauncher
+									</code></pre>
 								<p>The last line fires up the launcher wizard and you’re good to go.</p>
 								<p>Watch the getting started on Linux video.</p>
 							</div>
@@ -408,7 +417,8 @@
 		</div>
 		<script src="js/plugins.min.js"></script>
 		<script src="js/main.min.js"></script>
-
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js"></script>
+		<script>hljs.initHighlightingOnLoad();</script>
 		<script>
         function openOSTab( evt, osType ) {
             var i, tabcontent, tablinks;
