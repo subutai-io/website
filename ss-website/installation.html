@@ -201,16 +201,50 @@
 							</div>
 							<p class="getting-started-main-info__text-install">Download Subutai</p>
 
-							<div class='buttons'>
-								<a class='tab-buttons ss-tablinks' onclick="openOSTab(event, 'windows')" id="windowsos">Windows</a>
-								<a class='tab-buttons ss-tablinks' onclick="openOSTab(event,'mac')" id="macos">Mac</a>
-								<a class='tab-buttons ss-tablinks' onclick="openOSTab(event,'linux')" id="linuxos">Linux</a>
+							<div class="crazy-possibilty__img">
+
+							</div>
+							<div class="crazy-possibilty__info" style="width: 700px">
+								<p class="crazy-possibilty__text">
+								<div class='buttons'>
+									<a class='tab-buttons ss-tablinks' onclick="openOSTab(event, 'windows')" id="windowsos">Windows</a>
+									<a class='tab-buttons ss-tablinks' onclick="openOSTab(event,'mac')" id="macos">Mac</a>
+									<a class='tab-buttons ss-tablinks' onclick="openOSTab(event,'linux')" id="linuxos">Linux</a>
+								</div>
+
+
+								</p>
 							</div>
 
+
 							<div id="windows" class="subutaiTabContent">
-								<p><strong>Supported Versions:</strong> Windows 8.1, 10</p>
-								<p>Just double click on the MSI package and install it. This should create a desktop icon for the SubutaiLauncher. Double clicking on it will start the installation wizard.</p>
-								<p>Watch the getting started on Windows video.</p>
+								<div class="ss-container">
+									<div class="ss-col-2">
+										<div class="getting-started-main-info__button">
+											<div title="Mac" class="download-button download">
+												Download
+												<div class="download-menu">
+													<ul>
+														<li class="download-menu__item">
+															<a href="https://cdn.subut.ai:8338/kurjun/rest/raw/download?name=SubutaiLauncher.pkg" onclick="ga('send', 'event', 'downloads', 'SubutaiLauncher.pkg', 'Mac');">Launcher</a>
+														</li>
+														<li class="download-menu__item">
+															<a href="https://cdn.subut.ai:8338/kurjun/rest/raw/download?name=SubutaiLauncher-dev.pkg" onclick="ga('send', 'event', 'downloads', 'SubutaiLauncher-dev.pkg', 'Mac');">Launcher Dev</a>
+														</li>
+														<li class="download-menu__item">
+															<a href="https://cdn.subut.ai:8338/kurjun/rest/raw/download?name=SubutaiLauncher-master.pkg" onclick="ga('send', 'event', 'downloads', 'SubutaiLauncher-master.pkg', 'Mac');">Launcher Master</a>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="ss-col-4">
+										<p><strong>Supported Versions:</strong> Windows 8.1, 10</p>
+										<p>Just double click on the MSI package and install it. This should create a desktop icon for the SubutaiLauncher. Double clicking on it will start the installation wizard.</p>
+										<p>Watch the getting started on Windows video.</p>
+									</div>
+								</div>
 							</div>
 
 							<div id="mac" class="subutaiTabContent">
@@ -222,22 +256,48 @@
 							</div>
 
 							<div id="linux" class="subutaiTabContent">
-								<p><strong>Supported Versions:</strong> Ubuntu 16.04, 16.10, 17.04</p>
-								<p>Just double clicking on the Debian package should bring up the Ubuntu Software Center which asks if you want to install the Launcher. Just accept and you should be able to run `/opt/subutai/bin/SubutaiLauncher` to get started.</p>
-								<p>If you’re going to install on the command line then run the following commands in a term</p>
+										<div class="crazy-possibilty__img">
+											<div class="getting-started-main-info__button">
+												<div title="Mac" class="download-button download">
+													Download
+													<div class="download-menu">
+														<ul>
+															<li class="download-menu__item">
+																<a href="https://cdn.subut.ai:8338/kurjun/rest/raw/download?name=SubutaiLauncher.pkg" onclick="ga('send', 'event', 'downloads', 'SubutaiLauncher.pkg', 'Mac');">Launcher</a>
+															</li>
+															<li class="download-menu__item">
+																<a href="https://cdn.subut.ai:8338/kurjun/rest/raw/download?name=SubutaiLauncher-dev.pkg" onclick="ga('send', 'event', 'downloads', 'SubutaiLauncher-dev.pkg', 'Mac');">Launcher Dev</a>
+															</li>
+															<li class="download-menu__item">
+																<a href="https://cdn.subut.ai:8338/kurjun/rest/raw/download?name=SubutaiLauncher-master.pkg" onclick="ga('send', 'event', 'downloads', 'SubutaiLauncher-master.pkg', 'Mac');">Launcher Master</a>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="crazy-possibilty__info" style="width: 700px">
+											<p class="crazy-possibilty__text">
+											<p><strong>Supported Versions:</strong> Ubuntu 16.04, 16.10, 17.04</p>
+											<p>Just double clicking on the Debian package should bring up the Ubuntu Software Center which asks if you want to install the Launcher. Just accept and you should be able to run `/opt/subutai/bin/SubutaiLauncher` to get started.</p>
+											<p>If you’re going to install on the command line then run the following commands in a term</p>
 
-								<pre><code class="bash">
+											<pre><code class="bash">
 #!/bin/bash
 
 sudo dpkg -i /path/to/SubutaiLauncher.deb
 sudo apt-get install -f
 /opt/subutai/bin/SubutaiLauncher
 									</code></pre>
-								<p>The last line fires up the launcher wizard and you’re good to go.</p>
-								<p>Watch the getting started on Linux video.</p>
+											<p>The last line fires up the launcher wizard and you’re good to go.</p>
+											<p>Watch the getting started on Linux video.</p>
+											</p>
+										</div>
+										<div class="clear"></div>
 							</div>
 
 							<div class="getting-started-main-info__button">
+
 								<div title="Mac" class="button button_circle download">
 									<i class="fa fa-apple"></i>
 									<div class="download-menu">

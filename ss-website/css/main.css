@@ -8605,3 +8605,12 @@ code
     background-color: #2264b2;
 }
 
+.ss-container{
+    max-width: 60em;
+}
+.ss-col-2 {
+    width: 30%;
+}
+.ss-col-4 {
+    width: 60%;
+}
