@@ -185,20 +185,8 @@
 					</section>
 				</aside>
 				<div class="content-wrapper">
-					<h1 class="page-title">Installation</h1>
 					<section>
 						<section>
-							<p class="getting-started-main-info__text">Subutai can directly install onto bare metal, but for convenience we've packaged everything into a virtual machine. We did this so you don't have to change anything and it's effortless to install and remove. We made some easy to use launchers
-								to take the hassle out of setting up everything for Windows and Mac OS X users. *Nix users please see the
-								<a href="https://github.com/subutai-io/subos/blob/master/Readme.md">Readme.md</a>
-							</p>
-							<p class="getting-started-main-info__text">Subutai is ready for beta-testing</p>
-							<p class="getting-started-main-info__text">We are pleased to announce that the public beta release of Subutai is now available. This beta release is made available to allow a broad user base to test and evaluate the next major version of Subutai. Here's a great opportunity
-								to help us make the next release the best ever.</p>
-
-							<div>
-
-							</div>
 							<div class="crazy-possibilty__img" style="vertical-align: top!important; margin-top: 10px">
 								<img src="img/subutai.png" style="width: 180px; height: 180px">
 							</div>
@@ -323,78 +311,22 @@ sudo apt-get install -f
 										<div class="clear"></div>
 							</div>
 
-							<p class="getting-started-main-info__text_note">
-								Launchers:
-								<br> Net Launcher Dev - is the latest developer package from the dev branch
-								<br> Net Launcher Master - is a developer package from the master branch
-								<br> Net Launcher - is the stable version of Subutai for users
-								<br>
-								<i>*The latest changes on the dev branch (between weekly releases) are available via the dev launchers.</i>
-							</p>
-							<p class="getting-started-main-info__text-install">E2E plugin:</p>
-							<div class="getting-started-main-info__button">
-								<div title="E2E plugin" class="button button_circle download">
-									<i class="fa-e2e"></i>
-									<div class="download-menu">
-										<ul>
-											<li class="download-menu__item">
-												<a href="https://github.com/subutai-io/browsers/releases/download/2.0.7/e2e-plugin_v2.0.7.safariextz" onclick="ga('send', 'event', 'downloads', 'e2e-plugin_v2.0.7.safariextz', 'Safari');">Safari</a>
-											</li>
-											<li class="download-menu__item">
-												<a href="https://github.com/subutai-io/browsers/releases/download/2.0.7/e2e-plugin.firefox_v2.0.7.xpi" onclick="ga('send', 'event', 'downloads', 'e2e-plugin.firefox_v2.0.7.xpi', 'Firefox');">Firefox</a>
-											</li>
-											<li class="download-menu__item">
-												<a href="https://chrome.google.com/webstore/detail/subutai-social-e2e-plugin/kpmiofpmlciacjblommkcinncmneeoaa" onclick="ga('send', 'event', 'downloads', 'subutai-network-installer-master.pkg', 'Chrome');">Chrome</a>
-											</li>
-										</ul>
-									</div>
-								</div>
-								<div class="clear"></div>
-							</div>
-							<p class="getting-started-main-info__text-install">Ubuntu/Debian Tray:</p>
-							<div class="getting-started-main-info__button">
-								<div title="Ubuntu/Debian Tray " class="button button_circle download">
-									<i class="fa-tray"></i>
-									<div class="download-menu">
-										<ul>
-											<li class="download-menu__item">
-												<a href="https://cdn.subut.ai:8338/kurjun/rest/raw/download?name=subutai-tray.deb" onclick="ga('send', 'event', 'downloads', 'subutai-tray.deb', 'Ubuntu/Debian Tray Package');">Tray Package</a>
-											</li>
-											<li class="download-menu__item">
-												<a href="https://cdn.subut.ai:8338/kurjun/rest/raw/download?name=subutai-tray-dev.deb" onclick="ga('send', 'event', 'downloads', 'subutai-tray-dev.deb', 'Ubuntu/Debian Tray Package Dev');">Tray Package Dev</a>
-											</li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<p class="getting-started-main-info__text_note">Launch &nbsp;<code>sudo dpkg -i subutai-tray.deb</code>
-								<br>
-								<br>After installation complete you will be able to launch tray application by this command: &nbsp;<code>subutai-tray</code>
-								<br>
-								<i>*For more information, go to the
-									<a href="https://github.com/subutai-io/tray/wiki/User-guide">Guide</a>
-								</i>
-							</p>
-							<p class="getting-started-main-info__text-install">Ubuntu/Debian P2P:</p>
-							<p class="getting-started-main-info__text_note">To install latest p2p package you need to add PPA repository into your Ubuntu Linux software sources list by executing following commands:
-								<br><code>sudo add-apt-repository ppa:subutai-social/subutai</code>
-								<br><code>sudo apt-get update</code>
-								<br>
-								<br>Now you can install stable p2p by running
-								<br><code>sudo apt-get install subutai-p2p</code>
-								<br>
-								<br>If you wish to install development package with latest changes you can do the following:
-								<br><code>sudo apt-get install subutai-p2p-dev</code></p>
-							<p class="getting-started-main-info__text">After installation you should be ready to share resources. The following components are installed onto your system if not already present:</p>
-							<ol>
-								<li>Google Chrome Browser</li>
-								<li>VirtualBox Hypervisor</li>
-								<li>Subutai E2E Browser Plugin for Chrome</li>
-								<li>Subutai Resource host (RH) VM Image for Virtual Box</li>
-								<li>Subutai Management host (MH) Template Image</li>
-								<li>OS Specific Subutai P2P Executable</li>
-								<li>Subutai Tray Application</li>
-							</ol>
+							<h1>What’s in the f’ing box?</h1>
+							<p>The launchers let you install different items based on your needs. If you’re trying Subutai for the first time we recommend installing everything to get the full experience. Uninstallation is trivial and nothing stays on your machine.</p>
+
+							<p class="getting-started-main-info__text-install">Peer VM</p>
+							<p>This installation option creates a small peer on your desktop isolated inside a virtual machine. It’s perfect for non-technical users to start playing with their own peers. You can share the resources on this virtual machine with others to keep them sandboxed. Just destroy the virtual machine when you don’t need the peer anymore or add and remove resources as you like. The launchers download and install the free VirtualBox desktop hypervisor if you don’t already have it installed to run the Peer VM.</p>
+
+							<p class="getting-started-main-info__text-install">Tray Application</p>
+							<p>This is an OS tray application for Mac OS, Windows, and Linux for desktop integration. It lists and notifies you of situations with your account, your cloud environments and your local and remote peers. The tray is also a wallet application. It shows how much goodwill you have available and notifies you when you spend it, or when you earn more. It works in tandem with the E2E browser security plugins.</p>
+
+							<p class="getting-started-main-info__text-install">E2E Security Plugin and Chrome</p>
+							<p>There’s a lot of security going on behind the scenes to make everything work safely. Besides usernames and passwords, Subutai uses Pretty Good Privacy (PGP) to do anything important. PGP can be complicated and no one wants to open up terminals to use PGP keys for every action (i.e. manage a peer or cloud environment etc). These browser plugins (extensions) were made to work automatically on your behalf without getting in your way while logging everything that do.</p>
+							<p>The Launcher wizard automatically installs Chrome and the E2E plugin for it for you. It uses Chrome because it’s available across all platforms. However, the plugin is available for Safari, Chrome, and Firefox. Edge support is coming soon.</p>
+
+							<p class="getting-started-main-info__text-install">P2P Daemon</p>
+							<p>The Launcher installs a program that runs in the background called the P2P daemon. This daemon allows you to connect to your cloud environments and get on the machines running in them. It works with the tray application and indirectly with the browser plugins to give you a smooth experience with your peers and your cloud environments.</p>
+
 						</section>
 					</section>
 				</div>
