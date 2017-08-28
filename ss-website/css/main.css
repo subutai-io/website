@@ -197,7 +197,7 @@
 
 .accordion__header
 {
-    font-size: 18px;
+    font-size: 15px;
     line-height: 20px;
 
     position: relative;
@@ -7782,10 +7782,10 @@ body
 code
 {
     font-family: Monaco, Consolas, 'Andale Mono', 'DejaVu Sans Mono', monospace;
-    font-size: 95%;
-    line-height: 140%;
+    font-size: 75%;
+    line-height: 120%;
 
-    padding: 0 3px;
+    padding: 0 0px;
 
     white-space: pre;
     white-space:      pre-wrap;
@@ -8613,4 +8613,36 @@ code
 }
 .ss-col-4 {
     width: 60%;
+}
+
+a.selected {
+  background-color:#1F75CC;
+  color:white;
+  z-index:100;
+}
+
+.messagepop {
+  background-color:#FFFFFF;
+  border:1px solid #999999;
+  cursor:default;
+  display:none;
+  margin-top: 15px;
+  position:absolute;
+  text-align:left;
+  width:394px;
+  z-index:50;
+  padding: 25px 25px 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 3px;
+  padding-left: 15px;
+  text-indent: -15px;
+}
+
+.messagepop p, .messagepop.div {
+  border-bottom: 1px solid #EFEFEF;
+  margin: 8px 0;
+  padding-bottom: 8px;
 }
