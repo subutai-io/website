@@ -61,7 +61,7 @@
 		<script src="js/jquery-2.1.4.min.js"></script>
 		<script src="js/jquery.mousewheel.min.js"></script>
 		<script src="js/blockScroll.js"></script>
-
+		
 		<link rel="stylesheet"
 					href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
 		<!--<![endif]-->
@@ -187,14 +187,14 @@
 				<div class="content-wrapper">
 					<section>
 						<section>
-							<div class="crazy-possibilty__img" style="vertical-align: top!important; margin-top: 10px">
+							<div class="crazy-possibilty__img" style="vertical-align: top!important; margin-top: -20px">
 								<img src="img/subutai.png" style="width: 180px; height: 180px">
 							</div>
-							<div class="crazy-possibilty__info" style="width: 650px">
+							<div class="crazy-possibilty__info" style="width: 650px; vertical-align: top!important; margin-top: -20px">
 								<h2 class="crazy-possibilty__title">
 									<p class="getting-started-main-info__text-install">Download Subutai</p>
 								</h2>
-								<p class="crazy-possibilty__text" style="margin-top: 15px">
+								<p class="crazy-possibilty__text" style="margin-top: 0px">
 									<div class='buttons'>
 										<a class='tab-buttons ss-tablinks' onclick="openOSTab(event, 'windows')" id="windowsos">Windows</a>
 										<a class='tab-buttons ss-tablinks' onclick="openOSTab(event,'mac')" id="macos">Mac</a>
@@ -207,7 +207,7 @@
 								<div class="crazy-possibilty__img" style="vertical-align: top!important; margin-top: 40px">
 									Version: 5.0.1<br>
 									Released: August 23, 2017
-									<div class="getting-started-main-info__button">
+									<div class="getting-started-main-info__button" style="vertical-align: top!important; margin-top: 20px">
 										<div title="Windows" class="download-button download">
 											Download
 											<div class="download-menu">
@@ -225,8 +225,15 @@
 											</div>
 										</div>
 									</div>
+									<span style="font-weight: bold; color: red">Warning</span>
+									<a href="#" id="warn1"><i class="fa fa-info-circle"></i></a>
+
+									<div class="messagepop pop">
+										These launchers are not for commercial Subutai deployments for hosting providers or telecoms. They’re for residential broadband users or for those interested in quickly trying Subutai on their desktop conveniently inside a VM<br/>
+										If you’re hands on, an administrator, and interested in a more long term, or commercial grade Subutai configuration like using other hypervisors or running on bare metal please see the peer installation <a href='https://github.com/subutai-io/subos/blob/master/Readme.md'>Readme</a>, or our <a href='https://github.com/subutai-io/subos/wiki/Alternative-Installations'>FAQ</a>s. We’re on <a href='https://slack.subut.ai/'>Slack</a> if you need any help."
+									</div>
 								</div>
-								<div class="crazy-possibilty__info" style="width: 650px">
+								<div class="crazy-possibilty__info" style="width: 650px; vertical-align: top!important; margin-top: -40px">
 									<p class="crazy-possibilty__text">
 									<p><strong>Supported Versions:</strong> Windows 8.1, 10</p>
 									<p>Just double click on the MSI package and install it. This should create a desktop icon for the SubutaiLauncher. Double clicking on it will start the installation wizard.</p>
@@ -249,7 +256,7 @@
 								<div class="crazy-possibilty__img" style="vertical-align: top!important; margin-top: 40px">
 									Version: 5.0.1<br>
 									Released: August 23, 2017
-									<div class="getting-started-main-info__button">
+									<div class="getting-started-main-info__button" style="vertical-align: top!important; margin-top: 20px">
 										<div title="Mac" class="download-button download">
 											Download
 											<div class="download-menu">
@@ -267,8 +274,15 @@
 											</div>
 										</div>
 									</div>
+									<span style="font-weight: bold; color: red">Warning</span>
+									<a href="#" id="warn2"><i class="fa fa-info-circle"></i></a>
+									<div class="messagepop pop">
+										These launchers are not for commercial Subutai deployments for hosting providers or telecoms. They’re for residential broadband users or for those interested in quickly trying Subutai on their desktop conveniently inside a VM<br/>
+										If you’re hands on, an administrator, and interested in a more long term, or commercial grade Subutai configuration like using other hypervisors or running on bare metal please see the peer installation <a href='https://github.com/subutai-io/subos/blob/master/Readme.md'>Readme</a>, or our <a href='https://github.com/subutai-io/subos/wiki/Alternative-Installations'>FAQ</a>s. We’re on <a href='https://slack.subut.ai/'>Slack</a> if you need any help."
+									</div>
+
 								</div>
-								<div class="crazy-possibilty__info" style="width: 650px">
+								<div class="crazy-possibilty__info" style="width: 650px; vertical-align: top!important; margin-top: -40px">
 									<p class="crazy-possibilty__text">
 									<p><strong>Supported Versions:</strong> Sierra, and High Sierra</p>
 									<p>Just double click on the Mac OS Subutai Package and install it. Then start SubutaiLauncher from Launchpad or the Applications folder in the Finder.
@@ -294,7 +308,7 @@
 										<div class="crazy-possibilty__img" style="vertical-align: top!important; margin-top: 40px">
 											Version: 5.0.1<br>
 											Released: August 23, 2017
-											<div class="getting-started-main-info__button">
+											<div class="getting-started-main-info__button" style="vertical-align: top!important; margin-top: 20px">
 												<div title="Linux" class="download-button download">
 													Download
 													<div class="download-menu">
@@ -312,8 +326,15 @@
 													</div>
 												</div>
 											</div>
+											<span style="font-weight: bold; color: red">Warning</span>
+											<a href="#" id="warn3"><i class="fa fa-info-circle"></i></a>
+											<div class="messagepop pop">
+												These launchers are not for commercial Subutai deployments for hosting providers or telecoms. They’re for residential broadband users or for those interested in quickly trying Subutai on their desktop conveniently inside a VM<br/>
+												If you’re hands on, an administrator, and interested in a more long term, or commercial grade Subutai configuration like using other hypervisors or running on bare metal please see the peer installation <a href='https://github.com/subutai-io/subos/blob/master/Readme.md'>Readme</a>, or our <a href='https://github.com/subutai-io/subos/wiki/Alternative-Installations'>FAQ</a>s. We’re on <a href='https://slack.subut.ai/'>Slack</a> if you need any help."
+											</div>
+
 										</div>
-										<div class="crazy-possibilty__info" style="width: 650px">
+										<div class="crazy-possibilty__info" style="width: 650px; vertical-align: top!important; margin-top: -40px">
 											<p class="crazy-possibilty__text">
 											<p><strong>Supported Versions:</strong> Ubuntu 16.04, 16.10, 17.04</p>
 											<p>Just double clicking on the Debian package should bring up the Ubuntu Software Center which asks if you want to install the Launcher. Just accept and you should be able to run `/opt/subutai/bin/SubutaiLauncher` to get started.</p>
@@ -330,23 +351,52 @@ sudo apt-get install -f
 											<p>Watch the getting started on Linux video.</p>
 											</p>
 										</div>
+
 										<div class="clear"></div>
 							</div>
 
 							<h1>What’s in the f’ing box?</h1>
 							<p>The launchers let you install different items based on your needs. If you’re trying Subutai for the first time we recommend installing everything to get the full experience. Uninstallation is trivial and nothing stays on your machine.</p>
 
-							<p class="getting-started-main-info__text-install">Peer VM</p>
-							<p>This installation option creates a small peer on your desktop isolated inside a virtual machine. It’s perfect for non-technical users to start playing with their own peers. You can share the resources on this virtual machine with others to keep them sandboxed. Just destroy the virtual machine when you don’t need the peer anymore or add and remove resources as you like. The launchers download and install the free VirtualBox desktop hypervisor if you don’t already have it installed to run the Peer VM.</p>
+							<p class="getting-started-main-info__text-install" style="vertical-align: top!important; margin-top: 40px">Peer VM</p>
+							<p>This installation option creates a small peer on your desktop isolated inside a virtual machine. It’s perfect for non-technical users to start playing with their own peers. You can share the resources on this virtual machine with others to keep them sandboxed. Just destroy the virtual machine when you don’t need the peer anymore or add and remove resources as you like. The launchers download and install the free VirtualBox desktop hypervisor if you don’t already have it installed to run the Peer VM.
 
-							<p class="getting-started-main-info__text-install">Tray Application</p>
+							<div class="accordion">
+								<ul>
+									<li id="installation-mac" class="accordion__item">
+										<div class="accordion__header">Read more..</div>
+										<div class="accordion__content">
+							<p>The software implements several layers of security to make sure tenants are isolated from each other and the host peer on which they run. The sandboxes and PGP keys used to manage them are showing in successive layers in the diagram below:</p>
+											<img src="img/image_security.png">
+									    <ol>
+												<li>
+													Each container is a sandbox for the software that runs within it. Each container has its own PGP based identity and key pair.
+												</li>
+												<li>
+											There are two different kinds of security restrictions on resource hosts. Each resource host, a machine, physical or virtual, is a sandbox in itself. Usually the resource host is a virtual machine. Containers in the same cloud environment running on a single resource host have their own sandbox since more than one tenant may reside on the resource host.
+												</li>
+												<li>
+											Each peer isolates tenants running on its resource hosts. Network communications are  encrypted even in the peers LAN.
+												</li>
+												<li>
+											The peer itself is a sandbox which peer owners manage using a PGP identity.
+												</li>
+											</ol>
+											Many people ask the question, “When I install a Subutai peer and share resources will others I share with be able to see the things I have on my computer?” Absolutely not. There are so many layers of isolation that there is no real way to have those sharing resources jump out of sandbox after sandbox to get into your computer. Nor are other tenants able to see what’s inside your containers. Obviously the entire basis to Subutai is based on security. Several years were spent just on ensuring tenant isolation with a decentralized identity management system.
+										</div>
+									</li>
+								</ul>
+							</div>
+							</p>
+
+							<p class="getting-started-main-info__text-install" style="vertical-align: top!important; margin-top: 40px">Tray Application</p>
 							<p>This is an OS tray application for Mac OS, Windows, and Linux for desktop integration. It lists and notifies you of situations with your account, your cloud environments and your local and remote peers. The tray is also a wallet application. It shows how much goodwill you have available and notifies you when you spend it, or when you earn more. It works in tandem with the E2E browser security plugins.</p>
 
-							<p class="getting-started-main-info__text-install">E2E Security Plugin and Chrome</p>
+							<p class="getting-started-main-info__text-install" style="vertical-align: top!important; margin-top: 40px">E2E Security Plugin and Chrome</p>
 							<p>There’s a lot of security going on behind the scenes to make everything work safely. Besides usernames and passwords, Subutai uses Pretty Good Privacy (PGP) to do anything important. PGP can be complicated and no one wants to open up terminals to use PGP keys for every action (i.e. manage a peer or cloud environment etc). These browser plugins (extensions) were made to work automatically on your behalf without getting in your way while logging everything that do.</p>
 							<p>The Launcher wizard automatically installs Chrome and the E2E plugin for it for you. It uses Chrome because it’s available across all platforms. However, the plugin is available for Safari, Chrome, and Firefox. Edge support is coming soon.</p>
 
-							<p class="getting-started-main-info__text-install">P2P Daemon</p>
+							<p class="getting-started-main-info__text-install" style="vertical-align: top!important; margin-top: 40px">P2P Daemon</p>
 							<p>The Launcher installs a program that runs in the background called the P2P daemon. This daemon allows you to connect to your cloud environments and get on the machines running in them. It works with the tray application and indirectly with the browser plugins to give you a smooth experience with your peers and your cloud environments.</p>
 
 						</section>
@@ -500,6 +550,69 @@ sudo apt-get install -f
 				}
 			})(document, window, "yandex_metrika_callbacks");
 
+		</script>
+
+		<script>
+				function deselect(e) {
+				  $('.pop').slideFadeToggle(function() {
+				    e.removeClass('selected');
+				  });
+				}
+
+				$(function() {
+				  $('#warn1').on('click', function() {
+				    if($(this).hasClass('selected')) {
+				      deselect($(this));
+				    } else {
+				      $(this).addClass('selected');
+				      $('.pop').slideFadeToggle();
+				    }
+				    return false;
+				  });
+
+				  $('.close').on('click', function() {
+				    deselect($('#warn1'));
+				    return false;
+				  });
+				});
+				
+				$(function() {
+				  $('#warn2').on('click', function() {
+				    if($(this).hasClass('selected')) {
+				      deselect($(this));
+				    } else {
+				      $(this).addClass('selected');
+				      $('.pop').slideFadeToggle();
+				    }
+				    return false;
+				  });
+
+				  $('.close').on('click', function() {
+				    deselect($('#warn2'));
+				    return false;
+				  });
+				});
+
+				$(function() {
+				  $('#warn3').on('click', function() {
+				    if($(this).hasClass('selected')) {
+				      deselect($(this));
+				    } else {
+				      $(this).addClass('selected');
+				      $('.pop').slideFadeToggle();
+				    }
+				    return false;
+				  });
+
+				  $('.close').on('click', function() {
+				    deselect($('#warn3'));
+				    return false;
+				  });
+				});
+
+				$.fn.slideFadeToggle = function(easing, callback) {
+				  return this.animate({ opacity: 'toggle', height: 'toggle' }, 'fast', easing, callback);
+				};
 		</script>
 		<noscript>
 			<div>
