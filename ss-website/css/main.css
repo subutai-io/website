@@ -197,7 +197,7 @@
 
 .accordion__header
 {
-    font-size: 18px;
+    font-size: 15px;
     line-height: 20px;
 
     position: relative;
@@ -7782,10 +7782,10 @@ body
 code
 {
     font-family: Monaco, Consolas, 'Andale Mono', 'DejaVu Sans Mono', monospace;
-    font-size: 95%;
-    line-height: 140%;
+    font-size: 75%;
+    line-height: 120%;
 
-    padding: 0 3px;
+    padding: 0 0px;
 
     white-space: pre;
     white-space:      pre-wrap;
@@ -8551,4 +8551,98 @@ code
              -o-transform: rotate(359deg);
                 transform: rotate(359deg);
     }
+}
+
+.tab-buttons {
+    display: inline-block;
+    width: 120px;
+    height: 40px;
+    cursor: pointer;
+
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    color: #333333;
+
+    border: 1px solid transparent;
+    border-radius: 20px;
+    text-align: center;
+    line-height: 38px;
+    box-sizing: border-box;
+    text-decoration: none;
+
+}
+
+.tab-buttons:hover{
+    border-color: #068dd0;
+}
+
+.tab-buttons.active{
+    border-color: #068dd0;
+}
+
+
+.download-button {
+    display: inline-block;
+    width: 120px;
+    height: 40px;
+    background-color: #266cd3;
+
+
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    color: #ffffff;
+
+    border-radius: 4px;
+    text-align: center;
+    line-height: 40px;
+    box-sizing: border-box;
+
+}
+
+.download-button:hover {
+    background-color: #2264b2;
+}
+
+.ss-container{
+    max-width: 60em;
+}
+.ss-col-2 {
+    width: 30%;
+}
+.ss-col-4 {
+    width: 60%;
+}
+
+a.selected {
+  background-color:#1F75CC;
+  color:white;
+  z-index:100;
+}
+
+.messagepop {
+  background-color:#FFFFFF;
+  border:1px solid #999999;
+  cursor:default;
+  display:none;
+  margin-top: 15px;
+  position:absolute;
+  text-align:left;
+  width:394px;
+  z-index:50;
+  padding: 25px 25px 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 3px;
+  padding-left: 15px;
+  text-indent: -15px;
+}
+
+.messagepop p, .messagepop.div {
+  border-bottom: 1px solid #EFEFEF;
+  margin: 8px 0;
+  padding-bottom: 8px;
 }
