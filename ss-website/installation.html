@@ -367,7 +367,9 @@ sudo apt-get install -f
 										<div class="accordion__header">Read more..</div>
 										<div class="accordion__content">
 							<p>The software implements several layers of security to make sure tenants are isolated from each other and the host peer on which they run. The sandboxes and PGP keys used to manage them are showing in successive layers in the diagram below:</p>
+									<div style="vertical-align: top!important; margin: 20px 0px;">
 											<img src="img/image_security.png">
+									</div>
 									    <ol>
 												<li>
 													Each container is a sandbox for the software that runs within it. Each container has its own PGP based identity and key pair.
@@ -382,7 +384,9 @@ sudo apt-get install -f
 											The peer itself is a sandbox which peer owners manage using a PGP identity.
 												</li>
 											</ol>
+							<p style="vertical-align: top!important; margin: 20px 0px;">
 											Many people ask the question, “When I install a Subutai peer and share resources will others I share with be able to see the things I have on my computer?” Absolutely not. There are so many layers of isolation that there is no real way to have those sharing resources jump out of sandbox after sandbox to get into your computer. Nor are other tenants able to see what’s inside your containers. Obviously the entire basis to Subutai is based on security. Several years were spent just on ensuring tenant isolation with a decentralized identity management system.
+							</p>
 										</div>
 									</li>
 								</ul>
