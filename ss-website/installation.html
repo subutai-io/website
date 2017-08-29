@@ -12,7 +12,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="HandheldFriendly" content="true" />
 		<meta content="IE=edge" http-equiv="X-UA-Compatible" />
-		<link rel="stylesheet" href="css/reset.min.css" />
+		<link rel="stylesheet" href="css/reset.css" />
 		<link rel="stylesheet" href="css/main.css" />
 		<meta property="og:title" content="Subutai" />
 		<meta property="og:title" content="" />
@@ -226,11 +226,12 @@
 										</div>
 									</div>
 									<span style="font-weight: bold; color: red">Installation for Admins</span>
-									<a href="#" id="warn1"><i class="fa fa-info-circle"></i></a>
+									<a href="#" class="warn3"><i class="fa fa-info-circle"></i></a>
 
 									<div class="messagepop pop">
-										These launchers are not for commercial Subutai deployments for hosting providers or telecoms. They’re for residential broadband users or for those interested in quickly trying Subutai on their desktop conveniently inside a VM<br/>
-										<p>If you’re hands on, an administrator, and interested in a more long term, or commercial grade Subutai configuration like using other hypervisors or running on bare metal please see the peer installation <a href='https://github.com/subutai-io/subos/blob/master/Readme.md'>Readme</a>, or our <a href='https://github.com/subutai-io/subos/wiki/Alternative-Installations'>FAQ</a>s. We’re on <a href='https://slack.subut.ai/'>Slack</a> if you need any help."</p>
+										<p style="text-align: justify">These launchers are not for commercial Subutai deployments for hosting providers or telecoms. They’re for residential broadband users or for those interested in quickly trying Subutai on their desktop conveniently inside a VM</p>
+										<p style="text-align: justify">If you’re hands on, an administrator, and interested in a more long term, or commercial grade Subutai configuration like using other hypervisors or running on bare metal please see the peer installation <a href='https://github.com/subutai-io/subos/blob/master/Readme.md'>Readme</a>, or our <a href='https://github.com/subutai-io/subos/wiki/Alternative-Installations'>FAQ</a>s. We’re on <a href='https://slack.subut.ai/'>Slack</a> if you need any help."</p>
+										<p><a class="close" href="/">Close</a></p>
 									</div>
 								</div>
 								<div class="crazy-possibilty__info" style="width: 650px; vertical-align: top!important; margin-top: -40px">
@@ -274,10 +275,11 @@
 										</div>
 									</div>
 									<span style="font-weight: bold; color: red">Installation for Admins</span>
-									<a href="#" id="warn2"><i class="fa fa-info-circle"></i></a>
+									<a href="#" class="warn3"><i class="fa fa-info-circle"></i></a>
 									<div class="messagepop pop">
-										These launchers are not for commercial Subutai deployments for hosting providers or telecoms. They’re for residential broadband users or for those interested in quickly trying Subutai on their desktop conveniently inside a VM<br/>
-										<p>If you’re hands on, an administrator, and interested in a more long term, or commercial grade Subutai configuration like using other hypervisors or running on bare metal please see the peer installation <a href='https://github.com/subutai-io/subos/blob/master/Readme.md'>Readme</a>, or our <a href='https://github.com/subutai-io/subos/wiki/Alternative-Installations'>FAQ</a>s. We’re on <a href='https://slack.subut.ai/'>Slack</a> if you need any help."</p>
+										<p style="text-align: justify">These launchers are not for commercial Subutai deployments for hosting providers or telecoms. They’re for residential broadband users or for those interested in quickly trying Subutai on their desktop conveniently inside a VM</p>
+										<p style="text-align: justify">If you’re hands on, an administrator, and interested in a more long term, or commercial grade Subutai configuration like using other hypervisors or running on bare metal please see the peer installation <a href='https://github.com/subutai-io/subos/blob/master/Readme.md'>Readme</a>, or our <a href='https://github.com/subutai-io/subos/wiki/Alternative-Installations'>FAQ</a>s. We’re on <a href='https://slack.subut.ai/'>Slack</a> if you need any help."</p>
+										<p><a class="close" href="/">Close</a></p>
 									</div>
 
 								</div>
@@ -324,10 +326,12 @@
 												</div>
 											</div>
 											<span style="font-weight: bold; color: red">Installation for Admins</span>
-											<a href="#" id="warn3"><i class="fa fa-info-circle"></i></a>
+											<a href="#" class="warn3"><i class="fa fa-info-circle"></i></a>
 											<div class="messagepop pop">
-												These launchers are not for commercial Subutai deployments for hosting providers or telecoms. They’re for residential broadband users or for those interested in quickly trying Subutai on their desktop conveniently inside a VM<br/>
-												<p>If you’re hands on, an administrator, and interested in a more long term, or commercial grade Subutai configuration like using other hypervisors or running on bare metal please see the peer installation <a href='https://github.com/subutai-io/subos/blob/master/Readme.md'>Readme</a>, or our <a href='https://github.com/subutai-io/subos/wiki/Alternative-Installations'>FAQ</a>s. We’re on <a href='https://slack.subut.ai/'>Slack</a> if you need any help."</p>
+												<p style="text-align: justify">These launchers are not for commercial Subutai deployments for hosting providers or telecoms. They’re for residential broadband users or for those interested in quickly trying Subutai on their desktop conveniently inside a VM</p>
+												<p style="text-align: justify">If you’re hands on, an administrator, and interested in a more long term, or commercial grade Subutai configuration like using other hypervisors or running on bare metal please see the peer installation <a href='https://github.com/subutai-io/subos/blob/master/Readme.md'>Readme</a>, or our <a href='https://github.com/subutai-io/subos/wiki/Alternative-Installations'>FAQ</a>s. We’re on <a href='https://slack.subut.ai/'>Slack</a> if you need any help."</p>
+
+												<p><a class="close" href="/">Close</a></p>
 											</div>
 
 										</div>
@@ -571,7 +575,7 @@ sudo apt-get install -f
 				}
 
 				$(function() {
-				  $('#warn1').on('click', function() {
+				  $('.warn3').on('click', function() {
 				    if($(this).hasClass('selected')) {
 				      deselect($(this));
 				    } else {
@@ -582,41 +586,7 @@ sudo apt-get install -f
 				  });
 
 				  $('.close').on('click', function() {
-				    deselect($('#warn1'));
-				    return false;
-				  });
-				});
-				
-				$(function() {
-				  $('#warn2').on('click', function() {
-				    if($(this).hasClass('selected')) {
-				      deselect($(this));
-				    } else {
-				      $(this).addClass('selected');
-				      $('.pop').slideFadeToggle();
-				    }
-				    return false;
-				  });
-
-				  $('.close').on('click', function() {
-				    deselect($('#warn2'));
-				    return false;
-				  });
-				});
-
-				$(function() {
-				  $('#warn3').on('click', function() {
-				    if($(this).hasClass('selected')) {
-				      deselect($(this));
-				    } else {
-				      $(this).addClass('selected');
-				      $('.pop').slideFadeToggle();
-				    }
-				    return false;
-				  });
-
-				  $('.close').on('click', function() {
-				    deselect($('#warn3'));
+				    deselect($('.warn3'));
 				    return false;
 				  });
 				});
