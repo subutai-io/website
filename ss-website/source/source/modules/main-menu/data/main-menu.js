@@ -5,8 +5,8 @@
 			"url":"about.html",
 		},
 		{
-			"title":"Who is Subutai?",
-			"url":"who-is-subutai.html",
+			"title":"Manifesto",
+			"url":"manifesto.html",
 		},
 		{
 			"title": "Social Cloud Computing",
