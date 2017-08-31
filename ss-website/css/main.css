@@ -8646,3 +8646,40 @@ label {
   margin: 8px 0;
   padding-bottom: 8px;
 }
+
+.disclaimer {
+  background-color:#FFFFFF;
+  border:1px solid #999999;
+  cursor:default;
+  display:none;
+  margin-top: 0px;
+  position:absolute;
+  text-align:left;
+  width:694px;
+  z-index:50;
+  padding: 25px 25px 20px;
+}
+
+.disclaimer p, .disclaimer.div {
+  border-bottom: 1px solid #EFEFEF;
+  margin: 8px 0;
+  padding-bottom: 8px;
+}
+
+.accordion__content p, .accordion__content.div {
+  border-bottom: 1px solid #EFEFEF;
+  margin: 8px 0;
+  padding-bottom: 8px;
+}
+
+
+
+.manifesto {
+    text-align: justify;
+}
+
+.manifesto p, .manifesto.div {
+  border-bottom: 1px solid #EFEFEF;
+  margin: 8px 0;
+  padding-bottom: 8px;
+}
