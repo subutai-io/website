@@ -8682,3 +8682,46 @@ label {
   margin: 8px 0;
   padding-bottom: 8px;
 }
+
+.btn-group button {
+    background-color: #ffffff;
+    border: 1px solid #DCE1E5;
+    color: black;
+    padding: 2px 12px;
+    cursor: pointer;
+    float: left;
+}
+
+.btn-group button:not(:last-child) {
+    border-right: none; /* Prevent double borders */
+}
+
+.btn-group button:last-child {
+    border-right: 1px solid #DCE1E5;
+    border-radius: 0 4px 4px 0;
+}
+
+.btn-group button:first-child {
+    border-right: 1px solid #DCE1E5;
+    border-radius: 4px 0 0 4px;
+}
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+    background-color: #DCE1E5;
+}
+
+.btn-group .active {
+    background-color:  #DCE1E5; /* Green background */
+}
+
+.btn-group a {
+    text-decoration: none !important;
+}
