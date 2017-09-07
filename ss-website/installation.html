@@ -202,449 +202,450 @@
 								</h2>
 								</div>
 
-								<div class="btn-group" style="float: right;margin-top:-100px">
-									<button class="active"><a href="installation.html">English</a></button>
-									<button><a href="installation-ru.html">Russian</a></button>
-<!--
-									<button><a href="installation-pt.html">Portuguese</a></button>
--->
-								</div>
-								<p class="crazy-possibilty__text" style="margin-top: 0px">
-									<div class='buttons'>
-										<a class='tab-buttons ss-tablinks' onclick="openOSTab(event, 'windows')" id="windowsos">Windows</a>
-										<a class='tab-buttons ss-tablinks' onclick="openOSTab(event,'mac')" id="macos">Mac</a>
-										<a class='tab-buttons ss-tablinks active' onclick="openOSTab(event,'linux')" id="linuxos">Linux</a>
-									</div>
-								</p>
-							</div>
+								<!--							<div class="btn-group" style="float: right;margin-top:-100px">
+                                                                <button class="active"><a href="installation.html">English</a></button>
+                                                                <button><a href="installation-ru.html">Russian</a></button>
+                            <!--
+                                                                <button><a href="installation-pt.html">Portuguese</a></button>
+                            -->
+								<!--			</div>-->
 
-							<div id="windows" class="subutaiTabContent"  style="display: none">
-								<div class="crazy-possibilty__img" style="vertical-align: top!important; margin-top: 40px">
-									Version: 5.0.1<br>
-									Released: August 31, 2017
-									<div class="getting-started-main-info__button" style="vertical-align: top!important; margin-top: 20px">
-										<div title="Windows" class="download-button download">
-											Download
-											<div class="download-menu">
-												<ul>
-													<li class="download-menu__item">
-														<a href="https://cdn.subut.ai:8338/kurjun/rest/raw/get?name=SubutaiLauncher.msi" onclick="ga('send', 'event', 'downloads', 'SubutaiLauncher.msi', 'Win');">Launcher</a>
-													</li>
-													<li class="download-menu__item">
-														<a href="https://cdn.subut.ai:8338/kurjun/rest/raw/get?name=SubutaiLauncher-dev.msi" onclick="ga('send', 'event', 'downloads', 'SubutaiLauncher-dev.zip', 'Win');">Launcher Dev</a>
-													</li>
-													<li class="download-menu__item">
-														<a href="https://cdn.subut.ai:8338/kurjun/rest/raw/get?name=SubutaiLauncher-master.msi" onclick="ga('send', 'event', 'downloads', 'SubutaiLauncher-master.zip', 'Win');">Launcher Master</a>
-													</li>
-												</ul>
-											</div>
-										</div>
-                    <div style="margin: 10px 0px">
-                      <span style="font-weight: bold; color: red">Installation for Admins</span>
-                      <a href="#" class="warn3"><i class="fa fa-info-circle"></i></a>
-                      <div class="messagepop pop">
-                        <p style="text-align: justify">These launchers are not for commercial Subutai installs
-                          for hosting providers or telecoms. They’re for residential broadband users or for those
-                          interested in quickly trying Subutai on their desktop conveniently inside a VM.</p>
-                        <p style="text-align: justify">If you’re a hands on, an administrator, and interested in a
-                          more
-                          long term, or commercial grade Subutai configuration like using other hypervisors or
-                          running
-                          on bare metal please see the peer installation <a
-                              href='https://github.com/subutai-io/subos/blob/master/Readme.md'>Readme</a>, or our <a
-                              href='https://github.com/subutai-io/subos/wiki/Alternative-Installations'>FAQ</a>s.
-                          We’re on <a href='https://slack.subut.ai/'>Slack</a> if you need any help."</p>
+                                                <p class="crazy-possibilty__text" style="margin-top: 0px">
+                                                    <div class='buttons'>
+                                                        <a class='tab-buttons ss-tablinks' onclick="openOSTab(event, 'windows')" id="windowsos">Windows</a>
+                                                        <a class='tab-buttons ss-tablinks' onclick="openOSTab(event,'mac')" id="macos">Mac</a>
+                                                        <a class='tab-buttons ss-tablinks active' onclick="openOSTab(event,'linux')" id="linuxos">Linux</a>
+                                                    </div>
+                                                </p>
+                                            </div>
 
-                        <p><a class="close" href="/">Close</a></p>
-                      </div>
-                    </div>
-									</div>
-								</div>
-								<div class="crazy-possibilty__info" style="width: 650px; vertical-align: top!important; margin-top: -40px">
-									<p class="crazy-possibilty__text">
-									<p><strong>Supported Versions:</strong> Windows 8.1, 10</p>
-									<p>Just double click on the MSI package and install it. This should create a desktop icon for the SubutaiLauncher. Double clicking on it will start the installation wizard.</p>
-									<div class="accordion">
-										<ul>
-											<li id="installation-win" class="accordion__item">
-												<div class="accordion__header">Watch the getting started on Windows video.</div>
-												<div class="accordion__content">
-													<iframe width="100%" height="450" src="https://www.youtube.com/embed/PRbmn8SR0sI" frameborder="0" allowfullscreen></iframe>
-												</div>
-											</li>
-										</ul>
-									</div>
-									<br>
-								</div>
-							</div>
+                                            <div id="windows" class="subutaiTabContent"  style="display: none">
+                                                <div class="crazy-possibilty__img" style="vertical-align: top!important; margin-top: 40px">
+                                                    Version: 5.0.1<br>
+                                                    Released: August 31, 2017
+                                                    <div class="getting-started-main-info__button" style="vertical-align: top!important; margin-top: 20px">
+                                                        <div title="Windows" class="download-button download">
+                                                            Download
+                                                            <div class="download-menu">
+                                                                <ul>
+                                                                    <li class="download-menu__item">
+                                                                        <a href="https://cdn.subut.ai:8338/kurjun/rest/raw/get?name=SubutaiLauncher.msi" onclick="ga('send', 'event', 'downloads', 'SubutaiLauncher.msi', 'Win');">Launcher</a>
+                                                                    </li>
+                                                                    <li class="download-menu__item">
+                                                                        <a href="https://cdn.subut.ai:8338/kurjun/rest/raw/get?name=SubutaiLauncher-dev.msi" onclick="ga('send', 'event', 'downloads', 'SubutaiLauncher-dev.zip', 'Win');">Launcher Dev</a>
+                                                                    </li>
+                                                                    <li class="download-menu__item">
+                                                                        <a href="https://cdn.subut.ai:8338/kurjun/rest/raw/get?name=SubutaiLauncher-master.msi" onclick="ga('send', 'event', 'downloads', 'SubutaiLauncher-master.zip', 'Win');">Launcher Master</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                    <div style="margin: 10px 0px">
+                                      <span style="font-weight: bold; color: red">Installation for Admins</span>
+                                      <a href="#" class="warn3"><i class="fa fa-info-circle"></i></a>
+                                      <div class="messagepop pop">
+                                        <p style="text-align: justify">These launchers are not for commercial Subutai installs
+                                          for hosting providers or telecoms. They’re for residential broadband users or for those
+                                          interested in quickly trying Subutai on their desktop conveniently inside a VM.</p>
+                                        <p style="text-align: justify">If you’re a hands on, an administrator, and interested in a
+                                          more
+                                          long term, or commercial grade Subutai configuration like using other hypervisors or
+                                          running
+                                          on bare metal please see the peer installation <a
+                                              href='https://github.com/subutai-io/subos/blob/master/Readme.md'>Readme</a>, or our <a
+                                              href='https://github.com/subutai-io/subos/wiki/Alternative-Installations'>FAQ</a>s.
+                                          We’re on <a href='https://slack.subut.ai/'>Slack</a> if you need any help."</p>
 
-							<div id="mac" class="subutaiTabContent" style="display: none">
-								<div class="crazy-possibilty__img" style="vertical-align: top!important; margin-top: 40px">
-									Version: 5.0.1<br>
-									Released: August 31, 2017
-									<div class="getting-started-main-info__button" style="vertical-align: top!important; margin-top: 20px">
-										<div title="Mac" class="download-button download">
-											Download
-											<div class="download-menu">
-												<ul>
-													<li class="download-menu__item">
-														<a href="https://cdn.subut.ai:8338/kurjun/rest/raw/get?name=SubutaiLauncher.pkg" onclick="ga('send', 'event', 'downloads', 'SubutaiLauncher.pkg', 'Mac');">Launcher</a>
-													</li>
-													<li class="download-menu__item">
-														<a href="https://cdn.subut.ai:8338/kurjun/rest/raw/get?name=SubutaiLauncher-dev.pkg" onclick="ga('send', 'event', 'downloads', 'SubutaiLauncher-dev.pkg', 'Mac');">Launcher Dev</a>
-													</li>
-													<li class="download-menu__item">
-														<a href="https://cdn.subut.ai:8338/kurjun/rest/raw/get?name=SubutaiLauncher-master.pkg" onclick="ga('send', 'event', 'downloads', 'SubutaiLauncher-master.pkg', 'Mac');">Launcher Master</a>
-													</li>
-												</ul>
-											</div>
-										</div>
-                    <div style="margin: 10px 0px">
-                      <span style="font-weight: bold; color: red">Installation for Admins</span>
-                      <a href="#" class="warn3"><i class="fa fa-info-circle"></i></a>
-                      <div class="messagepop pop">
-                        <p style="text-align: justify">These launchers are not for commercial Subutai installs
-                          for
-                          hosting providers or telecoms. They’re for residential broadband users or for those
-                          interested in quickly trying Subutai on their desktop conveniently inside a VM.</p>
-                        <p style="text-align: justify">If you’re a hands on, an administrator, and interested in a
-                          more
-                          long term, or commercial grade Subutai configuration like using other hypervisors or
-                          running
-                          on bare metal please see the peer installation <a
-                              href='https://github.com/subutai-io/subos/blob/master/Readme.md'>Readme</a>, or our <a
-                              href='https://github.com/subutai-io/subos/wiki/Alternative-Installations'>FAQ</a>s.
-                          We’re on <a href='https://slack.subut.ai/'>Slack</a> if you need any help."</p>
+                                        <p><a class="close" href="/">Close</a></p>
+                                      </div>
+                                    </div>
+                                                    </div>
+                                                </div>
+                                                <div class="crazy-possibilty__info" style="width: 650px; vertical-align: top!important; margin-top: -40px">
+                                                    <p class="crazy-possibilty__text">
+                                                    <p><strong>Supported Versions:</strong> Windows 8.1, 10</p>
+                                                    <p>Just double click on the MSI package and install it. This should create a desktop icon for the SubutaiLauncher. Double clicking on it will start the installation wizard.</p>
+                                                    <div class="accordion">
+                                                        <ul>
+                                                            <li id="installation-win" class="accordion__item">
+                                                                <div class="accordion__header">Watch the getting started on Windows video.</div>
+                                                                <div class="accordion__content">
+                                                                    <iframe width="100%" height="450" src="https://www.youtube.com/embed/PRbmn8SR0sI" frameborder="0" allowfullscreen></iframe>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <br>
+                                                </div>
+                                            </div>
 
-                        <p><a class="close" href="/">Close</a></p>
-                      </div>
-                    </div>
-									</div>
-								</div>
-								<div class="crazy-possibilty__info" style="width: 650px; vertical-align: top!important; margin-top: -40px">
-									<p class="crazy-possibilty__text">
-									<p><strong>Supported Versions:</strong> Sierra, and High Sierra</p>
-									<p>Just double click on the Mac OS Subutai Package and install it. Then start SubutaiLauncher from Launchpad or the Applications folder in the Finder.
-									</p>
-									<div class="accordion">
-										<ul>
-											<li id="installation-mac" class="accordion__item">
-												<div class="accordion__header">Watch the getting started on Mac OS video</div>
-												<div class="accordion__content">
-													<iframe width="100%" height="450" src="https://www.youtube.com/embed/YiNrZnp9pv0" frameborder="0" allowfullscreen></iframe>
-												</div>
-											</li>
-										</ul>
-									</div>
-									</p>
+                                            <div id="mac" class="subutaiTabContent" style="display: none">
+                                                <div class="crazy-possibilty__img" style="vertical-align: top!important; margin-top: 40px">
+                                                    Version: 5.0.1<br>
+                                                    Released: August 31, 2017
+                                                    <div class="getting-started-main-info__button" style="vertical-align: top!important; margin-top: 20px">
+                                                        <div title="Mac" class="download-button download">
+                                                            Download
+                                                            <div class="download-menu">
+                                                                <ul>
+                                                                    <li class="download-menu__item">
+                                                                        <a href="https://cdn.subut.ai:8338/kurjun/rest/raw/get?name=SubutaiLauncher.pkg" onclick="ga('send', 'event', 'downloads', 'SubutaiLauncher.pkg', 'Mac');">Launcher</a>
+                                                                    </li>
+                                                                    <li class="download-menu__item">
+                                                                        <a href="https://cdn.subut.ai:8338/kurjun/rest/raw/get?name=SubutaiLauncher-dev.pkg" onclick="ga('send', 'event', 'downloads', 'SubutaiLauncher-dev.pkg', 'Mac');">Launcher Dev</a>
+                                                                    </li>
+                                                                    <li class="download-menu__item">
+                                                                        <a href="https://cdn.subut.ai:8338/kurjun/rest/raw/get?name=SubutaiLauncher-master.pkg" onclick="ga('send', 'event', 'downloads', 'SubutaiLauncher-master.pkg', 'Mac');">Launcher Master</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                    <div style="margin: 10px 0px">
+                                      <span style="font-weight: bold; color: red">Installation for Admins</span>
+                                      <a href="#" class="warn3"><i class="fa fa-info-circle"></i></a>
+                                      <div class="messagepop pop">
+                                        <p style="text-align: justify">These launchers are not for commercial Subutai installs
+                                          for
+                                          hosting providers or telecoms. They’re for residential broadband users or for those
+                                          interested in quickly trying Subutai on their desktop conveniently inside a VM.</p>
+                                        <p style="text-align: justify">If you’re a hands on, an administrator, and interested in a
+                                          more
+                                          long term, or commercial grade Subutai configuration like using other hypervisors or
+                                          running
+                                          on bare metal please see the peer installation <a
+                                              href='https://github.com/subutai-io/subos/blob/master/Readme.md'>Readme</a>, or our <a
+                                              href='https://github.com/subutai-io/subos/wiki/Alternative-Installations'>FAQ</a>s.
+                                          We’re on <a href='https://slack.subut.ai/'>Slack</a> if you need any help."</p>
 
-								</div>
-							</div>
+                                        <p><a class="close" href="/">Close</a></p>
+                                      </div>
+                                    </div>
+                                                    </div>
+                                                </div>
+                                                <div class="crazy-possibilty__info" style="width: 650px; vertical-align: top!important; margin-top: -40px">
+                                                    <p class="crazy-possibilty__text">
+                                                    <p><strong>Supported Versions:</strong> Sierra, and High Sierra</p>
+                                                    <p>Just double click on the Mac OS Subutai Package and install it. Then start SubutaiLauncher from Launchpad or the Applications folder in the Finder.
+                                                    </p>
+                                                    <div class="accordion">
+                                                        <ul>
+                                                            <li id="installation-mac" class="accordion__item">
+                                                                <div class="accordion__header">Watch the getting started on Mac OS video</div>
+                                                                <div class="accordion__content">
+                                                                    <iframe width="100%" height="450" src="https://www.youtube.com/embed/YiNrZnp9pv0" frameborder="0" allowfullscreen></iframe>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    </p>
 
-							<div id="linux" class="subutaiTabContent">
-										<div class="crazy-possibilty__img" style="vertical-align: top!important; margin-top: 40px">
-											Version: 5.0.1<br>
-											Released: August 31, 2017
-											<div class="getting-started-main-info__button" style="vertical-align: top!important; margin-top: 20px">
-												<div title="Linux" class="download-button download">
-													Download
-													<div class="download-menu">
-														<ul>
-															<li class="download-menu__item">
-																<a href="https://cdn.subut.ai:8338/kurjun/rest/raw/get?name=SubutaiLauncher.deb" onclick="ga('send', 'event', 'downloads', 'SubutaiLauncher.deb', 'Linux');">Launcher</a>
-															</li>
-															<li class="download-menu__item">
-																<a href="https://cdn.subut.ai:8338/kurjun/rest/raw/get?name=SubutaiLauncher-dev.deb" onclick="ga('send', 'event', 'downloads', 'subutai-launcher-dev.deb', 'Linux');">Launcher Dev</a>
-															</li>
-															<li class="download-menu__item">
-																<a href="https://cdn.subut.ai:8338/kurjun/rest/raw/get?name=SubutaiLauncher-master.deb" onclick="ga('send', 'event', 'downloads', 'subutai-launcher-master.deb', 'Linux');">Launcher Master</a>
-															</li>
-														</ul>
-													</div>
-												</div>
-                        <div style="margin: 10px 0px">
-                          <span style="font-weight: bold; color: red">Installation for Admins</span>
-                          <a href="#" class="warn3"><i class="fa fa-info-circle"></i></a>
-                          <div class="messagepop pop">
-                            <p style="text-align: justify">These launchers are not for commercial Subutai installs
-                              for
-                              hosting providers or telecoms. They’re for residential broadband users or for those
-                              interested in quickly trying Subutai on their desktop conveniently inside a VM.</p>
-                            <p style="text-align: justify">If you’re a hands on, an administrator, and interested in a
-                              more
-                              long term, or commercial grade Subutai configuration like using other hypervisors or
-                              running
-                              on bare metal please see the peer installation <a
-                                  href='https://github.com/subutai-io/subos/blob/master/Readme.md'>Readme</a>, or our <a
-                                  href='https://github.com/subutai-io/subos/wiki/Alternative-Installations'>FAQ</a>s.
-                              We’re on <a href='https://slack.subut.ai/'>Slack</a> if you need any help."</p>
+                                                </div>
+                                            </div>
 
-                            <p><a class="close" href="/">Close</a></p>
-                          </div>
+                                            <div id="linux" class="subutaiTabContent">
+                                                        <div class="crazy-possibilty__img" style="vertical-align: top!important; margin-top: 40px">
+                                                            Version: 5.0.1<br>
+                                                            Released: August 31, 2017
+                                                            <div class="getting-started-main-info__button" style="vertical-align: top!important; margin-top: 20px">
+                                                                <div title="Linux" class="download-button download">
+                                                                    Download
+                                                                    <div class="download-menu">
+                                                                        <ul>
+                                                                            <li class="download-menu__item">
+                                                                                <a href="https://cdn.subut.ai:8338/kurjun/rest/raw/get?name=SubutaiLauncher.deb" onclick="ga('send', 'event', 'downloads', 'SubutaiLauncher.deb', 'Linux');">Launcher</a>
+                                                                            </li>
+                                                                            <li class="download-menu__item">
+                                                                                <a href="https://cdn.subut.ai:8338/kurjun/rest/raw/get?name=SubutaiLauncher-dev.deb" onclick="ga('send', 'event', 'downloads', 'subutai-launcher-dev.deb', 'Linux');">Launcher Dev</a>
+                                                                            </li>
+                                                                            <li class="download-menu__item">
+                                                                                <a href="https://cdn.subut.ai:8338/kurjun/rest/raw/get?name=SubutaiLauncher-master.deb" onclick="ga('send', 'event', 'downloads', 'subutai-launcher-master.deb', 'Linux');">Launcher Master</a>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                        <div style="margin: 10px 0px">
+                                          <span style="font-weight: bold; color: red">Installation for Admins</span>
+                                          <a href="#" class="warn3"><i class="fa fa-info-circle"></i></a>
+                                          <div class="messagepop pop">
+                                            <p style="text-align: justify">These launchers are not for commercial Subutai installs
+                                              for
+                                              hosting providers or telecoms. They’re for residential broadband users or for those
+                                              interested in quickly trying Subutai on their desktop conveniently inside a VM.</p>
+                                            <p style="text-align: justify">If you’re a hands on, an administrator, and interested in a
+                                              more
+                                              long term, or commercial grade Subutai configuration like using other hypervisors or
+                                              running
+                                              on bare metal please see the peer installation <a
+                                                  href='https://github.com/subutai-io/subos/blob/master/Readme.md'>Readme</a>, or our <a
+                                                  href='https://github.com/subutai-io/subos/wiki/Alternative-Installations'>FAQ</a>s.
+                                              We’re on <a href='https://slack.subut.ai/'>Slack</a> if you need any help."</p>
+
+                                            <p><a class="close" href="/">Close</a></p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                                        </div>
+                                                        <div class="crazy-possibilty__info" style="width: 650px; vertical-align: top!important; margin-top: -40px">
+                                                            <p class="crazy-possibilty__text">
+                                                            <p><strong>Supported Versions:</strong> Ubuntu 16.04, 16.10, 17.04, and Mint 18</p>
+                                                            <p>On the command line, run the following commands:</p>
+
+                                                            <pre><code class="bash">
+                sudo dpkg -i /path/to/SubutaiLauncher.deb
+                sudo apt-get install -f
+                /opt/subutai/bin/SubutaiLauncher
+                                                    </code></pre>
+                                                            <p>The last line fires up the launcher wizard and you’re good to go.</p>
+                                                            </p>
+                                                            <div class="accordion">
+                                                                <ul>
+                                                                    <li id="installation-mac" class="accordion__item">
+                                                                        <div class="accordion__header">Watch the getting started on Linux video</div>
+                                                                        <div class="accordion__content">
+                                                                            <iframe width="100%" height="450" src="https://www.youtube.com/embed/S34Rty76OA4?version=3&amp;enablejsapi=1" frameborder="0" allowfullscreen></iframe>
+                                                                        </div>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+
+
+                                                        <div class="clear"></div>
+                                            </div>
+
+                                            <h1>What’s in the box?</h1>
+                                            <p>The launchers let you install different items based on your needs. If you’re trying Subutai for the first time we recommend installing everything to get the full experience. Uninstallation is trivial and nothing stays on your machine.</p>
+
+                                            <p class="getting-started-main-info__text-install" style="vertical-align: top!important; margin-top: 40px">Peer VM</p>
+                                            <p>This installation option creates a small peer on your desktop isolated inside a virtual machine. It’s perfect for non-technical users to start playing with their own peers. You can share the resources on this virtual machine with others to keep them sandboxed. Just destroy the virtual machine when you don’t need the peer anymore or add and remove resources as you like. The launchers download and install the free VirtualBox desktop hypervisor if you don’t already have it installed to run the Peer VM.
+
+                                            <div class="accordion">
+                                                <ul>
+                                                    <li id="installation-mac" class="accordion__item">
+                                                        <div class="accordion__header">Read more..</div>
+                                                        <div class="accordion__content">
+                                            <p>The software implements several layers of security to make sure tenants are isolated from each other and the host peer on which they run. The sandboxes and PGP keys used to manage them are showing in successive layers in the diagram below:</p>
+                                                    <div style="vertical-align: top!important; margin: 20px 0px;">
+                                                            <img src="img/image_security.png">
+                                                    </div>
+                                                        <ol>
+                                                                <li>
+                                                                    Each container is a sandbox for the software that runs within it. Each container has its own PGP based identity and key pair.
+                                                                </li>
+                                                                <li>
+                                                            There are two different kinds of security restrictions on resource hosts. Each resource host, a machine, physical or virtual, is a sandbox in itself. Usually the resource host is a virtual machine. Containers in the same cloud environment running on a single resource host have their own sandbox since more than one tenant may reside on the resource host.
+                                                                </li>
+                                                                <li>
+                                                            Each peer isolates tenants running on its resource hosts. Network communications are  encrypted even in the peers LAN.
+                                                                </li>
+                                                                <li>
+                                                            The peer itself is a sandbox which peer owners manage using a PGP identity.
+                                                                </li>
+                                                            </ol>
+                                            <p style="vertical-align: top!important; margin: 20px 0px;">
+                                                            Many people ask the question, “When I install a Subutai peer and share resources will others I share with be able to see the things I have on my computer?” Absolutely not. There are so many layers of isolation that there is no real way to have those sharing resources jump out of sandbox after sandbox to get into your computer. Nor are other tenants able to see what’s inside your containers. Obviously the entire basis to Subutai is based on security. Several years were spent just on ensuring tenant isolation with a decentralized identity management system.
+                                            </p>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            </p>
+
+                                            <p class="getting-started-main-info__text-install" style="vertical-align: top!important; margin-top: 40px">Tray Application</p>
+                                            <p>This is an OS tray application for Mac OS, Windows, and Linux for desktop integration. It lists and notifies you of situations with your account, your cloud environments and your local and remote peers. The tray is also a wallet application. It shows how much goodwill you have available and notifies you when you spend it, or when you earn more. It works in tandem with the E2E browser security plugins.</p>
+
+                                            <p class="getting-started-main-info__text-install" style="vertical-align: top!important; margin-top: 40px">E2E Security Plugin and Chrome</p>
+                                            <p>There’s a lot of security going on behind the scenes to make everything work safely. Besides usernames and passwords, Subutai uses Pretty Good Privacy (PGP) to do anything important. PGP can be complicated and no one wants to open up terminals to use PGP keys for every action (i.e. manage a peer or cloud environment etc). These browser plugins (extensions) were made to work automatically on your behalf without getting in your way while logging everything that do.</p>
+                                            <p>The Launcher wizard automatically installs Chrome and the E2E plugin for it for you. It uses Chrome because it’s available across all platforms. However, the plugin is available for Safari, Chrome, and Firefox. Edge support is coming soon.</p>
+
+                                            <p class="getting-started-main-info__text-install" style="vertical-align: top!important; margin-top: 40px">P2P Daemon</p>
+                                            <p>The Launcher installs a program that runs in the background called the P2P daemon. This daemon allows you to connect to your cloud environments and get on the machines running in them. It works with the tray application and indirectly with the browser plugins to give you a smooth experience with your peers and your cloud environments.</p>
+
+                                    </section>
+                                </div>
+                            </div>
+                            <div class="page__footer">
+                                <footer class="footer">
+                                    <div class="footer__inner">
+                                        <div class="footer__menu">
+                                            <ul class="footer-menu js-link-sroll">
+                                                <li class="footer-menu__item">
+                                                    <a href="thanks.html" class="title">Thanks</a>
+                                                </li>
+                                                <li class="footer-menu__item">
+                                                    <a href="tribute-to-Dennis-Ritchie.html" class="title">Tribute</a>
+                                                </li>
+                                            </ul>
+                                            <div class="clear"></div>
+                                        </div>
+                                        <div class="footer__social">
+                                            <ul class="footer-social">
+                                                <li class="footer-social__item">Join us</li>
+                                                <li class="footer-social__item">
+                                                    <a href="https://www.facebook.com/Subutai-social-1169199263145930/" target="_blank" class="footer-social-item">
+                                                        <i class="fa fa-facebook-official"></i>
+                                                    </a>
+                                                </li>
+                                                <li class="footer-social__item">
+                                                    <a href="https://twitter.com/SubutaiSocial" target="_blank" class="footer-social-item">
+                                                        <i class="fa fa-twitter"></i>
+                                                    </a>
+                                                </li>
+                                                <li class="footer-social__item">
+                                                    <a href="https://plus.google.com/103627275167018971893" target="_blank" class="footer-social-item">
+                                                        <i class="fa fa-google-plus"></i>
+                                                    </a>
+                                                </li>
+                                                <li class="footer-social__item">
+                                                    <a href="https://www.linkedin.com/in/subutai-social-317b41117" target="_blank" class="footer-social-item">
+                                                        <i class="fa fa-linkedin"></i>
+                                                    </a>
+                                                </li>
+                                                <li class="footer-social__item">
+                                                    <a href="https://github.com/subutai-io/base" target="_blank" class="footer-social-item">
+                                                        <i class="fa fa-github-alt"></i>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                            <div class="clear"></div>
+                                        </div>
+                                        <span class="to-top-arrow footer__arrow js-to-top-arrow"></span>
+                                        <div class="clear"></div>
+                                    </div>
+                                </footer>
+                            </div>
+                            <div class="clear"></div>
                         </div>
-                      </div>
-										</div>
-										<div class="crazy-possibilty__info" style="width: 650px; vertical-align: top!important; margin-top: -40px">
-											<p class="crazy-possibilty__text">
-											<p><strong>Supported Versions:</strong> Ubuntu 16.04, 16.10, 17.04, and Mint 18</p>
-											<p>On the command line, run the following commands:</p>
+                        <script src="js/plugins.min.js"></script>
+                        <script src="js/main.min.js"></script>
+                        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js"></script>
+                        <script>hljs.initHighlightingOnLoad();</script>
+                        <script>
 
-											<pre><code class="bash">
-sudo dpkg -i /path/to/SubutaiLauncher.deb
-sudo apt-get install -f
-/opt/subutai/bin/SubutaiLauncher
-									</code></pre>
-											<p>The last line fires up the launcher wizard and you’re good to go.</p>
-											</p>
-											<div class="accordion">
-												<ul>
-													<li id="installation-mac" class="accordion__item">
-														<div class="accordion__header">Watch the getting started on Linux video</div>
-														<div class="accordion__content">
-															<iframe width="100%" height="450" src="https://www.youtube.com/embed/S34Rty76OA4?version=3&amp;enablejsapi=1" frameborder="0" allowfullscreen></iframe>
-														</div>
-													</li>
-												</ul>
-											</div>
-										</div>
+                //        $('.tab-buttons').click(function(){
+                //            if($(this).hasClass('active')){
+                //                $(this).removeClass('active')
+                //            } else {
+                //                $(this).addClass('active')
+                //            }
+                //        });
 
+                        function openOSTab( event, osType ) {
+                            var i, tabcontent, tablinks;
+                            tabcontent = document.getElementsByClassName("subutaiTabContent");
+                            for (i = 0; i < tabcontent.length; i++) {
+                                tabcontent[i].style.display = "none";
+                            }
 
-										<div class="clear"></div>
-							</div>
+                            tablinks = document.getElementsByClassName("ss-tablinks");
+                            for (i = 0; i < tablinks.length; i++) {
+                                tablinks[i].className = tablinks[i].className.replace(" active", "");
+                            }
+                            document.getElementById(osType).style.display = "block";
+                            if (event)
+                                        {
+                                $(event.target).addClass('active');
+                            }
+                            else
+                                        {
+                                var ssButton = document.getElementById(osType+'os');
+                                ssButton.className += " active";
+                                        }
+                        }
+                        </script>
+                        <script src="js/osCatcher.js"></script>
+                        <script>
+                            (function(i, s, o, g, r, a, m)
+                            {
+                                i['GoogleAnalyticsObject'] = r;
+                                i[r] = i[r] || function()
+                                {
+                                    (i[r].q = i[r].q || []).push(arguments)
+                                }, i[r].l = 1 * new Date();
+                                a = s.createElement(o),
+                                    m = s.getElementsByTagName(o)[0];
+                                a.async = 1;
+                                a.src = g;
+                                m.parentNode.insertBefore(a, m)
+                            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+                            ga('create', 'UA-76144216-1', 'auto');
+                            ga('send', 'pageview');
 
-							<h1>What’s in the box?</h1>
-							<p>The launchers let you install different items based on your needs. If you’re trying Subutai for the first time we recommend installing everything to get the full experience. Uninstallation is trivial and nothing stays on your machine.</p>
+                        </script>
+                        <script>
+                            (function(d, w, c)
+                            {
+                                (w[c] = w[c] || []).push(function()
+                                {
+                                    try
+                                    {
+                                        w.yaCounter36800845 = new Ya.Metrika(
+                                        {
+                                            id: 36800845,
+                                            clickmap: true,
+                                            trackLinks: true,
+                                            accurateTrackBounce: true,
+                                            webvisor: true,
+                                            trackHash: true
+                                        });
+                                    }
+                                    catch (e)
+                                    {}
+                                });
+                                var n = d.getElementsByTagName("script")[0],
+                                    s = d.createElement("script"),
+                                    f = function()
+                                    {
+                                        n.parentNode.insertBefore(s, n);
+                                    };
+                                s.type = "text/javascript";
+                                s.async = true;
+                                s.src = "https://mc.yandex.ru/metrika/watch.js";
+                                if (w.opera == "[object Opera]")
+                                {
+                                    d.addEventListener("DOMContentLoaded", f, false);
+                                }
+                                else
+                                {
+                                    f();
+                                }
+                            })(document, window, "yandex_metrika_callbacks");
 
-							<p class="getting-started-main-info__text-install" style="vertical-align: top!important; margin-top: 40px">Peer VM</p>
-							<p>This installation option creates a small peer on your desktop isolated inside a virtual machine. It’s perfect for non-technical users to start playing with their own peers. You can share the resources on this virtual machine with others to keep them sandboxed. Just destroy the virtual machine when you don’t need the peer anymore or add and remove resources as you like. The launchers download and install the free VirtualBox desktop hypervisor if you don’t already have it installed to run the Peer VM.
+                        </script>
 
-							<div class="accordion">
-								<ul>
-									<li id="installation-mac" class="accordion__item">
-										<div class="accordion__header">Read more..</div>
-										<div class="accordion__content">
-							<p>The software implements several layers of security to make sure tenants are isolated from each other and the host peer on which they run. The sandboxes and PGP keys used to manage them are showing in successive layers in the diagram below:</p>
-									<div style="vertical-align: top!important; margin: 20px 0px;">
-											<img src="img/image_security.png">
-									</div>
-									    <ol>
-												<li>
-													Each container is a sandbox for the software that runs within it. Each container has its own PGP based identity and key pair.
-												</li>
-												<li>
-											There are two different kinds of security restrictions on resource hosts. Each resource host, a machine, physical or virtual, is a sandbox in itself. Usually the resource host is a virtual machine. Containers in the same cloud environment running on a single resource host have their own sandbox since more than one tenant may reside on the resource host.
-												</li>
-												<li>
-											Each peer isolates tenants running on its resource hosts. Network communications are  encrypted even in the peers LAN.
-												</li>
-												<li>
-											The peer itself is a sandbox which peer owners manage using a PGP identity.
-												</li>
-											</ol>
-							<p style="vertical-align: top!important; margin: 20px 0px;">
-											Many people ask the question, “When I install a Subutai peer and share resources will others I share with be able to see the things I have on my computer?” Absolutely not. There are so many layers of isolation that there is no real way to have those sharing resources jump out of sandbox after sandbox to get into your computer. Nor are other tenants able to see what’s inside your containers. Obviously the entire basis to Subutai is based on security. Several years were spent just on ensuring tenant isolation with a decentralized identity management system.
-							</p>
-										</div>
-									</li>
-								</ul>
-							</div>
-							</p>
+                        <script>
+                                function deselect(e) {
+                                  $('.pop').slideFadeToggle(function() {
+                                    e.removeClass('selected');
+                                  });
+                                }
 
-							<p class="getting-started-main-info__text-install" style="vertical-align: top!important; margin-top: 40px">Tray Application</p>
-							<p>This is an OS tray application for Mac OS, Windows, and Linux for desktop integration. It lists and notifies you of situations with your account, your cloud environments and your local and remote peers. The tray is also a wallet application. It shows how much goodwill you have available and notifies you when you spend it, or when you earn more. It works in tandem with the E2E browser security plugins.</p>
+                                $(function() {
+                                  $('.warn3').on('click', function() {
+                                    if($(this).hasClass('selected')) {
+                                      deselect($(this));
+                                    } else {
+                                      $(this).addClass('selected');
+                                      $('.pop').slideFadeToggle();
+                                    }
+                                    return false;
+                                  });
 
-							<p class="getting-started-main-info__text-install" style="vertical-align: top!important; margin-top: 40px">E2E Security Plugin and Chrome</p>
-							<p>There’s a lot of security going on behind the scenes to make everything work safely. Besides usernames and passwords, Subutai uses Pretty Good Privacy (PGP) to do anything important. PGP can be complicated and no one wants to open up terminals to use PGP keys for every action (i.e. manage a peer or cloud environment etc). These browser plugins (extensions) were made to work automatically on your behalf without getting in your way while logging everything that do.</p>
-							<p>The Launcher wizard automatically installs Chrome and the E2E plugin for it for you. It uses Chrome because it’s available across all platforms. However, the plugin is available for Safari, Chrome, and Firefox. Edge support is coming soon.</p>
+                                  $('.close').on('click', function() {
+                                    deselect($('.warn3'));
+                                    return false;
+                                  });
+                                });
 
-							<p class="getting-started-main-info__text-install" style="vertical-align: top!important; margin-top: 40px">P2P Daemon</p>
-							<p>The Launcher installs a program that runs in the background called the P2P daemon. This daemon allows you to connect to your cloud environments and get on the machines running in them. It works with the tray application and indirectly with the browser plugins to give you a smooth experience with your peers and your cloud environments.</p>
+                                $.fn.slideFadeToggle = function(easing, callback) {
+                                  return this.animate({ opacity: 'toggle', height: 'toggle' }, 'fast', easing, callback);
+                                };
+                        </script>
+                        <noscript>
+                            <div>
+                                <img src="https://mc.yandex.ru/watch/36800845" style="position:absolute; left:-9999px;" alt="" />
+                            </div>
+                        </noscript>
+                    </body>
 
-					</section>
-				</div>
-			</div>
-			<div class="page__footer">
-				<footer class="footer">
-					<div class="footer__inner">
-						<div class="footer__menu">
-							<ul class="footer-menu js-link-sroll">
-								<li class="footer-menu__item">
-									<a href="thanks.html" class="title">Thanks</a>
-								</li>
-								<li class="footer-menu__item">
-									<a href="tribute-to-Dennis-Ritchie.html" class="title">Tribute</a>
-								</li>
-							</ul>
-							<div class="clear"></div>
-						</div>
-						<div class="footer__social">
-							<ul class="footer-social">
-								<li class="footer-social__item">Join us</li>
-								<li class="footer-social__item">
-									<a href="https://www.facebook.com/Subutai-social-1169199263145930/" target="_blank" class="footer-social-item">
-										<i class="fa fa-facebook-official"></i>
-									</a>
-								</li>
-								<li class="footer-social__item">
-									<a href="https://twitter.com/SubutaiSocial" target="_blank" class="footer-social-item">
-										<i class="fa fa-twitter"></i>
-									</a>
-								</li>
-								<li class="footer-social__item">
-									<a href="https://plus.google.com/103627275167018971893" target="_blank" class="footer-social-item">
-										<i class="fa fa-google-plus"></i>
-									</a>
-								</li>
-								<li class="footer-social__item">
-									<a href="https://www.linkedin.com/in/subutai-social-317b41117" target="_blank" class="footer-social-item">
-										<i class="fa fa-linkedin"></i>
-									</a>
-								</li>
-								<li class="footer-social__item">
-									<a href="https://github.com/subutai-io/base" target="_blank" class="footer-social-item">
-										<i class="fa fa-github-alt"></i>
-									</a>
-								</li>
-							</ul>
-							<div class="clear"></div>
-						</div>
-						<span class="to-top-arrow footer__arrow js-to-top-arrow"></span>
-						<div class="clear"></div>
-					</div>
-				</footer>
-			</div>
-			<div class="clear"></div>
-		</div>
-		<script src="js/plugins.min.js"></script>
-		<script src="js/main.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js"></script>
-		<script>hljs.initHighlightingOnLoad();</script>
-		<script>
-
-//        $('.tab-buttons').click(function(){
-//            if($(this).hasClass('active')){
-//                $(this).removeClass('active')
-//            } else {
-//                $(this).addClass('active')
-//            }
-//        });
-
-        function openOSTab( event, osType ) {
-            var i, tabcontent, tablinks;
-            tabcontent = document.getElementsByClassName("subutaiTabContent");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-            }
-
-            tablinks = document.getElementsByClassName("ss-tablinks");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" active", "");
-            }
-            document.getElementById(osType).style.display = "block";
-            if (event)
-						{
-                $(event.target).addClass('active');
-            }
-            else
-						{
-                var ssButton = document.getElementById(osType+'os');
-                ssButton.className += " active";
-						}
-        }
-		</script>
-		<script src="js/osCatcher.js"></script>
-		<script>
-			(function(i, s, o, g, r, a, m)
-			{
-				i['GoogleAnalyticsObject'] = r;
-				i[r] = i[r] || function()
-				{
-					(i[r].q = i[r].q || []).push(arguments)
-				}, i[r].l = 1 * new Date();
-				a = s.createElement(o),
-					m = s.getElementsByTagName(o)[0];
-				a.async = 1;
-				a.src = g;
-				m.parentNode.insertBefore(a, m)
-			})(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-			ga('create', 'UA-76144216-1', 'auto');
-			ga('send', 'pageview');
-
-		</script>
-		<script>
-			(function(d, w, c)
-			{
-				(w[c] = w[c] || []).push(function()
-				{
-					try
-					{
-						w.yaCounter36800845 = new Ya.Metrika(
-						{
-							id: 36800845,
-							clickmap: true,
-							trackLinks: true,
-							accurateTrackBounce: true,
-							webvisor: true,
-							trackHash: true
-						});
-					}
-					catch (e)
-					{}
-				});
-				var n = d.getElementsByTagName("script")[0],
-					s = d.createElement("script"),
-					f = function()
-					{
-						n.parentNode.insertBefore(s, n);
-					};
-				s.type = "text/javascript";
-				s.async = true;
-				s.src = "https://mc.yandex.ru/metrika/watch.js";
-				if (w.opera == "[object Opera]")
-				{
-					d.addEventListener("DOMContentLoaded", f, false);
-				}
-				else
-				{
-					f();
-				}
-			})(document, window, "yandex_metrika_callbacks");
-
-		</script>
-
-		<script>
-				function deselect(e) {
-				  $('.pop').slideFadeToggle(function() {
-				    e.removeClass('selected');
-				  });
-				}
-
-				$(function() {
-				  $('.warn3').on('click', function() {
-				    if($(this).hasClass('selected')) {
-				      deselect($(this));
-				    } else {
-				      $(this).addClass('selected');
-				      $('.pop').slideFadeToggle();
-				    }
-				    return false;
-				  });
-
-				  $('.close').on('click', function() {
-				    deselect($('.warn3'));
-				    return false;
-				  });
-				});
-
-				$.fn.slideFadeToggle = function(easing, callback) {
-				  return this.animate({ opacity: 'toggle', height: 'toggle' }, 'fast', easing, callback);
-				};
-		</script>
-		<noscript>
-			<div>
-				<img src="https://mc.yandex.ru/watch/36800845" style="position:absolute; left:-9999px;" alt="" />
-			</div>
-		</noscript>
-	</body>
-
-</html>
+                </html>
