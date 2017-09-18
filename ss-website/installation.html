@@ -61,9 +61,9 @@
   <![endif]-->
 
   <!--[if gt IE 8]><!-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="js/jquery.mousewheel.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="js/blockScroll.js"></script>
 
@@ -213,125 +213,151 @@
           Management Console into the RH turning it into a <a class="htooltip" href="#">Subutai Peer <span>A Subutai Peer is a set of managed RHs on the same LAN. The Subutai Management Software orchestrates the creation and destruction of cloud segments running in a peer. It’s what swarms with other peers to create virtual private cloud environments. At least one RH in the peer MUST run a management container.
           </span></a>.</p>
 
-        <div class="panel panel-info">
-          <div class="panel-heading">Recommended Hardware Configuration</div>
-
-          <div class="panel-body">
-            <p>Unlimited hardware configuration options are possible. However, if setting up a trial
-              peer with a single RH we recommend running it on a virtual machine with at least:</p>
-            <ul>
-              <li>2 or more CPU cores</li>
-              <li>2G of RAM (8G+ best)</li>
-              <li>2 disks or partitions, one for the operating system >10G, and one for container storage >100G</li>
-              <li>1 network adapter 1Gbit (bridged)</li>
-            </ul>
-            <p>Any hypervisor or cloud provider instance may be used so long as these virtual hardware resources are
-              available to the guest operating system. Peers can run on Hyper-V, GCE, AWS, KVM, VirtualBox, VMWare, and
-              Parellels.</p>
-
-            <p>A virtual machine is not absolutely necessary, but a <a class="htooltip" href="#">convenient <span>With a virtual machine any one of the supported stock operating systems can be installed without requiring any changes to the physical host machine. There are less complications and the VM can easily be suspended, started, stopped, and destroyed with minimal effort.</span></a>
-              approach. A peer can be installed on an
-              existing physical host with full security and isolation without a VM. In this case, similar hardware
-              requirements apply to the existing physical host.</p>
-          </div>
-        </div>
-
-        <div class="panel panel-info">
-          <div class="panel-heading">Operating System Requirements</div>
-          <div class="panel-body">
-            <p>Some general caveats and requirements for the operating system on which the snap package is being
-              installed are:</p>
-
-            <ol>
-              <li>Using a freshly installed operating system is preferable,</li>
-              <li>The operating system should have snapd installed and updated,</li>
-              <li>All system components should be updated to the latest available version including system libraries and
-                the kernel,
-              </li>
-              <li>Avoid installing any additional components on the system,</li>
-              <li>Avoid desktop distributions due to NetworkManager’s `dnsmask` running on port 53</li>
-              <li>The system should have network connectivity (via a bridge if virtual)</li>
-              <li>A DHCP service should be present on the LAN to acquire an IP address</li>
-              <li>Check that the required network ports listed below are not used (i.e. `netstat -lnp | grep “:53 “` or
-                `lsof -i :53`) before installing the snap:
+        <div class="accordion">
+          <ul>
+            <li class="accordion__item">
+              <div class="accordion__header"><i class="fa fa-info-circle"></i> Recommended Hardware Configuration</div>
+              <div class="accordion__content">
+                <p>Unlimited hardware configuration options are possible. However, if setting up a trial
+                  peer with a single RH we recommend running it on a virtual machine with at least:</p>
                 <ul>
-                  <li>udp/53 - DNS service port</li>
-                  <li>udp/67 - DHCP service port</li>
-                  <li>tcp/80 - Web service port</li>
-                  <li>tcp/443 - Secure web service port</li>
-                  <li>udp/1900 - Service discovery service port</li>
-                  <li>udp/6881 - P2P service port</li>
-                  <li>tcp/8086 - Metrics service port</li>
-                  <li>tcp/8443 - Subutai Management Console web service port</li>
-                  <li>tcp/8444 - Subutai Management LAN communication service port</li>
+                  <li>2 or more CPU cores</li>
+                  <li>2G of RAM (8G+ best)</li>
+                  <li>2 disks or partitions, one for the operating system >10G, and one for container storage >100G</li>
+                  <li>1 network adapter 1Gbit (bridged)</li>
                 </ul>
+                <p>Any hypervisor or cloud provider instance may be used so long as these virtual hardware resources are
+                  available to the guest operating system. Peers can run on Hyper-V, GCE, AWS, KVM, VirtualBox, VMWare,
+                  and
+                  Parellels.</p>
 
-              </li>
-            </ol>
-            <p>Using a guest virtual machine allows for maximum flexibility to install a stock unmodified guest VM
-              operating system and reduces complications. Ubuntu Server 16.04.3 or 17.04 operating systems are best:
-              they come pre-installed with snapd. Debian is also a good candidate, but the snapd package needs to be
-              installed:</p>
-
-            <code>&gt; sudo apt-get install snapd</code>
-            <p>The snap has been tested on the following operating systems:</p>
-
-            <ul>
-              <li> Ubuntu Core 16</li>
-              <li>Ubuntu Server: 16.04.3 and 17.04</li>
-              <li class="text_color_red">Ubuntu Desktop: 16.04.3 and 17.04</li>
-              <li>Debian 9.1.0 - Stretch</li>
-              <li class="text_color_red">Debian 9.1.0 - Stretch w/ MATE</li>
-              <li class="text_color_red">Mint 18.2</li>
-            </ul>
-            <p>NOTE: All the desktop editions and other headed configurations (<span
-                class="text_color_red">in bold red</span>) have the NetworkManager
-              problem, and the non-Ubuntu distributions need snapd installed. Debian Stretch (headless) needs snapd
-              installed. See the warnings below about NetworkManager if you’re installing the snap on a desktop system
-              with NetworkManager (most likely) installed.</p>
-          </div>
+                <p>A virtual machine is not absolutely necessary, but a <a class="htooltip" href="#">convenient <span>With a virtual machine any one of the supported stock operating systems can be installed without requiring any changes to the physical host machine. There are less complications and the VM can easily be suspended, started, stopped, and destroyed with minimal effort.</span></a>
+                  approach. A peer can be installed on an
+                  existing physical host with full security and isolation without a VM. In this case, similar hardware
+                  requirements apply to the existing physical host.</p>
+              </div>
+            </li>
+          </ul>
         </div>
 
-        <div class="panel panel-danger">
-          <div class="panel-heading">WARNING: NetworkManager on desktop editions will can you a bad day!</div>
+        <div class="accordion">
+          <li class="accordion__item">
+            <div class="accordion__header"><i class="fa fa-info-circle"></i> Operating System Requirements</div>
+            <div class="accordion__content">
+              <p>Some general caveats and requirements for the operating system on which the snap package is being
+                installed are:</p>
 
-          <div class="panel-body">
-            <p>Virtual or not, desktop editions of all distributions should be avoided, since they unnecessarily waste
-              resources and have serious issues because of NetworkManager which installs `dnsmasq` on port 53. If left
-              without a choice you’ll have to disable NetworkManager’s dnsmasq if `netstat -lnp | grep “:53 ”` produces
-              any output. Here’s how:</p>
+              <ol>
+                <li>Using a freshly installed operating system is preferable,</li>
+                <li>The operating system should have snapd installed and updated,</li>
+                <li>All system components should be updated to the latest available version including system libraries
+                  and
+                  the kernel,
+                </li>
+                <li>Avoid installing any additional components on the system,</li>
+                <li>Avoid desktop distributions due to NetworkManager’s `dnsmask` running on port 53</li>
+                <li>The system should have network connectivity (via a bridge if virtual)</li>
+                <li>A DHCP service should be present on the LAN to acquire an IP address</li>
+                <li>Check that the required network ports listed below are not used (i.e. `netstat -lnp | grep “:53 “`
+                  or
+                  `lsof -i :53`) before installing the snap:
+                  <ul>
+                    <li>udp/53 - DNS service port</li>
+                    <li>udp/67 - DHCP service port</li>
+                    <li>tcp/80 - Web service port</li>
+                    <li>tcp/443 - Secure web service port</li>
+                    <li>udp/1900 - Service discovery service port</li>
+                    <li>udp/6881 - P2P service port</li>
+                    <li>tcp/8086 - Metrics service port</li>
+                    <li>tcp/8443 - Subutai Management Console web service port</li>
+                    <li>tcp/8444 - Subutai Management LAN communication service port</li>
+                  </ul>
 
-            <code>&gt; sudo systemctl disable systemd-resolved.service<br/>&gt; sudo service systemd-resolved stop</code>
+                </li>
+              </ol>
+              <p>Using a guest virtual machine allows for maximum flexibility to install a stock unmodified guest VM
+                operating system and reduces complications. Ubuntu Server 16.04.3 or 17.04 operating systems are best:
+                they come pre-installed with snapd. Debian is also a good candidate, but the snapd package needs to be
+                installed:</p>
 
-            <p> Edit `/etc/NetworkManager/NetworkManager.conf` and change the dns property in the `[main]` section so it
-              is
-              set to `default`: `dns=default`.
-            </p>
-            <code>&gt; sudo rm /etc/resolv.conf<br/>&gt; sudo service network-manager restart<br/>&gt; sudo killall dnsmasq<br/>&gt; sudo netstat -lnp | grep “:53 “</code>
-            <p>The last netstat command should not produce any output now. NOTE: if NetworkManager was not configured
-              properly, after restart, you may need to add your nameserver into the `/etc/resolv.conf` file it
-              generates.
-              It’s best to add this to the NetworkManager configuration if you don’t want the resolv.conf file to be
-              overwritten.</p>
-          </div>
+              <code>&gt; sudo apt-get install snapd</code>
+              <p>The snap has been tested on the following operating systems:</p>
+
+              <ul>
+                <li> Ubuntu Core 16</li>
+                <li>Ubuntu Server: 16.04.3 and 17.04</li>
+                <li class="text_color_red">Ubuntu Desktop: 16.04.3 and 17.04</li>
+                <li>Debian 9.1.0 - Stretch</li>
+                <li class="text_color_red">Debian 9.1.0 - Stretch w/ MATE</li>
+                <li class="text_color_red">Mint 18.2</li>
+              </ul>
+              <p>NOTE: All the desktop editions and other headed configurations (<span
+                  class="text_color_red">in bold red</span>) have the NetworkManager
+                problem, and the non-Ubuntu distributions need snapd installed. Debian Stretch (headless) needs snapd
+                installed. See the warnings below about NetworkManager if you’re installing the snap on a desktop system
+                with NetworkManager (most likely) installed.</p>
+            </div>
+          </li>
+        </div>
+
+        <div class="accordion">
+          <ul>
+            <li class="accordion__item">
+              <div class="accordion__header"><i class="fa fa-exclamation-circle"></i> WARNING: NetworkManager on desktop
+                editions will can you a bad day!
+              </div>
+
+              <div class="accordion__content">
+                <p>Virtual or not, desktop editions of all distributions should be avoided, since they unnecessarily
+                  waste
+                  resources and have serious issues because of NetworkManager which installs `dnsmasq` on port 53. If
+                  left
+                  without a choice you’ll have to disable NetworkManager’s dnsmasq if `netstat -lnp | grep “:53 ”`
+                  produces
+                  any output. Here’s how:</p>
+
+                <code>&gt; sudo systemctl disable systemd-resolved.service<br/>&gt; sudo service systemd-resolved
+                  stop</code>
+
+                <p> Edit `/etc/NetworkManager/NetworkManager.conf` and change the dns property in the `[main]` section
+                  so it
+                  is
+                  set to `default`: `dns=default`.
+                </p>
+                <code>&gt; sudo rm /etc/resolv.conf<br/>&gt; sudo service network-manager restart<br/>&gt; sudo killall
+                  dnsmasq<br/>&gt; sudo netstat -lnp | grep “:53 “</code>
+                <p>The last netstat command should not produce any output now. NOTE: if NetworkManager was not
+                  configured
+                  properly, after restart, you may need to add your nameserver into the `/etc/resolv.conf` file it
+                  generates.
+                  It’s best to add this to the NetworkManager configuration if you don’t want the resolv.conf file to be
+                  overwritten.</p>
+              </div>
+            </li>
+          </ul>
         </div>
 
         <div>
           <h2> Install the Snap Package</h2>
 
-          <div class="panel panel-info">
-            <div class="panel-heading">Installing snapd on various operating systems</div>
+          <div class="accordion">
+            <ul>
+              <li class="accordion__item">
+                <div class="accordion__header"><i class="fa fa-info-circle"></i> Installing snapd on various operating systems</div>
 
-            <div class="panel-body">
-              <p>Before installing the Subutai Snap you may need to install snapd. Here are some commands for installing
-                and setting up snapd on non-Ubuntu Linux distributions:</p>
+                <div class="accordion__content">
+                  <p>Before installing the Subutai Snap you may need to install snapd. Here are some commands for
+                    installing
+                    and setting up snapd on non-Ubuntu Linux distributions:</p>
 
-              <ul>
-                <li>Mint, Debian: `sudo apt-get install snapd`</li>
-                <li>Fedora 24: `sudo dnf install snapd; sudo systemctl enable --now snapd.socket`</li>
-              </ul>
+                  <ul>
+                    <li>Mint, Debian: `sudo apt-get install snapd`</li>
+                    <li>Fedora 24: `sudo dnf install snapd; sudo systemctl enable --now snapd.socket`</li>
+                  </ul>
 
-            </div>
+                </div>
+              </li>
+            </ul>
           </div>
 
           <p>If snapd is properly installed, and up to date, the following command downloads and installs the Subutai
@@ -345,33 +371,43 @@
           <p>
           <code>&gt; ubuntu@testbox:~$ snap list<br/>&gt; Name Version Rev Developer Notes<br/>&gt; core 16-2.27.5 2774 canonical core<br/>&gt; subutai 5.0.2 183 devmode<br/>&gt; ubuntu-image 0.12+real1 44 canonical devmode</code>
           </p>
-          
-          <div class="panel panel-danger">
-            <div class="panel-heading">Snap Installation Troubleshooting</div>
 
-            <div class="panel-body">
-              <p> On non-Ubuntu Core distributions this might cause the core snap to be downloaded as well as the
-                Subutai
-                Snap which depends on it. Ubuntu Core come with the core snap already installed. Don’t be surprised to
-                see
-                this other core snap getting downloaded and installed.
-              </p>
-              <p> There are known problems with certain hypervisors and bridged networking over WiFi connections. If
-                you’re
-                having connectivity issues after snap installation please see the <a
-                    href="https://github.com/subutai-io/snap/wiki/Installation-of-snap-package-failed-on-VM">VM Wifi
-                  workaround</a>.
-              </p>
-              <p> The snap package comes with the p2p daemon which uses UDP port 6881. If you previously installed the
-                p2p
-                daemon package to connect to your cloud environments, then you’ll have a port conflict. You’ll need to
-                stop and remove the p2p daemon package.
-              </p>
-              <p> Some distributions do not immediately update paths immediately on snap package installation. If you
-                don’t
-                see the command subutai on the path just logout and log back in. It should now be visible.
-              </p>
-            </div>
+          <div class="accordion">
+            <ul>
+              <li class="accordion__item">
+                <div class="accordion__header"><i class="fa fa-exclamation-circle"></i> Snap Installation
+                  Troubleshooting
+                </div>
+
+                <div class="accordion__content">
+                  <p> On non-Ubuntu Core distributions this might cause the core snap to be downloaded as well as the
+                    Subutai
+                    Snap which depends on it. Ubuntu Core come with the core snap already installed. Don’t be surprised
+                    to
+                    see
+                    this other core snap getting downloaded and installed.
+                  </p>
+                  <p> There are known problems with certain hypervisors and bridged networking over WiFi connections. If
+                    you’re
+                    having connectivity issues after snap installation please see the <a
+                        href="https://github.com/subutai-io/snap/wiki/Installation-of-snap-package-failed-on-VM">VM Wifi
+                      workaround</a>.
+                  </p>
+                  <p> The snap package comes with the p2p daemon which uses UDP port 6881. If you previously installed
+                    the
+                    p2p
+                    daemon package to connect to your cloud environments, then you’ll have a port conflict. You’ll need
+                    to
+                    stop and remove the p2p daemon package.
+                  </p>
+                  <p> Some distributions do not immediately update paths immediately on snap package installation. If
+                    you
+                    don’t
+                    see the command subutai on the path just logout and log back in. It should now be visible.
+                  </p>
+                </div>
+              </li>
+            </ul>
           </div>
 
         </div>
@@ -389,13 +425,17 @@
           <p>
             <code>&gt; sudo /snap/subutai/current/bin/btrfsinit /dev/vdb</code>
           </p>
-          <div class="panel panel-danger">
-            <div class="panel-heading">Block Device</div>
+          <div class="accordion">
+            <ul>
+              <li class="accordion__item">
+                <div class="accordion__header"><i class="fa fa-exclamation-circle"></i>Block Device</div>
 
-            <div class="panel-body">
-              <p>Do not forget to use your appropriate block device in place of `/dev/vdb`. It can be a disk, a
-                partition, iSCSI target LUN, or an LVM logical volume. It just needs to be a block device.</p>
-            </div>
+                <div class="accordion__content">
+                  <p>Do not forget to use your appropriate block device in place of `/dev/vdb`. It can be a disk, a
+                    partition, iSCSI target LUN, or an LVM logical volume. It just needs to be a block device.</p>
+                </div>
+              </li>
+            </ul>
           </div>
 
 
@@ -406,29 +446,33 @@
           <p>Congratulations you now have a Subutai Resource Host. You can start importing and running containers on
             it.</p>
 
-          <div class="panel panel-info">
-            <div class="panel-heading">Adding RHs to Existing Peers</div>
+          <div class="accordion">
+            <ul>
+              <li class="accordion__item">
+                <div class="accordion__header"><i class="fa fa-info-circle"></i> Adding RHs to Existing Peers</div>
 
-            <div class="panel-body">
-              <p>You can use this same process to create more RHs and add them to peers. RHs must be on the same LAN.
-                The
-                process to add a RH uses the Simple Service Discovery Protocol. RHs that are not bound to a peer on the
-                network announce their availability. The peer console will show the RH and the admin can use an
-                authorization
-                process to approve adding the RH to the peer.</p>
+                <div class="accordion__content">
+                  <p>You can use this same process to create more RHs and add them to peers. RHs must be on the same
+                    LAN.
+                    The
+                    process to add a RH uses the Simple Service Discovery Protocol. RHs that are not bound to a peer on
+                    the
+                    network announce their availability. The peer console will show the RH and the admin can use an
+                    authorization
+                    process to approve adding the RH to the peer.</p>
 
-              <div class="accordion">
-                <ul>
-                  <li id="installation-mac" class="accordion__item">
-                    <div class="accordion__header">Watch the getting started on Mac OS video</div>
-                    <div class="accordion__content">
-                      <iframe width="100%" height="450" src="https://www.youtube.com/embed/k17GrZMUqFs" frameborder="0"
-                              allowfullscreen></iframe>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
+
+                </div>
+              </li>
+                                    <li id="installation-mac" class="accordion__item">
+                                      <div class="accordion__header">Watch the getting started on Mac OS video</div>
+                                      <div class="accordion__content">
+                                        <iframe width="100%" height="450" src="https://www.youtube.com/embed/k17GrZMUqFs"
+                                                frameborder="0"
+                                                allowfullscreen></iframe>
+                                      </div>
+                                    </li>
+            </ul>
           </div>
           <p>To convert this RH into a peer the management container must be imported.</p>
 
@@ -467,19 +511,28 @@
             administrators. The default administrator account on the new peer needs to be associated with the global
             identity of the peer owner to share or rent resources to others.</p>
 
-          <div class="panel panel-info">
-            <div class="panel-heading">Manually managing PGP keys</div>
+          <div class="accordion">
+            <ul>
+              <li class="accordion__item">
+                <div class="accordion__header"><i class="fa fa-info-circle"></i> Manually managing PGP keys</div>
 
-            <div class="panel-body">
-              <p>Users knowing how to manage their own keys can use other tools to do so. Various platform specific PGP
-                tools like GPG on Linux can be used on the command line interface to create and use PGP keys. Although
-                possible it’s a major hassle, especially for those that are not PGP savvy worse yet it can actually be
-                detrimental for those who don’t understand PKI or how to secure their keys. Even PGP pros will be
-                annoyed when having to manually deal with frequent challenge and response authorization operations.</p>
-              <p>This is why we created browser plugins. Additionally we’re working on FIDO and hardware key fob
-                integration to always improve security. The Subutai E2E browser plugins have these benefits while still
-                leaving the manual approach open.</p>
-            </div>
+                <div class="accordion__content">
+                  <p>Users knowing how to manage their own keys can use other tools to do so. Various platform specific
+                    PGP
+                    tools like GPG on Linux can be used on the command line interface to create and use PGP keys.
+                    Although
+                    possible it’s a major hassle, especially for those that are not PGP savvy worse yet it can actually
+                    be
+                    detrimental for those who don’t understand PKI or how to secure their keys. Even PGP pros will be
+                    annoyed when having to manually deal with frequent challenge and response authorization
+                    operations.</p>
+                  <p>This is why we created browser plugins. Additionally we’re working on FIDO and hardware key fob
+                    integration to always improve security. The Subutai E2E browser plugins have these benefits while
+                    still
+                    leaving the manual approach open.</p>
+                </div>
+              </li>
+            </ul>
           </div>
 
 
@@ -491,15 +544,20 @@
 
           [VIDEO]
 
-          <div class="panel panel-danger">
-            <div class="panel-heading">Supported Browsers</div>
+          <div class="accordion">
+            <ul>
+              <li class="accordion__item">
+                <div class="accordion__header"><i class="fa fa-exclamation-circle"></i> Supported Browsers</div>
 
-            <div class="panel-body">
-              <p>At this point we’ve stopped supporting Firefox because of changes to their extensions API, and have yet
-                to
-                provide support for Edge. Chrome and Safari are the two supported browsers.</p>
+                <div class="accordion__content">
+                  <p>At this point we’ve stopped supporting Firefox because of changes to their extensions API, and have
+                    yet
+                    to
+                    provide support for Edge. Chrome and Safari are the two supported browsers.</p>
 
-            </div>
+                </div>
+              </li>
+            </ul>
           </div>
 
         </div>
@@ -512,26 +570,43 @@
 
           <code>&gt; sudo dpkg -i subutai-tray-6.0.1.deb<br/>&gt; sudo apt-get install -f</code>
 
-          <div class="panel panel-danger">
-            <div class="panel-heading">Do not install P2P on systems with the snap</div>
+          <div class="accordion">
+            <ul>
+              <li class="accordion__item">
+                <div class="accordion__header"><i class="fa fa-exclamation-circle"></i> Do not install P2P on systems
+                  with the snap
+                </div>
 
-            <div class="panel-body">
-              <p>The Subutai Snap uses the P2P daemon on RHs and peers to make them swarm together. You cannot install
-                the Subutai P2P daemon on a system that already has the Subutai Snap installed on it: it will produce a
-                UDP port 6881 conflict.</p>
+                <div class="accordion__content">
+                  <p>The Subutai Snap uses the P2P daemon on RHs and peers to make them swarm together. You cannot
+                    install
+                    the Subutai P2P daemon on a system that already has the Subutai Snap installed on it: it will
+                    produce a
+                    UDP port 6881 conflict.</p>
 
-            </div>
+                </div>
+              </li>
+            </ul>
           </div>
 
-          <div class="panel panel-info">
-            <div class="panel-body">
-              <p>The P2P executable has two different launch modes based on the switches used: (1) as client CLI
-                program, and
-                (2) as a resident daemon process. When used as a client CLI program it communicates with the P2P daemon
-                to
-                manage it and interact with it. The P2P CLI mode is intended as a “client” to access environments from
-                headless systems, the CLI, or shell scripts.</p>
-            </div>
+          <div class="accordion">
+            <ul>
+              <li class="accordion__item">
+                <div class="accordion__header"><i class="fa fa-exclamation-circle"></i>  P2P Daemon and Client Modes
+
+                </div>
+                <div class="accordion__content">
+                  <p>The P2P executable has two different launch modes based on the switches used: (1) as client CLI
+                    program, and
+                    (2) as a resident daemon process. When used as a client CLI program it communicates with the P2P
+                    daemon
+                    to
+                    manage it and interact with it. The P2P CLI mode is intended as a “client” to access environments
+                    from
+                    headless systems, the CLI, or shell scripts.</p>
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
 
@@ -629,28 +704,7 @@
     //            }
     //        });
 
-    function openOSTab(event, osType) {
-        var i, tabcontent, tablinks;
-        tabcontent = document.getElementsByClassName("subutaiTabContent");
-        for (i = 0; i < tabcontent.length; i++) {
-            tabcontent[i].style.display = "none";
-        }
-
-        tablinks = document.getElementsByClassName("ss-tablinks");
-        for (i = 0; i < tablinks.length; i++) {
-            tablinks[i].className = tablinks[i].className.replace(" active", "");
-        }
-        document.getElementById(osType).style.display = "block";
-        if (event) {
-            $(event.target).addClass('active');
-        }
-        else {
-            var ssButton = document.getElementById(osType + 'os');
-            ssButton.className += " active";
-        }
-    }
 </script>
-<script src="js/osCatcher.js"></script>
 <script>
     (function (i, s, o, g, r, a, m) {
         i['GoogleAnalyticsObject'] = r;
