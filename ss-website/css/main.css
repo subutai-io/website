@@ -245,7 +245,6 @@
 .accordion__content
 {
     display: none;
-
     padding: 20px 10px;
 }
 
@@ -4071,7 +4070,8 @@ html.remodal-is-locked
     max-width: 450px;
 }
 
-.thanks__column {
+.thanks__column
+{
     float: left;
     position: relative;
     width: 20%;
@@ -8805,4 +8805,127 @@ label
 .btn-group a
 {
     text-decoration: none !important;
+}
+
+.htooltip span
+{ /* Внешний вид нашего тултипа */
+    background: #F1FAF5;
+    border-radius: 15px 15px 15px 15px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+    color: black;
+    margin-left: 2px;
+    margin-top: -75px;
+    opacity: 0; /* Делаем его прозрачным */
+    padding: 10px 10px 10px 40px;
+    position: absolute;
+    text-decoration: none;
+    visibility: hidden; /* И прячем */
+    width: 350px;
+    z-index: 10;
+}
+
+.htooltip:hover span
+{ /* По hover отображаем тултип */
+    opacity: 1;
+    visibility: visible;
+}
+
+.htooltip span img
+{ /* Изображение для примера */
+    border: 0 none;
+    float: left;
+    margin: -71px 0 0 -234px;
+    opacity: 0;
+    position: absolute;
+    visibility: hidden;
+    z-index: -1;
+}
+
+.htooltip:hover span img
+{ /* Показываем изображение */
+    opacity: 1;
+    visibility: visible;
+}
+
+.accordion__info
+{
+    background: #F1F5FA;
+}
+
+.accordion__check
+{
+    background: #F1FAF5;
+}
+
+.accordion__warning
+{
+    background: #FFF8F5;
+}
+
+.accordion__note
+{
+    background: #FFFEF5;
+}
+
+.text_color_red
+{
+    color: red;
+}
+
+.icon-info
+{
+    color: #59B7FF;
+}
+
+.icon-check
+{
+    color: #52DC90;
+}
+
+.icon-warning
+{
+    color: #FF6380;
+}
+
+.icon-note
+{
+    color: #ffda77;
+}
+
+.ezpz-button
+{
+    display: inline-block;
+    padding: 5px 10px;
+    width: 180px;
+    height: 50px;
+    background-color: #078DD0;
+
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    color: #ffffff;
+
+    border-radius: 4px;
+    text-align: center;
+    line-height: 40px;
+    box-sizing: border-box;
+
+}
+
+.ezpz-button:hover
+{
+    background-color: #2264b2;
+}
+
+.installation__ul
+{
+    list-style-position: inside;
+    padding-left: 0;
+}
+
+.installation__li
+{
+    margin-left: 20px;
+    list-style: square;
+    padding-left: 10px;
 }
