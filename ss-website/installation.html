@@ -199,7 +199,7 @@
 
       <section>
         <div class="btn-group" style="float: right;margin-top: -10px">
-          <a href="ezpz-launcher-installation.html"><span class="ezpz-button ezpz-download">New ezpz launcher</span></a>
+          <a href="ezpz-launcher-installation.html"><span class="ezpz-button ezpz-download">New (Beta) EZPZ Launchers</span></a>
         </div>
 
         <h1>Peer Setup</h1>
@@ -309,7 +309,7 @@
                 <li class="installation__li text_color_red">Debian 9.1.0 - Stretch w/ MATE</li>
                 <li class="installation__li text_color_red">Mint 18.2</li>
               </ul>
-              <p>NOTE: All the desktop editions and other headed configurations (<span
+              <p><b>NOTE</b>: All the desktop editions and other headed configurations (<span
                   class="text_color_red">in bold red</span>) have the NetworkManager
                 problem, and the non-Ubuntu distributions need snapd installed. Debian Stretch (headless) needs snapd
                 installed. See the warnings below about NetworkManager if you’re installing the snap on a desktop system
@@ -377,7 +377,7 @@ sudo lsof -i :53</pre>
 
                   <ul style="margin-left: 20px">
                     <li class="installation__li">Mint, Debian: <code>sudo apt-get install snapd</code></li>
-                    <li class="installation__li">Fedora 24: <code>sudo dnf install snapd; sudo systemctl enable --now snapd.socket</code></li>
+                    <li class="installation__li">Fedora 24: <code>sudo dnf install snapd && sudo systemctl enable --now snapd.socket</code></li>
                   </ul>
 
                 </div>
@@ -529,7 +529,7 @@ sudo lsof -i :53</pre>
 
           <p>The peer can now be managed from this URL via the Subutai Management Console. The default admin user
             password
-            is `secret`. Admins will be asked to change this password on their first login. However, before the logging
+            is <code>secret</code>. Admins will be asked to change this password on their first login. However, before the logging
             in
             make sure the client browser has the Subutai E2E plugin installed with your PGP keys.</p>
 
