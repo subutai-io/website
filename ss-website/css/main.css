@@ -8847,22 +8847,85 @@ label
     visibility: visible;
 }
 
-.info, .success, .warning, .error, .validation
+.accordion__info
 {
+    background: #F1F5FA;
 }
 
-.accordion__info {
+.accordion__check
+{
     background: #F1FAF5;
 }
 
-.accordion__warning {
+.accordion__warning
+{
     background: #FFF8F5;
 }
 
-.accordion__note {
+.accordion__note
+{
     background: #FFFEF5;
 }
 
-.text_color_red {
+.text_color_red
+{
     color: red;
+}
+
+.icon-info
+{
+    color: #59B7FF;
+}
+
+.icon-check
+{
+    color: #52DC90;
+}
+
+.icon-warning
+{
+    color: #FF6380;
+}
+
+.icon-note
+{
+    color: #ffda77;
+}
+
+.ezpz-button
+{
+    display: inline-block;
+    padding: 5px 10px;
+    width: 180px;
+    height: 50px;
+    background-color: #078DD0;
+
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    color: #ffffff;
+
+    border-radius: 4px;
+    text-align: center;
+    line-height: 40px;
+    box-sizing: border-box;
+
+}
+
+.ezpz-button:hover
+{
+    background-color: #2264b2;
+}
+
+.installation__ul
+{
+    list-style-position: inside;
+    padding-left: 0;
+}
+
+.installation__li
+{
+    margin-left: 20px;
+    list-style: square;
+    padding-left: 10px;
 }
