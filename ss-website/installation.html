@@ -27,7 +27,6 @@
   <meta property="og:image:width" content="500"/>
   <meta property="og:image:height" content="300"/>
   <meta property="twitter:description" content=""/>
-  <link rel="image_src" href=""/>
   <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png"/>
   <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png"/>
   <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png"/>
@@ -84,7 +83,7 @@
     <div class="header__inner">
       <div class="header__logo">
         <a href="index.html" class="logo">
-          <img src="img/logo.png" class="logo__img"/>
+          <img src="img/logo.png" class="logo__img" alt="Subutai"/>
         </a>
       </div>
       <div class="header__menu header__menu_button">
@@ -201,8 +200,9 @@
     <div class="content-wrapper">
 
       <section>
-        <div class="btn-group" style="float: right;margin-top: -10px">
-          <a href="ezpz-launcher-installation.html"><span class="ezpz-button ezpz-download">New (Beta) EZPZ Launchers</span></a>
+        <div class="btn-group" style="float: right;margin-top: -10px; display: none">
+          <a href="ezpz-launcher-installation.html"><span
+              class="ezpz-button ezpz-download">New (Beta) EZPZ Launchers</span></a>
         </div>
 
         <h1>Peer Setup</h1>
@@ -228,12 +228,14 @@
                 <p>Unlimited hardware configuration options are possible. However, if setting up a trial
                   peer with a single RH we recommend running it on a virtual machine with at least:</p>
                 <div style="margin-left: 20px">
-                <ul class="installation__ul">
-                  <li class="installation__li">2 or more CPU cores</li>
-                  <li class="installation__li">2G of RAM (8G+ best)</li>
-                  <li class="installation__li">2 disks or partitions, one for the operating system >10G, and one for container storage >100G</li>
-                  <li class="installation__li">1 network adapter 1Gbit (bridged)</li>
-                </ul>
+                  <ul class="installation__ul">
+                    <li class="installation__li">2 or more CPU cores</li>
+                    <li class="installation__li">2G of RAM (8G+ best)</li>
+                    <li class="installation__li">2 disks or partitions, one for the operating system >10G, and one for
+                      container storage >100G
+                    </li>
+                    <li class="installation__li">1 network adapter 1Gbit (bridged)</li>
+                  </ul>
                 </div>
                 <p>Any hypervisor or cloud provider instance may be used so long as these virtual hardware resources are
                   available to the guest operating system. Peers can run on Hyper-V, GCE, AWS, KVM, VirtualBox, VMWare,
@@ -241,7 +243,7 @@
                   Parellels.</p>
 
                 <p>A virtual machine is not absolutely necessary, but a convenient <a class="htooltip" href="#"><i
-                              class="fa fa-info-circle icon-info"></i><span>However, before login, make sure the client browser has the Subutai E2E plugin installed with and contains PGP keys.</span></a>
+                    class="fa fa-info-circle icon-info"></i><span>However, before login, make sure the client browser has the Subutai E2E plugin installed with and contains PGP keys.</span></a>
                   approach. A peer can be installed on an
                   existing physical host with full security and isolation without a VM. In this case, similar hardware
                   requirements apply to the existing physical host.</p>
@@ -251,74 +253,77 @@
         </div>
 
         <div class="accordion">
-          <li class="accordion__item">
-            <div class="accordion__header accordion__check"><i class="fa fa-check-circle icon-check"></i> Operating
-              System
-              Requirements
-            </div>
-            <div class="accordion__content">
-              <p>Some general caveats and requirements for the operating system on which the snap package is being
-                installed are:</p>
+          <ul>
+            <li class="accordion__item">
+              <div class="accordion__header accordion__check"><i class="fa fa-check-circle icon-check"></i> Operating
+                System
+                Requirements
+              </div>
+              <div class="accordion__content">
+                <p>Some general caveats and requirements for the operating system on which the snap package is being
+                  installed are:</p>
 
-              <ol>
-                <li>Using a freshly installed operating system is preferable,</li>
-                <li>The operating system should have snapd installed and updated,</li>
-                <li>All system components should be updated to the latest available version including system libraries
-                  and
-                  the kernel,
-                </li>
-                <li>Avoid installing any additional components on the system,</li>
-                <li>Avoid desktop distributions due to NetworkManager’s <code>dnsmask</code> running on port 53</li>
-                <li>The system should have network connectivity (via a bridge if virtual)</li>
-                <li>A DHCP service should be present on the LAN to acquire an IP address</li>
-                <li>Check that the required network ports listed below are not used <a href="#" class="warn3"><i
-                    class="fa fa-info-circle icon-info"></i></a>
-                  <div class="disclaimer pop">
-                    <p>Use this script to check: <a href="https://subutai.io/check_ports.sh">https://subutai.io/check_ports.sh</a>
-                    </p>
+                <ol>
+                  <li>Using a freshly installed operating system is preferable,</li>
+                  <li>The operating system should have snapd installed and updated,</li>
+                  <li>All system components should be updated to the latest available version including system libraries
+                    and
+                    the kernel,
+                  </li>
+                  <li>Avoid installing any additional components on the system,</li>
+                  <li>Avoid desktop distributions due to NetworkManager’s <code>dnsmask</code> running on port 53</li>
+                  <li>The system should have network connectivity (via a bridge if virtual)</li>
+                  <li>A DHCP service should be present on the LAN to acquire an IP address</li>
+                  <li>Check that the required network ports listed below are not used <a href="#" class="warn3"><i
+                      class="fa fa-info-circle icon-info"></i></a>
+                    <div class="disclaimer pop">
+                      <p>Use this script to check: <a href="https://subutai.io/check_ports.sh">https://subutai.io/check_ports.sh</a>
+                      </p>
 
-                    <p><a class="close" href="/">Close</a></p>
-                  </div>
-                  (i.e. <code>netstat -lnp | grep ":53 "</code>
-                  or
-                  <code>lsof -i :53</code>) before installing the snap:
-                  <ul style="margin-left: 20px">
-                    <li class="installation__li">udp/53 - DNS service port</li>
-                    <li class="installation__li">udp/67 - DHCP service port</li>
-                    <li class="installation__li">tcp/80 - Web service port</li>
-                    <li class="installation__li">tcp/443 - Secure web service port</li>
-                    <li class="installation__li">udp/1900 - Service discovery service port</li>
-                    <li class="installation__li">udp/6881 - P2P service port</li>
-                    <li class="installation__li">tcp/8086 - Metrics service port</li>
-                    <li class="installation__li">tcp/8443 - Subutai Management Console web service port</li>
-                    <li class="installation__li">tcp/8444 - Subutai Management LAN communication service port</li>
-                  </ul>
+                      <p><a class="close" href="/">Close</a></p>
+                    </div>
+                    (i.e. <code>netstat -lnp | grep ":53 "</code>
+                    or
+                    <code>lsof -i :53</code>) before installing the snap:
+                    <ul style="margin-left: 20px">
+                      <li class="installation__li">udp/53 - DNS service port</li>
+                      <li class="installation__li">udp/67 - DHCP service port</li>
+                      <li class="installation__li">tcp/80 - Web service port</li>
+                      <li class="installation__li">tcp/443 - Secure web service port</li>
+                      <li class="installation__li">udp/1900 - Service discovery service port</li>
+                      <li class="installation__li">udp/6881 - P2P service port</li>
+                      <li class="installation__li">tcp/8086 - Metrics service port</li>
+                      <li class="installation__li">tcp/8443 - Subutai Management Console web service port</li>
+                      <li class="installation__li">tcp/8444 - Subutai Management LAN communication service port</li>
+                    </ul>
 
-                </li>
-              </ol>
-              <p>Using a guest virtual machine allows for maximum flexibility to install a stock unmodified guest VM
-                operating system and reduces complications. Ubuntu Server 16.04.3 or 17.04 operating systems are best:
-                they come pre-installed with snapd. Debian is also a good candidate, but the snapd package needs to be
-                installed:</p>
+                  </li>
+                </ol>
+                <p>Using a guest virtual machine allows for maximum flexibility to install a stock unmodified guest VM
+                  operating system and reduces complications. Ubuntu Server 16.04.3 or 17.04 operating systems are best:
+                  they come pre-installed with snapd. Debian is also a good candidate, but the snapd package needs to be
+                  installed:</p>
 
-              <pre>sudo apt-get install snapd</pre>
-              <p>The snap has been tested on the following operating systems:</p>
+                <pre>sudo apt-get install snapd</pre>
+                <p>The snap has been tested on the following operating systems:</p>
 
-              <ul>
-                <li class="installation__li"> Ubuntu Core 16</li>
-                <li class="installation__li">Ubuntu Server: 16.04.3 and 17.04</li>
-                <li class="installation__li text_color_red">Ubuntu Desktop: 16.04.3 and 17.04</li>
-                <li class="installation__li">Debian 9.1.0 - Stretch</li>
-                <li class="installation__li text_color_red">Debian 9.1.0 - Stretch w/ MATE</li>
-                <li class="installation__li text_color_red">Mint 18.2</li>
-              </ul>
-              <p><b>NOTE</b>: All the desktop editions and other headed configurations (<span
-                  class="text_color_red">in bold red</span>) have the NetworkManager
-                problem, and the non-Ubuntu distributions need snapd installed. Debian Stretch (headless) needs snapd
-                installed. See the warnings below about NetworkManager if you’re installing the snap on a desktop system
-                with NetworkManager (most likely) installed.</p>
-            </div>
-          </li>
+                <ul>
+                  <li class="installation__li"> Ubuntu Core 16</li>
+                  <li class="installation__li">Ubuntu Server: 16.04.3 and 17.04</li>
+                  <li class="installation__li text_color_red">Ubuntu Desktop: 16.04.3 and 17.04</li>
+                  <li class="installation__li">Debian 9.1.0 - Stretch</li>
+                  <li class="installation__li text_color_red">Debian 9.1.0 - Stretch w/ MATE</li>
+                  <li class="installation__li text_color_red">Mint 18.2</li>
+                </ul>
+                <p><b>NOTE</b>: All the desktop editions and other headed configurations (<span
+                    class="text_color_red">in bold red</span>) have the NetworkManager
+                  problem, and the non-Ubuntu distributions need snapd installed. Debian Stretch (headless) needs snapd
+                  installed. See the warnings below about NetworkManager if you’re installing the snap on a desktop
+                  system
+                  with NetworkManager (most likely) installed.</p>
+              </div>
+            </li>
+          </ul>
         </div>
 
         <div class="accordion">
@@ -331,15 +336,18 @@
               <div class="accordion__content">
                 <p>Virtual or not, desktop editions of all distributions should be avoided, since they unnecessarily
                   waste
-                  resources and have serious issues because of NetworkManager which installs <code>dnsmasq</code> on port 53. If
+                  resources and have serious issues because of NetworkManager which installs <code>dnsmasq</code> on
+                  port 53. If
                   left
-                  without a choice you’ll have to disable NetworkManager’s dnsmasq if <code>netstat -lnp | grep ":53 "</code>
+                  without a choice you’ll have to disable NetworkManager’s dnsmasq if <code>netstat -lnp | grep ":53
+                    "</code>
                   produces
                   any output. Here’s how:</p>
 
                 <pre>sudo systemctl disable systemd-resolved.service<br/>sudo service systemd-resolved stop</pre>
 
-                <p> Edit <code>/etc/NetworkManager/NetworkManager.conf</code> and change the dns property in the <code>[main]</code> section
+                <p> Edit <code>/etc/NetworkManager/NetworkManager.conf</code> and change the dns property in the <code>[main]</code>
+                  section
                   so it
                   is
                   set to <code>default</code>: <code>dns=default</code>.
@@ -354,7 +362,8 @@ sudo netstat -lnp | grep “:53 “</pre>
 sudo lsof -i :53</pre>
                 <p>The last netstat or lsof command should not produce any output now. <b>NOTE</b>: if NetworkManager
                   was not configured properly, after restart, you may need to add your nameserver into the
-                  <code>/etc/resolv.conf</code> file it generates. It’s best to add this to the NetworkManager connection
+                  <code>/etc/resolv.conf</code> file it generates. It’s best to add this to the NetworkManager
+                  connection
                   configuration if you don’t want the resolv.conf file to be overwritten.
                 </p>
               </div>
@@ -380,7 +389,8 @@ sudo lsof -i :53</pre>
 
                   <ul style="margin-left: 20px">
                     <li class="installation__li">Mint, Debian: <code>sudo apt-get install snapd</code></li>
-                    <li class="installation__li">Fedora 24: <code>sudo dnf install snapd && sudo systemctl enable --now snapd.socket</code></li>
+                    <li class="installation__li">Fedora 24: <code>sudo dnf install snapd && sudo systemctl enable --now
+                      snapd.socket</code></li>
                   </ul>
 
                 </div>
@@ -463,7 +473,8 @@ sudo lsof -i :53</pre>
                 </div>
 
                 <div class="accordion__content">
-                  <p>Do not forget to use your appropriate block device in place of <code>/dev/vdb</code>. It can be a disk, a
+                  <p>Do not forget to use your appropriate block device in place of <code>/dev/vdb</code>. It can be a
+                    disk, a
                     partition, iSCSI target LUN, or an LVM logical volume. It just needs to be a block device.</p>
                 </div>
               </li>
@@ -495,9 +506,11 @@ sudo lsof -i :53</pre>
                     network announce their availability. The peer console will show the RH and the admin can use an
                     authorization
                     process to approve adding the RH to the peer.</p>
-                  <p><iframe width="100%" height="450" src="https://www.youtube.com/embed/yMI1r94mO4M"
-                                            frameborder="0"
-                                            allowfullscreen></iframe></p>
+                  <p>
+                    <iframe width="100%" height="450" src="https://www.youtube.com/embed/yMI1r94mO4M"
+                            frameborder="0"
+                            allowfullscreen></iframe>
+                  </p>
 
                 </div>
               </li>
@@ -520,7 +533,8 @@ sudo lsof -i :53</pre>
               </div>
               <div class="accordion__content">
                 When installing directly on a desktop edition, the NetworkManager configuration may not configure the
-                <code>/etc/resolv.conf</code> file properly to resolve CDN addresses causing “CDN unreachable errors” with the import
+                <code>/etc/resolv.conf</code> file properly to resolve CDN addresses causing “CDN unreachable errors”
+                with the import
                 command. If this happens, you must configure NetworkManager to use the right nameserver.
               </div>
             </div>
@@ -532,7 +546,8 @@ sudo lsof -i :53</pre>
 
           <p>The peer can now be managed from this URL via the Subutai Management Console. The default admin user
             password
-            is <code>secret</code>. Admins will be asked to change this password on their first login. However, before the logging
+            is <code>secret</code>. Admins will be asked to change this password on their first login. However, before
+            the logging
             in
             make sure the client browser has the Subutai E2E plugin installed with your PGP keys.</p>
 
@@ -591,7 +606,8 @@ sudo lsof -i :53</pre>
               <li id="installation-mac" class="accordion__item">
                 <div class="accordion__header">Watch video about "Creating and Installing PGP Keys"</div>
                 <div class="accordion__content">
-                  <iframe width="100%" height="450" src="https://www.youtube.com/embed/DO7X94qCmn4" frameborder="0" allowfullscreen></iframe>
+                  <iframe width="100%" height="450" src="https://www.youtube.com/embed/DO7X94qCmn4" frameborder="0"
+                          allowfullscreen></iframe>
                 </div>
               </li>
             </ul>
@@ -618,98 +634,302 @@ sudo lsof -i :53</pre>
 
         </div>
 
-        <div>
-          <div title="P2P daemon" class="download-button download" style="float: right;margin-top: -10px">
-            Download
-            <div class="download-menu">
+        <div style="margin-top: 40px">
+
+          <div class='buttons'>
+            <a class='tab-buttons ss-tablinks' onclick="openOSTab(event, 'windows')" id="windowsos">Windows</a>
+            <a class='tab-buttons ss-tablinks' onclick="openOSTab(event,'mac')" id="macos">Mac</a>
+            <a class='tab-buttons ss-tablinks active' onclick="openOSTab(event,'linux')" id="linuxos">Linux</a>
+          </div>
+
+          <div id="windows" class="subutaiTabContent" style="display: none">
+            <h2>Install the Subutai P2P Daemon</h2>
+
+
+            <div title="Windows" class="download-button download" style="float: right;margin-top: -70px">
+              Download
+              <div class="download-menu">
+                <ul>
+                  <li class="download-menu__item">
+                    <a href="https://cdn.subut.ai:8338/kurjun/rest/raw/get?name=SubutaiP2P.msi"
+                       onclick="ga('send', 'event', 'downloads', 'SubutaiP2P.msi', 'Win');">Subutai P2P</a>
+                  </li>
+                  <li class="download-menu__item">
+                    <a href="https://cdn.subut.ai:8338/kurjun/rest/raw/get?name=SubutaiP2P-dev.msi"
+                       onclick="ga('send', 'event', 'downloads', 'SubutaiP2P-dev.deb', 'Win');">Subutai P2P dev</a>
+                  </li>
+                  <li class="download-menu__item">
+                    <a href="https://cdn.subut.ai:8338/kurjun/rest/raw/get?name=SubutaiP2P-master.msi"
+                       onclick="ga('send', 'event', 'downloads', 'SubutaiP2P-master.msi', 'Win');">Subutai P2P
+                      master</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <p>The P2P daemon allows systems to join the swarm to access private cloud environments. It can be installed
+              onto any desktop or headless system with packages available for Windows, Linux, and Mac OS. For Mac and
+              Windows the installers are trivial and standard MSI and Mac packages. For Linux:</p>
+
+            <pre>sudo dpkg -i subutai-tray-6.0.1.deb<br/>sudo apt-get install -f</pre>
+            <div class="accordion">
               <ul>
-                <li class="download-menu__item">
-                  <a href="https://cdn.subut.ai:8338/kurjun/rest/raw/get?name=SubutaiP2P-master.msi"
-                     onclick="ga('send', 'event', 'downloads', 'SubutaiP2P-master.msi', 'Win');">Windows</a>
-                </li>
-                <li class="download-menu__item">
-                  <a href="https://cdn.subut.ai:8338/kurjun/rest/raw/get?name=SubutaiP2P-master.deb"
-                     onclick="ga('send', 'event', 'downloads', 'SubutaiP2P-master.deb', 'Linux');">Linux</a>
-                </li>
-                <li class="download-menu__item">
-                  <a href="https://cdn.subut.ai:8338/kurjun/rest/raw/get?name=SubutaiP2P-master.pkg"
-                     onclick="ga('send', 'event', 'downloads', 'SubutaiP2P-master.pkg', 'Mac');">Mac</a>
+                <li class="accordion__item">
+                  <div class="accordion__header accordion__warning"><i
+                      class="fa fa-exclamation-circle icon-warning"></i>
+                    Do not
+                    install P2P on systems
+                    with the snap
+                  </div>
+
+                  <div class="accordion__content">
+                    <p>The Subutai Snap uses the P2P daemon on RHs and peers to make them swarm together. You cannot
+                      install
+                      the Subutai P2P daemon on a system that already has the Subutai Snap installed on it: it will
+                      produce a
+                      UDP port 6881 conflict.</p>
+
+                  </div>
                 </li>
               </ul>
             </div>
+
+            <div class="accordion">
+              <ul>
+                <li class="accordion__item">
+                  <div class="accordion__header accordion__info"><i class="fa fa-info-circle icon-info"></i> P2P Daemon
+                    and Client Modes
+                  </div>
+                  <div class="accordion__content">
+                    <p>The P2P executable has two different launch modes based on the switches used: (1) as client CLI
+                      program, and
+                      (2) as a resident daemon process. When used as a client CLI program it communicates with the P2P
+                      daemon
+                      to
+                      manage it and interact with it. The P2P CLI mode is intended as a “client” to access environments
+                      from
+                      headless systems, the CLI, or shell scripts.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <h2>Install the Subutai OS Tray Application</h2>
+
+            <div title="Windows" class="download-button download" style="float: right;margin-top: -70px">
+              Download
+              <div class="download-menu">
+                <ul>
+                  <li class="download-menu__item">
+                    <a href="https://cdn.subut.ai:8338/kurjun/rest/raw/get?name=SubutaiTrayProd.msi"
+                       onclick="ga('send', 'event', 'downloads', 'SubutaiTrayProd.msi', 'Win');">Tray</a>
+                  </li>
+                  <li class="download-menu__item">
+                    <a href="https://devcdn.subut.ai:8338/kurjun/rest/raw/get?name=SubutaiTrayDev.msi"
+                       onclick="ga('send', 'event', 'downloads', 'SubutaiTrayDev.msi', 'Win');">Tray dev</a>
+                  </li>
+                  <li class="download-menu__item">
+                    <a href="https://stagecdn.subut.ai:8338/kurjun/rest/raw/get?name=SubutaiTrayMaster.msi"
+                       onclick="ga('send', 'event', 'downloads', 'SubutaiTrayMaster.msi', 'Win');">Tray
+                      master</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
 
-          <h2>Install the Subutai P2P Daemon</h2>
-          <p>The P2P daemon allows systems to join the swarm to access private cloud environments. It can be installed
-            onto any desktop or headless system with packages available for Windows, Linux, and Mac OS. For Mac and
-            Windows the installers are trivial and standard MSI and Mac packages. For Linux:</p>
 
-          <pre>sudo dpkg -i subutai-tray-6.0.1.deb<br/>sudo apt-get install -f</pre>
+          <div id="linux" class="subutaiTabContent" style="display: none">
+            <h2>Install the Subutai P2P Daemon</h2>
 
-          <div class="accordion">
-            <ul>
-              <li class="accordion__item">
-                <div class="accordion__header accordion__warning"><i class="fa fa-exclamation-circle icon-warning"></i>
-                  Do not
-                  install P2P on systems
-                  with the snap
-                </div>
+            <div title="Linux" class="download-button download" style="float: right;margin-top: -70px">
+              Download
+              <div class="download-menu">
+                <ul>
+                  <li class="download-menu__item">
+                    <a href="https://cdn.subut.ai:8338/kurjun/rest/raw/get?name=SubutaiP2P.deb"
+                       onclick="ga('send', 'event', 'downloads', 'SubutaiP2P.deb', 'Linux');">Subutai P2P</a>
+                  </li>
+                  <li class="download-menu__item">
+                    <a href="https://cdn.subut.ai:8338/kurjun/rest/raw/get?name=SubutaiP2P-dev.deb"
+                       onclick="ga('send', 'event', 'downloads', 'SubutaiP2P-dev.deb', 'Linux');">Subutai P2P dev</a>
+                  </li>
+                  <li class="download-menu__item">
+                    <a href="https://cdn.subut.ai:8338/kurjun/rest/raw/get?name=SubutaiP2P-master.deb"
+                       onclick="ga('send', 'event', 'downloads', 'SubutaiP2P-master.deb', 'Linux');">Subutai P2P
+                      master</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <p>The P2P daemon allows systems to join the swarm to access private cloud environments. It can be installed
+              onto any desktop or headless system with packages available for Windows, Linux, and Mac OS. For Mac and
+              Windows the installers are trivial and standard MSI and Mac packages. For Linux:</p>
 
-                <div class="accordion__content">
-                  <p>The Subutai Snap uses the P2P daemon on RHs and peers to make them swarm together. You cannot
-                    install
-                    the Subutai P2P daemon on a system that already has the Subutai Snap installed on it: it will
-                    produce a
-                    UDP port 6881 conflict.</p>
+            <pre>sudo dpkg -i subutai-tray-6.0.1.deb<br/>sudo apt-get install -f</pre>
+            <div class="accordion">
+              <ul>
+                <li class="accordion__item">
+                  <div class="accordion__header accordion__warning"><i
+                      class="fa fa-exclamation-circle icon-warning"></i>
+                    Do not
+                    install P2P on systems
+                    with the snap
+                  </div>
 
-                </div>
-              </li>
-            </ul>
+                  <div class="accordion__content">
+                    <p>The Subutai Snap uses the P2P daemon on RHs and peers to make them swarm together. You cannot
+                      install
+                      the Subutai P2P daemon on a system that already has the Subutai Snap installed on it: it will
+                      produce a
+                      UDP port 6881 conflict.</p>
+
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="accordion">
+              <ul>
+                <li class="accordion__item">
+                  <div class="accordion__header accordion__info"><i class="fa fa-info-circle icon-info"></i> P2P Daemon
+                    and Client Modes
+                  </div>
+                  <div class="accordion__content">
+                    <p>The P2P executable has two different launch modes based on the switches used: (1) as client CLI
+                      program, and
+                      (2) as a resident daemon process. When used as a client CLI program it communicates with the P2P
+                      daemon
+                      to
+                      manage it and interact with it. The P2P CLI mode is intended as a “client” to access environments
+                      from
+                      headless systems, the CLI, or shell scripts.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <h2>Install the Subutai OS Tray Application</h2>
+
+            <div title="Linux" class="download-button download" style="float: right;margin-top: -70px">
+              Download
+              <div class="download-menu">
+                <ul>
+                  <li class="download-menu__item">
+                    <a href="https://cdn.subut.ai:8338/kurjun/rest/raw/get?name=subutai-tray.deb"
+                       onclick="ga('send', 'event', 'downloads', 'subutai-tray.deb', 'Linux');">Tray</a>
+                  </li>
+                  <li class="download-menu__item">
+                    <a href="https://devcdn.subut.ai:8338/kurjun/rest/raw/get?name=subutai-tray-dev.deb"
+                       onclick="ga('send', 'event', 'downloads', 'subutai-tray-dev.deb', 'Linux');">Tray dev</a>
+                  </li>
+                  <li class="download-menu__item">
+                    <a href="https://stagecdn.subut.ai:8338/kurjun/rest/raw/get?name=subutai-tray.deb"
+                       onclick="ga('send', 'event', 'downloads', 'subutai-tray.deb', 'Linux');">Tray
+                      master</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+          <div id="mac" class="subutaiTabContent" style="display: none">
+            <h2>Install the Subutai P2P Daemon</h2>
+            <div title="Mac" class="download-button download" style="float: right;margin-top: -70px">
+              Download
+              <div class="download-menu">
+                <ul>
+                  <li class="download-menu__item">
+                    <a href="https://cdn.subut.ai:8338/kurjun/rest/raw/get?name=SubutaiP2P.pkg"
+                       onclick="ga('send', 'event', 'downloads', 'SubutaiP2P.pkg', 'Mac');">Subutai P2P</a>
+                  </li>
+                  <li class="download-menu__item">
+                    <a href="https://cdn.subut.ai:8338/kurjun/rest/raw/get?name=SubutaiP2P-dev.pkg"
+                       onclick="ga('send', 'event', 'downloads', 'SubutaiP2P-dev.pkg', 'Mac');">Subutai P2P dev</a>
+                  </li>
+                  <li class="download-menu__item">
+                    <a href="https://cdn.subut.ai:8338/kurjun/rest/raw/get?name=SubutaiP2P-master.pkg"
+                       onclick="ga('send', 'event', 'downloads', 'SubutaiP2P-master.pkg', 'Mac');">Subutai P2P
+                      master</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <p>The P2P daemon allows systems to join the swarm to access private cloud environments. It can be installed
+              onto any desktop or headless system with packages available for Windows, Linux, and Mac OS. For Mac and
+              Windows the installers are trivial and standard MSI and Mac packages. For Linux:</p>
+
+            <pre>sudo dpkg -i subutai-tray-6.0.1.deb<br/>sudo apt-get install -f</pre>
+            <div class="accordion">
+              <ul>
+                <li class="accordion__item">
+                  <div class="accordion__header accordion__warning"><i
+                      class="fa fa-exclamation-circle icon-warning"></i>
+                    Do not
+                    install P2P on systems
+                    with the snap
+                  </div>
+
+                  <div class="accordion__content">
+                    <p>The Subutai Snap uses the P2P daemon on RHs and peers to make them swarm together. You cannot
+                      install
+                      the Subutai P2P daemon on a system that already has the Subutai Snap installed on it: it will
+                      produce a
+                      UDP port 6881 conflict.</p>
+
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="accordion">
+              <ul>
+                <li class="accordion__item">
+                  <div class="accordion__header accordion__info"><i class="fa fa-info-circle icon-info"></i> P2P Daemon
+                    and Client Modes
+                  </div>
+                  <div class="accordion__content">
+                    <p>The P2P executable has two different launch modes based on the switches used: (1) as client CLI
+                      program, and
+                      (2) as a resident daemon process. When used as a client CLI program it communicates with the P2P
+                      daemon
+                      to
+                      manage it and interact with it. The P2P CLI mode is intended as a “client” to access environments
+                      from
+                      headless systems, the CLI, or shell scripts.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <h2>Install the Subutai OS Tray Application</h2>
+
+            <div title="Mac" class="download-button download" style="float: right;margin-top: -70px">
+              Download
+              <div class="download-menu">
+                <ul>
+                  <li class="download-menu__item">
+                    <a href="https://cdn.subut.ai:8338/kurjun/rest/raw/get?name=SubutaiTray-6.0.1-prod-Installer.pkg"
+                       onclick="ga('send', 'event', 'downloads', 'SubutaiTray-6.0.1-prod-Installer.pkg', 'Mac');">Tray</a>
+                  </li>
+                  <li class="download-menu__item">
+                    <a href="https://devcdn.subut.ai:8338/kurjun/rest/raw/get?name=SubutaiTray-6.0.2-SNAPSHOT-dev-Installer.pkg"
+                       onclick="ga('send', 'event', 'downloads', 'SubutaiTrayDev.pkg', 'Mac');">Tray dev</a>
+                  </li>
+                  <li class="download-menu__item">
+                    <a href="https://stagecdn.subut.ai:8338/kurjun/rest/raw/get?name=SubutaiTray-6.0.2-SNAPSHOT-master-Installer.pkg"
+                       onclick="ga('send', 'event', 'downloads', 'SubutaiTray-6.0.2-SNAPSHOT-master-Installer.pkg', 'Mac');">Tray
+                      master</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
 
-          <div class="accordion">
-            <ul>
-              <li class="accordion__item">
-                <div class="accordion__header accordion__info"><i class="fa fa-info-circle icon-info"></i> P2P Daemon
-                  and Client Modes
-                </div>
-                <div class="accordion__content">
-                  <p>The P2P executable has two different launch modes based on the switches used: (1) as client CLI
-                    program, and
-                    (2) as a resident daemon process. When used as a client CLI program it communicates with the P2P
-                    daemon
-                    to
-                    manage it and interact with it. The P2P CLI mode is intended as a “client” to access environments
-                    from
-                    headless systems, the CLI, or shell scripts.</p>
-                </div>
-              </li>
-            </ul>
-          </div>
+
         </div>
 
         <div>
-          <div title="Subutai OS Tray Application" class="download-button download"
-               style="float: right;margin-top: -10px">
-            Download
-            <div class="download-menu">
-              <ul>
-                <li class="download-menu__item">
-                  <a href="https://cdn.subut.ai:8338/kurjun/rest/raw/get?name=SubutaiLauncher-master.msi"
-                     onclick="ga('send', 'event', 'downloads', 'SubutaiLauncher-master.msi', 'Win');">Windows</a>
-                </li>
-                <li class="download-menu__item">
-                  <a href="https://cdn.subut.ai:8338/kurjun/rest/raw/get?name=SubutaiLauncher-master.deb"
-                     onclick="ga('send', 'event', 'downloads', 'SubutaiLauncher-master.deb', 'Linux');">Linux</a>
-                </li>
-                <li class="download-menu__item">
-                  <a href="https://cdn.subut.ai:8338/kurjun/rest/raw/get?name=SubutaiLauncher-master.pkg"
-                     onclick="ga('send', 'event', 'downloads', 'SubutaiLauncher-master.pkg', 'Mac');">Mac</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <h2>Install the Subutai OS Tray Application</h2>
+
           <p>Although the P2P executable can be used to connect to environments and talk to peer swarms via CLI
             commands, we recommend installing the OS Tray application for convenient use on a desktop system. The tray
             application allows you to swarm into environments and even control your peers while showing you your
@@ -734,7 +954,8 @@ sudo lsof -i :53</pre>
               <li id="installation-mac" class="accordion__item">
                 <div class="accordion__header">Watch video about how to "Install the Subutai OS Tray Application"</div>
                 <div class="accordion__content">
-                  <iframe width="100%" height="450" src="https://www.youtube.com/embed/6QF_md_tKVI" frameborder="0" allowfullscreen></iframe>
+                  <iframe width="100%" height="450" src="https://www.youtube.com/embed/6QF_md_tKVI" frameborder="0"
+                          allowfullscreen></iframe>
                 </div>
               </li>
             </ul>
@@ -810,7 +1031,28 @@ sudo lsof -i :53</pre>
     //            }
     //        });
 
+    function openOSTab(event, osType) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("subutaiTabContent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+
+        tablinks = document.getElementsByClassName("ss-tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(osType).style.display = "block";
+        if (event) {
+            $(event.target).addClass('active');
+        }
+        else {
+            var ssButton = document.getElementById(osType + 'os');
+            ssButton.className += " active";
+        }
+    }
 </script>
+<script src="js/osCatcher.js"></script>
 <script>
     (function (i, s, o, g, r, a, m) {
         i['GoogleAnalyticsObject'] = r;
