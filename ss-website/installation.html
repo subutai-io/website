@@ -200,11 +200,12 @@
     <div class="content-wrapper">
 
       <section>
+        <!--
         <div class="btn-group" style="float: right;margin-top: -10px; display: none">
           <a href="ezpz-launcher-installation.html"><span
               class="ezpz-button ezpz-download">New (Beta) EZPZ Launchers</span></a>
         </div>
-
+-->
         <h1>Peer Setup</h1>
 
         <p>Subutai is based on Snappy, and has its own snap package in the Ubuntu One Store. Installing the <a
@@ -406,9 +407,7 @@ sudo lsof -i :53</pre>
           <p>The last command after installation checks that the package is installed. You should see similar output
             from it:</p>
 
-          <p>
           <pre>ubuntu@testbox:~$ snap list<br/>Name Version Rev Developer Notes<br/>core 16-2.27.5 2774 canonical core<br/>subutai 5.0.2 183 devmode<br/>ubuntu-image 0.12+real1 44 canonical devmode</pre>
-          </p>
 
           <div class="accordion">
             <ul>
@@ -462,9 +461,8 @@ sudo lsof -i :53</pre>
             RH:
           </p>
 
-          <p>
           <pre>sudo /snap/subutai/current/bin/btrfsinit /dev/vdb</pre>
-          </p>
+          
           <div class="accordion">
             <ul>
               <li class="accordion__item">
@@ -945,13 +943,11 @@ sudo lsof -i :53</pre>
             Mac
             and Windows the installers are trivial and standard MSI and Mac packages. For Linux:</p>
 
-          <p>
           <pre>sudo dpkg -i subutai-tray-6.0.1.deb<br/>sudo apt-get install -f</pre>
-          </p>
 
           <div class="accordion">
             <ul>
-              <li id="installation-mac" class="accordion__item">
+              <li class="accordion__item">
                 <div class="accordion__header">Watch video about how to "Install the Subutai OS Tray Application"</div>
                 <div class="accordion__content">
                   <iframe width="100%" height="450" src="https://www.youtube.com/embed/6QF_md_tKVI" frameborder="0"
