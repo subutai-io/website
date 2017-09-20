@@ -191,6 +191,8 @@
 var opersys = jscd.os;
 var osVersion = opersys.toLowerCase();
 
+var event = new Event('show');
+
 if (osVersion.indexOf("linux")!==-1) {
     openOSTab(event, "linux");
 }
