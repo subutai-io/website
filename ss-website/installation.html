@@ -220,9 +220,8 @@
         <div class="accordion">
           <ul>
             <li class="accordion__item">
-              <div class="accordion__header accordion__check"><i class="fa fa-check-circle icon-check"></i> Recommended
-                Hardware
-                Configuration
+              <div class="accordion__header accordion__check"><i class="fa fa-check-circle icon-check"></i> Hardware
+                Requirements
               </div>
               <div class="accordion__content">
                 <p>Unlimited hardware configuration options are possible. However, if setting up a trial
@@ -237,6 +236,9 @@
                     <li class="installation__li">1 network adapter 1Gbit (bridged)</li>
                   </ul>
                 </div>
+
+                <p><b>DON'T FORGET THE EXTRA DISK OR PARTITION!</b></p>
+
                 <p>Any hypervisor or cloud provider instance may be used so long as these virtual hardware resources are
                   available to the guest operating system. Peers can run on Hyper-V, GCE, AWS, KVM, VirtualBox, VMWare,
                   and
@@ -282,9 +284,7 @@
 
                       <p><a class="close" href="/">Close</a></p>
                     </div>
-                    (i.e. <code>netstat -lnp | grep ":53 "</code>
-                    or
-                    <code>lsof -i :53</code>) before installing the snap:
+                    (i.e. <code>lsof -i :53</code>) before installing the snap:
                     <ul style="margin-left: 20px">
                       <li class="installation__li">udp/53 - DNS service port</li>
                       <li class="installation__li">udp/67 - DHCP service port</li>
@@ -330,37 +330,33 @@
           <ul>
             <li class="accordion__item">
               <div class="accordion__header accordion__warning"><i class="fa fa-exclamation-circle icon-warning"></i>
-                WARNING: NetworkManager on desktop editions will give you a bad day!
+                WARNING: Disable dnsmasq on desktop editions!
               </div>
 
               <div class="accordion__content">
-                <p>Virtual or not, desktop editions of all distributions should be avoided, since they unnecessarily
-                  waste
-                  resources and have serious issues because of NetworkManager which installs <code>dnsmasq</code> on
-                  port 53. If
-                  left
-                  without a choice you’ll have to disable NetworkManager’s dnsmasq if <code>netstat -lnp | grep ":53
-                    "</code>
-                  produces
-                  any output. Here’s how:</p>
+                <p>Virtual or not, desktop editions should be avoided. Besides unnecessarily wasting resources for the
+                  windowing system they use NetworkManager which installs <code>dnsmasq</code> on port 53. If on a
+                  desktop edition, check to see if port 53 is already bound:
+
+<pre>
+lsof -i :53
+</pre>
+                Any output from lsof means port 53 is being used. You'll need to stop dnsmasq permanently. Here’s how:</p>
 
                 <pre>sudo systemctl disable systemd-resolved.service<br/>sudo service systemd-resolved stop</pre>
 
                 <p> Edit <code>/etc/NetworkManager/NetworkManager.conf</code> and change the dns property in the <code>[main]</code>
-                  section
-                  so it
-                  is
-                  set to <code>default</code>: <code>dns=default</code>.
+                  section so it is set to <code>default</code>: <code>dns=default</code>. Here's how the file may look after adding
+                  or modifying the dns property:
                 </p>
+
+                <img src="img/netman.png" style="width: 100%">
+
                 <pre>
 sudo rm /etc/resolv.conf
 sudo service network-manager restart
-sudo killall dnsmasq
-sudo netstat -lnp | grep “:53 “</pre>
-                or
-                <pre>
-sudo lsof -i :53</pre>
-                <p>The last netstat or lsof command should not produce any output now. <b>NOTE</b>: if NetworkManager
+sudo killall dnsmasq</pre>
+                <p>Another lsof for port 53 should not produce any output now. <b>NOTE</b>: if NetworkManager
                   was not configured properly, after restart, you may need to add your nameserver into the
                   <code>/etc/resolv.conf</code> file it generates. It’s best to add this to the NetworkManager
                   connection
@@ -388,9 +384,9 @@ sudo lsof -i :53</pre>
                     and setting up snapd on non-Ubuntu Linux distributions:</p>
 
                   <ul style="margin-left: 20px">
-                    <li class="installation__li">Mint, Debian: <code>sudo apt-get install snapd</code></li>
-                    <li class="installation__li">Fedora 24: <code>sudo dnf install snapd && sudo systemctl enable --now
-                      snapd.socket</code></li>
+                    <li class="installation__li">Mint, Debian:
+                      <pre>sudo apt-get install snapd</pre></li>
+                    <li class="installation__li">Fedora 24: <pre>sudo dnf install snapd && sudo systemctl enable --now snapd.socket</pre></li>
                   </ul>
 
                 </div>
@@ -420,7 +416,7 @@ sudo lsof -i :53</pre>
                 <div class="accordion__content">
                   <p> On non-Ubuntu Core distributions this might cause the core snap to be downloaded as well as the
                     Subutai
-                    Snap which depends on it. Ubuntu Core come with the core snap already installed. Don’t be surprised
+                    Snap which depends on it. Ubuntu Core comes with the core snap already installed. Don’t be surprised
                     to
                     see
                     this other core snap getting downloaded and installed.
@@ -432,16 +428,11 @@ sudo lsof -i :53</pre>
                       workaround</a>.
                   </p>
                   <p> The snap package comes with the p2p daemon which uses UDP port 6881. If you previously installed
-                    the
-                    p2p
-                    daemon package to connect to your cloud environments, then you’ll have a port conflict. You’ll need
-                    to
-                    stop and remove the p2p daemon package.
+                    the p2p daemon package to connect to your cloud environments, then you’ll have a port conflict.
+                    You’ll need to stop and remove the p2p daemon package.
                   </p>
-                  <p> Some distributions do not immediately update paths immediately on snap package installation. If
-                    you
-                    don’t
-                    see the command subutai on the path just logout and log back in. It should now be visible.
+                  <p> Some distributions do not immediately update paths on snap package installation. If
+                    you don’t see the command subutai on the path, it should be visible after a logout and login.
                   </p>
                 </div>
               </li>
@@ -481,7 +472,7 @@ sudo lsof -i :53</pre>
 
           <p>Now you should see the block device mounted:</p>
 
-          <pre>df -h /dev/vdb<br/>subutai@ud1704s:~$ df -h /dev/ud1704/btrfs<br/>Filesystem Size Used Avail Use% Mounted on<br/>/dev/mapper/ud1704-btrfs 94G 17M 92G 1% /var/snap/subutai-master/common/lxc</pre>
+          <pre>df -h /dev/vdb<br/>subutai@ud1704s:~$ df -h /dev/ud1704/btrfs<br/>Filesystem Size Used Avail Use% Mounted on<br/>/dev/mapper/ud1704-btrfs 94G 17M 92G 1% /var/snap/subutai/common/lxc</pre>
 
           <p>Congratulations you now have a Subutai Resource Host. You can start importing and running containers on
             it.</p>
@@ -541,13 +532,9 @@ sudo lsof -i :53</pre>
 
           <img src="img/sconsole.png" style="width: 100%">
 
-          <p>The peer can now be managed from this URL via the Subutai Management Console. The default admin user
-            password
-            is <code>secret</code>. Admins will be asked to change this password on their first login. However, before
-            the logging
-            in
-            make sure the client browser has the Subutai E2E plugin installed with your PGP keys.</p>
-
+          <p>The peer can now be managed from this URL via the Subutai Management Console. The default <code>admin</code> user
+            account's password is <code>secret</code>. On first login, you'll be asked to change this password. Before
+            you login install the Subutai E2E Browser Plugin with at least one PGP key.</p>
         </div>
 
       </section>
@@ -601,7 +588,7 @@ sudo lsof -i :53</pre>
           <div class="accordion">
             <ul>
               <li id="installation-mac" class="accordion__item">
-                <div class="accordion__header">Watch video about "Creating and Installing PGP Keys"</div>
+                <div class="accordion__header">VIDEO: "Creating and Installing PGP Keys"</div>
                 <div class="accordion__content">
                   <iframe width="100%" height="450" src="https://www.youtube.com/embed/DO7X94qCmn4" frameborder="0"
                           allowfullscreen></iframe>
@@ -667,24 +654,20 @@ sudo lsof -i :53</pre>
               onto any desktop or headless system with packages available for Windows, Linux, and Mac OS. For Mac and
               Windows the installers are trivial and standard MSI and Mac packages. For Linux:</p>
 
-            <pre>sudo dpkg -i subutai-tray-6.0.1.deb<br/>sudo apt-get install -f</pre>
+            <pre>sudo dpkg -i /path/to/subutai-p2p.deb<br/>sudo apt-get install -f</pre>
             <div class="accordion">
               <ul>
                 <li class="accordion__item">
                   <div class="accordion__header accordion__warning"><i
                       class="fa fa-exclamation-circle icon-warning"></i>
-                    Do not
-                    install P2P on systems
-                    with the snap
+                    Do not install P2P on systems with the snap
                   </div>
 
                   <div class="accordion__content">
                     <p>The Subutai Snap uses the P2P daemon on RHs and peers to make them swarm together. You cannot
                       install
                       the Subutai P2P daemon on a system that already has the Subutai Snap installed on it: it will
-                      produce a
-                      UDP port 6881 conflict.</p>
-
+                      produce a UDP port 6881 conflict.</p>
                   </div>
                 </li>
               </ul>
@@ -762,15 +745,14 @@ sudo lsof -i :53</pre>
               onto any desktop or headless system with packages available for Windows, Linux, and Mac OS. For Mac and
               Windows the installers are trivial and standard MSI and Mac packages. For Linux:</p>
 
-            <pre>sudo dpkg -i subutai-tray-6.0.1.deb<br/>sudo apt-get install -f</pre>
+            <pre>sudo dpkg -i /path/to/subutai-p2p.deb<br/>sudo apt-get install -f</pre>
+
             <div class="accordion">
               <ul>
                 <li class="accordion__item">
                   <div class="accordion__header accordion__warning"><i
                       class="fa fa-exclamation-circle icon-warning"></i>
-                    Do not
-                    install P2P on systems
-                    with the snap
+                    Do not install P2P on systems with the snap
                   </div>
 
                   <div class="accordion__content">
@@ -855,15 +837,13 @@ sudo lsof -i :53</pre>
               onto any desktop or headless system with packages available for Windows, Linux, and Mac OS. For Mac and
               Windows the installers are trivial and standard MSI and Mac packages. For Linux:</p>
 
-            <pre>sudo dpkg -i subutai-tray-6.0.1.deb<br/>sudo apt-get install -f</pre>
+            <pre>sudo dpkg -i /path/to/subutai-p2p.deb<br/>sudo apt-get install -f</pre>
             <div class="accordion">
               <ul>
                 <li class="accordion__item">
                   <div class="accordion__header accordion__warning"><i
                       class="fa fa-exclamation-circle icon-warning"></i>
-                    Do not
-                    install P2P on systems
-                    with the snap
+                    Do not install P2P on systems with the snap
                   </div>
 
                   <div class="accordion__content">
@@ -942,12 +922,12 @@ sudo lsof -i :53</pre>
             Mac
             and Windows the installers are trivial and standard MSI and Mac packages. For Linux:</p>
 
-          <pre>sudo dpkg -i subutai-tray-6.0.1.deb<br/>sudo apt-get install -f</pre>
+          <pre>sudo dpkg -i /path/to/subutai-tray.deb<br/>sudo apt-get install -f</pre>
 
           <div class="accordion">
             <ul>
               <li class="accordion__item">
-                <div class="accordion__header">Watch video about how to "Install the Subutai OS Tray Application"</div>
+                <div class="accordion__header">VIDEO: "Install the Subutai OS Tray Application"</div>
                 <div class="accordion__content">
                   <iframe width="100%" height="450" src="https://www.youtube.com/embed/6QF_md_tKVI" frameborder="0"
                           allowfullscreen></iframe>
