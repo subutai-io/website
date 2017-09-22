@@ -67,7 +67,7 @@
         href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
   <!--<![endif]-->
   <link rel="stylesheet" href="css/reset.css"/>
-  <link rel="stylesheet" href="css/main.css"/>
+  <link rel="stylesheet" href="css/main.min.css"/>
 
 </head>
 
@@ -223,7 +223,7 @@
               <div class="accordion__header accordion__check"><i class="fa fa-check-circle icon-check"></i> Hardware
                 Requirements
               </div>
-              <div class="accordion__content">
+              <div class="accordion__content accordion__installation_content">
                 <p>Unlimited hardware configuration options are possible. However, if setting up a trial
                   peer with a single RH we recommend running it on a virtual machine with at least:</p>
                 <div style="margin-left: 20px">
@@ -261,7 +261,7 @@
                 System
                 Requirements
               </div>
-              <div class="accordion__content">
+              <div class="accordion__content accordion__installation_content">
                 <p>Some general caveats and requirements for the operating system on which the snap package is being
                   installed are:</p>
 
@@ -333,7 +333,7 @@
                 WARNING: Disable dnsmasq on desktop editions!
               </div>
 
-              <div class="accordion__content">
+              <div class="accordion__content accordion__installation_content">
                 <p>Virtual or not, desktop editions should be avoided. Besides unnecessarily wasting resources for the
                   windowing system they use NetworkManager which installs <code>dnsmasq</code> on port 53. If on a
                   desktop edition, check to see if port 53 is already bound:
@@ -378,7 +378,7 @@ sudo killall dnsmasq</pre>
                   various operating systems
                 </div>
 
-                <div class="accordion__content">
+                <div class="accordion__content accordion__installation_content">
                   <p>Before installing the Subutai Snap you may need to install snapd. Here are some commands for
                     installing
                     and setting up snapd on non-Ubuntu Linux distributions:</p>
@@ -413,7 +413,7 @@ sudo killall dnsmasq</pre>
                   Troubleshooting
                 </div>
 
-                <div class="accordion__content">
+                <div class="accordion__content accordion__installation_content">
                   <p> On non-Ubuntu Core distributions this might cause the core snap to be downloaded as well as the
                     Subutai
                     Snap which depends on it. Ubuntu Core comes with the core snap already installed. Don’t be surprised
@@ -460,7 +460,7 @@ sudo killall dnsmasq</pre>
                   Block Device
                 </div>
 
-                <div class="accordion__content">
+                <div class="accordion__content accordion__installation_content">
                   <p>Do not forget to use your appropriate block device in place of <code>/dev/vdb</code>. It can be a
                     disk, a
                     partition, iSCSI target LUN, or an LVM logical volume. It just needs to be a block device.</p>
@@ -485,7 +485,7 @@ sudo killall dnsmasq</pre>
                   Peers
                 </div>
 
-                <div class="accordion__content">
+                <div class="accordion__content accordion__installation_content">
                   <p>You can use this same process to create more RHs and add them to peers. RHs must be on the same
                     LAN.
                     The
@@ -519,7 +519,7 @@ sudo killall dnsmasq</pre>
               <div class="accordion__header accordion__warning">
                 <i class="fa fa-exclamation-circle icon-warning"></i> Troubleshooting a CDN unreachable error
               </div>
-              <div class="accordion__content">
+              <div class="accordion__content accordion__installation_content">
                 When installing directly on a desktop edition, the NetworkManager configuration may not configure the
                 <code>/etc/resolv.conf</code> file properly to resolve CDN addresses causing “CDN unreachable errors”
                 with the import
@@ -559,7 +559,7 @@ sudo killall dnsmasq</pre>
                   keys
                 </div>
 
-                <div class="accordion__content">
+                <div class="accordion__content accordion__installation_content">
                   <p>Users knowing how to manage their own keys can use other tools to do so. Various platform specific
                     PGP
                     tools like GPG on Linux can be used on the command line interface to create and use PGP keys.
@@ -605,7 +605,7 @@ sudo killall dnsmasq</pre>
                   Browsers
                 </div>
 
-                <div class="accordion__content">
+                <div class="accordion__content accordion__installation_content">
                   <p>At this point we’ve stopped supporting Firefox because of changes to their extensions API, and have
                     yet
                     to
@@ -619,8 +619,7 @@ sudo killall dnsmasq</pre>
         </div>
 
         <div style="margin-top: 40px">
-
-          <div class='buttons'>
+          <div class='os-selector'>
             <a class='tab-buttons ss-tablinks' onclick="openOSTab(event, 'windows')" id="windowsos">Windows</a>
             <a class='tab-buttons ss-tablinks' onclick="openOSTab(event,'mac')" id="macos">Mac</a>
             <a class='tab-buttons ss-tablinks active' onclick="openOSTab(event,'linux')" id="linuxos">Linux</a>
@@ -630,7 +629,7 @@ sudo killall dnsmasq</pre>
             <h3 class="getting-started-main-info__h3">Install the Subutai P2P Daemon</h3>
 
 
-            <div title="Windows" class="download-button download" style="float: right;margin-top: -70px">
+            <div title="Windows" class="download-button download" style="float: right;margin-top: -60px">
               Download
               <div class="download-menu">
                 <ul>
@@ -663,7 +662,7 @@ sudo killall dnsmasq</pre>
                     Do not install P2P on systems with the snap
                   </div>
 
-                  <div class="accordion__content">
+                  <div class="accordion__content accordion__installation_content">
                     <p>The Subutai Snap uses the P2P daemon on RHs and peers to make them swarm together. You cannot
                       install
                       the Subutai P2P daemon on a system that already has the Subutai Snap installed on it: it will
@@ -679,7 +678,7 @@ sudo killall dnsmasq</pre>
                   <div class="accordion__header accordion__info"><i class="fa fa-info-circle icon-info"></i> P2P Daemon
                     and Client Modes
                   </div>
-                  <div class="accordion__content">
+                  <div class="accordion__content accordion__installation_content">
                     <p>The P2P executable has two different launch modes based on the switches used: (1) as client CLI
                       program, and
                       (2) as a resident daemon process. When used as a client CLI program it communicates with the P2P
@@ -697,7 +696,7 @@ sudo killall dnsmasq</pre>
 
             <h3 class="getting-started-main-info__h3">Install the Subutai OS Tray Application</h3>
 
-            <div title="Windows" class="download-button download" style="float: right;margin-top: -70px">
+            <div title="Windows" class="download-button download" style="float: right;margin-top: -50px">
               Download
               <div class="download-menu">
                 <ul>
@@ -723,7 +722,7 @@ sudo killall dnsmasq</pre>
           <div id="linux" class="subutaiTabContent" style="display: none">
             <h3 class="getting-started-main-info__h3">Install the Subutai P2P Daemon</h3>
 
-            <div title="Linux" class="download-button download" style="float: right;margin-top: -70px">
+            <div title="Linux" class="download-button download" style="float: right;margin-top: -60px">
               Download
               <div class="download-menu">
                 <ul>
@@ -757,7 +756,7 @@ sudo killall dnsmasq</pre>
                     Do not install P2P on systems with the snap
                   </div>
 
-                  <div class="accordion__content">
+                  <div class="accordion__content accordion__installation_content">
                     <p>The Subutai Snap uses the P2P daemon on RHs and peers to make them swarm together. You cannot
                       install
                       the Subutai P2P daemon on a system that already has the Subutai Snap installed on it: it will
@@ -775,7 +774,7 @@ sudo killall dnsmasq</pre>
                   <div class="accordion__header accordion__info"><i class="fa fa-info-circle icon-info"></i> P2P Daemon
                     and Client Modes
                   </div>
-                  <div class="accordion__content">
+                  <div class="accordion__content accordion__installation_content">
                     <p>The P2P executable has two different launch modes based on the switches used: (1) as client CLI
                       program, and
                       (2) as a resident daemon process. When used as a client CLI program it communicates with the P2P
@@ -793,7 +792,7 @@ sudo killall dnsmasq</pre>
 
             <h3 class="getting-started-main-info__h3">Install the Subutai OS Tray Application</h3>
 
-            <div title="Linux" class="download-button download" style="float: right;margin-top: -70px">
+            <div title="Linux" class="download-button download" style="float: right;margin-top: -50px">
               Download
               <div class="download-menu">
                 <ul>
@@ -817,7 +816,7 @@ sudo killall dnsmasq</pre>
           </div>
           <div id="mac" class="subutaiTabContent" style="display: none">
             <h3 class="getting-started-main-info__h3">Install the Subutai P2P Daemon</h3>
-            <div title="Mac" class="download-button download" style="float: right;margin-top: -70px">
+            <div title="Mac" class="download-button download" style="float: right;margin-top: -60px">
               Download
               <div class="download-menu">
                 <ul>
@@ -850,7 +849,7 @@ sudo killall dnsmasq</pre>
                     Do not install P2P on systems with the snap
                   </div>
 
-                  <div class="accordion__content">
+                  <div class="accordion__content accordion__installation_content">
                     <p>The Subutai Snap uses the P2P daemon on RHs and peers to make them swarm together. You cannot
                       install
                       the Subutai P2P daemon on a system that already has the Subutai Snap installed on it: it will
@@ -868,7 +867,7 @@ sudo killall dnsmasq</pre>
                   <div class="accordion__header accordion__info"><i class="fa fa-info-circle icon-info"></i> P2P Daemon
                     and Client Modes
                   </div>
-                  <div class="accordion__content">
+                  <div class="accordion__content accordion__installation_content">
                     <p>The P2P executable has two different launch modes based on the switches used: (1) as client CLI
                       program, and
                       (2) as a resident daemon process. When used as a client CLI program it communicates with the P2P
@@ -886,7 +885,7 @@ sudo killall dnsmasq</pre>
 
             <h3 class="getting-started-main-info__h3">Install the Subutai OS Tray Application</h3>
 
-            <div title="Mac" class="download-button download" style="float: right;margin-top: -70px">
+            <div title="Mac" class="download-button download" style="float: right;margin-top: -50px">
               Download
               <div class="download-menu">
                 <ul>
@@ -1003,15 +1002,6 @@ sudo killall dnsmasq</pre>
 <script src="js/plugins.min.js"></script>
 <script src="js/main.min.js"></script>
 <script>
-
-    //        $('.tab-buttons').click(function(){
-    //            if($(this).hasClass('active')){
-    //                $(this).removeClass('active')
-    //            } else {
-    //                $(this).addClass('active')
-    //            }
-    //        });
-
     function openOSTab(event, osType) {
         var i, tabcontent, tablinks;
         tabcontent = document.getElementsByClassName("subutaiTabContent");
