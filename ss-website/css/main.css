@@ -8611,6 +8611,10 @@ code
     }
 }
 
+.os-selector
+{
+    text-align: right
+}
 .tab-buttons
 {
     display: inline-block;
@@ -8929,4 +8933,9 @@ label
     margin-left: 20px;
     list-style: square;
     padding-left: 10px;
+}
+
+.accordion__installation_content
+{
+    padding: 0 20px 0 40px;
 }
