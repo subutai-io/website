@@ -195,9 +195,10 @@
         </div>
       </section>
     </aside>
+
     <div class="content-wrapper">
 
-      <h1 class="page-title">Installation</h1>
+      <h1 class="page-title">Peer Installation</h1>
 
       <section>
         <!--
@@ -206,7 +207,6 @@
               class="ezpz-button ezpz-download">New (Beta) EZPZ Launchers</span></a>
         </div>
 -->
-        <h3 class="getting-started-main-info__h3">Peer Setup</h3>
         <p>Subutai is based on Snappy, and has its own snap package in the Ubuntu One Store. Installing the <a
             href="https://github.com/subutai-io/snap">Subutai Snap</a> package on a snapd supported (<a
             href="https://github.com/snapcore/snapd/wiki/Distributions#support-matrix">see the support matrix</a>)
@@ -216,6 +216,36 @@
           Management Console into the RH turning it into a Subutai Peer <a class="htooltip" href="#"><i
               class="fa fa-info-circle icon-info"></i><span>A Subutai Peer is a set of managed RHs on the same LAN. The Subutai Management Software orchestrates the creation and destruction of cloud segments running in a peer. It’s what swarms with other peers to create virtual private cloud environments. At least one RH in the peer MUST run a management container.
           </span></a>.</p>
+
+        <div class="accordion">
+          <ul>
+            <li class="accordion__item">
+              <div class="accordion__header accordion__warning"><i class="fa fa-exclamation-circle icon-warning"></i>
+                <b>WARNING</b>: Before starting ...
+              </div>
+
+              <div class="accordion__content accordion__installation_content">
+                <p><b>WARNING: DON'T FORGET THE EXTRA DISK OR PARTITION!</b></p>
+
+                <p>Many people have an, "Oh #F$&D@)# !" moment when futher down in the directions they realize an extra
+                  storage device is needed. Several configure a VM or a new machine forgetting to add
+                  the disk, partition, or volume so, don't forget. Read the hardware requirements carefully.</p>
+
+                <p><b>WARNING: DON'T USE FIREFOX. STICK TO CHROME.</b></p>
+
+                <p>Before logging into a peer console you'll want to install the Subutai Chrome extension. We’ve
+                  temporarily stopped supporting Firefox because of changes to their extensions API, and have
+                  yet to provide support for Edge. Chrome and Safari are the only two supported browsers right now.</p>
+
+                <p><b>Don't freak out about email or social networking accounts</b></p>
+
+                <p>We use your email and social network accounts for verification and for your unique username
+                  identifier. Don't think we're going to spam you, or start sending invites to your friends. This
+                  is totally against our policies.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
 
         <div class="accordion">
           <ul>
@@ -310,58 +340,17 @@
                 <ul>
                   <li class="installation__li"> Ubuntu Core 16</li>
                   <li class="installation__li">Ubuntu Server: 16.04.3 and 17.04</li>
-                  <li class="installation__li text_color_red">Ubuntu Desktop: 16.04.3 and 17.04</li>
+                  <li class="installation__li text_color_red"><b>Ubuntu Desktop: 16.04.3 and 17.04</b></li>
                   <li class="installation__li">Debian 9.1.0 - Stretch</li>
-                  <li class="installation__li text_color_red">Debian 9.1.0 - Stretch w/ MATE</li>
-                  <li class="installation__li text_color_red">Mint 18.2</li>
+                  <li class="installation__li text_color_red"><b>Debian 9.1.0 - Stretch w/ MATE</b></li>
+                  <li class="installation__li text_color_red"><b>Mint 18.2</b></li>
                 </ul>
                 <p><b>NOTE</b>: All the desktop editions and other headed configurations (<span
-                    class="text_color_red">in bold red</span>) have the NetworkManager
+                    class="text_color_red"><b>in bold red</b></span>) have the NetworkManager
                   problem, and the non-Ubuntu distributions need snapd installed. Debian Stretch (headless) needs snapd
                   installed. See the warnings below about NetworkManager if you’re installing the snap on a desktop
-                  system
-                  with NetworkManager (most likely) installed.</p>
-              </div>
-            </li>
-          </ul>
-        </div>
-
-        <div class="accordion">
-          <ul>
-            <li class="accordion__item">
-              <div class="accordion__header accordion__warning"><i class="fa fa-exclamation-circle icon-warning"></i>
-                WARNING: Disable dnsmasq on desktop editions!
-              </div>
-
-              <div class="accordion__content accordion__installation_content">
-                <p>Virtual or not, desktop editions should be avoided. Besides unnecessarily wasting resources for the
-                  windowing system they use NetworkManager which installs <code>dnsmasq</code> on port 53. If on a
-                  desktop edition, check to see if port 53 is already bound:
-
-<pre>
-sudo lsof -i :53
-</pre>
-                Any output from lsof means port 53 is being used. You'll need to stop dnsmasq permanently. Here’s how:</p>
-
-                <pre>sudo systemctl disable systemd-resolved.service<br/>sudo service systemd-resolved stop</pre>
-
-                <p> Edit <code>/etc/NetworkManager/NetworkManager.conf</code> and change the dns property in the <code>[main]</code>
-                  section so it is set to <code>default</code>: <code>dns=default</code>. Here's how the file may look after adding
-                  or modifying the dns property:
-                </p>
-
-                <img src="img/netman.png" style="width: 100%">
-
-                <pre>
-sudo rm /etc/resolv.conf
-sudo service network-manager restart
-sudo killall dnsmasq</pre>
-                <p>Another lsof for port 53 should not produce any output now. <b>NOTE</b>: if NetworkManager
-                  was not configured properly, after restart, you may need to add your nameserver into the
-                  <code>/etc/resolv.conf</code> file it generates. It’s best to add this to the NetworkManager
-                  connection
-                  configuration if you don’t want the resolv.conf file to be overwritten.
-                </p>
+                  system with NetworkManager (most likely) installed. See the
+                  <a href="#NetworkManager">"Disable dnsmasq on desktop editions!"</a> section below.</p>
               </div>
             </li>
           </ul>
@@ -370,18 +359,67 @@ sudo killall dnsmasq</pre>
         <div>
           <h3 class="getting-started-main-info__h3"> Install the Snap Package</h3>
 
+
           <div class="accordion">
             <ul>
               <li class="accordion__item">
-                <div class="accordion__header accordion__info"><i class="fa fa-info-circle icon-info"></i> Installing
-                  snapd on
-                  various operating systems
+                <a name="NetworkManager"></a>
+                <div class="accordion__header accordion__warning"><i class="fa fa-exclamation-circle icon-warning"></i>
+                  <b>WARNING</b>: Disable dnsmasq on desktop editions!
                 </div>
 
                 <div class="accordion__content accordion__installation_content">
-                  <p>Before installing the Subutai Snap you may need to install snapd. Here are some commands for
-                    installing
-                    and setting up snapd on non-Ubuntu Linux distributions:</p>
+                  <p>Virtual or not, desktop editions should be avoided. Besides unnecessarily wasting resources for the
+                    windowing system they use NetworkManager which installs <code>dnsmasq</code> on port 53. If on a
+                    desktop edition, check to see if port 53 is already bound:
+
+                  <pre>
+sudo lsof -i :53
+</pre>
+                  Any output from lsof means port 53 is being used. You'll need to stop dnsmasq permanently. Here’s how:</p>
+
+                  <pre>sudo systemctl disable systemd-resolved.service<br/>sudo service systemd-resolved stop</pre>
+
+                  <p> Edit <code>/etc/NetworkManager/NetworkManager.conf</code> and change the dns property in the <code>[main]</code>
+                    section so it is set to <code>default</code>: <code>dns=default</code>. Here's how the file may look after adding
+                    or modifying the dns property:
+                  </p>
+
+                  <img src="img/netman.png" style="width: 100%">
+
+                  <pre>
+sudo rm /etc/resolv.conf
+sudo service network-manager restart
+sudo killall dnsmasq</pre>
+                  <p><b>The last killall, is a precaution, don't freak if it says, "no such process".</b></p>
+                  <p>Another lsof for port 53 should not produce any output now. <b>NOTE</b>: if NetworkManager
+                    was not configured properly, after restart, you may need to add your nameserver into the
+                    <code>/etc/resolv.conf</code> file it generates. It’s best to add this to the NetworkManager
+                    connection configuration if you don’t want the resolv.conf file to be overwritten.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="accordion">
+            <ul>
+              <li class="accordion__item">
+                <div class="accordion__header accordion__warning"><i class="fa fa-info-circle icon-warning"></i>
+                  <b>WARNING</b>: Is snapd installed?
+                </div>
+
+                <div class="accordion__content accordion__installation_content">
+                  <p>Before installing the Subutai Snap you may need to install snapd. Try to list your snaps with snap
+                  to see if it is installed:</p>
+
+                  <pre>
+snap list</pre>
+
+                  <p>
+                    Installing snapd is beyond the scope of this document. However, here are some useful commands for
+                    installing and setting up snapd on non-Ubuntu Linux distributions:
+                  </p>
 
                   <ul style="margin-left: 20px">
                     <li class="installation__li">Mint, Debian:
@@ -389,28 +427,20 @@ sudo killall dnsmasq</pre>
                     <li class="installation__li">Fedora 24: <pre>sudo dnf install snapd && sudo systemctl enable --now snapd.socket</pre></li>
                   </ul>
 
+                  <p>If snapd is properly installed, and up to date, then carry on to install the Subutai Snap package.</p>
+
                 </div>
               </li>
             </ul>
           </div>
 
-          <p>If snapd is properly installed, and up to date, the following command downloads and installs the Subutai
-            Snap package:</p>
-
           <pre>sudo snap install subutai --beta --devmode<br/>snap list</pre>
-
-          <p>The last command after installation checks that the package is installed. You should see similar output
-            from it:</p>
-
-          <pre>ubuntu@testbox:~$ snap list<br/>Name Version Rev Developer Notes<br/>core 16-2.27.5 2774 canonical core<br/>subutai 5.0.2 183 devmode<br/>ubuntu-image 0.12+real1 44 canonical devmode</pre>
 
           <div class="accordion">
             <ul>
               <li class="accordion__item">
                 <div class="accordion__header accordion__warning"><i class="fa fa-exclamation-circle icon-warning"></i>
-                  Snap
-                  Installation
-                  Troubleshooting
+                  <b>WARNING</b>: Possible installation problems
                 </div>
 
                 <div class="accordion__content accordion__installation_content">
@@ -421,6 +451,12 @@ sudo killall dnsmasq</pre>
                     see
                     this other core snap getting downloaded and installed.
                   </p>
+
+                  <p><b>Is the snap installed?</b> The last command after installation checks that the package is installed. You should see similar output
+                    from it:</p>
+
+                  <pre>ubuntu@testbox:~$ snap list<br/>Name Version Rev Developer Notes<br/>core 16-2.27.5 2774 canonical core<br/>subutai 5.0.2 183 devmode<br/>ubuntu-image 0.12+real1 44 canonical devmode</pre>
+
                   <p> There are known problems with certain hypervisors and bridged networking over WiFi connections. If
                     you’re
                     having connectivity issues after snap installation please see the <a
@@ -443,57 +479,47 @@ sudo killall dnsmasq</pre>
 
         <div>
           <h3 class="getting-started-main-info__h3">Setup Container Storage</h3>
-          <p>
-            Containers storage is created on a block device (partition or disk). By default, Subutai uses BTRFS but
-            can
-            use other copy-on-write filesystems like ZFS. Use the following command to add a BTRFS storage device to
-            your
-            RH:
-          </p>
 
-          <pre>sudo /snap/subutai/current/bin/btrfsinit /dev/vdb</pre>
-          
           <div class="accordion">
             <ul>
               <li class="accordion__item">
                 <div class="accordion__header accordion__warning"><i class="fa fa-exclamation-circle icon-warning"></i>
-                  Block Device
+                  <b>WARNING</b>: Storage block device
                 </div>
 
                 <div class="accordion__content accordion__installation_content">
-                  <p>Do not forget to use your appropriate block device in place of <code>/dev/vdb</code>. It can be a
-                    disk, a
-                    partition, iSCSI target LUN, or an LVM logical volume. It just needs to be a block device.</p>
+                  <p>Do not forget to use your appropriate block device in place of <code>/dev/your_block_device</code>.
+                    It can be a disk, a partition, a iSCSI target LUN, or an LVM logical volume. It just needs to be a
+                    block device. It should have over 100G to allow for at least one HUGE container to be used on it.</p>
+
+                  <p>
+                    Containers storage is created on this block device. By default, Subutai uses BTRFS but can
+                    use other copy-on-write filesystems like ZFS. The following command creates a BTRFS file
+                    system on the block device and mounts it.
+                  </p>
                 </div>
               </li>
             </ul>
           </div>
 
-
-          <p>Now you should see the block device mounted:</p>
-
-          <pre>df -h /dev/vdb<br/>subutai@ud1704s:~$ df -h /var/snap/subutai/common/lxc<br/>Filesystem Size Used Avail Use% Mounted on<br/>/dev/mapper/ud1704-btrfs 94G 17M 92G 1% /var/snap/subutai/common/lxc</pre>
-
-          <p>Congratulations you now have a Subutai Resource Host. You can start importing and running containers on
-            it.</p>
+          <pre>sudo /snap/subutai/current/bin/btrfsinit /dev/your_block_device</pre>
 
           <div class="accordion">
             <ul>
               <li class="accordion__item">
-                <div class="accordion__header accordion__info"><i class="fa fa-info-circle icon-info"></i> Adding RHs to
-                  Existing
-                  Peers
+                <div class="accordion__header accordion__info"><i class="fa fa-info-circle icon-info"></i>
+                  Congratulations you have a RH!
                 </div>
 
                 <div class="accordion__content accordion__installation_content">
+                  <p>Now you should see the block device mounted:</p>
+
+                  <pre>subutai@ud1704s:~$ df -h /var/snap/subutai/common/lxc<br/>Filesystem Size Used Avail Use% Mounted on<br/>/dev/mapper/ud1704-btrfs 94G 17M 92G 1% /var/snap/subutai/common/lxc</pre>
+
                   <p>You can use this same process to create more RHs and add them to peers. RHs must be on the same
-                    LAN.
-                    The
-                    process to add a RH uses the Simple Service Discovery Protocol. RHs that are not bound to a peer on
-                    the
-                    network announce their availability. The peer console will show the RH and the admin can use an
-                    authorization
-                    process to approve adding the RH to the peer.</p>
+                    LAN. The process to add a RH uses the Simple Service Discovery Protocol. RHs that are not bound to
+                    a peer on the network announce their availability. The peer console will show the RH and the admin
+                    can use an authorization process to approve adding the RH to the peer.</p>
                   <p>
                     <iframe width="100%" height="450" src="https://www.youtube.com/embed/yMI1r94mO4M"
                             frameborder="0"
@@ -504,7 +530,6 @@ sudo killall dnsmasq</pre>
               </li>
             </ul>
           </div>
-          <p>To convert this RH into a peer the management container must be imported.</p>
 
         </div>
         <div>
@@ -527,14 +552,29 @@ sudo killall dnsmasq</pre>
               </div>
             </div>
           </div>
-          <p>The command will output the Subutai Console’s access URL. See the red rectangle in the screen capture
-            below:</p>
 
-          <img src="img/sconsole.png" style="width: 100%">
 
-          <p>The peer can now be managed from this URL via the Subutai Management Console. The default <code>admin</code> user
-            account's password is <code>secret</code>. On first login, you'll be asked to change this password. Before
-            you login install the Subutai E2E Browser Plugin with at least one PGP key.</p>
+          <div class="accordion">
+            <ul>
+              <li class="accordion__item">
+                <div class="accordion__header accordion__info"><i class="fa fa-info-circle icon-info"></i>
+                  Congratulations you have a Peer!
+                </div>
+
+                <div class="accordion__content accordion__installation_content">
+                  <p>The command will output the Subutai Console’s access URL. See the red rectangle in the screen capture
+                    below:</p>
+
+                  <img src="img/sconsole.png" style="width: 100%">
+
+                  <p>The peer can now be managed from this URL via the Subutai Management Console. The default <code>admin</code> user
+                    account's password is <code>secret</code>. On first login, you'll be asked to change this password. Before
+                    you login install the Subutai E2E Browser Plugin with at least one PGP key.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
         </div>
 
       </section>
@@ -596,26 +636,6 @@ sudo killall dnsmasq</pre>
               </li>
             </ul>
           </div>
-
-          <div class="accordion">
-            <ul>
-              <li class="accordion__item">
-                <div class="accordion__header accordion__warning"><i class="fa fa-exclamation-circle icon-warning"></i>
-                  Supported
-                  Browsers
-                </div>
-
-                <div class="accordion__content accordion__installation_content">
-                  <p>At this point we’ve stopped supporting Firefox because of changes to their extensions API, and have
-                    yet
-                    to
-                    provide support for Edge. Chrome and Safari are the two supported browsers.</p>
-
-                </div>
-              </li>
-            </ul>
-          </div>
-
         </div>
 
         <div style="margin-top: 40px">
@@ -648,28 +668,29 @@ sudo killall dnsmasq</pre>
                 </ul>
               </div>
             </div>
-            <p>The P2P daemon allows systems to join the swarm to access private cloud environments. It can be installed
-              onto any desktop or headless system with packages available for Windows, Linux, and Mac OS. For Mac and
-              Windows the installers are trivial and standard MSI and Mac packages. For Linux:</p>
 
-            <pre>sudo dpkg -i /path/to/subutai-p2p.deb<br/>sudo apt-get install -f</pre>
             <div class="accordion">
               <ul>
                 <li class="accordion__item">
                   <div class="accordion__header accordion__warning"><i
-                      class="fa fa-exclamation-circle icon-warning"></i>
-                    Do not install P2P on systems with the snap
+                          class="fa fa-exclamation-circle icon-warning"></i>
+                    <b>WARNING</b>: Do not co-install with the Subutai Snap
                   </div>
 
                   <div class="accordion__content accordion__installation_content">
                     <p>The Subutai Snap uses the P2P daemon on RHs and peers to make them swarm together. You cannot
-                      install
-                      the Subutai P2P daemon on a system that already has the Subutai Snap installed on it: it will
+                      install the Subutai P2P daemon on a system that already has the Subutai Snap installed on it: it will
                       produce a UDP port 6881 conflict.</p>
                   </div>
                 </li>
               </ul>
             </div>
+
+            <p>The P2P daemon allows systems to join the swarm to access private cloud environments. It can be installed
+              onto any desktop or headless system with packages available for Windows, Linux, and Mac OS. For Mac and
+              Windows the installers are trivial and standard MSI and Mac packages. For Linux:</p>
+
+            <pre>sudo dpkg -i /path/to/subutai-p2p.deb<br/>sudo apt-get install -f</pre>
 
             <div class="accordion">
               <ul>
@@ -740,18 +761,13 @@ sudo killall dnsmasq</pre>
                 </ul>
               </div>
             </div>
-            <p>The P2P daemon allows systems to join the swarm to access private cloud environments. It can be installed
-              onto any desktop or headless system with packages available for Windows, Linux, and Mac OS. For Mac and
-              Windows the installers are trivial and standard MSI and Mac packages. For Linux:</p>
-
-            <pre>sudo dpkg -i /path/to/subutai-p2p.deb<br/>sudo apt-get install -f</pre>
 
             <div class="accordion">
               <ul>
                 <li class="accordion__item">
                   <div class="accordion__header accordion__warning"><i
-                      class="fa fa-exclamation-circle icon-warning"></i>
-                    Do not install P2P on systems with the snap
+                          class="fa fa-exclamation-circle icon-warning"></i>
+                    <b>WARNING</b>: Do not co-install with the Subutai Snap
                   </div>
 
                   <div class="accordion__content accordion__installation_content">
@@ -765,6 +781,12 @@ sudo killall dnsmasq</pre>
                 </li>
               </ul>
             </div>
+
+            <p>The P2P daemon allows systems to join the swarm to access private cloud environments. It can be installed
+              onto any desktop or headless system with packages available for Windows, Linux, and Mac OS. For Mac and
+              Windows the installers are trivial and standard MSI and Mac packages. For Linux:</p>
+
+            <pre>sudo dpkg -i /path/to/subutai-p2p.deb<br/>sudo apt-get install -f</pre>
 
             <div class="accordion">
               <ul>
@@ -833,17 +855,13 @@ sudo killall dnsmasq</pre>
                 </ul>
               </div>
             </div>
-            <p>The P2P daemon allows systems to join the swarm to access private cloud environments. It can be installed
-              onto any desktop or headless system with packages available for Windows, Linux, and Mac OS. For Mac and
-              Windows the installers are trivial and standard MSI and Mac packages. For Linux:</p>
 
-            <pre>sudo dpkg -i /path/to/subutai-p2p.deb<br/>sudo apt-get install -f</pre>
             <div class="accordion">
               <ul>
                 <li class="accordion__item">
                   <div class="accordion__header accordion__warning"><i
-                      class="fa fa-exclamation-circle icon-warning"></i>
-                    Do not install P2P on systems with the snap
+                          class="fa fa-exclamation-circle icon-warning"></i>
+                    <b>WARNING</b>: Do not co-install with the Subutai Snap
                   </div>
 
                   <div class="accordion__content accordion__installation_content">
@@ -857,6 +875,12 @@ sudo killall dnsmasq</pre>
                 </li>
               </ul>
             </div>
+
+            <p>The P2P daemon allows systems to join the swarm to access private cloud environments. It can be installed
+              onto any desktop or headless system with packages available for Windows, Linux, and Mac OS. For Mac and
+              Windows the installers are trivial and standard MSI and Mac packages. For Linux:</p>
+
+            <pre>sudo dpkg -i /path/to/subutai-p2p.deb<br/>sudo apt-get install -f</pre>
 
             <div class="accordion">
               <ul>
