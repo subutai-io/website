@@ -60,6 +60,7 @@
 
   <!--[if gt IE 8]><!-->
   <script src="js/jquery-2.1.4.min.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>
   <script src="js/jquery.mousewheel.min.js"></script>
   <script src="js/blockScroll.js"></script>
 
@@ -350,8 +351,8 @@
                   problem, and the non-Ubuntu distributions need snapd installed. Debian Stretch (headless) needs snapd
                   installed. See the warnings below about NetworkManager if you’re installing the snap on a desktop
                   system with NetworkManager (most likely) installed. See the
-                  <a href="#NetworkManager">"Disable dnsmasq on desktop editions!"</a> section below.</p>
-              </div>
+                  <a href="#NetworkManager" class="accordion_selection">"Disable dnsmasq on desktop editions!"</a> section below.</p>
+                </div>
             </li>
           </ul>
         </div>
@@ -360,10 +361,9 @@
           <h3 class="getting-started-main-info__h3"> Install the Snap Package</h3>
 
 
-          <div class="accordion">
+          <div  class="accordion">
             <ul>
-              <li class="accordion__item">
-                <a name="NetworkManager"></a>
+              <li class="accordion__item" id="NetworkManager">
                 <div class="accordion__header accordion__warning"><i class="fa fa-exclamation-circle icon-warning"></i>
                   <b>WARNING</b>: Disable dnsmasq on desktop editions!
                 </div>
@@ -1123,6 +1123,22 @@ snap list</pre>
     $.fn.slideFadeToggle = function (easing, callback) {
         return this.animate({opacity: 'toggle', height: 'toggle'}, 'fast', easing, callback);
     };
+
+    $('.accordion_selection1').on('click', function(){
+        var hash = this.href.substring(this.href.indexOf("#")+1);
+        var accordion = $("#"+hash).find('.accordion__header');
+    });
+
+    $('.accordion_selection2').on('click', function(){
+        var hash = this.href.substring(this.href.indexOf("#")+1);
+        var accordion = $("#"+hash).find('.accordion__item');
+        accordion.accordion({active: 0})
+    });
+    $('.accordion_selection').on('click', function(){
+        var hash = this.href.substring(this.href.indexOf("#")+1);
+        var accordion = $('.accordion__item[id='+hash+']');
+        accordion.accordion({active: 0})
+    });
 </script>
 
 <noscript>
