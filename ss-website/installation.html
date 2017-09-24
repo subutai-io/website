@@ -284,7 +284,7 @@
 
                       <p><a class="close" href="/">Close</a></p>
                     </div>
-                    (i.e. <code>lsof -i :53</code>) before installing the snap:
+                    (i.e. <code>sudo lsof -i :53</code>) before installing the snap:
                     <ul style="margin-left: 20px">
                       <li class="installation__li">udp/53 - DNS service port</li>
                       <li class="installation__li">udp/67 - DHCP service port</li>
@@ -339,7 +339,7 @@
                   desktop edition, check to see if port 53 is already bound:
 
 <pre>
-lsof -i :53
+sudo lsof -i :53
 </pre>
                 Any output from lsof means port 53 is being used. You'll need to stop dnsmasq permanently. Here’s how:</p>
 
