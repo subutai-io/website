@@ -8939,3 +8939,14 @@ label
 {
     padding: 0 20px 0 40px;
 }
+
+.help-us
+{
+    text-align: justify;
+}
+
+.help-us p, .help-us.div
+{
+    margin: 8px 0;
+    padding-bottom: 8px;
+}
