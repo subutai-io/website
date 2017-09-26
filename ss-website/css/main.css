@@ -7615,10 +7615,11 @@ body
     height: 100%;
 }
 
+
 .page__content
 {
     position: relative;
-    z-index: 2;
+    z-index: 0;
 
     max-width: 960px;
     margin: 0 auto;
@@ -7628,7 +7629,6 @@ body
     transition: 125ms all ease-in-out;
     letter-spacing: 1px;
 
-    background: #fff;
 }
 
 .page__row
