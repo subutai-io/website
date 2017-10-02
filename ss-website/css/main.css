@@ -1157,20 +1157,31 @@ input[type='button'].button_block
 {
     position: relative;
 
-    max-width: 960px;
+    max-width: 1060px;
     margin: 0 auto;
     padding: 18px 0 18px 0;
 }
 
 .footer__menu
 {
-    float: left;
+    float: right;
 }
 
 .footer__social
 {
     float: right;
 }
+
+.footer__logo
+{
+    float: left;
+}
+
+.footer__copyright
+{
+    float: left;
+}
+
 
 .footer__arrow
 {
