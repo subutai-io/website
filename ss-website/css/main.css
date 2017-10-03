@@ -1578,7 +1578,7 @@ input[type='button'].button_block
     display: flex;
     flex-direction: column;
 
-    height: 320px;
+    height: 100vh;
 
     background-color: #303644;
 
@@ -1603,7 +1603,9 @@ input[type='button'].button_block
 .getting-started-main__info
 {
     position: relative;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
     max-width: 570px;
     height: 100%;
     margin: 0 auto;
