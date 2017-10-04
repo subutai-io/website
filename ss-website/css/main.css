@@ -3103,7 +3103,7 @@ html.remodal-is-locked
     position: absolute;
     right: 0;
     bottom: 20%;
-
+    top: 20%;
     width: 370px;
     padding: 0 20px 0 20px;
 
