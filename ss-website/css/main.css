@@ -1157,7 +1157,7 @@ input[type='button'].button_block
 {
     position: relative;
 
-    max-width: 1060px;
+    max-width: 1170px;
     margin: 0 auto;
     padding: 18px 0 18px 0;
 }
@@ -1191,7 +1191,9 @@ input[type='button'].button_block
 
     margin: -16px 0 0 -16px;
 }
-
+.sold{
+    left: 54%;
+}
 .to-top-arrow
 {
     display: inline-block;
@@ -4034,7 +4036,10 @@ html.remodal-is-locked
 {
     padding: 0 0 60px 0;
 }
-
+.thanks{
+    max-width:960px;
+    margin:0 auto;
+}
 .thanks h1
 {
     text-align: center;
@@ -7633,8 +7638,8 @@ body
 {
     position: relative;
     z-index: 0;
-
     max-width: 960px;
+
     margin: 0 auto;
 
     -webkit-transition: 125ms all ease-in-out;
@@ -7940,7 +7945,11 @@ code
     {
         text-align: left;
     }
-
+    .th_footer{
+        background: #333;
+        height: 100%;
+        min-height: 20vh;
+    }
     .footer__inner
     {
         padding: 18px 20px;
