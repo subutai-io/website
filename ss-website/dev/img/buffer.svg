@@ -1,0 +1,38 @@
+<svg class="ldi-hht7s1" width="200px"  height="200px"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" style="background: rgb(255, 255, 255);"><!--?xml version="1.0" encoding="utf-8"?--><!--Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)--><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" style="transform-origin: 50px 50px 0px;" xml:space="preserve" class=""><g class="" style="transform-origin: 50px 50px 0px; transform: scale(1);"><g class="" style="transform-origin: 50px 50px 0px;"><style type="text/css" class="ld ld-breath" style="transform-origin: 50px 50px 0px; animation-duration: 1s; animation-delay: -1s;">.st0{fill:#040000;} .st1{fill:#050000;} .st2{fill:#E74F0C;} .st3{fill:#4D494C;} .st4{fill:#E72E11;} .st5{fill:#241C1D;}</style><g class="ld ld-breath" style="transform-origin: 50px 50px 0px; animation-duration: 1s; animation-delay: -0.923077s;"><path class="st0" d="M89.288,70.797c0.95,0.475,0.95,0.89,0,1.25L51.42,89.461c-0.95,0.475-1.9,0.475-2.84,0L10.712,72.047 c-0.95-0.36-0.95-0.775,0-1.25l9.069-4.09c0.95-0.475,1.9-0.475,2.84,0L48.58,78.616c0.95,0.475,1.9,0.475,2.84,0l25.958-11.909 c0.95-0.475,1.9-0.475,2.84,0L89.288,70.797z" fill="#35a3f7" style="fill: rgb(53, 163, 247);"></path></g><g class="ld ld-breath" style="transform-origin: 50px 50px 0px; animation-duration: 1s; animation-delay: -0.846154s;"><path class="st0" d="M89.288,49.288c0.95,0.475,0.95,0.95,0,1.42L51.42,68.132c-0.95,0.35-1.9,0.35-2.84,0L10.712,50.708 c-0.95-0.475-0.95-0.95,0-1.42l9.069-4.09c0.95-0.475,1.9-0.475,2.84,0L48.58,57.108c0.95,0.475,1.9,0.475,2.84,0l25.958-11.909 c0.95-0.475,1.9-0.475,2.84,0L89.288,49.288z" fill="#35a3f7" style="fill: rgb(53, 163, 247);"></path></g><g class="ld ld-breath" style="transform-origin: 50px 50px 0px; animation-duration: 1s; animation-delay: -0.769231s;"><path class="st0" d="M10.712,29.199c-0.95-0.475-0.95-0.89,0-1.25L48.58,10.54c0.95-0.475,1.9-0.475,2.84,0l37.868,17.419 c0.95,0.36,0.95,0.775,0,1.25L51.42,46.618c-0.95,0.475-1.9,0.475-2.84,0L10.712,29.199z" fill="#35a3f7" style="fill: rgb(53, 163, 247);"></path></g><metadata xmlns:d="https://loading.io/stock/" class="ld ld-breath" style="transform-origin: 50px 50px 0px; animation-duration: 1s; animation-delay: -0.692308s;">
+<d:name class="ld ld-breath" style="transform-origin: 50px 50px 0px; animation-duration: 1s; animation-delay: -0.615385s;">buffer</d:name>
+<d:tags class="ld ld-breath" style="transform-origin: 50px 50px 0px; animation-duration: 1s; animation-delay: -0.538462s;">buffer,brand wb</d:tags>
+<d:license class="ld ld-breath" style="transform-origin: 50px 50px 0px; animation-duration: 1s; animation-delay: -0.461538s;">cc0</d:license>
+<d:slug class="ld ld-breath" style="transform-origin: 50px 50px 0px; animation-duration: 1s; animation-delay: -0.384615s;">hht7s1</d:slug>
+</metadata></g></g><style type="text/css" class="ld ld-breath" style="transform-origin: 50px 50px 0px; animation-duration: 1s; animation-delay: -0.307692s;">path,ellipse,circle,rect,polygon,polyline,line { stroke-width: 0; }@keyframes ld-breath {
+  0% {
+    -webkit-transform: scale(0.86);
+    transform: scale(0.86);
+  }
+  50% {
+    -webkit-transform: scale(1.06);
+    transform: scale(1.06);
+  }
+  100% {
+    -webkit-transform: scale(0.86);
+    transform: scale(0.86);
+  }
+}
+@-webkit-keyframes ld-breath {
+  0% {
+    -webkit-transform: scale(0.86);
+    transform: scale(0.86);
+  }
+  50% {
+    -webkit-transform: scale(1.06);
+    transform: scale(1.06);
+  }
+  100% {
+    -webkit-transform: scale(0.86);
+    transform: scale(0.86);
+  }
+}
+.ld.ld-breath {
+  -webkit-animation: ld-breath 1s infinite;
+  animation: ld-breath 1s infinite;
+}
+</style></svg></svg>
