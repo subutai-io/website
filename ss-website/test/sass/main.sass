@@ -50,6 +50,7 @@ body
 div.section
 	overflow-x: hidden
 	overflow: hidden
+
 #particles-js
 	position: absolute
 	z-index: 1
@@ -170,8 +171,6 @@ ul
 	width: 100%
 	left: 0
 	height: 100%
-	min-height: 120vh
-	content: hidden
 	.container
 		position: relative
 		height: 100%
@@ -234,10 +233,10 @@ ul
 	background-image: url("../img/ss-info-img.png")
 	background-repeat: no-repeat
 	background-position: bottom
-	padding-top: 80px
+
 .content_page
 	position: absolute
-	top: 0px!important
+	top: 0
 .content_page_text
 	p
 		@extend %p
@@ -248,7 +247,7 @@ ul
 	line-height: 2
 	font-weight: 300
 .services
-	background-color: #04192B
+	background-color: $cosmo
 	height: 100%
 	min-height: 100vh
 	color: #fff
@@ -341,4 +340,94 @@ ol
 .about_page_text
 	@extend %p
 	font-size: 14px
+.default_static-header
+	background-color: $cosmo
+.heading_main-faq
+	background-color: #eee
+	height: auto
+	position: relative
+	overflow: hidden
+.default_copyright
+	position: relative
+	overflow: hidden
+.faq_content_quest
+	background-color: #ddd
+.faq_heading_content
+	position: relative
+	overflow: hidden
+	padding: 5% 0
+	h2
+		color: #333
+		font-weight: 300
+		font-size: 2.5rem
+	input
+		width: 800px
+		padding: 15px
+		border-radius: 50px
+		margin: 30px auto
+		border: none
+	input::placeholder
+		color: #e8e8e8
+.faq_content
+	width: 100%
+	height: auto
+	min-height: 30vh
+	padding: 75px
+	background-color: $white
+	h3
+		color: #333
+		font-weight: 300
+.list-group-item.active
+	background-color: $cosmo!important
+	border: none
+.item_cat_faq
+	margin: 25px 0
+.faq_content
+	.list-group-item-action
+		font-size: 13px
+.img_to_svg
+	.media
+		border: 1px dashed #e8e8e8
+		padding: 25px
+		border-radius: 5px
+		.svg_img
+			width: 120px
+			height: 120px
+			display: flex
+			justify-content: center
+			align-items: center
+			border-radius: 100%
+			background-color: #eee
+			margin-right: 5%
+.goodwill_content
+	ul
+		list-style: circle
+.faq_content
+	background-color: #e8e8e8
+.faq_q 
+	h3
+		background-color: $cosmo
+		color: #fff
+		padding: 10px
+		margin: 0
+		border-top-left-radius: 10px
+		border-top-right-radius: 10px
+		font-size: 2rem
+	ul
+		list-style-type: circle
+		padding: 25px
+.card-block
+	padding: 15px !important
+	letter-spacing: 1px
+	line-height: 2
+.card-header:first-child
+	border-radius: 0
+.card
+	border-radius: 0
+	border: none
+.card-header
+	h5
+		a
+			color: #212121
+			text-decoration: none
 @import "media" // Всегда в конце
