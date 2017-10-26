@@ -62,9 +62,14 @@ ul
 	margin: 0
 	padding: 0
 	list-style: none
+a
+	color: #6bcdff
 .p_t
 	padding: 5% 0
 	margin: 0 auto
+
+.slack-text
+	z-index: 999
 .article_heading
 	h2
 		font-size: 1.9vw
@@ -141,6 +146,7 @@ ul
 	height: 10vh
 	position: relative
 	z-index: 1
+	padding: 0 50px
 	.main_menu
 		.logo
 			width: 200px
@@ -315,12 +321,19 @@ ol
 .about
 	.header
 		background-color: #111111
+.hall_mad
+	padding-left: 5%
+	margin-left: 15%
+	border-left: 1px solid #333
+	font-size: 13px
+	font-style: italic
 .content_about
 	letter-spacing: 1px
 	line-height: 2
 	font-size: 14px
 	font-weight: 300
-	padding: 5% 0
+	padding: 5% 3%
+
 	.about_heading
 		h2
 			color: $accent
@@ -356,7 +369,6 @@ ol
 .faq_heading_content
 	position: relative
 	overflow: hidden
-	padding: 5% 0
 	h2
 		color: #333
 		font-weight: 300
@@ -409,14 +421,17 @@ ol
 	h3
 		background-color: $cosmo
 		color: #fff
-		padding: 10px
+		padding: 15px
 		margin: 0
 		border-top-left-radius: 10px
 		border-top-right-radius: 10px
-		font-size: 2rem
+		font-size: 1.5rem
 	ul
 		list-style-type: circle
 		padding: 25px
+	.card-header h5 a
+		font-size: 16px
+		color: #333
 .card-block
 	padding: 15px !important
 	letter-spacing: 1px
