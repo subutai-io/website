@@ -212,8 +212,9 @@
 -->
 
         <p>
-          The easiest way to install a Subutai Peer is to use vagrant. Make sure you have vagrant 2.0.0 or higher
-          installed with VirtualBox 5.1.0 or higher. Init the Vagrant file then up the instance:
+          The easiest way to install a Subutai Peer is to use <a href="https://www.vagrantup.com/downloads.html">Vagrant</a>.
+          Make sure you have vagrant 2.0.0 or higher installed with <a href="https://www.virtualbox.org/wiki/Downloads">VirtualBox</a> 5.1.0 or higher. Init the Vagrant file
+          then up the instance:
         </p>
 
         <pre>
@@ -241,7 +242,9 @@ vagrant up</pre>
 
                   <img src="img/sconsole.png" style="width: 100%">
 
-                  <p>The peer can now be managed from this URL via the Subutai Management Console. The default <code>admin</code> user
+                  <p>The peer can now be managed from this URL via the Subutai Management Console if you used bridged mode.
+                    If you used NAT mode with -nobridge on the image name, then you can use
+                    <a href="https://localhost:9999">https://localhost:9999</a> The default <code>admin</code> user
                     account's password is <code>secret</code>. On first login, you'll be asked to change this password. Before
                     you login install the Subutai E2E Browser Plugin with at least one PGP key.</p>
                 </div>
