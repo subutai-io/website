@@ -12,4 +12,5 @@ jQuery.noConflict()(function(){
 	$grid.imagesLoaded().progress( function() {
 		$grid.masonry();
 	});
+	
 });
