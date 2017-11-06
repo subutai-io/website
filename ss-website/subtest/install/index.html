@@ -107,12 +107,12 @@
                                 <h4 class="new_heading">Peer Installation With Vagrant (<a href="peer-installations.html">Advanced Installations</a>)</h4>
                                 <p>The easiest and quickest way to get a Subutai Peer running on any platform is to use Vagrant with VirtualBox. Don't use package managers to install them: their versions are too old. Download the latest vagrant 2.0.0 or higher and VirtualBox 5.1.0 or higher from their respective websites. Once Vagrant and VirtualBox are installed init the Vagrantfile then up the instance:</p>
                                 <pre class="brush:html">
-                                   # Exclude "-nobridge" for bridged mode if you can get an IP on your network
-                                   vagrant init subutai/stretch-nobridge
-                                   vagrant up
-                               </pre>
-                               <p>You now have an active RH. Import the management container to convert this host into a peer after ssh'ing into it:</p>
-                               <pre class="brush:html">
+                                 # Exclude "-nobridge" for bridged mode if you can get an IP on your network
+                                 vagrant init subutai/stretch-nobridge
+                                 vagrant up
+                             </pre>
+                             <p>You now have an active RH. Import the management container to convert this host into a peer after ssh'ing into it:</p>
+                             <pre class="brush:html">
                                 vagrant ssh
                                 sudo /snap/bin/subutai import management
                             </pre>
@@ -170,13 +170,13 @@
                                 <h3>Download Subutai</h3>
                                 <div class="tabs_download">
                                     <ul class="nav nav-pills nav-justified">
-                                        <li class="active"><a data-toggle="tab" href="#home"><i class="fa fa-windows mr" aria-hidden="true"></i><span>Windows</span></a></li>
-                                        <li><a data-toggle="tab" href="#menu1"><i class="fa fa-apple mr" aria-hidden="true"></i><span>Mac OS</span></a></li>
-                                        <li><a data-toggle="tab" href="#menu2"><i class="fa fa-linux mr" aria-hidden="true"></i><span>Linux</span></a></li>
+                                        <li id="windows"><a data-toggle="tab" href="#home"><i class="fa fa-windows mr" aria-hidden="true" ></i><span>Windows</span></a></li>
+                                        <li id="macos"><a  data-toggle="tab" href="#menu1"><i class="fa fa-apple mr" aria-hidden="true" ></i><span>Mac OS</span></a></li>
+                                        <li id="linux"><a data-toggle="tab" href="#menu2"><i class="fa fa-linux mr" aria-hidden="true" ></i><span>Linux</span></a></li>
                                     </ul>
                                     <div class="tab-content">
                                         <!-- WIndows -->
-                                        <div id="home" class="tab-pane fade in active">
+                                        <div id="home" class="tab-pane fade">
                                             <br><br>
                                             <table cellspacing="5" cellpadding="10" width="100%">
                                                 <tr>
@@ -348,18 +348,51 @@
             <!-- // end container -->
         </div>
         <!-- end wrapper -->
+        <script>
+
+        </script>
         <script src="js/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/retina.js"></script>
         <script src="js/jquery.fitvids.js"></script>
         <script src="js/wow.js"></script>
         <script src="js/jquery.prettyPhoto.js"></script>
-        <!-- CUSTOM PLUGINS -->
-        <script src="js/custom.js"></script>
-        <script src="js/main.js"></script>
-        <script src="js/syntax-highlighter/scripts/shCore.js"></script>
-        <script src="js/syntax-highlighter/scripts/shBrushXml.js"></script>
-        <script src="js/syntax-highlighter/scripts/shBrushCss.js"></script>
-        <script src="js/syntax-highlighter/scripts/shBrushJScript.js"></script>
-    </body>
-    </html>
+        <script>
+            // Определяем "семейство" операционной системы:
+            var os = 0;
+            if (navigator.userAgent.indexOf ('Windows') != -1) os = 1;
+            if (navigator.userAgent.indexOf ('Linux')!= -1) os = 2;
+            if (navigator.userAgent.indexOf ('Mac')!= -1) os = 3;
+            if (navigator.userAgent.indexOf ('FreeBSD')!= -1) os = 4;
+// alert(navigator.userAgent);
+switch (os) {
+ case 1:
+ $("#windows").addClass("active");
+ $("#home").addClass("in active");
+ break;
+ case 2:
+ $("#linux").addClass("active");
+ $("#menu2").addClass("in active");
+ break;
+ case 3:
+
+  $("#macos").addClass("active");
+ $("#menu1").addClass("in active");
+ break;
+ case 4:
+ alert('FreeBSD');
+ break;
+ default:
+ alert('Не удалось определить ОС!');
+ break;
+}
+</script>
+<!-- CUSTOM PLUGINS -->
+<script src="js/custom.js"></script>
+<script src="js/main.js"></script>
+<script src="js/syntax-highlighter/scripts/shCore.js"></script>
+<script src="js/syntax-highlighter/scripts/shBrushXml.js"></script>
+<script src="js/syntax-highlighter/scripts/shBrushCss.js"></script>
+<script src="js/syntax-highlighter/scripts/shBrushJScript.js"></script>
+</body>
+</html>
