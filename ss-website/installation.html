@@ -201,7 +201,7 @@
 
     <div class="content-wrapper">
 
-      <h1 class="page-title">Quick Peer Installation With Vagrant (<a href="admin_installation.html">advanced installations</a>)</h1>
+      <h1 class="page-title">Peer Installation</h1>
 
       <section>
         <!--
@@ -210,24 +210,351 @@
               class="ezpz-button ezpz-download">New (Beta) EZPZ Launchers</span></a>
         </div>
 -->
+        <p>Subutai is based on Snappy, and has its own snap package in the Ubuntu One Store. Installing the <a
+            href="https://github.com/subutai-io/snap">Subutai Snap</a> package on a snapd supported (<a
+            href="https://github.com/snapcore/snapd/wiki/Distributions#support-matrix">see the support matrix</a>)
+          operating system enables the host as a Subutai Resource Host (RH) <a class="htooltip" href="#"><i
+              class="fa fa-info-circle icon-info"></i><span> RHs have shareable resources (RAM, CPU, DISK) and are added to peers to increase their capacity. An unlimited number of RHs added may be added to a peer. RHs may be physical or virtual machines using any hypervisor.</span></a>
+          . Importing a special container, named “management”, automatically installs the Subutai
+          Management Console into the RH turning it into a Subutai Peer <a class="htooltip" href="#"><i
+              class="fa fa-info-circle icon-info"></i><span>A Subutai Peer is a set of managed RHs on the same LAN. The Subutai Management Software orchestrates the creation and destruction of cloud segments running in a peer. It’s what swarms with other peers to create virtual private cloud environments. At least one RH in the peer MUST run a management container.
+          </span></a>.</p>
 
-        <p>
-          The easiest and quickest way to get a Subutai Peer running on any platform is to use
-          <a href="https://www.vagrantup.com/downloads.html">Vagrant</a> with
-          <a href="https://www.virtualbox.org/wiki/Downloads">VirtualBox</a>. Don't use package managers to
-          install them: their versions are too old. Download the latest vagrant 2.0.0 or higher and VirtualBox 5.1.0 or
-          higher from their respective websites. Once Vagrant and VirtualBox are installed init the Vagrantfile then up the instance:</p>
-        <pre>
-# Exclude "-nobridge" for bridged mode if you can get an IP on your network
-vagrant init subutai/stretch-nobridge
-vagrant up</pre>
+        <div class="accordion">
+          <ul>
+            <li class="accordion__item">
+              <div class="accordion__header accordion__warning"><i class="fa fa-exclamation-circle icon-warning"></i>
+                <b>WARNING</b>: Before starting ...
+              </div>
 
-          <p>You now have an active RH. Import the management container to convert this host into a peer after ssh'ing
-            into it:</p>
+              <div class="accordion__content accordion__installation_content">
+                <p><b>WARNING: DON'T FORGET THE EXTRA DISK OR PARTITION!</b></p>
 
-          <pre>
- vagrant ssh
- sudo /snap/bin/subutai import management</pre>
+                <p>Many people have an, "Oh #F$&D@)# !" moment when futher down in the directions they realize an extra
+                  storage device is needed. Several configure a VM or a new machine forgetting to add
+                  the disk, partition, or volume so, don't forget. Read the hardware requirements carefully.</p>
+
+                <p><b>WARNING: DON'T USE FIREFOX. STICK TO CHROME.</b></p>
+
+                <p>Before logging into a peer console you'll want to install the Subutai Chrome extension. We’ve
+                  temporarily stopped supporting Firefox because of changes to their extensions API, and have
+                  yet to provide support for Edge. Chrome and Safari are the only two supported browsers right now.</p>
+
+                <p><b>Don't freak out about email or social networking accounts</b></p>
+
+                <p>We use your email and social network accounts for verification and for your unique username
+                  identifier. Don't think we're going to spam you, or start sending invites to your friends. This
+                  is totally against our policies.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="accordion">
+          <ul>
+            <li class="accordion__item">
+              <div class="accordion__header accordion__check"><i class="fa fa-check-circle icon-check"></i> Hardware
+                Requirements
+              </div>
+              <div class="accordion__content accordion__installation_content">
+                <p>Unlimited hardware configuration options are possible. However, if setting up a trial
+                  peer with a single RH we recommend running it on a virtual machine with at least:</p>
+                <div style="margin-left: 20px">
+                  <ul class="installation__ul">
+                    <li class="installation__li">2 or more CPU cores</li>
+                    <li class="installation__li">2G of RAM (8G+ best)</li>
+                    <li class="installation__li">2 disks or partitions, one for the operating system >10G, and one for
+                      container storage >100G
+                    </li>
+                    <li class="installation__li">1 network adapter 1Gbit (bridged)</li>
+                  </ul>
+                </div>
+
+                <p><b>DON'T FORGET THE EXTRA DISK OR PARTITION!</b></p>
+
+                <p>Any hypervisor or cloud provider instance may be used so long as these virtual hardware resources are
+                  available to the guest operating system. Peers can run on Hyper-V, GCE, AWS, KVM, VirtualBox, VMWare,
+                  and
+                  Parellels.</p>
+
+                <p>A virtual machine is not absolutely necessary, but a convenient <a class="htooltip" href="#"><i
+                    class="fa fa-info-circle icon-info"></i><span>However, before login, make sure the client browser has the Subutai E2E plugin installed with and contains PGP keys.</span></a>
+                  approach. A peer can be installed on an
+                  existing physical host with full security and isolation without a VM. In this case, similar hardware
+                  requirements apply to the existing physical host.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="accordion">
+          <ul>
+            <li class="accordion__item">
+              <div class="accordion__header accordion__check"><i class="fa fa-check-circle icon-check"></i> Operating
+                System
+                Requirements
+              </div>
+              <div class="accordion__content accordion__installation_content">
+                <p>Some general caveats and requirements for the operating system on which the snap package is being
+                  installed are:</p>
+
+                <ol>
+                  <li>Using a freshly installed operating system is preferable,</li>
+                  <li>The operating system should have snapd installed and updated,</li>
+                  <li>All system components should be updated to the latest available version including system libraries
+                    and
+                    the kernel,
+                  </li>
+                  <li>Avoid installing any additional components on the system,</li>
+                  <li>Avoid desktop distributions due to NetworkManager’s <code>dnsmask</code> running on port 53</li>
+                  <li>The system should have network connectivity (via a bridge if virtual)</li>
+                  <li>A DHCP service should be present on the LAN to acquire an IP address</li>
+                  <li>Check that the required network ports listed below are not used <a href="#" class="warn3"><i
+                      class="fa fa-info-circle icon-info"></i></a>
+                    <div class="disclaimer pop">
+                      <p>Use this script to check: <a href="https://subutai.io/check_ports.sh">https://subutai.io/check_ports.sh</a>
+                      </p>
+
+                      <p><a class="close" href="/">Close</a></p>
+                    </div>
+                    (i.e. <code>sudo lsof -i :53</code>) before installing the snap:
+                    <ul style="margin-left: 20px">
+                      <li class="installation__li">udp/53 - DNS service port</li>
+                      <li class="installation__li">udp/67 - DHCP service port</li>
+                      <li class="installation__li">tcp/80 - Web service port</li>
+                      <li class="installation__li">tcp/443 - Secure web service port</li>
+                      <li class="installation__li">udp/1900 - Service discovery service port</li>
+                      <li class="installation__li">udp/6881 - P2P service port</li>
+                      <li class="installation__li">tcp/8086 - Metrics service port</li>
+                      <li class="installation__li">tcp/8443 - Subutai Management Console web service port</li>
+                      <li class="installation__li">tcp/8444 - Subutai Management LAN communication service port</li>
+                    </ul>
+
+                  </li>
+                </ol>
+                <p>Using a guest virtual machine allows for maximum flexibility to install a stock unmodified guest VM
+                  operating system and reduces complications. Ubuntu Server 16.04.3 or 17.04 operating systems are best:
+                  they come pre-installed with snapd. Debian is also a good candidate, but the snapd package needs to be
+                  installed:</p>
+
+                <pre>sudo apt-get install snapd</pre>
+                <p>The snap has been tested on the following operating systems:</p>
+
+                <ul>
+                  <li class="installation__li"> Ubuntu Core 16</li>
+                  <li class="installation__li">Ubuntu Server: 16.04.3 and 17.04</li>
+                  <li class="installation__li text_color_red"><b>Ubuntu Desktop: 16.04.3 and 17.04</b></li>
+                  <li class="installation__li">Debian 9.1.0 - Stretch</li>
+                  <li class="installation__li text_color_red"><b>Debian 9.1.0 - Stretch w/ MATE</b></li>
+                  <li class="installation__li text_color_red"><b>Mint 18.2</b></li>
+                </ul>
+                <p><b>NOTE</b>: All the desktop editions and other headed configurations (<span
+                    class="text_color_red"><b>in bold red</b></span>) have the NetworkManager
+                  problem, and the non-Ubuntu distributions need snapd installed. Debian Stretch (headless) needs snapd
+                  installed. See the warnings below about NetworkManager if you’re installing the snap on a desktop
+                  system with NetworkManager (most likely) installed. See the
+                  <a href="#NetworkManager" class="accordion_selection">"Disable dnsmasq on desktop editions!"</a> section below.</p>
+                </div>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="getting-started-main-info__h3"> Install the Snap Package</h3>
+
+
+          <div  class="accordion">
+            <ul>
+              <li class="accordion__item" id="NetworkManager">
+                <div class="accordion__header accordion__warning"><i class="fa fa-exclamation-circle icon-warning"></i>
+                  <b>WARNING</b>: Disable dnsmasq on desktop editions!
+                </div>
+
+                <div class="accordion__content accordion__installation_content">
+                  <p>Virtual or not, desktop editions should be avoided. Besides unnecessarily wasting resources for the
+                    windowing system they use NetworkManager which installs <code>dnsmasq</code> on port 53. If on a
+                    desktop edition, check to see if port 53 is already bound:
+
+                  <pre>
+sudo lsof -i :53
+</pre>
+                  Any output from lsof means port 53 is being used. You'll need to stop dnsmasq permanently. Here’s how:</p>
+
+                  <pre>sudo systemctl disable systemd-resolved.service<br/>sudo service systemd-resolved stop</pre>
+
+                  <p> Edit <code>/etc/NetworkManager/NetworkManager.conf</code> and change the dns property in the <code>[main]</code>
+                    section so it is set to <code>default</code>: <code>dns=default</code>. Here's how the file may look after adding
+                    or modifying the dns property:
+                  </p>
+
+                  <img src="img/netman.png" style="width: 100%">
+
+                  <pre>
+sudo rm /etc/resolv.conf
+sudo service network-manager restart
+sudo killall dnsmasq</pre>
+                  <p><b>The last killall, is a precaution, don't freak if it says, "no such process".</b></p>
+                  <p>Another lsof for port 53 should not produce any output now. <b>NOTE</b>: if NetworkManager
+                    was not configured properly, after restart, you may need to add your nameserver into the
+                    <code>/etc/resolv.conf</code> file it generates. It’s best to add this to the NetworkManager
+                    connection configuration if you don’t want the resolv.conf file to be overwritten.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="accordion">
+            <ul>
+              <li class="accordion__item">
+                <div class="accordion__header accordion__warning"><i class="fa fa-exclamation-circle icon-warning"></i>
+                  <b>WARNING</b>: Is snapd installed?
+                </div>
+
+                <div class="accordion__content accordion__installation_content">
+                  <p>Before installing the Subutai Snap you may need to install snapd. Try to list your snaps with snap
+                  to see if it is installed:</p>
+
+                  <pre>
+snap list</pre>
+
+                  <p>
+                    Installing snapd is beyond the scope of this document. However, here are some useful commands for
+                    installing and setting up snapd on non-Ubuntu Linux distributions:
+                  </p>
+
+                  <ul style="margin-left: 20px">
+                    <li class="installation__li">Mint, Debian:
+                      <pre>sudo apt-get install snapd</pre></li>
+                    <li class="installation__li">Fedora 24: <pre>sudo dnf install snapd && sudo systemctl enable --now snapd.socket</pre></li>
+                  </ul>
+
+                  <p>If snapd is properly installed, and up to date, then carry on to install the Subutai Snap package.</p>
+
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <pre>sudo snap install subutai --beta --devmode<br/>snap list</pre>
+
+          <div class="accordion">
+            <ul>
+              <li class="accordion__item">
+                <div class="accordion__header accordion__warning"><i class="fa fa-exclamation-circle icon-warning"></i>
+                  <b>WARNING</b>: Possible installation problems
+                </div>
+
+                <div class="accordion__content accordion__installation_content">
+                  <p> On non-Ubuntu Core distributions this might cause the core snap to be downloaded as well as the
+                    Subutai
+                    Snap which depends on it. Ubuntu Core comes with the core snap already installed. Don’t be surprised
+                    to
+                    see
+                    this other core snap getting downloaded and installed.
+                  </p>
+
+                  <p><b>Is the snap installed?</b> The last command after installation checks that the package is installed. You should see similar output
+                    from it:</p>
+
+                  <pre>ubuntu@testbox:~$ snap list<br/>Name Version Rev Developer Notes<br/>core 16-2.27.5 2774 canonical core<br/>subutai 5.0.2 183 devmode<br/>ubuntu-image 0.12+real1 44 canonical devmode</pre>
+
+                  <p> There are known problems with certain hypervisors and bridged networking over WiFi connections. If
+                    you’re
+                    having connectivity issues after snap installation please see the <a
+                        href="https://github.com/subutai-io/snap/wiki/Installation-of-snap-package-failed-on-VM">VM Wifi
+                      workaround</a>.
+                  </p>
+                  <p> The snap package comes with the p2p daemon which uses UDP port 6881. If you previously installed
+                    the p2p daemon package to connect to your cloud environments, then you’ll have a port conflict.
+                    You’ll need to stop and remove the p2p daemon package.
+                  </p>
+                  <p> Some distributions do not immediately update paths on snap package installation. If
+                    you don’t see the command subutai on the path, it should be visible after a logout and login.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div>
+          <h3 class="getting-started-main-info__h3">Setup Container Storage</h3>
+
+          <div class="accordion">
+            <ul>
+              <li class="accordion__item">
+                <div class="accordion__header accordion__warning"><i class="fa fa-exclamation-circle icon-warning"></i>
+                  <b>WARNING</b>: Storage block device
+                </div>
+
+                <div class="accordion__content accordion__installation_content">
+                  <p>Do not forget to use your appropriate block device in place of <code>/dev/your_block_device</code>.
+                    It can be a disk, a partition, a iSCSI target LUN, or an LVM logical volume. It just needs to be a
+                    block device. It should have over 100G to allow for at least one HUGE container to be used on it.</p>
+
+                  <p>
+                    Containers storage is created on this block device. By default, Subutai uses BTRFS but can
+                    use other copy-on-write filesystems like ZFS. The following command creates a BTRFS file
+                    system on the block device and mounts it.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <pre>sudo /snap/subutai/current/bin/btrfsinit /dev/your_block_device</pre>
+
+          <div class="accordion">
+            <ul>
+              <li class="accordion__item">
+                <div class="accordion__header accordion__info"><i class="fa fa-info-circle icon-info"></i>
+                  Congratulations you have a RH!
+                </div>
+
+                <div class="accordion__content accordion__installation_content">
+                  <p>Now you should see the block device mounted:</p>
+
+                  <pre>subutai@ud1704s:~$ df -h /var/snap/subutai/common/lxc<br/>Filesystem Size Used Avail Use% Mounted on<br/>/dev/mapper/ud1704-btrfs 94G 17M 92G 1% /var/snap/subutai/common/lxc</pre>
+
+                  <p>You can use this same process to create more RHs and add them to peers. RHs must be on the same
+                    LAN. The process to add a RH uses the Simple Service Discovery Protocol. RHs that are not bound to
+                    a peer on the network announce their availability. The peer console will show the RH and the admin
+                    can use an authorization process to approve adding the RH to the peer.</p>
+                  <p>
+                    <iframe width="100%" height="450" src="https://www.youtube.com/embed/yMI1r94mO4M"
+                            frameborder="0"
+                            allowfullscreen></iframe>
+                  </p>
+
+                </div>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+        <div>
+          <h3 class="getting-started-main-info__h3">Import the Management Container</h3>
+          <p>Now that the Subutai Snap package is installed, and you have an active RH, you can import the management
+            software and its console to convert this host into a peer:</p>
+
+          <pre>sudo subutai import management</pre>
+
+          <div class="accordion">
+            <div class="accordion__item">
+              <div class="accordion__header accordion__warning">
+                <i class="fa fa-exclamation-circle icon-warning"></i> Troubleshooting a CDN unreachable error
+              </div>
+              <div class="accordion__content accordion__installation_content">
+                When installing directly on a desktop edition, the NetworkManager configuration may not configure the
+                <code>/etc/resolv.conf</code> file properly to resolve CDN addresses causing “CDN unreachable errors”
+                with the import
+                command. If this happens, you must configure NetworkManager to use the right nameserver.
+              </div>
+            </div>
+          </div>
+
 
           <div class="accordion">
             <ul>
@@ -242,9 +569,7 @@ vagrant up</pre>
 
                   <img src="img/sconsole.png" style="width: 100%">
 
-                  <p>The peer can now be managed from this URL via the Subutai Management Console if you used bridged mode.
-                    If you used NAT mode with -nobridge on the image name, then you can use
-                    <a href="https://localhost:9999">https://localhost:9999</a> The default <code>admin</code> user
+                  <p>The peer can now be managed from this URL via the Subutai Management Console. The default <code>admin</code> user
                     account's password is <code>secret</code>. On first login, you'll be asked to change this password. Before
                     you login install the Subutai E2E Browser Plugin with at least one PGP key.</p>
                 </div>
@@ -252,18 +577,55 @@ vagrant up</pre>
             </ul>
           </div>
 
+        </div>
+
       </section>
       <section>
-        <h1>Post Installation</h1>
+        <h2>Post Installation</h2>
 
         <p>
-          Install the client software and tools to use your peers and environments effectively. You're going to want
-          to install the browser extension to manage pgp keys, the p2p client, and the OS tray (wallet) application.
+          With a peer up, some post installation steps are needed to use it.
         </p>
 
         <div>
-          <p>Before logging into the Peer Console, install the Subutai E2E Browser Extension for Chrome. It will
-            prompt you to generate a new PGP key after installing. See the video below if installation is not obvious.</p>
+          <h3 class="getting-started-main-info__h3">Creating and Installing PGP Keys</h3>
+          <p>Subutai uses PGP key pairs to identify all entities including users like cloud owners and peer
+            administrators. The default administrator account on the new peer needs to be associated with the global
+            identity of the peer owner to share or rent resources to others.</p>
+
+          <div class="accordion">
+            <ul>
+              <li class="accordion__item">
+                <div class="accordion__header accordion__note"><i class="fa fa-sticky-note icon-note"></i> Manually
+                  managing PGP
+                  keys
+                </div>
+
+                <div class="accordion__content accordion__installation_content">
+                  <p>Users knowing how to manage their own keys can use other tools to do so. Various platform specific
+                    PGP
+                    tools like GPG on Linux can be used on the command line interface to create and use PGP keys.
+                    Although
+                    possible it’s a major hassle, especially for those that are not PGP savvy worse yet it can actually
+                    be
+                    detrimental for those who don’t understand PKI or how to secure their keys. Even PGP pros will be
+                    annoyed when having to manually deal with frequent challenge and response authorization
+                    operations.</p>
+                  <p>This is why we created browser plugins. Additionally we’re working on FIDO and hardware key fob
+                    integration to always improve security. The Subutai E2E browser plugins have these benefits while
+                    still
+                    leaving the manual approach open.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+
+          <p>As mentioned, the Subutai E2E Browser Plugin / Extension should be installed in the browser with either an
+            existing key or a newly generated PGP key before logging into the management console. The plugin will
+            generate
+            a new key pair for you if you don’t already have one. You can easily import and export keys into the
+            plugin.</p>
 
           <div class="accordion">
             <ul>
@@ -286,7 +648,7 @@ vagrant up</pre>
           </div>
 
           <div id="windows" class="subutaiTabContent" style="display: none">
-            <h3 class="getting-started-main-info__h3">Install the Subutai P2P</h3>
+            <h3 class="getting-started-main-info__h3">Install the Subutai P2P Daemon</h3>
 
 
             <div title="Windows" class="download-button download" style="float: right;margin-top: -60px">
@@ -309,8 +671,48 @@ vagrant up</pre>
               </div>
             </div>
 
-            <p>The P2P daemon allows systems to join the swarm to access private cloud environments. Install the MSI
-              package for Windows. Double click after downloading.</p>
+            <div class="accordion">
+              <ul>
+                <li class="accordion__item">
+                  <div class="accordion__header accordion__warning"><i
+                          class="fa fa-exclamation-circle icon-warning"></i>
+                    <b>WARNING</b>: Do not co-install with the Subutai Snap
+                  </div>
+
+                  <div class="accordion__content accordion__installation_content">
+                    <p>The Subutai Snap uses the P2P daemon on RHs and peers to make them swarm together. You cannot
+                      install the Subutai P2P daemon on a system that already has the Subutai Snap installed on it: it will
+                      produce a UDP port 6881 conflict.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <p>The P2P daemon allows systems to join the swarm to access private cloud environments. It can be installed
+              onto any desktop or headless system with packages available for Windows, Linux, and Mac OS. For Mac and
+              Windows the installers are trivial and standard MSI and Mac packages. For Linux:</p>
+
+            <pre>sudo apt install /path/to/subutai-p2p.deb</pre>
+
+            <div class="accordion">
+              <ul>
+                <li class="accordion__item">
+                  <div class="accordion__header accordion__info"><i class="fa fa-info-circle icon-info"></i> P2P Daemon
+                    and Client Modes
+                  </div>
+                  <div class="accordion__content accordion__installation_content">
+                    <p>The P2P executable has two different launch modes based on the switches used: (1) as client CLI
+                      program, and
+                      (2) as a resident daemon process. When used as a client CLI program it communicates with the P2P
+                      daemon
+                      to
+                      manage it and interact with it. The P2P CLI mode is intended as a “client” to access environments
+                      from
+                      headless systems, the CLI, or shell scripts.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
 
             <img src="img/spacer.png"/>
 
@@ -362,10 +764,51 @@ vagrant up</pre>
               </div>
             </div>
 
-            <p>The P2P daemon allows systems to join the swarm to access private cloud environments. We only support
-              Debian based systems right now. So use apt install like so:</p>
+            <div class="accordion">
+              <ul>
+                <li class="accordion__item">
+                  <div class="accordion__header accordion__warning"><i
+                          class="fa fa-exclamation-circle icon-warning"></i>
+                    <b>WARNING</b>: Do not co-install with the Subutai Snap
+                  </div>
+
+                  <div class="accordion__content accordion__installation_content">
+                    <p>The Subutai Snap uses the P2P daemon on RHs and peers to make them swarm together. You cannot
+                      install
+                      the Subutai P2P daemon on a system that already has the Subutai Snap installed on it: it will
+                      produce a
+                      UDP port 6881 conflict.</p>
+
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <p>The P2P daemon allows systems to join the swarm to access private cloud environments. It can be installed
+              onto any desktop or headless system with packages available for Windows, Linux, and Mac OS. For Mac and
+              Windows the installers are trivial and standard MSI and Mac packages. For Linux:</p>
 
             <pre>sudo apt install /path/to/subutai-p2p.deb</pre>
+
+            <div class="accordion">
+              <ul>
+                <li class="accordion__item">
+                  <div class="accordion__header accordion__info"><i class="fa fa-info-circle icon-info"></i> P2P Daemon
+                    and Client Modes
+                  </div>
+                  <div class="accordion__content accordion__installation_content">
+                    <p>The P2P executable has two different launch modes based on the switches used: (1) as client CLI
+                      program, and
+                      (2) as a resident daemon process. When used as a client CLI program it communicates with the P2P
+                      daemon
+                      to
+                      manage it and interact with it. The P2P CLI mode is intended as a “client” to access environments
+                      from
+                      headless systems, the CLI, or shell scripts.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
 
             <img src="img/spacer.png"/>
 
@@ -415,8 +858,51 @@ vagrant up</pre>
               </div>
             </div>
 
-            <p>The P2P daemon allows systems to join the swarm to access private cloud environments. Download and
-            install the Mac package.</p>
+            <div class="accordion">
+              <ul>
+                <li class="accordion__item">
+                  <div class="accordion__header accordion__warning"><i
+                          class="fa fa-exclamation-circle icon-warning"></i>
+                    <b>WARNING</b>: Do not co-install with the Subutai Snap
+                  </div>
+
+                  <div class="accordion__content accordion__installation_content">
+                    <p>The Subutai Snap uses the P2P daemon on RHs and peers to make them swarm together. You cannot
+                      install
+                      the Subutai P2P daemon on a system that already has the Subutai Snap installed on it: it will
+                      produce a
+                      UDP port 6881 conflict.</p>
+
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <p>The P2P daemon allows systems to join the swarm to access private cloud environments. It can be installed
+              onto any desktop or headless system with packages available for Windows, Linux, and Mac OS. For Mac and
+              Windows the installers are trivial and standard MSI and Mac packages. For Linux:</p>
+
+            <pre>sudo apt install /path/to/subutai-p2p.deb</pre>
+
+            <div class="accordion">
+              <ul>
+                <li class="accordion__item">
+                  <div class="accordion__header accordion__info"><i class="fa fa-info-circle icon-info"></i> P2P Daemon
+                    and Client Modes
+                  </div>
+                  <div class="accordion__content accordion__installation_content">
+                    <p>The P2P executable has two different launch modes based on the switches used: (1) as client CLI
+                      program, and
+                      (2) as a resident daemon process. When used as a client CLI program it communicates with the P2P
+                      daemon
+                      to
+                      manage it and interact with it. The P2P CLI mode is intended as a “client” to access environments
+                      from
+                      headless systems, the CLI, or shell scripts.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
 
             <img src="img/spacer.png"/>
 
@@ -449,8 +935,20 @@ vagrant up</pre>
 
         <div>
 
-          <p>Install the OS Tray application to conveniently access environments from your desktop, manage your peers
-            while showing you your Goodwill balance. Packages for Windows, Linux, and Mac OS are available. For Linux:</p>
+          <p>Although the P2P executable can be used to connect to environments and talk to peer swarms via CLI
+            commands, we recommend installing the OS Tray application for convenient use on a desktop system. The tray
+            application allows you to swarm into environments and even control your peers while showing you your
+            Goodwill balance as a wallet. So for a tight desktop client setup we recommend installing:</p>
+
+          <ul style="margin-left: 20px">
+            <li class="installation__li"><a href="https://chrome.google.com/webstore/detail/subutai-e2e-plugin/ffddnlbamkjlbngpekmdpnoccckapcnh?utm_source=gmail" target="_blank">the browser plugin</a></li>
+            <li class="installation__li">the p2p package (IFF the snap is not installed on the same system)</li>
+            <li class="installation__li">the OS tray application</li>
+          </ul>
+
+          <p>Packages for Windows, Linux, and Mac OS operating systems are available for the OS tray application. For
+            Mac
+            and Windows the installers are trivial and standard MSI and Mac packages. For Linux:</p>
 
           <pre>sudo apt install /path/to/subutai-tray.deb</pre>
 
