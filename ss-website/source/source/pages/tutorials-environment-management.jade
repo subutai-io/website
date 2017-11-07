@@ -1,0 +1,73 @@
+include ../modules/head/head
+include ../modules/footer/footer
+include ../modules/browsehappy/browsehappy
+include ../modules/header-inner/header-inner
+include ../modules/sidebar/sidebar
+include ../modules/page-title/page-title
+include ../modules/demo/demo
+include ../modules/accordion/accordion
+include ../modules/analytics/analytics
+
+
+doctype html
+html(class="no-js" lang="en")
+
+	head
+		+head()
+
+	body.page.page_background-gray
+		+browsehappy(browsehappy)
+
+		.page__header
+			+header-inner()
+
+		.page-docs
+
+			.page-docs__content
+				//-+demo()
+				+sidebar('tutorials.html')
+
+				.content-wrapper
+
+					+page-title({"title": "Tutorials: Environment management"})
+
+					section
+						p
+						+accordion()
+							+accordion-item({"title": "1\) Cross peer environment creation", "open": true, "id": "CrossPeerEnviOnRemotePeer"})
+								iframe(width="100%" height="450" src="https://www.youtube.com/embed/Uo4w9SB2gmE?version=3&enablejsapi=1" frameborder="0" allowfullscreen)
+
+							+accordion-item({"title": "2\) Multi host envrionment creation", "id": "CrossPeerWithTwoHosts"})
+								iframe(width="100%" height="450" src="https://www.youtube.com/embed/mLpOYQwxJKI?version=3&enablejsapi=1" frameborder="0" allowfullscreen)
+
+							+accordion-item({"title": "3\) Environment Console", "id": "pingContainers"})
+								iframe(width="100%" height="450" src="https://www.youtube.com/embed/L_TNC7ijsCQ?version=3&enablejsapi=1" frameborder="0" allowfullscreen)
+
+							+accordion-item({"title": "4\) Grow envrionment", "id": "GrowContainer"})
+								iframe(width="100%" height="450" src="https://www.youtube.com/embed/G89NQXvaf_c?version=3&enablejsapi=1" frameborder="0" allowfullscreen)
+
+							+accordion-item({"title": "5\) Container Manipulation", "id": "StopRemoveContainer"})
+								iframe(width="100%" height="450" src="https://www.youtube.com/embed/lNBDlYFV9wo?version=3&enablejsapi=1" frameborder="0" allowfullscreen)
+
+							+accordion-item({"title": "6\) Set Environment Domain", "id": "SetDomainToContainer"})
+								iframe(width="100%" height="450" src="https://www.youtube.com/embed/wJN1VdO_DQs?version=3&enablejsapi=1" frameborder="0" allowfullscreen)
+
+							+accordion-item({"title": "7\) Share Environment", "id": "ShareEnvironment"})
+								iframe(width="100%" height="450" src="https://www.youtube.com/embed/cXSRxIPi0lw?version=3&enablejsapi=1" frameborder="0" allowfullscreen)
+
+							+accordion-item({"title": "8\) Container Sizes", "id": "ChooseTheSizeOfContainers"})
+								iframe(width="100%" height="450" src="https://www.youtube.com/embed/jBaeuKHdZv8?version=3&enablejsapi=1" frameborder="0" allowfullscreen)
+
+							+accordion-item({"title": "9\) Tokens Environment PGP Key", "id": "TokensEnvironmentPgpKey"})
+								iframe(width="100%" height="450" src="https://www.youtube.com/embed/iK2QfXpBvto?version=3&enablejsapi=1" frameborder="0" allowfullscreen)
+
+
+			.page__footer
+				+footer()
+
+			.clear
+
+		//- Scripts
+		script(src='js/plugins.min.js')
+		script(src='js/main.min.js')
+		+analytics()

@@ -1,0 +1,77 @@
+include ../modules/head/head
+include ../modules/footer/footer
+include ../modules/browsehappy/browsehappy
+include ../modules/header-inner/header-inner
+include ../modules/sidebar/sidebar
+include ../modules/page-title/page-title
+include ../modules/demo/demo
+include ../modules/analytics/analytics
+
+
+doctype html
+html(class="no-js" lang="en")
+
+	head
+		+head()
+
+	body.page.page_background-gray
+		+browsehappy(browsehappy)
+
+		.page__header
+			+header-inner()
+
+		.page-docs
+
+			.page-docs__content
+				//-+demo()
+				+sidebar('getting-started.html')
+
+				.content-wrapper
+
+					+page-title({"title": "Registering users"})
+
+					section
+						h3.getting-started-main-info__h3 Overview
+						p.getting-started-main-info__text Subutai is application that can be used with several users in system in one time. If a group is using Subutai peer, follow the instructions below regarding registration new user in system.
+						h3.getting-started-main-info__h3 New user registration steps
+						ol
+							li
+								| Go to User Identity module and select User management
+								br
+								img(src="img/getting-started/reg-users-1.png").getting-started-main-info__img
+							li
+								| Press
+								img(src="img/getting-started/reg-users-2.png").getting-started-main-info__img
+							li
+								| Fill the form
+								br
+								| Trusted level specification:
+								ol
+									li Never trust - This user with PublicKey is not trusted , and cannot be registered
+									li Marginal - This user with PublicKey is trusted partially, System admin , can give limited permissions
+									li Full - Full Trust
+									li Ultimate Trust - Only Peer Owner can have Ultimate trust
+								| Roles specification
+								ol
+									li Karaf-manager - role with permissions to manage karaf modules
+									li Administrator - Subutai administrative role, has all permissions over system
+									li Peer manager - role explicitly to manage cross peer
+									li Environment-Manager - role to manage environments
+									li Internal-System - internal system user, to handle system specific operations
+								br
+								img(src="img/getting-started/reg-users-3.png").getting-started-main-info__img
+							li
+								| Press the Save user button and you will see a newly created user in the table.
+							li
+								| Send credentials of the account to addressee.
+						p
+							| If peer registration is not approved, you need to wait until it gets a feedback: reject or register. If registered, the next step Environment creation using containers which will be used as a platform to execute all operations. If not, still an Environment can be created on a local machine using the same Environment creation chapter.
+			.page__footer
+				+footer()
+
+			.clear
+
+		//- Scripts
+		script(src='js/plugins.min.js')
+		script(src='js/main.min.js')
+		+analytics()

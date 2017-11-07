@@ -1,0 +1,200 @@
+//- Mixins
+button-color(color, color-hover, background, background-hover, border, border-hover)
+	&
+	&:visited
+		color color
+		background-color background
+		if border
+			border-color border
+
+	&:focus
+	&:hover
+	&:active
+		if color-hover
+			color color-hover
+		else
+			color color
+
+		if background-hover
+			background-color background-hover
+		else
+			background-color background - 10%
+
+		if border-hover
+			border-color border-hover
+		else
+			border-color border - 25%
+
+	&:active
+		background-image none
+
+	&.button
+		&_disabled
+		&[disabled]
+			&
+			&:hover
+			&:focus
+			&:active
+				color color
+				background-color background
+				border-color border
+
+button-size(padding, font-size, line-height)
+	padding padding
+	font-size font-size
+	if line-height
+		line-height line-height
+
+//- Base style
+.button
+	display inline-block
+	margin-bottom 0
+	font-weight normal
+	text-align center
+	vertical-align middle
+	touch-action manipulation
+	cursor pointer
+	background-image none
+	vertical-align middle
+	border 1px solid blue
+	white-space nowrap
+	line-height normal
+	border-radius: 2px;
+	-webkit-user-drag none
+	-webkit-user-select none
+	-moz-user-select none
+	-ms-user-select none
+	user-select none
+	box-sizing border-box
+	text-decoration none
+	background-color transparent
+	padding 0
+	transition 125ms all ease-in-out
+
+	&__icon
+	&__text
+		display inline-block
+		vertical-align middle
+		margin-right 8px
+		line-height 1
+
+	&:focus
+	&:active:focus
+		// outline thin dotted
+		// outline 5px auto -webkit-focus-ring-color
+		// outline-offset -2px
+
+	&:hover
+	&:focus
+		color #333333
+		text-decoration none
+
+	&:active
+		outline 0
+		background-image none
+		box-shadow inset 0 3px 5px rgba(0 0 0 0.125)
+
+	&_disabled
+	&[disabled]
+		&
+		&:hover
+		&:focus
+		&:active
+			opacity 0.65
+			box-shadow none
+			outline none
+
+	a&_disabled
+		pointer-events none
+
+//- Block button
+.button_block
+	display: block;
+	width: 100%;
+
+	& + &
+		margin-top: 5px;
+
+	input[type="submit"]&
+	input[type="reset"]&
+	input[type="button"]&
+		width: 100%;
+
+//- Button sizes
+.button
+.button_size_default
+	button-size(
+		padding: 0 15px,
+		font-size: 14px,
+		line-height: 27px
+	)
+
+// Styles and colors
+.button_style_pill
+	border-radius 100px
+
+.button
+.button_size_default
+	button-color(
+		color: white,
+		color-hover: white,
+		background: blue,
+		background-hover: navy,
+		border: navy,
+		border-hover: navy
+	)
+
+.button_gray-text
+	button-color(
+		color: #303644,
+		color-hover: white,
+		background: transparent,
+		background-hover: blue,
+		border: blue,
+		border-hover: blue
+	)
+
+.button_style_ghost.button_color_white
+	button-color(
+		color: white,
+		color-hover: #333,
+		background: transparent,
+		background-hover: white,
+		border: white,
+		border-hover: white
+	)
+	border-radius 2px
+
+.button_style_ghost.button_color_red
+	button-color(
+		color: #f05050,
+		color-hover: white,
+		background: transparent,
+		background-hover: #f05050,
+		border: #f05050,
+		border-hover: #f05050
+	)
+
+.button_style_rounded
+	border-radius 3px
+
+.button_style_rounded.button_color_grey
+	button-color(
+		color: #333,
+		color-hover: false,
+		background: white,
+		background-hover: false,
+		border: #ccc,
+		border-hover: false
+	)
+
+.button_style_rounded.button_color_blue
+	button-color(
+		color: white,
+		color-hover: false,
+		background: #47a2de,
+		background-hover: false,
+		border: #47a2de,
+		border-hover: false
+	)
+

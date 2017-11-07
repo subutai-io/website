@@ -1,0 +1,61 @@
+include ../modules/head/head
+include ../modules/footer/footer
+include ../modules/browsehappy/browsehappy
+include ../modules/header-inner/header-inner
+include ../modules/sidebar/sidebar
+include ../modules/page-title/page-title
+include ../modules/demo/demo
+include ../modules/analytics/analytics
+
+
+doctype html
+html(class="no-js" lang="en")
+
+	head
+		+head()
+
+	body.page.page_background-gray
+		+browsehappy(browsehappy)
+
+		.page__header
+			+header-inner()
+
+		.page-docs
+
+			.page-docs__content
+				//-+demo()
+				+sidebar('getting-started.html')
+
+				.content-wrapper
+
+					+page-title({"title": "Peer registration"})
+
+					section
+						h3.getting-started-main-info__h3 Overview
+						p.getting-started-main-info__text Peer Registration module manages all local container hosts (create, destroy) and all peer relations (register, unregister and reject).
+						h3.getting-started-main-info__h3 Peer registration steps
+						ol
+							li
+								| Go to Peer Registration module
+								br
+								img(src="img/getting-started/peer-reg-1.jpg").getting-started-main-info__img
+							li
+								| Press
+								img(src="img/getting-started/peer-reg-2.png").getting-started-main-info__img
+							li
+								| Write peer's IP address and Secret key-phrase then press Create button. A request will be sent to indicated peer.
+								br
+								img(src="img/getting-started/peer-reg-3.png").getting-started-main-info__img
+							li
+								| List of available Peers can be seen from Peers table.
+						p
+							| If peer registration is not approved, you need to wait until it gets a feedback: reject or register. If registered, the next step Environment creation using containers which will be used as a platform to execute all operations. If not, still an Environment can be created on a local machine using the same Environment creation chapter.
+			.page__footer
+				+footer()
+
+			.clear
+
+		//- Scripts
+		script(src='js/plugins.min.js')
+		script(src='js/main.min.js')
+		+analytics()

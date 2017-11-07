@@ -1,0 +1,86 @@
+include ../info-colls/info-colls
+
+
+mixin what-is-ss-content(data)
+
+	.content-block
+		h1 What is Subutai?
+
+		.align-image-center
+			figure.image-captioned
+				img(src="/img/ss-info-img.png", alt="")
+				figcaption Your next personal computer won't be just another laptop, tablet, or wearable device: it will be EVERYTHING surrounding you, connected fluidly by adaptive peer-to-peer clouds driven by social interaction!
+
+		p
+			| Subutai lets anyone share socially, or rent computers commercially to create cloud environments while attaching whatever devices are around to them (that's the Internet of Things part). In a nutshell, we simply call it "Social Cloud Computing". We think this is totally badassed mind explosion inducing madness: that's why we named it after a badassed general. Plus we think this is going to conquer the world and want you to join us in the
+			a(href="https://hub.subut.ai/") "War Room"
+			|  to help lead the campaign.
+			br
+			br
+			| We've been coding up a storm using every advantage we can gain from the latest emerging technologies to make the jaw dropping magic happen. We're shocked and get goose bumps every time we see it working ourselves; we fire up our own clouds across developer machines because we just CAN. It's sick! Now it's time for us to share the magic with everyone else.
+			br
+			br
+			| Welcome to the Peer-to-Peer Social Cloud Computing Revolution!
+
+		p.center-paragraf
+			a(href="getting-started.html").button Getting started
+
+	.content-block
+		.text-blocks
+			.text-blocks__coll.text-blocks__coll_left.image-coll
+				img(src="/img/cube.png")
+
+			.text-blocks__coll.text-blocks__coll_right
+				p We tried hard to use all the good stuff you like and know about. We took a big risk and went with Snappy for the cloud OS: the Canonical peeps just know what they're doing here. We use light weight Linux containers and software defined networking with encryption and a boat load of security mechanisms to isolate and protect environments running across Subutai peers. We're waiting on 16.04 eagerly so we can integrate LXD and do a little bit of container hardware virtualization voodoo magic. We're also waiting anxiously for Skylake proliferation to start using SGX instructions: yummy, we can already taste the P2P Cloud Computing panacea coming. And Docker? Yeah we got that too. You can import docker templates or docker files to create images you can reuse.
+
+			.clear
+
+		.text-blocks
+			.text-blocks__coll.text-blocks__coll_left
+				p
+					| We don't want to reinvent the wheel. Had no choice for the IaaS basement due to all the P2P madness. But we're working hard to adapt it to services you're used to at Amazon AWS. We've got Ceph and standard S3 like interfaces you can just drop into your environments.
+					br
+					br
+					| We're doing great on the PaaS layer since we went with the best: the Google App Engine programming model. We've integrated AppScale as a first class citizen into Subutai. So write GAE apps in Go, Java, PHP, or Python and drop em into your Subutai P2P Cloud. With Subutai every GAE app you write becomes a P2P application: distribute it where and how you like even across Google's own infrastructure. The choice is yours again. It's always nice to have choices.
+					br
+					br
+					| Mobile devs you got Apache Usergrid! Need we say more?
+
+			.text-blocks__coll.text-blocks__coll_right.image-coll
+				img(src="/img/square.png")
+
+			.clear
+
+		p.center-paragraf
+			| Using Subutai you can use your relationships (friends, family, colleagues, etc.)
+			br
+			| to build your own virtual data center and stuff whatever you like into it. The best thing about 
+			br
+			| this is that you're free of "The Man", you're the boss, the head honcho.
+			br
+			| You own and control your own sh*t!
+
+	h2.page__title So what does this mean in real life dude?
+
+	+info-colls(info_colls.default)
+
+	.content-block
+		h2.page__title Torrent is also part of p2p technology, but for sharing files
+
+		p If you've ever rapidly downloaded files via torrent, you've already experienced the power gained by p2p technology for file sharing. The files download much faster right? That's because separate parts of the file are downloaded in parallel from different peers instead of downloading the whole file from a single server that everyone pulls from. The cumulative bandwidth of all peers speed up the download without causing traffic congestion at a single server. Torrent peers participate in a single public swarm for p2p file sharing.
+
+		p.align-image-center
+			img(src="/img/content/clouds1.png")
+
+	.content-block
+		h2.page__title Subutai is p2p technology for sharing of hardware resources
+
+		p
+			| Imagine being able to use p2p technologies to share more than just files, but any hardware resource, with ONLY those peers you trust. You may create virtual cloud environments connected to devices with resources shared across several peers on your own swarm. The ability to share any hardware resource (i.e. disk, network, memory, and processors) allows p2p cloud environments to gain resources and grow beyond what's available locally at a single peer. Unimaginable services start to seem possible when one considers the limitless potential of p2p cloud computing.
+			br
+			br
+			| Aweyeah, social services might mean something cool instead of something having to do with grampa and grandma.
+
+		p.align-image-center
+			img(src="/img/content/clouds2.png")
+

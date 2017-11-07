@@ -1,0 +1,8 @@
+include ../possibilities-item/possibilities-item
+
+mixin possibilities-list(data)
+	ul.possibilities-list
+		each ent, num in data
+			li.possibilities-list__item
+				+possibilities-item(ent)
+

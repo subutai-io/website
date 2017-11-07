@@ -1,0 +1,67 @@
+.clear
+	clear both
+
+.clearfix
+	clearfix()
+
+.text-muted
+	&
+	& > *
+		color $base-quiet-color
+
+
+.content-wrapper
+	img[align="left"]
+	img[style*="float: left"]
+	img[style*="float:left"]
+		margin 5px 15px 0px 0px
+
+	img[align="right"]
+	img[style*="float: right"]
+	img[style*="float:right"]
+		margin 5px 0px 0px 15px
+
+.align-image-center
+	text-align center
+
+.align-image-left
+	float left
+	margin 5px 15px 0px 0px
+
+.align-image-right
+	float right
+	margin 5px 0px 0px 15px
+
+.image-captioned
+	margin-bottom 20px
+	+below(375px)
+		margin-left 0
+		margin-right 0
+		float none
+		width 100%
+		height auto
+		display block
+
+	figcaption
+		font-style oblique
+		font-size 1em
+		color #454545
+
+
+.align-image-left
+.align-image-right
+.align-image-center img
+	+below(375px)
+		margin 0
+		float none
+		width 100%
+		height auto
+		display block
+
+// Add this class to an image to make it fit within it's fluid parent wrapper while maintaining
+// aspect ratio.
+
+.fluid-image
+	max-width 100%
+	height auto
+	display block

@@ -1,0 +1,33 @@
+include ../modules/head/head
+include ../modules/footer/footer
+include ../modules/browsehappy/browsehappy
+include ../modules/main-slide/main-slide
+include ../modules/ss-main-info/ss-main-info
+include ../modules/possibilities-main/possibilities-main
+include ../modules/getting-started-main/getting-started-main
+include ../modules/analytics/analytics
+
+
+doctype html
+html(class="no-js" lang="en")
+
+	head
+		+head()
+
+	body.page
+		+browsehappy(browsehappy)
+		
+		.page__slider.js-blockScroll
+			+main-slide()
+
+			+ss-main-info()
+
+			+possibilities-main()
+
+			+getting-started-main()
+
+		//- Scripts
+		script(src='js/plugins.min.js')
+		script(src='js/main.min.js')
+		script(async, defer, id="github-bjs", src="https://buttons.github.io/buttons.js")
+		+analytics()

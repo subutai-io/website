@@ -1,0 +1,162 @@
+
+html, body
+	height 100%
+
+
+.page
+	// Стили для body
+
+	&__content
+		transition 125ms all ease-in-out
+		background $base-bg-color
+		position relative
+		z-index 2
+		max-width: 960px;
+		margin: 0 auto;
+		letter-spacing: 1px;
+		+below($media-screen-sm)
+			padding 0 20px
+
+	&__row
+		height: 100%!important;
+		padding: 0!important;
+		+below($media-screen-sm)
+			height auto!important
+
+	&__wrapper
+		min-height 100%
+		margin-bottom -50px
+		height: 100%;
+
+	&__title
+		text-align: center;
+		padding: 30px 0 50px 0;
+		font-style: italic;
+
+	&_background-gray
+		background-color: #dce1e5;
+
+	&-docs
+		height: 100%;
+		position: relative;
+
+		&__content
+			background-color: #FFF;
+			max-width: 840px;
+			min-height: 100%;
+			position: relative;
+			padding: 60px 80px;
+			margin: 0 0 0 300px;
+			+below($media-screen-xs)
+				margin-left: 35px;
+				padding: 30px 20px 0 20px;
+
+	&__slider
+		height: 100%;
+
+	* html &__wrapper
+		height 100%
+
+	&__buffer
+		height 50px
+
+	&__header
+		//margin-bottom 50px
+
+	&__main
+		max-width $content-width
+		margin 0 auto
+		padding-bottom 60px
+
+	&__bread-crumbs
+		//
+
+	&__cover
+		position absolute
+		left 0
+		top 0
+		right 0
+		bottom 0
+		z-index 9999
+		background-color rgba(#000, 0.3)
+		transition 125ms all ease-in-out
+		visibility hidden
+		opacity 0
+
+.center-paragraf
+	text-align: center;
+
+	& img
+		margin: 20px 0;
+
+.image-coll
+	text-align: center;
+	margin: 30px 0 0 0;
+
+.text-blocks
+	margin: 40p465pxx 0;
+	display: flex;
+	overflow: hidden;
+
+	&__coll
+		width: 50%;
+		flex: 1;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		&_left
+			float: left;
+
+		&_right
+			float: right;
+
+.fa-e2e
+	background url("../img/content/e2e-logo.png")
+	height: 70px;
+	width: 70px;
+	background-position: center center;
+	display: block;
+	background-repeat: no-repeat;
+	margin-left: -17px;
+	margin-top -3px
+
+
+.fa-p2p
+	&:after
+		content "P2P"
+		height: 70px;
+		width: 70px;
+		position absolute
+		display: block;
+		font-size 18px
+		font-weight 600
+		font-style normal
+		left 0
+		text-align center
+.fa-tray
+	&:after
+		content "Tray"
+		height: 70px;
+		width: 70px;
+		position absolute
+		display: block;
+		font-size 18px
+		font-weight 600
+		font-style normal
+		left 0
+		text-align center
+
+code
+	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+	font-size: 95%;
+	line-height: 140%;
+	white-space: pre;
+	white-space: pre-wrap;
+	white-space: -moz-pre-wrap;
+	white-space: -o-pre-wrap;
+	background: #faf8f0;
+	color #9c0033
+	border 1px solid #d0e9c6
+	border-radius 2px
+	padding 0 3px

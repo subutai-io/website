@@ -1,0 +1,33 @@
+include ../modules/head/head
+include ../modules/footer/footer
+include ../modules/browsehappy/browsehappy
+include ../modules/header-inner/header-inner
+include ../modules/getting-started-main/getting-started-inner
+include ../modules/crazy-possibilities/crazy-possibilities
+include ../modules/analytics/analytics
+
+
+doctype html
+html(class="no-js" lang="en")
+
+	head
+		+head()
+
+	body.page
+		+browsehappy(browsehappy)
+		
+		.page__header
+			+header-inner()
+
+		.page__content
+			+crazy-possibilities(crazyPossibilities.default)
+
+		+getting-started-inner()
+
+		.page__footer
+			+footer()
+		
+		//- Scripts
+		script(src='js/plugins.min.js')
+		script(src='js/main.min.js')
+		+analytics()

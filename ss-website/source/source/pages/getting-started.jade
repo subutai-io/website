@@ -1,0 +1,61 @@
+include ../modules/head/head
+include ../modules/footer/footer
+include ../modules/browsehappy/browsehappy
+include ../modules/header-inner/header-inner
+include ../modules/sidebar/sidebar
+include ../modules/page-title/page-title
+include ../modules/analytics/analytics
+
+
+doctype html
+html(class="no-js" lang="en")
+
+	head
+		+head()
+
+	body.page.page_background-gray
+		+browsehappy(browsehappy)
+
+		.page__header
+			+header-inner()
+
+		.page-docs
+
+			.page-docs__content
+				//-+demo()
+				+sidebar()
+
+				.content-wrapper
+
+					+page-title({"title": "Quick start"})
+
+					section
+						ol
+							li
+								a(href="installation.html") Installation
+							li
+								a(href="ss-e2e-plugin.html") Subutai E2E plugin
+							li
+								a(href="ubuntu-debian-p2p.html") Ubuntu/Debian Tray/P2P
+							li
+								a(href="first-launch.html") First launch
+							li
+								a(href="registering-peer-ss.html") Registering peer in Subutai Hub
+							li
+								a(href="environment-creation.html") Environment creation
+							li
+								a(href="peer-registration.html") Peer registration
+							li
+								a(href="plugin-installation.html") Plugin installation
+							li
+								a(href="registering-users.html") Registering users
+
+			.page__footer
+				+footer()
+
+			.clear
+
+		//- Scripts
+		script(src='js/plugins.min.js')
+		script(src='js/main.min.js')
+		+analytics()

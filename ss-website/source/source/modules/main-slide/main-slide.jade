@@ -1,0 +1,12 @@
+include ../header/header
+include ../main-slide-content/main-slide-content
+
+mixin main-slide(data)
+	.main-slide.page__row
+		.main-slide__background.main-slide__clouds-bg
+		.main-slide__background.main-slide__gradient-bg
+		.main-slide__content
+			+header()
+
+			+main-slide-content()
+

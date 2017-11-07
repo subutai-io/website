@@ -1,0 +1,19 @@
+mixin sidebar-menu(data, active)
+	.sidebar-menu
+		nav.sidebar-menu__items
+			ul
+				each ent, num in data
+
+					-var activeClass = '';
+					if ent.url == active
+						-activeClass = 'sidebar-menu__item_active';
+
+					li(class=activeClass).sidebar-menu__item.sidebar-menu-item
+						a(href="#{ent.url}").sidebar-menu__link!= ent.title
+						if (ent.submenu !== false)
+							.sidebar-menu__submenu
+								ul
+									each ent2, num2 in ent.submenu
+										li.sidebar-menu__item
+											a(href="#{ent2.url}").sidebar-menu__link!= ent2.title
+							i.fa.fa-angle-right.sidebar-menu__arrow

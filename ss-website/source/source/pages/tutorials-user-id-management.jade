@@ -1,0 +1,61 @@
+include ../modules/head/head
+include ../modules/footer/footer
+include ../modules/browsehappy/browsehappy
+include ../modules/header-inner/header-inner
+include ../modules/sidebar/sidebar
+include ../modules/page-title/page-title
+include ../modules/demo/demo
+include ../modules/accordion/accordion
+include ../modules/analytics/analytics
+
+
+doctype html
+html(class="no-js" lang="en")
+
+	head
+		+head()
+
+	body.page.page_background-gray
+		+browsehappy(browsehappy)
+
+		.page__header
+			+header-inner()
+
+		.page-docs
+
+			.page-docs__content
+				//-+demo()
+				+sidebar('tutorials.html')
+
+				.content-wrapper
+
+					+page-title({"title": "Tutorials: User identity management"})
+
+					section
+						p
+						+accordion()
+							+accordion-item({"title": "1\) User management", "open": true, "id": "UserRegistration"})
+								iframe(width="100%" height="450" src="https://www.youtube.com/embed/yVJJ-_UzY0E?version=3&enablejsapi=1" frameborder="0" allowfullscreen)
+
+							+accordion-item({"title": "2\) Change password", "id": "ChangePassword"})
+								iframe(width="100%" height="450" src="https://www.youtube.com/embed/7OgU7zH9C7o?version=3&enablejsapi=1" frameborder="0" allowfullscreen)
+
+							+accordion-item({"title": "3\) Set User PGP Key", "id": "pgpPlugin"})
+								iframe(width="100%" height="450" src="https://www.youtube.com/embed/P8XXliusfpA?version=3&enablejsapi=1" frameborder="0" allowfullscreen)
+
+							+accordion-item({"title": "4\) Tokens User PGP Key", "id": "TokensOwnPgpKey"})
+								iframe(width="100%" height="450" src="https://www.youtube.com/embed/YDu6BC9XeVA?version=3&enablejsapi=1" frameborder="0" allowfullscreen)
+
+							+accordion-item({"title": "5\) Roles Management", "id": "RolesManagement"})
+								iframe(width="100%" height="450" src="https://www.youtube.com/embed/XTyS_-owZmE?version=3&enablejsapi=1" frameborder="0" allowfullscreen)
+
+
+			.page__footer
+				+footer()
+
+			.clear
+
+		//- Scripts
+		script(src='js/plugins.min.js')
+		script(src='js/main.min.js')
+		+analytics()

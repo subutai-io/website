@@ -1,0 +1,18 @@
+include ../logo/logo
+include ../main-menu/main-menu
+
+mixin header(data)
+	header.header
+		.header__logo
+			+logo()
+
+		.header__menu.header__menu_button
+			a(href="installation.html").button Getting started
+
+		.header__bars-icon.js-show-menu
+			i.fa.fa-bars
+
+		.header__menu
+			+main-menu(mainMenu.default)
+
+		.clear
