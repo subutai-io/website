@@ -1,366 +1,272 @@
-<!DOCTYPE html>
-<html lang="en" class="no-js">
-
-	<head>
-		<meta charset="utf-8" />
-		<title>Subutai</title>
-		<meta content="" name="author" />
-		<meta content="" name="description" />
-		<meta content="" name="keywords" />
-		<meta content="telephone=no" name="format-detection" />
-		<meta name="robots" content="noodp, noydir" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="HandheldFriendly" content="true" />
-		<meta content="IE=edge" http-equiv="X-UA-Compatible" />
-		<link rel="stylesheet" href="css/reset.min.css"/>
-		<link rel="stylesheet" href="css/main.css" />
-		<meta property="og:title" content="Subutai" />
-		<meta property="og:url" content="" />
-		<meta property="og:description" content="" />
-		<meta property="og:image" content="" />
-		<meta property="og:image:type" content="image/jpeg" />
-		<meta property="og:image:width" content="500" />
-		<meta property="og:image:height" content="300" />
-		<meta property="twitter:description" content="" />
-		<link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png" />
-		<link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png" />
-		<link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png" />
-		<link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png" />
-		<link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png" />
-		<link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png" />
-		<link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png" />
-		<link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png" />
-		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png" />
-		<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
-		<link rel="icon" type="image/png" href="/favicon-194x194.png" sizes="194x194" />
-		<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-		<link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192" />
-		<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" />
-		<link rel="manifest" href="/manifest.json" />
-		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#71bf44" />
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:500italic,500,400,400italic,700,700italic" />
-		<meta name="apple-mobile-web-app-title" content="Subutai" />
-		<meta name="application-name" content="Subutai" />
-		<meta name="msapplication-TileColor" content="#ffffff" />
-		<meta name="msapplication-TileImage" content="/mstile-144x144.png" />
-		<meta name="theme-color" content="#ffffff" />
-		<script>
-			(function(H)
-			{
-				H.className = H.className.replace(/\bno-js\b/, 'js')
-			})(document.documentElement)
-
-		</script>
-		<!--[if lt IE 9]>
-		<script src="js/jquery-1.11.3.min.js"></script>
-		<![endif]-->
-
-		<!--[if gt IE 8]><!-->
-		<script src="js/jquery-2.1.4.min.js"></script>
-		<script src="js/jquery.mousewheel.min.js"></script>
-		<script src="js/blockScroll.js"></script>
-		<!--<![endif]-->
-	</head>
-
-	<body class="page">
-		<!--[if lt IE 8]>
-		<p class="browsehappy">You are using an<strong>outdated</strong> browser. Please<a href="http://browsehappy.com" target="_blank">upgrade your browser</a> to improve your experience.</p><![endif]-->
-		<div class="page__header">
-			<header class="header header__inner-page">
-				<div class="header__inner">
-					<div class="header__logo">
-						<a href="index.html" class="logo">
-							<img src="img/logo.png" class="logo__img" alt="Subutai"/>
-						</a>
-					</div>
-					<div class="header__menu header__menu_button">
-						<a href="installation.html" class="button">Getting started</a>
-					</div>
-					<div class="header__bars-icon js-show-menu">
-						<i class="fa fa-bars"></i>
-					</div>
-					<div class="header__menu">
-						<nav class="main-menu js-link-sroll js-top-menu">
-							<div class="header__bars-icon js-show-menu">
-								<i class="fa fa-bars"></i>
-							</div>
-							<div class="main-menu__title">Menu</div>
-							<ul>
-								<li class="main-menu__item">
-									<a href="about.html" class="main-menu__link">About</a>
-								</li>
-								<li class="main-menu__item">
-									<a href="goodwill.html" class="main-menu__link">Goodwill</a>
-								</li>
-								<li class="main-menu__item">
-									<a href="manifesto.html" class="main-menu__link">Manifesto</a>
-								</li>
-								<li class="main-menu__item">
-									<a href="social-cloud-computing.html" class="main-menu__link">Social Cloud Computing</a>
-								</li><li class="main-menu__item">
-								<script async defer src="https://slack.subut.ai/slackin.js"></script>
-							</li>
+	<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<title>Subutai</title>
+	<meta name="description" content="">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="shortcut icon" href="img/favicon/android-chrome-36x36.png" type="image/x-icon">
+	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#000">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#000">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
+	<style>body { opacity: 0; overflow-x: hidden; } html { background-color: #fff; }</style>
+	<style>
+	#preloader {
+		position: fixed;
+		left: 0;
+		top: 0;
+		z-index: 999;
+		width: 100%;
+		height: 100%;
+		overflow: visible;
+		background: #FFF url('../img/buffer.svg') no-repeat center center;
+	}
+</style>
+</head>
+<body>
+	<div class="about">
+		<div class="header w-100 d-flex align-items-center">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="main_menu w-100 d-flex justify-content-between w-100 align-items-center">
+						<div class="logo">
+							<a href="index.html"><img src="img/logo.png" class="img-fluid" alt="logo"></a>
+						</div>
+						<div class="phone_top_menu d-flex">
+									<div class="d-flex align-items-center "><script async defer src="https://slack.subut.ai/slackin.js"></script>
+									<span class="phone_bars-burger ml-4"><i class="fa fa-bars fa-lg mr-4" aria-hidden="true"></i> </span></div>
+								</div>
+						<div class="menu w-100">
+							<ul class="d-flex align-items-center justify-content-end">
+								<li><a href="about.html"  class="menu_link">About</a></li>
+								<li><a href="goodwill.html" class="menu_link">Goodwill</a></li>
+								<li><a href="manifesto.html" class="menu_link">Manifesto</a></li>
+								<li><a href="socialcloud.html" class="menu_link">Social Cloud Computing</a></li>
+								<li><a href="http://blog.optdyn.com" target="_blank" class="menu_link">Blog</a></li>
+								<li><a href="faq.html" class="menu_link">FAQ</a></li>
+								<li class="d-flex align-items-center"><script async defer src="https://slack.subut.ai/slackin.js"></script></li>
+								<li><a href="install/index.html" class="btn button">Getting Started</a></li>
 							</ul>
-							<div class="clear"></div>
-						</nav>
-					</div>
-					<div class="clear"></div>
-				</div>
-			</header>
-		</div>
-		<div class="page__content">
-			<div class="page-title"><h1>What is Subutai?</h1></div>
-			<div class="content-block">
-
-				<div class="align-image-center">
-					<figure class="image-captioned">
-						<img src="/img/ss-info-img.png" alt="" />
-						<figcaption>Your next personal computer won't be just another laptop, tablet, or wearable device: it will be EVERYTHING surrounding you, connected fluidly by adaptive peer-to-peer clouds driven by social interaction!</figcaption>
-					</figure>
-				</div>
-
-				<ul>
-					<li><i>Subutai</i> —Open Source, container-based P2P Cloud software computing platform that allows
-						anyone to
-						share,
-						barter, or rent computer resources using Subutai’s cryptocurrency;
-					</li>
-					<li><a href="https://optdyn.com/ss-hub.html"><i>Subutai</i> Hub</a> —Cloud commerce software platform,
-						reputation
-						system,
-						and search engine for tracking peers and resources; and
-					</li>
-					<li><a href="https://optdyn.com/subutai-router.html"><i>Subutai Router</i></a> —Open hardware
-						optimized
-						Subutai
-						appliance is the first dynamically reconfigurable broadband router and IoT gateway device that mines
-						for
-						cryptocurrency.
-					</li>
-				</ul>
-				<p>Subutai lets anyone share socially, or rent computers commercially to create cloud environments while attaching whatever devices are around to them (that's the Internet of Things part). In a nutshell, we simply call it "Social Cloud Computing".
-					We think this is totally badassed mind explosion inducing madness: that's why we named it after a badassed general. Plus we think this is going to conquer the world and want you to join us in the
-					<a href="https://hub.subut.ai/">"War Room"</a> to help lead the campaign.
-					<br/>
-					<br/>We've been coding up a storm using every advantage we can gain from the latest emerging technologies to make the jaw dropping magic happen. We're shocked and get goose bumps every time we see it working ourselves; we fire up our own clouds across
-					developer machines because we just CAN. It's sick! Now it's time for us to share the magic with everyone else.
-					<br/>
-					<br/>Welcome to the Peer-to-Peer Social Cloud Computing Revolution!</p>
-				<p class="center-paragraf">
-					<a href="installation.html" class="button">Getting started</a>
-				</p>
-			</div>
-			<div class="content-block">
-				<div class="text-blocks">
-					<div class="text-blocks__coll text-blocks__coll_left image-coll">
-						<img src="/img/cube.png" alt=""/>
-					</div>
-					<div class="text-blocks__coll text-blocks__coll_right">
-						<p>We tried hard to use all the good stuff you like and know about. We took a big risk and went with Snappy for the cloud OS: the Canonical peeps just know what they're doing here. We use light weight Linux containers and software defined networking
-							with encryption and a boat load of security mechanisms to isolate and protect environments running across Subutai peers. We're waiting on 16.04 eagerly so we can integrate LXD and do a little bit of container hardware virtualization voodoo magic.
-							We're also waiting anxiously for Skylake proliferation to start using SGX instructions: yummy, we can already taste the P2P Cloud Computing panacea coming. And Docker? Yeah we got that too. You can import docker templates or docker files to create
-							images you can reuse.</p>
-					</div>
-					<div class="clear"></div>
-				</div>
-				<div class="text-blocks">
-					<div class="text-blocks__coll text-blocks__coll_left">
-						<p>We don't want to reinvent the wheel. Had no choice for the IaaS basement due to all the P2P madness. But we're working hard to adapt it to services you're used to at Amazon AWS. We've got Ceph and standard S3 like interfaces you can just drop into
-							your environments.
-							<br/>
-							<br/>We're doing great on the PaaS layer since we went with the best: the Google App Engine programming model. We've integrated AppScale as a first class citizen into Subutai. So write GAE apps in Go, Java, PHP, or Python and drop em into your
-							Subutai P2P Cloud. With Subutai every GAE app you write becomes a P2P application: distribute it where and how you like even across Google's own infrastructure. The choice is yours again. It's always nice to have choices.
-							<br/>
-							<br/>Mobile devs you got Apache Usergrid! Need we say more?</p>
-					</div>
-					<div class="text-blocks__coll text-blocks__coll_right image-coll">
-						<img src="/img/square.png" alt=""/>
-					</div>
-					<div class="clear"></div>
-				</div>
-				<p class="center-paragraf">Using Subutai you can use your relationships (friends, family, colleagues, etc.)
-					<br/>to build your own virtual data center and stuff whatever you like into it. The best thing about
-					<br/>this is that you're free of "The Man", you're the boss, the head honcho.
-					<br/>You own and control your own sh*t!</p>
-			</div>
-			<h2 class="page__title">So what does this mean in real life dude?</h2>
-			<div class="info-colls">
-				<div class="info-colls__item">
-					<div class="info-colls-item">
-						<div class="info-colls-item__img">
-							<img src="/img/content/students-money.png" alt=""/>
 						</div>
-						<div class="info-colls-item__text">Wanna make some coin? Maybe some extra beer money? You can sell resources on your laptop or desktops that are sitting around collecting dust. Put em to use on your own peer. To help out we built a peer tracker, resource search engine, and a bazaar
-							where you can trade or sell resources to your heart's content:
-							<a href="https://optimal-dynamics.com/ss-hub.html" target="_blank">Subutai Hub</a>.</div>
 					</div>
 				</div>
-				<div class="info-colls__item">
-					<div class="info-colls-item">
-						<div class="info-colls-item__img">
-							<img src="/img/content/companys-coll.png" alt=""/>
+			</div>
+		</div>
+	</div>
+	<div class="phone">
+		<ul>
+			<li><a href="about.html">About</a></li>
+			<li><a href="goodwill.html">Goodwill</a></li>
+			<li><a href="manifesto.html">Manifesto</a></li>
+			<li><a href="socialcloud.html">Social Cloud Computing</a></li>
+			<li><a href="http://blog.optdyn.com" target="_blank" class="menu_link">Blog</a></li>
+			<li><a href="faq.html">FAQ</a></li>
+			<li><a href="install/index.html" class="btn button">Getting Started</a></li>
+		</ul>
+	</div>
+	<div class="poster w-100 text-center">
+				<h2>What is Subutai?</h2>
+			</div>
+	<div class="content_about">
+		<div class="content_about p-2">
+			
+			<div class="subutai">
+				<div class="container">
+					<div class="row">
+						<div class="list_about_subutai">
+							<ol>
+								<li><span class="bold-span">Subutai</span> — Open Source, container-based P2P Cloud software computing platform that allows anyone to share, barter, or rent computer resources using Subutai’s cryptocurrency;</li><br>
+								<li><span class="bold-span">Subutai Hub</span> — Cloud commerce software platform, reputation system, and search engine for tracking peers and resources; and</li><br>
+								<li><span class="bold-span">Subutai Router</span> — Open hardware optimized Subutai appliance is the first dynamically reconfigurable broadband router and IoT gateway device that mines for cryptocurrency.</li>
+							</ol>
 						</div>
-						<div class="info-colls-item__text">Running out of space for the family photos no one's willing to clean up? Create a distributed storage network across the machines of family members. Don't deal with mom trying to figure out how to send you photos of your kids again. Share with your
-							own dropbox distributed across family and friends!</div>
-					</div>
-				</div>
-				<div class="info-colls__item">
-					<div class="info-colls-item">
-						<div class="info-colls-item__img">
-							<img src="/img/content/students-coll.png" alt=""/>
+						<div class="text_abot_paraghraph pt-5 pb-5">
+							<p>
+								Subutai lets anyone share socially, or rent computers commercially to create cloud environments while attaching whatever devices are around to them (that's the Internet of Things part). In a nutshell, we simply call it "Social Cloud Computing". We think this is totally badassed mind explosion inducing madness: that's why we named it after a badassed general. Plus we think this is going to conquer the world and want you to join us in the "War Room" to help lead the campaign.
+								We've been coding up a storm using every advantage we can gain from the latest emerging technologies to make the jaw dropping magic happen. We're shocked and get goose bumps every time we see it working ourselves; we fire up our own clouds across developer machines because we just CAN. It's sick! Now it's time for us to share the magic with everyone else.
+								Welcome to the Peer-to-Peer Social Cloud Computing Revolution!
+							</p>
+						
+							<div class="img_col p_t">
+								<div class="container">
+									<div class="row">
+										<div class="col-lg-5 mb-4 col-sm-12 d-flex justify-content-center align-items-center">
+											<img src="img/cube.svg" class="img-fluid" width="200" alt="">
+										</div>
+										<div class="col-lg-7 col-sm-12">
+											<p>
+												We tried hard to use all the good stuff you like and know about. We took a big risk and went with Snappy for the cloud OS: the Canonical peeps just know what they're doing here. We use light weight Linux containers and software defined networking with encryption and a boat load of security mechanisms to isolate and protect environments running across Subutai peers. We're waiting on 16.04 eagerly so we can integrate LXD and do a little bit of container hardware virtualization voodoo magic. We're also waiting anxiously for Skylake proliferation to start using SGX instructions: yummy, we can already taste the P2P Cloud Computing panacea coming. And Docker? Yeah we got that too. You can import docker templates or docker files to create images you can reuse.
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="img_col p_t">
+								<div class="container">
+									<div class="row">
+										<div class="col-lg-7 col-sm-12 ">
+											<p>
+											We don't want to reinvent the wheel. Had no choice for the IaaS basement due to all the P2P madness. But we're working hard to adapt it to services you're used to at Amazon AWS. We've got Ceph and standard S3 like interfaces you can just drop into your environments. </p>
+											<p>We're doing great on the PaaS layer since we went with the best: the Google App Engine programming model. We've integrated AppScale as a first class citizen into Subutai. So write GAE apps in Go, Java, PHP, or Python and drop em into your Subutai P2P Cloud. With Subutai every GAE app you write becomes a P2P application: distribute it where and how you like even across Google's own infrastructure. The choice is yours again. It's always nice to have choices. </p>
+											<p>Mobile devs you got Apache Usergrid! Need we say more?</p>
+										</div>
+										<div class="col-lg-5 col-sm-12 mb-4 d-flex justify-content-center align-items-center">
+											<img src="img/diamond.svg" width="200" alt="">
+										</div>
+									</div>
+								</div>
+							</div>
+							<p>Using Subutai you can use your relationships (friends, family, colleagues, etc.)
+								to build your own virtual data center and stuff whatever you like into it. The best thing about
+								this is that you're free of "The Man", you're the boss, the head honcho.
+							You own and control your own sh*t!</p>
 						</div>
-						<div class="info-colls-item__text">Some say the cloud reduces costs. Yeah sure if you're living in 1990! Obviously those kinds of people are the same ones that think Amazon is a place for buying books. We work in teams so we share resources for building shared and private infrastructure:
-							lots of distributed startups can use Subutai.</div>
+						<div class="about_items_center text-center w-100">
+							<div class="article_heading w-100">
+								<h2 class="h1">So what does this mean in real life dude?</h2>
+								<div class="icon_linear w-100">
+									<div class="circle"></div>
+								</div>
+							</div>
+							<div class="contaienr">
+								<div class="row">
+									<div class="col-lg-12 mt-5">
+										<div class="item_about">
+											<div class="media d-flex align-items-center">
+												<div class="img_item-about mr-5">
+													<img src="img/responsive.svg" alt="Sample photo">
+												</div>
+												<div class="media-body">
+													<p>Wanna make some coin? Maybe some extra beer money? You can sell resources on your laptop or desktops that are sitting around collecting dust. Put em to use on your own peer. To help out we built a peer tracker, resource search engine, and a bazaar where you can trade or sell resources to your heart's content: Subutai Hub.</p>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-12 mt-5">
+										<div class="item_about">
+											<div class="media d-flex align-items-center">
+												<div class="img_item-about mr-5">
+													<img src="img/qr-code.svg" alt="Sample photo">
+												</div>
+												<div class="media-body">
+													<p>Running out of space for the family photos no one's willing to clean up? Create a distributed storage network across the machines of family members. Don't deal with mom trying to figure out how to send you photos of your kids again. Share with your own dropbox distributed across family and friends!</p>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-12 mt-5">
+										<div class="item_about">
+											<div class="media  d-flex align-items-center">
+												<div class="img_item-about mr-5">
+													<img src="img/browser.svg" alt="Sample photo">
+												</div>
+												<div class="media-body">
+													<p>Some say the cloud reduces costs. Yeah sure if you're living in 1990! Obviously those kinds of people are the same ones that think Amazon is a place for buying books. We work in teams so we share resources for building shared and private infrastructure: lots of distributed startups can use Subutai.</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="about_items_center about_heading_items  w-100">
+							<div class="img_col p_t">
+								<div class="container">
+									<div class="row">
+										<div class="col-lg-7 col-sm-12 ">
+											<div class="article_heading  w-100">
+												<h2 class="h1">Torrent is also part of p2p technology, but for sharing files</h2>
+											</div>
+											<br>
+											<p>
+											If you've ever rapidly downloaded files via torrent, you've already experienced the power gained by p2p technology for file sharing. The files download much faster right? That's because separate parts of the file are downloaded in parallel from different peers instead of downloading the whole file from a single server that everyone pulls from. The cumulative bandwidth of all peers speed up the download without causing traffic congestion at a single server. Torrent peers participate in a single public swarm for p2p file sharing.</p>
+										</div>
+										<div class="col-lg-5 col-sm-12 d-flex justify-content-center align-items-center">
+											<img src="img/dsa2.svg" width="200" alt="">
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							<div class="img_col p_t">
+								<div class="container">
+									<div class="row">
+										<div class="col-lg-5 col-sm-12 d-flex justify-content-center align-items-center">
+											<img src="img/dsa.svg" width="200" alt="">
+										</div>
+										<div class="col-lg-7 col-sm-12 ">
+											<div class="article_heading  w-100">
+												<h2 class="h1">Subutai is p2p technology for sharing of hardware resources</h2>
+											</div>
+											<br>
+											<p>
+											If you've ever rapidly downloaded files via torrent, you've already experienced the power gained by p2p technology for file sharing. The files download much faster right? That's because separate parts of the file are downloaded in parallel from different peers instead of downloading the whole file from a single server that everyone pulls from. The cumulative bandwidth of all peers speed up the download without causing traffic congestion at a single server. Torrent peers participate in a single public swarm for p2p file sharing.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
-			<div class="content-block">
-				<h2 class="page__title">Torrent is also part of p2p technology, but for sharing files</h2>
-				<p>If you've ever rapidly downloaded files via torrent, you've already experienced the power gained by p2p technology for file sharing. The files download much faster right? That's because separate parts of the file are downloaded in parallel from different
-					peers instead of downloading the whole file from a single server that everyone pulls from. The cumulative bandwidth of all peers speed up the download without causing traffic congestion at a single server. Torrent peers participate in a single public
-					swarm for p2p file sharing.</p>
-				<p class="align-image-center">
-					<img src="/img/content/clouds1.png" alt=""/>
-				</p>
-			</div>
-			<div class="content-block">
-				<h2 class="page__title">Subutai is p2p technology for sharing of hardware resources</h2>
-				<p>Imagine being able to use p2p technologies to share more than just files, but any hardware resource, with ONLY those peers you trust. You may create virtual cloud environments connected to devices with resources shared across several peers on your
-					own swarm. The ability to share any hardware resource (i.e. disk, network, memory, and processors) allows p2p cloud environments to gain resources and grow beyond what's available locally at a single peer. Unimaginable services start to seem possible
-					when one considers the limitless potential of p2p cloud computing.
-					<br/>
-					<br/>Aweyeah, social services might mean something cool instead of something having to do with grampa and grandma.</p>
-				<p class="align-image-center">
-					<img src="/img/content/clouds2.png" alt=""/>
-				</p>
-			</div>
 		</div>
-		<div class="getting-started-main getting-started-main_inner">
-			<div class="getting-started-main__info">
-				<div class="getting-started-main-info">
-					<p class="getting-started-main-info__text">If you feel excited enough to get involved with any of these Social Cloud Computing areas please let us know!</p>
-					<p class="getting-started-main-info__button">
-						<a href="installation.html" class="button">Getting started</a>
-					</p>
+	</div>
+	<div class="section getting_page pb-1">
+		<section class="getting_started  p_t text-center w-100">
+			<div class="container">
+				<div class="row">
+					<div class="article_heading w-100">
+						<h2 class="h1">GETTING STARTED</h2>
+						<div class="icon_linear w-100">
+							<div class="circle"></div>
+						</div>
+					</div>
+					<div class="content_page_text">
+						<p>If you feel excited enough to get involved with any of these Social Cloud Computing areas please let us know!</p>
+					</div>
+					<div class="readmore w-100 text-center mt-3">
+						<a href="install/" class="btn button">Getting Started</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<div class="copyright d-flex justify-content-between align-items-center w-100 flex-wrap default_copyright">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-8">
+						<div class="copyright_logo">
+							<a href="https://optdyn.com/" target="_blank"><img src="img/cropped-logo.png" class="img-fluid logo_footer" alt=""></a>
+							<span class="ml-3">Copyright © 2013-2017 OptDyn LLC. All rights reserved.</span>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="social">
+							<div class="footer_menu">
+								<ul class="d-flex justify-content-end">
+									<li><a href="thanks.html">Thanks</a></li>
+									<li><a href="tribute.html" class="mr-4">Tribute</a></li>
+									<li><a href="https://www.facebook.com/subutaicloud/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+									<li><a href="https://twitter.com/SubutaiCloud" target="_blank"><i class="fa fa-twitter"></i></a></li>
+									<li ><a href="https://www.linkedin.com/company/subutai-social-cloud" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
-		<div class="page__footer">
-			<footer class="footer">
-				<div class="footer__inner">
-
-					<div class="footer__logo">
-						<a href="index.html" class="logo">
-							<img src="img/optdyn-logo.png" alt="OptDyn"/>
-						</a>
-					</div>
-					<div class="footer__copyright">Copyright © 2013-2017 OptDyn LLC. All rights reserved.</div>
-
-					<div class="footer__social">
-						<ul class="footer-social">
-							<li class="footer-social__item">
-								<a href="https://www.facebook.com/Subutai-social-1169199263145930/" target="_blank" class="footer-social-item">
-									<i class="fa fa-facebook-official"></i>
-								</a>
-							</li>
-							<li class="footer-social__item">
-								<a href="https://twitter.com/SubutaiCloud" target="_blank" class="footer-social-item">
-									<i class="fa fa-twitter"></i>
-								</a>
-							</li>
-							<li class="footer-social__item">
-								<a href="https://www.linkedin.com/company/10554441/" target="_blank" class="footer-social-item">
-									<i class="fa fa-linkedin"></i>
-								</a>
-							</li>
-						</ul>
-						<div class="clear"></div>
-					</div>
-
-          <div class="footer__menu">
-            <ul class="footer-menu js-link-sroll">
-              <li class="footer-menu__item">
-                <a href="thanks.html" class="title">Thanks</a>
-              </li>
-              <li class="footer-menu__item">
-                <a href="tribute-to-Dennis-Ritchie.html" class="title">Tribute</a>
-              </li>
-            </ul>
-            <div class="clear"></div>
-          </div>
-          
-					<span class="to-top-arrow footer__arrow js-to-top-arrow"></span>
-					<div class="clear"></div>
-
-
-        </div>
-			</footer>
-		</div>
-		<script src="js/plugins.min.js"></script>
-		<script src="js/main.min.js"></script>
-		<script>
-			(function(i, s, o, g, r, a, m)
-			{
-				i['GoogleAnalyticsObject'] = r;
-				i[r] = i[r] || function()
-				{
-					(i[r].q = i[r].q || []).push(arguments)
-				}, i[r].l = 1 * new Date();
-				a = s.createElement(o),
-					m = s.getElementsByTagName(o)[0];
-				a.async = 1;
-				a.src = g;
-				m.parentNode.insertBefore(a, m)
-			})(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-			ga('create', 'UA-76144216-1', 'auto');
-			ga('send', 'pageview');
-
-		</script>
-		<script>
-			(function(d, w, c)
-			{
-				(w[c] = w[c] || []).push(function()
-				{
-					try
-					{
-						w.yaCounter36800845 = new Ya.Metrika(
-						{
-							id: 36800845,
-							clickmap: true,
-							trackLinks: true,
-							accurateTrackBounce: true,
-							webvisor: true,
-							trackHash: true
-						});
-					}
-					catch (e)
-					{}
-				});
-				var n = d.getElementsByTagName("script")[0],
-					s = d.createElement("script"),
-					f = function()
-					{
-						n.parentNode.insertBefore(s, n);
-					};
-				s.type = "text/javascript";
-				s.async = true;
-				s.src = "https://mc.yandex.ru/metrika/watch.js";
-				if (w.opera == "[object Opera]")
-				{
-					d.addEventListener("DOMContentLoaded", f, false);
-				}
-				else
-				{
-					f();
-				}
-			})(document, window, "yandex_metrika_callbacks");
-
-		</script>
-		<noscript>
-			<div>
-				<img src="https://mc.yandex.ru/watch/36800845" style="position:absolute; left:-9999px;" alt="" />
-			</div>
-		</noscript>
-	</body>
-
+	</div>
+	<link rel="stylesheet" href="css/main.min.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<script src="js/scripts.min.js"></script>
+</body>
 </html>
