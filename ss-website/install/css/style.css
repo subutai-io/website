@@ -478,3 +478,9 @@ a:hover {
 .new_heading a{
     font-size: 3rem;
 }
+.alert{
+    border-radius: 5px!important
+}
+.alert h4{
+    padding-bottom: 0;
+}
