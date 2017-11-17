@@ -183,8 +183,8 @@
                                             </ul>
                                             <p>Using a guest virtual machine allows for maximum flexibility to install a stock unmodified guest VM operating system and reduces complications. Ubuntu Server 16.04.3 or 17.04 operating systems are best: they come pre-installed with snapd. Debian is also a good candidate, but the snapd package needs to be installed:</p>
                                             <hr>
-                                                                                                        <pre class="brush: html">
-                                                                                                                sudo apt-get install snapd
+                                            <pre class="brush: html">
+                                                sudo apt-get install snapd
                                             </pre>
                                             <p>The snap has been tested on the following operating systems:</p>
                                             <hr>
@@ -212,26 +212,26 @@
                                     <div id="collapse4" class="panel-collapse collapse">
                                         <div class="panel-body">
                                             <p>Virtual or not, desktop editions should be avoided. Besides unnecessarily wasting resources for the windowing system they use NetworkManager which installs dnsmasq on port 53. If on a desktop edition, check to see if port 53 is already bound:</p>
-                                                                                                            <pre class="brush: html">
-                                                                                                                    sudo lsof -i :53
+                                            <pre class="brush: html">
+                                                sudo lsof -i :53
                                             </pre>
                                             <p>Any output from lsof means port 53 is being used. You'll need to stop dnsmasq permanently. Here’s how:</p>
-                                                                                                            <pre class="brush:html">
-                                                                                                                    sudo systemctl disable systemd-resolved.service
-                                                                                                                    sudo service systemd-resolved stop
+                                            <pre class="brush:html">
+                                                sudo systemctl disable systemd-resolved.service
+                                                sudo service systemd-resolved stop
                                             </pre>
                                             <p>Edit <code>/etc/NetworkManager/NetworkManager.conf</code> and change the dns property in the <code>[main]</code> section so it is set to <code>default:</code> <code>dns=default</code>. Here's how the file may look after adding or modifying the dns property:</p>
-                                                                                                            <pre class="brush:html">
-                                                                                                                    [main]
-                                                                                                                    plugins=ifupdown, keyfile
-                                                                                                                    dns=default
-                                                                                                                    [ifupdown]
-                                                                                                                    managed=false
+                                            <pre class="brush:html">
+                                                [main]
+                                                plugins=ifupdown, keyfile
+                                                dns=default
+                                                [ifupdown]
+                                                managed=false
                                             </pre>
-                                                                                                            <pre class="brush:html">
-                                                                                                                    sudo rm /etc/resolv.conf
-                                                                                                                    sudo service network-manager restart
-                                                                                                                    sudo killall dnsmasq
+                                            <pre class="brush:html">
+                                                sudo rm /etc/resolv.conf
+                                                sudo service network-manager restart
+                                                sudo killall dnsmasq
                                             </pre>
                                             <strong>The last killall, is a precaution, don't freak if it says, "no such process".</strong>
                                             <p>Another lsof for port 53 should not produce any output now. <strong>NOTE:</strong> if NetworkManager was not configured properly, after restart, you may need to add your nameserver into the  <code>/etc/resolv.conf</code> file it generates. It’s best to add this to the NetworkManager connection configuration if you don’t want the resolv.conf file to be overwritten.</p>
@@ -248,24 +248,24 @@
                                     <div id="collapse5" class="panel-collapse collapse">
                                         <div class="panel-body">
                                             <p>Before installing the Subutai Snap you may need to install snapd. Try to list your snaps with snap to see if it is installed:</p>
-                                                                                                                <pre class="brush:html">
-                                                                                                                        snap list
+                                            <pre class="brush:html">
+                                                snap list
                                             </pre>
                                             <p>Installing snapd is beyond the scope of this document. However, here are some useful commands for installing and setting up snapd on non-Ubuntu Linux distributions:</p>
                                             <hr>
                                             <ul>
                                                 <li>Mint, Debian:
                                                     <ul style="list-style: none; margin: 0">
-                                                                                                                                        <li><pre class="brush:html">
-                                                                                                                                                sudo apt-get install snapd
+                                                        <li><pre class="brush:html">
+                                                            sudo apt-get install snapd
                                                         </pre></li>
                                                     </ul>
                                                 </li>
                                                 <li>Fedora 24:
                                                     <ul style="list-style: none; margin: 0">
                                                         <li>
-                                                                                                                                                <pre class="brush:html">
-                                                                                                                                                        sudo dnf install snapd && sudo systemctl enable --now snapd.socket
+                                                            <pre class="brush:html">
+                                                                sudo dnf install snapd && sudo systemctl enable --now snapd.socket
                                                             </pre>
                                                         </li>
                                                     </ul>
@@ -278,9 +278,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                                                                        <pre class="brush:html">
-                                                                                                sudo snap install subutai --beta --devmode 
-                                                                                                snap list
+                                <pre class="brush:html">
+                                    sudo snap install subutai --beta --devmode 
+                                    snap list
                                 </pre>
                                 <div class="panel panel-default">
                                     <div class="alert alert-danger">
@@ -294,19 +294,18 @@
                                             <p>On non-Ubuntu Core distributions this might cause the core snap to be downloaded as well as the Subutai Snap which depends on it. Ubuntu Core comes with the core snap already installed. Don’t be surprised to see this other core snap getting downloaded and installed.</p>
                                             <hr>
                                             <p>Is the snap installed? The last command after installation checks that the package is installed. You should see similar output from it:</p>
-                                                                                                                    <pre class="brush:html">
-                                                                                                                            subuntu@testbox:~$ snap list
-                                                                                                                            Name Version Rev Developer Notes
-                                                                                                                            core 16-2.27.5 2774 canonical core
-                                                                                                                            subutai 5.0.2 183 devmode
-                                                                                                                            ubuntu-image 0.12+real1 44 canonical devmode
+                                            <pre class="brush:html">
+                                                subuntu@testbox:~$ snap list
+                                                Name Version Rev Developer Notes
+                                                core 16-2.27.5 2774 canonical core
+                                                subutai 5.0.2 183 devmode
+                                                ubuntu-image 0.12+real1 44 canonical devmode
                                             </pre>
                                             <p>There are known problems with certain hypervisors and bridged networking over WiFi connections. If you’re having connectivity issues after snap installation please see the VM Wifi workaround.</p>
                                             <hr>
                                             <p>The snap package comes with the p2p daemon which uses UDP port 6881. If you previously installed the p2p daemon package to connect to your cloud environments, then you’ll have a port conflict. You’ll need to stop and remove the p2p daemon package.</p>
                                             <hr>
                                             <p>Some distributions do not immediately update paths on snap package installation. If you don’t see the command subutai on the path, it should be visible after a logout and login.</p>
-
                                         </div>
                                     </div>
                                 </div>
@@ -325,12 +324,11 @@
                                             <p>Do not forget to use your appropriate block device in place of <code>/dev/your_block_device</code>. It can be a disk, a partition, a iSCSI target LUN, or an LVM logical volume. It just needs to be a block device. It should have over 100G to allow for at least one HUGE container to be used on it.</p>
                                             <hr>
                                             <p>Containers storage is created on this block device. By default, Subutai uses BTRFS but can use other copy-on-write filesystems like ZFS. The following command creates a BTRFS file system on the block device and mounts it.</p>
-
                                         </div>
                                     </div>
                                 </div>
-                                                                                                <pre class="brush:html">
-                                                                                                        sudo /snap/subutai/current/bin/btrfsinit /dev/your_block_device
+                                <pre class="brush:html">
+                                    sudo /snap/subutai/current/bin/btrfsinit /dev/your_block_device
                                 </pre>
                                 <div class="panel panel-default">
                                     <div class="alert alert-info">
@@ -342,10 +340,10 @@
                                     <div id="collapse6" class="panel-collapse collapse">
                                         <div class="panel-body">
                                             <p>Now you should see the block device mounted:</p>
-                                                                                                                            <pre class="brush:html">
-                                                                                                                                    subutai@ud1704s:~$ df -h /var/snap/subutai/common/lxc
-                                                                                                                                    Filesystem Size Used Avail Use% Mounted on
-                                                                                                                                    /dev/mapper/ud1704-btrfs 94G 17M 92G 1% /var/snap/subutai/common/lxc
+                                            <pre class="brush:html">
+                                                subutai@ud1704s:~$ df -h /var/snap/subutai/common/lxc
+                                                Filesystem Size Used Avail Use% Mounted on
+                                                /dev/mapper/ud1704-btrfs 94G 17M 92G 1% /var/snap/subutai/common/lxc
                                             </pre>
                                             <p>You can use this same process to create more RHs and add them to peers. RHs must be on the same LAN. The process to add a RH uses the Simple Service Discovery Protocol. RHs that are not bound to a peer on the network announce their availability. The peer console will show the RH and the admin can use an authorization process to approve adding the RH to the peer.</p>
                                             <hr>
@@ -363,8 +361,8 @@
                                 <br>
                                 <h4>Import the Management Container</h4>
                                 <p style="margin-top: 0"> Now that the Subutai Snap package is installed, and you have an active RH, you can import the management software and its console to convert this host into a peer:</p>
-                                                                                                <pre class="brush:html">
-                                                                                                        sudo subutai import management
+                                <pre class="brush:html">
+                                    sudo subutai import management
                                 </pre>
                                 <div class="panel panel-default">
                                     <div class="alert alert-danger">
@@ -500,8 +498,8 @@
                                             </table>
                                             <h3>Install the <strong>Subutai P2P</strong></h3>
                                             <p>The P2P daemon allows systems to join the swarm to access private cloud environments. Install the MSI package for Windows. Double click after downloading.</p>
-                                                                                                                                    <pre class="brush:html">
-                                                                                                                                            sudo apt install /path/to/subutai-p2p.deb
+                                            <pre class="brush:html">
+                                                sudo apt install /path/to/subutai-p2p.deb
                                             </pre>
                                             <hr>
                                             <h3>Install the <strong>Subutai OS Tray Application</strong></h3>
@@ -512,8 +510,8 @@
                                                 <li>the OS tray application</li>
                                             </ul>
                                             <p>Packages for Windows, Linux, and Mac OS operating systems are available for the OS tray application. For Mac and Windows the installers are trivial and standard MSI and Mac packages. For Linux:</p>
-                                                                                                                                    <pre class="brush:html">
-                                                                                                                                            sudo apt install /path/to/subutai-tray.deb
+                                            <pre class="brush:html">
+                                                sudo apt install /path/to/subutai-tray.deb
                                             </pre>
                                         </div>
                                         <!-- MAC OS -->
@@ -558,8 +556,8 @@
                                             </table>
                                             <h3>Install the  <strong>Subutai P2P Deamon</strong></h3>
                                             <p>The P2P daemon allows systems to join the swarm to access private cloud environments. Download and install the Mac package.</p>
-                                                                                                                                    <pre class="brush:html">
-                                                                                                                                            sudo apt install /path/to/subutai-p2p.deb
+                                            <pre class="brush:html">
+                                                sudo apt install /path/to/subutai-p2p.deb
                                             </pre>
                                             <hr>
                                             <h3>Install the <strong>Subutai OS Tray Application</strong></h3>
@@ -570,8 +568,8 @@
                                                 <li>the OS tray application</li>
                                             </ul>
                                             <p>Packages for Windows, Linux, and Mac OS operating systems are available for the OS tray application. For Mac and Windows the installers are trivial and standard MSI and Mac packages. For Linux:</p>
-                                                                                                                                    <pre class="brush:html">
-                                                                                                                                            sudo apt install /path/to/subutai-tray.deb
+                                            <pre class="brush:html">
+                                                sudo apt install /path/to/subutai-tray.deb
                                             </pre>
                                         </div>
                                         <!-- Linux -->
@@ -616,8 +614,8 @@
                                             </table>
                                             <h3>Install the  <strong>Subutai P2P Deamon</strong></h3>
                                             <p>The P2P daemon allows systems to join the swarm to access private cloud environments. We only support Debian based systems right now. So use apt install like so:</p>
-                                                                                                                                    <pre class="brush:html">
-                                                                                                                                            sudo apt install /path/to/subutai-p2p.deb
+                                            <pre class="brush:html">
+                                                sudo apt install /path/to/subutai-p2p.deb
                                             </pre>
                                             <hr>
                                             <h3>Install the <strong>Subutai OS Tray Application</strong></h3>
@@ -628,14 +626,14 @@
                                                 <li>the OS tray application</li>
                                             </ul>
                                             <p>Packages for Windows, Linux, and Mac OS operating systems are available for the OS tray application. For Mac and Windows the installers are trivial and standard MSI and Mac packages. For Linux:</p>
-                                                                                                                                    <pre class="brush:html">
-                                                                                                                                            sudo apt install /path/to/subutai-tray.deb
+                                            <pre class="brush:html">
+                                                sudo apt install /path/to/subutai-tray.deb
                                             </pre>
                                         </div>
                                     </div>
                                 </div>
                             </section>
-                           <div id="disqus_thread"></div>
+                            <div id="disqus_thread"></div>
                         <script>
 
     /**
@@ -653,54 +651,58 @@
     })();
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-                        <!-- end section -->
+<br>    
+                        </div>
+                        <!-- // end .col -->
                     </div>
                     <!-- // end .col -->
                 </div>
-                <!-- // end .col -->
+                <!-- // end .row -->
             </div>
-            <!-- // end .row -->
+            <!-- // end container -->
         </div>
-        <!-- // end container -->
-    </div>
-    <!-- end wrapper -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/retina.js"></script>
-    <script src="js/jquery.fitvids.js"></script>
-    <script src="js/wow.js"></script>
-    <script src="js/jquery.prettyPhoto.js"></script>
-    <!-- CUSTOM PLUGINS -->
-    <script>
-    // Определяем "семейство" операционной системы:
-    var os = 0;
-    if (navigator.userAgent.indexOf ('Windows') != -1) os = 1;
-    if (navigator.userAgent.indexOf ('Linux')!= -1) os = 2;
-    if (navigator.userAgent.indexOf ('Mac')!= -1) os = 3;
-    if (navigator.userAgent.indexOf ('FreeBSD')!= -1) os = 4;
-    // alert(navigator.userAgent);
-    switch (os) {
-    case 1:
-    $("#windows").addClass("active");
-    $("#home").addClass("in active");
-    break;
-    case 2:
-    $("#linux").addClass("active");
-    $("#menu2").addClass("in active");
-    break;
-    case 3:
-    $("#macos").addClass("active");
-    $("#menu1").addClass("in active");
-    break;
-    case 4:
-    alert('FreeBSD');
-    break;
-    default:
-    alert('Не удалось определить ОС!');
-    break;
-    }
-    </script>
-    <script src="js/custom.js"></script>
-    <script src="js/main.js"></script>
-</body>
+        <!-- end wrapper -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/retina.js"></script>
+        <script src="js/jquery.fitvids.js"></script>
+        <script src="js/wow.js"></script>
+        <script src="js/jquery.prettyPhoto.js"></script>
+        <!-- CUSTOM PLUGINS -->
+        <script>
+        // Определяем "семейство" операционной системы:
+        var os = 0;
+        if (navigator.userAgent.indexOf ('Windows') != -1) os = 1;
+        if (navigator.userAgent.indexOf ('Linux')!= -1) os = 2;
+        if (navigator.userAgent.indexOf ('Mac')!= -1) os = 3;
+        if (navigator.userAgent.indexOf ('FreeBSD')!= -1) os = 4;
+        // alert(navigator.userAgent);
+        switch (os) {
+        case 1:
+        $("#windows").addClass("active");
+        $("#home").addClass("in active");
+        break;
+        case 2:
+        $("#linux").addClass("active");
+        $("#menu2").addClass("in active");
+        break;
+        case 3:
+        $("#macos").addClass("active");
+        $("#menu1").addClass("in active");
+        break;
+        case 4:
+        alert('FreeBSD');
+        break;
+        default:
+        alert('Не удалось определить ОС!');
+        break;
+        }
+        </script>
+        <script src="js/custom.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/syntax-highlighter/scripts/shCore.js"></script>
+<script src="js/syntax-highlighter/scripts/shBrushXml.js"></script>
+<script src="js/syntax-highlighter/scripts/shBrushCss.js"></script>
+<script src="js/syntax-highlighter/scripts/shBrushJScript.js"></script>
+    </body>
 </html>
