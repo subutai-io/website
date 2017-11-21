@@ -484,3 +484,6 @@ a:hover {
 .alert h4{
     padding-bottom: 0;
 }
+.for_dev, .for_dev_win, .for_dev_lin{
+    display: none;
+}
