@@ -1,61 +1,48 @@
-# Subutai Social Foundation Website
+<h1>OptimizedHTML - Start HTML Template</h1>
 
-This project contains the SSF Website. It uses Jekyll to generate a static
-site from markdown files. You can read more about how to create content for
-the website from the [SSF Website Project](https://confluence.subutai.io/x/F4AWAQ) documentation space in Confluence.
+<p>
+	<img src="https://raw.githubusercontent.com/agragregra/optimizedhtml-start-template/master/app/img/preview.jpg" alt="Start HTML Template">
+</p>
 
-## Running the Site
+<p>Author: <a href="http://webdesign-master.ru" target="_blank">WebDesign Master</a> | <a href="http://webdesign-master.ru/blog/tools/2016-08-19-optimizedhtml.html" target="_blank">Manual in Russian</a></p>
 
-Clone this project to your local machine and make sure you have a hypervisor
-and vagrant installed. If you don't have one of the non-free hypervisors you can
-install VirtualBox which is free. Once you have these prerequisites installed
-you can fire up the ['subutai/basic'] vagrant box associated with this project by issueing the
-following command within the directory you cloned this project into:
+<p>OptimizedHTML is all-inclusive, optimized for Google PageSpeed start HTML5 template with Bootstrap (grid only), Gulp, Sass, Browsersync, Autoprefixer, Clean-CSS, Uglify, Imagemin, Vinyl-FTP and Bower (libs path) support. The template contains a <strong>.htaccess</strong> file with caching rules for web server.</p>
 
-    vagrant up
+<p>OptimizedHTML Start Template uses the best practices of web development and optimized for Google PageSpeed.</p>
 
-VirtualBox is the default provider for Vagrant. If you would like to use vmware
-or parallels on Mac OS X you can issue one of the following respective commands:
+<p>Cross-browser compatibility: IE9+.</p>
 
-    vagrant up --provider vmware_fusion
-    vagrant up --provider vmware_desktop
-    vagrant up --provider virtualbox
-    vagrant up --provider parallels
+<p>The template uses a Sass with <strong>Sass</strong> syntax and project structure with source code in the directory <strong>app/</strong> and production folder <strong>dist/</strong>, that contains ready project with optimized HTML, CSS, JS and images.</p>
 
+<h2>How to use OptimizedHTML</h2>
 
-Once vagrant fires up the box, you can ssh into it with *vagrant ssh*, then you must
-configure aws credentials by the following command and set access, secret keys and region:
+<ol>
+	<li><a href="https://github.com/agragregra/optimizedhtml-start-template/archive/master.zip">Download</a> <strong>optimizedhtml-start-template</strong> from GitHub;</li>
+	<li>Install Node Modules: <strong>npm i</strong>;</li>
+	<li>Run the template: <strong>gulp</strong>.</li>
+</ol>
 
-    aws configure
+<h2>Gulp tasks:</h2>
 
-After that you will also require to clone repository with descriptors inside this folder
-Please clone the repo into project-descriptors folder, as the script to build website content
-will search for this folder. Then you have to run
+<ul>
+	<li><strong>gulp</strong>: run default gulp task (sass, js, watch, browserSync) for web development;</li>
+	<li><strong>build</strong>: build project to <strong>dist</strong> folder (cleanup, image optimize, removing unnecessary files);</li>
+	<li><strong>deploy</strong>: project deployment on the server from <strong>dist</strong> folder via <strong>FTP</strong>;</li>
+	<li><strong>rsync</strong>: project deployment on the server from <strong>dist</strong> folder via <strong>RSYNC</strong>;</li>
+	<li><strong>clearcache</strong>: clear all gulp cache.</li>
+</ul>
 
-    site-build.sh
+<h2>Rules for working with the starting HTML template</h2>
 
-to build the website's content. After that you can feel free to build jekyll website:
-
-    jekyll s --source=ssf --host=0.0.0.0
-
-the following link will become available in your browser
-
-    [http://localhost:4000](http://localhost:4000)
-
-While you make changes to the content with markdown files for the website
-the vagrant vm will update the site automatically.
-
-
-// old
-Once vagrant fires up the box, you can ssh into it with *vagrant ssh* and
-start up the website with the start_jekyll.sh script in the home directory
-of the vagrant user. Startup requires full generation (might take 30 seconds)
-but after jekyll starts it will keep updating changes you make to your
-content in the project. You can make changes outside of the vagrant vm and
-just hit the URL for the site to see the effects of your work:
-
-[http://localhost:4000](http://localhost:4000)
-
-While you make changes to the content with markdown files for the website
-the vagrant vm will update the site automatically.
-
+<ol>
+	<li>All HTML files should have similar initial content as in <strong>app/index.html</strong>;</li>
+	<li><strong>Template Basic Images Start</strong> comment in app/index.html - all your custom template basic images (og:image for social networking, favicons for a variety of devices);</li>
+	<li><strong>Custom Browsers Color Start</strong> comment in app/index.html: set the color of the browser head on a variety of devices;</li>
+	<li><strong>Custom HTML</strong> comment in app/index.html - all your custom HTML;</li>
+	<li>For installing new jQuery library, just run the command "<strong>bower i plugin-name</strong>" in the terminal. Libraries are automatically placed in the folder <strong>app/libs</strong>. Bower must be installed in the system (npm i -g bower). Then place all jQuery libraries paths in the <strong>'libs'</strong> task (gulpfile.js);</li>
+	<li>All custom JS located in <strong>app/js/common.js</strong>;</li>
+	<li>All Sass vars placed in <strong>app/sass/_vars.sass</strong>;</li>
+	<li>All Bootstrap media queries placed in <strong>app/sass/_media.sass</strong>;</li>
+	<li>All jQuery libraries CSS styles placed in <strong>app/sass/_libs.sass</strong>;</li>
+	<li>Rename <strong>ht.access</strong> to <strong>.htaccess</strong> before place it in your web server. This file contain rules for files caching on web server.</li>
+</ol>
