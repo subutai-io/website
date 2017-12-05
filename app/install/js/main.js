@@ -5,8 +5,11 @@ $(document).ready(function() {
 
 
 	$('.burger_menu').on('click', function(){
-		$('.phone_menu').slideToggle(500)
+		$('.phone_menu').fadeToggle(500)
 	});
+	jQuery(".exit_btnp").click(function(){
+        jQuery(".phone_menu").fadeToggle(500)
+    });
 	var x  = $('#fcheck[type="checkbox"]');
 	var win = $('#fcheckwin[type="checkbox"]');
 	var lin = $('#fchecklin[type="checkbox"]');
