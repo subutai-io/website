@@ -13,7 +13,7 @@ This project contains the Web Site. It uses the npm package and the GULP build s
 
 #### Installing Nodejs and Gulp
 ```
-sudo apt-get install nodejs-legacy npm 
+sudo apt-get install -y nodejs
 ```
 
 or download the latest version from the official website: https://nodejs.org/
