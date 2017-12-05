@@ -22,6 +22,7 @@
     border-left: 1px solid #eee;
     border-right: 1px solid #eee;
     border-bottom: 1px solid #eee;
+    background: #f2f2ff
 
 }
 .sub-title a {
@@ -213,4 +214,26 @@
 
 .syntaxhighlighter .js.keyword {
     color: #b48ead !important;
+}
+.menu a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    letter-spacing: 1px	;
+    padding: 8px 20px;
+    border: 1px solid transparent;
+    transition: .2s ease;
+}
+.menu a:hover{
+    color: #f2f2f2!important;
+    border: 1px solid #fff;
+    border-radius: 100px;;
+}
+.menu a.button{
+    padding: 5px 15px;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+a.button:hover{
+    color: #fff;
 }
