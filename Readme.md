@@ -21,7 +21,9 @@ or download the latest version from the official website: https://nodejs.org/
 ```
 npm install -g gulp-cli  (maybe sudo)
 ```
-
+```
+npm install gulp -D
+```
 
 #### Install node_modules:
 ```
@@ -29,6 +31,8 @@ sudo npm install
 ```
 
 #### Run:
+
+Open the console from the root folder of the site, than run:
 
 ```
 gulp

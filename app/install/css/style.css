@@ -498,7 +498,8 @@ a:hover {
     padding-right: 10px
 }
 .fa-bars{
-    float: right
+    float: right;
+    font-size: 20px
 }
 .exit_btnp .fa{
     font-size: 3rem;
