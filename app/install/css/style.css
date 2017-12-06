@@ -497,9 +497,15 @@ a:hover {
     float: left;
     padding-right: 10px
 }
+.fa-bars{
+    float: right
+}
 .exit_btnp .fa{
     font-size: 3rem;
     float: right;
+}
+.nav-pills .fa{
+    float: right
 }
 .exit_btnp:hover{
     color: #2970D0;
