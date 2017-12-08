@@ -1,6 +1,19 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-76144216-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-76144216-1');
+	</script>
 	<meta charset="utf-8">
 	<title>Subutai</title>
 	<meta name="description" content="">
@@ -12,27 +25,37 @@
 	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
 	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
 	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
-	
+
 	<!-- Chrome, Firefox OS and Opera -->
 	<meta name="theme-color" content="#000">
 	<!-- Windows Phone -->
 	<meta name="msapplication-navbutton-color" content="#000">
 	<!-- iOS Safari -->
 	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
-	<style>body { opacity: 0; overflow-x: hidden; } html { background-color: #fff; }</style>
 	<style>
-	#preloader {
-		position: fixed;
-		left: 0;
-		top: 0;
-		z-index: 999;
-		width: 100%;
-		height: 100%;
-		overflow: visible;
-		background: #FFF url('../img/buffer.svg') no-repeat center center;
-	}
-</style>
+		body {
+			opacity: 0;
+			overflow-x: hidden;
+		}
+
+		html {
+			background-color: #fff;
+		}
+	</style>
+	<style>
+		#preloader {
+			position: fixed;
+			left: 0;
+			top: 0;
+			z-index: 999;
+			width: 100%;
+			height: 100%;
+			overflow: visible;
+			background: #FFF url('../img/buffer.svg') no-repeat center center;
+		}
+	</style>
 </head>
+
 <body>
 	<div class="about">
 		<div class="header w-100 d-flex align-items-center">
@@ -40,22 +63,42 @@
 				<div class="row">
 					<div class="main_menu w-100 d-flex justify-content-between w-100 align-items-center">
 						<div class="logo">
-							<a href="index.html"><img src="img/logo.png" class="img-fluid" alt="logo"></a>
+							<a href="index.html">
+								<img src="img/logo.png" class="img-fluid" alt="logo">
+							</a>
 						</div>
 						<div class="phone_top_menu d-flex">
-									<div class="d-flex align-items-center "><script async defer src="https://slack.subut.ai/slackin.js"></script>
-									<span class="phone_bars-burger ml-4"><i class="fa fa-bars fa-lg mr-4" aria-hidden="true"></i> </span></div>
-								</div>
+							<div class="d-flex align-items-center ">
+								<script async defer src="https://slack.subut.ai/slackin.js"></script>
+								<span class="phone_bars-burger ml-4">
+									<i class="fa fa-bars fa-lg mr-4" aria-hidden="true"></i>
+								</span>
+							</div>
+						</div>
 						<div class="menu w-100">
 							<ul class="d-flex align-items-center justify-content-end">
-								<li><a href="about.html"  class="menu_link">About</a></li>
-								<li><a href="goodwill.html" class="menu_link">Goodwill</a></li>
-								<li><a href="manifesto.html" class="menu_link">Manifesto</a></li>
-								<li><a href="socialcloud.html" class="menu_link">Social Cloud Computing</a></li>
-								<li><a href="http://blog.optdyn.com" target="_blank" class="menu_link">Blog</a></li>
-								 
-								<li class="d-flex align-items-center"><script async defer src="https://slack.subut.ai/slackin.js"></script></li>
-								<li><a href="install/index.html" class="btn button">Getting Started</a></li>
+								<li>
+									<a href="about.html" class="menu_link">About</a>
+								</li>
+								<li>
+									<a href="goodwill.html" class="menu_link">Goodwill</a>
+								</li>
+								<li>
+									<a href="manifesto.html" class="menu_link">Manifesto</a>
+								</li>
+								<li>
+									<a href="socialcloud.html" class="menu_link">Social Cloud Computing</a>
+								</li>
+								<li>
+									<a href="http://blog.optdyn.com" target="_blank" class="menu_link">Blog</a>
+								</li>
+
+								<li class="d-flex align-items-center">
+									<script async defer src="https://slack.subut.ai/slackin.js"></script>
+								</li>
+								<li>
+									<a href="install/index.html" class="btn button">Getting Started</a>
+								</li>
 							</ul>
 						</div>
 					</div>
@@ -64,17 +107,29 @@
 		</div>
 	</div>
 	<div class="phone">
-			<div class="exit_btnp">
-					<i class="fa fa-times" aria-hidden="true"></i>
-				</div>
+		<div class="exit_btnp">
+			<i class="fa fa-times" aria-hidden="true"></i>
+		</div>
 		<ul>
-			<li><a href="about.html">About</a></li>
-			<li><a href="goodwill.html">Goodwill</a></li>
-			<li><a href="manifesto.html">Manifesto</a></li>
-			<li><a href="socialcloud.html">Social Cloud Computing</a></li>
-			<li><a href="http://blog.optdyn.com" target="_blank" class="menu_link">Blog</a></li>
-			  
-			<li><a href="install/index.html" class="btn button">Getting Started</a></li>
+			<li>
+				<a href="about.html">About</a>
+			</li>
+			<li>
+				<a href="goodwill.html">Goodwill</a>
+			</li>
+			<li>
+				<a href="manifesto.html">Manifesto</a>
+			</li>
+			<li>
+				<a href="socialcloud.html">Social Cloud Computing</a>
+			</li>
+			<li>
+				<a href="http://blog.optdyn.com" target="_blank" class="menu_link">Blog</a>
+			</li>
+
+			<li>
+				<a href="install/index.html" class="btn button">Getting Started</a>
+			</li>
 		</ul>
 	</div>
 	<div class="poster w-100 text-center">
@@ -84,9 +139,14 @@
 		<div class="container">
 			<div class="row">
 				<h5>Join the hordes</h5>
-				<p>Come and join the horde in the <a href="https://hub.subut.ai/">Hub's War Room.</a> Pins on the globe represent peers: green online, red offline. We aim to fill the globe up with lots of green pins with no bald spots. We collaborate in the built in chat or on our Slack Channel to find new folks to create peers in the empty patches.</p>
+				<p>Come and join the horde in the
+					<a href="https://hub.subut.ai/">Hub's War Room.</a> Pins on the globe represent peers: green online, red offline. We aim to fill the globe up with lots
+					of green pins with no bald spots. We collaborate in the built in chat or on our Slack Channel to find new folks to create
+					peers in the empty patches.</p>
 				<h5 class="mt-4">Kick the tires and give us feedback</h5>
-				<p>We need feedback from people who create peers, share resources with friends, and create cloud environments. Tell us what you think by hitting the <strong>“Rate us” </strong>widget in the War Room.</p>
+				<p>We need feedback from people who create peers, share resources with friends, and create cloud environments. Tell us what
+					you think by hitting the
+					<strong>“Rate us” </strong>widget in the War Room.</p>
 				<div class="col-lg-12 p-0 pb-5">
 					<img src="img/rate.png" class="img-fluid" alt="">
 				</div>
@@ -94,9 +154,18 @@
 				<div class="col-lg-12 p-0 pt-4 pb-5">
 					<img src="img/chat.png" class="img-fluid" alt="">
 				</div>
-				<p>For sysadmins and techies, <a href="install/index.html" target="_blank">peer installation</a> is straightforward with many options. We’re working on finishing touches with different platforms and package managers so if anyone wants to help out we appreciate it.</p>
-				<p>For those of you who want to help, but are not technically savvy, don’t worry you can still help. We need to make sure anyone can provide and utilize resources. We’re working on an easy to use peer launcher, however it’s a bit raw and in beta. It should help you setup a peer inside a virtual machine to sell resources to others and earn Goodwill <a href="helping-the-good-guys.html" target="_blank">contributing idle resources to open source projects</a>. There may be problems with the launcher since everyone’s setup is different and we have not worked out the bugs. However if you could help us out by testing them that would be awesome.</p>
-				<p>We need GitHub projects to register for the OS contribution program and provide blueprints for their applications so they can be made available to all users in the Subutai Bazaar. <a href="helping-the-good-guys.html" target="_blank">The Subutai FOSS Contribution Program</a> explains this in detail.</p>
+				<p>For sysadmins and techies,
+					<a href="install/index.html" target="_blank">peer installation</a> is straightforward with many options. We’re working on finishing touches with different platforms
+					and package managers so if anyone wants to help out we appreciate it.</p>
+				<p>For those of you who want to help, but are not technically savvy, don’t worry you can still help. We need to make sure
+					anyone can provide and utilize resources. We’re working on an easy to use peer launcher, however it’s a bit raw and
+					in beta. It should help you setup a peer inside a virtual machine to sell resources to others and earn Goodwill
+					<a href="helping-the-good-guys.html"
+					    target="_blank">contributing idle resources to open source projects</a>. There may be problems with the launcher since everyone’s setup
+					is different and we have not worked out the bugs. However if you could help us out by testing them that would be awesome.</p>
+				<p>We need GitHub projects to register for the OS contribution program and provide blueprints for their applications so
+					they can be made available to all users in the Subutai Bazaar.
+					<a href="helping-the-good-guys.html" target="_blank">The Subutai FOSS Contribution Program</a> explains this in detail.</p>
 				<p>Anyone can then fire up open source cloud applications while sharing resources.</p>
 				<br>
 				<br>
@@ -104,32 +173,58 @@
 					<h2 class="h3">Developers</h2>
 					<hr>
 				</div>
-				<p>Next we need developers! We need Ethereum blockchain and Solidity savvy engineers, P2P researchers to help us experiment and optimize DHT and Gossip protocols. We need C/C++, Java, Javascript, Golang programmers. If you want to get involved as a developer first give Subutai a try as a user. Then take a look at our list of GitHub projects below. Come onto our Slack channel and let us know if you need help diving in. We’re here and waiting for you!</p>
-				<p>Register on the Subutai Hub this month using the code <b>SITEOCT17</b>, and we’ll give you some goodwill to trade cloud resources with others on the system. Happy sharing!</p>
-				
+				<p>Next we need developers! We need Ethereum blockchain and Solidity savvy engineers, P2P researchers to help us experiment
+					and optimize DHT and Gossip protocols. We need C/C++, Java, Javascript, Golang programmers. If you want to get involved
+					as a developer first give Subutai a try as a user. Then take a look at our list of GitHub projects below. Come onto
+					our Slack channel and let us know if you need help diving in. We’re here and waiting for you!</p>
+				<p>Register on the Subutai Hub this month using the code
+					<b>SITEOCT17</b>, and we’ll give you some goodwill to trade cloud resources with others on the system. Happy sharing!</p>
+
 				<div class="about_heading w-100 mb-3 mt-4">
 					<h2 class="h3">Developers</h2>
 					<hr>
 				</div>
-				<p class="w-100">Slack: <a href="https://subutai-io.slack.com">https://subutai-io.slack.com</a></p>
-				<p class="w-100">GitHub Organization: <a href="https://github.com/subutai-io">https://github.com/subutai-io</a></p>
+				<p class="w-100">Slack:
+					<a href="https://subutai-io.slack.com">https://subutai-io.slack.com</a>
+				</p>
+				<p class="w-100">GitHub Organization:
+					<a href="https://github.com/subutai-io">https://github.com/subutai-io</a>
+				</p>
 				<p class="w-100">GitHub Projects:</p>
 				<div>
 					<ul class="pl-4">
-						<li>Peer Management Console: <a href="https://github.com/subutai-io/base">https://github.com/subutai-io/base</a></li>
-						<li>P2P Daemon: <a href="https://github.com/subutai-io/p2p">https://github.com/subutai-io/p2p</a></li>
-						<li>Tray Wallet: <a href="https://github.com/subutai-io/tray">https://github.com/subutai-io/tray</a></li>
-						<li>CLI Agent: <a href="https://github.com/subutai-io/agent">https://github.com/subutai-io/agent</a></li>
-						<li>Browser Plugins for E2E Security: <a href="https://github.com/subutai-io/browsers">https://github.com/subutai-io/browsers</a></li>
-						<li>Intelligent Installers: <a href="https://github.com/subutai-io/launcher">https://github.com/subutai-io/launcher</a></li>
-						<li>Snappy Snap: <a href="https://github.com/subutai-io/snap">https://github.com/subutai-io/snap</a></li>
-						<li>CDN Daemon: <a href="https://github.com/subutai-io/gorjun">https://github.com/subutai-io/gorjun</a></li>
-						<li>Subutai Router: <a href="https://github.com/subutai-io/liquid-router">https://github.com/subutai-io/liquid-router</a></li>
+						<li>Peer Management Console:
+							<a href="https://github.com/subutai-io/base">https://github.com/subutai-io/base</a>
+						</li>
+						<li>P2P Daemon:
+							<a href="https://github.com/subutai-io/p2p">https://github.com/subutai-io/p2p</a>
+						</li>
+						<li>Tray Wallet:
+							<a href="https://github.com/subutai-io/tray">https://github.com/subutai-io/tray</a>
+						</li>
+						<li>CLI Agent:
+							<a href="https://github.com/subutai-io/agent">https://github.com/subutai-io/agent</a>
+						</li>
+						<li>Browser Plugins for E2E Security:
+							<a href="https://github.com/subutai-io/browsers">https://github.com/subutai-io/browsers</a>
+						</li>
+						<li>Intelligent Installers:
+							<a href="https://github.com/subutai-io/launcher">https://github.com/subutai-io/launcher</a>
+						</li>
+						<li>Snappy Snap:
+							<a href="https://github.com/subutai-io/snap">https://github.com/subutai-io/snap</a>
+						</li>
+						<li>CDN Daemon:
+							<a href="https://github.com/subutai-io/gorjun">https://github.com/subutai-io/gorjun</a>
+						</li>
+						<li>Subutai Router:
+							<a href="https://github.com/subutai-io/liquid-router">https://github.com/subutai-io/liquid-router</a>
+						</li>
 					</ul>
 				</div>
 
 			</div>
-			
+
 		</div>
 	</div>
 	<div class="section getting_page pb-1">
@@ -156,7 +251,9 @@
 				<div class="row">
 					<div class="col-md-8">
 						<div class="copyright_logo">
-							<a href="https://optdyn.com/" target="_blank"><img src="img/cropped-logo.png" class="img-fluid logo_footer" alt=""></a>
+							<a href="https://optdyn.com/" target="_blank">
+								<img src="img/cropped-logo.png" class="img-fluid logo_footer" alt="">
+							</a>
 							<span class="ml-3">Copyright © 2013-2017 OptDyn LLC. All rights reserved.</span>
 						</div>
 					</div>
@@ -164,11 +261,27 @@
 						<div class="social">
 							<div class="footer_menu">
 								<ul class="d-flex justify-content-end">
-									<li><a href="thanks.html">Thanks</a></li>
-									<li><a href="tribute.html" class="mr-4">Tribute</a></li>
-									<li><a href="https://www.facebook.com/subutaicloud/" target="_blank"><i class="fa fa-facebook"></i></a></li>
-									<li><a href="https://twitter.com/SubutaiCloud" target="_blank"><i class="fa fa-twitter"></i></a></li>
-									<li ><a href="https://www.linkedin.com/company/subutai-social-cloud" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+									<li>
+										<a href="thanks.html">Thanks</a>
+									</li>
+									<li>
+										<a href="tribute.html" class="mr-4">Tribute</a>
+									</li>
+									<li>
+										<a href="https://www.facebook.com/subutaicloud/" target="_blank">
+											<i class="fa fa-facebook"></i>
+										</a>
+									</li>
+									<li>
+										<a href="https://twitter.com/SubutaiCloud" target="_blank">
+											<i class="fa fa-twitter"></i>
+										</a>
+									</li>
+									<li>
+										<a href="https://www.linkedin.com/company/subutai-social-cloud" target="_blank">
+											<i class="fa fa-linkedin"></i>
+										</a>
+									</li>
 								</ul>
 							</div>
 						</div>
@@ -181,4 +294,5 @@
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<script src="js/scripts.min.js"></script>
 </body>
+
 </html>
