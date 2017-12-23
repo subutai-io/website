@@ -215,3 +215,84 @@
 .syntaxhighlighter .js.keyword {
     color: #b48ead !important;
 }
+
+/*CSS Footer Getting Started*/
+.copyright {
+    bottom: 0;
+    padding: 20px 20px;
+    border-top: 1px solid #333; 
+    background-color: #000;
+}
+
+.copyright .copyright_logo{
+    margin-top: 10px;
+}
+
+.copyright .copyright_logo span {
+    color: #777;
+    letter-spacing: 1px;
+    font-size: 13px; 
+    padding-left: 20px;
+}
+.copyright .logo_footer {
+    width: 120px; 
+}
+.copyright .footer_menu {
+     margin-top: 10px;
+     margin-left: 30%;
+}
+.copyright .footer_menu ul li {
+    list-style: none; 
+    display: inline;
+}
+.copyright .footer_menu ul li a {
+    color: #fff;
+    font-size: 13px;
+    letter-spacing: 1px;
+    font-weight: 300; 
+    padding-left: 10px;
+}
+
+.copyright .footer_menu i{
+    font-size: 1em;
+    margin-top: 10px;
+    padding-left: 10px;
+}
+
+
+@media (max-width: 768px) {
+    .copyright{
+        position: inherit;
+    }
+
+    .copyright .copyright_logo span {
+        margin-top: 10px; 
+        text-align: center;
+    }
+
+    .copyright_logo {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+    .copyright .footer_menu{
+        margin-left: 0px;
+    }
+
+    .copyright .footer_menu i{
+        padding-left: 0px; 
+    }
+
+    .copyright .footer_menu ul li a {
+        padding-left: 0px;
+    }
+
