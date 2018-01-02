@@ -222,9 +222,10 @@
     width: 100%;
     bottom: 0;
 }
+
 .copyright {
     width: 100%;
-    padding: 0px 10px;
+    padding: 20px 20px;
     border-top: 1px solid #333; 
     background-color: #000;
     position: absolute;
@@ -233,6 +234,7 @@
 
 .copyright .copyright_logo{
     margin-top: 10px;
+    padding-left: 10%;
 }
 
 .copyright .copyright_logo span {
@@ -241,13 +243,15 @@
     font-size: 13px; 
     padding-left: 20px;
 }
+
 .copyright .logo_footer {
     width: 120px; 
 }
+
 .copyright .footer_menu {
-     margin-top: 10px;
-     margin-left: 50%;
+    margin-top: 10px;
 }
+
 .copyright .footer_menu ul li {
     list-style: none; 
     display: inline;
@@ -267,9 +271,13 @@
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 990px) {
     .copyright{
         position: inherit;
+    }
+
+    .copyright .copyright_logo{
+        padding-left: 0px;
     }
 
     .copyright .copyright_logo span {
@@ -292,7 +300,17 @@
     }
 
     .copyright .footer_menu{
-        margin-left: 0px;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
     }
 
     .copyright .footer_menu i{
@@ -302,4 +320,6 @@
     .copyright .footer_menu ul li a {
         padding-left: 0px;
     }
+}
+
 
