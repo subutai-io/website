@@ -246,10 +246,14 @@
 }
 .copyright .footer_menu {
      margin-top: 10px;
-     margin-left: 50%;
+}
+.copyright .footer_menu ul{
+    display: flex;
+    justify-content: flex-end
 }
 .copyright .footer_menu ul li {
     list-style: none; 
+    padding: 0 5px;
     display: inline;
 }
 .copyright .footer_menu ul li a {
