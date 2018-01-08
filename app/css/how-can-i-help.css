@@ -12,7 +12,7 @@ p{
 	/*text-indent: 4em;*/
 }
 
-/*.join-the-hordes h3{
+.join-the-hordes h3{
 	color: #2970d0;
 	text-align: center;
 	padding-bottom: 10px;
@@ -24,10 +24,8 @@ p{
 }
 
 .join-the-hordes img{
-	width: 400px;
-	height: 400px;
-	margin-left: 32%;
-}*/
+	width: 500px;
+}
 
 .developer-communication{
 	margin-top: 20px;
