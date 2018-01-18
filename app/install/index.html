@@ -26,7 +26,8 @@
     <meta name="author" content="SUBUTAI">
     <meta name="keywords" content="crypto, currency, future, hub, subutai, optdyn">
     <meta property="og:imgage" content="https://subutai.io/subutai.jpg">
-    <meta property="og:description" content="Open Source, container-based P2P Cloud computing platform that allows anyone to share, barter, or rent computer resources using Subutai’s cryptocurrency"/>
+    <meta property="og:description" content="Open Source, container-based P2P Cloud computing platform that allows anyone to share, barter, or rent computer resources using Subutai’s cryptocurrency"
+    />
     <title>Getting Started</title>
     <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,500,700,900" rel="stylesheet">
     <link rel="shortcut icon" href="/img/favicon/android-chrome-36x36.png" type="image/x-icon">
@@ -175,20 +176,47 @@
                                     <a href="peer-installations.html">Advanced Installations</a>)</h4>
                                 <p>The easiest and quickest way to get a Subutai Peer running on any platform is to use Vagrant
                                     with VirtualBox. Don't use package managers to install them: their versions are too old.
-                                    Download the latest vagrant 2.0.0 or higher and VirtualBox 5.1.0 or higher from their
-                                    respective websites. Once Vagrant and VirtualBox are installed init the Vagrantfile then
-                                    up the instance:</p>
+                                    Download the latest
+                                    <a href="https://www.vagrantup.com/downloads.html" target="_blank">Vagrant 2.0.1</a> or higher and
+                                    <a href="https://www.virtualbox.org/wiki/Downloads">VirtualBox 5.1.0</a> or higher from their respective websites. Once Vagrant and VirtualBox
+                                    are installed init the Vagrantfile then up the instance like so:
+                                </p>
+                                <hr>
+                                <p>
+                                    <strong>1.1 This command creates a VM based on Ubuntu Server 16.04.3. (Recommended):
+                                    </strong>
+                                </p>
                                 <pre class="brush:html">
-                                   # Exclude "-nobridge" for bridged mode if you can get an IP on your network
-                                   vagrant init subutai/stretch-nobridge
-                                   vagrant up
+                                    vagrant init --minimal subutai/xenial
                                </pre>
-                                <p>You now have an active RH. Import the management container to convert this host into a peer
-                                    after ssh'ing into it:</p>
+                                <p>
+                                    <strong>1.2 This command creates a VM based on Debian 9.x. </strong>
+                                </p>
                                 <pre class="brush:html">
-                                vagrant ssh
-                                sudo /snap/bin/subutai import management
+                                    vagrant init --minimal subutai/stretch
                             </pre>
+                                <p>
+                                    <strong>
+                                        2. Then it’s required to install special plugin for VirtualBox:
+                                    </strong>
+                                </p>
+                                <pre class="brush:html">
+                                    vagrant plugin install vagrant-vbguest
+                                </pre>
+                                <p>
+                                    <strong>
+                                        3. Once plugin is installed, the following command is required to be performed:
+                                    </strong>
+                                </p>
+
+                                <pre class="brush:html">
+                                    vagrant up
+                                </pre>
+                                <p>
+                                    During this process you will be asked for which bridge interface you want to use. The first option provided by Vagrant is
+                                    usually the right one: the network interface that is actively being used to get on the
+                                    Internet.
+                                </p>
                                 <div class="panel-group" id="accordion">
                                     <div class="panel panel-default">
                                         <div class="alert alert-success">
@@ -199,18 +227,54 @@
                                         </div>
                                         <div id="collapse1" class="panel-collapse collapse in">
                                             <div class="panel-body">
-                                                <p>The command will output the Subutai Console’s access URL. See the red rectangle
-                                                    in the screen capture below:</p>
+                                                <pre class="brush:html">
+                                                    default: 
+                                                    default: SUCCESS: Your peer is up. Welcome to the Horde!
+                                                    default: -----------------------------------------------
+                                                    default: 
+                                                    default: Next steps ...
+                                                    default: Make sure Subutai's E2E Extension/Plugin is installed in your browser
+                                                    default: Search for 'Subutai' in your browser's extension/plugin store to find it and install.
+                                                    default: 
+                                                    default: Console URL: https://172.16.1.121:8443
+                                                    default: Default u/p: 'admin' / 'secret'
+                                                    default: 
+                                                    default: Vagrant ssh and change the default 'subutai'/'ubuntai' user password!
+                                                    default: If you forget the url, just take a look in .vagrant/generated.yml
+                                                </pre>
+                                                <p>After your peer is created, you can log into it’s management console. From
+                                                    the output above you can see the IP based URL of your console.
+                                                </p>
+                                                <pre class="brush:html">
+                                                    default: Console URL: https://172.16.1.121:8443 
+                                                </pre>
                                                 <hr>
-                                                <img src="images/sconsole.png" class="img-fluid" alt="">
-                                                <p>The peer can now be managed from this URL via the Subutai Management Console
-                                                    if you used bridged mode. If you used NAT mode with -nobridge on the
-                                                    image name, then you can use
-                                                    <a href="https://localhost:9999">https://localhost:9999</a> The default
-                                                    <code>admin</code> user account's password is
-                                                    <code>secret</code>. On first login, you'll be asked to change this password.
-                                                    Before you login install the Subutai E2E Browser Plugin with at least
-                                                    one PGP key.</p>
+                                                <div class="alert alert-info">
+                                                    Just navigate to this Console URL (
+                                                        <strong>NOTE</strong>: the IP will most be different for your VM) using a web
+                                                        browser. Although we support many browsers, Chrome always behaves better
+                                                        than others. The console’s default admin password is
+                                                        <strong>
+                                                            <i>secret</i>
+                                                        </strong>. You will be asked to change it after initially being logged in. Once
+                                                        you reset your admin password, you will gain entry into the management
+                                                        console UI where you can change many aspects of the peer.
+                                                </div>
+                                                <p>
+                                                    The first thing many users do is register it with the
+                                                    <a href="https://hub.subut.ai">Subutai Hub</a> to easily start sharing resources
+                                                </p>
+                                                <p>with friends and family. To register your peer find the
+                                                    <strong>“Register”</strong> button
+                                                    <img src="./images/reg-peer-ss-logo-off.png" alt=""> in the upper right hand corner of the UI. When you click this button,
+                                                    a dialog will pop up with fields asking you for your Subutai Hub login
+                                                    and password. Provide your Hub credentials and push the
+                                                    <img src="./images/register-peer3.png" alt=""> button. Within 3-10 seconds you should be notified of being logged in.
+                                                    The button’s color will change from gray to green <img src="images/gsp4.png" alt="">. Your new peer will
+                                                    now appear on the Subutai Hub in your peers list.
+                                                </p>
+                                                <strong>Congratulations! You are ready to share resource with your new Subutai Peer on the Hub!
+                                                </strong>
                                             </div>
                                         </div>
                                     </div>
@@ -362,9 +426,6 @@
                                             <p>Install the OS Tray application to conveniently access environments from your
                                                 desktop, manage your peers while showing you your Goodwill balance. Packages
                                                 for Windows, Linux, and Mac OS are available. For Linux:</p>
-                                            <pre class="brush:html">
-                                                sudo apt install /path/to/subutai-tray.deb
-                                            </pre>
                                         </div>
                                         <!-- MAC OS -->
                                         <div id="menu1" class="tab-pane fade">
@@ -453,9 +514,6 @@
                                             <p>Install the OS Tray application to conveniently access environments from your
                                                 desktop, manage your peers while showing you your Goodwill balance. Packages
                                                 for Windows, Linux, and Mac OS are available. For Linux:</p>
-                                            <pre class="brush:html">
-                                                sudo apt install /path/to/subutai-tray.deb
-                                            </pre>
                                         </div>
                                         <!-- Linux -->
                                         <div id="menu2" class="tab-pane fade">
@@ -585,7 +643,8 @@
         <!-- // end container -->
 
         <!--Footer Getting Started-->
-        <div class="footer"><br/>
+        <div class="footer">
+            <br/>
             <div class="copyright d-flex justify-content-between align-items-center w-100 flex-wrap">
                 <div class="container-fluid">
                     <div class="row">
@@ -629,7 +688,8 @@
                     </div>
                 </div>
             </div>
-        </div><!-- end footer-->
+        </div>
+        <!-- end footer-->
 
     </div>
     <!-- end wrapper -->
