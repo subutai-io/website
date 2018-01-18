@@ -172,8 +172,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <!-- INSTALLATION -->
-                                <h4 class="new_heading">Peer Installation With Vagrant (
-                                    <a href="peer-installations.html">Advanced Installations</a>)</h4>
+                                <h4 class="new_heading">Peer Installation With Vagrant (<a href="peer-installations.html">Advanced Installations</a>)</h4>
                                 <p>The easiest and quickest way to get a Subutai Peer running on any platform is to use Vagrant
                                     with VirtualBox. Don't use package managers to install them: their versions are too old.
                                     Download the latest
@@ -183,21 +182,22 @@
                                 </p>
                                 <hr>
                                 <p>
-                                    <strong>1.1 This command creates a VM based on Ubuntu Server 16.04.3. (Recommended):
+                                    <strong>1.1 This command creates a Subutai Peer VM based on Ubuntu Server 16.04.3. (Recommended):
                                     </strong>
                                 </p>
                                 <pre class="brush:html">
                                     vagrant init --minimal subutai/xenial
                                </pre>
                                 <p>
-                                    <strong>1.2 This command creates a VM based on Debian 9.x. </strong>
+                                    <strong>1.2 This command creates a Subutai Peer VM based on Debian 9.x. : </strong>
                                 </p>
                                 <pre class="brush:html">
                                     vagrant init --minimal subutai/stretch
                             </pre>
                                 <p>
                                     <strong>
-                                        2. Then it’s required to install special plugin for VirtualBox:
+                                        2. For VirtualBox you will need to install the vbguest plugin: 
+
                                     </strong>
                                 </p>
                                 <pre class="brush:html">
@@ -205,7 +205,8 @@
                                 </pre>
                                 <p>
                                     <strong>
-                                        3. Once plugin is installed, the following command is required to be performed:
+                                        3. Once plugin is installed, you can create and start the Subutai Peer VM:
+
                                     </strong>
                                 </p>
 
@@ -227,6 +228,7 @@
                                         </div>
                                         <div id="collapse1" class="panel-collapse collapse in">
                                             <div class="panel-body">
+                                                <p>After a lot of output you’ll see output similar (your console’s IP address might be different) to the following:</p>
                                                 <pre class="brush:html">
                                                     default: 
                                                     default: SUCCESS: Your peer is up. Welcome to the Horde!
@@ -250,13 +252,10 @@
                                                 </pre>
                                                 <hr>
                                                 <div class="alert alert-info">
-                                                    Just navigate to this Console URL (
-                                                        <strong>NOTE</strong>: the IP will most be different for your VM) using a web
+                                                    Just navigate to this Console URL (<strong>NOTE</strong>: the IP will most be different for your VM) using a web
                                                         browser. Although we support many browsers, Chrome always behaves better
-                                                        than others. The console’s default admin password is
-                                                        <strong>
-                                                            <i>secret</i>
-                                                        </strong>. You will be asked to change it after initially being logged in. Once
+                                                        than others. The console’s default <code>admin</code> password is
+                                                        <code>secret</code>. You will be asked to change it after initially being logged in. Once
                                                         you reset your admin password, you will gain entry into the management
                                                         console UI where you can change many aspects of the peer.
                                                 </div>
