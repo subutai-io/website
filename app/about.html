@@ -348,7 +348,7 @@
 							<a href="https://optdyn.com/" target="_blank">
 								<img src="img/cropped-logo.png" class="img-fluid logo_footer" alt="">
 							</a>
-							<span class="ml-3">Copyright © 2013-2018 OptDyn LLC. All rights reserved.</span>
+							<span class="ml-3">Copyright © 2013-<span id="currentYear"></span> OptDyn LLC. All rights reserved.</span>
 						</div>
 					</div>
 					<div class="col-md-4">
@@ -387,6 +387,10 @@
 	<link rel="stylesheet" href="css/main.min.css">
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<script src="js/scripts.min.js"></script>
+	<script type="text/javascript">
+		var currentYear = (new Date()).getFullYear();
+    	document.getElementById("currentYear").innerHTML = currentYear;
+	</script>>
 </body>
 
 </html>
