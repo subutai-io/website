@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 
 <head>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
@@ -324,7 +324,7 @@
 								<a href="https://optdyn.com/" target="_blank">
 									<img src="img/cropped-logo.png" class="img-fluid logo_footer" alt="">
 								</a>
-								<span class="ml-3">Copyright © 2013-2018 OptDyn LLC. All rights reserved.</span>
+								<span class="ml-3">Copyright © 2013-<span id="currentYear"></span> OptDyn LLC. All rights reserved.</span>
 							</div>
 						</div>
 						<div class="col-md-4">
@@ -394,6 +394,8 @@
 				$('#preloader').fadeOut('slow', function () {});
 			}, 2000);
 		});
+		var currentYear = (new Date()).getFullYear();
+    	document.getElementById("currentYear").innerHTML = currentYear;
 	</script>
 </body>
 
