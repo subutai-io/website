@@ -1,0 +1,110 @@
+/*Header*/
+header .header-internal{
+	overflow: hidden; 
+    width: 100%;
+    height: 350px;
+    position: relative; 
+}
+
+.jumbotron-internal {
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-image:  url("../img/bg.jpg");
+	background-position: top center;
+	width: 100%;
+	height: 400px;
+}
+
+.jumbotron-internal h1{
+	color: #fff;
+	font-weight: 700;
+	padding-top: 10%;
+	position: relative;
+}
+
+/*Section text part 1*/
+section .internal-panel{
+	padding-top: 2%;
+}
+
+section .internal-panel .panel-primary{
+	border-color: #eee;
+	height: 240px;
+}
+
+section .internal-panel .panel-heading{
+	background-color: #078dd0;
+	height: 70px;
+}
+
+section .internal-panel .panel-heading h2{
+	font-size: 23px;
+	font-weight: 700;
+	padding-top: 8px;
+}
+
+section .internal-panel .panel-body p{
+	padding: 10px;
+	line-height: 30px;
+	text-align: center;
+}
+ 
+section .internal-panel .texts p{
+	text-align: justify;
+	line-height: 35px;
+}
+
+section .internal-panel .texts ul li{
+	text-align: justify;
+	line-height: 35px;
+	font-size: 16px;
+}
+
+section .internal-panel .texts img{
+	padding-top: 50px;
+}
+
+/*Section text part 1*/
+section .texts-part2 h1{
+	padding-top: 2%;
+}
+
+section .internal-panel2{
+	padding-top: 5%;
+}
+
+section .internal-panel2 .panel-default{
+	border-color: #fff;
+}
+
+section .internal-panel2 .panel-body p{
+	padding: 10px;
+	line-height: 30px;
+	text-align: center;
+
+}
+
+/*Section text part 1*/
+section .block-text{
+	padding-bottom: 5%;
+}
+
+section .block-text p{
+	text-align: justify;
+	line-height: 30px;
+}
+
+
+/*CSS Responsive*/
+@media (max-height: 880px) and (max-width: 580px){
+	.jumbotron-internal {
+		width: 100%;
+		height: auto;
+	}
+
+	.jumbotron-internal h1{
+		padding-top: 20px;
+	}
+}

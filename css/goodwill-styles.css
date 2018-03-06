@@ -1,0 +1,79 @@
+
+/*Header*/
+header .header-internal{
+	overflow: hidden; 
+    width: 100%;
+    height: 350px;
+    position: relative; 
+}
+
+.jumbotron-internal {
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-image:  url("../img/bg.jpg");
+	background-position: top center;
+	width: 100%;
+	height: 400px;
+}
+
+.jumbotron-internal h1{
+	color: #fff;
+	font-weight: 700;
+	padding-top: 10%;
+	position: relative;
+}
+
+/*Section - text1*/
+section .text1{
+	padding-top: 3%;
+}
+
+section .text1 .block-text1 p{
+	padding: 10px;
+	line-height: 30px;
+	text-align: justify;
+}
+
+section .text1 .block-text2 p{
+	padding: 10px;
+	line-height: 30px;
+	text-align: justify;
+}
+
+section .text1 .text-list{
+	padding-top: 4%;
+}
+
+section .text1 .text-list ul li{
+	line-height: 30px;
+	text-align: justify;
+	font-size: 16px;
+}
+
+section .text1 .text-list p{
+	padding: 10px;
+	line-height: 30px;
+	text-align: justify;
+}
+
+section .text1 .block-text2{
+	padding-top: 4%;
+}
+
+section .text1 .block-text3{
+	padding-top: 2%;
+	padding-bottom: 4%;
+}
+
+@media (max-height: 880px) and (max-width: 580px){
+	.jumbotron-internal {
+		width: 100%;
+		height: auto;
+	}
+
+	.jumbotron-internal h1{
+		padding-top: 20px;
+	}
+}
