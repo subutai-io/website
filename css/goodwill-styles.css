@@ -29,7 +29,7 @@ header .header-internal{
 .jumbotron-internal h1{
 	color: #fff;
 	font-weight: 700;
-	padding-top: 10%;
+	top: 7rem;
 	position: relative;
 }
 
