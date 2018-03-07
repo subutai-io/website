@@ -2,8 +2,11 @@
 body, html{
 	width: 100%;
 	height: 100%;
+	
 }
-
+body{
+	overflow-x: hidden;
+}
 header{
 	overflow: hidden; 
     width: 100%;
@@ -442,4 +445,19 @@ footer .cont-footer .icons-cont-footer i{
 		height: 500px;
 		width: 100%;
 	}
+}
+
+.for_dev, .for_dev_win, .for_dev_lin{
+    display: none;
+}
+.alert{
+    margin-bottom: 0;
+    border: 0;
+    border-radius: 0
+}
+.alert{
+    border-radius: 5px!important
+}
+.alert h4{
+    padding-bottom: 0;
 }

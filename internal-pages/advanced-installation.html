@@ -15,9 +15,10 @@
     <link href="https://fonts.googleapis.com/css?family=Maven+Pro" rel="stylesheet">
     <link href="../fontawesome/fontawesome-all.css" rel="stylesheet">
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="../js/syntax-highlighter/styles/shCore.css" media="all">
+    <link rel="stylesheet" href="../js/syntax-highlighter/styles/shCoreRDark.css" media="all">
+    <link rel="stylesheet" href="../css/custom.css">
     <!-- JS Links-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
 
     <!-- Favicon link-->
     <link rel="shortcut icon" href="../img/favicon.png" />
@@ -128,7 +129,7 @@
                                 <a href="fiest-launch.html">First Launch</a>
                             </li>
                             <li>
-                                <a href="register-peers-on-hub.html">Register Peers on Hub</a>
+                                <a href="register-peers-on-hub.html">Register Peers on Bazaar</a>
                             </li>
                             <li>
                                 <a href="environment-creation.html">Environment Creation</a>
@@ -310,7 +311,7 @@
                                                 wasting resources for the windowing system they use NetworkManager which
                                                 installs dnsmasq on port 53. If on a desktop edition, check to see if
                                                 port 53 is already bound:</p>
-                                            <pre>
+                                            <pre class="brush:html">
                                                                         sudo lsof -i :53
                                             </pre>
                                             <p>Any output from lsof means port 53 is being used. You'll need to stop dnsmasq
@@ -1059,7 +1060,8 @@
             </div>
         </div>
     </footer>
-    
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
     <script type="text/javascript">
         var currentYear = (new Date()).getFullYear();
         document.getElementById("currentYear").innerHTML = currentYear;
@@ -1095,6 +1097,10 @@
                 break;
         }
     </script>
-
+<script src="../js/main.js"></script>
+<script src="../js/syntax-highlighter/scripts/shCore.js"></script>
+<script src="../js/syntax-highlighter/scripts/shBrushXml.js"></script>
+<script src="../js/syntax-highlighter/scripts/shBrushCss.js"></script>
+<script src="../js/syntax-highlighter/scripts/shBrushJScript.js"></script>
 </body>
 </html>
