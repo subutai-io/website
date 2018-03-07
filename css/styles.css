@@ -48,9 +48,12 @@ a{
 		background-position-y: 55px;
 	}
 	.jumbotron-internal h1{
-		top: 3rem!important;
+		top: 10rem!important;
 		font-size: 20px;
-	}	
+	}
+	.cont-header{
+		padding-bottom: 40%!important;
+	}
 }
 .cont-header{
 	padding-top: 10%;
