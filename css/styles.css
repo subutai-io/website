@@ -47,9 +47,9 @@ a{
 	.jumbotron-internal{
 		background-position-y: 55px;
 	}
-	.text-center h1{
-		font-size: 2rem;
-		margin-top: 70px;
+	.jumbotron-internal h1{
+		top: 3rem!important;
+		font-size: 20px;
 	}	
 }
 .cont-header{
@@ -468,4 +468,7 @@ footer .cont-footer .icons-cont-footer i{
 }
 .alert h4{
     padding-bottom: 0;
+}
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:focus, .navbar-inverse .navbar-nav > .open > a:hover{
+	background-color: #454545!important;
 }

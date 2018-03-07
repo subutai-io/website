@@ -20,9 +20,8 @@ header .header-internal{
 	.jumbotron-internal{
 		background-position-y: 55px;
 	}
-	.text-center h1{
-		font-size: 2rem;
-		margin-top: 70px;
+	.jumbotron-internal h1{
+		top: 0rem
 	}	
 }
 .jumbotron-internal h1{
