@@ -43,7 +43,15 @@ a{
 	width: 100%;
 	height: 100%;
 }
-
+@media only screen and (max-width : 768px){
+	.jumbotron-internal{
+		background-position-y: 55px;
+	}
+	.text-center h1{
+		font-size: 2rem;
+		margin-top: 70px;
+	}	
+}
 .cont-header{
 	padding-top: 10%;
 	padding-bottom: 10%;
