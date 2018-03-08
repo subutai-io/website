@@ -115,3 +115,13 @@ section .block-text p{
 		padding-top: 20px;
 	}
 }
+.panel-heading{
+	transition: all .5s ease
+}
+.click-panel{
+	cursor: pointer
+}
+.click-panel:hover .panel-heading{
+	background: #0e212b;
+	
+}
