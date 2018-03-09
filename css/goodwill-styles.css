@@ -15,7 +15,7 @@ header .header-internal{
 	background-image:  url("../img/SubutaiHeroImageV6.jpg");
 	background-position: top center;
 	width: 100%;
-	height: 400px;
+	height: 500px;
 }
 @media only screen and (max-width : 768px){
 	.jumbotron-internal{
@@ -28,7 +28,7 @@ header .header-internal{
 .jumbotron-internal h1{
 	color: #fff;
 	font-weight: 700;
-	top: 15rem;
+	top: 19rem;
 	position: relative;
 }
 
