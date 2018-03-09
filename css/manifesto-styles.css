@@ -67,3 +67,12 @@ section .text1 .block-text3 p{
 		padding-top: 20px;
 	}
 }
+
+@media (min-width: 1960px){
+	.jumbotron-internal{
+		height: 100%;
+	}
+	.jumbotron-internal h1{
+		padding-top: 60px;
+	}
+}

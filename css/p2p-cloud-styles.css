@@ -125,3 +125,12 @@ section .block-text p{
 	background: #0e212b;
 	
 }
+
+@media (min-width: 1960px){
+	.jumbotron-internal{
+		height: 100%;
+	}
+	.jumbotron-internal h1{
+		padding-top: 60px;
+	}
+}

@@ -475,3 +475,12 @@ footer .cont-footer .icons-cont-footer i{
 .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:focus, .navbar-inverse .navbar-nav > .open > a:hover{
 	background-color: #454545!important;
 }
+
+@media (min-width: 1960px){
+	.jumbotron-internal{
+		height: 100%;
+	}
+	.jumbotron-internal h1{
+		padding-top: 60px;
+	}
+}
