@@ -87,7 +87,7 @@ section .text1 .block-text3{
 
 @media (min-width: 1960px){
 	.jumbotron-internal{
-		height: 100%;
+		height: auto;
 	}
 	.jumbotron-internal h1{
 		padding-top: 60px;
