@@ -16,9 +16,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
+
     <title>Advanced Installations</title>
-    
+
     <!-- CSS Links-->
     <link rel="stylesheet" type="text/css" href="./css/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="./css/styles.css">
@@ -61,7 +61,7 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="p2p-cloud-platform.html"><h4 style="font-size: 14px; color: #fff; font-weight: 700;">P2P Cloud Platform</h4></a></li>
                     <li><a href="goodwill.html"><h4 style="font-size: 14px; color: #fff; font-weight: 700;">GoodWill</h4></a></li>
-                    
+
                     <li class="dropdown">
                       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><h4 style="font-size: 14px;color: #fff; font-weight: 700;">Ideation<span class="caret"></span></h4></a>
                       <ul class="dropdown-menu">
@@ -78,7 +78,7 @@
                     </li>
 
                     <li><a href="getting-started.html"><h4 style="font-size: 14px;color: #fff; font-weight: 700;">Getting Started</h4></a></li>
-                    
+
                     <li class="dropdown">
                       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><h4 style="font-size: 14px;color: #fff; font-weight: 700;">Resources<span class="caret"></span></h4></a>
                       <ul class="dropdown-menu">
@@ -112,7 +112,7 @@
     </nav>
 
     <!-- Header section -->
-    <div class="header-internal">   
+    <div class="header-internal">
         <div class="jumbotron-internal">
             <div class="cont-header">
                 <div class="row">
@@ -287,6 +287,7 @@
                                                 Ubuntu Server 16.04.3 or 17.04 operating systems are best: they come
                                                 pre-installed with snapd. Debian is also a good candidate, but the snapd
                                                 package needs to be installed:</p>
+
                                             <hr>
                                             <pre class="brush: html">
                                                                     sudo apt-get install snapd
@@ -308,6 +309,12 @@
                                                 See the warnings below about NetworkManager if you’re installing the
                                                 snap on a desktop system with NetworkManager (most likely) installed.
                                                 See the "Disable dnsmasq on desktop editions!" section below.</p>
+																						<hr>
+																						<p>For proper peer operation you need to change open file descriptors limit.</p>
+																						<ol>
+																							<li>As the root user, add the following entry to the <code style="color: green">/etc/profile:</code> <code>ulimit -n 65535</code></li>
+																							<li>Reboot the host server and check the limit: <code>ulimit -S -n</code></li>
+																						</ol>
                                         </div>
                                     </div>
                                 </div>
@@ -413,7 +420,7 @@
                                     </div>
                                 </div>
                                 <pre class="brush:html">
-                                                                sudo snap install subutai --beta --devmode 
+                                                                sudo snap install subutai --beta --devmode
                                                                 snap list
                                 </pre>
                                 <div class="panel panel-default">
@@ -628,7 +635,7 @@
                                 </div>
                                 <br>
                             <div id="installation-ad"></div>
-                          
+
                                 <h3>Download Subutai</h3>
                                 <br>
                                 <div class="tabs_download">
@@ -962,7 +969,7 @@
     <section style="margin-top: 50px;">
         <div class="cont-part5">
             <div class="container">
-                
+
                 <div class="text-center">
                     <h1>Community</h1>
                     <h3 style="color: #fff;">We’d love to hear from you!</h3>
@@ -989,11 +996,11 @@
                          </a>
                     </div>
                 </div><br/>
-                
+
                 <div class="mailchimp">
                 <!-- Begin MailChimp Signup Form -->
                     <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
-                    
+
                     <style type="text/css">
                         #mc_embed_signup{
                             background: #04192b;
@@ -1004,7 +1011,7 @@
                         /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
                            We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
                     </style>
-                    
+
                     <div id="mc_embed_signup">
                         <form action="https://optdyn.us17.list-manage.com/subscribe/post?u=35361aa6e4a7374ec14c974bc&amp;id=a9787e94b0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
                             <div class="row">
@@ -1029,9 +1036,9 @@
                     </div>
 
                     <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
-                    <!--End mc_embed_signup-->      
+                    <!--End mc_embed_signup-->
                 </div>
-                
+
             </div>
         </div>
     </section>
@@ -1060,7 +1067,7 @@
                             <a href="https://optdyn.com/"><img src="./img/optdyn.png" class="img" alt="Optdyn" width="150"></a>
                         </div>
                     </div>
-                    
+
                     <div class="col-lg-4">
                         <p style="padding-top: 0px">Copyright &copy; <span id="currentYear"></span> OptDyn. All rights reserved.</p>
                         <p style="padding-top: 0px"><a href="privacy.html">Privacy |</a> <a href="privacy.html#term">Terms of Use |</a> <a href="privacy.html#cookies"> Cookies</a></p>
@@ -1110,10 +1117,10 @@
                 $("#menu1").addClass("in active");
                 break;
             case 4:
-                
+
                 break;
             default:
-                
+
                 break;
         }
     </script>
