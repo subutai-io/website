@@ -195,15 +195,15 @@ section .cont-part4 .panel-body a{
 }
 
 
-section .cont-part4 .getting-started .panel-body {
+/* section .cont-part4 .getting-started .panel-body {
 	padding-top: 30px;
 	height: 355px;
-}
+} */
 
-section .cont-part4 .getting-started .panel-body  ul li{
+/* section .cont-part4 .getting-started .panel-body  ul li{
 	text-align: left;
 	padding-bottom: 20px;
-}
+} */
 
 /*CSS Section 4 - Community*/
 section .cont-part5{
