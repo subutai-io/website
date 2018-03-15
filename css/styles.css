@@ -115,7 +115,10 @@ section .cont-part3 h2{
 
 
 section .cont-part3 img{
-	max-width: 300px;
+	max-width: 100%;
+	position: relative;
+	top: -65px;
+	left: 24px;
 }
 
 section .cont-text-part3{
