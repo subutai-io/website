@@ -114,11 +114,20 @@ section .cont-part3 h2{
 }
 
 
+@media only screen and (max-width : 480px){
+	section .cont-part3 img{
+		max-width: 300px!important;
+		/* position: relative; */
+		top: 0!important;
+		left: 0!important;
+	}
+}
+
 section .cont-part3 img{
-	max-width: 100%;
+	max-width: 600px;
 	position: relative;
-	top: -65px;
-	left: 24px;
+	top: -111px;
+	left: -50px;
 }
 
 section .cont-text-part3{
