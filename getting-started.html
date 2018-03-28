@@ -60,12 +60,20 @@
     <!-- Favicon link-->
     <link rel="shortcut icon" href="./img/favicon.png" />
 
-    <style type="text/css">
-        section .getting p{
-            text-align: justify;
-            line-height: 30px;
-        }
-    </style>
+        <style type="text/css">
+            .getting-started p{
+                text-align: justify;
+                line-height: 30px;
+                font-size: 15px;
+            }
+
+            .getting-started ul li{
+                text-align: justify;
+                line-height: 30px;
+                font-size: 15px;
+            }
+        </style>
+
 
 
 </head>
@@ -155,209 +163,116 @@
         </div>
     </div><br/><br/>
 
-    <div class="container getting-started">
-        <div class="row">
-            <div class="col-md-3">
-                <nav class="docs-sidebar" data-offset-top="300" data-offset-bottom="200" role="navigation">
-                    <ul class="nav">
-                        <li>
-                            <a href="#line1">Quick Start</a>
-                            <ul class="nav">
-                                <li>
-                                    <a href="#installation">Installation</a>
-                                </li>
-                                <!--<li>
-                                    <a href="browse-plugin.html">Browser Plugin</a>
-                                </li>
-                                <li>
-                                    <a href="fiest-launch.html">First Launch</a>
-                                </li>
-                                <li>
-                                    <a href="register-peers-on-hub.html">Register Peers on Bazaar</a>
-                                </li>
-                                <li>
-                                    <a href="environment-creation.html">Environment Creation</a>
-                                </li>
-                                <li>
-                                    <a href="peer-to-peer-setup.html">Peer to Peer Setup</a>
-                                </li>
-                                <li>
-                                    <a href="management-plugins.html">Management Plugins</a>
-                                </li>
-                                <li>
-                                    <a href="registering-users.html">Registering Users</a>
-                                </li>-->
-                            </ul>
-                        </li>
-                        <!--<li>
-                            <a href="tutorials.html">Tutorials</a>
-                        </li>-->
+    <div class="getting-started">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Welcome to <a href="https://subutai.io/" target="_blank">Subutai</a>! You can start using Subutai either by:</p>
+                    <ul>
+                        <li>Registering at the <a href="#Bazaar">Subutai Bazaar</a>, our social marketplace for user-administered P2P cloud services, and start creating environments on other users’ peers; </li>
+                        <li>Installing the <a href="#PeerOS">PeerOS</a> in one or more computers and start offering your own computational resources for hire, barter or share.</li>
                     </ul>
-                </nav>
-            </div>
-            <div class="col-md-9">
-                <section id="line1" class="section">
-                    <div class="getting">
+                    <p>In either case, you will also need to install the following companion software to ease your life:</p>
+                    <ul>
+                        <li>The <a href="#E2E">E2E (end-to-end encryption) plugin</a> for your browser helps manage your SSH keys needed to ensure secure communications with Subutai components;</li>
+                        <li>The <a href="#P2P">P2P (peer-to-peer) daemon</a> will allow your own PC to swarm up with the Subutai P2P cloud;</li>
+                        <li>The <a href="#Control-Center">Subutai Control Center</a> in your desktop computer will give you quick access to your Peers, Environments and <a href="https://subutai.io/goodwill.html" target="_blank"> GoodWill balance</a>.</li>
+                    </ul>
+                </div>
+                </div><br/>
 
-                    <div class="row">
-                        <div class="col-md-12 left-align">
-                        </div>
-                        <!-- end col -->
+                <div class="row">
+                    <div  class="col-lg-4 col-sm-12 mb-4 d-flex justify-content-center align-items-center">
+                      <a name="Bazaar"><img src="img/baazar.png" class="img-responsive center-block"></a>
                     </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <!-- INSTALLATION -->
-                            <h2 class="new_heading">Peer Installation With Vagrant (<a href="advanced-installation.html">Advanced Installations</a>)</h2><br/>
+                </div>
+                <div class="row">
+                    <div class="col-lg-7 col-sm-12 mb-4 d-flex justify-content-center align-items-center">
+                        <ul>
+                            <li>Learn more about the Subutai Bazaar: <a href="https://subutai.io/bazaar.html" target="_blank"> overview</a></li>
+                            <li>Sign up and log in</li>
+                            <li>Do remember to install the <a href=#E2E>E2E browser plugin</a> before using the Bazaar. It will ease the management of encryption keys. For some operations you will also need the <a href="#P2P">P2P daemon</a> and  <a href="#Control-Center">Subutai Control Center</a>.</li>
+                            <li>Learn the basics:</li>
+                                <ul>
+                                    <li><a href="https://docs.subutai.io/Products/Bazaar/20_War_room.html" target="_blank">War Room</a></li>
+                                    <li><a href="https://docs.subutai.io/Products/Bazaar/21_Peers.html" target="_blank">Peers</a></li>
+                                    <li><a href="https://docs.subutai.io/Products/Bazaar/18_How_to_create_and_use_environments.html" target="_blank">How to create and use environments</a></li>
+                                    <li><a href="https://docs.subutai.io/Products/Bazaar/24_Products.html" target="_blank">Products</a></li>
+                                    <li><a href="https://docs.subutai.io/Products/Bazaar/11_Organizations_user.html" target="_blank">Organizations</a></li>
+                                </ul>
+                            <li><a href="https://docs.subutai.io/Products/Bazaar_toctree.html" target="_blank">Full documentation</a></li>
+                        </ul><br/>
+                    </div>
+                    <div class="col-lg-5 col-sm-12 mb-4 d-flex justify-content-center align-items-center">
+                        <img src="./img/bazaar2.gif" alt="Subutai" class="img-responsive center-block">
+                    </div>
+                </div>
 
-                            <p>The easiest and quickest way to get a Subutai Peer running on any platform is to use Vagrant
-                                with VirtualBox. Don't use package managers to install them: their versions are too old.
-                                Download the latest
-                                <a href="https://www.vagrantup.com/downloads.html" target="_blank">Vagrant 2.0.1</a> or higher and
-                                <a href="https://www.virtualbox.org/wiki/Downloads">VirtualBox 5.1.0</a> or higher from their respective websites. Once Vagrant and VirtualBox
-                                are installed init the Vagrantfile then up the instance like so:
-                            </p>
-                            <hr>
-                            <p>
-                                <strong>1.1 This command creates a Subutai Peer VM based on Debian 9.x. (Recommended): </strong>
-                            </p>
-                            <pre class="brush:html">
-                                vagrant init --minimal subutai/stretch
-                            </pre>
-                            <p>
-                                <strong>1.2 This command creates a Subutai Peer VM based on Ubuntu Server 16.04.3. :
-                                </strong>
-                            </p>
-                            <pre class="brush:html">
-                                vagrant init --minimal subutai/xenial
-                            </pre>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <a name="PeerOS"><img src="img/peer.png" class="img-responsive center-block"></a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-7 col-sm-12 mb-4 d-flex justify-content-center align-items-center">
+                        <ul>
+                            <li>Learn more about Subutai PeerOS: <a href="https://subutai.io/peer-os.html" target="_blank"> overview</a></li>
+                            <li>Decide what is your preferred way to get the PeerOS up and running:</li>
+                            <ul>
+                                <li><a href="https://docs.subutai.io/Products/PeerOS/03_Run_PeerOS_with_Vagrant.html" target="_blank"> Quick install</a> - 5 minutes. Prerequisites: any system using Vagrant, 110G disk.</li>
+                                <li><a href="https://docs.subutai.io/Products/PeerOS/02_Install_PeerOS.html" target="_blank">Advanced admin installation </a>- 20 minutes. Prerequisites: Debian system (preferably fresh installed), 100G disk.</li>
+                                <li>You will need the <a href="#P2P">P2P daemon</a> and  <a href="#Control-Center">Subutai Control Center</a> on your Desktop in order to access your Peer. We recommended you also to install the <a href=#E2E>E2E browser plugin</a> to ease the management of encryption keys.</li>
+                            </ul>
+                            <li>The basics:</li>
+                                <ul>
+                                    <li><a href="https://docs.subutai.io/Products/PeerOS/05_How_to_use_the_Subutai_Console.html" target="_blank">How to use the Subutai Console</a></li>
+                                    <li><a href="https://docs.subutai.io/Products/PeerOS/07_How_to_update_Subutai_components.html" target="_blank">How to update Subutai components</a></li>
+                                </ul>
+                            <li><a href="https://docs.subutai.io/Products/PeerOS_toctree.html" target="_blank">Full documentation</a></li>
+                        </ul>
+                    </div><br/>
+                    <div class="col-lg-5 col-sm-12 mb-4 d-flex justify-content-center align-items-center">
+                        <img src="./img/peer3.gif" alt="Subutai" class="img-responsive center-block">
+                    </div>
+                </div>
 
-                            <p>
-                                <strong>
-                                    2. For Vagrant you will need to install the <code>subutai</code> and <code>vbguest</code> plugins:
-                                </strong>
-                            </p>
-                            <pre class="brush:html">
-                                vagrant plugin install vagrant-subutai
-                                vagrant plugin install vagrant-vbguest
-                            </pre>
-                            <p>
-                                <strong>
-                                    3. Once plugin is installed, you can create and start the Subutai Peer VM:
-                                </strong>
-                            </p>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1>Companion software</h1><br/>
 
-                            <pre class="brush:html">
-                                vagrant up
-                            </pre>
-                            <p>
-                                During this process you will be asked for which bridge interface you want to use. The first option provided by Vagrant is
-                                usually the right one: the network interface that is actively being used to get on the
-                                Internet.
-                            </p>
+                        <h2 style="color: #078DD0;"><a name="E2E">Browser plugin</a></h2>
+                        <p>The E2E browser plugin is available directly from the official stores of the main browsers - versions for <a href="https://chrome.google.com/webstore/detail/subutai-e2e-plugin/ffddnlbamkjlbngpekmdpnoccckapcnh">Chrome</a>, <a href="https://addons.mozilla.org/en-US/firefox/addon/subutai-e2e-plugin/">Firefox</a> and Safari are currently offered. It will remove the hassle of managing SSH keys that are required to ensure secure communications within the Subutai platform.</p><br/>
 
-                            <div class="panel-group" id="accordion">
-                                <div class="panel panel-default">
-                                    <div class="alert alert-success">
-                                        <h4 class="panel-title ">
-                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
-                                                <i class="fa fa-check-circle" aria-hidden="true"></i> Congratulations you have a Peer!</a>
-                                        </h4>
-                                    </div>
-                                    <div id="collapse1" class="panel-collapse collapse in">
-                                        <div class="panel-body">
-                                            <p>After a lot of output you’ll see output similar (your console’s IP address might be different) to the following:</p>
-                                            <pre class="brush:html">
-                                                default:
-                                                default: SUCCESS: Your peer is up. Welcome to the Horde!
-                                                default: -----------------------------------------------
-                                                default:
-                                                default: Next steps ...
-                                                default: Make sure Subutai's E2E Extension/Plugin is installed in your browser
-                                                default: Search for 'Subutai' in your browser's extension/plugin store to find it and install.
-                                                default:
-                                                default: Console URL: https://172.16.1.121:8443
-                                                default: Default u/p: 'admin' / 'secret'
-                                                default:
-                                                default: Vagrant ssh and change the default 'subutai'/'ubuntai' user password!
-                                                default: If you forget the url, just take a look in .vagrant/generated.yml
-                                            </pre>
-                                            <p>After your peer is created, you can log into it’s management console. From
-                                                the output above you can see the IP based URL of your console.
-                                            </p>
-                                            <pre class="brush:html">
-                                                default: Console URL: https://172.16.1.121:8443
-                                            </pre>
-                                            <hr>
-                                            <div class="alert alert-info">
-                                                <p>
-                                                    Before you log in to the peer console follow the <a href="#post">Post Installation</a> directions on installing the browser plugin and generating a PGP key first. Then
-                                                    just navigate to this Console URL (<strong>NOTE</strong>: the IP will most be different for your VM) using a web
-                                                    browser. Although we support many browsers, Chrome always behaves better
-                                                    than others. The console’s default <code>admin</code> password is
-                                                    <code>secret</code>. You will be asked to change it after initially being logged in. Once
-                                                    you reset your admin password, you will gain entry into the management
-                                                    console UI where you can change many aspects of the peer.
-                                                </p>
-                                            </div>
-                                            <p>
-                                                The first thing many users do is register it with the
-                                                <a href="https://bazaar.subutai.io">Subutai Bazaar</a> to easily start sharing resources with friends and family. To register your peer find the
-                                                <strong>“Register”</strong> button
-                                                <img src="./images/reg-peer-ss-logo-off.png" alt=""> in the upper right hand corner of the UI. When you click this button,
-                                                a dialog will pop up with fields asking you for your Subutai Bazaar login
-                                                and password. Provide your Bazaar credentials and push the
-                                                <img src="./images/register-peer3.png" alt=""> button. Within 3-10 seconds you should be notified of being logged in.
-                                                The button’s color will change from gray to green <img src="images/gsp4.png" alt="">. Your new peer will
-                                                now appear on the Subutai Bazaar in your peers list.
-                                            </p>
-                                            <strong>Congratulations! You are ready to share resource with your new Subutai Peer on the Bazaar!
-                                            </strong>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        <h2 style="color: #078DD0;"><a name="P2P">P2P daemon</a></h2>
+                        <p>The P2P daemon allows your system to join the swarm to access private cloud environments. It is required if you want to access your Peers, containers and Environments via SSH or Remote Desktop from the Bazaar, Subutai Console or Control Center.</p>
+                            <ul>
+                                <li>In order to download and install the P2P Daemon, please hop to the <a href="#Downloads">Downloads</a> section (versions for Windows, Mac and Linux available) and follow the instructions.</li>
+                            </ul><br/>
 
-                            <h4 id="post">Post Installation</h4>
-                            <p>Install the client software and tools to use your peers and environments effectively. You're
-                                going to want to install the browser extension to manage pgp keys, the p2p client, and
-                                the OS control-center (wallet) application.</p>
-                            <p>Before logging into the Peer Console, install the Subutai E2E Browser Extension for Chrome.
-                                It will prompt you to generate a new PGP key after installing. See the video below if
-                                installation is not obvious.</p>
-                            <div class="panel-group" id="accordion2">
-                                <div class="panel panel-default">
-                                    <div class="alert alert-info">
-                                        <h4 class="panel-title ">
-                                            <a data-toggle="collapse" data-parent="#accordion2" href="#collapse2">
-                                                <strong>VIDEO:</strong> "Creating and Installing PGP Keys"</a>
-                                        </h4>
-                                    </div>
-                                    <div id="collapse2" class="panel-collapse collapse ">
-                                        <div class="panel-body">
-                                            <iframe src="https://www.youtube.com/embed/-POxi7oyjoE" width="100%" height="500px" frameborder="0">
-                                            </iframe>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- <div class="panel panel-default">
-                                    <div class="alert alert-info">
-                                        <h4 class="panel-title ">
-                                            <a data-toggle="collapse" data-parent="#accordion2" href="#collapse3">
-                                                <strong>VIDEO:</strong> "Install the Subutai Control Center Application"</a>
-                                        </h4>
-                                    </div>
-                                    <div id="collapse3" class="panel-collapse collapse ">
-                                        <div class="panel-body">
-                                            <iframe src="https://www.youtube.com/embed/q5zqlrwOXB0" width="100%" height="500px" frameborder="0">
-                                            </iframe>
-                                        </div>
-                                    </div>
-                                </div> -->
-                            </div>
-                            <br>
-                            <div id="installation"></div>
-                            <h3>Download Subutai</h3>
-                            <br>
+                        <h2 style="color: #078DD0;"><a name="Control-Center">Control Center</a></h2>
+                        <p>The Subutai Control Center allows you to access your Peers, containers and Environments via SSH or Remote Desktop, as well as checking and updating relevant local software and showing your GoodWill balance. In addition to that we have a file transfer system - users are able to easily upload and download their files to the remote cloud storage in a secure way.</p>
+                            <ul>
+                                <li>In order to download and install the Subutai Control Center, please hop to the <a href="#Downloads">Downloads</a> section (versions for Windows, Mac and Linux available).</li>
+                                <li>Learn <a href="https://docs.subutai.io/Products/PeerOS/06_How_to_use_Control_Center_and_P2P.html">how to use</a>  the Control Center.</li>
+                            </ul>
+                    </div>
+                </div>
+
+                <div id="installation"></div>
+                            <h1><a name="Downloads">Downloads</a></h1>
+                            <h3>Install the 
+                                            <strong>Subutai P2P daemon</strong>
+                                        </h3>
+                                        <p>The P2P daemon allows systems to join the swarm to access private cloud environments.
+                                            Install the MSI package for Windows. Double click after downloading.</p>
+                                        <hr>
+                                        <h3>Install the
+                                            <strong>Subutai Control Center Application</strong>
+                                        </h3>
+                                        <p>Install the Control Center application to conveniently access environments from your
+                                            desktop, manage your peers while showing you your Goodwill balance. Packages
+                                            for Windows, Linux, and Mac OS are available.</p>                            <br>
                             <div class="tabs_download">
                                 <ul class="nav nav-pills nav-justified">
                                     <li id="windows">
@@ -453,18 +368,6 @@
                                                 <td></td>
                                             </tr>
                                         </table>
-                                        <h3>Install the
-                                            <strong>Subutai P2P</strong>
-                                        </h3>
-                                        <p>The P2P daemon allows systems to join the swarm to access private cloud environments.
-                                            Install the MSI package for Windows. Double click after downloading.</p>
-                                        <hr>
-                                        <h3>Install the
-                                            <strong>Subutai Control Center Application</strong>
-                                        </h3>
-                                        <p>Install the Control Center application to conveniently access environments from your
-                                            desktop, manage your peers while showing you your Goodwill balance. Packages
-                                            for Windows, Linux, and Mac OS are available.</p>
                                     </div>
                                     <!-- MAC OS -->
                                     <div id="menu1" class="tab-pane fade">
@@ -541,18 +444,6 @@
                                                 <td></td>
                                             </tr>
                                         </table>
-                                        <h3>Install the
-                                            <strong>Subutai P2P Daemon</strong>
-                                        </h3>
-                                        <p>The P2P daemon allows systems to join the swarm to access private cloud environments.
-                                            Download and install the Mac package.</p>
-                                        <hr>
-                                        <h3>Install the
-                                            <strong>Subutai Control Center Application</strong>
-                                        </h3>
-                                        <p>Install the Control Center application to conveniently access environments from your
-                                            desktop, manage your peers while showing you your Goodwill balance. Packages
-                                            for Windows, Linux, and Mac OS are available.</p>
                                     </div>
                                     <!-- Linux -->
                                     <div id="menu2" class="tab-pane fade">
@@ -653,35 +544,9 @@
                     </div>
                     </div>
                 </section>
-                <div id="disqus_thread"></div>
-                <script>
-                    /**
-                     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-                    var disqus_config = function () {
-                        this.page.url = "https://subutai.io/installation.html"; // Replace PAGE_URL with your page's canonical URL variable
-                        this.page.identifier = "subutai-install"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-                    };
-                    (function () { // DON'T EDIT BELOW THIS LINE
-                        var d = document,
-                        s = d.createElement('script');
-                        s.src = 'https://subutai-io.disqus.com/embed.js';
-                        s.setAttribute('data-timestamp', +new Date());
-                        (d.head || d.body).appendChild(s);
-                    })();
-                </script>
-                <noscript>Please enable JavaScript to view the
-                <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-                </noscript>
-                <!--END INSTALLATION  -->
-                <!-- end section -->
             </div>
-            </div>
-            <!-- // end .col -->
         </div>
-        <!-- // end .row -->
-    </div>
-    <!-- // end container -->
+    </section>
 
         <!-- Section 4 - Community -->
     <section style="margin-top: 50px;">
@@ -728,7 +593,7 @@
                          }
                         /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
                            We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-                    </style>
+                    </style><br/>
 
                     <div id="mc_embed_signup">
                         <form action="https://optdyn.us17.list-manage.com/subscribe/post?u=35361aa6e4a7374ec14c974bc&amp;id=a9787e94b0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
