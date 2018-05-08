@@ -314,6 +314,58 @@ footer .cont-footer .icons-cont-footer i{
 	padding-top: 5px;	
 }
 
+/* Getting Started - page */
+.anchorTitle {
+	display: block;
+	padding-top: 60px;
+	margin-top: -60px;
+	z-index: -1;
+}
+.anchorSubtitle {
+	display: block;
+	padding-top: 80px;
+	margin-top: -80px;
+}
+.layerUp-1 {
+	z-index: 1;
+}
+.layerDown-1 {
+	z-index: -1;
+}
+/*.topbar {
+	height: 66px;
+	margin-bottom: -66px;
+}*/
+/*.anchor {
+	display: block;
+	position: relative;
+	top: -100px;
+	visibility: hidden;
+}*/
+/*.anchor:before {
+	content: '';
+	display: block;
+	position: relative;
+	width: 0;
+	height: 5rem;
+	margin-top: -5rem;
+}
+.sectionRow {
+	margin-bottom: -60px;
+	display: inline-block;
+}
+.headlineRow {
+	margin-bottom: -80px;
+}
+.anchorTitle {
+	display: block;
+	padding-top: 60px;
+}
+.anchorSubtitle {
+	display: block;
+	padding-top: 80px;
+}*/
+
 /*CSS responsive*/
 
 @media (max-width: 768px) { 
