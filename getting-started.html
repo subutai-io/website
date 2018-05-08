@@ -28,7 +28,26 @@
          fbq('init', '2123612024332329'); 
         fbq('track', 'PageView');
     </script>
-    
+    <!-- jQuery -->
+    <script src="./js/jquery.js"></script>
+    <script>
+        $(document).ready(function() {
+            //apply the smooth to all links at this page
+            $("a").on('click', function(event) {
+                if (this.hash !== "") {
+                    event.preventDefault();
+                    //store hash
+                    var hash = this.hash;
+
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function(){ 
+                        window.location.hash = hash;
+                    });
+                } //end if
+            });
+        });
+    </script>
     <!-- End Facebook Pixel Code -->
     
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -79,7 +98,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <nav class="navbar navbar-inverse navbar-fixed-top topbar">
         <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -167,7 +186,7 @@
         <div class="container">
 
             <div class="row">
-                <div class="col-lg-12">
+                <div class="col-lg-12 layerUp-1">
                     <p>Welcome to <a href="https://subutai.io/" target="_blank">Subutai</a>! You can start using Subutai either by:</p>
                     <ul>
                         <li>Registering at the <a href="#Bazaar">Subutai Bazaar</a>, our social marketplace for user-administered P2P cloud services, and start creating environments on other users’ peers; </li>
@@ -180,15 +199,16 @@
                         <li>The <a href="#Control-Center">Subutai Control Center</a> in your desktop computer will give you quick access to your Peers, Environments and <a href="https://subutai.io/goodwill.html" target="_blank"> GoodWill balance</a>.</li>
                     </ul>
                 </div>
-                </div><br/>
+            </div>
+                <!-- <br/> -->
 
                 <div class="row">
-                    <div  class="col-lg-4 col-sm-12 mb-4 d-flex justify-content-center align-items-center">
-                      <a name="Bazaar"><img src="img/baazar.png" class="img-responsive center-block"></a>
+                    <div  class="col-lg-4 col-sm-12 mb-4 d-flex justify-content-center align-items-center layerDown-1">
+                      <a class="anchorTitle" id="Bazaar"><img src="img/baazar.png" class="img-responsive center-block"></a>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-7 col-sm-12 mb-4 d-flex justify-content-center align-items-center">
+                    <div class="col-lg-7 col-sm-12 mb-4 d-flex justify-content-center align-items-center layerUp-1">
                         <ul>
                             <li>Learn more about the Subutai Bazaar: <a href="https://subutai.io/bazaar.html" target="_blank"> overview</a></li>
                             <li>Sign up and log in</li>
@@ -211,7 +231,7 @@
 
                 <div class="row">
                     <div class="col-lg-4">
-                        <a name="PeerOS"><img src="img/peer.png" class="img-responsive center-block"></a>
+                        <a class="anchorTitle" id="PeerOS"><img src="img/peer.png" class="img-responsive center-block"></a>
                     </div>
                 </div>
                 <div class="row">
@@ -241,17 +261,16 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1>Companion software</h1><br/>
-
-                        <h2 style="color: #078DD0;"><a name="E2E">Browser plugin</a></h2>
+                        <h2 style="color: #078DD0;"><a class="anchorSubtitle" id="E2E">Browser plugin</a></h2>
                         <p>The E2E browser plugin is available directly from the official stores of the main browsers - versions for <a href="https://chrome.google.com/webstore/detail/subutai-e2e-plugin/ffddnlbamkjlbngpekmdpnoccckapcnh">Chrome</a>, <a href="https://addons.mozilla.org/en-US/firefox/addon/subutai-e2e-plugin/">Firefox</a> and Safari are currently offered. It will remove the hassle of managing PGP keys that are required to ensure secure communications within the Subutai platform.</p><br/>
 
-                        <h2 style="color: #078DD0;"><a name="P2P">P2P daemon</a></h2>
+                        <h2 style="color: #078DD0;"><a class="anchorSubtitle" id="P2P">P2P daemon</a></h2>
                         <p>The P2P daemon allows your system to join the swarm to access private cloud environments. It is required if you want to access your Peers, containers and Environments via SSH or Remote Desktop from the Bazaar, Subutai Console or Control Center.</p>
                             <ul>
                                 <li>In order to download and install the P2P Daemon, please hop to the <a href="#Downloads">Downloads</a> section (versions for Windows, Mac and Linux available) and follow the instructions.</li>
                             </ul><br/>
 
-                        <h2 style="color: #078DD0;"><a name="Control-Center">Control Center</a></h2>
+                        <h2 style="color: #078DD0;"><a class="anchorSubtitle" id="Control-Center">Control Center</a></h2>
                         <p>The Subutai Control Center allows you to access your Peers, containers and Environments via SSH or Remote Desktop, as well as checking and updating relevant local software and showing your GoodWill balance. In addition to that we have a file transfer system - users are able to easily upload and download their files to the remote cloud storage in a secure way.</p>
                             <ul>
                                 <li>In order to download and install the Subutai Control Center, please hop to the <a href="#Downloads">Downloads</a> section (versions for Windows, Mac and Linux available).</li>
