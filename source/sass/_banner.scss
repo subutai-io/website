@@ -1,0 +1,67 @@
+/* Top Banner styles - Subutai website (https://github.com/subutai-io/website)
+   05/11/2018 
+*/
+
+
+
+#topBanner {
+	height: 600px;
+	display: -webkit-flex;
+	display: flex;
+	padding: 0 20px;
+	-webkit-align-items: flex-end;
+	align-items: flex-end;
+
+	#bannerText {
+		width: 100%;
+		text-align: center;
+		margin-bottom: 50px;
+
+		h1 {
+			color: #FFFFFF;
+		}
+		h2 {
+			font-size: 22px;
+			color: #FFFFFF;
+			margin: 10px 5px;
+			font-weight: 400;
+		}
+	}
+}
+
+.jumbotron .pageTitle {
+	font-size: 36px;
+}
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 992px) {
+	#topBanner {
+		height: 685px;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-align-items: flex-end;
+		align-items: flex-end;
+
+		#bannerText {
+			width: 100%;
+			text-align: center;
+			margin-bottom: 70px;
+
+			h1 {
+				color: #FFFFFF;
+			}
+			h2 {
+				color: #FFFFFF;
+				margin: 0 5px;
+				font-weight: 400;
+			}
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	
+}

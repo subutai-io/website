@@ -11,9 +11,30 @@
     "url": "git+https://github.com/subutai-io/website.git"
   },
   "author": "subutai",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/subutai-io/website/issues"
   },
-  "homepage": "https://github.com/subutai-io/website#readme"
+  "homepage": "https://github.com/subutai-io/website#readme",
+  "keywords": [
+    "subutai",
+    "blockchain",
+    "bazaar",
+    "token",
+    "blueprint",
+    "P2P",
+    "PeerOS",
+    "peer",
+    "to",
+    "peer",
+    "khan",
+    "blockchain",
+    "in",
+    "the",
+    "box"
+  ],
+  "devDependencies": {
+    "gulp-notify": "^3.2.0",
+    "gulp-sass": "^4.0.1"
+  }
 }

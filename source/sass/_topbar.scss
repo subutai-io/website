@@ -1,0 +1,56 @@
+/* Topbar styles - Subutai website (https://github.com/subutai-io/website)
+   05/11/2018 
+*/
+
+
+#header {
+	height: auto;
+}
+header {
+	// background: #000;
+	height: auto;
+
+	.navbar {
+		border-radius: none;
+		width: 100%;
+		height: 65px;
+		background: #000;
+		// position: relative;
+		z-index: 1;
+		margin-bottom: 0;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-justify-content: center;
+		justify-content: center;
+
+		#topbar {
+			width: 1170px;
+			display: -webkit-flex;
+			display: flex;
+			-webkit-justify-content: center;
+			justify-content: space-between;
+		}
+	}
+}
+
+@media (min-width: 480px) {
+
+}
+
+@media (min-width: 768px) {
+	header {
+		.navbar {
+			border-radius: 0;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.navbar {
+		position: fixed;
+	}
+}
+
+@media (min-width: 1200px) {
+}
+
