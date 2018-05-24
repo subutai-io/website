@@ -63,11 +63,11 @@
 
     <!-- CSS Links-->
     <link rel="stylesheet" type="text/css" href="./css/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="./css/styles.css">
-
+    <link rel="stylesheet" type="text/css" href="dist/css/style.css">
     <link rel="stylesheet" type="text/css" href="./css/goodwill-styles.css">
     <link rel="stylesheet" type="text/css" href="./css/bootstrap/bootstrap-social.css">
-    <link href="https://fonts.googleapis.com/css?family=Maven+Pro" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Maven+Pro" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,500,700,900" rel="stylesheet">
     <link href="./fontawesome/fontawesome-all.css" rel="stylesheet">
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="./js/syntax-highlighter/styles/shCore.css" media="all">
@@ -98,188 +98,798 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top topbar">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+    <header id="header">
+
+        <nav class="navbar navbar-expand-xl navbar-light bg-light">
+            <div id="topbar">
+                <a class="navbar-brand" href="index.html"><img alt="logo" src="img/logo.png" width="160"></a>
+                
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav scrollable-menu">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./p2p-cloud-platform.html">P2P Cloud Platform</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="goodwill.html">GoodWill</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Products <span class="caret"></span></a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="./peer-os.html">PeerOs</a></li>
+                                <li><a class="dropdown-item" href="./bazaar.html">Bazaar</a></li>
+                                <li><a class="dropdown-item" href="./router.html">Blockchain Router</a></li>
+                                <li><a class="dropdown-item" href="media/whitepaper_executive_summary.pdf" target="_blank">KHAN</a></li>
+                                <li><a class="dropdown-item" href="https://github.com/subutai-blueprints" target="_blank">Blueprints</a></li>
+                                <li><a class="dropdown-item" href="https://docs.subutai.io/Blueprints/blockchain-in-a-box/Introduction.html">Blockchain-in-the-box</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ideation <span class="caret"></span></a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="p2p-cloud.html">P2P Cloud</a></li>
+                                <li><a class="dropdown-item" href="https://subutai.blog/" target="_blank">Blog</a></li>
+                                <li><a class="dropdown-item" href="manifesto.html">Manifesto</a></li>
+                                <li><a class="dropdown-item" href="Hardware-Security-Framework.pdf" target="_blank">Hardware Security</a></li>
+                                <li><a class="dropdown-item" href="tribute.html">Tribute</a></li>
+                                <li><a class="dropdown-item" href="https://www.youtube.com/watch?v=zJkmIAyhvFM&feature=youtu.be" target="_blank">Presentation</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">How To <span class="caret"></span></a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="./getting-started.html">Get Started</a></li>
+                                <li><a class="dropdown-item" href="./getting-involved.html">Get Involved</a></li>
+                                <li><a class="dropdown-item" href="https://bazaar.subutai.io/login" target="_blank">Share Resources</a></li>
+                                <li><a class="dropdown-item" href="./goodwill.html">Earn Goodwill</a></li>
+                                <li><a class="dropdown-item" href="https://subutai.blog/" target="_blank">Read our Blog</a></li>
+                                <li><a class="dropdown-item" href="https://docs.subutai.io/Contributing.html">How to Contribute</a></li>
+                                <li><a class="dropdown-item" href="https://slack.subutai.io/" target="_blank">Get Help</a></li>
+                                <li><a class="dropdown-item" href="https://docs.subutai.io/">Read the Docs</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Resources <span class="caret"></span></a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="https://docs.subutai.io/Glossary.html">Glossary</a></li>
+                                <li><a class="dropdown-item" href="https://docs.subutai.io">Documentation</a></li>
+                                <li><a class="dropdown-item" href="https://github.com/subutai-io" target="_blank">GitHub</a></li>
+                                <li><a class="dropdown-item" href="https://docs.subutai.io/FAQ.html">FAQ</a></li>
+                                <li><a class="dropdown-item" href="getting-involved.html">Get Involved</a></li>
+                                <li><a class="dropdown-item" href="https://docs.subutai.io/Subutai_Use_Cases.html">Use Cases</a></li>
+                                <li><a class="dropdown-item" href="https://bazaar.subutai.io">Bazaar</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Community <span class="caret"></span></a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" tabindex="-1" href="getting-involved.html">Get Involved</a></li>
+                                <li><a class="dropdown-item" tabindex="-1" href="https://slack.subutai.io/" target="_blank">Slack</a></li>
+                                <li><a class="dropdown-item" tabindex="-1" href="https://t.me/SubutaiKHAN" target="_blank">Telegram</a></li>
+                                <li><a class="dropdown-item" tabindex="-1" href="https://twitter.com/Subutai_KHAN" target="_blank">Twitter</a></li>
+                                <li><a class="dropdown-item" tabindex="-1" href="https://www.reddit.com/r/SubutaiKHAN/" target="_blank">Reddit</a></li>
+                                <li><a class="dropdown-item" tabindex="-1" href=" https://www.facebook.com/SubutaiKHAN/" target="_blank">Facebook</a></li>
+                                <li><a class="dropdown-item" tabindex="-1" href="https://www.linkedin.com/company/subutai-social-cloud/" target="_blank">Linkedin</a></li>
+                                <li><a class="dropdown-item" tabindex="-1" href="https://www.youtube.com/channel/UCISHGzbHjYWYFfu7krnYLkA" target="_blank">Youtube</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarNavDropdown" aria-expanded="false">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="./index.html"><img alt="logo" src="./img/logo.png" width="160"></a>
             </div>
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="p2p-cloud-platform.html"><h4 style="font-size: 14px; color: #fff; font-weight: 700;">P2P Cloud Platform</h4></a></li>
-                    <li><a href="goodwill.html"><h4 style="font-size: 14px; color: #fff; font-weight: 700;">GoodWill</h4></a></li>
+        </nav>
 
-                    <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><h4 style="font-size: 14px;color: #fff; font-weight: 700;">Ideation<span class="caret"></span></h4></a>
-                      <ul class="dropdown-menu">
-                        <li><a href="p2p-cloud.html"><h4 style="font-size: 14px; font-weight: 700;">P2P Cloud</h4></a></li>
-                        <li><a href="manifesto.html"><h4 style="font-size: 14px; font-weight: 700;">Manifesto</h4></a></li>
-                        <li><a href="./media/whitepaper_executive_summary.pdf" target="_blank"><h4 style="font-size: 14px; font-weight: 700;">KHAN</h4></a></li>
-                        <li><a href="./peer-os.html"><h4 style="font-size: 14px; font-weight: 700;">PeerOS</h4></a></li>
-                        <li><a href="./bazaar.html"><h4 style="font-size: 14px; font-weight: 700;">Bazaar</h4></a></li>
-                        <li><a href="./router.html"><h4 style="font-size: 14px; font-weight: 700;">Blockchain Router</h4></a></li>
-                        <li><a href="https://docs.subutai.io/Blueprints/blockchain-in-a-box/Introduction.html"><h4 style="font-size: 14px; font-weight: 700;">Blockchain-in-a-Box</h4></a></li>
-                        <li><a href="Hardware-Security-Framework.pdf" target="_blank"><h4 style="font-size: 14px; font-weight: 700;">Open Hardware Security</h4></a></li>
-                        <li><a href="https://subutai.blog/" target="_blank"><h4 style="font-size: 14px; font-weight: 700;">Blog</h4></a></li>
-                        <li><a href="tribute.html"><h4 style="font-size: 14px; font-weight: 700;">Tribute</h4></a></li>
-                        <li><a href="https://www.youtube.com/watch?v=zJkmIAyhvFM&feature=youtu.be" target="_blank"><h4 style="font-size: 14px; font-weight: 700;">Presentation</h4></a></li>
-
-                    </ul>
-                    </li>
-
-                    <li><a href="getting-started.html"><h4 style="font-size: 14px;color: #fff; font-weight: 700;">Getting Started</h4></a></li>
-
-                    <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><h4 style="font-size: 14px;color: #fff; font-weight: 700;">Resources<span class="caret"></span></h4></a>
-                      <ul class="dropdown-menu">
-                        <li><a href="https://docs.subutai.io/Glossary.html"><h4 style="font-size: 14px; font-weight: 700;">Glossary</h4></a></li>
-                        <li><a href="https://docs.subutai.io"><h4 style="font-size: 14px; font-weight: 700;">Documentation</h4></a></li>
-                        <li><a href="https://github.com/subutai-io" target="_blank"><h4 style="font-size: 14px; font-weight: 700;">GitHub</h4></a></li>
-                        <li><a href="https://docs.subutai.io/FAQ.html"><h4 style="font-size: 14px; font-weight: 700;">FAQ</h4></a></li>
-                        <li><a href="https://github.com/subutai-blueprints"><h4 style="font-size: 14px; font-weight: 700;">Blueprints</h4></a></li>
-                        <li><a href="getting-involved.html"><h4 style="font-size: 14px; font-weight: 700;">Get Involved</h4></a></li>
-                        <li><a href="https://docs.subutai.io/Subutai_Use_Cases.html"><h4 style="font-size: 14px; font-weight: 700;">Use Cases</h4></a></li>
-                        <li><a href="https://bazaar.subutai.io"><h4 style="font-size: 14px; font-weight: 700;">Bazaar</h4></a></li>
-                      </ul>
-                    </li>
-
-                    <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><h4 style="font-size: 14px;color: #fff; font-weight: 700;">Community<span class="caret"></span></h4></a>
-                      <ul class="dropdown-menu">
-                        <li><a href="getting-involved.html"><h4 style="font-size: 14px; font-weight: 700;">Get Involved</h4></a></li>
-                        <li><a href="https://slack.subutai.io/" target="_blank"><h4 style="font-size: 14px; font-weight: 700;">Slack</h4></a></li>
-                        <li><a href="https://t.me/SubutaiKHAN" target="_blank"><h4 style="font-size: 14px; font-weight: 700;">Telegram</h4></a></li>
-                        <li><a href="https://twitter.com/Subutai_KHAN" target="_blank"><h4 style="font-size: 14px; font-weight: 700;">Twitter</h4></a></li>
-                        <li><a href="https://www.reddit.com/r/SubutaiKHAN/" target="_blank"><h4 style="font-size: 14px; font-weight: 700;">Reddit</h4></a></li>
-                        <li><a href=" https://www.facebook.com/SubutaiKHAN/" target="_blank"><h4 style="font-size: 14px; font-weight: 700;">Facebook</h4></a></li>
-                        <li><a href="https://www.linkedin.com/company/subutai-social-cloud/" target="_blank"><h4 style="font-size: 14px; font-weight: 700;">Linkedin</h4></a></li>
-                        <li><a href="https://www.youtube.com/channel/UCISHGzbHjYWYFfu7krnYLkA" target="_blank"><h4 style="font-size: 14px; font-weight: 700;">Youtube</h4></a></li>
-                      </ul>
-                    </li>
-
-                </ul>
+        <div class="jumbotron" id="topBanner">
+            <div id="bannerText">
+                <h1 class="pageTitle">Getting Started</h1>
             </div>
         </div>
-    </nav>
-
-    <!-- Header section -->
-    <div class="header-internal">
-        <div class="jumbotron-internal">
-            <div class="cont-header">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="text-center">
-                            <h1>Getting Started</h1>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div><br/><br/>
+    </header>
 
     <div class="getting-started">
         <div class="container">
 
             <div class="row">
                 <div class="col-lg-12 layerUp-1">
-                    <p>Welcome to <a href="https://subutai.io/" target="_blank">Subutai</a>! You can start using Subutai either by:</p>
+                    <p>To get started with Subutai Bazaar or PeerOS:</p>
                     <ul>
-                        <li>Registering at the <a href="#Bazaar">Subutai Bazaar</a>, our social marketplace for user-administered P2P cloud services, and start creating environments on other users’ peers; </li>
-                        <li>Installing the <a href="#PeerOS">PeerOS</a> in one or more computers and start offering your own computational resources for hire, barter or share.</li>
+                        <li>Register at the <a href="#Bazaar">Subutai Bazaar</a>, our social marketplace for user-administered P2P cloud services</li>
+                        <ul>
+                            <li>Create environments on other users' peers</li>
+                            <li>Choose the products or applications that you need</li>
+                        </ul>
+                        <li>Install the <a href="#PeerOS">PeerOS</a>, an open source, P2P (peer-to-peer) Cloud and Internet of Things (IoT) software and firmware</li>
+                        <ul>
+                            <li>Set up your computing resources for sharing, rent, or barter</li>
+                            <li>Connect IoT devices to cloud applications securely</li>
+                        </ul>
                     </ul>
-                    <p>In either case, you will also need to install the following companion software to ease your life:</p>
-                    <ul>
+                    <p>For either case, download and set up the recommended <a href="#">companion software</a></p>
+                    <!-- <ul>
                         <li>The <a href="#E2E">E2E (end-to-end encryption) plugin</a> for your browser helps manage your PGP keys needed to ensure secure communications with Subutai components;</li>
                         <li>The <a href="#P2P">P2P (peer-to-peer) daemon</a> will allow your own PC to swarm up with the Subutai P2P cloud;</li>
                         <li>The <a href="#Control-Center">Subutai Control Center</a> in your desktop computer will give you quick access to your Peers, Environments and <a href="https://subutai.io/goodwill.html" target="_blank"> GoodWill balance</a>.</li>
                     </ul>
-                </div>
+                </div> -->
             </div>
                 <!-- <br/> -->
 
-                <div class="row">
+                <!-- <div class="row">
                     <div  class="col-lg-4 col-sm-12 mb-4 d-flex justify-content-center align-items-center layerDown-1">
                       <a class="anchorTitle" id="Bazaar"><img src="img/baazar.png" class="img-responsive center-block"></a>
                     </div>
+                </div> -->
+            <div class="row">
+                <div  class="titleSectionWrap layerDown-1">
+                    <div class="iconTitleWrapper">
+                        <img class="iconTitleSection" src="img/bazaar-logo.png">
+                    </div>
+                    <h2>Subutai Bazaar</h2>
                 </div>
-                <div class="row">
-                    <div class="col-lg-7 col-sm-12 mb-4 d-flex justify-content-center align-items-center layerUp-1">
+            </div>
+            <div class="row">
+                <div class="col-lg-7 col-sm-12 mb-4 d-flex justify-content-center align-items-center layerUp-1">
+                    <p>Quick links</p>
+                    <ul>
+                        <li>Learn more about the <a href="./bazaar.html" target="_blank">Subutai Bazaar</a>.</li>
+                        <li>Before using the Bazaar, install the <a href="#E2E">E2E browser plugin</a> to manage your PGP keys. To access the Bazaar, you must provide your key that will be used when you perform tasks that require authentication, for example, creating an environment or running a blueprint. Before performing such tasks, be sure to enter your key in the Account settings.<br>
+                        * For certain operations, you also need to install the <a href="#P2P">P2P daemon</a> and <a href="#Control-Center">Subutai Control Center</a>.</li>
+                        <!-- <li>Learn more about the Subutai Bazaar: <a href="https://subutai.io/bazaar.html" target="_blank"> overview</a></li> -->
+                        <li><a href="https://bazaar.subutai.io/login" target="_blank">Sign up and log in</a></li>
+                        <li>Learn the basics:</li>
                         <ul>
-                            <li>Learn more about the Subutai Bazaar: <a href="https://subutai.io/bazaar.html" target="_blank"> overview</a></li>
-                            <li>Sign up and log in</li>
-                            <li>Do remember to install the <a href=#E2E>E2E browser plugin</a> before using the Bazaar. It will ease the management of encryption keys. For some operations you will also need the <a href="#P2P">P2P daemon</a> and  <a href="#Control-Center">Subutai Control Center</a>.</li>
-                            <li>Learn the basics:</li>
-                                <ul>
-                                    <li><a href="https://docs.subutai.io/Products/Bazaar/20_War_room.html">War Room</a></li>
-                                    <li><a href="https://docs.subutai.io/Products/Bazaar/21_Peers.html">Peers</a></li>
-                                    <li><a href="https://docs.subutai.io/Products/Bazaar/18_How_to_create_and_use_environments.html">How to create and use environments</a></li>
-                                    <li><a href="https://docs.subutai.io/Products/Bazaar/24_Products.html">Products</a></li>
-                                    <li><a href="https://docs.subutai.io/Products/Bazaar/11_Organizations_user.html">Organizations</a></li>
-                                </ul>
-                            <li><a href="https://docs.subutai.io/Products/Bazaar_toctree.html">Full documentation</a></li>
-                        </ul><br/>
-                    </div>
-                    <div class="col-lg-5 col-sm-12 mb-4 d-flex justify-content-center align-items-center">
-                        <img src="./img/bazaar2.gif" alt="Subutai" class="img-responsive center-block">
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-lg-4">
-                        <a class="anchorTitle" id="PeerOS"><img src="img/peer.png" class="img-responsive center-block"></a>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-7 col-sm-12 mb-4 d-flex justify-content-center align-items-center">
-                        <ul>
-                            <li>Learn more about Subutai PeerOS: <a href="https://subutai.io/peer-os.html" target="_blank"> overview</a></li>
-                            <li>Decide what is your preferred way to get the PeerOS up and running:</li>
-                            <p><i>We strongly recommend to use Debian Stretch 9.X to create a peer</i></p>
-                            <ul>
-                                <li><a href="https://docs.subutai.io/Products/PeerOS/03_Run_PeerOS_with_Vagrant.html"> Quick install</a> - 5 minutes. Prerequisites: any system using Vagrant, 110G disk.</li>
-                                <li><a href="https://docs.subutai.io/Products/PeerOS/02_Install_PeerOS.html">Advanced admin installation </a>- 20 minutes. Prerequisites: Debian system (preferably fresh installed), 100G disk.</li>
-                                <li>You will need the <a href="#P2P">P2P daemon</a> and  <a href="#Control-Center">Subutai Control Center</a> on your Desktop in order to access your Peer. We recommended you also to install the <a href=#E2E>E2E browser plugin</a> to ease the management of encryption keys.</li>
-                            </ul>
-                            <li>The basics:</li>
-                                <ul>
-                                    <li><a href="https://docs.subutai.io/Products/PeerOS/05_How_to_use_the_Subutai_Console.html">How to use the Subutai Console</a></li>
-                                    <li><a href="https://docs.subutai.io/Products/PeerOS/07_How_to_update_Subutai_components.html">How to update Subutai components</a></li>
-                                </ul>
-                            <li><a href="https://docs.subutai.io/Products/PeerOS_toctree.html">Full documentation</a></li>
+                            <li><a href="https://docs.subutai.io/Products/Bazaar/20_War_room.html">War Room</a></li>
+                            <li><a href="https://docs.subutai.io/Products/Bazaar/21_Peers.html">Peers</a></li>
+                            <li><a href="https://docs.subutai.io/Products/Bazaar/18_How_to_create_and_use_environments.html">How to create and use environments</a></li>
+                            <li><a href="https://docs.subutai.io/Products/Bazaar/24_Products.html">Products</a></li>
+                            <li><a href="https://docs.subutai.io/Products/Bazaar/11_Organizations_user.html">Organizations</a></li>
                         </ul>
-                    </div><br/>
-                    <div class="col-lg-5 col-sm-12 mb-4 d-flex justify-content-center align-items-center">
-                        <img src="./img/peer3.gif" alt="Subutai" class="img-responsive center-block">
-                    </div>
+                        <li>View the <a href="https://docs.subutai.io/Products/Bazaar_toctree.html">complete documentation</a></li>
+                    </ul><br/>
                 </div>
+                <div class="col-lg-5 col-sm-12 mb-4 d-flex justify-content-center align-items-center">
+                    <img src="./img/bazaar2.gif" alt="Subutai" class="img-responsive center-block">
+                </div>
+            </div>
 
-                <div class="row">
-                    <div class="col-lg-12">
-                        <h1>Companion software</h1><br/>
-                        <h2 style="color: #078DD0;"><a class="anchorSubtitle" id="E2E">Browser plugin</a></h2>
-                        <p>The E2E browser plugin is available directly from the official stores of the main browsers - versions for <a href="https://chrome.google.com/webstore/detail/subutai-e2e-plugin/ffddnlbamkjlbngpekmdpnoccckapcnh">Chrome</a>, <a href="https://addons.mozilla.org/en-US/firefox/addon/subutai-e2e-plugin/">Firefox</a> and Safari are currently offered. It will remove the hassle of managing PGP keys that are required to ensure secure communications within the Subutai platform.</p><br/>
+            <!-- <div class="row">
+                <div class="col-lg-4">
+                    <a class="anchorTitle" id="PeerOS"><img src="img/peer.png" class="img-responsive center-block"></a>
+                </div>
+            </div> -->
+            <div class="row">
+                <div  class="titleSectionWrap layerDown-1">
+                    <div class="iconTitleWrapper">
+                        <img class="iconTitleSection" src="img/logo-img.png">
+                    </div>
+                    <h2>Subutai PeerOS</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-7 col-sm-12 mb-4 d-flex justify-content-center align-items-center">
+                    <p>Quick links</p>
+                    <ul>
+                        <li>Learn more about <a href="https://subutai.io/peer-os.html" target="_blank"> Subutai PeerOS</a>.</li>
+                        <li>Install the <a href="#P2P">P2P daemon</a> and <a href="#Control-Center">Subutai Control</a> Center on your desktop to access your Peers. You may also want to install the <a href="#E2E">E2E plugin</a> that will manage the PGP keys for you.</li>
+                        <li>Choose your preferred way to get the PeerOS up and running:<br>
+                            <i>* Subutai recommends that you use Debian Stretch 9.X to create your Peers.</i>
+                        </li>
+                        <ul>
+                            <li><a href"#">Quick install</a> (about 5 minutes)<br>
+                                <i>* Requirements: any system that uses Vagrant and 100 GB disk space</i>
+                            </li>
+                            <li><a href="#">Advanced admin install</a> (about 20 minutes)<br>
+                                <i>* Requirements:  Debian system (preferably, freshly installed) and 100 GB disk space</i>
+                            </li>
+                        </ul>
+                        <li>Learn the basics:</li>
+                        <ul>
+                            <li><a href="https://docs.subutai.io/Products/PeerOS/05_How_to_use_the_Subutai_Console.html">How to use the Subutai Console</a></li>
+                            <li><a href="https://docs.subutai.io/Products/PeerOS/07_How_to_update_Subutai_components.html">How to update Subutai components</a></li>
+                        </ul>
+                        <li>View the <a href="https://docs.subutai.io/Products/PeerOS_toctree.html">complete documentation</a></li>
 
-                        <h2 style="color: #078DD0;"><a class="anchorSubtitle" id="P2P">P2P daemon</a></h2>
-                        <p>The P2P daemon allows your system to join the swarm to access private cloud environments. It is required if you want to access your Peers, containers and Environments via SSH or Remote Desktop from the Bazaar, Subutai Console or Control Center.</p>
+
+                        <!-- <li>Decide what is your preferred way to get the PeerOS up and running:</li>
+                        <p><i>We strongly recommend to use Debian Stretch 9.X to create a peer</i></p>
+                        <ul>
+                            <li><a href="https://docs.subutai.io/Products/PeerOS/03_Run_PeerOS_with_Vagrant.html"> Quick install</a> - 5 minutes. Prerequisites: any system using Vagrant, 110G disk.</li>
+                            <li><a href="https://docs.subutai.io/Products/PeerOS/02_Install_PeerOS.html">Advanced admin installation </a>- 20 minutes. Prerequisites: Debian system (preferably fresh installed), 100G disk.</li>
+                            <li>You will need the <a href="#P2P">P2P daemon</a> and  <a href="#Control-Center">Subutai Control Center</a> on your Desktop in order to access your Peer. We recommended you also to install the <a href=#E2E>E2E browser plugin</a> to ease the management of encryption keys.</li>
+                        </ul>
+                        <li>The basics:</li>
                             <ul>
-                                <li>In order to download and install the P2P Daemon, please hop to the <a href="#Downloads">Downloads</a> section (versions for Windows, Mac and Linux available) and follow the instructions.</li>
-                            </ul><br/>
-
-                        <h2 style="color: #078DD0;"><a class="anchorSubtitle" id="Control-Center">Control Center</a></h2>
-                        <p>The Subutai Control Center allows you to access your Peers, containers and Environments via SSH or Remote Desktop, as well as checking and updating relevant local software and showing your GoodWill balance. In addition to that we have a file transfer system - users are able to easily upload and download their files to the remote cloud storage in a secure way.</p>
-                            <ul>
-                                <li>In order to download and install the Subutai Control Center, please hop to the <a href="#Downloads">Downloads</a> section (versions for Windows, Mac and Linux available).</li>
-                                <li>Learn <a href="https://docs.subutai.io/Products/PeerOS/06_How_to_use_Control_Center_and_P2P.html">how to use</a>  the Control Center.</li>
+                                <li><a href="https://docs.subutai.io/Products/PeerOS/05_How_to_use_the_Subutai_Console.html">How to use the Subutai Console</a></li>
+                                <li><a href="https://docs.subutai.io/Products/PeerOS/07_How_to_update_Subutai_components.html">How to update Subutai components</a></li>
                             </ul>
-                    </div>
+                        <li><a href="https://docs.subutai.io/Products/PeerOS_toctree.html">Full documentation</a></li> -->
+                    </ul>
+                </div><br/>
+                <div class="col-lg-5 col-sm-12 mb-4 d-flex justify-content-center align-items-center">
+                    <img src="./img/peer3.gif" alt="Subutai" class="img-responsive center-block">
                 </div>
+            </div>
 
-                <div id="installation"></div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Companion software</h1><br/>
+                    <p>Optimize your use of the Subutai Bazaar or PeerOS by installing the following companion software:</p>
+                    <!-- E2E plugin -->
+                    <h2 style="color: #078DD0;"><a class="anchorSubtitle" id="E2E">E2E plugin</a></h2>
+                    <p>Remove the hassle of managing PGP keys that are required to ensure secure communications within the Subutai platform.</p>
+                    <p>The E2E plugin is directly available from the official store of main browsers <a href="https://chrome.google.com/webstore/detail/subutai-e2e-plugin/ffddnlbamkjlbngpekmdpnoccckapcnh">Chrome</a>, <a href="https://addons.mozilla.org/en-US/firefox/addon/subutai-e2e-plugin/">Firefox</a> and Safari.</p>
+                    <br/>
+                    <!-- Subutai Control Center -->
+                    <h2 style="color: #078DD0;"><a class="anchorSubtitle" id="Control-Center">Subutai Control Center</a></h2>
+                    <p>Access your peers, containers, and environments via SSH or Remote Desktop. Check or update relevant local software and view your GoodWill balance. Equipped with a built-in file transfer system, the Subutai Control Center also enables you to upload and download files from a remote cloud storage in a secure way.</p>
+                    <p>The Subutai Control Center is available in Windows, Mac, and Linux versions.</p>
+
+                    <div class="tabs_download">
+                        <ul class="nav nav-pills nav-justified">
+                            <li id="windows">
+                                <a data-toggle="tab" href="#home">
+                                    <i class="fab fa-windows mr" aria-hidden="true"></i>
+                                    <span>Windows</span>
+                                </a>
+                            </li>
+                            <li id="macos">
+                                <a data-toggle="tab" href="#menu1">
+                                    <i class="fab fa-apple mr" aria-hidden="true"></i>
+                                    <span>Mac OS</span>
+                                </a>
+                            </li>
+                            <li id="linux">
+                                <a data-toggle="tab" href="#menu2">
+                                    <i class="fab fa-linux mr" aria-hidden="true"></i>
+                                    <span>Linux</span>
+                                </a>
+                            </li>
+                        </ul>
+
+                        <ul>
+                            <li>You may also download the MSI package for Windows (64-bit): <a href="https://cdn.subutai.io:8338/kurjun/rest/raw/get?name=subutai-control-center.msi" onclick="ga('send', 'event', 'downloads', 'subutai-control-center.msi', 'Win');" class="download">Subutai Control Center x64 7.x</a></li>
+                            <div class="tab-content">
+                            <!-- WIndows -->
+                                <div id="home" class="tab-pane fade">
+                                    <br>
+                                    <input id="fcheckwin" type="checkbox" value=""> For Developers
+                                    <br>
+                                    <br>
+                                    <table cellspacing="5" cellpadding="10" width="100%">
+                                        <tr>
+                                            <th>Files</th>
+                                            <th></th>
+                                            <th></th>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="https://cdn.subutai.io:8338/kurjun/rest/raw/get?name=subutai-p2p.msi" onclick="ga('send', 'event', 'downloads', 'subutai-p2p.msi', 'Win');"
+                                                   class="download">
+                                                    <strong>Subutai P2P x64 7.x</strong>
+                                                </a>
+                                            </td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="for_dev_win">
+                                                <a href="https://cdn.subutai.io:8338/kurjun/rest/raw/get?name=subutai-p2p-dev.msi" onclick="ga('send', 'event', 'downloads', 'subutai-p2p-dev.msi', 'Win');"
+                                                   class="download">
+                                                    <strong>Subutai P2P x64 Dev </strong>
+                                                </a>
+                                            </td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="for_dev_win">
+                                                <a href="https://cdn.subutai.io:8338/kurjun/rest/raw/get?name=subutai-p2p-master.msi" onclick="ga('send', 'event', 'downloads', 'subutai-p2p-master.msi', 'Win');"
+                                                   class="download">
+                                                    <strong>Subutai P2P x64 Master </strong>
+                                                </a>
+                                            </td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="https://cdn.subutai.io:8338/kurjun/rest/raw/get?name=subutai-control-center.msi" onclick="ga('send', 'event', 'downloads', 'subutai-control-center.msi', 'Win');"
+                                                   class="download">
+                                                    <strong>Subutai Control Center x64 7.x</strong>
+                                                </a>
+                                            </td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="for_dev_win">
+                                                <a href="https://cdn.subutai.io:8338/kurjun/rest/raw/get?name=subutai-control-center-dev.msi" onclick="ga('send', 'event', 'downloads', 'subutai-control-center-dev.msi', 'Win');"
+                                                   class="download">
+                                                    <strong>Subutai Control Center x64 Dev</strong>
+                                                </a>
+                                            </td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="for_dev_win">
+                                                <a href="https://cdn.subutai.io:8338/kurjun/rest/raw/get?name=subutai-control-center-master.msi" onclick="ga('send', 'event', 'downloads', 'subutai-control-center-master.msi', 'Win');"
+                                                   class="download">
+                                                    <strong>Subutai Control Center x64 Master</strong>
+                                                </a>
+                                            </td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </table>
+                                    <h3>Install the <strong>Subutai P2P Daemon and Control Center</strong></h3>
+                                        <p>Install the MSI packages for Windows. Double click after downloading and follow instructions.</p>
+                                </div>
+                                <!-- MAC OS -->
+                                <div id="menu1" class="tab-pane fade">
+                                    <br>
+                                    <input id="fcheck" type="checkbox" value=""> For Developers
+                                    <br>
+                                    <br>
+
+                                    <table cellspacing="5" cellpadding="10" width="100%">
+                                        <tr>
+                                            <th>Files</th>
+                                            <th></th>
+                                            <th></th>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <a href="https://cdn.subutai.io:8338/kurjun/rest/raw/get?name=subutai-p2p.pkg" onclick="ga('send', 'event', 'downloads', 'subutai-p2p.pkg', 'Mac');"
+                                                   class="download">
+                                                    <strong>Subutai P2P for Mac OS X ( 64 bit ) 7.x</strong>
+                                                </a>
+                                            </td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="for_dev">
+                                                <a href="https://cdn.subutai.io:8338/kurjun/rest/raw/get?name=subutai-p2p-dev.pkg" onclick="ga('send', 'event', 'downloads', 'subutai-p2p-dev.pkg', 'Mac');"
+                                                   class="download">
+                                                    <strong>Subutai P2P for Mac OS X Dev </strong>
+                                                </a>
+                                            </td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="for_dev">
+                                                <a href="https://cdn.subutai.io:8338/kurjun/rest/raw/get?name=subutai-p2p-master.pkg" onclick="ga('send', 'event', 'downloads', 'subutai-p2p-dev.pkg', 'Mac');"
+                                                   class="download">
+                                                    <strong>Subutai P2P for Mac OS X Master </strong>
+                                                </a>
+                                            </td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="https://cdn.subutai.io:8338/kurjun/rest/raw/get?name=subutai-control-center.pkg" onclick="ga('send', 'event', 'downloads', 'subutai-control-center.pkg', 'Mac');"
+                                                   class="download">
+                                                    <strong>Subutai Control Center x64 7.x</strong>
+                                                </a>
+                                            </td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="for_dev">
+                                                <a href="https://cdn.subutai.io:8338/kurjun/rest/raw/get?name=subutai-control-center-dev.pkg" onclick="ga('send', 'event', 'downloads', 'subutai-control-center.pkg', 'Mac');"
+                                                   class="download">
+                                                    <strong>Subutai Control Center x64 Dev</strong>
+                                                </a>
+                                            </td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="for_dev">
+                                                <a href="https://cdn.subutai.io:8338/kurjun/rest/raw/get?name=subutai-control-center-master.pkg" onclick="ga('send', 'event', 'downloads', 'subutai-control-center.pkg', 'Mac');"
+                                                   class="download">
+                                                    <strong>Subutai Control Center x64 Master</strong>
+                                                </a>
+                                            </td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </table>
+                                    <h3>Install the <strong>Subutai P2P Daemon and Control Center</strong></h3>
+                                        <p>Install the dmg packages for MacOS.</p>
+                                </div>
+                                <!-- Linux -->
+                                <div id="menu2" class="tab-pane fade">
+                                    <br>
+                                    <input id="fchecklin" type="checkbox" value=""> For Developers
+                                    <br>
+                                    <br>
+                                    <table cellspacing="5" cellpadding="10" width="100%">
+                                        <tr>
+                                            <th>Files</th>
+                                            <th></th>
+                                            <th></th>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="https://cdn.subutai.io:8338/kurjun/rest/raw/get?name=subutai-p2p.deb" onclick="ga('send', 'event', 'downloads', 'subutai-p2p.deb', 'Linux');"
+                                                   class="download">
+                                                    <strong>Subutai P2P for Linux ( 64 bit ) 6.x</strong>
+                                                </a>
+                                            </td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="for_dev_lin">
+                                                <a href="https://cdn.subutai.io:8338/kurjun/rest/raw/get?name=subutai-p2p-dev.deb" onclick="ga('send', 'event', 'downloads', 'subutai-p2p.deb', 'Linux');"
+                                                   class="download">
+                                                    <strong>Subutai P2P for Linux Dev</strong>
+                                                </a>
+                                            </td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="for_dev_lin">
+                                                <a href="https://cdn.subutai.io:8338/kurjun/rest/raw/get?name=subutai-p2p-master.deb" onclick="ga('send', 'event', 'downloads', 'subutai-p2p-master.deb', 'Linux');"
+                                                   class="download">
+                                                    <strong>Subutai P2P for Linux Master</strong>
+                                                </a>
+                                            </td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="https://cdn.subutai.io:8338/kurjun/rest/raw/get?name=subutai-control-center.deb" onclick="ga('send', 'event', 'downloads', 'subutai-control-center.deb', 'Linux');"
+                                                   class="download">
+                                                    <strong>Subutai Control Center x64 6.x</strong>
+                                                </a>
+                                            </td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="for_dev_lin">
+                                                <a href="https://cdn.subutai.io:8338/kurjun/rest/raw/get?name=subutai-control-center-dev.deb" onclick="ga('send', 'event', 'downloads', 'subutai-control-center-dev.deb', 'Linux');"
+                                                   class="download">
+                                                    <strong>Subutai Control Center x64 Dev</strong>
+                                                </a>
+                                            </td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="for_dev_lin">
+                                                <a href="https://cdn.subutai.io:8338/kurjun/rest/raw/get?name=subutai-control-center-master.deb" onclick="ga('send', 'event', 'downloads', 'subutai-control-center-master.deb', 'Linux');"
+                                                   class="download">
+                                                    <strong>Subutai Control Center x64 Master</strong>
+                                                </a>
+                                            </td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </table>
+                                    <h3>Install the<strong>Subutai P2P Daemon</strong></h3>
+                                    <p>We only support Debian based systems right now. Use apt install:</p>
+                                    <pre class="brush:html">
+                                        sudo apt install /path/to/subutai-p2p.deb
+                                    </pre>
+                                    <hr>
+                                    <h3>Install the
+                                        <strong>Subutai Control Center Application</strong>
+                                    </h3>
+                                    <p>We only support Debian based systems right now. Use apt install:</p>
+                                    <pre class="brush:html">
+                                        sudo apt install /path/to/subutai-control-center.deb
+                                    </pre>
+                                </div>
+                            </div>
+                            <p><i>Check the For Developers box to display and download the developer and master versions. You may access and test these versions accordingly.</i></p>
+                            <li>Install by following the instructions on the installation wizard.</li>
+                            <li>Learn more: <a href="https://docs.subutai.io/Products/PeerOS/06_How_to_use_Control_Center_and_P2P.html">How to use the Control Center</a></li>
+                        </ul>
+                        <!-- P2P Daemon -->
+                        <h2 style="color: #078DD0;"><a class="anchorSubtitle" id="P2P">P2P daemon</a></h2>
+                        <p>Enable your system to join the swarm and access private cloud environments. The P2P daemon is required to access your Peers, containers, and Environments via SSH or Remote Desktop from the Bazaar, Subutai Management Console, or Control Center.</p>
+                        <p>The P2P daemon is available in Windows, Mac, and Linux versions.</p>
+                        <ul>
+                            <li>Download the MSI package for Windows (64-bit): Subutai P2P x64 7.x</li>
+                            <li>Install by following the instructions on the installation wizard.</li>
+                        </ul><br/>
+                    </div> <!-- tabs_download -->
+                </div> <!-- col-lg-12 -->
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </div> <!-- getting-started -->
+
+
+
+
+
+
+<!--                             <div class="tab-content">
+                                WIndows
+                                <div id="home" class="tab-pane fade">
+                                    <br>
+                                    <input id="fcheckwin" type="checkbox" value=""> For Developers
+                                    <br>
+                                    <br>
+                                    <table cellspacing="5" cellpadding="10" width="100%">
+                                        <tr>
+                                            <th>Files</th>
+                                            <th></th>
+                                            <th></th>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="https://cdn.subutai.io:8338/kurjun/rest/raw/get?name=subutai-p2p.msi" onclick="ga('send', 'event', 'downloads', 'subutai-p2p.msi', 'Win');"
+                                                   class="download">
+                                                    <strong>Subutai P2P x64 6.x</strong>
+                                                </a>
+                                            </td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="for_dev_win">
+                                                <a href="https://cdn.subutai.io:8338/kurjun/rest/raw/get?name=subutai-p2p-dev.msi" onclick="ga('send', 'event', 'downloads', 'subutai-p2p-dev.msi', 'Win');"
+                                                   class="download">
+                                                    <strong>Subutai P2P x64 Dev </strong>
+                                                </a>
+                                            </td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="for_dev_win">
+                                                <a href="https://cdn.subutai.io:8338/kurjun/rest/raw/get?name=subutai-p2p-master.msi" onclick="ga('send', 'event', 'downloads', 'subutai-p2p-master.msi', 'Win');"
+                                                   class="download">
+                                                    <strong>Subutai P2P x64 Master </strong>
+                                                </a>
+                                            </td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="https://cdn.subutai.io:8338/kurjun/rest/raw/get?name=subutai-control-center.msi" onclick="ga('send', 'event', 'downloads', 'subutai-control-center.msi', 'Win');"
+                                                   class="download">
+                                                    <strong>Subutai Control Center x64 6.x</strong>
+                                                </a>
+                                            </td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="for_dev_win">
+                                                <a href="https://cdn.subutai.io:8338/kurjun/rest/raw/get?name=subutai-control-center-dev.msi" onclick="ga('send', 'event', 'downloads', 'subutai-control-center-dev.msi', 'Win');"
+                                                   class="download">
+                                                    <strong>Subutai Control Center x64 Dev</strong>
+                                                </a>
+                                            </td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="for_dev_win">
+                                                <a href="https://cdn.subutai.io:8338/kurjun/rest/raw/get?name=subutai-control-center-master.msi" onclick="ga('send', 'event', 'downloads', 'subutai-control-center-master.msi', 'Win');"
+                                                   class="download">
+                                                    <strong>Subutai Control Center x64 Master</strong>
+                                                </a>
+                                            </td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </table>
+                                    <h3>Install the <strong>Subutai P2P Daemon and Control Center</strong></h3>
+                                        <p>Install the MSI packages for Windows. Double click after downloading and follow instructions.</p>
+                                </div>
+                                MAC OS
+                                <div id="menu1" class="tab-pane fade">
+                                    <br>
+                                    <input id="fcheck" type="checkbox" value=""> For Developers
+                                    <br>
+                                    <br>
+
+                                    <table cellspacing="5" cellpadding="10" width="100%">
+                                        <tr>
+                                            <th>Files</th>
+                                            <th></th>
+                                            <th></th>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <a href="https://cdn.subutai.io:8338/kurjun/rest/raw/get?name=subutai-p2p.pkg" onclick="ga('send', 'event', 'downloads', 'subutai-p2p.pkg', 'Mac');"
+                                                   class="download">
+                                                    <strong>Subutai P2P for Mac OS X ( 64 bit ) 6.x</strong>
+                                                </a>
+                                            </td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="for_dev">
+                                                <a href="https://cdn.subutai.io:8338/kurjun/rest/raw/get?name=subutai-p2p-dev.pkg" onclick="ga('send', 'event', 'downloads', 'subutai-p2p-dev.pkg', 'Mac');"
+                                                   class="download">
+                                                    <strong>Subutai P2P for Mac OS X Dev </strong>
+                                                </a>
+                                            </td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="for_dev">
+                                                <a href="https://cdn.subutai.io:8338/kurjun/rest/raw/get?name=subutai-p2p-master.pkg" onclick="ga('send', 'event', 'downloads', 'subutai-p2p-dev.pkg', 'Mac');"
+                                                   class="download">
+                                                    <strong>Subutai P2P for Mac OS X Master </strong>
+                                                </a>
+                                            </td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="https://cdn.subutai.io:8338/kurjun/rest/raw/get?name=subutai-control-center.pkg" onclick="ga('send', 'event', 'downloads', 'subutai-control-center.pkg', 'Mac');"
+                                                   class="download">
+                                                    <strong>Subutai Control Center x64 6.x</strong>
+                                                </a>
+                                            </td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="for_dev">
+                                                <a href="https://cdn.subutai.io:8338/kurjun/rest/raw/get?name=subutai-control-center-dev.pkg" onclick="ga('send', 'event', 'downloads', 'subutai-control-center.pkg', 'Mac');"
+                                                   class="download">
+                                                    <strong>Subutai Control Center x64 Dev</strong>
+                                                </a>
+                                            </td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="for_dev">
+                                                <a href="https://cdn.subutai.io:8338/kurjun/rest/raw/get?name=subutai-control-center-master.pkg" onclick="ga('send', 'event', 'downloads', 'subutai-control-center.pkg', 'Mac');"
+                                                   class="download">
+                                                    <strong>Subutai Control Center x64 Master</strong>
+                                                </a>
+                                            </td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </table>
+                                    <h3>Install the <strong>Subutai P2P Daemon and Control Center</strong></h3>
+                                        <p>Install the dmg packages for MacOS.</p>
+                                </div>
+                                Linux
+                                <div id="menu2" class="tab-pane fade">
+                                    <br>
+                                    <input id="fchecklin" type="checkbox" value=""> For Developers
+                                    <br>
+                                    <br>
+                                    <table cellspacing="5" cellpadding="10" width="100%">
+                                        <tr>
+                                            <th>Files</th>
+                                            <th></th>
+                                            <th></th>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="https://cdn.subutai.io:8338/kurjun/rest/raw/get?name=subutai-p2p.deb" onclick="ga('send', 'event', 'downloads', 'subutai-p2p.deb', 'Linux');"
+                                                   class="download">
+                                                    <strong>Subutai P2P for Linux ( 64 bit ) 6.x</strong>
+                                                </a>
+                                            </td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="for_dev_lin">
+                                                <a href="https://cdn.subutai.io:8338/kurjun/rest/raw/get?name=subutai-p2p-dev.deb" onclick="ga('send', 'event', 'downloads', 'subutai-p2p.deb', 'Linux');"
+                                                   class="download">
+                                                    <strong>Subutai P2P for Linux Dev</strong>
+                                                </a>
+                                            </td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="for_dev_lin">
+                                                <a href="https://cdn.subutai.io:8338/kurjun/rest/raw/get?name=subutai-p2p-master.deb" onclick="ga('send', 'event', 'downloads', 'subutai-p2p-master.deb', 'Linux');"
+                                                   class="download">
+                                                    <strong>Subutai P2P for Linux Master</strong>
+                                                </a>
+                                            </td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="https://cdn.subutai.io:8338/kurjun/rest/raw/get?name=subutai-control-center.deb" onclick="ga('send', 'event', 'downloads', 'subutai-control-center.deb', 'Linux');"
+                                                   class="download">
+                                                    <strong>Subutai Control Center x64 6.x</strong>
+                                                </a>
+                                            </td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="for_dev_lin">
+                                                <a href="https://cdn.subutai.io:8338/kurjun/rest/raw/get?name=subutai-control-center-dev.deb" onclick="ga('send', 'event', 'downloads', 'subutai-control-center-dev.deb', 'Linux');"
+                                                   class="download">
+                                                    <strong>Subutai Control Center x64 Dev</strong>
+                                                </a>
+                                            </td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="for_dev_lin">
+                                                <a href="https://cdn.subutai.io:8338/kurjun/rest/raw/get?name=subutai-control-center-master.deb" onclick="ga('send', 'event', 'downloads', 'subutai-control-center-master.deb', 'Linux');"
+                                                   class="download">
+                                                    <strong>Subutai Control Center x64 Master</strong>
+                                                </a>
+                                            </td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </table>
+                                    <h3>Install the<strong>Subutai P2P Daemon</strong></h3>
+                                    <p>We only support Debian based systems right now. Use apt install:</p>
+                                    <pre class="brush:html">
+                                        sudo apt install /path/to/subutai-p2p.deb
+                                    </pre>
+                                    <hr>
+                                    <h3>Install the
+                                        <strong>Subutai Control Center Application</strong>
+                                    </h3>
+                                    <p>We only support Debian based systems right now. Use apt install:</p>
+                                    <pre class="brush:html">
+                                        sudo apt install /path/to/subutai-control-center.deb
+                                    </pre>
+                                </div>
+                            </div> -->
+                        
+                        <!-- <ul>
+                            <li>You may also download the MSI package for Windows (64-bit): Subutai Control Center x64 6.x</li>
+                            <li></li>
+                            <li></li>
+                        </ul> -->
+
+
+
+
+
+                        <!-- <ul>
+                            <li>In order to download and install the Subutai Control Center, please hop to the <a href="#Downloads">Downloads</a> section (versions for Windows, Mac and Linux available).</li>
+                            <li>Learn <a href="https://docs.subutai.io/Products/PeerOS/06_How_to_use_Control_Center_and_P2P.html">how to use</a>  the Control Center.</li>
+                        </ul> -->
+
+                        <!-- <h2 style="color: #078DD0;"><a class="anchorSubtitle" id="P2P">P2P daemon</a></h2>
+                        <p>Enable your system to join the swarm and access private cloud environments. The P2P daemon is required to access your Peers, containers, and Environments via SSH or Remote Desktop from the Bazaar, Subutai Management Console, or Control Center.</p>
+                        <p>The P2P daemon is available in Windows, Mac, and Linux versions.</p>
+                        <ul>
+                            <li>Download the MSI package for Windows (64-bit): Subutai P2P x64 6.x</li>
+                            <li>Install by following the instructions on the installation wizard.</li>
+                        </ul><br/> -->
+                        
+                    <!-- </div>
+                </div> -->
+
+<!--                 <div id="installation"></div>
                             <h1><a name="Downloads">Downloads</a></h1>
                             <h3>Install the 
                                             <strong>Subutai P2P daemon</strong>
@@ -314,7 +924,7 @@
                                     </li>
                                 </ul>
                                 <div class="tab-content">
-                                    <!-- WIndows -->
+                                    WIndows
                                     <div id="home" class="tab-pane fade">
                                         <br>
                                         <input id="fcheckwin" type="checkbox" value=""> For Developers
@@ -387,10 +997,10 @@
                                                 <td></td>
                                             </tr>
                                         </table>
-										<h3>Install the <strong>Subutai P2P Daemon and Control Center</strong></h3>
+                                        <h3>Install the <strong>Subutai P2P Daemon and Control Center</strong></h3>
                                             <p>Install the MSI packages for Windows. Double click after downloading and follow instructions.</p>
                                     </div>
-                                    <!-- MAC OS -->
+                                    MAC OS
                                     <div id="menu1" class="tab-pane fade">
                                         <br>
                                         <input id="fcheck" type="checkbox" value=""> For Developers
@@ -469,7 +1079,7 @@
                                             <p>Install the dmg packages for MacOS.</p>
                                     </div>
                                     <!-- Linux -->
-                                    <div id="menu2" class="tab-pane fade">
+                                    <!-- <div id="menu2" class="tab-pane fade">
                                         <br>
                                         <input id="fchecklin" type="checkbox" value=""> For Developers
                                         <br>
@@ -558,15 +1168,15 @@
                                         </pre>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                             <!-- End Download -->
-                        </div>
-                    </div>
-                    </div>
-                </section>
+                        <!-- </div> -->
+                    <!-- </div>
+                    </div> -->
+                <!-- </section>
             </div>
         </div>
-    </section>
+    </section> -->
 
         <!-- Section 4 - Community -->
     <section style="margin-top: 50px;">
@@ -698,7 +1308,6 @@
     </script>
 
     <script>
-
         var os = 0;
         if (navigator.userAgent.indexOf('Windows') != -1) os = 1;
         if (navigator.userAgent.indexOf('Linux') != -1) os = 2;
@@ -715,15 +1324,12 @@
                 $("#menu2").addClass("in active");
                 break;
             case 3:
-
                 $("#macos").addClass("active");
                 $("#menu1").addClass("in active");
                 break;
             case 4:
-
                 break;
             default:
-
                 break;
         }
     </script>

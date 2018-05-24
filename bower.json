@@ -1,0 +1,34 @@
+{
+  "name": "subutai",
+  "description": "The https://subutai.io website",
+  "main": "index.js",
+  "authors": [
+    "subutai"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "subutai",
+    "blockchain",
+    "bazaar",
+    "token",
+    "blueprint",
+    "P2P",
+    "PeerOS",
+    "peer",
+    "to",
+    "peer",
+    "khan",
+    "blockchain",
+    "in",
+    "the",
+    "box"
+  ],
+  "homepage": "https://github.com/subutai-io/website",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

@@ -1,0 +1,42 @@
+/* Assests styles - Subutai website (https://github.com/subutai-io/website)
+   05/11/2018 
+*/
+
+
+
+#presentVideo {
+	padding: 0;
+}
+
+/* router image */
+#routerGif-img {
+	width: 100%;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-align-items: center;
+	align-items: center;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+
+	img {
+		width: 80%;
+		height: auto;
+	}
+}
+
+@media (min-width: 768px) {
+	#routerGif-img {
+		img {
+			width: 500px;
+			height: 500px;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+
+}
+
+@media (min-width: 1200px) {
+
+}
