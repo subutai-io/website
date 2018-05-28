@@ -15,6 +15,9 @@ body {
 p {
 	font-family: 'Roboto', sans-serif;
 }
+.mainContainer {
+
+}
 /* banner */
 .headerBanner {
 	background: url(../img/bg-landing-full.jpg) no-repeat center center;
@@ -461,6 +464,7 @@ h1,h2,h3,h4,h5,h6{
 	}
 	#landingFooter {
 		padding: 40px 0 10px 0;
+		background: #FFF;
 	}
 	#landingFooter .socialWrap {
 		width: 40%;
@@ -486,6 +490,18 @@ h1,h2,h3,h4,h5,h6{
 }
 
 @media (min-width: 1200px) {
+	body {
+		background: #000;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-wrap: wrap;
+		flex-wrap: wrap;
+		-webkit-justify-content: center;
+		justify-content: center;
+	}
+	.mainContainer {
+		width: 1440px;
+	}
 	.headerBanner {
 		background: url(../img/bg-landing-full.jpg) no-repeat center center;
 		background-size: cover;
