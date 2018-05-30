@@ -46,7 +46,6 @@ p {
 .logoWrap {
 	width: 100%;
 	height: 50px;
-	/*padding-top: 40px;*/
 	display: -webkit-flex;
 	display: flex;
 	-webkit-flex-wrap: wrap;
@@ -150,33 +149,6 @@ h1,h2,h3,h4,h5,h6{
 #ctaButton:hover {
 	background: linear-gradient(#178B28, #157E24);
 	border: 1px solid #157E24;
-}
-#problemWrap, #solutionWrap {
-	width: 100%;
-	box-sizing: border-box;
-	font-weight: 400;
-	display: -webkit-flex;
-	display: flex;
-	-webkit-flex-wrap: wrap;
-	flex-wrap: wrap;
-	-webkit-justify-content: center;
-	justify-content: center;
-	-webkit-align-items: center;
-	align-items: center;
-}
-#problemWrap {
-	padding: 20px 20px 40px 20px;
-	background: #000000;
-}
-#solutionWrap {
-	padding: 40px 20px;
-	background: linear-gradient(#42a1ec, #0070c9);
-}
-#problemWrap h4, #solutionWrap h4 {
-	color: #FFFFFF;
-	font-weight: 400;
-	font-size: 1.25rem;
-	width: 100%;
 }
 #textSection h4::first-letter {
 	font-size: 3rem;
@@ -331,14 +303,11 @@ h1,h2,h3,h4,h5,h6{
 	opacity: .8;
 }
 #globeSection {
-	/*background: url(../img/globe-nobg.png) no-repeat -400px 100px;*/
 	background: url(../img/globe-nobg.png) no-repeat -130px 60px;
 	background-color: #FFF;
-	/*background-size: 80%;*/
 	background-size: 180%;
 	width: 100%;
 	box-sizing: border-box;
-	/*padding: 50px 20px;*/
 	display: -webkit-flex;
 	display: flex;
 	-webkit-flex-wrap: wrap;
@@ -360,13 +329,10 @@ h1,h2,h3,h4,h5,h6{
 	flex-direction: column;
 }
 .problemRow {
-	/*padding: 60px 40px 60px 0;*/
 	padding-top: 100px;
 	width: 100%;
 	display: -webkit-flex;
 	display: flex;
-	/*-webkit-justify-content: flex-start;
-	justify-content: flex-start;*/
 }
 .solutionRow {
 	padding-bottom: 100px;
@@ -421,17 +387,16 @@ h1,h2,h3,h4,h5,h6{
 @media (min-width: 768px) {
 	.headerBanner {
 		background: url(../img/SubutaiHeroImageV7.jpg) no-repeat center center;
-		/*height: 780px;*/
+		height: 600px;
 	}
 	.topRow {
 		box-sizing: border-box;
-		padding-left: 100px;
-		padding-right: 100px;
-		padding-top: 60px;
+		padding-left: 60px;
+		padding-right: 60px;
+		padding-top: 40px;
 	}
 	.logoWrap {
 		height: 50px;
-		/*padding-top: 0;*/
 		-webkit-justify-content: flex-end;
 		justify-content: flex-end;
 	}
@@ -457,80 +422,65 @@ h1,h2,h3,h4,h5,h6{
 	.main-subTitle {
 		width: 550px;
 		font-weight: 400;
-		font-size: 1.5rem;
+		font-size: 1.25rem;
 		margin: 10px 0 30px 0;
 	}
-	/*.mainTitle, .main-subTitle {
-		text-align: center;
-	}*/
 	#ctaButton {
 		width: 270px;
 	}
 	#globeSection {
-		background: url(../img/globe-nobg.png) no-repeat -400px 100px;
+		background: url(../img/globe-nobg.png) no-repeat -300px 30px;
 		background-color: #FFF;
 		background-size: 80%;
 		width: 100%;
 		box-sizing: border-box;
-		padding: 50px 100px;
+		padding: 50px 60px;
 	}
 	.textWrap {
 		padding: 0;
 	}
 	.problemRow {
-		padding: 60px 40px 60px 0;
-		width: 50%;
+		padding: 60px 0;
+		width: 60%;
 		-webkit-justify-content: flex-start;
 		justify-content: flex-start;
 	}
-	.solutionRow h4 {
-		width: 40%;
-		margin-top: 0;
+	.solutionRow {
+		padding: 80px 0; 
+		width: 50%;
 	}
-	#problemWrap, #solutionWrap {
-		padding: 80px 100px;
+	.solutionRow h4 {
+		width: 100%;
+		margin-top: 0;
 	}
 	.problemRow h4, .solutionRow h4 {
 		color: #333;
-		font-size: 1.8rem;
-		/*width: 70%;*/
+		font-size: 1.25rem;
 	}
 	#textSection h4::first-letter {
 		font-size: 3.5rem;
 	}
 	.prod {
-		-webkit-align-items: center;
-		align-items: center;
+		-webkit-justify-content: flex-start;
+		justify-content: flex-start;
 		margin-bottom: 0;
 	}
 	#prodWrap {
 		width: 100%;
-		padding: 0;
-		-webkit-justify-content: flex-end;
-		justify-content: flex-end;
-		-webkit-align-items: flex-end;
-		align-items: flex-end;
+		padding: 90px 0 0 0;
 		-webkit-flex-direction: column;
 		flex-direction: column;
+	}
+	.prodTextWrap {
+		width: calc(100% - 100px);
 	}
 	.prodPeerOS, .prodBazaar, .prodRouter,
 	.prodBlueprint, .prodKhan {
 		padding-bottom: 40px;
 	}
-	.prodBazaar {
-		padding-right: 20px;
-	}
-	.prodRouter {
-		padding-right: 60px;
-	}
-	.prodBlueprint {
-		padding-right: 120px;
-	}
-	.prodKhan {
-		padding-right: 240px;
-	}
 	.prodIconWrap {
 		width: 100px;
+		box-sizing: border-box;
 		padding-right: 10px;
 	}
 	.prodIconWrap img {
@@ -540,16 +490,12 @@ h1,h2,h3,h4,h5,h6{
 		text-align: left;
 		padding-bottom: 5px;
 	}
-	.prodText {
-		width: 400px;
-	}
 	.conclusionWrap {
-		padding: 80px 100px 80px 100px;
+		padding: 80px 60px 80px 60px;
 		-webkit-justify-content: center;
 		justify-content: center;
 	}
 	.conclusionText {
-		width: 70%;
 		margin-bottom: 20px;
 	}
 	.conclusionText p {
@@ -561,35 +507,27 @@ h1,h2,h3,h4,h5,h6{
 		text-align: center;
 	}
 	.secondCta h6 {
-		font-size: 2.5rem;
+		font-size: 2rem;
 		margin-bottom: 30px;
 	}
 	#landingFooter {
-		padding-top: 0;
-		padding-bottom: 20px;
+		padding: 0 0 20px 0;
 		-webkit-justify-content: space-between;
 		justify-content: space-between;
 	}
-	/*#landingFooter .divider {
-		width: 100%;
-		margin: 0 auto; 
-		box-sizing: border-box;
-		padding-top: 40px;
-		border-top: 1px solid rgba(255,255,255,.2);
-	}*/
 	#logoFooterWrap {
 		margin-top: 0;
-		width: 50%;
+		width: 40%;
 		box-sizing: border-box;
-		padding-left: 100px;
+		padding-left: 60px;
 		-webkit-justify-content: flex-start;
 		justify-content: flex-start;
 		order: 2;
 	}
 	#landingFooter .socialWrap {
-		width: 50%;
+		width: 60%;
 		box-sizing: border-box;
-		padding-right: 100px;
+		padding-right: 60px;
 		-webkit-justify-content: flex-end;
 		justify-content: flex-end;
 		order: 3;
@@ -600,13 +538,7 @@ h1,h2,h3,h4,h5,h6{
 }
 
 @media (min-width: 992px) {
-	/*.prodCard:hover {
-		background: linear-gradient(#42a1ec, #0070c9);
-		color: #FFF;
-		-webkit-box-shadow: -2px 0 10px 0 rgba(0,0,0,0.16), 2px 0 6px 0 rgba(0,0,0,0.16), 0 1px 2px 0 rgba(0,0,0,0.23);
-		box-shadow: -2px 0 10px 0 rgba(0,0,0,0.16), 2px 0 6px 0 rgba(0,0,0,0.16), 0 1px 2px 0 rgba(0,0,0,0.23);
-		transform: translate3d(0, -10px, 0);
-	}*/
+	
 }
 
 @media (min-width: 1200px) {
@@ -625,6 +557,12 @@ h1,h2,h3,h4,h5,h6{
 	.headerBanner {
 		background-size: cover;
 		background-attachment: fixed;
+		height: 780px;
+	}
+	.topRow {
+		padding-left: 100px;
+		padding-right: 100px;
+		padding-top: 60px;
 	}
 	.titleBox {
 		width: 100%;
@@ -634,20 +572,71 @@ h1,h2,h3,h4,h5,h6{
 		font-size: 3.25rem;
 		font-weight: 500;
 	}
-	#mountainImg {
-		background: url(../img/bg-landing-bottom.png) no-repeat;
-		background-size: contain;
-		background-position: bottom;
+	.main-subTitle {
+		font-size: 1.5rem;
+	}
+	#globeSection {
+		background: url(../img/globe-nobg.png) no-repeat -400px 100px;
+		background-color: #FFF;
+		background-size: 80%;
 		width: 100%;
-		height: 700px;
 		box-sizing: border-box;
-		display: -webkit-flex;
-		display: flex;
-		-webkit-flex-wrap: wrap;
-		flex-wrap: wrap;
-		-webkit-justify-content: center;
-		justify-content: center;
-		-webkit-align-items: flex-start;
-		align-items: flex-start;
+		padding: 50px 100px;
+	}
+	.problemRow {
+		padding: 60px 40px 60px 0;
+		width: 50%;
+	}
+	.solutionRow {
+		padding: 0 0 100px 0;
+		width: 40%;
+	}
+	.problemRow h4, .solutionRow h4 {
+		font-size: 1.8rem;
+	}
+	#prodWrap {
+		padding: 0;
+		-webkit-justify-content: flex-end;
+		justify-content: flex-end;
+		-webkit-align-items: flex-end;
+		align-items: flex-end;
+	}
+	.prod {
+		-webkit-align-items: center;
+		align-items: center;
+	}
+	.prodTextWrap {
+		width: 400px;
+	}
+	.prodBazaar {
+		padding-right: 20px;
+	}
+	.prodRouter {
+		padding-right: 60px;
+	}
+	.prodBlueprint {
+		padding-right: 120px;
+	}
+	.prodKhan {
+		padding-right: 240px;
+	}
+	.conclusionWrap {
+		padding: 80px 100px 80px 100px;
+	}
+	.conclusionText {
+		width: 70%;
+	}
+	.secondCta h6 {
+		font-size: 2.5rem;
+	}
+	#landingFooter {
+		padding-top: 0;
+		padding-bottom: 20px;
+	}
+	#logoFooterWrap {
+		padding-left: 100px;
+	}
+	#landingFooter .socialWrap {
+		padding-right: 100px;
 	}
 }
