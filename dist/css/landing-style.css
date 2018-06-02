@@ -177,9 +177,9 @@ h1,h2,h3,h4,h5,h6{
 #socialProof {
 
 	/*background-image: url(../dist/img/world-map-point.png) no-repeat center center;*/
-	/*background: url(../img/world-map-point.png) no-repeat center center;*/
-	background: url(../img/SubutaiHeroImageV7-smart.jpg) no-repeat center center;
-	background: #FFF;
+	background: url(../img/world-map-point-bg-white.jpg) no-repeat center center;
+	/*background: url(../img/SubutaiHeroImageV7-smart.jpg) no-repeat center center;*/
+	background-size: cover;
 	width: 100%;
 	padding: 40px 20px 0 20px;
 	text-align: center;
@@ -233,7 +233,7 @@ h1,h2,h3,h4,h5,h6{
 	bottom: 0;
 }*/
 .socialProof-item {
-	background: #FFF;
+	/*background: #FFF;*/
 	width: 100%;
 	/*padding-bottom: 20px;*/
 	/*margin-bottom: 40px;*/
@@ -583,8 +583,8 @@ h1,h2,h3,h4,h5,h6{
 		padding: 0 220px;
 	}
 	.personImg-wrap, .counseledImg-wrap {
-		width: 150px;
-		height: 125px;
+		width: 200px;
+		height: 170px;
 	}
 	.personImg-wrap img, .counseledImg-wrap img {
 		height: 100%;
@@ -732,7 +732,7 @@ h1,h2,h3,h4,h5,h6{
 
 @media (min-width: 1200px) {
 	body {
-		background: #000;
+		/*background: #000;*/
 		display: -webkit-flex;
 		display: flex;
 		-webkit-flex-wrap: wrap;
