@@ -10,6 +10,7 @@
 	border: 0;
 }
 body {
+	background: #FFF;
 	font-size: 16px;
 }
 p {
@@ -174,7 +175,11 @@ h1,h2,h3,h4,h5,h6{
 	text-align: center;
 }*/
 #socialProof {
-	background-color: #FFF;
+
+	/*background-image: url(../dist/img/world-map-point.png) no-repeat center center;*/
+	/*background: url(../img/world-map-point.png) no-repeat center center;*/
+	background: url(../img/SubutaiHeroImageV7-smart.jpg) no-repeat center center;
+	background: #FFF;
 	width: 100%;
 	padding: 40px 20px 0 20px;
 	text-align: center;
@@ -231,26 +236,30 @@ h1,h2,h3,h4,h5,h6{
 	background: #FFF;
 	width: 100%;
 	/*padding-bottom: 20px;*/
-	margin-bottom: 40px;
+	/*margin-bottom: 40px;*/
 	-webkit-flex-direction: column;
 	flex-direction: column;
 	-webkit-align-items: center;
 	align-items: center;
-	border: 1px solid #EEE;
+	/*border: 1px solid #EEE;*/
 	border-radius: 5px;
-	-webkit-box-shadow: 11px 9px 17px -12px rgba(0,0,0,0.28);
+	/*-webkit-box-shadow: 11px 9px 17px -12px rgba(0,0,0,0.28);
 	-moz-box-shadow: 11px 9px 17px -12px rgba(0,0,0,0.28);
-	box-shadow: 11px 9px 17px -12px rgba(0,0,0,0.28);
+	box-shadow: 11px 9px 17px -12px rgba(0,0,0,0.28);*/
 }
 .personImg-wrap, .counseledImg-wrap {
 	position: relative;
 	width: 240px;
 	height: 200px;
-	border-top-left-radius: 5px;
-	border-top-right-radius: 5px;
+	/*border-top-left-radius: 5px;
+	border-top-right-radius: 5px;*/
+	border-radius: 3px;
 	overflow: hidden;
 	-webkit-justify-content: center;
 	justify-content: center;
+	-webkit-box-shadow: 2px 2px 25px -9px rgba(0,0,0,0.5);
+	-moz-box-shadow: 2px 2px 25px -9px rgba(0,0,0,0.5);
+	box-shadow: 2px 2px 25px -9px rgba(0,0,0,0.5);
 }
 .personImg-wrap img, .counseledImg-wrap img {
 	height: 100%;
@@ -258,11 +267,17 @@ h1,h2,h3,h4,h5,h6{
 	position: absolute;
 	top: 0;
 }
+.cardDivider {
+	box-sizing: border-box;
+	border-top: 1px solid #E9E9E9;
+	width: 150px;
+	padding: 0 20px;
+}
 .description {
 	font-family: 'Roboto', sans-serif;
-	font-size: .85rem;
+	font-size: .9rem;
 	color: #A1A1A1;
-	padding: 0 20px 30px 20px;
+	padding: 10px 20px 30px 20px;
 	line-height: 1.25rem;
 }
 
@@ -562,18 +577,18 @@ h1,h2,h3,h4,h5,h6{
 		justify-content: space-around;
 	}
 	.socialProof-item {
-		width: 250px;
+		width: 300px;
 	}
 	.containerSmall {
 		padding: 0 220px;
 	}
 	.personImg-wrap, .counseledImg-wrap {
-		width: 250px;
-		height: 200px;
+		width: 150px;
+		height: 125px;
 	}
-	.counseledImg-wrap img {
-		height: auto;
-		width: 100%;
+	.personImg-wrap img, .counseledImg-wrap img {
+		height: 100%;
+		width: auto;
 	}
 	#globeSection {
 		background: url(../img/globe-nobg.png) no-repeat -300px 30px;
@@ -673,11 +688,11 @@ h1,h2,h3,h4,h5,h6{
 	}
 	#logoFooterWrap {
 		margin-top: 0;
-		width: 40%;
+		/*width: 40%;*/
 		box-sizing: border-box;
-		padding-left: 60px;
-		-webkit-justify-content: flex-start;
-		justify-content: flex-start;
+		/*padding-left: 60px;*/
+		/*-webkit-justify-content: flex-start;
+		justify-content: flex-start;*/
 		order: 2;
 	}
 	#landingFooter .socialWrap {
@@ -750,29 +765,29 @@ h1,h2,h3,h4,h5,h6{
 		font-size: 1.5rem;
 	}
 	#globeSection {
-		background: url(../img/globe-nobg.png) no-repeat -400px 100px;
+		background: url(../img/globe-nobg.png) no-repeat -400px 60px;
 		background-color: #FFF;
-		background-size: 80%;
+		background-size: 1000px;
 		width: 100%;
 		box-sizing: border-box;
-		padding: 50px 100px;
+		padding: 20px 100px 50px 100px;
 	}
 	.textWrap {
 		height: auto;
 	}
 	.problemRow {
-		padding: 60px 40px 60px 0;
-		width: 50%;
+		padding: 60px 0px 40px 0;
+		width: 60%;
 	}
 	.solutionRow {
 		padding: 0 0 100px 0;
-		width: 40%;
+		width: 50%;
 	}
 	.solutionRow h4 {
 		max-width: 100%;
 	}
 	.problemRow h4, .solutionRow h4 {
-		font-size: 1.8rem;
+		font-size: 1.5rem;
 	}
 	#prodWrap {
 		padding: 0;
@@ -785,20 +800,20 @@ h1,h2,h3,h4,h5,h6{
 		-webkit-align-items: center;
 		align-items: center;
 	}
-	.prodTextWrap {
-		width: 400px;
+	.prodPeerOS .prodTextWrap {
+		width: 520px;
 	}
-	.prodBazaar {
-		padding-right: 20px;
+	.prodBazaar .prodTextWrap {
+		width: 500px;
 	}
-	.prodRouter {
-		padding-right: 60px;
+	.prodRouter .prodTextWrap {
+		width: 510px;
 	}
-	.prodBlueprint {
-		padding-right: 120px;
+	.prodBlueprint .prodTextWrap {
+		width: 540px;
 	}
-	.prodKhan {
-		padding-right: 240px;
+	.prodKhan .prodTextWrap {
+		width: 600px;
 	}
 	.conclusionWrap {
 		padding: 80px 100px 80px 100px;
@@ -813,9 +828,9 @@ h1,h2,h3,h4,h5,h6{
 		padding-top: 0;
 		padding-bottom: 20px;
 	}
-	#logoFooterWrap {
+	/*#logoFooterWrap {
 		padding-left: 100px;
-	}
+	}*/
 	#landingFooter .socialWrap {
 		padding-right: 100px;
 	}
