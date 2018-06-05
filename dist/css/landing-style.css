@@ -705,13 +705,30 @@ h1,h2,h3,h4,h5,h6{
 		align-items: flex-end;
 	}
 	.prod {
+		-webkit-justify-content: flex-end;
+		justify-content: flex-end;
 		-webkit-align-items: center;
 		align-items: center;
 	}
-	.prodPeerOS .prodTextWrap {
-		width: 520px;
+	.prod.prodPeerOS {
+		width: 47%;
 	}
-	.prodBazaar .prodTextWrap {
+	.prod.prodBazaar {
+		width: 45%;
+	}
+	.prod.prodRouter {
+		width: 47%;
+	}
+	.prod.prodBlueprint {
+		width: 51%;
+	}
+	.prod.prodKhan {
+		width: 58%;
+	}
+	/*.prodPeerOS .prodTextWrap {
+		width: 520px;
+	}*/
+	/*.prodBazaar .prodTextWrap {
 		width: 500px;
 	}
 	.prodRouter .prodTextWrap {
@@ -722,7 +739,7 @@ h1,h2,h3,h4,h5,h6{
 	}
 	.prodKhan .prodTextWrap {
 		width: 600px;
-	}
+	}*/
 	.conclusionWrap {
 		padding: 80px 100px 80px 100px;
 	}

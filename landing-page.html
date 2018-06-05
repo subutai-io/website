@@ -52,6 +52,7 @@
 
 	<title>Subutai™: the world’s first intelligent Peer-to-Peer (P2P) Cloud Computing platform</title>
 	
+	<link rel="stylesheet" type="text/css" href="dist/css/door.css">
 	<link rel="stylesheet" type="text/css" href="dist/css/landing-style.css">
 	<link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,500,700,900" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
@@ -59,14 +60,63 @@
 	<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<!-- JS Links-->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <!-- <script src="js/bootstrap.min.js"></script> -->
 
 	<!-- Favicon link-->
 	<link rel="shortcut icon" href="img/favicon.png" />
 </head>
 
 <body>
+
+
+	<!-- DOOR SLAM TEST -->
+	<div id="opacity-bg">
+		<div id="contentContainer">
+			<h2 class="doorTitle">Share and exchange computer resources with users and peers from around the globe.</h2>
+			<h4 class="subtitle">Now is the time to join the Subutai horde! Here’s how:</h4>
+			<div id="stepsWrap">
+				<div class="step">
+					<i class="fa fa-user-plus"></i>
+					<p class="stepDescription">Sign up and confirm your registration</p>
+				</div>
+				<i class="fa fa-angle-right"></i>
+				<div class="step">
+					<i class="fa fa-download"></i>
+					<p class="stepDescription">Install the E2E plugin and set up your PGP key.</p>
+				</div>
+				<i class="fa fa-angle-right"></i>
+				<div class="step">
+					<i class="fa fa-sign-in"></i>
+					<p class="stepDescription">Log in and explore Subutai Bazaar</p>
+				</div>
+				<i class="fa fa-angle-right"></i>
+				<div class="step">
+					<i class="fa fa-key"></i>
+					<p class="stepDescription">Add your PGP key to your profile on Bazaar.</p>
+				</div>
+			</div>
+			<div id="optionsWrap">
+				<div class="buttonWrap">
+					<p>Easy enough?</p>
+					<a class="button-white" onclick="closeDoor()">GO AHEAD</a>
+					<!-- <a class="button-white" href="">GO AHEAD</a> -->
+				</div>
+				<div class="buttonWrap">
+					<p>Or, learn more about</p>
+					<a class="button-transp" href="https://subutai.io/getting-started.html" target="_blank">GETTING STARTED</a>
+				</div>
+			</div>
+			<div id="footer-door">
+				<div class="logoWrap">
+					<img class="logoImg" src="dist/img/logo-white.png">
+				</div>
+			</div>
+		</div>
+	</div>
+
+
 	<div class="mainContainer">
 	<!-- INITIAL BANNER - CALL TO ACTION -->
 		<header class="headerBanner">
@@ -88,6 +138,74 @@
 			</div> <!-- topRow -->
 		</header> <!-- headerBanner -->
 
+
+		
+
+
+		<section id="globeSection">
+			<!-- problem / solution text -->
+			<div class="textWrap">
+				<div class="problemRow">
+					<h4>Cloud computing is expensive and dominated by a few major conglomerates with no interest in user privacy.</h4>
+				</div>
+				<div class="solutionRow">
+					<h4>The Subutai platform leverages peer-to-peer cloud computing, energy-efficient cryptocurrency mining, and blockchain technology to provide users with a holistic solution to this problem. We’re making it easy to utilize untapped computing resources.</h4>
+				</div>
+			</div>
+			<!-- PRODUCTS -->
+			<div id="prodWrap">
+				<!-- PeerOs -->
+				<div class="prod prodPeerOS">
+					<div class="prodIconWrap">
+						<img src="dist/img/icon-peerOS.jpg">
+					</div>
+					<div class="prodTextWrap">
+						<h4 class="prodTitle">Subutai PeerOS</h4>
+						<p class="prodText">Open Source, container-based P2P Cloud and IoT software that allows users to buy, share, sell, and rent computing power</p>
+					</div>
+				</div>
+				<!-- Bazaar -->
+				<div class="prod prodBazaar">
+					<div class="prodIconWrap">
+						<img src="dist/img/icon-bazaar.jpg">
+					</div>
+					<div class="prodTextWrap">
+						<h4 class="prodTitle">Subutai Bazaar</h4>
+						<p class="prodText">Global marketplace for trading computing resources and applications. The Bazaar is powered by GoodWill, a lightweight digital asset used to buy and sell computing resources.</p>
+					</div>
+				</div>
+				<!-- Router -->
+				<div class="prod prodRouter">
+					<div class="prodIconWrap">
+						<img src="dist/img/icon-router.jpg">
+					</div>
+					<div class="prodTextWrap">
+						<h4 class="prodTitle">Subutai Blockchain Router v2.0</h4>
+						<p class="prodText">An energy-efficient broadband router that also serves as a plug-and-play device to mine and store cryptocurrency.</p>
+					</div>
+				</div>
+				<!-- Blueprint -->
+				<div class="prod prodBlueprint">
+					<div class="prodIconWrap">
+						<img src="dist/img/icon-blueprint.jpg">
+					</div>
+					<div class="prodTextWrap">
+						<h4 class="prodTitle">Subutai Blueprints</h4>
+						<p class="prodText">Templates that reduce system administration overheads and simplifies the process of application deployment. Deploy anything from Blockchain-in-a-Box to a Wordpress site or a Minecraft server with a few easy clicks.</p>
+					</div>
+				</div>
+				<!-- KHAN -->
+				<div class="prod prodKhan">
+					<div class="prodIconWrap">
+						<img src="dist/img/icon-khan.jpg">
+					</div>
+					<div class="prodTextWrap">
+						<h4 class="prodTitle">KHAN</h4>
+						<p class="prodText">The public token we created to ensure quality on the Subutai platform. Users may leverage KHAN to garner stakes in the Subutai network, which then may be used to exchange for GoodWill. We’re going to be launching an ICO in the near future, so be sure to stay tuned!</p>
+					</div>
+				</div>
+			</div>
+		</section>
 
 		<section id="socialProof">
 			<h5>Led by Open Source trailblazers</h4>
@@ -159,72 +277,6 @@
 				</div>
 			</div> <!-- socialProof-wrapper -->
 		</section>
-
-
-		<section id="globeSection">
-			<!-- problem / solution text -->
-			<div class="textWrap">
-				<div class="problemRow">
-					<h4>Cloud computing is expensive and dominated by a few major conglomerates with no interest in user privacy.</h4>
-				</div>
-				<div class="solutionRow">
-					<h4>The Subutai platform leverages peer-to-peer cloud computing, energy-efficient cryptocurrency mining, and blockchain technology to provide users with a holistic solution to this problem. We’re making it easy to utilize untapped computing resources.</h4>
-				</div>
-			</div>
-			<!-- PRODUCTS -->
-			<div id="prodWrap">
-				<!-- PeerOs -->
-				<div class="prod prodPeerOS">
-					<div class="prodIconWrap">
-						<img src="dist/img/icon-peerOS.jpg">
-					</div>
-					<div class="prodTextWrap">
-						<h4 class="prodTitle">Subutai PeerOS</h4>
-						<p class="prodText">Open Source, container-based P2P Cloud and IoT software that allows users to buy, share, sell, and rent computing power</p>
-					</div>
-				</div>
-				<!-- Bazaar -->
-				<div class="prod prodBazaar">
-					<div class="prodIconWrap">
-						<img src="dist/img/icon-bazaar.jpg">
-					</div>
-					<div class="prodTextWrap">
-						<h4 class="prodTitle">Subutai Bazaar</h4>
-						<p class="prodText">Global marketplace for trading computing resources and applications. The Bazaar is powered by GoodWill, a lightweight digital asset used to buy and sell computing resources.</p>
-					</div>
-				</div>
-				<!-- Router -->
-				<div class="prod prodRouter">
-					<div class="prodIconWrap">
-						<img src="dist/img/icon-router.jpg">
-					</div>
-					<div class="prodTextWrap">
-						<h4 class="prodTitle">Subutai Blockchain Router v2.0</h4>
-						<p class="prodText">An energy-efficient broadband router that also serves as a plug-and-play device to mine and store cryptocurrency.</p>
-					</div>
-				</div>
-				<!-- Blueprint -->
-				<div class="prod prodBlueprint">
-					<div class="prodIconWrap">
-						<img src="dist/img/icon-blueprint.jpg">
-					</div>
-					<div class="prodTextWrap">
-						<h4 class="prodTitle">Subutai Blueprints</h4>
-						<p class="prodText">Templates that reduce system administration overheads and simplifies the process of application deployment. Deploy anything from Blockchain-in-a-Box to a Wordpress site or a Minecraft server with a few easy clicks.</p>
-					</div>
-				</div>
-				<!-- KHAN -->
-				<div class="prod prodKhan">
-					<div class="prodIconWrap">
-						<img src="dist/img/icon-khan.jpg">
-					</div>
-					<div class="prodTextWrap">
-						<h4 class="prodTitle">KHAN</h4>
-						<p class="prodText">The public token we created to ensure quality on the Subutai platform. Users may leverage KHAN to garner stakes in the Subutai network, which then may be used to exchange for GoodWill. We’re going to be launching an ICO in the near future, so be sure to stay tuned!</p>
-					</div>
-				</div>
-			</div>
-		</section>
 		
 		<section id="conclusionSection">
 			<div class="conclusionWrap">
@@ -249,6 +301,8 @@
 			</div>
 		</footer>
 	</div> <!-- mainContainer -->
+
+	<script src="dist/js/app-landing.js"></script>
 
 </body>
 
