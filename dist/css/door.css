@@ -246,7 +246,7 @@ a {
 	.doorTitle {
 		font-size: 2.25rem;
 		width: 745px;
-		padding-top: 40px;
+		padding-top: 10px;
 		}
 	.step {
 		width: 180px;
@@ -260,10 +260,10 @@ a {
 		box-sizing: border-box;
 		font-weight: 300;
 	}
-	#optionsWrap {
+	/*#optionsWrap {
 		padding: 40px 0 20px 0;
 		margin-bottom: 40px;
-	}
+	}*/
 }
 @media (min-width: 1200px) {
 	#contentContainer {
@@ -271,7 +271,7 @@ a {
 	}
 	#stepsWrap {
 		width: 1100px;
-		padding: 40px 0 20px 0;
+		/*padding: 40px 0 20px 0;*/
 	}
 	.step {
 		width: 250px;
