@@ -33,7 +33,7 @@ a {
 	flex-wrap: wrap;
 }
 #opacity-bg {
-	position: fixed;
+	/*position: fixed;*/
 	width: 100%;
 	height: auto;
 	color: #FFF;
@@ -171,11 +171,14 @@ a {
 	color: #222;
 }
 #footer-door .logoWrap {
-	margin-bottom: 40px;
+	/*margin-bottom: 40px;*/
 	width: 130px;
+	display: block;
 }
 #footer-door .logoImg {
+	display: block;
 	width: 100%;
+	/*height: auto;*/
 }
 @media (min-width: 414px) {
 
@@ -185,6 +188,7 @@ a {
 		background: url(../img/bg-door-01.jpg) center center no-repeat;
 		height: 100vh;
 		background-size: cover;
+		position: fixed;
 	}
 	.doorTitle {
 		font-size: 2rem;
