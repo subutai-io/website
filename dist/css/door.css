@@ -185,7 +185,7 @@ a {
 }
 @media (min-width: 768px) {
 	#opacity-bg {
-		background: url(../img/bg-door-01.jpg) center center no-repeat;
+		background: url(../img/bg-door-02.jpg) center center no-repeat;
 		height: 100vh;
 		background-size: cover;
 		position: fixed;
