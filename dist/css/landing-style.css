@@ -421,7 +421,7 @@ h1,h2,h3,h4,h5,h6{
 @media (min-width: 768px) {
 	.headerBanner {
 		/*background: url(../img/SubutaiHeroImageV7.jpg) no-repeat center center;*/
-		background: url(../img/SubutaiHeroImage-landing.jpg) no-repeat center center;
+		background: url(../img/SubutaiHeroImageV7.jpg) no-repeat center center;
 		height: 600px;
 	}
 	.topRow {
@@ -440,7 +440,10 @@ h1,h2,h3,h4,h5,h6{
 		order: 1;
 	}
 	.titleBox {
-		padding: 240px 40px 40px 40px;
+		/*padding: 240px 40px 40px 40px;*/
+		background: rgba(0,0,0,.5); 
+		margin-top: 200px;
+		padding: 40px 40px 40px 40px;
 	}
 	.main-subTitle {
 		width: 550px;
