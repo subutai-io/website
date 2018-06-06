@@ -420,7 +420,8 @@ h1,h2,h3,h4,h5,h6{
 /* tablet */
 @media (min-width: 768px) {
 	.headerBanner {
-		background: url(../img/SubutaiHeroImageV7.jpg) no-repeat center center;
+		/*background: url(../img/SubutaiHeroImageV7.jpg) no-repeat center center;*/
+		background: url(../img/SubutaiHeroImage-landing.jpg) no-repeat center center;
 		height: 600px;
 	}
 	.topRow {

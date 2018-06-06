@@ -1,5 +1,6 @@
 
 
+
 * {
 	margin: 0;
 	padding: 0;
@@ -34,10 +35,14 @@ a {
 }
 #opacity-bg {
 	/*position: fixed;*/
+	position: absolute;
+	top: 0;
+	left: -135px;
 	width: 100%;
 	height: auto;
 	color: #FFF;
-	background: url(../img/bg-door-smart.jpg) center center no-repeat;
+	/*background: url(../img/bg-door-smart.jpg) center center no-repeat;*/
+	background: url(../assets/img/bg-door-smart.jpg) center center no-repeat;
 	background-size: cover;
 	-webkit-justify-content: center;
 	justify-content: center;
@@ -185,10 +190,18 @@ a {
 }
 @media (min-width: 768px) {
 	#opacity-bg {
+		/*background: url(../assets/img/bg-door-02.jpg) center center no-repeat;*/
 		background: url(../img/bg-door-02.jpg) center center no-repeat;
-		height: 100vh;
+		/*height: 100vh;*/
+		/*position: absolute;
+		top: 0;
+		left: -135px;*/
+
+
+
+		height: 100%;
 		background-size: cover;
-		position: fixed;
+		/*position: fixed;*/
 	}
 	.doorTitle {
 		font-size: 2rem;
@@ -266,8 +279,15 @@ a {
 	}*/
 }
 @media (min-width: 1200px) {
+	#opacity-bg {
+		position: absolute;
+		top: 0;
+		left: -135px;
+	}
+
 	#contentContainer {
 		max-width: 1440px;
+		padding: 20px 20px 310px 20px;
 	}
 	#stepsWrap {
 		width: 1100px;
