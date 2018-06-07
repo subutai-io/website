@@ -40,7 +40,41 @@ p{
 a{
 	color: #078DD0;
 }
-
+.disableLink {
+	cursor: not-allowed;
+}
+#winLink, #macLink, #linuxLink,
+#winLink2, #macLink2, #linuxLink2 {
+	display: none;
+}
+#winLink.systemLink,
+#winLink2.systemLink {
+	display: inline-block;
+}
+#macLink.systemLink,
+#macLink2.systemLink {
+	display: inline-block;
+}
+#linuxLink.systemLink,
+#linuxLink2.systemLink {
+	display: inline-block;
+}
+#linksP2P-win.systemLink,
+#linksP2P-mac.systemLink,
+#linksP2P-linux.systemLink {
+	display: block;
+}
+/*#linksP2P-win, #linksP2P-mac, #linksP2P-linux {
+	display: none;
+}
+.tab-content .systemLink {
+	display: block;
+}*/
+/*.tab-content #linksP2P-win.systemLink,
+.tab-content #linksP2P-mac.systemLink,
+.tab-content #linksP2P-linux.systemLink {
+	display: block;
+}*/
 /* reset margin row */
 .resetMargin {
 	margin: 0;
