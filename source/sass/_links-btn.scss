@@ -1,0 +1,22 @@
+/* Links and buttons style - Subutai website (https://github.com/subutai-io/website)
+   06/06/2018 
+*/
+
+
+
+/* getting started */
+.tabs_download .btnWrap {
+	margin-bottom: 20px;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+}
+.tabs_download .btnWrap li {
+	width: 30%;
+}
+.sysButton {
+	border: 1px solid #EEE;
+}

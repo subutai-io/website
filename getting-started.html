@@ -209,7 +209,7 @@
                             <li>Connect IoT devices to cloud applications securely</li>
                         </ul>
                     </ul>
-                    <p>For either case, download and set up the recommended <a href="#">companion software</a></p>
+                    <p>For either case, download and set up the recommended <a href="#companion">companion software</a></p>
                     <!-- <ul>
                         <li>The <a href="#E2E">E2E (end-to-end encryption) plugin</a> for your browser helps manage your PGP keys needed to ensure secure communications with Subutai components;</li>
                         <li>The <a href="#P2P">P2P (peer-to-peer) daemon</a> will allow your own PC to swarm up with the Subutai P2P cloud;</li>
@@ -281,10 +281,10 @@
                             <i>* Subutai recommends that you use Debian Stretch 9.X to create your Peers.</i>
                         </li>
                         <ul>
-                            <li><a href"#">Quick install</a> (about 5 minutes)<br>
+                            <li><a href="https://docs.subutai.io/Products/PeerOS/03_Run_PeerOS_with_Vagrant.html">Quick install</a> (about 5 minutes)<br>
                                 <i>* Requirements: any system that uses Vagrant and 100 GB disk space</i>
                             </li>
-                            <li><a href="#">Advanced admin install</a> (about 20 minutes)<br>
+                            <li><a href="https://docs.subutai.io/Products/PeerOS/02_Install_PeerOS.html">Advanced admin install</a> (about 20 minutes)<br>
                                 <i>* Requirements:  Debian system (preferably, freshly installed) and 100 GB disk space</i>
                             </li>
                         </ul>
@@ -318,7 +318,7 @@
 
             <div class="row resetMargin">
                 <div class="col-lg-12">
-                    <h1>Companion software</h1><br/>
+                    <h1 class="anchorTitle" id="companion">Companion software</h1><br/>
                     <p>Optimize your use of the Subutai Bazaar or PeerOS by installing the following companion software:</p>
                     <!-- E2E plugin -->
                     <h2 style="color: #078DD0;"><a class="anchorSubtitle" id="E2E">E2E plugin</a></h2>
@@ -331,21 +331,21 @@
                     <p>The Subutai Control Center is available in Windows, Mac, and Linux versions.</p>
 
                     <div class="tabs_download">
-                        <ul class="nav nav-pills nav-justified">
+                        <ul class="nav nav-pills nav-justified btnWrap">
                             <li id="windows">
-                                <a data-toggle="tab" href="#home">
+                                <a data-toggle="tab" href="#home" class="sysButton">
                                     <i class="fab fa-windows mr" aria-hidden="true"></i>
                                     <span>Windows</span>
                                 </a>
                             </li>
                             <li id="macos">
-                                <a data-toggle="tab" href="#menu1">
+                                <a data-toggle="tab" href="#menu1" class="sysButton">
                                     <i class="fab fa-apple mr" aria-hidden="true"></i>
                                     <span>Mac OS</span>
                                 </a>
                             </li>
                             <li id="linux">
-                                <a data-toggle="tab" href="#menu2">
+                                <a data-toggle="tab" href="#menu2" class="sysButton">
                                     <i class="fab fa-linux mr" aria-hidden="true"></i>
                                     <span>Linux</span>
                                 </a>
@@ -354,6 +354,8 @@
 
                         <ul>
                             <li>You may also download the MSI package for Windows (64-bit): <a href="https://cdn.subutai.io:8338/kurjun/rest/raw/get?name=subutai-control-center.msi" onclick="ga('send', 'event', 'downloads', 'subutai-control-center.msi', 'Win');" class="download">Subutai Control Center x64 7.x</a></li>
+                            <i>Check the <b>For Developers</b> box to display and download the developer and master versions.<br>
+                            You may access and test these versions accordingly.</i>
                             <div class="tab-content">
                             <!-- WIndows -->
                                 <div id="home" class="tab-pane fade">
@@ -445,7 +447,7 @@
                                             <th></th>
                                         </tr>
 
-                                        <tr>
+                                        <!-- <tr>
                                             <td>
                                                 <a href="https://cdn.subutai.io:8338/kurjun/rest/raw/get?name=subutai-p2p.pkg" onclick="ga('send', 'event', 'downloads', 'subutai-p2p.pkg', 'Mac');"
                                                    class="download">
@@ -454,7 +456,7 @@
                                             </td>
                                             <td></td>
                                             <td></td>
-                                        </tr>
+                                        </tr> -->
                                         <tr>
                                             <td class="for_dev">
                                                 <a href="https://cdn.subutai.io:8338/kurjun/rest/raw/get?name=subutai-p2p-dev.pkg" onclick="ga('send', 'event', 'downloads', 'subutai-p2p-dev.pkg', 'Mac');"
@@ -475,7 +477,7 @@
                                             <td></td>
                                             <td></td>
                                         </tr>
-                                        <tr>
+                                        <!-- <tr>
                                             <td>
                                                 <a href="https://cdn.subutai.io:8338/kurjun/rest/raw/get?name=subutai-control-center.pkg" onclick="ga('send', 'event', 'downloads', 'subutai-control-center.pkg', 'Mac');"
                                                    class="download">
@@ -484,7 +486,7 @@
                                             </td>
                                             <td></td>
                                             <td></td>
-                                        </tr>
+                                        </tr> -->
                                         <tr>
                                             <td class="for_dev">
                                                 <a href="https://cdn.subutai.io:8338/kurjun/rest/raw/get?name=subutai-control-center-dev.pkg" onclick="ga('send', 'event', 'downloads', 'subutai-control-center.pkg', 'Mac');"
@@ -506,8 +508,8 @@
                                             <td></td>
                                         </tr>
                                     </table>
-                                    <h3>Install the <strong>Subutai P2P Daemon and Control Center</strong></h3>
-                                        <p>Install the dmg packages for MacOS.</p>
+                                    <!-- <h3>Install the <strong>Subutai P2P Daemon and Control Center</strong></h3>
+                                        <p>Install the dmg packages for MacOS.</p> -->
                                 </div>
                                 <!-- Linux -->
                                 <div id="menu2" class="tab-pane fade">
@@ -597,7 +599,7 @@
                                     </pre>
                                 </div>
                             </div>
-                            <p><i>Check the For Developers box to display and download the developer and master versions. You may access and test these versions accordingly.</i></p>
+                            <!-- <p><i>Check the For Developers box to display and download the developer and master versions. You may access and test these versions accordingly.</i></p> -->
                             <li>Install by following the instructions on the installation wizard.</li>
                             <li>Learn more: <a href="https://docs.subutai.io/Products/PeerOS/06_How_to_use_Control_Center_and_P2P.html">How to use the Control Center</a></li>
                         </ul>
@@ -606,7 +608,7 @@
                         <p>Enable your system to join the swarm and access private cloud environments. The P2P daemon is required to access your Peers, containers, and Environments via SSH or Remote Desktop from the Bazaar, Subutai Management Console, or Control Center.</p>
                         <p>The P2P daemon is available in Windows, Mac, and Linux versions.</p>
                         <ul>
-                            <li>Download the MSI package for Windows (64-bit): Subutai P2P x64 7.x</li>
+                            <li>Download the MSI package for Windows (64-bit): <b>Subutai P2P x64 7.x</b></li>
                             <li>Install by following the instructions on the installation wizard.</li>
                         </ul><br/>
                     </div> <!-- tabs_download -->
