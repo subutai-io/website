@@ -1,0 +1,53 @@
+/* Titles styles - Subutai website (https://github.com/subutai-io/website)
+   05/28/2018 
+*/
+
+
+
+/* title */
+.titleSectionWrap {
+	width: 100%;
+	height: 100px;
+	padding: 0 15px;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-align-items: center;
+	align-items: center;
+}
+.titleSectionWrap h2 {
+	font-size: 2.8rem;
+	font-weight: 700;
+	margin: 0;
+}
+.iconTitleWrapper {
+	width: 60px;
+	padding-left: 15px;
+	padding-top: 80px;
+}
+.iconTitleSection {
+	width: 100%;
+	height: auto;
+}
+
+@media (min-width: 480px) {
+
+}
+
+@media (min-width: 768px) {
+	/* getting started page */
+	.titleSectionWrap h2 {
+		font-size: 3.55rem;
+	}
+	.iconTitleWrapper {
+		width: 85px;
+	}
+}
+
+@media (min-width: 992px) {
+	
+}
+
+@media (min-width: 1200px) {
+}

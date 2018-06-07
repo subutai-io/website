@@ -1,0 +1,33 @@
+/* Topbar styles - Subutai website (https://github.com/subutai-io/website)
+   05/28/2018 
+*/
+
+
+
+.title-level3 {
+	font-size: 1.8rem;
+}
+.quickLinks {
+	padding-top: 40px;
+}
+
+@media (min-width: 480px) {
+
+}
+
+@media (min-width: 768px) {
+	header {
+		.navbar {
+			border-radius: 0;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.navbar {
+		position: fixed;
+	}
+}
+
+@media (min-width: 1200px) {
+}
