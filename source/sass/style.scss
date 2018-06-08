@@ -40,14 +40,11 @@ p{
 a{
 	color: #078DD0;
 }
-.disableLink {
-	cursor: not-allowed;
-}
 #winLink, #macLink, #linuxLink,
 #winLink2, #macLink2, #linuxLink2 {
 	display: none;
 }
-#winLink.systemLink,
+/*#winLink.systemLink,
 #winLink2.systemLink {
 	display: inline-block;
 }
@@ -62,6 +59,23 @@ a{
 #linksP2P-win.systemLink,
 #linksP2P-mac.systemLink,
 #linksP2P-linux.systemLink {
+	display: block;
+}*/
+#winLink,
+#winLink2 {
+	display: inline-block;
+}
+#macLink,
+#macLink2 {
+	display: inline-block;
+}
+#linuxLink,
+#linuxLink2 {
+	display: inline-block;
+}
+#linksP2P-win,
+#linksP2P-mac,
+#linksP2P-linux {
 	display: block;
 }
 /*#linksP2P-win, #linksP2P-mac, #linksP2P-linux {

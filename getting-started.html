@@ -333,19 +333,22 @@
                     <div class="tabs_download">
                         <ul class="nav nav-pills nav-justified btnWrap">
                             <li id="windows">
-                                <a data-toggle="tab" href="#home" class="sysButton">
+                                <a data-toggle="tab" href="#" class="sysButton btnWin">
+                                <!-- <a data-toggle="tab" href="#home" class="sysButton btnWin"> -->
                                     <i class="fab fa-windows mr" aria-hidden="true"></i>
                                     <span>Windows</span>
                                 </a>
                             </li>
                             <li id="macos">
-                                <a data-toggle="tab" href="#menu1" class="sysButton">
+                                <a data-toggle="tab" href="#" class="sysButton btnMac">
+                                <!-- <a data-toggle="tab" href="#menu1" class="sysButton btnMac"> -->
                                     <i class="fab fa-apple mr" aria-hidden="true"></i>
                                     <span>Mac OS</span>
                                 </a>
                             </li>
                             <li id="linux">
-                                <a data-toggle="tab" href="#menu2" class="sysButton">
+                                <a data-toggle="tab" href="#" class="sysButton btnLinux">
+                                <!-- <a data-toggle="tab" href="#menu2" class="sysButton btnLinux"> -->
                                     <i class="fab fa-linux mr" aria-hidden="true"></i>
                                     <span>Linux</span>
                                 </a>
@@ -353,76 +356,26 @@
                         </ul>
 
                         <ul>
-                            <li class="sysDownload">You may also download the MSI package 
+                            <li class="sysDownload">You may
                                 <!-- link windows -->
-                                <span id="winLink">for Windows (64-bit): <a href="https://cdn.subutai.io:8338/kurjun/rest/raw/get?name=subutai-control-center.msi" onclick="ga('send', 'event', 'downloads', 'subutai-control-center.msi', 'Win');" class="download">Subutai Control Center x64 7.x</a></span>
+                                <span id="winLink">the MSI package for Windows (64-bit): <a href="https://cdn.subutai.io:8338/kurjun/rest/raw/get?name=subutai-control-center.msi" onclick="ga('send', 'event', 'downloads', 'subutai-control-center.msi', 'Win');" class="download">Subutai Control Center x64 7.x</a></span>
                                 <!-- link mac -->
-                                <span id="macLink">for Mac (64-bit): <a href="https://cdn.subutai.io:8338/kurjun/rest/raw/get?name=subutai-control-center.pkg" onclick="ga('send', 'event', 'downloads', 'subutai-control-center.pkg', 'Mac');" class="download">Subutai Control Center x64 7.x</a></span>
+                                <span id="macLink">the MSI package for Mac (64-bit): <a href="https://cdn.subutai.io:8338/kurjun/rest/raw/get?name=subutai-control-center.pkg" onclick="ga('send', 'event', 'downloads', 'subutai-control-center.pkg', 'Mac');" class="download">Subutai Control Center x64 7.x</a></span>
                                 <!-- link linux -->
-                                <span id="linuxLink">for Linux (64-bit): <a href="https://cdn.subutai.io:8338/kurjun/rest/raw/get?name=subutai-control-center.deb" onclick="ga('send', 'event', 'downloads', 'subutai-control-center.deb', 'Linux');" class="download">Subutai Control Center x64 7.x</a></span>
+                                <span id="linuxLink">download the DEB package for Linux (64-bit): <a href="https://cdn.subutai.io:8338/kurjun/rest/raw/get?name=subutai-control-center.deb" onclick="ga('send', 'event', 'downloads', 'subutai-control-center.deb', 'Linux');" class="download">Subutai Control Center x64 7.x</a></span>
 
                             </li>
                             <i>Check the <b>For Developers</b> box to display and download the developer and master versions.<br>
                             You may access and test these versions accordingly.</i>
                             <div class="tab-content">
                                 <!-- WIndows -->
-                                <div id="home" class="tab-pane fade">
+                                <!-- <div id="home" class="tab-pane fade"> -->
+                                <div id="home" class="tab-pane">
                                     <br>
                                     <input id="fcheckwin" type="checkbox" value=""> For Developers
                                     <br>
                                     <br>
                                     <table cellspacing="5" cellpadding="10" width="100%">
-                                        <!-- <tr>
-                                            <th>Files</th>
-                                            <th></th>
-                                            <th></th>
-                                        </tr> -->
-
-                                        <!-- esse link vai na frase p2p aberto windows -->
-                                        <!-- <tr>
-                                            <td>
-                                                <a href="https://cdn.subutai.io:8338/kurjun/rest/raw/get?name=subutai-p2p.msi" onclick="ga('send', 'event', 'downloads', 'subutai-p2p.msi', 'Win');"
-                                                   class="download">
-                                                    <strong>Subutai P2P x64 7.x</strong>
-                                                </a>
-                                            </td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr> -->
-
-                                        <!-- mover para p2p - windows -->
-                                        <!-- <tr>
-                                            <td class="for_dev_win">
-                                                <a href="https://cdn.subutai.io:8338/kurjun/rest/raw/get?name=subutai-p2p-dev.msi" onclick="ga('send', 'event', 'downloads', 'subutai-p2p-dev.msi', 'Win');"
-                                                   class="download">
-                                                    <strong>Subutai P2P x64 Dev </strong>
-                                                </a>
-                                            </td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="for_dev_win">
-                                                <a href="https://cdn.subutai.io:8338/kurjun/rest/raw/get?name=subutai-p2p-master.msi" onclick="ga('send', 'event', 'downloads', 'subutai-p2p-master.msi', 'Win');"
-                                                   class="download">
-                                                    <strong>Subutai P2P x64 Master </strong>
-                                                </a>
-                                            </td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr> -->
-
-                                        <!-- control center aberto - windows -->
-                                        <!-- <tr>
-                                            <td>
-                                                <a href="https://cdn.subutai.io:8338/kurjun/rest/raw/get?name=subutai-control-center.msi" onclick="ga('send', 'event', 'downloads', 'subutai-control-center.msi', 'Win');"
-                                                   class="download">
-                                                    <strong>Subutai Control Center x64 7.x</strong>
-                                                </a>
-                                            </td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr> -->
                                         <tr>
                                             <td class="for_dev_win">
                                                 <a href="https://cdn.subutai.io:8338/kurjun/rest/raw/get?name=subutai-control-center-dev.msi" onclick="ga('send', 'event', 'downloads', 'subutai-control-center-dev.msi', 'Win');"
@@ -444,63 +397,18 @@
                                             <td></td>
                                         </tr>
                                     </table>
-                                    <h3>Install the <strong>Subutai P2P Daemon and Control Center</strong></h3>
-                                        <p>Install the MSI packages for Windows. Double click after downloading and follow instructions.</p>
+                                    <!-- <h3>Install the <strong>Subutai P2P Daemon and Control Center</strong></h3>
+                                        <p>Install the MSI packages for Windows. Double click after downloading and follow instructions.</p> -->
                                 </div>
                                 <!-- MAC OS -->
-                                <div id="menu1" class="tab-pane fade">
+                                <!-- <div id="menu1" class="tab-pane fade"> -->
+                                <div id="menu1" class="tab-pane">
                                     <br>
                                     <input id="fcheck" type="checkbox" value=""> For Developers
                                     <br>
                                     <br>
 
                                     <table cellspacing="5" cellpadding="10" width="100%">
-
-                                        <!-- <tr>
-                                            <td>
-                                                <a href="https://cdn.subutai.io:8338/kurjun/rest/raw/get?name=subutai-p2p.pkg" onclick="ga('send', 'event', 'downloads', 'subutai-p2p.pkg', 'Mac');"
-                                                   class="download">
-                                                    <strong>Subutai P2P for Mac OS X ( 64 bit ) 7.x</strong>
-                                                </a>
-                                            </td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr> -->
-
-                                        <!-- MOVER PARA SESSÃO P2P -->
-                                        <!-- <tr>
-                                            <td class="for_dev">
-                                                <a href="https://cdn.subutai.io:8338/kurjun/rest/raw/get?name=subutai-p2p-dev.pkg" onclick="ga('send', 'event', 'downloads', 'subutai-p2p-dev.pkg', 'Mac');"
-                                                   class="download">
-                                                    <strong>Subutai P2P for Mac OS X Dev </strong>
-                                                </a>
-                                            </td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="for_dev">
-                                                <a href="https://cdn.subutai.io:8338/kurjun/rest/raw/get?name=subutai-p2p-master.pkg" onclick="ga('send', 'event', 'downloads', 'subutai-p2p-dev.pkg', 'Mac');"
-                                                   class="download">
-                                                    <strong>Subutai P2P for Mac OS X Master </strong>
-                                                </a>
-                                            </td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr> -->
-                                        <!-- FIM - MOVER PARA SESSÃO P2P -->
-
-                                        <!-- control center aberto - mac -->
-                                        <!-- <tr>
-                                            <td>
-                                                <a href="https://cdn.subutai.io:8338/kurjun/rest/raw/get?name=subutai-control-center.pkg" onclick="ga('send', 'event', 'downloads', 'subutai-control-center.pkg', 'Mac');"
-                                                   class="download">
-                                                    <strong>Subutai Control Center x64 7.x</strong>
-                                                </a>
-                                            </td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr> -->
                                         <tr>
                                             <td class="for_dev">
                                                 <a href="https://cdn.subutai.io:8338/kurjun/rest/raw/get?name=subutai-control-center-dev.pkg" onclick="ga('send', 'event', 'downloads', 'subutai-control-center.pkg', 'Mac');"
@@ -526,67 +434,23 @@
                                         <p>Install the dmg packages for MacOS.</p> -->
                                 </div>
                                 <!-- Linux -->
-                                <div id="menu2" class="tab-pane fade">
+                                <!-- <div id="menu2" class="tab-pane fade"> -->
+                                <div id="menu2" class="tab-pane">
                                     <br>
                                     <input id="fchecklin" type="checkbox" value=""> For Developers
                                     <br>
                                     <br>
                                     <table cellspacing="5" cellpadding="10" width="100%">
-                                        <tr>
+                                        <!-- <tr>
                                             <th>Files</th>
                                             <th></th>
                                             <th></th>
-                                        </tr>
-                                        <!-- esse link foi pra frase p2p aberto windows -->
-                                        <!-- <tr>
-                                            <td>
-                                                <a href="https://cdn.subutai.io:8338/kurjun/rest/raw/get?name=subutai-p2p.deb" onclick="ga('send', 'event', 'downloads', 'subutai-p2p.deb', 'Linux');"
-                                                   class="download">
-                                                    <strong>Subutai P2P for Linux ( 64 bit ) 6.x</strong>
-                                                </a>
-                                            </td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr> -->
-
-                                        <!-- mover para p2p linux -->
-                                        <!-- <tr>
-                                            <td class="for_dev_lin">
-                                                <a href="https://cdn.subutai.io:8338/kurjun/rest/raw/get?name=subutai-p2p-dev.deb" onclick="ga('send', 'event', 'downloads', 'subutai-p2p.deb', 'Linux');"
-                                                   class="download">
-                                                    <strong>Subutai P2P for Linux Dev</strong>
-                                                </a>
-                                            </td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="for_dev_lin">
-                                                <a href="https://cdn.subutai.io:8338/kurjun/rest/raw/get?name=subutai-p2p-master.deb" onclick="ga('send', 'event', 'downloads', 'subutai-p2p-master.deb', 'Linux');"
-                                                   class="download">
-                                                    <strong>Subutai P2P for Linux Master</strong>
-                                                </a>
-                                            </td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr> -->
-
-                                        <!-- frase control center - linux -->
-                                        <!-- <tr>
-                                            <td>
-                                                <a href="https://cdn.subutai.io:8338/kurjun/rest/raw/get?name=subutai-control-center.deb" onclick="ga('send', 'event', 'downloads', 'subutai-control-center.deb', 'Linux');"
-                                                   class="download">
-                                                    <strong>Subutai Control Center x64 6.x</strong>
-                                                </a>
-                                            </td>
-                                            <td></td>
-                                            <td></td>
                                         </tr> -->
                                         <tr>
                                             <td class="for_dev_lin">
                                                 <a href="https://cdn.subutai.io:8338/kurjun/rest/raw/get?name=subutai-control-center-dev.deb" onclick="ga('send', 'event', 'downloads', 'subutai-control-center-dev.deb', 'Linux');"
                                                    class="download">
-                                                    <strong>Subutai Control Center x64 Dev</strong>
+                                                    <strong>Subutai Control Center x64 Dev LINUX</strong>
                                                 </a>
                                             </td>
                                             <td></td>
@@ -596,14 +460,14 @@
                                             <td class="for_dev_lin">
                                                 <a href="https://cdn.subutai.io:8338/kurjun/rest/raw/get?name=subutai-control-center-master.deb" onclick="ga('send', 'event', 'downloads', 'subutai-control-center-master.deb', 'Linux');"
                                                    class="download">
-                                                    <strong>Subutai Control Center x64 Master</strong>
+                                                    <strong>Subutai Control Center x64 Master LINUX</strong>
                                                 </a>
                                             </td>
                                             <td></td>
                                             <td></td>
                                         </tr>
                                     </table>
-                                    <h3>Install the<strong>Subutai P2P Daemon</strong></h3>
+                                    <!-- <h3>Install the<strong>Subutai P2P Daemon</strong></h3>
                                     <p>We only support Debian based systems right now. Use apt install:</p>
                                     <pre class="brush:html">
                                         sudo apt install /path/to/subutai-p2p.deb
@@ -615,7 +479,7 @@
                                     <p>We only support Debian based systems right now. Use apt install:</p>
                                     <pre class="brush:html">
                                         sudo apt install /path/to/subutai-control-center.deb
-                                    </pre>
+                                    </pre> -->
                                 </div>
                             </div>
                             <!-- <p><i>Check the For Developers box to display and download the developer and master versions. You may access and test these versions accordingly.</i></p> -->
@@ -647,7 +511,7 @@
                             <!-- <input id="fcheck" type="checkbox" value=""> For Developers -->
                             <div class="tab-content">
                                 <!-- WINDOWS -->
-                                <div id="linksP2P-win" class="tab-pane fade">
+                                <div id="linksP2P-win" class="tab-pane">
                                     <br>
                                     <input id="fcheckwin" type="checkbox" value=""> For Developers
                                     <br>
@@ -669,7 +533,7 @@
                                     </ul>
                                 </div>
                                 <!-- MAC OS -->
-                                <div id="linksP2P-mac" class="tab-pane fade">
+                                <div id="linksP2P-mac" class="tab-pane">
                                     <br>
                                     <input id="fcheck" type="checkbox" value=""> For Developers
                                     <br>
@@ -701,7 +565,7 @@
                                         <p>Install the dmg packages for MacOS.</p> -->
                                 </div>
                                 <!-- Linux -->
-                                <div id="linksP2P-linux" class="tab-pane fade">
+                                <div id="linksP2P-linux" class="tab-pane">
                                     <br>
                                     <input id="fchecklin" type="checkbox" value=""> For Developers
                                     <br>
@@ -893,25 +757,52 @@
         if (navigator.userAgent.indexOf('FreeBSD') != -1) os = 4;
         // alert(navigator.userAgent);
         switch (os) {
-            case 1:
+            // case 1:
+            //     $("#windows").addClass("active");
+            //     $("#home").addClass("in active");
+            //     $("#linksP2P-win").addClass("in active");
+            //     $("#winLink").addClass("systemLink");
+            //     $("#winLink2").addClass("systemLink");
+            //     break;
+            // case 2:
+            //     $("#linux").addClass("active");
+            //     $("#menu2").addClass("in active");
+            //     $("#linksP2P-linux").addClass("in active");
+            //     $("#linuxLink").addClass("systemLink");
+            //     $("#linuxLink2").addClass("systemLink");
+            //     break;
+            // case 3:
+            //     $("#macos").addClass("active");
+            //     $("#menu1").addClass("in active");
+            //     $("#linksP2P-mac").addClass("in active");
+            //     $("#macLink").addClass("systemLink");
+            //     $("#macLink2").addClass("systemLink");
+            //     break;
+            // case 4:
+            //     break;
+            // default:
+            //     break;
+
+
+                case 1:
                 $("#windows").addClass("active");
                 $("#home").addClass("in active");
                 $("#linksP2P-win").addClass("in active");
-                $("#winLink").addClass("systemLink");
+                $("#winLink").show();
                 $("#winLink2").addClass("systemLink");
                 break;
             case 2:
                 $("#linux").addClass("active");
                 $("#menu2").addClass("in active");
                 $("#linksP2P-linux").addClass("in active");
-                $("#linuxLink").addClass("systemLink");
+                $("#linuxLink").show();
                 $("#linuxLink2").addClass("systemLink");
                 break;
             case 3:
                 $("#macos").addClass("active");
                 $("#menu1").addClass("in active");
                 $("#linksP2P-mac").addClass("in active");
-                $("#macLink").addClass("systemLink");
+                $("#macLink").show();
                 $("#macLink2").addClass("systemLink");
                 break;
             case 4:
@@ -921,20 +812,64 @@
         }
     </script>
 
-    <!-- <script>
-
-        $("#linksP2P-mac, #linksP2P-win, #linksP2P-linux").hide();
-
-        $("p2pMacCheck").click(function() {
-            if($(this).is(":checked")) {
+    <script>
+        $(document).ready(function() {
+            // windows
+            $(".btnWin").click(function() {
+                $("#windows").addClass("active");
+                $("#macos").removeClass("active");
+                $("#linux").removeClass("active");
+                $("#home").show();
+                $("#menu1").hide();
+                $("#menu2").hide();
+                $("#linksP2P-win").show();
+                $("#linksP2P-mac").hide();
+                $("#linksP2P-linux").hide();
+                $("#winLink").show();
+                $("#macLink").hide();
+                $("#linuxLink").hide();
+                $("#winLink2").show();
+                $("#macLink2").hide();
+                $("#linuxLink2").hide();
+            })
+            // mac
+            $(".btnMac").click(function() {
+                $("#windows").removeClass("active");
+                $("#macos").addClass("active");
+                $("#linux").removeCalss("active");
+                $("#home").hide();
+                $("#menu1").show();
+                $("#menu2").hide();
+                $("#linksP2P-win").hide();
                 $("#linksP2P-mac").show();
-            } else {
-                $("#linksP2P-mac").hode();
-            }
-        });
-
-
-    </script> -->
+                $("#linksP2P-linux").hide();
+                $("#winLink").hide();
+                $("#macLink").show();
+                $("#linuxLink").hide();
+                $("#winLink2").hide();
+                $("#macLink2").show();
+                $("#linuxLink2").hide();
+            })
+            // linux
+            $(".btnLinux").click(function() {
+                $("#windows").removeClass("active");
+                $("#macos").removeClass("active");
+                $("#linux").addClass("active");
+                $("#home").hide();
+                $("#menu1").hide();
+                $("#menu2").show();
+                $("#linksP2P-win").hide();
+                $("#linksP2P-mac").hide();
+                $("#linksP2P-linux").show();
+                $("#winLink").hide();
+                $("#macLink").hide();
+                $("#linuxLink").show();
+                $("#winLink2").hide();
+                $("#macLink2").hide();
+                $("#linuxLink2").show();
+            })
+        })
+    </script>
 
 <script src="./js/main.js"></script>
 <script src="./js/syntax-highlighter/scripts/shCore.js"></script>
