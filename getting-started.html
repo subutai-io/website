@@ -831,12 +831,12 @@
                 $("#winLink2").show();
                 $("#macLink2").hide();
                 $("#linuxLink2").hide();
-            })
+            });
             // mac
             $(".btnMac").click(function() {
                 $("#windows").removeClass("active");
                 $("#macos").addClass("active");
-                $("#linux").removeCalss("active");
+                $("#linux").removeClass("active");
                 $("#home").hide();
                 $("#menu1").show();
                 $("#menu2").hide();
@@ -849,7 +849,7 @@
                 $("#winLink2").hide();
                 $("#macLink2").show();
                 $("#linuxLink2").hide();
-            })
+            });
             // linux
             $(".btnLinux").click(function() {
                 $("#windows").removeClass("active");
@@ -867,8 +867,8 @@
                 $("#winLink2").hide();
                 $("#macLink2").hide();
                 $("#linuxLink2").show();
-            })
-        })
+            });
+        });
     </script>
 
 <script src="./js/main.js"></script>
