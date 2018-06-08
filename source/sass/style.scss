@@ -44,24 +44,24 @@ a{
 #winLink2, #macLink2, #linuxLink2 {
 	display: none;
 }
-/*#winLink.systemLink,
-#winLink2.systemLink {
+#winLink.active,
+#winLink2.active {
 	display: inline-block;
 }
-#macLink.systemLink,
-#macLink2.systemLink {
+#macLink.active,
+#macLink2.active {
 	display: inline-block;
 }
-#linuxLink.systemLink,
-#linuxLink2.systemLink {
+#linuxLink.active,
+#linuxLink2.active {
 	display: inline-block;
 }
-#linksP2P-win.systemLink,
+/*#linksP2P-win.systemLink,
 #linksP2P-mac.systemLink,
 #linksP2P-linux.systemLink {
 	display: block;
 }*/
-#winLink,
+/*#winLink,
 #winLink2 {
 	display: inline-block;
 }
@@ -72,11 +72,16 @@ a{
 #linuxLink,
 #linuxLink2 {
 	display: inline-block;
-}
-#linksP2P-win,
+}*/
+/*#linksP2P-win,
 #linksP2P-mac,
 #linksP2P-linux {
 	display: block;
+}*/
+.devP2P_win,
+.devP2P_mac,
+.devP2P_linux {
+	display: none;
 }
 /*#linksP2P-win, #linksP2P-mac, #linksP2P-linux {
 	display: none;
