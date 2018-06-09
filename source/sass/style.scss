@@ -106,7 +106,7 @@ a{
 }
 
 /* CSS HEADER*/
-// .jumbotron {
+/*// .jumbotron {
 // 	-webkit-background-size: cover;
 // 	-moz-background-size: cover;
 // 	-o-background-size: cover;
@@ -115,7 +115,7 @@ a{
 // 	background-position: top center;
 // 	width: 100%;
 // 	height: 100%;
-// }
+// }*/
 @media only screen and (max-width : 768px){
 	.jumbotron-internal{
 		background-position-y: 55px;
@@ -128,10 +128,10 @@ a{
 		padding-bottom: 40%!important;
 	}
 }
-// .cont-header{
+/*// .cont-header{
 // 	padding-top: 10%;
 // 	padding-bottom: 10%;
-// }
+// }*/
 
 .jumbotron .cont-header img{
 	-webkit-background-size: cover;
@@ -388,8 +388,8 @@ footer .cont-footer .icons-cont-footer i{
 /* Getting Started - page */
 .anchorTitle {
 	display: block;
-	padding-top: 80px;
-	margin-top: -80px;
+	padding-top: 70px;
+	margin-top: 0;
 	z-index: -1;
 }
 .anchorSubtitle {
