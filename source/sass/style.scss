@@ -40,7 +40,60 @@ p{
 a{
 	color: #078DD0;
 }
-
+#winLink, #macLink, #linuxLink,
+#winLink2, #macLink2, #linuxLink2 {
+	display: none;
+}
+#winLink.active,
+#winLink2.active {
+	display: inline-block;
+}
+#macLink.active,
+#macLink2.active {
+	display: inline-block;
+}
+#linuxLink.active,
+#linuxLink2.active {
+	display: inline-block;
+}
+/*#linksP2P-win.systemLink,
+#linksP2P-mac.systemLink,
+#linksP2P-linux.systemLink {
+	display: block;
+}*/
+/*#winLink,
+#winLink2 {
+	display: inline-block;
+}
+#macLink,
+#macLink2 {
+	display: inline-block;
+}
+#linuxLink,
+#linuxLink2 {
+	display: inline-block;
+}*/
+/*#linksP2P-win,
+#linksP2P-mac,
+#linksP2P-linux {
+	display: block;
+}*/
+.devP2P_win,
+.devP2P_mac,
+.devP2P_linux {
+	display: none;
+}
+/*#linksP2P-win, #linksP2P-mac, #linksP2P-linux {
+	display: none;
+}
+.tab-content .systemLink {
+	display: block;
+}*/
+/*.tab-content #linksP2P-win.systemLink,
+.tab-content #linksP2P-mac.systemLink,
+.tab-content #linksP2P-linux.systemLink {
+	display: block;
+}*/
 /* reset margin row */
 .resetMargin {
 	margin: 0;
