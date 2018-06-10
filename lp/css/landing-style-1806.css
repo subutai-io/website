@@ -392,9 +392,13 @@ h1,h2,h3,h4,h5,h6{
 .quoteTxt {
 	text-align: left;
 }
+.quoteTxt i {
+	font-family: 'EB Garamond', serif;
+	font-size: 1.3rem;
+}
 .quoteTxt p {
-	text-align: right;
-	padding-top: 20px;
+	text-align: left;
+	padding-top: 15px;
 }
 /* iPhone 6, 7, 8 */
 @media (min-width: 375px) {
@@ -631,10 +635,10 @@ h1,h2,h3,h4,h5,h6{
 		/*width: 100%;*/
 		padding: 20px 60px 60px 60px;
 	}
-	.quoteTxt p {
-		text-align: right;
-		padding-top: 20px;
-	}
+	/*.quoteTxt p {*/
+		/*text-align: right;*/
+		/*padding-top: 20px;*/
+	/*}*/
 }
 
 @media (min-width: 992px) {
@@ -819,7 +823,7 @@ h1,h2,h3,h4,h5,h6{
 		width: 60%;
 		margin: 0 auto;
 	}
-	.quoteTxt p {
+	/*.quoteTxt p {
 		text-align: left;
-	}
+	}*/
 }
