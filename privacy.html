@@ -15,20 +15,24 @@
 	</script>
 
 	<!-- Facebook Pixel Code -->
-    <script>
-    !function(f,b,e,v,n,t,s)
-        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-        n.queue=[];t=b.createElement(e);t.async=!0;
-        t.src=v;s=b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t,s)}(window,document,'script',
-        'https://connect.facebook.net/en_US/fbevents.js');
-         fbq('init', '2123612024332329'); 
-        fbq('track', 'PageView');
-    </script>
-    
-    <!-- End Facebook Pixel Code -->
+	<script>
+		!function(f,b,e,v,n,t,s)
+		{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+		n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+		if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+		n.queue=[];t=b.createElement(e);t.async=!0;
+		t.src=v;s=b.getElementsByTagName(e)[0];
+		s.parentNode.insertBefore(t,s)}(window,document,'script',
+		'https://connect.facebook.net/en_US/fbevents.js');
+		fbq('init', '129106771214783'); 
+		fbq('track', 'PageView');
+	</script>
+	<noscript>
+		<img height="1" width="1" 
+		src="https://www.facebook.com/tr?id=129106771214783&ev=PageView
+		https://www.facebook.com/tr?id=129106771214783&ev=PageView&noscript=1"/>
+	</noscript>
+	<!-- End Facebook Pixel Code -->
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
@@ -43,10 +47,11 @@
 	
 	<!-- CSS Links-->
 	<link rel="stylesheet" type="text/css" href="./css/bootstrap/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="./css/styles.css">
+	<!-- <link rel="stylesheet" type="text/css" href="./css/styles.css"> -->
+	<link rel="stylesheet" type="text/css" href="dist/css/style.css">
 	<link rel="stylesheet" type="text/css" href="./css/goodwill-styles.css">
 	<link rel="stylesheet" type="text/css" href="./css/bootstrap/bootstrap-social.css">
-	<link href="https://fonts.googleapis.com/css?family=Maven+Pro" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,500,700,900" rel="stylesheet">
 	<link href="./fontawesome/fontawesome-all.css" rel="stylesheet">
 	<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
 	<!-- JS Links-->
@@ -68,7 +73,7 @@
 </head>
 
 <body>
-	<nav class="navbar navbar-inverse navbar-fixed-top">
+	<!-- <nav class="navbar navbar-inverse navbar-fixed-top">
 		<div class="container-fluid">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -135,10 +140,102 @@
 				</ul>
 			</div>
 		</div>
-	</nav>
+	</nav> -->
+	<header id="header">
+
+		<nav class="navbar navbar-expand-xl navbar-light bg-light">
+			<div id="topbar">
+				<a class="navbar-brand" href="index.html"><img alt="logo" src="img/logo.png" width="160"></a>
+				
+				<div class="collapse navbar-collapse" id="navbarNavDropdown">
+					<ul class="navbar-nav scrollable-menu">
+						<li class="nav-item">
+							<a class="nav-link" href="./p2p-cloud-platform.html">P2P Cloud Platform</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="goodwill.html">GoodWill</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Products <span class="caret"></span></a>
+							<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+								<li><a class="dropdown-item" href="./peer-os.html">PeerOs</a></li>
+								<li><a class="dropdown-item" href="./bazaar.html">Bazaar</a></li>
+								<li><a class="dropdown-item" href="./router.html">Blockchain Router</a></li>
+								<li><a class="dropdown-item" href="media/technical-paper_executive_summary.pdf" target="_blank">KHAN</a></li>
+								<li><a class="dropdown-item" href="https://github.com/subutai-blueprints" target="_blank">Blueprints</a></li>
+								<li><a class="dropdown-item" href="https://docs.subutai.io/Blueprints/blockchain-in-a-box/Introduction.html">Blockchain-in-the-box</a></li>
+							</ul>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ideation <span class="caret"></span></a>
+							<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+								<li><a class="dropdown-item" href="p2p-cloud.html">P2P Cloud</a></li>
+								<li><a class="dropdown-item" href="https://subutai.blog/" target="_blank">Blog</a></li>
+								<li><a class="dropdown-item" href="manifesto.html">Manifesto</a></li>
+								<li><a class="dropdown-item" href="Hardware-Security-Framework.pdf" target="_blank">Hardware Security</a></li>
+								<li><a class="dropdown-item" href="tribute.html">Tribute</a></li>
+								<li><a class="dropdown-item" href="https://www.youtube.com/watch?v=zJkmIAyhvFM&feature=youtu.be" target="_blank">Presentation</a></li>
+							</ul>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">How To <span class="caret"></span></a>
+							<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+								<li><a class="dropdown-item" href="./getting-started.html">Get Started</a></li>
+								<li><a class="dropdown-item" href="./getting-involved.html">Get Involved</a></li>
+								<li><a class="dropdown-item" href="https://bazaar.subutai.io/login" target="_blank">Share Resources</a></li>
+								<li><a class="dropdown-item" href="./goodwill.html">Earn Goodwill</a></li>
+								<li><a class="dropdown-item" href="https://subutai.blog/" target="_blank">Read our Blog</a></li>
+								<li><a class="dropdown-item" href="https://docs.subutai.io/Contributing.html">How to Contribute</a></li>
+								<li><a class="dropdown-item" href="https://slack.subutai.io/" target="_blank">Get Help</a></li>
+								<li><a class="dropdown-item" href="https://docs.subutai.io/">Read the Docs</a></li>
+							</ul>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Resources <span class="caret"></span></a>
+							<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+								<li><a class="dropdown-item" href="https://docs.subutai.io/Glossary.html">Glossary</a></li>
+								<li><a class="dropdown-item" href="https://docs.subutai.io">Documentation</a></li>
+								<li><a class="dropdown-item" href="https://github.com/subutai-io" target="_blank">GitHub</a></li>
+								<li><a class="dropdown-item" href="https://docs.subutai.io/FAQ.html">FAQ</a></li>
+								<li><a class="dropdown-item" href="getting-involved.html">Get Involved</a></li>
+								<li><a class="dropdown-item" href="https://docs.subutai.io/Subutai_Use_Cases.html">Use Cases</a></li>
+								<li><a class="dropdown-item" href="https://bazaar.subutai.io">Bazaar</a></li>
+							</ul>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Community <span class="caret"></span></a>
+							<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+								<li><a class="dropdown-item" tabindex="-1" href="getting-involved.html">Get Involved</a></li>
+								<li><a class="dropdown-item" tabindex="-1" href="https://slack.subutai.io/" target="_blank">Slack</a></li>
+								<li><a class="dropdown-item" tabindex="-1" href="https://t.me/SubutaiKHAN" target="_blank">Telegram</a></li>
+								<li><a class="dropdown-item" tabindex="-1" href="https://twitter.com/Subutai_KHAN" target="_blank">Twitter</a></li>
+								<li><a class="dropdown-item" tabindex="-1" href="https://www.reddit.com/r/SubutaiKHAN/" target="_blank">Reddit</a></li>
+								<li><a class="dropdown-item" tabindex="-1" href=" https://www.facebook.com/SubutaiKHAN/" target="_blank">Facebook</a></li>
+								<li><a class="dropdown-item" tabindex="-1" href="https://www.linkedin.com/company/subutai-social-cloud/" target="_blank">Linkedin</a></li>
+								<li><a class="dropdown-item" tabindex="-1" href="https://www.youtube.com/channel/UCISHGzbHjYWYFfu7krnYLkA" target="_blank">Youtube</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarNavDropdown" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+		</nav>
+
+		<div class="jumbotron" id="topBanner">
+			<div id="bannerText">
+				<h1 class="pageTitle">OptDyn and Subutai Privacy Policy</h1>
+			</div>
+		</div>
+	</header>
 
 	<!-- Header section -->
-	<div class="header-internal">	
+	<!-- <div class="header-internal">	
 		<div class="jumbotron-internal">
 			<div class="cont-header">
 				<div class="row">
@@ -150,7 +247,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 
 	<section>
 		<div class="text1">
