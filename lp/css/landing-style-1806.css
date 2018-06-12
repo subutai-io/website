@@ -13,8 +13,11 @@ body {
 	background: #000;
 	font-size: 16px;
 }
-p {
+p, a {
 	font-family: 'Roboto', sans-serif;
+}
+a {
+	text-decoration: none;
 }
 /* banner */
 .headerBanner {
@@ -109,7 +112,7 @@ h1,h2,h3,h4,h5,h6{
 	-webkit-justify-content: center;
 	justify-content: center;
 }
-#ctaButton {
+.ctaButton {
 	width: 100%;
 	height: 50px;
 	cursor: pointer;
@@ -121,8 +124,20 @@ h1,h2,h3,h4,h5,h6{
 	border: 1px solid #1CA42F;
 	padding: 10px 0;
 	border-radius: 4px;
+	box-sizing: border-box;
+	text-align: center;
+	font-family: system-ui;
+	line-height: normal;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-align-items: center;
+	align-items: center;
 }
-#ctaButton:hover {
+.ctaButton:hover {
 	background: linear-gradient(#178B28, #157E24);
 	border: 1px solid #157E24;
 }
@@ -425,7 +440,7 @@ h1,h2,h3,h4,h5,h6{
 	.main-subTitle {
 		margin: 20px 0 30px 0;
 	}
-	#ctaButton {
+	.ctaButton {
 		width: 270px;
 	}
 	#globeSection {
