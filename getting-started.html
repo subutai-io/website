@@ -322,7 +322,7 @@
 
             <div class="row resetMargin">
                 <div class="col-lg-12">
-                    <h1 class="anchorTitle" id="companion">Companion software</h1><br/>
+                    <h2 class="anchorTitle" id="companion">Companion software</h2><br/>
                     <p>Optimize your use of the Subutai Bazaar or PeerOS by installing the following companion software:</p>
                     <!-- E2E plugin -->
                     <!-- <h2 style="color: #078DD0;"><a class="anchorSubtitle" id="E2E">E2E plugin</a></h2> -->
@@ -614,12 +614,12 @@
 
 
         <!-- Section 4 - Community -->
-    <section style="margin-top: 50px;">
+    <section id="communitySection">
         <div class="cont-part5">
             <div class="container">
 
-                <div class="text-center">
-                    <h1>Community</h1>
+                <div class="titleSectionWrap">
+                    <h2>Community</h2>
                     <h3 style="color: #fff;">We’d love to hear from you!</h3>
                 </div><br><br>
                 <div class="icons-cont-part5">
@@ -748,35 +748,7 @@
         if (navigator.userAgent.indexOf('Linux') != -1) os = 2;
         if (navigator.userAgent.indexOf('Mac') != -1) os = 3;
         if (navigator.userAgent.indexOf('FreeBSD') != -1) os = 4;
-        // alert(navigator.userAgent);
         switch (os) {
-            // case 1:
-            //     $("#windows").addClass("active");
-            //     $("#home").addClass("in active");
-            //     $("#linksP2P-win").addClass("in active");
-            //     $("#winLink").addClass("systemLink");
-            //     $("#winLink2").addClass("systemLink");
-            //     break;
-            // case 2:
-            //     $("#linux").addClass("active");
-            //     $("#menu2").addClass("in active");
-            //     $("#linksP2P-linux").addClass("in active");
-            //     $("#linuxLink").addClass("systemLink");
-            //     $("#linuxLink2").addClass("systemLink");
-            //     break;
-            // case 3:
-            //     $("#macos").addClass("active");
-            //     $("#menu1").addClass("in active");
-            //     $("#linksP2P-mac").addClass("in active");
-            //     $("#macLink").addClass("systemLink");
-            //     $("#macLink2").addClass("systemLink");
-            //     break;
-            // case 4:
-            //     break;
-            // default:
-            //     break;
-
-
                 case 1:
                 $("#windows").addClass("active");
                 $("#home").addClass("in active");
@@ -818,12 +790,6 @@
                 $("#linksP2P-win").show();
                 $("#linksP2P-mac").hide();
                 $("#linksP2P-linux").hide();
-                // $("#winLink").show();
-                // $("#macLink").hide();
-                // $("#linuxLink").hide();
-                // $("#winLink2").show();
-                // $("#macLink2").hide();
-                // $("#linuxLink2").hide();
                 $("#winLink").addClass("active");
                 $("#macLink").removeClass("active");
                 $("#linuxLink").removeClass("active");
@@ -842,12 +808,6 @@
                 $("#linksP2P-win").hide();
                 $("#linksP2P-mac").show();
                 $("#linksP2P-linux").hide();
-                // $("#winLink").hide();
-                // $("#macLink").show();
-                // $("#linuxLink").hide();
-                // $("#winLink2").hide();
-                // $("#macLink2").show();
-                // $("#linuxLink2").hide();
                 $("#winLink").removeClass("active");
                 $("#macLink").addClass("active");
                 $("#linuxLink").removeClass("active");
@@ -866,12 +826,6 @@
                 $("#linksP2P-win").hide();
                 $("#linksP2P-mac").hide();
                 $("#linksP2P-linux").show();
-                // $("#winLink").hide();
-                // $("#macLink").hide();
-                // $("#linuxLink").show();
-                // $("#winLink2").hide();
-                // $("#macLink2").hide();
-                // $("#linuxLink2").show();
                 $("#winLink").removeClass("active");
                 $("#macLink").removeClass("active");
                 $("#linuxLink").addClass("active");
