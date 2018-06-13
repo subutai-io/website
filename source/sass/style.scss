@@ -105,6 +105,12 @@ a{
 	border-color: #000;
 }
 
+/* P2P cloud platform */
+.cloudPlatform-content .panel-primary {
+	height: 240px;
+	border: 1px solid #EEE;
+}
+
 /* CSS HEADER*/
 /*// .jumbotron {
 // 	-webkit-background-size: cover;
@@ -179,10 +185,10 @@ section .cont-part3{
 	padding-bottom: 5%;
 }
 
-section .cont-part3 h2{
+/*section .cont-part3 h2{
 	color: #fff;
 	font-weight: 700;
-}
+}*/
 
 
 @media only screen and (max-width : 480px){

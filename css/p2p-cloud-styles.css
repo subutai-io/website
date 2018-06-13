@@ -49,7 +49,7 @@ section .internal-panel .panel-heading{
 section .internal-panel .panel-heading h2{
 	font-size: 23px;
 	font-weight: 700;
-	padding-top: 8px;
+	/*padding-top: 8px;*/
 }
 
 section .internal-panel .panel-body p{
