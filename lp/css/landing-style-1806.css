@@ -13,8 +13,11 @@ body {
 	background: #000;
 	font-size: 16px;
 }
-p {
+p, a {
 	font-family: 'Roboto', sans-serif;
+}
+a {
+	text-decoration: none;
 }
 /* banner */
 .headerBanner {
@@ -109,7 +112,7 @@ h1,h2,h3,h4,h5,h6{
 	-webkit-justify-content: center;
 	justify-content: center;
 }
-#ctaButton {
+.ctaButton {
 	width: 100%;
 	height: 50px;
 	cursor: pointer;
@@ -121,8 +124,20 @@ h1,h2,h3,h4,h5,h6{
 	border: 1px solid #1CA42F;
 	padding: 10px 0;
 	border-radius: 4px;
+	box-sizing: border-box;
+	text-align: center;
+	font-family: system-ui;
+	line-height: normal;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-align-items: center;
+	align-items: center;
 }
-#ctaButton:hover {
+.ctaButton:hover {
 	background: linear-gradient(#178B28, #157E24);
 	border: 1px solid #157E24;
 }
@@ -351,30 +366,54 @@ h1,h2,h3,h4,h5,h6{
 	flex-direction: column;
 }
 .problemRow {
-	padding-top: 100px;
+	/*padding-top: 100px;*/
+	padding-top: 75px;
 	width: 100%;
 	display: -webkit-flex;
 	display: flex;
 }
 .solutionRow {
-	padding-bottom: 100px;
+	padding-bottom: 40px;
 	width: 100%;
 	display: -webkit-flex;
 	display: flex;
 	-webkit-justify-content: flex-end;
 	justify-content: flex-end;
 }
-.problemRow h4 {
-	font-size: 1.75rem;
+.focusRow {
+	width: 100%;
+	padding-bottom: 80px;
+	display: -webkit-flex;
+	display: flex;
 }
+/*.problemRow h4 {
+	font-size: 1.75rem;
+}*/
 .solutionRow h4 {
 	width: 100%;
-	margin-top: 100px;
+	margin-top: 40px;
 }
-.problemRow h4, .solutionRow h4 {
+.problemRow h4, .solutionRow h4, .focusRow h4 {
 	color: #FFFFFF;
 	font-size: 1.2rem;
 	font-weight: 400;
+}
+.quoteTxt {
+	width: 100%;
+	padding-top: 20px;
+	padding-bottom: 60px;
+	color: #A1A1A1;
+}
+.quoteTxt {
+	text-align: left;
+}
+.quoteTxt i {
+	font-family: 'EB Garamond', serif;
+	font-size: 1.3rem;
+}
+.quoteTxt p {
+	text-align: left;
+	padding-top: 15px;
 }
 /* iPhone 6, 7, 8 */
 @media (min-width: 375px) {
@@ -401,22 +440,26 @@ h1,h2,h3,h4,h5,h6{
 	.main-subTitle {
 		margin: 20px 0 30px 0;
 	}
-	#ctaButton {
+	.ctaButton {
 		width: 270px;
 	}
 	#globeSection {
 		background-position: center 60px;
 	}
-	.problemRow, .solutionRow {
+	.problemRow, .solutionRow, .focusRow {
 		-webkit-justify-content: center;
 		justify-content: center;
 	}
-	.problemRow h4, .solutionRow h4 {
+	.problemRow h4, .solutionRow h4, .focusRow h4 {
 		max-width: 300px;
+	}
+	.solutionRow {
+		padding-bottom: 20px;
 	}
 	.solutionRow h4 {
 		width: 100%;
-		margin-top: 110px;
+		/*margin-top: 110px;*/
+		margin-top: 20px;
 	}
 }
 /* tablet */
@@ -505,7 +548,7 @@ h1,h2,h3,h4,h5,h6{
 	}
 	.textWrap {
 		padding: 0;
-		height: 530px;
+		height: 580px;
 		-webkit-flex-wrap: nowrap;
 		flex-wrap: nowrap;
 	}
@@ -515,21 +558,28 @@ h1,h2,h3,h4,h5,h6{
 		-webkit-justify-content: flex-end;
 		justify-content: flex-end;
 	}
-	.problemRow h4 {
+	.problemRow h4, .focusRow h4 {
 		max-width: 100%;
 	}
 	.solutionRow {
-		padding: 80px 0;
+		padding: 40px 0;
 		width: 60%;
 		-webkit-justify-content: flex-end;
 		justify-content: flex-end;
+	}
+	.focusRow {
+		padding-top: 40px;
+		padding-bottom: 0;
+		width: 60%;
+		-webkit-justify-content: flex-end;
+		justify-content: flex-end;	
 	}
 	.solutionRow h4 {
 		width: 100%;
 		margin-top: 0;
 		max-width: 360px;
 	}
-	.problemRow h4, .solutionRow h4 {
+	.problemRow h4, .solutionRow h4, .focusRow h4 {
 		color: #333;
 		font-size: 1.25rem;
 	}
@@ -596,6 +646,14 @@ h1,h2,h3,h4,h5,h6{
 		box-sizing: border-box;
 		order: 2;
 	}
+	.quoteTxt {
+		/*width: 100%;*/
+		padding: 20px 60px 60px 60px;
+	}
+	/*.quoteTxt p {*/
+		/*text-align: right;*/
+		/*padding-top: 20px;*/
+	/*}*/
 }
 
 @media (min-width: 992px) {
@@ -624,21 +682,28 @@ h1,h2,h3,h4,h5,h6{
 		padding-right: 0;
 	}
 	#globeSection {
-		background: url(../img/globe-nobg.png) no-repeat 40px 30px;
+		background: url(../img/globe-nobg.png) no-repeat 40px 50px;
 		background-size: 43%;
 		background-color: #FFF;
+		padding: 60px;
 	}
-	.problemRow, .solutionRow {
+	.textWrap {
+		height: 530px;
+	}
+	.problemRow, .solutionRow, .focusRow {
 		width: 45%;
 	}
 	.problemRow {
-		padding: 45px 0;
+		padding: 0 0 20px 0;
 	}
 	.solutionRow {
 		padding: 30px 0;
 	}
-	.solutionRow h4 {
+	.solutionRow h4, .focusRow h4 {
 		max-width: 100%;
+	}
+	.focusRow {
+		padding-top: 20px;
 	}
 	#prodWrap {
 		padding-top: 0;
@@ -693,17 +758,21 @@ h1,h2,h3,h4,h5,h6{
 		height: auto;
 	}
 	.problemRow {
-		padding: 60px 0px 40px 0;
+		padding: 60px 0px 20px 0;
 		width: 60%;
 	}
+	.focusRow {
+		padding-top: 0;
+		padding-bottom: 60px;
+	}
 	.solutionRow {
-		padding: 0 0 100px 0;
+		padding: 0 0 20px 0;
 		width: 50%;
 	}
 	.solutionRow h4 {
 		max-width: 100%;
 	}
-	.problemRow h4, .solutionRow h4 {
+	.problemRow h4, .solutionRow h4, .focusRow h4 {
 		font-size: 1.5rem;
 	}
 	#prodWrap {
@@ -765,4 +834,11 @@ h1,h2,h3,h4,h5,h6{
 	#landingFooter .socialWrap {
 		padding-right: 100px;
 	}
+	.quoteTxt {
+		width: 60%;
+		margin: 0 auto;
+	}
+	/*.quoteTxt p {
+		text-align: left;
+	}*/
 }
