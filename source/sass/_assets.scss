@@ -3,6 +3,61 @@
 */
 
 
+/* featured home - video and router 3D image */
+#featured {
+	/*background: #FAFAFA; */
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-justify-content: center;
+	justify-content: center;
+
+	.row {
+		width: 1170px;
+		padding: 0 20px;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-wrap: wrap;
+		flex-wrap: wrap;
+		-webkit-justify-content: space-between;
+		justify-content: space-between;
+
+		.videoSection, .routerImg-wrapper {
+			width: 100%;
+		}
+		.routerImg-wrapper {
+			display: -webkit-flex;
+			display: flex;
+			-webkit-flex-wrap: wrap;
+			flex-wrap: wrap;
+		}
+		.routerImg-wrapper {
+			padding: 0; 
+			-webkit-justify-content: flex-end;
+			justify-content: flex-end;
+		}
+		.videoSection {
+			position: relative;
+			padding: 0;
+
+			.videoWrap {
+				overflow: hidden;
+				/*padding-bottom: 56.25%;*/
+				padding-bottom: 53%;
+				position: relative;
+				height: 0;
+			}
+			.videoWrap iframe {
+				left: 0;
+				top: 0;
+				height: 100%;
+				width: 100%;
+				position: absolute;
+			}
+		}
+	}
+}
 
 #presentVideo {
 	padding: 0;
@@ -11,12 +66,15 @@
 /* router image */
 #routerGif-img {
 	width: 100%;
+	padding-top: 40px;
 	display: -webkit-flex;
 	display: flex;
+	-webkit-justify-content: center;
+	justify-content: center;
 	-webkit-align-items: center;
 	align-items: center;
-	-webkit-flex-direction: column;
-	flex-direction: column;
+	/*-webkit-flex-direction: column;
+	flex-direction: column;*/
 
 	img {
 		width: 80%;
@@ -25,18 +83,40 @@
 }
 
 @media (min-width: 768px) {
+	
+}
+
+@media (min-width: 992px) {
+	#featured {
+		.row {
+			padding: 0;
+			.videoSection, .routerImg-wrapper {
+				width: 50%;
+			}
+			.videoSection {
+				padding-left: 20px;
+			}
+			#routerGif-img {
+				padding-top: 0;
+				padding-right: 20px;
+				-webkit-justify-content: flex-end;
+				justify-content: flex-end;
+			}
+		}
+	}
+}
+
+@media (min-width: 1200px) {
 	#routerGif-img {
 		img {
 			width: 500px;
 			height: 500px;
 		}
 	}
-}
-
-@media (min-width: 992px) {
-
-}
-
-@media (min-width: 1200px) {
-
+	.videoSection {
+		padding-left: 0;
+	}
+	#routerGif-img {
+		padding-right: 0;
+	}
 }
