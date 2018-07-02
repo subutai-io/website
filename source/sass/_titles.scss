@@ -53,6 +53,10 @@
 	width: 100%;
 	height: auto;
 }
+.videoSection h3 {
+	color: #13315A;
+	font-weight: 700;
+}
 /* P2P Cloud Platform */
 .panel-primary .panel-heading {
 	height: 70px;
@@ -105,6 +109,10 @@ section .cont-part3 h2, section .cont-part3 h3 {
 }
 
 @media (min-width: 992px) {
+	.videoSection h3 {
+		margin-top: 30px;
+		margin-bottom: 40px;
+	}
 	
 }
 

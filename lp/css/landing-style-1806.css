@@ -97,11 +97,17 @@ h1,h2,h3,h4,h5,h6{
 	font-size: 1.5rem;
 	font-weight: 500;
 }
+.russianVersion .mainTitle {
+	font-size: 1.75rem;
+}
 .main-subTitle {
 	width: 500px;
 	font-weight: 400;
 	font-size: 1rem;
 	margin: 10px 0 20px 0;
+}
+.russianVersion .main-subTitle {
+	font-size: 1rem;
 }
 .ctaWrap {
 	width: 100%;
@@ -141,6 +147,11 @@ h1,h2,h3,h4,h5,h6{
 	background: linear-gradient(#178B28, #157E24);
 	border: 1px solid #157E24;
 }
+.russianVersion .ctaButton {
+	font-size: 1rem;
+	width: auto;
+	padding: 10px 20px;
+}
 /* SOCIAL PROOF */
 #socialProof,
 .socialProof-wrapper,
@@ -158,6 +169,9 @@ h1,h2,h3,h4,h5,h6{
 	width: 100%;
 	padding: 40px 20px 0 20px;
 	text-align: center;
+}
+.russianVersion #socialProof {
+	padding-top: 0;
 }
 #socialProof h5 {
 	width: 100%;
@@ -227,7 +241,9 @@ h1,h2,h3,h4,h5,h6{
 	padding: 10px 0 30px 0;
 	line-height: 1.25rem;
 }
-
+.russianVersion .description {
+	font-size: .8rem;
+}
 #prodWrap {
 	padding: 0 20px 40px 20px;
 	box-sizing: border-box;
@@ -398,6 +414,11 @@ h1,h2,h3,h4,h5,h6{
 	font-size: 1.2rem;
 	font-weight: 400;
 }
+.russianVersion .problemRow h4,
+.russianVersion .solutionRow h4,
+.russianVersion .focusRow h4 {
+	font-size: 1rem;
+}
 .quoteTxt {
 	width: 100%;
 	padding-top: 20px;
@@ -410,6 +431,9 @@ h1,h2,h3,h4,h5,h6{
 .quoteTxt i {
 	font-family: 'EB Garamond', serif;
 	font-size: 1.3rem;
+}
+.russianVersion .quoteTxt i {
+	font-size: 1.15rem;
 }
 .quoteTxt p {
 	text-align: left;
@@ -424,6 +448,13 @@ h1,h2,h3,h4,h5,h6{
 		background-position: -100px 60px;
 		background-size: 550px;
 		background-color: #FFF;
+	}
+	/* RUSSIAN VERSION */
+	.russianVersion .mainTitle {
+		font-size: 1.5rem;
+	}
+	.russianVersion .problemRow {
+		padding-top: 110px;
 	}
 }
 /* iPhone 6, 7, 8 plus */
@@ -460,6 +491,10 @@ h1,h2,h3,h4,h5,h6{
 		width: 100%;
 		/*margin-top: 110px;*/
 		margin-top: 20px;
+	}
+	/* RUSSIAN VERSION */
+	.russianVersion .problemRow {
+		padding-top: 90px;
 	}
 }
 /* tablet */
@@ -650,10 +685,21 @@ h1,h2,h3,h4,h5,h6{
 		/*width: 100%;*/
 		padding: 20px 60px 60px 60px;
 	}
-	/*.quoteTxt p {*/
-		/*text-align: right;*/
-		/*padding-top: 20px;*/
-	/*}*/
+	/* RUSSIAN VERSION */
+	.russianVersion .mainTitle {
+		font-size: 1.75rem;
+	}
+	.russianVersion .problemRow {
+		padding-top: 20px;
+	}
+	.russianVersion .problemRow h4,
+	.russianVersion .solutionRow h4,
+	.russianVersion .focusRow h4 {
+		font-size: 1.15rem;
+	}
+	.russianVersion .description {
+		font-size: 1rem;
+	}
 }
 
 @media (min-width: 992px) {
@@ -803,21 +849,6 @@ h1,h2,h3,h4,h5,h6{
 	.prod.prodKhan {
 		width: 58%;
 	}
-	/*.prodPeerOS .prodTextWrap {
-		width: 520px;
-	}*/
-	/*.prodBazaar .prodTextWrap {
-		width: 500px;
-	}
-	.prodRouter .prodTextWrap {
-		width: 510px;
-	}
-	.prodBlueprint .prodTextWrap {
-		width: 540px;
-	}
-	.prodKhan .prodTextWrap {
-		width: 600px;
-	}*/
 	.conclusionWrap {
 		padding: 80px 100px 80px 100px;
 	}
@@ -838,7 +869,27 @@ h1,h2,h3,h4,h5,h6{
 		width: 60%;
 		margin: 0 auto;
 	}
-	/*.quoteTxt p {
-		text-align: left;
-	}*/
+	/* RUSSIAN VERSION */
+	.russianVersion .mainTitle {
+		font-size: 2.75rem;
+	}
+	.russianVersion .main-subTitle {
+		font-size: 1.25rem;
+	}
+	.russianVersion .ctaButton {
+		font-size: 1.25rem;
+		width: auto;
+		padding: 10px 20px;
+	}
+	.russianVersion .problemRow h4,
+	.russianVersion .solutionRow h4,
+	.russianVersion .focusRow h4 {
+		font-size: 1.15rem;
+	}
+	.russianVersion .description {
+		font-size: .9rem;
+	}
+	.russianVersion .quoteTxt i {
+		font-size: 1.25rem;
+	}
 }
