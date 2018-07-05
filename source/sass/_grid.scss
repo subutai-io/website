@@ -1,0 +1,32 @@
+/* Grid style - Subutai website (https://github.com/subutai-io/website)
+   07/05/2018 
+*/
+
+// .sectionWrap, .downloadSection {
+//     padding: 40px 0;
+// }
+.downloadSection {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+@media (min-width: 480px) {
+
+}
+
+@media (min-width: 768px) {
+    .sectionWrap, .downloadSection {
+        padding: 40px 0;
+    }
+}
+
+@media (min-width: 992px) {
+
+}
+
+@media (min-width: 1200px) {
+}
