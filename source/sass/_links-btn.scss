@@ -2,11 +2,48 @@
    06/06/2018 
 */
 
-
+// social buttons
+.socialButtonWrap {
+	// margin: 20px 0 60px 0;
+	margin: 0 auto;
+	padding: 20px 0 60px 0;
+	width: 100%;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-justify-content: center;
+	justify-content: center;
+}
+.socialButtonWrap {
+	a {
+		display: inline-block;
+		width: 130px;
+		color: #FFF;
+		position: relative;
+		padding-left: 44px;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		padding: 6px 12px 6px 44px;
+		margin: 0 5px;
+	}
+}
 // newsletter button
+#mc_embed_signup{
+	width: 100%;
+	background: #04192b;
+	clear:left;
+	font:15px 'Maven Pro', sans-serif;;
+	color: #fff;
+	#mc_embed_signup_scroll {
+		width: 100%;
+	}
+}
 .newsletterField {
 	text-align: center;
 	width: 100%;
+	// width: 440px;
 	background-color: #fff;
 	border: 1px solid #078dd0;
 	color: #333;
@@ -15,9 +52,11 @@
 }
 .newsletterButton {
 	width: 100%;
+	// width: 250px;
 	text-align: center;
 	background-color: #000;
-	margin-top: 4%;
+	// margin-top: 4%;
+	margin-top: 20px;
 	height: 43px;
 	border: none;
 }
@@ -56,20 +95,32 @@
 }
 
 @media (min-width: 480px) {
-
-}
-
-@media (min-width: 768px) {
 	.downloadButtons {
-		width: 630px;
-		// display: -webkit-flex;
-		// display: flex;
-		// -webkit-flex-wrap: wrap;
-		// flex-wrap: wrap;
+		width: 100%;
+		// margin-bottom: 40px;
 		-webkit-justify-content: space-between;
 		justify-content: space-between;
 		a {
 			// box-sizing: border-box;
+			width: 47.5%;
+			// margin: 5px 0;
+		}
+	}
+	#mc_embed_signup {
+		width: 440px;
+	}
+}
+
+@media (min-width: 768px) {
+	.newsletterField {
+		text-align: left;
+		padding-left: 18px;
+	}
+	.downloadButtons {
+		width: 630px;
+		-webkit-justify-content: space-between;
+		justify-content: space-between;
+		a {
 			width: 200px;
 			margin: 5px;
 		}

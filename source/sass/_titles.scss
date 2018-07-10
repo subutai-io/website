@@ -17,7 +17,7 @@
 	align-items: center;
 }
 #khanSection .titleSectionWrap, #communitySection .titleSectionWrap {
-	padding-top: 40px;
+	// padding-top: 40px;
 	height: auto;
 	width: 100%;
 	-webkit-justify-content: center;
@@ -28,7 +28,7 @@
 }
 #communitySection .titleSectionWrap, #communitySection .titleSectionWrap h3 {
 	color: #FFF;
-	font-size: 1.8rem;
+	font-size: 2.5rem;
 }
 #communitySection .titleSectionWrap h2 {
 	font-weight: 500;
@@ -136,8 +136,16 @@ section .cont-part3 h2, section .cont-part3 h3 {
 		margin-top: 30px;
 		margin-bottom: 40px;
 	}
-	
+	.downloadSection {
+		.titleSectionWrap {
+			h3 {
+				font-size: 2.2rem;
+				text-align: center;
+			}
+		}
+	}
 }
 
 @media (min-width: 1200px) {
+	
 }
