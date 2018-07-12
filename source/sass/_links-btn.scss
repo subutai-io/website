@@ -57,7 +57,7 @@
 	height: 40px;
 	border-radius: 4px;
 }
-.newsletterButton {
+#mc_embed_signup .newsletterButton {
 	width: 100%;
 	text-align: center;
 	background-color: #000;
@@ -159,7 +159,7 @@
 	.signupWrap {
 		width: 210px;
 	}
-	.newsletterButton {
+	#mc_embed_signup .newsletterButton {
 		margin-top: 0;
 		// margin-left: 20px;
 	}
@@ -189,7 +189,7 @@
 	.socialButtonWrap {
 		width: 100%;
 	}
-	.newsletterButton {
+	#mc_embed_signup .newsletterButton {
 		margin-left: 0;
 	}
 	#mc_embed_signup {
