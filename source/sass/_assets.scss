@@ -89,7 +89,8 @@
 }
 // khan helmet image, on khan.html
 .khanHelmetWrap {
-	-webkit-display: flex;
+	width: 100%;
+	display: -webkit-flex;
 	display: flex;
 	-webkit-flex-wrap: wrap;
 	flex-wrap: wrap;
@@ -102,6 +103,23 @@
 	img {
 		max-width: 100%;
 	}
+}
+// khan section - home
+#khanSection {
+    .container {
+        margin-top: 40px;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-wrap: wrap;
+		flex-wrap: wrap;
+		.khanHelmetWrap {
+			margin-top: 20px;
+			width: 100%;
+			.khanHelmetImg {
+				width: 80%;
+			}
+		}
+    }
 }
 // KHAN page video 
 
@@ -123,7 +141,7 @@
 	flex-direction: column;*/
 
 	img {
-		width: 80%;
+		width: 100%;
 		height: auto;
 	}
 }
@@ -143,6 +161,17 @@
 	.videoContainer {
 		width: 70%;
 	}
+	#khanSection {
+		.container {
+			.khanHelmetWrap {
+				margin-top: 0;
+				width: 40%;
+				.khanHelmetImg {
+					width: 70%;
+				}
+			}
+		}
+	}
 }
 
 @media (min-width: 992px) {
@@ -156,6 +185,7 @@
 				padding-left: 20px;
 			}
 			#routerGif-img {
+				width: 80%;
 				padding-top: 0;
 				padding-right: 20px;
 				-webkit-justify-content: flex-end;
@@ -173,6 +203,9 @@
 				}
 			}
 		}
+	}
+	.khanHelmetWrap {
+		width: 50%;
 	}
 }
 

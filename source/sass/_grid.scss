@@ -2,9 +2,7 @@
    07/05/2018 
 */
 
-// .sectionWrap, .downloadSection {
-//     padding: 40px 0;
-// }
+
 .downloadSection {
     display: -webkit-flex;
     display: flex;
@@ -12,6 +10,23 @@
     flex-wrap: wrap;
     -webkit-justify-content: center;
     justify-content: center;
+}
+#khanSection {
+    .container {
+        .khanHelmetWrap {
+            order: 2;
+        }
+        .khanIntro-Wrap {
+            order: 1;
+        }
+    }
+}
+.khanContent {
+    padding: 0 15px;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
 }
 
 @media (min-width: 480px) {
@@ -21,6 +36,18 @@
 @media (min-width: 768px) {
     .sectionWrap, .downloadSection {
         padding: 40px 0;
+    }
+    #khanSection {
+        .container {
+            .khanHelmetWrap {
+                order: 1;
+            }
+            .khanIntro-Wrap {
+                order: 2;
+                width: 60%;
+                padding-top: 40px;
+            }
+        }
     }
 }
 
