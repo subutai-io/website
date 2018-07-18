@@ -3,6 +3,33 @@
 */
 
 
+
+// home - products section 
+#productsSection {
+    .productsContainer {
+        .productWrap {
+            .productImg {
+				
+				// display: -webkit-flex;
+				// display: flex;
+				// -webkit-flex-wrap: wrap;
+				// flex-wrap: wrap;
+				// -webkit-justify-content: center;
+				// justify-content: center;
+
+                img {
+					width: 100%;
+                }
+            }
+        }
+    }
+}
+.videoContainer {
+	width: 100%;
+}
+// .khanContainer .videoContainer {
+// 	width: 100%;
+// }
 /* featured home - video and router 3D image */
 #featured {
 	/*background: #FAFAFA; */
@@ -41,20 +68,20 @@
 			position: relative;
 			padding: 0;
 
-			.videoWrap {
-				overflow: hidden;
-				/*padding-bottom: 56.25%;*/
-				padding-bottom: 53%;
-				position: relative;
-				height: 0;
-			}
-			.videoWrap iframe {
-				left: 0;
-				top: 0;
-				height: 100%;
-				width: 100%;
-				position: absolute;
-			}
+			// .videoWrap {
+			// 	overflow: hidden;
+			// 	/*padding-bottom: 56.25%;*/
+			// 	padding-bottom: 53%;
+			// 	position: relative;
+			// 	height: 0;
+			// }
+			// .videoWrap iframe {
+			// 	left: 0;
+			// 	top: 0;
+			// 	height: 100%;
+			// 	width: 100%;
+			// 	position: absolute;
+			// }
 		}
 	}
 	.row.secondRow-video {
@@ -68,6 +95,60 @@
 		}
 	}
 }
+.videoContainer {
+	width: 100%;
+	margin: 0 auto;
+	padding: 20px 0;
+}
+.videoWrap {
+	overflow: hidden;
+	/*padding-bottom: 56.25%;*/
+	padding-bottom: 53%;
+	position: relative;
+	height: 0;
+}
+.videoWrap iframe {
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+}
+// khan helmet image, on khan.html
+.khanHelmetWrap {
+	width: 100%;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-justify-content: center;
+	justify-content: center;
+}
+.khanHelmetImg {
+	width: 80%;
+	max-width: 350px;
+	img {
+		max-width: 100%;
+	}
+}
+// khan section - home
+#khanSection {
+    .container {
+        margin-top: 40px;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-wrap: wrap;
+		flex-wrap: wrap;
+		.khanHelmetWrap {
+			margin-top: 20px;
+			width: 100%;
+			.khanHelmetImg {
+				width: 80%;
+			}
+		}
+    }
+}
+// KHAN page video 
 
 #presentVideo {
 	padding: 0;
@@ -87,7 +168,7 @@
 	flex-direction: column;*/
 
 	img {
-		width: 80%;
+		width: 100%;
 		height: auto;
 	}
 }
@@ -104,40 +185,84 @@
 			}
 		}
 	}
-}
-
-@media (min-width: 992px) {
-	#featured {
-		.row {
-			padding: 0;
-			.videoSection, .routerImg-wrapper {
-				width: 50%;
-			}
-			.videoSection {
-				padding-left: 20px;
-			}
-			#routerGif-img {
-				padding-top: 0;
-				padding-right: 20px;
-				-webkit-justify-content: flex-end;
-				justify-content: flex-end;
-			}
-		}
-		.row.secondRow-video {
-			padding: 80px 0 40px 0;
-			.videoSection {
-				width: 30%;
-				padding-left: 0;
-				
-				.videoWrap {
-					width: 100%;
+	.videoContainer {
+		width: 70%;
+	}
+	#khanSection {
+		.container {
+			.khanHelmetWrap {
+				margin-top: 0;
+				width: 40%;
+				.khanHelmetImg {
+					width: 70%;
 				}
 			}
 		}
 	}
 }
 
+@media (min-width: 992px) {
+	// home 
+	.videoContainer {
+		width: 50%;
+	}
+	#featured {
+		.row {
+			padding: 0;
+			.videoSection, .routerImg-wrapper {
+				width: 30%;
+			}
+			.videoSection {
+				padding-left: 20px;
+			}
+			#routerGif-img {
+				width: 100%;
+				padding-top: 0;
+				padding-right: 20px;
+				-webkit-justify-content: flex-end;
+				justify-content: flex-end;
+
+				img {
+					width: 100%;
+					height: 100%;
+				}
+			}
+			// .routerImg-wrapper {
+
+			// }
+		}
+		.row.secondRow-video {
+			padding: 80px 0 40px 0;
+			.videoSection {
+				box-sizing: border-box;
+				padding: 0 20px;
+				width: 35%;
+				padding-left: 0;
+				
+				.videoWrap {
+					width: 100%;
+				}
+			}
+			.videoSection:first-child {
+				padding-left: 0;
+			}
+			.videoSection:last-child {
+				padding-right: 0;
+			}
+		}
+	}
+	.khanHelmetWrap {
+		width: 40%;
+	}
+	.khanContainer .videoContainer {
+		width: 65%;
+	}
+}
+
 @media (min-width: 1200px) {
+	#featured {
+		width: 1170px;
+	}
 	#routerGif-img {
 		img {
 			width: 500px;

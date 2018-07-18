@@ -16,8 +16,50 @@
 	-webkit-align-items: center;
 	align-items: center;
 }
+#khanSection {
+	
+	.titleSectionWrap {
+		padding: 0;
+		text-align: center;
+	}
+	.subtitle {
+		text-align: center;
+		margin-top: 20px;
+		font-size: 2rem;
+		line-height: 2.25rem;
+	}
+}
+// product session - home page
+#productsSection h2, #khanSection h2 {
+	color: #04346E;
+	padding: 40px 0 60px 0;
+}
+#productsSection h2 {
+	width: 100%;
+}
+#khanSection h2 {
+	text-align: center;
+	width: 100%;
+	padding: 40px 0 60px 0;
+}
+#productsSection h2, .peer-os h2, .bazaar h2 {
+	padding: 0 25px 20px 25px;
+	font-size: 2.25rem;
+	text-align: center;
+}
+
+// videos section - home page
+.videoTitle {
+	width: 100%;
+
+	h3 {
+		margin: 0 0 20px 0;
+		color: #04346E;
+	}
+}
+	
 #khanSection .titleSectionWrap, #communitySection .titleSectionWrap {
-	padding-top: 40px;
+	// padding-top: 40px;
 	height: auto;
 	width: 100%;
 	-webkit-justify-content: center;
@@ -28,6 +70,8 @@
 }
 #communitySection .titleSectionWrap, #communitySection .titleSectionWrap h3 {
 	color: #FFF;
+	// font-size: 2.5rem;
+	font-size: 1.8rem;
 }
 #communitySection .titleSectionWrap h2 {
 	font-weight: 500;
@@ -56,6 +100,10 @@
 .videoSection h3 {
 	color: #13315A;
 	font-weight: 700;
+}
+// community
+.communitySection .titleSectionWrap h3 {
+	font-size: 1rem;
 }
 /* P2P Cloud Platform */
 .panel-primary .panel-heading {
@@ -91,6 +139,24 @@ section .cont-part3 h2, section .cont-part3 h3 {
 	/*font-size: 2rem;*/
 }
 
+// KHAN page
+.downloadSection {
+	.titleSectionWrap {
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-wrap: wrap;
+		flex-wrap: wrap;
+		-webkit-justify-content: center;
+		justify-content: center;
+		padding: 0;
+		h3 {
+			font-size: 1.8rem;
+			text-align: left;
+			color: #333333;
+		}
+	}
+}
+
 @media (min-width: 480px) {
 
 }
@@ -106,15 +172,39 @@ section .cont-part3 h2, section .cont-part3 h3 {
 		width: 70px;
 		box-sizing: border-box;
 	}
+	#khanSection {
+		.titleSectionWrap {
+			text-align: left;
+		}
+		.subtitle {
+			text-align: left;
+			margin-top: 40px;
+			font-size: 2.75rem;
+			line-height: 3.25rem;
+		}
+	}
+	#productsSection h2, .peer-os h2, .bazaar h2 {
+		// padding: 0 25px 20px 25px;
+		font-size: 3rem;
+		// text-align: center;
+	}
 }
 
 @media (min-width: 992px) {
-	.videoSection h3 {
-		margin-top: 30px;
-		margin-bottom: 40px;
+	// .videoSection h3 {
+	// 	margin-top: 30px;
+	// 	margin-bottom: 40px;
+	// }
+	.downloadSection {
+		.titleSectionWrap {
+			h3 {
+				font-size: 2.2rem;
+				text-align: center;
+			}
+		}
 	}
-	
 }
 
 @media (min-width: 1200px) {
+	
 }

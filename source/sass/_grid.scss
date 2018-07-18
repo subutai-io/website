@@ -1,0 +1,208 @@
+/* Grid style - Subutai website (https://github.com/subutai-io/website)
+   07/05/2018 
+*/
+
+
+
+// home
+// products
+#productsSection {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: center;
+    justify-content: center;
+
+    .productsContainer {
+        width: 1170px;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-justify-content: center;
+        justify-content: center;
+
+        .productWrap {
+            width: 100%;
+            padding: 0 10px;
+            margin-bottom: 25px;
+            box-sizing: border-box;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-flex-wrap: wrap;
+            flex-wrap: wrap;
+            -webkit-flex-direction: column;
+            flex-direction: column;
+            -webkit-align-items: center;
+            align-items: center;
+            &:first-child {
+                padding-left: 0;
+            }
+            &:last-child {
+                padding-right: 0;
+            }
+
+            .productImg {
+                width: 50%;
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+.downloadSection {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+// khan section
+.khanContainer {
+    width: 100%;
+    box-sizing: border-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+        .helmetSection {
+            width: 100%;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-flex-wrap: wrap;
+            flex-wrap: wrap;
+            -webkit-justify-content: center;
+            justify-content: center;
+
+            .helmetImg {
+                width: 80%;
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+}
+#khanSection {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: center;
+    justify-content: center;
+    // .container {
+        .khanHelmetWrap {
+            order: 2;
+        }
+        .khanIntro-Wrap {
+            order: 1;
+        }
+    // }
+}
+.khanContent {
+    padding: 0 15px;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: center;
+    justify-content: center;
+
+    .khanContent-wrap {
+        width: 1170px;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+}
+
+@media (min-width: 480px) {
+
+}
+
+@media (min-width: 768px) {
+    .sectionWrap, .downloadSection {
+        padding: 40px 0;
+    }
+    .khanContainer {
+        width: 80%;
+        // display: -webkit-flex;
+        // display: flex;
+        // -webkit-flex-wrap: wrap;
+        // flex-wrap: wrap;
+
+        // .helmetSection {
+        //     width: 100%;
+
+        //     .helmetImg {
+        //         width: 100%;
+
+        //         img {
+        //             width: 100%;
+        //         }
+        //     }
+        // }
+    }
+    #productsSection {
+        .productsContainer {
+            // width: 1170px;
+            .productWrap {
+                width: 20%;
+                padding: 0 10px;
+                
+                &:first-child {
+                    padding-left: 0;
+                }
+                &:last-child {
+                    padding-right: 0;
+                }
+    
+                .productImg {
+                    width: 70%;
+    
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    // #khanSection {
+    //     .container {
+    //         .khanHelmetWrap {
+    //             order: 1;
+    //         }
+    //         .khanIntro-Wrap {
+    //             order: 2;
+    //             width: 60%;
+    //             padding-top: 40px;
+    //         }
+    //     }
+    // }
+}
+
+@media (min-width: 992px) {
+    .khanContainer {
+
+        .helmetSection {
+            width: 35%;
+
+            .helmetImg {
+                margin-top: 30px;
+                width: 230px;
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+}
