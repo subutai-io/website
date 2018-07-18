@@ -2,6 +2,18 @@
    06/06/2018 
 */
 
+
+// proiducts - home page
+.productWrap:hover {
+	text-decoration: none;
+}
+.productWrap:hover h3, .productWrap:hover p {
+	color: #078DD0;
+	-webkit-transition: .2s ease-in-out;
+	-moz-transition: .2s ease-in-out;
+	-o-transition: .2s ease-in-out;
+	transition: .2s ease-in-out;
+}
 // social buttons
 .socialButtonWrap {
 	// margin: 20px 0 60px 0;

@@ -3,6 +3,30 @@
 */
 
 
+
+// home - products section 
+#productsSection {
+    .productsContainer {
+        .productWrap {
+            .productImg {
+				
+				// display: -webkit-flex;
+				// display: flex;
+				// -webkit-flex-wrap: wrap;
+				// flex-wrap: wrap;
+				// -webkit-justify-content: center;
+				// justify-content: center;
+
+                img {
+					width: 100%;
+                }
+            }
+        }
+    }
+}
+.videoContainer {
+	width: 100%;
+}
 /* featured home - video and router 3D image */
 #featured {
 	/*background: #FAFAFA; */
@@ -175,37 +199,57 @@
 }
 
 @media (min-width: 992px) {
+	// home 
+	.videoContainer {
+		width: 50%;
+	}
 	#featured {
 		.row {
 			padding: 0;
 			.videoSection, .routerImg-wrapper {
-				width: 50%;
+				width: 30%;
 			}
 			.videoSection {
 				padding-left: 20px;
 			}
 			#routerGif-img {
-				width: 80%;
+				width: 100%;
 				padding-top: 0;
 				padding-right: 20px;
 				-webkit-justify-content: flex-end;
 				justify-content: flex-end;
+
+				img {
+					width: 100%;
+					height: 100%;
+				}
 			}
+			// .routerImg-wrapper {
+
+			// }
 		}
 		.row.secondRow-video {
 			padding: 80px 0 40px 0;
 			.videoSection {
-				width: 30%;
+				box-sizing: border-box;
+				padding: 0 20px;
+				width: 35%;
 				padding-left: 0;
 				
 				.videoWrap {
 					width: 100%;
 				}
 			}
+			.videoSection:first-child {
+				padding-left: 0;
+			}
+			.videoSection:last-child {
+				padding-right: 0;
+			}
 		}
 	}
 	.khanHelmetWrap {
-		width: 50%;
+		width: 40%;
 	}
 }
 
