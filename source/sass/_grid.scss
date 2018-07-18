@@ -65,15 +65,21 @@
 .khanContainer {
     width: 100%;
     box-sizing: border-box;
-    -webkit-display: flex;
+    display: -webkit-flex;
     display: flex;
     -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
         .helmetSection {
             width: 100%;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-flex-wrap: wrap;
+            flex-wrap: wrap;
+            -webkit-justify-content: center;
+            justify-content: center;
 
             .helmetImg {
-                width: 100%;
+                width: 80%;
 
                 img {
                     width: 100%;
@@ -82,6 +88,12 @@
         }
 }
 #khanSection {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: center;
+    justify-content: center;
     // .container {
         .khanHelmetWrap {
             order: 2;
@@ -118,22 +130,23 @@
         padding: 40px 0;
     }
     .khanContainer {
-        -webkit-display: flex;
-        display: flex;
-        -webkit-flex-wrap: wrap;
-        flex-wrap: wrap;
+        width: 80%;
+        // display: -webkit-flex;
+        // display: flex;
+        // -webkit-flex-wrap: wrap;
+        // flex-wrap: wrap;
 
-        .helmetSection {
-            width: 50%;
+        // .helmetSection {
+        //     width: 100%;
 
-            .helmetImg {
-                width: 100%;
+        //     .helmetImg {
+        //         width: 100%;
 
-                img {
-                    width: 100%;
-                }
-            }
-        }
+        //         img {
+        //             width: 100%;
+        //         }
+        //     }
+        // }
     }
     #productsSection {
         .productsContainer {
@@ -177,10 +190,11 @@
     .khanContainer {
 
         .helmetSection {
-            width: 50%;
+            width: 35%;
 
             .helmetImg {
-                width: 50%;
+                margin-top: 30px;
+                width: 230px;
 
                 img {
                     width: 100%;

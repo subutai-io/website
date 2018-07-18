@@ -27,6 +27,9 @@
 .videoContainer {
 	width: 100%;
 }
+// .khanContainer .videoContainer {
+// 	width: 100%;
+// }
 /* featured home - video and router 3D image */
 #featured {
 	/*background: #FAFAFA; */
@@ -250,6 +253,9 @@
 	}
 	.khanHelmetWrap {
 		width: 40%;
+	}
+	.khanContainer .videoContainer {
+		width: 65%;
 	}
 }
 
