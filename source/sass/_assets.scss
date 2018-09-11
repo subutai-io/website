@@ -160,16 +160,24 @@
 	padding-top: 40px;
 	display: -webkit-flex;
 	display: flex;
+	-webkit-flex-wrap: wrap;
+	flex-wrap: wrap;
 	-webkit-justify-content: center;
 	justify-content: center;
 	-webkit-align-items: center;
 	align-items: center;
-	/*-webkit-flex-direction: column;
-	flex-direction: column;*/
 
-	img {
+	.routerImg-wrapper {
 		width: 100%;
-		height: auto;
+
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+	.routerLegend-wrapper {
+		width: 100%;
+
 	}
 }
 
@@ -196,6 +204,22 @@
 				.khanHelmetImg {
 					width: 70%;
 				}
+			}
+		}
+	}
+	// router image/gif on router product page
+	#routerGif-img {
+		-webkit-justify-content: space-between;
+		justify-content: space-between;
+		
+		.routerImg-wrapper {
+			width: 40%;
+
+		}
+		.routerLegend-wrapper {
+			width: 60%;
+			p {
+				padding-left: 20px;
 			}
 		}
 	}
@@ -264,10 +288,10 @@
 		width: 1170px;
 	}
 	#routerGif-img {
-		img {
-			width: 500px;
-			height: 500px;
-		}
+		// img {
+		// 	width: 500px;
+		// 	height: 500px;
+		// }
 	}
 	.videoSection {
 		padding-left: 0;
