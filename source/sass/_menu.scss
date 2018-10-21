@@ -165,35 +165,27 @@
 			}
 		}
 	}
-	.navbar-toggler {
-		display: none;
-	}
-	#topbar .navbar-toggle {
-		display: none;
-	}
+	// .navbar-toggler {
+	// 	display: none;
+	// }
+	// #topbar .navbar-toggle {
+	// 	display: none;
+	// }
+}
+
+@media (min-width: 1200px) {
 	.navbar-collapse.collapse {
 	    display: block !important;
 	    height: auto !important;
 	    padding-bottom: 0;
 	    overflow: visible !important;
 	}
-}
-
-@media (min-width: 1200px) {
-	// .navbar-nav {
-	// 	li {
-	// 		padding: 0 15px;
-	// 		&:hover {
-	// 			background: transparent;
-	// 		}
-	// 		&:first-child {
-	// 			margin-top: 0;
-	// 		}
-	// 		.dropdown-menu {
-	// 			margin-top: 11px;
-	// 		}
-	// 	}
-	// }
+	.navbar-toggler {
+		display: none;
+	}
+	#topbar .navbar-toggle {
+		display: none;
+	}
 }
 
 
