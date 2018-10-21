@@ -155,29 +155,32 @@
 }
 
 /* router image */
-#routerGif-img {
+.routerImg-wrapper {
 	width: 100%;
-	padding-top: 40px;
-	display: -webkit-flex;
-	display: flex;
-	-webkit-flex-wrap: wrap;
-	flex-wrap: wrap;
-	-webkit-justify-content: center;
-	justify-content: center;
-	-webkit-align-items: center;
-	align-items: center;
-
-	.routerImg-wrapper {
+	#routerGif-img {
 		width: 100%;
-
+		padding-top: 40px;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-wrap: wrap;
+		flex-wrap: wrap;
+		-webkit-justify-content: center;
+		justify-content: center;
+		-webkit-align-items: center;
+		align-items: center;
 		img {
 			width: 100%;
 			height: auto;
 		}
+		.routerLegend-wrapper {
+			width: 100%;
+		}
 	}
-	.routerLegend-wrapper {
+}
+.row.secondRow-video {
+	.videoContainer {
 		width: 100%;
-
+		padding: 0;
 	}
 }
 
@@ -214,7 +217,6 @@
 		
 		.routerImg-wrapper {
 			width: 40%;
-
 		}
 		.routerLegend-wrapper {
 			width: 60%;
