@@ -192,14 +192,15 @@ section .cont-part4{
 }
 
 section .cont-part4 .panel-primary {
-    border-color: #078DD0;
+	border-color: #078DD0;
+	height: 350px;
 }
 
 section .cont-part4 .panel-body{
 	padding-left: 15px;
 	background-color: #078DD0;
 	border-color: #078DD0;
-	height: auto;
+	height: 100%;
 }
 
 section .cont-part4 .panel-body h2{
@@ -358,42 +359,8 @@ footer .cont-footer .icons-cont-footer i{
 .layerDown-1 {
 	z-index: -1;
 }
-/*.topbar {
-	height: 66px;
-	margin-bottom: -66px;
-}*/
-/*.anchor {
-	display: block;
-	position: relative;
-	top: -100px;
-	visibility: hidden;
-}*/
-/*.anchor:before {
-	content: '';
-	display: block;
-	position: relative;
-	width: 0;
-	height: 5rem;
-	margin-top: -5rem;
-}
-.sectionRow {
-	margin-bottom: -60px;
-	display: inline-block;
-}
-.headlineRow {
-	margin-bottom: -80px;
-}
-.anchorTitle {
-	display: block;
-	padding-top: 60px;
-}
-.anchorSubtitle {
-	display: block;
-	padding-top: 80px;
-}*/
 
 /*CSS responsive*/
-
 @media (max-width: 768px) { 
 	/*Navbar*/
 	.navbar-header{
@@ -520,6 +487,12 @@ footer .cont-footer .icons-cont-footer i{
 }
 
 @media(max-width: 1200px){
+	section .cont-part4 .panel-primary {
+		height: auto;
+	}
+	section .cont-part4 .panel-body {
+		height: auto;
+	}
 
 	section .cont-part5 .mailchimp{
 		margin-left: 0px;
