@@ -2,8 +2,6 @@
    05/28/2018 
 */
 
-
-
 /* title */
 .titleSectionWrap {
 	width: 100%;
@@ -58,8 +56,8 @@
 	}
 }
 	
-#khanSection .titleSectionWrap, #communitySection .titleSectionWrap {
-	// padding-top: 40px;
+#khanSection .titleSectionWrap,
+#communitySection .titleSectionWrap {
 	height: auto;
 	width: 100%;
 	-webkit-justify-content: center;
@@ -70,7 +68,6 @@
 }
 #communitySection .titleSectionWrap, #communitySection .titleSectionWrap h3 {
 	color: #FFF;
-	// font-size: 2.5rem;
 	font-size: 1.8rem;
 }
 #communitySection .titleSectionWrap h2 {
@@ -83,7 +80,6 @@
 	font-size: 3.55rem;
 }
 .titleSectionWrap h2 {
-	/*text-align: center;*/
 	font-size: 2.8rem;
 	font-weight: 700;
 	margin: 0;
@@ -136,11 +132,7 @@
 section .cont-part3 h2, section .cont-part3 h3 {
 	color: #04192B;
 	text-align: center;
-	/*font-size: 2rem;*/
 }
-// .listTitle {
-// 	color: 
-// }
 
 // KHAN page
 .downloadSection {
@@ -187,17 +179,11 @@ section .cont-part3 h2, section .cont-part3 h3 {
 		}
 	}
 	#productsSection h2, .peer-os h2, .bazaar h2 {
-		// padding: 0 25px 20px 25px;
 		font-size: 3rem;
-		// text-align: center;
 	}
 }
 
 @media (min-width: 992px) {
-	// .videoSection h3 {
-	// 	margin-top: 30px;
-	// 	margin-bottom: 40px;
-	// }
 	.downloadSection {
 		.titleSectionWrap {
 			h3 {

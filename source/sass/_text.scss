@@ -34,14 +34,63 @@
 	line-height: 30px;
 	padding: 10px;
 }
+// topics
+// topic
+.topicP2P {
+	margin-top: 20px;
+	// display: flex;
+	// flex-wrap: wrap;
+	// align-items: center;
+	&:first-child {
+		margin-top: 0;
+	}
+	p {
+		// display: flex;
+		// flex-wrap: wrap;
+		align-items: center;
+		.topic {
+			font-size: 2rem;
+			font-family: 'Maven Pro';
+			font-weight: 500;
+			// display: flex;
+			// align-items: center;
+			// float: left;
+			&:hover {
+				text-decoration: none;
+			}
+			i {
+				font-size: 2rem;
+				margin-right: 5px;
+			}
+		}
+	}
+	p {
+		margin: 0;
+	}
+	.subtopic {
+		margin: 0 auto;
+		width: 100%;
+		padding: 20px;
+		background: #F1F1F1;
+		margin-bottom: 10px;
+		p {
+			padding: 0;
+			display: block;
+			line-height: 1.5;
+			span {
+				font-weight: 500;
+			}
+		}
+	}
+}
 .khanTopicWrap {
 	width: 100%;
 	padding-top: 20px;
-}
-.topic {
-	font-size: 1.5rem;
-	padding: 4px 0;
-	font-weight: 400;
+	.topic {
+		font-size: 1.5rem;
+		padding: 4px 0;
+		font-weight: 400;
+	}
 }
 
 @media (min-width: 480px) {
@@ -54,8 +103,10 @@
 			border-radius: 0;
 		}
 	}
-	.topic {
+	.khanTopicWrap {
+		.topic {
 		font-size: 2rem;
+		}
 	}
 }
 
