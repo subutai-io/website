@@ -13,7 +13,7 @@
 @import "titles";
 @import "links-btn";
 @import "grid";
-@import "forms";
+@import "forms-tables";
 
 
 body, html{
@@ -36,6 +36,17 @@ p{
 a{
 	color: #078DD0;
 }
+
+.dividerSection {
+	width: 100%;
+	border-color: rgba(0,0,0,.12);
+	border-width: 1px 0 0;
+	margin: 0;
+	box-sizing: border-box;
+	height: 0;
+	overflow: visible; 
+}
+
 #winLink, #macLink, #linuxLink,
 #winLink2, #macLink2, #linuxLink2 {
 	display: none;

@@ -121,6 +121,38 @@
     }
 }
 
+// blueprints page
+.blueprintsWrap {
+    width: 100%;
+    h2 {
+        color: #078DD0;
+        font-size: 3.55rem;
+    }
+}
+.blueprintRow {
+    margin: 30px 0;
+    // height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    .blueprintImg  {
+        width: 100px;
+        img {
+            width: 100%;
+            display: block;
+        }
+    }
+
+    p {
+        width: 100%;
+        // width: calc(100% - 140px);
+        margin: 0;
+        padding-bottom: 0;
+        font-size: 20px;
+    }
+}
+
 @media (min-width: 480px) {
 
 }
@@ -131,22 +163,6 @@
     }
     .khanContainer {
         width: 80%;
-        // display: -webkit-flex;
-        // display: flex;
-        // -webkit-flex-wrap: wrap;
-        // flex-wrap: wrap;
-
-        // .helmetSection {
-        //     width: 100%;
-
-        //     .helmetImg {
-        //         width: 100%;
-
-        //         img {
-        //             width: 100%;
-        //         }
-        //     }
-        // }
     }
     #productsSection {
         .productsContainer {
@@ -172,18 +188,6 @@
             }
         }
     }
-    // #khanSection {
-    //     .container {
-    //         .khanHelmetWrap {
-    //             order: 1;
-    //         }
-    //         .khanIntro-Wrap {
-    //             order: 2;
-    //             width: 60%;
-    //             padding-top: 40px;
-    //         }
-    //     }
-    // }
 }
 
 @media (min-width: 992px) {
@@ -202,6 +206,29 @@
                     width: 100%;
                 }
             }
+        }
+    }
+    .blueprintsWrap {
+        width: 80%;
+    }
+    .blueprintRow {
+        margin: 30px 0;
+        height: 100px;
+        flex-wrap: wrap;
+        flex-direction: row;
+        .blueprintImg  {
+            width: 100px;
+            img {
+                width: 100%;
+                display: block;
+            }
+        }
+    
+        p {
+            width: calc(100% - 140px);
+            margin: 0;
+            padding-bottom: 0;
+            font-size: 20px;
         }
     }
 }

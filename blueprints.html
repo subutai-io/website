@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+<head>
+    <meta charset="utf-8">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-76144216-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-76144216-1');
+    </script>
+
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window,document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '129106771214783'); 
+        fbq('track', 'PageView');
+    </script>
+    <!-- jQuery -->
+    <script src="./js/jquery.js"></script>
+    <script>
+        $(document).ready(function() {
+            //apply the smooth to all links at this page
+            $("a").on('click', function(event) {
+                if (this.hash !== "") {
+                    event.preventDefault();
+                    //store hash
+                    var hash = this.hash;
+
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function(){ 
+                        window.location.hash = hash;
+                    });
+                } //end if
+            });
+        });
+    </script>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:url" content="https://subutai.io/getting-started.html" />
+    <meta property="og:image" content="https://subutai.io/img/SubutaiHeroImageV6.jpg"/>
+    <meta property="og:image:type" content="image/jpeg"/>
+    <meta property="og:image:width" content="800"/> 
+    <meta property="og:image:height" content="600"/>
+    <!-- no cache meta tags - after changes, this should be exclude -->
+    <meta http-equiv="cache-control" content="max-age=0">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="-1">
+    <meta http-equiv="expires" content="Tue, 01 Jan 1980 11:00:00 GMT">
+    <meta http-equiv="pragma" content="no-cache">
+
+    <title>Blueprints</title>
+
+    <!-- CSS Links-->
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="dist/css/style.css">
+    <link rel="stylesheet" type="text/css" href="./css/goodwill-styles.css">
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap/bootstrap-social.css">
+    <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,500,700,900" rel="stylesheet">
+    <link href="./fontawesome/fontawesome-all.css" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="./js/syntax-highlighter/styles/shCore.css" media="all">
+    <link rel="stylesheet" href="./js/syntax-highlighter/styles/shCoreRDark.css" media="all">
+    <link rel="stylesheet" href="./css/custom.css">
+    <!-- JS Links-->
+
+
+    <!-- Favicon link-->
+    <link rel="shortcut icon" href="./img/favicon.png" />
+
+        <style type="text/css">
+            .getting-started p{
+                text-align: justify;
+                line-height: 30px;
+                font-size: 15px;
+            }
+
+            .getting-started ul li{
+                text-align: justify;
+                line-height: 30px;
+                font-size: 15px;
+            }
+        </style>
+
+
+
+</head>
+
+    <body>
+
+        <header id="header">
+            <div class="getStarted-btn">
+                <a href="./getting-started.html#companion">Downloads</a>
+                <a href="https://bazaar.subutai.io/register" target="_blank">Join Us</a>
+                <a href="https://slack.subutai.io/" target="_blank">Help on Slack</a>
+            </div>
+            <nav class="navbar navbar-expand-xl navbar-light bg-light">
+                <div id="topbar">
+                    <a class="navbar-brand" href="./index.html"><img alt="logo" src="img/logo.png" width="160"></a>
+                    
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav scrollable-menu">
+                            <li class="nav-item">
+                                <a class="nav-link" href="./p2p-cloud-platform.html">P2P Cloud Platform</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="goodwill.html">GoodWill</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Products <span class="caret"></span></a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="./peer-os.html">PeerOS</a></li>
+                                    <li><a class="dropdown-item" href="./bazaar.html">Bazaar</a></li>
+                                    <li><a class="dropdown-item" href="./router.html">Blockchain Router</a></li>
+                                    <li><a class="dropdown-item" href="./khan.html">KHAN</a></li>
+                                    <li><a class="dropdown-item" href="https://github.com/subutai-blueprints" target="_blank">Blueprints</a></li>
+                                    <li><a class="dropdown-item" href="https://docs.subutai.io/Blueprints/blockchain-in-a-box/Introduction.html">Blockchain-in-a-Box</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ideation <span class="caret"></span></a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="p2p-cloud.html">P2P Cloud</a></li>
+                                    <li><a class="dropdown-item" href="https://subutai.blog/" target="_blank">Blog</a></li>
+                                    <li><a class="dropdown-item" href="manifesto.html">Manifesto</a></li>
+                                    <li><a class="dropdown-item" href="Hardware-Security-Framework.pdf" target="_blank">Hardware Security</a></li>
+                                    <li><a class="dropdown-item" href="tribute.html">Tribute</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./getting-started.html">Get Started</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">How To <span class="caret"></span></a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="./getting-involved.html">Get Involved</a></li>
+                                    <li><a class="dropdown-item" href="https://bazaar.subutai.io/login" target="_blank">Share Resources</a></li>
+                                    <li><a class="dropdown-item" href="./goodwill.html">Earn Goodwill</a></li>
+                                    <li><a class="dropdown-item" href="https://subutai.blog/" target="_blank">Read our Blog</a></li>
+                                    <li><a class="dropdown-item" href="https://docs.subutai.io/Contributing.html">How to Contribute</a></li>
+                                    <li><a class="dropdown-item" href="https://slack.subutai.io/" target="_blank">Get Help</a></li>
+                                    <li><a class="dropdown-item" href="https://docs.subutai.io/">Read the Docs</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Resources <span class="caret"></span></a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="https://docs.subutai.io/Glossary.html">Glossary</a></li>
+                                    <li><a class="dropdown-item" href="https://docs.subutai.io">Documentation</a></li>
+                                    <li><a class="dropdown-item" href="https://github.com/subutai-io" target="_blank">GitHub</a></li>
+                                    <li><a class="dropdown-item" href="https://docs.subutai.io/FAQ.html">FAQ</a></li>
+                                    <li><a class="dropdown-item" href="getting-involved.html">Get Involved</a></li>
+                                    <li><a class="dropdown-item" href="https://docs.subutai.io/Subutai_Use_Cases.html">Use Cases</a></li>
+                                    <li><a class="dropdown-item" href="https://bazaar.subutai.io">Bazaar</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Community <span class="caret"></span></a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <li><a class="dropdown-item" tabindex="-1" href="getting-involved.html">Get Involved</a></li>
+                                    <li><a class="dropdown-item" tabindex="-1" href="https://slack.subutai.io/" target="_blank">Slack</a></li>
+                                    <li><a class="dropdown-item" tabindex="-1" href="https://t.me/SubutaiKHAN" target="_blank">Telegram</a></li>
+                                    <li><a class="dropdown-item" tabindex="-1" href="https://twitter.com/Subutai_KHAN" target="_blank">Twitter</a></li>
+                                    <li><a class="dropdown-item" tabindex="-1" href="https://www.reddit.com/r/SubutaiKHAN/" target="_blank">Reddit</a></li>
+                                    <li><a class="dropdown-item" tabindex="-1" href=" https://www.facebook.com/SubutaiKHAN/" target="_blank">Facebook</a></li>
+                                    <li><a class="dropdown-item" tabindex="-1" href="https://www.linkedin.com/company/subutai-social-cloud/" target="_blank">Linkedin</a></li>
+                                    <li><a class="dropdown-item" tabindex="-1" href="https://www.youtube.com/channel/UCISHGzbHjYWYFfu7krnYLkA" target="_blank">Youtube</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+    
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarNavDropdown" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+            </nav>
+    
+            <div class="jumbotron" id="topBanner">
+                <div id="bannerText">
+                    <h1 class="pageTitle">Subutai Blueprints</h1>
+                </div>
+            </div>
+        </header>
+
+        <section>
+            <!-- <div class="text1"> -->
+                <div class="container">
+                    <!-- <div class="block-text1"> -->
+                        <!-- <div class="row"> -->
+                            <div class="col-lg-12">
+                                <p>Reduce system administration overheads and simplify the process of distributed application development. Subutai’s free blueprints provide an all-inclusive developer environment for specifying general instructions to automate P2P distributed application (dApp) management tasks (installing, updating, maintaining, etc.). Subutai blueprints are available in the Subutai Bazaar at bazaar.subutai.io (registration required), and are released under Apache License v2.0.</p>
+                            </div>
+                        <!-- </div> -->
+                    <!-- </div> -->
+                </div>
+            <!-- </div> -->
+        </section>
+
+        <section>
+            <div class="container">
+                <h2>Popular Subutai blueprints include:</h2>
+                <div class="blueprintsWrap">
+                    <!-- blockchain-in-a-box -->
+                    <div class="blueprintRow">
+                        <div class="blueprintImg">
+                            <img src="dist/img/blueprint-blockchain-in-a-box.gif" alt="blockchain in a box blueprint">
+                        </div>
+                        <p><b>Blockchain-in-a-Box</b> – write Smart Contracts in minutes without having to deal with obtaining testnet Ether (the cryptocurrency fueling the Ethereum network). <a href="https://subutai.blog/2018/03/13/welcome-blockchain-in-a-box-the-latest-addition-to-the-subutai-family-of-blueprints/" target="_blank">learn more</a></p>
+                    </div>
+                    <!-- iot sandbox -->
+                    <div class="blueprintRow">
+                        <div class="blueprintImg">
+                            <img src="dist/img/blueprint-iot-sandbox.jpg" alt="iot sandbox blueprint">
+                        </div>
+                        <p><b>IoT Sandbox</b> – easily store and visualize IoT data on the edge. <a href="https://subutai.blog/2018/10/04/edge-iot-solutions-powered-by-subutai/" target="_blank">learn more</a></p>
+                    </div>
+                    <!-- nextcloud -->
+                    <div class="blueprintRow">
+                        <div class="blueprintImg">
+                            <img src="dist/img/blueprint-nextcloud.png" alt="nextcloud blueprint">
+                        </div>
+                        <p><b>Nextcloud</b> – access and manage your files with free, flexible, secure cloud storage. <a href="https://subutai.blog/2018/07/05/conquer-the-cloud-with-subutai-blueprints-nextcloud-easy-flexible-secure-cloud-storage/" target="_blank">learn more</a></p>
+                    </div>
+                    <!-- gitlab -->
+                    <div class="blueprintRow">
+                        <div class="blueprintImg">
+                            <img src="dist/img/blueprint-gitlab.png" alt="gitlab blueprint">
+                        </div>
+                        <p><b>GitLab</b> – deploy and manage GitLab repositories on peer-to-peer clouds. <a href="https://subutai.blog/2018/06/07/deploying-gitlab-through-subutai-the-quick-easy-way/" target="_blank">learn more</a></p>
+                    </div>
+                    <!-- minecraft -->
+                    <div class="blueprintRow">
+                        <div class="blueprintImg">
+                            <img src="dist/img/blueprint-minecraft.jpg" alt="minecraft blueprint">
+                        </div>
+                        <p><b>Minecraft</b> – play Minecraft on your own global private network game server. <a href="https://subutai.blog/2018/10/06/subutai-platform-create-your-own-global-private-network/" target="_blank">learn more</a></p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="blueprintsTech-section">
+            <div class="container">
+                <hr class="dividerSection">
+                <h2>Using Blueprints</h2>
+                <p>Subutai has the Blueprint feature for standing up complicated application stacks over several containers. It’s a simple JSON based templating format similar to Amazon’s Cloud Formation templates. Use these Blueprints to fire up application stacks within environments or build environments using your favorite devops tools for automation.</p>
+
+                <p>Using the Blueprint wizard, finish your build in 4 easy steps as shown below for your Blueprint of choice:</p>
+
+                <div class="centerImg">
+                    <img src="dist/img/blueprint-wizard.jpg" alt="blueprint wizard">
+                </div>
+
+                <p>From defining application variables to building or updating an existing environment, you can stand up your application stack in no time. For example, with the Blockchain-in-a-Box Blueprint, you get an instant environment for writing decentralized blockchain-based applications on Ethereum Network. <a href="https://github.com/subutai-blueprints/hackathon/wiki/Using-Subutai-Blueprints" target="_blank">Find out more about using Blueprints</a>.</p>
+
+                <h2>Writing Blueprints</h2>
+
+                <p>For the more technical users, we invite you to create your own Blueprints! Subutai Blueprints specify general instructions for installing, updating, and maintaining P2P distributed cloud applications. The Subutai P2P Cloud combines these instructions with load and resource availability information to optimally place infrastructure resources in P2P cloud environments and run distributed applications. As the Blueprint author or creator, you combine and write these instructions in a single Subutai.json file.</p>
+
+                <p>Blueprint authors can "Publish" their application Blueprints on the Subutai Bazaar to be used for free or for <a href="https://github.com/subutai-blueprints/hackathon/wiki">Subutai™ GoodWill</a>. All the Blueprints are open source so yes, this is for sincerely rewarding good deeds. If you wanted to, you could still fork their public repository and use the Blueprint privately, but why not contribute back? See the guide on <a href="https://github.com/subutai-blueprints/hackathon/wiki/Writing-Subutai-Blueprints" target="_blank"></a>Writing Subutai Blueprints</a>. to author and publish your own Blueprints.</p>
+                <!-- image -->
+                <div id="blueprintsTable">
+                    <!-- first row -->
+                    <div class="tableRow">
+                        <!-- arrow -->
+                        <div class="curveArrow">
+                            <img src="dist/img/arrow-curved.png" alt="">
+                        </div>
+                        <h5>Publish</h5>
+                        <p>View your published Blueprint on Bazaar</p>
+                    </div>
+                    <!-- second row -->
+                    <div class="tableRow">
+                        <!-- arrow -->
+                        <div class="curveArrow">
+                            <img src="dist/img/arrow-curved.png" alt="">
+                        </div>
+                        <h5>Verify</h5>
+                        <p>Submit your Blueprint for review and testing by a Bazaar administrator</p>
+                    </div>
+                    <!-- third row -->
+                    <div class="tableRow">
+                        <!-- arrow -->
+                        <h5>Create</h5>
+                        <p>Design an application stack for your Blueprint, and then write the subutai.json file</p>
+                    </div>
+                </div>
+                <div class="ctaLabel">
+                    <i>Contributors who create Blueprints that are made freely available on Bazaar may qualify for GoodWill promotions.</i>
+                    <a href="https://github.com/subutai-blueprints/hackathon/wiki/Writing-Subutai-Blueprints" target="_blank">Join the Blueprint Hackathon!</a>
+                </div>
+            </div>
+        </section>
+
+
+
+        <footer>
+            <div class="cont-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="text-center">
+                                <a href="https://optdyn.com/"><img src="img/optdyn.png" class="img" alt="Optdyn" width="150"></a>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-4">
+                            <p>Copyright &copy; <span id="currentYear"></span> OptDyn. All rights reserved.</p>
+                            <p style="padding-top: 0px"><a href="privacy.html">Privacy |</a> <a href="privacy.html#term">Terms of Use |</a> <a href="privacy.html#cookies"> Cookies</a></p>
+                        </div>
+
+                        <div class="col-lg-4">
+                            <div class="icons-cont-footer">
+                                <div class="text-center">
+                                    <a href="https://twitter.com/Subutai_KHAN" target="_blank"><i class="fab fa-twitter-square"></i></a>
+                                    <a href="https://www.facebook.com/SubutaiKHAN/" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                                    <a href="https://www.reddit.com/r/SubutaiKHAN/" target="_blank"><i class="fab fa-reddit-square"></i></a>
+                                    <a href="https://www.linkedin.com/company/subutai-social-cloud" target="_blank"><i class="fab fa-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script type="text/javascript">
+            var currentYear = (new Date()).getFullYear();
+            document.getElementById("currentYear").innerHTML = currentYear;
+        </script>
+
+    </body>
+</html>
