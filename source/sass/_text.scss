@@ -1,8 +1,12 @@
-/* Topbar styles - Subutai website (https://github.com/subutai-io/website)
+/* Text styles - Subutai website (https://github.com/subutai-io/website)
    05/28/2018 
 */
 
-
+// paragraph
+.container p {
+	font-size: 16px;
+	line-height: 30px;
+}
 
 .title-level3 {
 	font-size: 1.8rem;
@@ -38,23 +42,15 @@
 // topic
 .topicP2P {
 	margin-top: 20px;
-	// display: flex;
-	// flex-wrap: wrap;
-	// align-items: center;
 	&:first-child {
 		margin-top: 0;
 	}
 	p {
-		// display: flex;
-		// flex-wrap: wrap;
 		align-items: center;
 		.topic {
 			font-size: 2rem;
 			font-family: 'Maven Pro';
 			font-weight: 500;
-			// display: flex;
-			// align-items: center;
-			// float: left;
 			&:hover {
 				text-decoration: none;
 			}
@@ -93,6 +89,26 @@
 	}
 }
 
+// blueprints page
+#blueprintsTech-section {
+	.ctaLabel {
+		width: 100%;
+		margin: 0 auto;
+		text-align: center;
+		margin-bottom: 60px;
+		i {
+			text-align: center;
+			font-size: 20px; 
+			display: block;
+			margin-bottom: 10px;
+		}
+		a {
+			margin-top: 20px;
+			font-size: 22px;
+		}
+	}
+}
+
 @media (min-width: 480px) {
 
 }
@@ -106,6 +122,11 @@
 	.khanTopicWrap {
 		.topic {
 		font-size: 2rem;
+		}
+	}
+	#blueprintsTech-section {
+		.ctaLabel {
+			width: 650px;
 		}
 	}
 }
