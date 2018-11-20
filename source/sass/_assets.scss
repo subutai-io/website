@@ -33,8 +33,10 @@
 #productsSection {
     .productsContainer {
         .productWrap {
-            .productImg {img {
+            .productImg {
+				img {
 					width: 100%;
+					margin-bottom: 20px;
                 }
             }
         }
