@@ -1,0 +1,27 @@
+1544027379
+a:2:{s:7:"content";s:1003:"<div class="banner">
+<pre><code>&lt;h1&gt;Conquer the Cloud&lt;/h1&gt;
+&lt;p&gt;Open Source Peer-to-Peer (P2P) Cloud Computing Internet of Things (IoT)&lt;br&gt; and Cryptocurrency Mining for Everyone&lt;/p&gt;
+
+&lt;div class="arrowDown"&gt;
+    &lt;a href="#"&gt;&lt;i class="fas fa-chevron-down"&gt;&lt;/i&gt;&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+</div>
+<!-- intro text -->
+<div class="darkBg">
+
+<div class="smallContainer">
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam volutpat velit at ipsum commodo malesuada. Mauris sed eros gravida tortor consequat porta. Praesent lacinia, felis ac ornare eleifend, augue nisl fermentum nunc, ac malesuada orci eros ac justo. Morbi lacinia et erat quis semper. Sed in metus eget quam elementum facilisis. Sed interdum placerat enim, at porta ipsum tristique.</p>
+
+</div>
+
+</div>
+<!-- products -->
+<section class="smallContainer" id="prodHome">
+    <div class="prodSection-label">
+        <p>hardware</p>
+        <hr>
+    </div>
+
+</section>";s:12:"content_meta";N;}

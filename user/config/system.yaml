@@ -1,12 +1,13 @@
 absolute_urls: false
+# custom_base_url: 'https://subutai.io/'
 
 home:
   alias: '/home'
 
 pages:
-  theme: quark
+  theme: subutai
   markdown:
-    extra: false
+    extra: true
   process:
     markdown: true
     twig: false

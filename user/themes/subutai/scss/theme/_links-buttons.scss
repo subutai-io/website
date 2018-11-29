@@ -1,0 +1,39 @@
+
+body a {
+    font-family: myriad-pro, sans-serif;
+    letter-spacing: 1px;
+    text-decoration: none;
+    &:hover {
+        text-decoration: none;
+    }
+}
+.btn {
+    background-color: #078DD0;
+    color: #FFF;
+    font-size: .85rem;
+    padding: 7px 15px;
+    border-radius: .4rem;
+    &:hover {
+        background-color: #59B7FF;
+    }
+    &:active {
+        background-color: #0F54B9;
+    }
+}
+
+
+@media (min-width: 480px) {
+
+}
+
+@media (min-width: 768px) {
+	
+}
+
+@media (min-width: 992px) {
+	
+}
+
+@media (min-width: 1200px) {
+	
+}

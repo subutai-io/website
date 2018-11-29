@@ -1,0 +1,39 @@
+1544030388
+a:2:{s:7:"content";s:1258:"<div class="banner">
+<h1>Conquer the Cloud</h1>
+<p>Open Source Peer-to-Peer (P2P) Cloud Computing Internet of Things (IoT)<br> and Cryptocurrency Mining for Everyone</p>
+<div class="arrowDown">
+    <a href="#"><i class="fas fa-chevron-down"></i></a>
+</div>
+</div>
+<!-- intro text -->
+<div class="darkBg">
+
+<div class="smallContainer">
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam volutpat velit at ipsum commodo malesuada. Mauris sed eros gravida tortor consequat porta. Praesent lacinia, felis ac ornare eleifend, augue nisl fermentum nunc, ac malesuada orci eros ac justo. Morbi lacinia et erat quis semper. Sed in metus eget quam elementum facilisis. Sed interdum placerat enim, at porta ipsum tristique.</p>
+
+</div>
+
+</div>
+<!-- products -->
+<section class="smallContainer" id="prodHome">
+    <div class="prodSection-label">
+        <p>hardware</p>
+        <hr>
+    </div>
+    <!-- prod item -->
+    <div class="prodWrap">
+        <div class="prodImg-wrap">
+            <img href="%7B%7B%20base_url%20%7D%7D/images/logo-router-shadow.jpg" alt="Subutai Router">
+        </div>
+        <div>
+            <h2></h2>
+            <p></p>
+            <div>
+                <a></a>
+            </div>
+        </div>
+    </div>
+
+</section>";s:12:"content_meta";N;}

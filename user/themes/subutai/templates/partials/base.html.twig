@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="{{ grav.language.getActive ?: grav.config.site.default_lang }}">
+<head>
+{% block head %}
+    <meta charset="utf-8" />
+    <title>{% if header.title %}{{ header.title|e('html') }} | {% endif %}{{ site.title|e('html') }}</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {# {% include 'partials/metadata.html.twig' %} #}
+
+    {# <link rel="icon" type="image/png" href="{{ url('theme://images/favicon.png') }}" /> #}
+    {# <link rel="canonical" href="{{ page.url(true, true) }}" /> #}
+
+    {% block stylesheets %}
+        {# {% do assets.addCss('theme://css-compiled/spectre'~compress) %}
+        {% if theme_var('spectre.exp') %}{% do assets.addCss('theme://css-compiled/spectre-exp'~compress)  %}{% endif %}
+        {% if theme_var('spectre.icons') %}{%  do assets.addCss('theme://css-compiled/spectre-icons'~compress) %}{% endif %} #}
+        {% do assets.addCss('theme://css-compiled/style.css') %}
+        {% do assets.addCss('theme://css/reset.css') %}
+        {# {% do assets.addCss('theme://css/custom.css') %}
+        {% do assets.addCss('theme://css/line-awesome.min.css') %} #}
+    {% endblock %}
+    {{ assets.css() }}
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,500,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/qgr7mna.css">
+    {% block javascripts %}
+        {% do assets.addJs('jquery', 101) %}
+        {% do assets.addJs('theme://js/jquery.treemenu.js', {group:'bottom'}) %}
+        {% do assets.addJs('theme://js/site.js', {group:'bottom'}) %}
+        {% do assets.addJs('theme://js/dropdown-menu.js') %}
+    {% endblock %}
+    {{ assets.js() }}
+
+{% endblock head %}
+</head>
+
+<body class="{{ page.header.body_classes }}">
+
+{% include 'partials/header.html.twig' %}
+
+{{ page.content }}
+
+{% include 'partials/footer.html.twig' %}
+
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+
+
+
+body p {
+    font-family: myriad-pro, sans-serif;
+}
+body {
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Maven Pro';
+    }
+}
+.banner {
+    h1 {
+        text-align: center;
+        color: #FFF;
+        font-size: 4rem;
+        margin-top: 100px;
+        margin-bottom: 20px;
+    }
+    p {
+        text-align: center;
+        font-size: 2rem;
+        color: #FFF;
+        font-family: 'Maven Pro';
+        line-height: 1.25;
+    }
+    .arrowDown {
+        margin-top: 150px;
+        a {
+            margin-top: 50px;
+            font-size: 2.5rem;
+            color: rgba(255,255,255,.6);
+            &:hover {
+                color: rgba(255,255,255,1);
+            }
+        }
+    }
+}
+.smallContainer {
+    p {
+        padding: 80px 0;  
+        color: #FFF;
+        font-size: 1.25rem;
+        line-height: 1.5;
+        font-weight: 300;
+    }
+}
+.prodSection-label {
+    padding: 40px 0 20px 0;
+    width: 100%;
+    p {
+        font-size: 0.875rem;
+        text-transform: uppercase;
+        padding: 0;
+        color: rgba(2,14,26,.4);
+    }
+    hr {
+        width: 100%;
+        margin-top: 0;
+        border: .5px solid rgba(2,14,26,.15);
+    }
+}
+.home {
+    .prodInfo-wrap {
+        h2 {
+            color: #04346E;
+            font-size: 2rem;
+            text-align: left;
+        }
+        p {
+            padding: 20px 0;
+            color: #333;
+        }
+    }
+}
+footer {
+    .menu {
+        ul {
+            li {
+                a {
+                    color: #59B7FF;
+                }
+            }
+        }
+    }
+}

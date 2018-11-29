@@ -1,42 +1,113 @@
 ---
-title: Home
-body_classes: title-center title-h1h2
+title: Subutai
+body_classes: home
 ---
 
-# Say Hello to Grav!
-## installation successful...
+<div class="banner" markdown="1">
 
-Congratulations! You have installed the **Base Grav Package** that provides a **simple page** and the default **Quark** theme to get you started.
+<h1>Conquer the Cloud</h1>
+<p>Open Source Peer-to-Peer (P2P) Cloud Computing Internet of Things (IoT)<br> and Cryptocurrency Mining for Everyone</p>
 
-!! If you see a **404 Error** when you click `Typography` in the menu, please refer to the [troubleshooting guide](http://learn.getgrav.org/troubleshooting/page-not-found).
+<div class="arrowDown">
+	<a href="#"><i class="fas fa-chevron-down"></i></a>
+</div>
 
-### Find out all about Grav
+</div>
+<!-- intro text -->
+<div class="darkBg">
 
-* Learn about **Grav** by checking out our dedicated [Learn Grav](http://learn.getgrav.org) site.
-* Download **plugins**, **themes**, as well as other Grav **skeleton** packages from the [Grav Downloads](http://getgrav.org/downloads) page.
-* Check out our [Grav Development Blog](http://getgrav.org/blog) to find out the latest goings on in the Grav-verse.
+<div class="smallContainer">
 
-!!! If you want a more **full-featured** base install, you should check out [**Skeleton** packages available in the downloads](http://getgrav.org/downloads).
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam volutpat velit at ipsum commodo malesuada. Mauris sed eros gravida tortor consequat porta. Praesent lacinia, felis ac ornare eleifend, augue nisl fermentum nunc, ac malesuada orci eros ac justo. Morbi lacinia et erat quis semper. Sed in metus eget quam elementum facilisis. Sed interdum placerat enim, at porta ipsum tristique.</p>
 
-### Edit this Page
+</div>
 
-To edit this page, simply navigate to the folder you installed **Grav** into, and then browse to the `user/pages/01.home` folder and open the `default.md` file in your [editor of choice](http://learn.getgrav.org/basics/requirements).  You will see the content of this page in [Markdown format](http://learn.getgrav.org/content/markdown).
+</div>
+<!-- products -->
+<section class="smallContainer" id="prodHome">
+    <div class="prodSection-label">
+        <p>hardware</p>
+        <hr>
+    </div>
+	<!-- prod item -->
+	<div class="prodWrap">
+		<div class="prodImg-wrap">
+			<img src="user/pages/images/logo-router-shadow.jpg" alt="Subutai Router">
+		</div>
+		<div class="prodInfo-wrap">
+			<h2>Blockchain Router</h2>
+			<p>Power-efficient “green” broadband cloud router and open hardware IoT gateway that serves as a plug-and-play cryptocurrency wallet and mining device.</p>
+			<div class="btnWrap">
+				<a href="#" class="btn">Product Details</a>
+			</div>
+		</div>
+	</div>
+	<div class="prodSection-label">
+        <p>software</p>
+        <hr>
+    </div>
+	<div class="prodWrap">
+		<div class="prodImg-wrap">
+			<img src="user/pages/images/logo-peer-os-web-shadow.jpg" alt="Subutai PeerOS">
+		</div>
+		<div class="prodInfo-wrap">
+			<h2>Subutai PeerOS</h2>
+			<p>Container-based Open Source P2P Cloud and IoT software and firmware</p>
+			<div class="btnWrap">
+				<a href="#" class="btn">Product Details</a>
+				<a href="#" class="btn">Technical Documentation</a>
+				<a href="#" class="btn">Getting Started</a>
+			</div>
+		</div>
+	</div>
+	<div class="prodWrap">
+		<div class="prodImg-wrap">
+			<img src="user/pages/images/logo-bazaar-shadow.jpg" alt="Subutai Bazaar">
+		</div>
+		<div class="prodInfo-wrap">
+			<h2>Subutai Bazaar</h2>
+			<p>Global marketplace for trading computing resources and applications</p>
+			<div class="btnWrap">
+				<a href="#" class="btn">Product Details</a>
+				<a href="#" class="btn">Technical Documentation</a>
+				<a href="#" class="btn">Getting Started</a>
+			</div>
+		</div>
+	</div>
+	<div class="prodWrap">
+		<div class="prodImg-wrap">
+			<img src="user/pages/images/logo-blueprints-shadow-02.jpg" alt="Subutai Blueprints">
+		</div>
+		<div class="prodInfo-wrap">
+			<h2>Subutai Blueprints</h2>
+			<p>Templates to install applications on the Subutai P2P Cloud Platform</p>
+			<div class="btnWrap">
+				<a href="#" class="btn">Product Details</a>
+				<a href="#" class="btn">Blueprints on Github</a>
+			</div>
+		</div>
+	</div>
+	<div class="prodSection-label">
+        <p>software</p>
+        <hr>
+    </div>
+	<div class="prodWrap">
+		<div class="prodImg-wrap">
+			<img src="user/pages/images/icon-khan-md-shadow.png" alt="KHAN">
+		</div>
+		<div class="prodInfo-wrap">
+			<h2>KHAN</h2>
+			<p>An Ethereum blockchain-based reserve currency and staking token of the Subutai platform.</p>
+			<div class="btnWrap">
+				<a href="#" class="btn">Product Details</a>
+				<a href="#" class="btn">Download White Paper (PDF)</a>
+			</div>
+		</div>
+	</div>
 
-### Create a New Page
+</section>
 
-Creating a new page is a simple affair in **Grav**.  Simply follow these simple steps:
+<!-- <section class="smallContainer videoWrap">
 
-1. Navigate to your pages folder: `user/pages/` and create a new folder.  In this example, we will use [explicit default ordering](http://learn.getgrav.org/content/content-pages) and call the folder `03.mypage`.
-2. Launch your text editor and paste in the following sample code:
+</section> -->
 
-        ---
-        title: My New Page
-        ---
-        # My New Page!
-
-        This is the body of **my new page** and I can easily use _Markdown_ syntax here.
-
-3. Save this file in the `user/pages/03.mypage/` folder as `default.md`. This will tell **Grav** to render the page using the **default** template.
-4. That is it! Reload your browser to see your new page in the menu.
-
-! NOTE: The page will automatically show up in the Menu after the "Home" menu item. If you wish to change the name that shows up in the Menu, simple add: `menu: My Page` between the dashes in the page content. This is called the YAML front matter, and it is where you configure page-specific options.

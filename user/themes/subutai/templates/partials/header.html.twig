@@ -1,0 +1,114 @@
+<header>
+    <div class="container">
+        <div class="logoWrap">
+            <img src="user/pages/images/logo-subutai-web-mono-white.png">
+        </div>
+        <div class="menuWrap">
+            <nav id="socialNav">
+                <ul>
+                    <li>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fab fa-reddit-alien"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fab fa-telegram-plane"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fab fa-slack-hash"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    </li>
+                </ul>
+            </nav>
+            <nav id="mainMenu" class="topNav">
+
+                {# <div class="topnav" id="myTopnav"> #}
+                <div class="dropdown">
+                    <button class="dropbtn">Products <i class="fa fa-caret-down"></i></button>
+                    <div class="dropdown-content">
+                    <a href="#">Router</a>
+                    <a href="#">PeerOS</a>
+                    <a href="#">Bazaar</a>
+                    <a href="#">Blueprints</a>
+                    <a href="#">KHAN</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">About <i class="fa fa-caret-down"></i></button>
+                    <div class="dropdown-content">
+                    <a href="#">Leadership</a>
+                    <a href="#">Team</a>
+                    </div>
+                </div>
+                <a href="#contact">Getting Started</a>
+                <a href="#contact">Documentation</a>
+                <div class="dropdown">
+                    <button class="dropbtn">Ideation <i class="fa fa-caret-down"></i></button>
+                    <div class="dropdown-content">
+                    <a href="#">Blog</a>
+                    <a href="#">Hardware Security</a>
+                    <a href="#">P2P Cloud</a>
+                    </div>
+                </div>
+                <a href="#contact">Documentation</a>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+
+
+                {# <ul>
+                    {% macro nav_loop(page) %}
+                        {% for p in page.children.visible %}
+                            {% set active_page = (p.active or p.activeChild) ? 'active' : '' %}
+                            {% if p.children.visible.count > 0 %}
+                                <li>
+                                    <a href="{{ p.url }}" class="{{ active_page }}">
+                                        {{ p.menu }}
+                                    </a>
+                                    <ul>
+                                        {{ _self.nav_loop(p) }}
+                                    </ul>
+                                </li>
+                            {% else %}
+                                <li>
+                                    <a href="{{ p.url }}" class="{{ active_page }}">
+                                        {{ p.menu }}
+                                    </a>
+                                </li>
+                            {% endif %}
+                        {% endfor %}
+                    {% endmacro %}
+
+                    <ul {{ tree ? 'class="tree"' : '' }}>
+                        {{ _self.nav_loop(pages) }}
+                    </ul> #}
+                    {# <li>
+                        <a href="#">Products</a>
+                    </li>
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                    <li>
+                        <a href="#">Getting Started</a>
+                    </li>
+                    <li>
+                        <a href="#">Documentation</a>
+                    </li>
+                    <li>
+                        <a href="#">Ideation</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li> #}
+                {# </ul> #}
+            </nav>
+        </div>
+    </div>
+</header>

@@ -1,0 +1,31 @@
+@import 'footer';
+@import 'header';
+@import 'grid';
+@import 'typography';
+@import 'images';
+@import 'links-buttons';
+
+body, html, {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+body, html {
+    height: 100%;
+}
+
+@media (min-width: 480px) {
+
+}
+
+@media (min-width: 768px) {
+	
+}
+
+@media (min-width: 992px) {
+	
+}
+
+@media (min-width: 1200px) {
+	
+}
