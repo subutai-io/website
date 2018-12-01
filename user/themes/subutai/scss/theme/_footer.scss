@@ -2,8 +2,12 @@
 footer {
     width: 100%;
     background: #131F33;
+    margin-top: 60px;
+    .container {
+        flex-wrap: wrap;
+    }
     .footerRow:first-child {
-        padding-top: 40px;
+        // padding-top: 40px;
         width: 800px;
         margin: 0 auto;
         display: flex;
@@ -94,7 +98,7 @@ footer {
     }
     .footerRow:last-child {
         width: 100%;
-        padding: 80px 0 20px 0;
+        padding-top: 80px;
         .logoWrap {
             width: 180px;
             margin: 0 auto;

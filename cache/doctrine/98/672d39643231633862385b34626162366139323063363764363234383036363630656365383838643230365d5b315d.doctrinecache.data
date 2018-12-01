@@ -1,0 +1,22 @@
+1544167211
+a:2:{s:7:"content";s:1942:"<div class="banner">
+<h1>Subutai™ PeerOS v7.0</h1>
+<p>Container-based, Open Source Cloud and IoT Software and Firmware</p>
+<div class="arrowDown">
+<a href="#"><i class="fas fa-chevron-down"></i></a>
+</div>
+</div>
+<div class="container">
+<pre><code>&lt;div class="halfCol"&gt;
+    &lt;p&gt;Subutai™ PeerOS is Open Source, container-based Peer-to-Peer (P2P) Cloud and Internet of Things (IoT) software and firmware. Subutai opens the $760B Cloud and IoT ecosystem through decentralized, self-adaptive, and cost efficient infrastructure that connects end users and devices more effectively along the continuum.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="halfCol videoWrap"&gt;
+    &lt;iframe width="560" height="315" src="https://www.youtube.com/embed/LoL78YR178U?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;</code></pre>
+</div>
+<div class="smallContainer">
+<pre><code>&lt;div class="textBlock"&gt;
+    &lt;p&gt;Subutai’s Cloud software stack is mature (v7.0), easy-to-deploy, proven, and can be immediately applied across countless application areas, both commercially and privately. Market highlights include the global telecom industry, Web Hosting/ISP market, research centers, national social security and welfare data centers, medical centers, universities, laboratories, smart cities, vehicle networks, and more.&lt;/p&gt;
+    &lt;p&gt;Subutai disrupts and democratizes the Cloud, allowing peers to create secure virtual private cloud environments across idle computer resources. In addition, Subutai PeerOS efficiently and securely connects devices, the IoT, on the periphery of the Internet to cloud applications which may also run on the edge or in data centers. Subutai’s adaptive resource provisioning uses machine learning and analytics to optimally place resources to meet the needs of the applications running in P2P clouds.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+</div>";s:12:"content_meta";N;}

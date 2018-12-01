@@ -1,0 +1,126 @@
+// blueprints page table
+#blueprintsTable {
+    display: none;
+    .tableRow {    
+        .curveArrow {
+            height: 100%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+            padding: 0 10px;
+            img {
+                display: block;
+                height: 55%;
+            }
+        }
+        h5 {
+            color: #FFF;
+            background: #04346E;
+        }
+    }
+}
+// downloads tabs - getting started page
+.tabsWrap {
+    width: 100%;
+    .tab {
+        display: flex;
+        width: 100%;
+        margin-top: 20px;
+        margin-bottom: 40px;
+        overflow: hidden;
+        .tabLinks {
+            flex-grow: 1;
+            box-sizing: border-box;
+            margin: 0 10px;
+        }
+        .btn {
+            font-size: 1.25rem;
+            color: #078DD0;
+            background: transparent;
+            padding: 10px 0;
+            border: 2px solid #078DD0;
+        }
+    }
+}
+.tabcontent {
+    display: none;
+}
+@media (min-width: 480px) {
+	
+}
+
+@media (min-width: 768px) {
+    
+}
+
+@media (min-width: 992px) {
+    #blueprintsTable {
+        margin: 40px auto;
+        display: flex;
+        flex-wrap: wrap;
+        width: 800px;
+        height: 270px;
+        .tableRow {
+            width: 100%;
+            height: 90px;
+            display: flex;
+            flex-wrap: wrap;
+            .curveArrow {
+                width: 90px;
+                padding-bottom: 10px;
+                box-sizing: border-box;
+            }
+            h5 {
+                width: 120px;
+                font-size: 1.5rem;
+                margin: 0;
+                height: 100%;
+                color: #FFF;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+            }
+            p {
+                background: #FFF;
+                width: calc(100% - 210px);
+                font-size: 1.25rem;
+                margin: 0;
+                border: 1px solid #04346E;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                padding: 0 20px;
+            }
+        }
+        .tableRow:first-child {
+            .curveArrow {
+                width: 240px;
+            }
+            p {
+                // width: calc(100% - 360px);
+                width: calc(100% - 402px);
+            }
+        }
+        .tableRow:nth-child(2) {
+            .curveArrow {
+                width: 120px;
+            }
+            p {
+                // width: calc(100% - 240px);
+                width: calc(100% - 282px);
+                border-top: transparent;
+            }
+        }
+        .tableRow:last-child {
+            p {
+                width: calc(100% - 162px);
+                // width: calc(100% - 120px);
+                border-top: transparent;
+            }
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+}

@@ -1,7 +1,8 @@
 <header>
     <div class="container">
         <div class="logoWrap">
-            <img src="user/pages/images/logo-subutai-web-mono-white.png">
+            {# <img src="user/pages/images/logo-subutai-web-mono-white.png"> #}
+            <a href="{{ base_url }}"><img src="{{ base_url }}/images/logo-subutai-web-mono-white.png"></a>
         </div>
         <div class="menuWrap">
             <nav id="socialNav">
@@ -35,31 +36,31 @@
                 <div class="dropdown">
                     <button class="dropbtn">Products <i class="fa fa-caret-down"></i></button>
                     <div class="dropdown-content">
-                    <a href="#">Router</a>
-                    <a href="#">PeerOS</a>
-                    <a href="#">Bazaar</a>
-                    <a href="#">Blueprints</a>
-                    <a href="#">KHAN</a>
+                    <a href="{{ base_url }}/products/subutai-router">Router</a>
+                    <a href="{{ base_url }}/products/subutai-peeros">PeerOS</a>
+                    <a href="{{ base_url }}/products/subutai-bazaar">Bazaar</a>
+                    <a href="{{ base_url }}/products/subutai-blueprints">Blueprints</a>
+                    <a href="{{ base_url }}/products/khan">KHAN</a>
                     </div>
                 </div>
                 <div class="dropdown">
                     <button class="dropbtn">About <i class="fa fa-caret-down"></i></button>
                     <div class="dropdown-content">
-                    <a href="#">Leadership</a>
-                    <a href="#">Team</a>
+                    <a href="{{ base_url }}/about/leadership">Leadership</a>
+                    <a href="{{ base_url }}/about/team">Team</a>
                     </div>
                 </div>
-                <a href="#contact">Getting Started</a>
+                <a href="{{  base_url }}/getting-started">Getting Started</a>
                 <a href="#contact">Documentation</a>
                 <div class="dropdown">
                     <button class="dropbtn">Ideation <i class="fa fa-caret-down"></i></button>
                     <div class="dropdown-content">
                     <a href="#">Blog</a>
                     <a href="#">Hardware Security</a>
-                    <a href="#">P2P Cloud</a>
+                    <a href="{{ base_url }}/ideation/p2p-cloud">P2P Cloud</a>
                     </div>
                 </div>
-                <a href="#contact">Documentation</a>
+                <a href="#contact">Contact</a>
                 <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
 
 

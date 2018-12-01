@@ -1,0 +1,22 @@
+1544249796
+a:2:{s:7:"content";s:1973:"<div class="banner">
+<div class="container">
+<h1>Leadership</h1>
+</div>
+</div>
+<section class="container">
+    <div class="textBlock">
+        <p>We are privileged to have had the opportunity to be involved with the industry’s most respected pioneers and influencers such as Sir Tim Berners-Lee, Linus Torvalds, The Apache Software Foundation, and the World Wide Web Consortium.</p>
+        <p>We are passionate visionaries, entrepreneurs, inventors, and advocates. Our products are used by billions, from Fortune 10 enterprises to space exploration and beyond. It’s an honor to bring the future of the Cloud and IoT/edge computing to the world.</p>
+    </div>
+</section>
+<section class="container">
+    <div class="halfCol">
+        <figure>
+            <img src="../images/alex.jpg" alt="Alex Karasulu">
+        </figure>
+        <h2>Alex Karasulu</h2>
+        <small>FOUNDER / CHIEF EXECUTIVE OFFICER</small>
+        <p>Alex Karasulu is an entrepreneur with over 25 years of experience in the software industry and a recognized leader in the open source community. He is widely known as the original author of the Apache Directory Server, used by IBM both as the foundation of the Rational Directory Server and also integrated into the Websphere Application Server. Alex co-founded several Apache projects, including MINA, Felix and Karaf, among others, which, along with their communities, thrive independently past his day-to-day involvement in the projects. He is the founder of Safehaus, where he authored the first low-resource mobile OTP algorithms in open source with the OATH community that was later adopted by Google in their Authenticator product. In addition to IBM, Atlassian, Cisco, and Polycom are just a few of the many companies that sell commercial hardware and software solutions that bundle or embed software and products that Alex has created. Alex holds a BSc. in Computer Science and Physics from Columbia University.</p>
+    </div>
+</section>";s:12:"content_meta";N;}

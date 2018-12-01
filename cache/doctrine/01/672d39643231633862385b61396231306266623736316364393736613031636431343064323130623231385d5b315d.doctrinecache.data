@@ -1,0 +1,22 @@
+1544194859
+a:2:{s:7:"content";s:1221:"<div class="banner">
+<h1>Subutai™ Blueprints</h1>
+<div class="arrowDown">
+<a href="#"><i class="fas fa-chevron-down"></i></a>
+</div>
+</div>
+<div class="container">
+    <div class="textBlock">
+        <p>Reduce system administration overheads and simplify the process of distributed application development. Subutai’s free blueprints provide an all-inclusive developer environment for specifying general instructions to automate P2P distributed application (dApp) management tasks (installing, updating, maintaining, etc.). Subutai blueprints are available in the Subutai Bazaar at bazaar.subutai.io (registration required), and are released under Apache License v2.0.</p>
+    </div>
+    <div class="topicWrap">
+        <h4>Popular Subutai blueprints include:</h4>
+        <ul>
+            <li>
+<a href="#">Subutai™ Bazaar</a> — a marketplace to buy/sell/exchange/barter computing resources and other applications. <a href="#">Experience the Bazaar.</a>
+</li>
+            <li>
+<a href="#">Subutai™ Blockchain Router</a> — power-efficient “green” broadband Cloud router and open hardware IoT gateway that serves as a plug-and-play cryptocurrency wallet and mining device</li>
+        </ul>
+    </div>
+</div>";s:12:"content_meta";N;}

@@ -19,7 +19,13 @@ class __TwigTemplate_791a14829a2c97c8bf965f6cfa8b06ad32af890eef136c599d98841e937
         echo "<header>
     <div class=\"container\">
         <div class=\"logoWrap\">
-            <img src=\"user/pages/images/logo-subutai-web-mono-white.png\">
+            ";
+        // line 5
+        echo "            <a href=\"";
+        echo ($context["base_url"] ?? null);
+        echo "\"><img src=\"";
+        echo ($context["base_url"] ?? null);
+        echo "/images/logo-subutai-web-mono-white.png\"></a>
         </div>
         <div class=\"menuWrap\">
             <nav id=\"socialNav\">
@@ -50,44 +56,71 @@ class __TwigTemplate_791a14829a2c97c8bf965f6cfa8b06ad32af890eef136c599d98841e937
             <nav id=\"mainMenu\" class=\"topNav\">
 
                 ";
-        // line 35
+        // line 36
         echo "                <div class=\"dropdown\">
                     <button class=\"dropbtn\">Products <i class=\"fa fa-caret-down\"></i></button>
                     <div class=\"dropdown-content\">
-                    <a href=\"#\">Router</a>
-                    <a href=\"#\">PeerOS</a>
-                    <a href=\"#\">Bazaar</a>
-                    <a href=\"#\">Blueprints</a>
-                    <a href=\"#\">KHAN</a>
+                    <a href=\"";
+        // line 39
+        echo ($context["base_url"] ?? null);
+        echo "/products/subutai-router\">Router</a>
+                    <a href=\"";
+        // line 40
+        echo ($context["base_url"] ?? null);
+        echo "/products/subutai-peeros\">PeerOS</a>
+                    <a href=\"";
+        // line 41
+        echo ($context["base_url"] ?? null);
+        echo "/products/subutai-bazaar\">Bazaar</a>
+                    <a href=\"";
+        // line 42
+        echo ($context["base_url"] ?? null);
+        echo "/products/subutai-blueprints\">Blueprints</a>
+                    <a href=\"";
+        // line 43
+        echo ($context["base_url"] ?? null);
+        echo "/products/khan\">KHAN</a>
                     </div>
                 </div>
                 <div class=\"dropdown\">
                     <button class=\"dropbtn\">About <i class=\"fa fa-caret-down\"></i></button>
                     <div class=\"dropdown-content\">
-                    <a href=\"#\">Leadership</a>
-                    <a href=\"#\">Team</a>
+                    <a href=\"";
+        // line 49
+        echo ($context["base_url"] ?? null);
+        echo "/about/leadership\">Leadership</a>
+                    <a href=\"";
+        // line 50
+        echo ($context["base_url"] ?? null);
+        echo "/about/team\">Team</a>
                     </div>
                 </div>
-                <a href=\"#contact\">Getting Started</a>
+                <a href=\"";
+        // line 53
+        echo ($context["base_url"] ?? null);
+        echo "/getting-started\">Getting Started</a>
                 <a href=\"#contact\">Documentation</a>
                 <div class=\"dropdown\">
                     <button class=\"dropbtn\">Ideation <i class=\"fa fa-caret-down\"></i></button>
                     <div class=\"dropdown-content\">
                     <a href=\"#\">Blog</a>
                     <a href=\"#\">Hardware Security</a>
-                    <a href=\"#\">P2P Cloud</a>
+                    <a href=\"";
+        // line 60
+        echo ($context["base_url"] ?? null);
+        echo "/ideation/p2p-cloud\">P2P Cloud</a>
                     </div>
                 </div>
-                <a href=\"#contact\">Documentation</a>
+                <a href=\"#contact\">Contact</a>
                 <a href=\"javascript:void(0);\" class=\"icon\" onclick=\"myFunction()\">&#9776;</a>
 
 
                 ";
-        // line 92
+        // line 93
         echo "                    ";
-        // line 110
-        echo "                ";
         // line 111
+        echo "                ";
+        // line 112
         echo "            </nav>
         </div>
     </div>
@@ -99,9 +132,14 @@ class __TwigTemplate_791a14829a2c97c8bf965f6cfa8b06ad32af890eef136c599d98841e937
         return "partials/header.html.twig";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  91 => 111,  89 => 110,  87 => 92,  54 => 35,  19 => 1,);
+        return array (  124 => 112,  122 => 111,  120 => 93,  110 => 60,  100 => 53,  94 => 50,  90 => 49,  81 => 43,  77 => 42,  73 => 41,  69 => 40,  65 => 39,  60 => 36,  24 => 5,  19 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -117,7 +155,8 @@ class __TwigTemplate_791a14829a2c97c8bf965f6cfa8b06ad32af890eef136c599d98841e937
         return new Twig_Source("<header>
     <div class=\"container\">
         <div class=\"logoWrap\">
-            <img src=\"user/pages/images/logo-subutai-web-mono-white.png\">
+            {# <img src=\"user/pages/images/logo-subutai-web-mono-white.png\"> #}
+            <a href=\"{{ base_url }}\"><img src=\"{{ base_url }}/images/logo-subutai-web-mono-white.png\"></a>
         </div>
         <div class=\"menuWrap\">
             <nav id=\"socialNav\">
@@ -151,31 +190,31 @@ class __TwigTemplate_791a14829a2c97c8bf965f6cfa8b06ad32af890eef136c599d98841e937
                 <div class=\"dropdown\">
                     <button class=\"dropbtn\">Products <i class=\"fa fa-caret-down\"></i></button>
                     <div class=\"dropdown-content\">
-                    <a href=\"#\">Router</a>
-                    <a href=\"#\">PeerOS</a>
-                    <a href=\"#\">Bazaar</a>
-                    <a href=\"#\">Blueprints</a>
-                    <a href=\"#\">KHAN</a>
+                    <a href=\"{{ base_url }}/products/subutai-router\">Router</a>
+                    <a href=\"{{ base_url }}/products/subutai-peeros\">PeerOS</a>
+                    <a href=\"{{ base_url }}/products/subutai-bazaar\">Bazaar</a>
+                    <a href=\"{{ base_url }}/products/subutai-blueprints\">Blueprints</a>
+                    <a href=\"{{ base_url }}/products/khan\">KHAN</a>
                     </div>
                 </div>
                 <div class=\"dropdown\">
                     <button class=\"dropbtn\">About <i class=\"fa fa-caret-down\"></i></button>
                     <div class=\"dropdown-content\">
-                    <a href=\"#\">Leadership</a>
-                    <a href=\"#\">Team</a>
+                    <a href=\"{{ base_url }}/about/leadership\">Leadership</a>
+                    <a href=\"{{ base_url }}/about/team\">Team</a>
                     </div>
                 </div>
-                <a href=\"#contact\">Getting Started</a>
+                <a href=\"{{  base_url }}/getting-started\">Getting Started</a>
                 <a href=\"#contact\">Documentation</a>
                 <div class=\"dropdown\">
                     <button class=\"dropbtn\">Ideation <i class=\"fa fa-caret-down\"></i></button>
                     <div class=\"dropdown-content\">
                     <a href=\"#\">Blog</a>
                     <a href=\"#\">Hardware Security</a>
-                    <a href=\"#\">P2P Cloud</a>
+                    <a href=\"{{ base_url }}/ideation/p2p-cloud\">P2P Cloud</a>
                     </div>
                 </div>
-                <a href=\"#contact\">Documentation</a>
+                <a href=\"#contact\">Contact</a>
                 <a href=\"javascript:void(0);\" class=\"icon\" onclick=\"myFunction()\">&#9776;</a>
 
 

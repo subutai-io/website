@@ -1,0 +1,50 @@
+1544196533
+a:2:{s:7:"content";s:2411:"<div class="banner">
+<h1>Subutai™ Blueprints</h1>
+<div class="arrowDown">
+<a href="#"><i class="fas fa-chevron-down"></i></a>
+</div>
+</div>
+<div class="smallContainer">
+    <div class="textBlock">
+        <p>Reduce system administration overheads and simplify the process of distributed application development. Subutai’s free blueprints provide an all-inclusive developer environment for specifying general instructions to automate P2P distributed application (dApp) management tasks (installing, updating, maintaining, etc.). Subutai blueprints are available in the Subutai Bazaar at bazaar.subutai.io (registration required), and are released under Apache License v2.0.</p>
+    </div>
+    <div class="topicWrap">
+        <h4>Popular Subutai blueprints include:</h4>
+        <!-- blockchain in a box -->
+        <div class="itemRow">
+            <figure>
+                <img src="../images/blueprint-blockchain-in-a-box.gif">
+            </figure>
+            <p><b>Blockchain-in-a-Box</b> – write Smart Contracts in minutes without having to deal with obtaining testnet Ether (the cryptocurrency fueling the Ethereum network). <a href="#">Learn more</a></p>
+        </div>
+        <!-- IoT sandbox -->
+        <div class="itemRow">
+            <figure>
+                <img src="../images/blueprint-iot-sandbox.jpg">
+            </figure>
+            <p><b>IoT Sandbox</b> - easily store and visualize IoT data on the edge. <a href="#">Learn more</a></p>
+        </div>
+        <!-- nextcloud -->
+        <div class="itemRow">
+            <figure>
+                <img src="../images/blueprint-nextcloud.png">
+            </figure>
+            <p><b>Nextcloud</b> - access and manage your files with free, flexible, secure cloud storage. <a href="#">Learn more</a></p>
+        </div>
+        <!-- gitlab -->
+        <div class="itemRow">
+            <figure>
+                <img src="../images/blueprint-gitlab.png">
+            </figure>
+            <p><b>GitLab</b> - deploy and manage GitLab repositories on peer-to-peer clouds. <a href="#">Learn more</a></p>
+        </div>
+        <!-- minecraft -->
+        <div class="itemRow">
+            <figure>
+                <img src="../images/blueprint-minecraft.jpg">
+            </figure>
+            <p><b>Minecraft</b> - play Minecraft on your own global private network game server. <a href="#">Learn more</a></p>
+        </div>
+    </div>
+</div>";s:12:"content_meta";N;}

@@ -1,0 +1,57 @@
+// .banner {
+//     display: flex;
+//     flex-wrap: wrap;
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: flex-end;
+// }
+
+.banner {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    margin-bottom: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.home {
+    .banner {
+        background-image: url("./../images/SubutaiHeroImageV7.jpg");
+        margin-bottom: 0;
+    }
+}
+.router {
+    .banner {
+        background-image: url("./../images/router-bg.jpg");
+    }
+}
+.peer {
+    .banner {
+        background-image: url("./../images/peeros-banner-bg.jpg");
+    }
+}
+.bazaar {
+    .banner {
+        background-image: url("./../images/bazaar-banner-bg.jpg");
+    }
+}
+.khan {
+    .banner {
+        background-image: url("./../images/khan-banner-bg.jpg");
+    }
+}
+// title banner
+.get-start, .leadership, .p2p {
+    .banner {
+        background-color: #04346E;
+        background-image: linear-gradient(to bottom right, #04346E, #0758BA);
+        height: 300px;
+        h1 {
+            margin-top: 0;
+            margin-bottom: 40px;
+        }
+    }
+}

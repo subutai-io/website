@@ -74,20 +74,6 @@ header {
         }
     }
 }
-.banner {
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.home {
-    .banner {
-        background-image: url("./../images/SubutaiHeroImageV7.jpg");
-    }
-}
 
 .topNav {
     overflow: hidden;
@@ -97,12 +83,12 @@ header {
   
 .topNav a {
     font-family: myriad-pro, sans-serif;
-    // float: left;
-    display: block;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 1rem;
     color: #FFF;
+    display: flex;
+    align-items: center;
     &:last-child {
         padding-right: 0;
     }
@@ -118,8 +104,13 @@ header {
 }
   
 .dropdown {
-      float: left;
+    float: left;
     overflow: hidden;
+}
+.dropdown:last-child {
+    a:last-child {
+        padding-right: 0;
+    }
 }
   .dropdown .dropbtn {
       font-size: 1rem;    

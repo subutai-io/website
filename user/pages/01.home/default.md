@@ -15,13 +15,9 @@ body_classes: home
 </div>
 <!-- intro text -->
 <div class="darkBg">
-
-<div class="smallContainer">
-
-	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam volutpat velit at ipsum commodo malesuada. Mauris sed eros gravida tortor consequat porta. Praesent lacinia, felis ac ornare eleifend, augue nisl fermentum nunc, ac malesuada orci eros ac justo. Morbi lacinia et erat quis semper. Sed in metus eget quam elementum facilisis. Sed interdum placerat enim, at porta ipsum tristique.</p>
-
-</div>
-
+	<div class="smallContainer">
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam volutpat velit at ipsum commodo malesuada. Mauris sed eros gravida tortor consequat porta. Praesent lacinia, felis ac ornare eleifend, augue nisl fermentum nunc, ac malesuada orci eros ac justo. Morbi lacinia et erat quis semper. Sed in metus eget quam elementum facilisis. Sed interdum placerat enim, at porta ipsum tristique.</p>
+	</div>
 </div>
 <!-- products -->
 <section class="smallContainer" id="prodHome">
@@ -62,7 +58,7 @@ body_classes: home
 	</div>
 	<div class="prodWrap">
 		<div class="prodImg-wrap">
-			<img src="user/pages/images/logo-bazaar-shadow.jpg" alt="Subutai Bazaar">
+			<img src="user/pages/images/logo-bazaar-shadow.png" alt="Subutai Bazaar">
 		</div>
 		<div class="prodInfo-wrap">
 			<h2>Subutai Bazaar</h2>
@@ -88,7 +84,7 @@ body_classes: home
 		</div>
 	</div>
 	<div class="prodSection-label">
-        <p>software</p>
+        <p>cryptocurrency</p>
         <hr>
     </div>
 	<div class="prodWrap">

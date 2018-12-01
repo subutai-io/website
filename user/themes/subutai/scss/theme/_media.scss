@@ -1,0 +1,33 @@
+
+
+.home {
+    .prodWrap {
+        .prodImg-wrap {
+            width: 15%;
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.fullImg {
+    width: 100%;
+    box-shadow: 0 0 40px rgba(0,0,0,.15);
+    img {
+        width: 100%;
+    }
+}
+
+.router {
+    .container {
+        .fullImg {
+            margin: 20px 0 40px 0;
+        }
+    }
+}
+
+figure.halfCol {
+    display: block;
+    margin-top: 25px;
+}

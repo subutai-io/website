@@ -1,0 +1,42 @@
+#leadersWrap {
+    padding: 40px;
+    background: #FAFAFA;
+    box-shadow: 0 0 40px rgba(0,0,0,.15);
+    box-sizing: border-box;
+}
+
+.card {
+    // padding: 60px;
+    // display: flex;
+    // flex-wrap: wrap;
+    // flex-direction: column;
+    text-align: left;
+    margin-top: 40px;
+    &:first-child {
+        margin-top: 0;
+    }
+    figure {
+        padding: 0 30px 5px 0;
+        width: 250px;
+        float: left;
+        img {
+            width: 100%;
+            padding: 0 20px 10px 0;
+            // box-sizing: border-box;
+        }
+    }
+    h2 {
+        margin: 0 0 5px 0;
+        font-size: 1.85rem;
+    }
+    small {
+        font-weight: 500;
+        color: #04346E;
+        font-size: .85rem;
+    }
+    p {
+        // font-size: 1rem;
+        line-height: 1.25;
+        margin-top: 1rem;
+    }
+}

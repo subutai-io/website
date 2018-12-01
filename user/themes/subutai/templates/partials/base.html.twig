@@ -16,8 +16,8 @@
         {# {% do assets.addCss('theme://css-compiled/spectre'~compress) %}
         {% if theme_var('spectre.exp') %}{% do assets.addCss('theme://css-compiled/spectre-exp'~compress)  %}{% endif %}
         {% if theme_var('spectre.icons') %}{%  do assets.addCss('theme://css-compiled/spectre-icons'~compress) %}{% endif %} #}
-        {% do assets.addCss('theme://css-compiled/style.css') %}
         {% do assets.addCss('theme://css/reset.css') %}
+        {% do assets.addCss('theme://css-compiled/style.css') %}
         {# {% do assets.addCss('theme://css/custom.css') %}
         {% do assets.addCss('theme://css/line-awesome.min.css') %} #}
     {% endblock %}
@@ -30,6 +30,7 @@
         {% do assets.addJs('theme://js/jquery.treemenu.js', {group:'bottom'}) %}
         {% do assets.addJs('theme://js/site.js', {group:'bottom'}) %}
         {% do assets.addJs('theme://js/dropdown-menu.js') %}
+        {% do assets.addJs('theme://js/tabs.js') %}
     {% endblock %}
     {{ assets.js() }}
 

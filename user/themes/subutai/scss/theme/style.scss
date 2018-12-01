@@ -2,8 +2,11 @@
 @import 'header';
 @import 'grid';
 @import 'typography';
-@import 'images';
+@import 'media';
 @import 'links-buttons';
+@import 'banner';
+@import 'forms-tables';
+@import 'card';
 
 body, html, {
     margin: 0;
@@ -12,6 +15,9 @@ body, html, {
 }
 body, html {
     height: 100%;
+}
+body {
+    background: #f6f3f2;
 }
 
 @media (min-width: 480px) {

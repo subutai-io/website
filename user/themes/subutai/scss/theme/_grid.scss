@@ -4,6 +4,8 @@
     width: 100%;
     max-width: 1000px;
     margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
 }
 .smallContainer {
     margin: 0 auto;
@@ -11,16 +13,17 @@
     display: flex;
     flex-wrap: wrap;
 }
-.banner {
+.halfCol {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
+    box-sizing: border-box;
 }
 .darkBg {
     width: 100%;
     background: #020E1A;
+    color: #FFF;
+    padding: 80px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -70,7 +73,29 @@
         justify-content: center;
     }
 }
-
+// topic box with row: img + text - Blueprints page
+.topicWrap {
+    .itemRow {
+        height: 120px;
+        margin-top: 40px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        figure {
+            width: 120px;
+            img {
+                width: 100%;
+            }
+        }
+        p {
+            width: calc(100% - 160px);
+        }
+    }
+}
+#leadersWrap.container {
+    justify-content: space-between;
+}
 
 @media (min-width: 480px) {
 
@@ -81,6 +106,20 @@
 }
 
 @media (min-width: 992px) {
+    .container {
+        padding-top: 60px;
+        p {
+            margin-top: 40px;
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+    }
+    .smallContainer {
+        p {
+            margin-top: 40px;
+        }
+    }
 	.home {
         .prodWrap {
             margin-bottom: 100px;
@@ -92,6 +131,12 @@
                 }
             }
         }
+    }
+    .halfCol {
+        width: calc(50% - 20px);
+    }
+    .router .container {
+        justify-content: space-between;
     }
 }
 

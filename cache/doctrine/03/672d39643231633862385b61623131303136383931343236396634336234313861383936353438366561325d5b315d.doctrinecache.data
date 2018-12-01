@@ -1,0 +1,26 @@
+1544209546
+a:2:{s:7:"content";s:1195:"<div class="banner">
+<h1>KHAN</h1>
+<p>The Ethereum blockchain-based reserve currency and staking token of the Subutai Platform</p>
+<div class="arrowDown">
+<a href="#"><i class="fas fa-chevron-down"></i></a>
+</div>
+</div>
+<div class="container">
+    <figure class="halfCol">
+        <img src="../images/khan-helmet.png">
+    </figure>
+    <div class="topicWrap halfCol">
+        <ul>
+            <li>Simple Ethereum Blockchain token (fixed money supply)</li>
+            <li>Default and ubiquitous across Subutai Bazaars</li>
+            <li>Utility token to enable commercial Open Source and more</li>
+            <li>Platform reserve currency across ISPs like the US Dollar</li>
+            <li>For provider and consumer reputation “staking” via service level agreement (SLA) escrows</li>
+            <li>Escrowed KHAN interest rate earns GoodWill</li>
+            <li>Direct exchange with automated SIPS market maker for GoodWill</li>
+            <li>Exchange rates protect the KHAN from inflationary forces in GoodWill monetary policies (incentivization) needed to stimulate market growth</li>
+            <li>The KHAN protects providers and consumers</li>
+        </ul>
+    </div>
+</div>";s:12:"content_meta";N;}

@@ -1,0 +1,14 @@
+1544256168
+a:2:{s:7:"content";s:1513:"<div class="banner">
+<div class="container">
+<h1>Peer-to-Peer (P2P) Cloud Computing</h1>
+</div>
+</div>
+<section class="container">
+    <div class="textBlock">
+        <p>P2P is all about sharing, and sharing is a social activity. Sharing, in even small groups, has its advantages. However sharing en masse could lead to amazing achievements. Socialized computing services where you contribute resources to participate could have a profound impact on our lives and on the way we use the Internet.</p>
+    </div>
+    <h2>Content Distribution</h2>
+    <div class="textBlock">
+        <p>Content distribution as a collective service is already possible with Subutai. Environment templates, Debian packages, or just about any kind of file, for common infrastructure or for your applications are distributable via P2P file sharing across peers. Subutai's CDN (content distribution network) lets you publicly publish, or privately share files using global or exclusive swarms respectively.The verified site and content hosting service built into the Subutai Bazaar allows for safe content distribution across peers dynamically based on where on the Internet that data is needed most.​ Currently we're researching ways to go a step further. We have been looking at providing generalized content distribution in the form of a distributed file system. We are investigating the integration of various file systems which could adapt well to the P2P model like the Interplanetary File System (IPFS).</p>
+    </div></section>";s:12:"content_meta";N;}

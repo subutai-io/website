@@ -1,0 +1,21 @@
+1544195720
+a:2:{s:7:"content";s:1158:"<div class="banner">
+<h1>Subutai™ Blueprints</h1>
+<div class="arrowDown">
+<a href="#"><i class="fas fa-chevron-down"></i></a>
+</div>
+</div>
+<div class="container">
+    <div class="textBlock">
+        <p>Reduce system administration overheads and simplify the process of distributed application development. Subutai’s free blueprints provide an all-inclusive developer environment for specifying general instructions to automate P2P distributed application (dApp) management tasks (installing, updating, maintaining, etc.). Subutai blueprints are available in the Subutai Bazaar at bazaar.subutai.io (registration required), and are released under Apache License v2.0.</p>
+    </div>
+    <div class="topicWrap">
+        <h4>Popular Subutai blueprints include:</h4>
+        <div class="itemRow">
+            <figure>
+                <img src="../images/blueprint-blockchain-in-a-box.gif">
+            </figure>
+            <p><b>Blockchain-in-a-Box</b> – write Smart Contracts in minutes without having to deal with obtaining testnet Ether (the cryptocurrency fueling the Ethereum network). <a href="#">learn more</a></p>
+        </div>
+    </div>
+</div>";s:12:"content_meta";N;}

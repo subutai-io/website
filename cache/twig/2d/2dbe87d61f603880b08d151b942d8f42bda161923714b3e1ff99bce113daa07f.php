@@ -28,28 +28,28 @@ class __TwigTemplate_aeacb3dbfcfe147a7c18f5b039f0308f770a5b34cfacbdb2ac8b6e8d26f
 ";
         // line 4
         $this->displayBlock('head', $context, $blocks);
-        // line 37
+        // line 38
         echo "</head>
 
 <body class=\"";
-        // line 39
+        // line 40
         echo $this->getAttribute($this->getAttribute(($context["page"] ?? null), "header", array()), "body_classes", array());
         echo "\">
 
 ";
-        // line 41
-        $this->loadTemplate("partials/header.html.twig", "partials/base.html.twig", 41)->display($context);
         // line 42
+        $this->loadTemplate("partials/header.html.twig", "partials/base.html.twig", 42)->display($context);
+        // line 43
         echo "
 ";
-        // line 43
+        // line 44
         echo $this->getAttribute(($context["page"] ?? null), "content", array());
         echo "
 
 ";
-        // line 45
-        $this->loadTemplate("partials/footer.html.twig", "partials/base.html.twig", 45)->display($context);
         // line 46
+        $this->loadTemplate("partials/footer.html.twig", "partials/base.html.twig", 46)->display($context);
+        // line 47
         echo "
 </body>
 
@@ -93,7 +93,7 @@ class __TwigTemplate_aeacb3dbfcfe147a7c18f5b039f0308f770a5b34cfacbdb2ac8b6e8d26f
     ";
         // line 28
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 34
+        // line 35
         echo "    ";
         echo $this->getAttribute(($context["assets"] ?? null), "js", array(), "method");
         echo "
@@ -108,10 +108,10 @@ class __TwigTemplate_aeacb3dbfcfe147a7c18f5b039f0308f770a5b34cfacbdb2ac8b6e8d26f
         echo "        ";
         // line 19
         echo "        ";
-        $this->getAttribute(($context["assets"] ?? null), "addCss", array(0 => "theme://css-compiled/style.css"), "method");
+        $this->getAttribute(($context["assets"] ?? null), "addCss", array(0 => "theme://css/reset.css"), "method");
         // line 20
         echo "        ";
-        $this->getAttribute(($context["assets"] ?? null), "addCss", array(0 => "theme://css/reset.css"), "method");
+        $this->getAttribute(($context["assets"] ?? null), "addCss", array(0 => "theme://css-compiled/style.css"), "method");
         // line 21
         echo "        ";
         // line 23
@@ -134,6 +134,9 @@ class __TwigTemplate_aeacb3dbfcfe147a7c18f5b039f0308f770a5b34cfacbdb2ac8b6e8d26f
         echo "        ";
         $this->getAttribute(($context["assets"] ?? null), "addJs", array(0 => "theme://js/dropdown-menu.js"), "method");
         // line 33
+        echo "        ";
+        $this->getAttribute(($context["assets"] ?? null), "addJs", array(0 => "theme://js/tabs.js"), "method");
+        // line 34
         echo "    ";
     }
 
@@ -149,7 +152,7 @@ class __TwigTemplate_aeacb3dbfcfe147a7c18f5b039f0308f770a5b34cfacbdb2ac8b6e8d26f
 
     public function getDebugInfo()
     {
-        return array (  137 => 33,  134 => 32,  131 => 31,  128 => 30,  125 => 29,  122 => 28,  118 => 23,  116 => 21,  113 => 20,  110 => 19,  108 => 16,  105 => 15,  97 => 34,  95 => 28,  87 => 24,  85 => 15,  82 => 14,  80 => 13,  77 => 11,  66 => 6,  63 => 5,  60 => 4,  53 => 46,  51 => 45,  46 => 43,  43 => 42,  41 => 41,  36 => 39,  32 => 37,  30 => 4,  25 => 2,  22 => 1,);
+        return array (  140 => 34,  137 => 33,  134 => 32,  131 => 31,  128 => 30,  125 => 29,  122 => 28,  118 => 23,  116 => 21,  113 => 20,  110 => 19,  108 => 16,  105 => 15,  97 => 35,  95 => 28,  87 => 24,  85 => 15,  82 => 14,  80 => 13,  77 => 11,  66 => 6,  63 => 5,  60 => 4,  53 => 47,  51 => 46,  46 => 44,  43 => 43,  41 => 42,  36 => 40,  32 => 38,  30 => 4,  25 => 2,  22 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -180,8 +183,8 @@ class __TwigTemplate_aeacb3dbfcfe147a7c18f5b039f0308f770a5b34cfacbdb2ac8b6e8d26f
         {# {% do assets.addCss('theme://css-compiled/spectre'~compress) %}
         {% if theme_var('spectre.exp') %}{% do assets.addCss('theme://css-compiled/spectre-exp'~compress)  %}{% endif %}
         {% if theme_var('spectre.icons') %}{%  do assets.addCss('theme://css-compiled/spectre-icons'~compress) %}{% endif %} #}
-        {% do assets.addCss('theme://css-compiled/style.css') %}
         {% do assets.addCss('theme://css/reset.css') %}
+        {% do assets.addCss('theme://css-compiled/style.css') %}
         {# {% do assets.addCss('theme://css/custom.css') %}
         {% do assets.addCss('theme://css/line-awesome.min.css') %} #}
     {% endblock %}
@@ -194,6 +197,7 @@ class __TwigTemplate_aeacb3dbfcfe147a7c18f5b039f0308f770a5b34cfacbdb2ac8b6e8d26f
         {% do assets.addJs('theme://js/jquery.treemenu.js', {group:'bottom'}) %}
         {% do assets.addJs('theme://js/site.js', {group:'bottom'}) %}
         {% do assets.addJs('theme://js/dropdown-menu.js') %}
+        {% do assets.addJs('theme://js/tabs.js') %}
     {% endblock %}
     {{ assets.js() }}
 

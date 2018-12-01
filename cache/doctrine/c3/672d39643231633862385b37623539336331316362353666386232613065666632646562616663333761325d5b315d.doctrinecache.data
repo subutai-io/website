@@ -1,0 +1,40 @@
+1544218057
+a:2:{s:7:"content";s:1701:"<div class="banner">
+<div class="container">
+<h1>Getting Started</h1>
+</div>
+</div>
+<div class="smallContainer">
+    <h2>To get started with Subutai Bazaar or PeerOS:</h2>
+    <div class="topicWrap">
+        <h6>Register at <a href="#">Subutai Bazaar</a>, our social marketplace for user-administered P2P cloud services</h6>
+        <ul>
+            <li>Create environments on other users' peers</li>
+            <li>Choose the products or applications that you need</li>
+        </ul>
+    </div>
+    <div class="topicWrap">
+        <h6>Install the <a href="#">PeerOS</a>, an open source, P2P (peer-to-peer) Cloud and Internet of Things (IoT) software and firmware</h6>
+        <ul>
+            <li>Set up your computing resources for sharing, rent, or barter</li>
+            <li>Connect IoT devices to cloud applications securely</li>
+        </ul>
+    </div>
+</div>
+<section class="container">
+    <h2>
+<img src="images/logo-bazaar-shadow.png" class="titleIcon">Subutai Bazaar</h2>
+    <div class="topicWrap halfCol">
+        <h4>Quick links</h4>
+        <ul>
+            <li><a href="#">What is Subutai Bazaar</a></li>
+            <li><a href="#">Sign up or log in</a></li>
+            <li>For tasks that require authentication (e.g., adding cloud providers), you need to set up PGP keys. You can use the <a href="#">E2E plugin</a> to easily generate and manage these keys. Other software components are available to facilitate administrative tasks on peers and environments.</li>
+            <li>View the <a href="#">complete documentation</a>
+</li>
+        </ul>
+    </div>
+    <figure class="halfCol">
+        <img style="width: 100%;" src="images/bazaar-panel-03.jpg">
+    </figure>
+</section>";s:12:"content_meta";N;}
