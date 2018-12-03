@@ -21,7 +21,7 @@ body_classes: peer
         <iframe width="560" height="315" src="https://www.youtube.com/embed/LoL78YR178U?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     </div>
 </div>
-<div class="smallContainer">
+<div class="container">
     <div class="textBlock">
         <p>Subutai’s Cloud software stack is mature (v7.0), easy-to-deploy, proven, and can be immediately applied across countless application areas, both commercially and privately. Market highlights include the global telecom industry, Web Hosting/ISP market, research centers, national social security and welfare data centers, medical centers, universities, laboratories, smart cities, vehicle networks, and more.</p>
         <p>Subutai disrupts and democratizes the Cloud, allowing peers to create secure virtual private cloud environments across idle computer resources. In addition, Subutai PeerOS efficiently and securely connects devices, the IoT, on the periphery of the Internet to cloud applications which may also run on the edge or in data centers. Subutai’s adaptive resource provisioning uses machine learning and analytics to optimally place resources to meet the needs of the applications running in P2P clouds.</p>

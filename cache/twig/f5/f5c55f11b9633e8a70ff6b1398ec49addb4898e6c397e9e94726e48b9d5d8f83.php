@@ -111,7 +111,10 @@ class __TwigTemplate_791a14829a2c97c8bf965f6cfa8b06ad32af890eef136c599d98841e937
         echo "/ideation/p2p-cloud\">P2P Cloud</a>
                     </div>
                 </div>
-                <a href=\"#contact\">Contact</a>
+                <a href=\"";
+        // line 63
+        echo ($context["base_url"] ?? null);
+        echo "/contact\">Contact</a>
                 <a href=\"javascript:void(0);\" class=\"icon\" onclick=\"myFunction()\">&#9776;</a>
 
 
@@ -139,7 +142,7 @@ class __TwigTemplate_791a14829a2c97c8bf965f6cfa8b06ad32af890eef136c599d98841e937
 
     public function getDebugInfo()
     {
-        return array (  124 => 112,  122 => 111,  120 => 93,  110 => 60,  100 => 53,  94 => 50,  90 => 49,  81 => 43,  77 => 42,  73 => 41,  69 => 40,  65 => 39,  60 => 36,  24 => 5,  19 => 1,);
+        return array (  127 => 112,  125 => 111,  123 => 93,  116 => 63,  110 => 60,  100 => 53,  94 => 50,  90 => 49,  81 => 43,  77 => 42,  73 => 41,  69 => 40,  65 => 39,  60 => 36,  24 => 5,  19 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -204,7 +207,7 @@ class __TwigTemplate_791a14829a2c97c8bf965f6cfa8b06ad32af890eef136c599d98841e937
                     <a href=\"{{ base_url }}/about/team\">Team</a>
                     </div>
                 </div>
-                <a href=\"{{  base_url }}/getting-started\">Getting Started</a>
+                <a href=\"{{ base_url }}/getting-started\">Getting Started</a>
                 <a href=\"#contact\">Documentation</a>
                 <div class=\"dropdown\">
                     <button class=\"dropbtn\">Ideation <i class=\"fa fa-caret-down\"></i></button>
@@ -214,7 +217,7 @@ class __TwigTemplate_791a14829a2c97c8bf965f6cfa8b06ad32af890eef136c599d98841e937
                     <a href=\"{{ base_url }}/ideation/p2p-cloud\">P2P Cloud</a>
                     </div>
                 </div>
-                <a href=\"#contact\">Contact</a>
+                <a href=\"{{ base_url }}/contact\">Contact</a>
                 <a href=\"javascript:void(0);\" class=\"icon\" onclick=\"myFunction()\">&#9776;</a>
 
 

@@ -28,7 +28,7 @@ body_classes: home
 	<!-- prod item -->
 	<div class="prodWrap">
 		<div class="prodImg-wrap">
-			<img src="user/pages/images/logo-router-shadow.jpg" alt="Subutai Router">
+			<img src="images/logo-router-shadow.png" alt="Subutai Router">
 		</div>
 		<div class="prodInfo-wrap">
 			<h2>Blockchain Router</h2>
@@ -44,7 +44,7 @@ body_classes: home
     </div>
 	<div class="prodWrap">
 		<div class="prodImg-wrap">
-			<img src="user/pages/images/logo-peer-os-web-shadow.jpg" alt="Subutai PeerOS">
+			<img src="images/logo-peer-os-web-shadow.png" alt="Subutai PeerOS">
 		</div>
 		<div class="prodInfo-wrap">
 			<h2>Subutai PeerOS</h2>
@@ -72,7 +72,7 @@ body_classes: home
 	</div>
 	<div class="prodWrap">
 		<div class="prodImg-wrap">
-			<img src="user/pages/images/logo-blueprints-shadow-02.jpg" alt="Subutai Blueprints">
+			<img src="user/pages/images/logo-blueprints-shadow-02.png" alt="Subutai Blueprints">
 		</div>
 		<div class="prodInfo-wrap">
 			<h2>Subutai Blueprints</h2>

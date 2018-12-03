@@ -22,7 +22,8 @@ body_classes: bazaar
     </div>
 </div>
 
-<div class="smallContainer">
+<!-- <div class="smallContainer"> -->
+<div class="container">
     <div class="textBlock">
         <p>Today’s technology landscape is highly inefficient: 90% of the world’s computing resources are wasted. As Internet and Cloud consumers can only currently *purchase* services from providers, the <a href="#">Subutai Bazaar</a> acts as “the Airbnb of computing resources”, leveraging the power of peer economics to enable individual and business users to both buy and sell cloud and IoT services.</p>
         <p>The Subutai Bazaar allows users to register their resources and applications to be found by other users from around the world. Using the Bazaar is cost-effective, as the broker perpetually shops around for best price per performance. Users will be able to utilize smart contracts protected by the blockchain to create service level agreements (SLAs).</p>
@@ -33,7 +34,8 @@ body_classes: bazaar
         <img src="../images/bazaar-panel-globe.jpg">
     </figure>
 </div>
-<div class="smallContainer">
+<!-- <div class="smallContainer"> -->
+<div class="container">
     <div class="textBlock">
         <p>The Bazaar authenticates user resources, enabling individuals and companies to become Economy Operators and instantly form an economy with their existing customer base.</p>
     </div>
@@ -43,7 +45,8 @@ body_classes: bazaar
         <img src="../images/bazaar-panel-02.jpg">
     </figure>
 </div>
-<div class="smallContainer">
+<!-- <div class="smallContainer"> -->
+<div class="container">
     <div class="textBlock">
         <p>Using the Subutai Bazaar, Economy Operators can both sell excess compute resources to their customers and be able to purchase resources from their customers —and benefit by generating revenue from this economy.</p>
     </div>

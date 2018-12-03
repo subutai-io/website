@@ -56,11 +56,11 @@ class __TwigTemplate_f71b644304bb981ffe1670af33c1e01021b41a74e720cf7fd7ba08b39c4
             <div class=\"socialWrap\">
                 <h3>Lorem ipsum dolor sit</h3>
                 <div class=\"destakLinks-wrap\">
-                    <a herf=\"#\">
+                    <a href=\"#\">
                         <i class=\"fab fa-slack-hash\"></i>
                         <p href=\"#\">slack.subutai.io</p>
                     </a>
-                    <a herf=\"#\">
+                    <a href=\"#\">
                         <i class=\"fab fa-telegram-plane\"></i>
                         <p href=\"#\">subutaiKHAN</p>
                     </a>
@@ -165,11 +165,11 @@ class __TwigTemplate_f71b644304bb981ffe1670af33c1e01021b41a74e720cf7fd7ba08b39c4
             <div class=\"socialWrap\">
                 <h3>Lorem ipsum dolor sit</h3>
                 <div class=\"destakLinks-wrap\">
-                    <a herf=\"#\">
+                    <a href=\"#\">
                         <i class=\"fab fa-slack-hash\"></i>
                         <p href=\"#\">slack.subutai.io</p>
                     </a>
-                    <a herf=\"#\">
+                    <a href=\"#\">
                         <i class=\"fab fa-telegram-plane\"></i>
                         <p href=\"#\">subutaiKHAN</p>
                     </a>

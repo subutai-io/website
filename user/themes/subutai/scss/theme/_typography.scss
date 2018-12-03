@@ -13,14 +13,13 @@ p {
 p b {
     font-weight: 500;
 }
-// .textBlock p {
-//     padding: 10px 0;
-    // margin-bottom: 40px;
-// }
 body {
     h1, h2, h3, h4, h5, h6 {
         font-family: 'Maven Pro';
     }
+}
+.textBlock {
+    margin: 0 0 40px 0;
 }
 .banner {
     h1 {
@@ -37,31 +36,12 @@ body {
         font-family: 'Maven Pro';
         line-height: 1.25;
     }
-    .arrowDown {
-        margin-top: 150px;
-        a {
-            margin-top: 50px;
-            font-size: 2.5rem;
-            color: rgba(255,255,255,.6);
-            &:hover {
-                color: rgba(255,255,255,1);
-            }
-        }
-    }
 }
-// .smallContainer {
-//     p {
-//         padding: 80px 0;  
-//         color: #FFF;
-//         font-size: 1.25rem;
-//         line-height: 1.5;
-//         font-weight: 300;
-//     }
-// }
 .prodSection-label {
-    padding: 40px 0 20px 0;
+    padding: 0 0 20px 0;
     width: 100%;
     p {
+        margin-top: 0;
         font-size: 0.875rem;
         text-transform: uppercase;
         padding: 0;
@@ -79,9 +59,11 @@ body {
             color: #04346E;
             font-size: 2rem;
             text-align: left;
+            margin-top: 0;
         }
         p {
-            padding: 20px 0;
+            margin-top: 0;
+            padding: 0 0 20px 0;
             color: #333;
         }
     }
@@ -90,10 +72,12 @@ h2 {
     color: #04346E;
     font-size: 2rem;
     text-align: left;
-    margin-top: 80px;
+    // margin-top: 80px;
     margin-bottom: 1rem;
 }
 h3 {
+    // margin-top: 40px;
+    margin-bottom: 10px;
     font-size: 1.85rem;
     color: #078DD0;
 }
@@ -103,7 +87,7 @@ h4 {
     color: #078DD0;
 }
 h5 {
-    margin-top: 60px;
+    // margin-top: 60px;
     width: 100%;
     text-align: center;
     font-size: 1.5rem;
@@ -120,7 +104,7 @@ footer {
     }
 }
 .topicWrap {
-    margin-top: 40px;
+    // margin-top: 40px;
     padding: 40px;
     background: #FAFAFA;
     box-shadow: 0 0 40px rgba(0,0,0,.15);
@@ -170,8 +154,8 @@ footer {
     }
     ul {
         li {
-            list-style-type: disc;
-            margin: 15px 0 15px 20px;
+            // list-style-type: disc;
+            // margin: 15px 0 15px 20px;
             font-size: 1.15rem;
             line-height: 1.5;
         }

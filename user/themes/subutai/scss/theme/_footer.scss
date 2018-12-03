@@ -5,11 +5,13 @@ footer {
     margin-top: 60px;
     .container {
         flex-wrap: wrap;
+        margin-bottom: 0;
     }
     .footerRow:first-child {
         // padding-top: 40px;
         width: 800px;
         margin: 0 auto;
+        padding-top: 40px;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -33,6 +35,10 @@ footer {
                 height: 40px;
                 font-size: 1.1rem;
                 width: 120px;
+                &:hover {
+                    background: #078DD0;
+                    border: 2px solid #078DD0;
+                }
             }
         }
 
@@ -61,6 +67,9 @@ footer {
                     font-weight: 300;
                     color: #59B7FF;
                     margin-bottom: .85rem;
+                    &:hover {
+                        color: #078DD0;
+                    }
                 }
             }
         }
@@ -92,6 +101,9 @@ footer {
                 a {
                     font-size: 1.5rem;
                     color: #59B7FF;
+                    &:hover {
+                        color: #078DD0;
+                    }
                 }
             }
         }
@@ -99,6 +111,7 @@ footer {
     .footerRow:last-child {
         width: 100%;
         padding-top: 80px;
+        padding-bottom: 40px;
         .logoWrap {
             width: 180px;
             margin: 0 auto;
@@ -121,10 +134,14 @@ footer {
         a {
             color: #59B7FF;
             text-align: center;
+            &:hover {
+                color: #078DD0;
+            }
             i {
                 font-size: 4rem;
             }
             p {
+                margin-top: 0;
                 font-size: .85rem;
             }
         }

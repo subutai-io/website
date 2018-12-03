@@ -4,8 +4,10 @@
     width: 100%;
     max-width: 1000px;
     margin: 0 auto;
+    margin-bottom: 40px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 .smallContainer {
     margin: 0 auto;
@@ -24,6 +26,7 @@
     background: #020E1A;
     color: #FFF;
     padding: 80px 0;
+    margin-bottom: 80px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -93,6 +96,11 @@
         }
     }
 }
+.router {
+    .topicWrap {
+        margin-bottom: 40px;
+    }
+}
 #leadersWrap.container {
     justify-content: space-between;
 }
@@ -107,17 +115,12 @@
 
 @media (min-width: 992px) {
     .container {
-        padding-top: 60px;
+        // padding-top: 60px;
         p {
             margin-top: 40px;
             &:first-child {
                 margin-top: 0;
             }
-        }
-    }
-    .smallContainer {
-        p {
-            margin-top: 40px;
         }
     }
 	.home {
@@ -134,6 +137,7 @@
     }
     .halfCol {
         width: calc(50% - 20px);
+        margin-bottom: 40px;
     }
     .router .container {
         justify-content: space-between;
