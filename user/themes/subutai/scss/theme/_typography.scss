@@ -22,16 +22,17 @@ body {
     margin: 0 0 40px 0;
 }
 .banner {
+    padding: 0 20px;
     h1 {
         text-align: center;
         color: #FFF;
-        font-size: 4rem;
+        font-size: 2.5rem;
         margin-top: 100px;
         margin-bottom: 20px;
     }
     p {
         text-align: center;
-        font-size: 2rem;
+        font-size: 1.25rem;
         color: #FFF;
         font-family: 'Maven Pro';
         line-height: 1.25;
@@ -57,9 +58,9 @@ body {
     .prodInfo-wrap {
         h2 {
             color: #04346E;
-            font-size: 2rem;
+            font-size: 1.85rem;
             text-align: left;
-            margin-top: 0;
+            margin-top: 20px;
         }
         p {
             margin-top: 0;
@@ -68,6 +69,11 @@ body {
         }
     }
 }
+// .prodWrap {
+//     h2, p, .btnWrap {
+//         width: 85%;
+//     }
+// }
 h2 {
     color: #04346E;
     font-size: 2rem;
@@ -181,4 +187,38 @@ ul {
 }
 #moreManifesto {
     display: none;
+    margin-top: 40px;
+}
+
+@media (min-width: 480px) {
+
+}
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 992px) {
+    .banner {
+        h1 {
+            font-size: 4rem;
+        }
+        p {
+            font-size: 2rem;
+        }
+    }
+    .home {
+        .prodInfo-wrap {
+            h2 {
+                color: #04346E;
+                font-size: 2rem;
+                text-align: left;
+                margin-top: 0;
+            }
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+	
 }

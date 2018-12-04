@@ -28,59 +28,86 @@ class __TwigTemplate_f71b644304bb981ffe1670af33c1e01021b41a74e720cf7fd7ba08b39c4
                 <div class=\"menuCol\">
                     <a href=\"#\">products</a>
                     <div class=\"subItems-wrap\">
-                        <a href=\"#\">Router</a>
-                        <a href=\"#\">PeerOS</a>
-                        <a href=\"#\">Bazaar</a>
-                        <a href=\"#\">Blueprints</a>
-                        <a href=\"#\">KHAN</a>
+                        <a href=\"";
+        // line 13
+        echo ($context["base_url"] ?? null);
+        echo "/products/subutai-router\">Router</a>
+                        <a href=\"";
+        // line 14
+        echo ($context["base_url"] ?? null);
+        echo "/products/subutai-peeros\">PeerOS</a>
+                        <a href=\"";
+        // line 15
+        echo ($context["base_url"] ?? null);
+        echo "/products/subutai-bazaar\">Bazaar</a>
+                        <a href=\"";
+        // line 16
+        echo ($context["base_url"] ?? null);
+        echo "/products/subutai-blueprints\">Blueprints</a>
+                        <a href=\"";
+        // line 17
+        echo ($context["base_url"] ?? null);
+        echo "/products/khan\">KHAN</a>
                     </div>
                 </div>
                 <div class=\"menuCol\">
                     <a href=\"#\">about</a>
                     <div class=\"subItems-wrap\">
-                        <a href=\"#\">Leadership</a>
-                        <a href=\"#\">Team</a>
+                        <a href=\"";
+        // line 23
+        echo ($context["base_url"] ?? null);
+        echo "/about/leadership\">Leadership</a>
+                        <a href=\"";
+        // line 24
+        echo ($context["base_url"] ?? null);
+        echo "/about/team\">Team</a>
                     </div>
-                    <a href=\"#\">documentation</a>
-                    <a href=\"#\">getting started</a>
+                    <a href=\"https://docs.subutai.io/\" target=\"_blank\">documentation</a>
+                    <a href=\"";
+        // line 27
+        echo ($context["base_url"] ?? null);
+        echo "/getting-started\">getting started</a>
                 </div>
                 <div class=\"menuCol\">
                     <a href=\"#\">ideation</a>
                     <div class=\"subItems-wrap\">
                         <a href=\"#\">Blog</a>
                         <a href=\"#\">Hardware Security</a>
-                        <a href=\"#\">P2P Cloud</a>
+                        <a href=\"";
+        // line 34
+        echo ($context["base_url"] ?? null);
+        echo "/ideation/p2p-cloud\">P2P Cloud</a>
                     </div>
                 </div>
             </div> <!-- menu wrap -->
             <div class=\"socialWrap\">
                 <h3>Lorem ipsum dolor sit</h3>
                 <div class=\"destakLinks-wrap\">
-                    <a href=\"#\">
+                    <a href=\"https://slack.subutai.io/\" target=\"_blank\">
                         <i class=\"fab fa-slack-hash\"></i>
-                        <p href=\"#\">slack.subutai.io</p>
+                        <p>slack.subutai.io</p>
                     </a>
-                    <a href=\"#\">
+                    <a href=\"https://t.me/SubutaiKHAN\" target=\"_blank\">
                         <i class=\"fab fa-telegram-plane\"></i>
-                        <p href=\"#\">subutaiKHAN</p>
+                        <p>subutaiKHAN</p>
                     </a>
                 </div> <!-- destakLinks-wrap -->
                 <div class=\"socialNav\">
                     <ul>
                         <li>
-                            <a href=\"#\"><i class=\"fab fa-youtube\"></i></a>
+                            <a href=\"https://www.youtube.com/channel/UCISHGzbHjYWYFfu7krnYLkA\" target=\"_blank\"><i class=\"fab fa-youtube\"></i></a>
                         </li>
                         <li>
-                            <a href=\"#\"><i class=\"fab fa-linkedin-in\"></i></a>
+                            <a href=\"https://www.linkedin.com/company/subutai-social-cloud/\" target=\"_blank\"><i class=\"fab fa-linkedin-in\"></i></a>
                         </li>
                         <li>
-                            <a href=\"#\"><i class=\"fab fa-reddit-alien\"></i></a>
+                            <a href=\"https://www.reddit.com/r/SubutaiKHAN/\" target=\"_blank\"><i class=\"fab fa-reddit-alien\"></i></a>
                         </li>
                         <li>
-                            <a href=\"#\"><i class=\"fab fa-twitter\"></i></a>
+                            <a href=\"https://twitter.com/Subutai_KHAN\" target=\"_blank\"><i class=\"fab fa-twitter\"></i></a>
                         </li>
                         <li>
-                            <a href=\"#\"><i class=\"fab fa-facebook-f\"></i></a>
+                            <a href=\"https://www.facebook.com/SubutaiKHAN/\" target=\"_blank\"><i class=\"fab fa-facebook-f\"></i></a>
                         </li>
                     </ul>
                 </div>
@@ -112,7 +139,7 @@ class __TwigTemplate_f71b644304bb981ffe1670af33c1e01021b41a74e720cf7fd7ba08b39c4
 
     public function getDebugInfo()
     {
-        return array (  93 => 73,  19 => 1,);
+        return array (  120 => 73,  78 => 34,  68 => 27,  62 => 24,  58 => 23,  49 => 17,  45 => 16,  41 => 15,  37 => 14,  33 => 13,  19 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -137,59 +164,59 @@ class __TwigTemplate_f71b644304bb981ffe1670af33c1e01021b41a74e720cf7fd7ba08b39c4
                 <div class=\"menuCol\">
                     <a href=\"#\">products</a>
                     <div class=\"subItems-wrap\">
-                        <a href=\"#\">Router</a>
-                        <a href=\"#\">PeerOS</a>
-                        <a href=\"#\">Bazaar</a>
-                        <a href=\"#\">Blueprints</a>
-                        <a href=\"#\">KHAN</a>
+                        <a href=\"{{ base_url }}/products/subutai-router\">Router</a>
+                        <a href=\"{{ base_url }}/products/subutai-peeros\">PeerOS</a>
+                        <a href=\"{{ base_url }}/products/subutai-bazaar\">Bazaar</a>
+                        <a href=\"{{ base_url }}/products/subutai-blueprints\">Blueprints</a>
+                        <a href=\"{{ base_url }}/products/khan\">KHAN</a>
                     </div>
                 </div>
                 <div class=\"menuCol\">
                     <a href=\"#\">about</a>
                     <div class=\"subItems-wrap\">
-                        <a href=\"#\">Leadership</a>
-                        <a href=\"#\">Team</a>
+                        <a href=\"{{ base_url }}/about/leadership\">Leadership</a>
+                        <a href=\"{{ base_url }}/about/team\">Team</a>
                     </div>
-                    <a href=\"#\">documentation</a>
-                    <a href=\"#\">getting started</a>
+                    <a href=\"https://docs.subutai.io/\" target=\"_blank\">documentation</a>
+                    <a href=\"{{ base_url }}/getting-started\">getting started</a>
                 </div>
                 <div class=\"menuCol\">
                     <a href=\"#\">ideation</a>
                     <div class=\"subItems-wrap\">
                         <a href=\"#\">Blog</a>
                         <a href=\"#\">Hardware Security</a>
-                        <a href=\"#\">P2P Cloud</a>
+                        <a href=\"{{ base_url }}/ideation/p2p-cloud\">P2P Cloud</a>
                     </div>
                 </div>
             </div> <!-- menu wrap -->
             <div class=\"socialWrap\">
                 <h3>Lorem ipsum dolor sit</h3>
                 <div class=\"destakLinks-wrap\">
-                    <a href=\"#\">
+                    <a href=\"https://slack.subutai.io/\" target=\"_blank\">
                         <i class=\"fab fa-slack-hash\"></i>
-                        <p href=\"#\">slack.subutai.io</p>
+                        <p>slack.subutai.io</p>
                     </a>
-                    <a href=\"#\">
+                    <a href=\"https://t.me/SubutaiKHAN\" target=\"_blank\">
                         <i class=\"fab fa-telegram-plane\"></i>
-                        <p href=\"#\">subutaiKHAN</p>
+                        <p>subutaiKHAN</p>
                     </a>
                 </div> <!-- destakLinks-wrap -->
                 <div class=\"socialNav\">
                     <ul>
                         <li>
-                            <a href=\"#\"><i class=\"fab fa-youtube\"></i></a>
+                            <a href=\"https://www.youtube.com/channel/UCISHGzbHjYWYFfu7krnYLkA\" target=\"_blank\"><i class=\"fab fa-youtube\"></i></a>
                         </li>
                         <li>
-                            <a href=\"#\"><i class=\"fab fa-linkedin-in\"></i></a>
+                            <a href=\"https://www.linkedin.com/company/subutai-social-cloud/\" target=\"_blank\"><i class=\"fab fa-linkedin-in\"></i></a>
                         </li>
                         <li>
-                            <a href=\"#\"><i class=\"fab fa-reddit-alien\"></i></a>
+                            <a href=\"https://www.reddit.com/r/SubutaiKHAN/\" target=\"_blank\"><i class=\"fab fa-reddit-alien\"></i></a>
                         </li>
                         <li>
-                            <a href=\"#\"><i class=\"fab fa-twitter\"></i></a>
+                            <a href=\"https://twitter.com/Subutai_KHAN\" target=\"_blank\"><i class=\"fab fa-twitter\"></i></a>
                         </li>
                         <li>
-                            <a href=\"#\"><i class=\"fab fa-facebook-f\"></i></a>
+                            <a href=\"https://www.facebook.com/SubutaiKHAN/\" target=\"_blank\"><i class=\"fab fa-facebook-f\"></i></a>
                         </li>
                     </ul>
                 </div>

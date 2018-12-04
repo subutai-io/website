@@ -51,6 +51,21 @@ class __TwigTemplate_aeacb3dbfcfe147a7c18f5b039f0308f770a5b34cfacbdb2ac8b6e8d26f
         $this->loadTemplate("partials/footer.html.twig", "partials/base.html.twig", 46)->display($context);
         // line 47
         echo "
+<script>
+// read more
+function readMore_manifesto() {
+    moreText_manifesto = document.getElementById(\"moreManifesto\");
+    btnMore1 = document.getElementById(\"btnMore_manifesto\");
+    if (moreText_manifesto.style.display === \"block\") {
+        moreText_manifesto.style.display = \"none\";
+        btnMore1.innerHTML = \"Read More\";
+    } else {
+        moreText_manifesto.style.display = \"block\";
+        btnMore1.innerHTML = \"Read Less\";
+    }
+}
+</script>
+
 </body>
 
 </html>";
@@ -152,7 +167,7 @@ class __TwigTemplate_aeacb3dbfcfe147a7c18f5b039f0308f770a5b34cfacbdb2ac8b6e8d26f
 
     public function getDebugInfo()
     {
-        return array (  140 => 34,  137 => 33,  134 => 32,  131 => 31,  128 => 30,  125 => 29,  122 => 28,  118 => 23,  116 => 21,  113 => 20,  110 => 19,  108 => 16,  105 => 15,  97 => 35,  95 => 28,  87 => 24,  85 => 15,  82 => 14,  80 => 13,  77 => 11,  66 => 6,  63 => 5,  60 => 4,  53 => 47,  51 => 46,  46 => 44,  43 => 43,  41 => 42,  36 => 40,  32 => 38,  30 => 4,  25 => 2,  22 => 1,);
+        return array (  155 => 34,  152 => 33,  149 => 32,  146 => 31,  143 => 30,  140 => 29,  137 => 28,  133 => 23,  131 => 21,  128 => 20,  125 => 19,  123 => 16,  120 => 15,  112 => 35,  110 => 28,  102 => 24,  100 => 15,  97 => 14,  95 => 13,  92 => 11,  81 => 6,  78 => 5,  75 => 4,  53 => 47,  51 => 46,  46 => 44,  43 => 43,  41 => 42,  36 => 40,  32 => 38,  30 => 4,  25 => 2,  22 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -211,6 +226,21 @@ class __TwigTemplate_aeacb3dbfcfe147a7c18f5b039f0308f770a5b34cfacbdb2ac8b6e8d26f
 {{ page.content }}
 
 {% include 'partials/footer.html.twig' %}
+
+<script>
+// read more
+function readMore_manifesto() {
+    moreText_manifesto = document.getElementById(\"moreManifesto\");
+    btnMore1 = document.getElementById(\"btnMore_manifesto\");
+    if (moreText_manifesto.style.display === \"block\") {
+        moreText_manifesto.style.display = \"none\";
+        btnMore1.innerHTML = \"Read More\";
+    } else {
+        moreText_manifesto.style.display = \"block\";
+        btnMore1.innerHTML = \"Read Less\";
+    }
+}
+</script>
 
 </body>
 

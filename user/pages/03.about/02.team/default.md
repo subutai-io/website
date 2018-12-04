@@ -1,6 +1,6 @@
 ---
-title: Subutai Getting Started
-body_classes: home
+title: Subutai Team
+body_classes: team
 ---
 
 <div class="banner" markdown="1">

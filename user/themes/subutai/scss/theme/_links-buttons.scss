@@ -14,7 +14,7 @@ body a {
 }
 .banner {
 	.arrowDown {
-		margin-top: 130px;
+		margin-top: 40px;
 		margin-bottom: 20px;
         a {
             margin-top: 50px;
@@ -41,6 +41,15 @@ body a {
         color: #FFF;
     }
 }
+.prodInfo-wrap {
+	.btnWrap {
+		.btn {
+			margin-bottom: 10px;
+			width: 100%;
+			text-align: center;
+		}
+	}
+}
 // khan page
 .downloadButtons {
 	width: 100%;
@@ -64,6 +73,9 @@ body a {
 		-webkit-align-items: center;
 		align-items: center;
 	}
+}
+#btnMore_manifesto {
+	margin-top: 40px;
 }
 
 
@@ -97,7 +109,19 @@ body a {
 }
 
 @media (min-width: 992px) {
-	
+	.banner {
+		.arrowDown {
+			margin-top: 130px;
+		}
+	}
+	.prodInfo-wrap {
+		.btnWrap {
+			.btn {
+				margin-bottom: 0;
+				width: auto;
+			}
+		}
+	}
 }
 
 @media (min-width: 1200px) {

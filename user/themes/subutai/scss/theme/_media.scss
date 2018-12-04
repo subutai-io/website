@@ -3,9 +3,10 @@
 .home {
     .prodWrap {
         .prodImg-wrap {
-            width: 15%;
+            width: 100%;
+            text-align: center;
             img {
-                width: 100%;
+                width: 50%;
             }
         }
     }
@@ -30,4 +31,29 @@
 figure.halfCol {
     display: block;
     // margin-top: 25px;
+}
+@media (min-width: 480px) {
+
+}
+
+@media (min-width: 768px) {
+	
+}
+
+@media (min-width: 992px) {
+    .home {
+        .prodWrap {
+            .prodImg-wrap {
+                width: 15%;
+                text-align: left;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+	
 }

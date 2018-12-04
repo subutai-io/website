@@ -37,9 +37,9 @@ body_classes: peer
     <div class="topicWrap">
         <h4>Complementing the Subutai PeerOS are:</h4>
         <ul>
-            <li><a href="#">Subutai™ Bazaar</a> — a marketplace to buy/sell/exchange/barter computing resources and other applications. <a href="#">Experience the Bazaar.</a></li>
-            <li><a href="#">Subutai™ Blockchain Router</a> — power-efficient “green” broadband Cloud router and open hardware IoT gateway that serves as a plug-and-play cryptocurrency wallet and mining device</li>
+            <li><a href="/subutai/website/products/subutai-bazaar">Subutai™ Bazaar</a> — a marketplace to buy/sell/exchange/barter computing resources and other applications. <a href="https://bazaar.subutai.io" target="_blank">Experience the Bazaar.</a></li>
+            <li><a href="/subutai/website/products/subutai-router">Subutai™ Blockchain Router</a> — power-efficient “green” broadband Cloud router and open hardware IoT gateway that serves as a plug-and-play cryptocurrency wallet and mining device</li>
         </ul>
     </div>
-    <h5><a href="#">Get started today</a> and Conquer the Cloud!</h5>
+    <h5><a href="/subutai/website/getting-started">Get started today</a> and Conquer the Cloud!</h5>
 </div>

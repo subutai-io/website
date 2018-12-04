@@ -3,6 +3,8 @@ footer {
     width: 100%;
     background: #131F33;
     margin-top: 60px;
+    padding: 0 20px;
+    box-sizing: border-box;
     .container {
         flex-wrap: wrap;
         margin-bottom: 0;
@@ -17,7 +19,7 @@ footer {
         justify-content: space-between;
         h3 {
             width: 100%;
-            font-size: 1.65rem;
+            font-size: 1.25rem;
             color: #FFF;
         }
         input {
@@ -28,20 +30,19 @@ footer {
             color: #FFF;
             box-sizing: border-box;
             border-radius: .4rem;
-            width: calc(100% - 140px);
+            width: 100%;
             &:last-child {
                 background: #59B7FF;
                 border: 2px solid #59B7FF;
                 height: 40px;
                 font-size: 1.1rem;
-                width: 120px;
+                width: 100%;
                 &:hover {
                     background: #078DD0;
                     border: 2px solid #078DD0;
                 }
             }
         }
-
     }
     .footerRow:nth-child(2) {
         justify-content: space-between;
@@ -49,7 +50,7 @@ footer {
     }
     .menuWrap {
         width: 66%;
-        display: flex;
+        display: none;
         flex-wrap: wrap;
         justify-content: space-between;
         border-right: 1px solid #59B7FF;
@@ -122,7 +123,7 @@ footer {
     }
 }
 .socialWrap {
-    width: 33%;
+    width: 100%;
     h3 {
         color: #59B7FF;
         font-size: 1.65rem;
@@ -146,4 +147,39 @@ footer {
             }
         }
     }
+}
+
+@media (min-width: 480px) {
+
+}
+
+@media (min-width: 768px) {
+	
+}
+
+@media (min-width: 992px) {
+    footer {
+        padding: 0;
+        .footerRow:first-child {
+            h3 {
+                font-size: 1.65rem;
+            }
+            input {
+                width: calc(100% - 140px);
+                &:last-child {
+                    width: 120px;
+                }
+            }
+        }
+        .menuWrap {
+            display: flex;
+        }
+    }
+    .socialWrap {
+        width: 33%;
+    }
+}
+
+@media (min-width: 1200px) {
+	
 }
