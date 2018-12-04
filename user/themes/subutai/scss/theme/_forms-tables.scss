@@ -44,6 +44,42 @@
 }
 .tabcontent {
     display: none;
+    .topicWrap {
+        margin-bottom: 20px;
+    }
+    .btn {
+        margin: 20px 0;
+        display: inline-block;
+    }
+    button.btn {
+        margin: 10px 0 0 0;
+        border: 2px solid #078DD0;
+        background: transparent;
+        color: #078DD0;
+        &:hover {
+            color: #FFF;
+            background: #59B7FF;
+            border-color: #59B7FF;
+        }
+    }
+    p {
+        margin-top: 0;
+    }
+    h5 {
+        text-align: left;
+        margin-bottom: 40px;
+    }
+}
+#linksControl-win, #linksDaemon-win,
+#linksControl-mac, #linksDaemon-mac,
+#linksControl-linux, #linksDaemon-linux {
+    display: none;
+    .btn {
+        margin-bottom: 0;
+    }
+    // a {
+    //     display: block;
+    // }
 }
 @media (min-width: 480px) {
 	

@@ -103,6 +103,13 @@ footer {
         }
     }
 }
+ul {
+    li {
+        font-size: 1.25rem;
+        line-height: 1.5;
+        font-weight: 300;
+    }
+}
 .topicWrap {
     // margin-top: 40px;
     padding: 40px;
@@ -117,8 +124,6 @@ footer {
         li {
             list-style-type: disc;
             margin: 15px 0 15px 20px;
-            font-size: 1.15rem;
-            line-height: 1.5;
         }
     }
 }
@@ -127,6 +132,15 @@ footer {
         margin-top: 0;
         margin-bottom: 40px;
     }
+}
+.getStart-list {
+    margin-bottom: 40px;
+    li {
+        list-style-type: disc;
+    }
+}
+.halfCol .getStart-list {
+    margin-bottom: 0;
 }
 // title on box list on getting started page
 
@@ -144,20 +158,27 @@ footer {
     }
     h6 {
         font-size: 1.25rem;
-        // color: #078DD0;
         text-align: left;
     }
-    .halfCol {
-        h4 {
-            margin-bottom: 0;
-        }
+}
+.lineCode-wrap {
+    width: 100%;
+    background: #350b27;
+    margin-bottom: 20px;
+    height: 50px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    p {
+        font-family: courier-std, monospace;
+        font-size: 1.25rem;
+        color: #FFF;
+        opacity: .8rem;
     }
-    ul {
-        li {
-            // list-style-type: disc;
-            // margin: 15px 0 15px 20px;
-            font-size: 1.15rem;
-            line-height: 1.5;
-        }
-    }
+}
+#moreManifesto {
+    display: none;
 }

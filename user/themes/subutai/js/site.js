@@ -57,3 +57,16 @@ jQuery(document).ready(function($){
     $(".tree").treemenu({delay:300});
 
 });
+
+// read more
+function readMore_manifesto() {
+    moreText_manifesto = document.getElementById("moreManifesto");
+    btnMore1 = document.getElementById("btnMore_manifesto");
+    if (moreText_manifesto.style.display === "block") {
+        moreText_manifesto.style.display = "none";
+        btnMore1.innerHTML = "Read More";
+    } else {
+        moreText_manifesto.style.display = "block";
+        btnMore1.innerHTML = "Read Less";
+    }
+}
