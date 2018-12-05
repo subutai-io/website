@@ -6,7 +6,7 @@ body_classes: team
 <div class="banner" markdown="1">
 
 <h1>Conquer the Cloud</h1>
-<p>Open Source Peer-to-Peer (P2P) Cloud Computing Internet of Things (IoT)<br> and Cryptocurrency Mining for Everyone</p>
+<p>Open Source Peer-to-Peer (P2P) Cloud Computing Internet of Things (IoT) and Cryptocurrency Mining for Everyone</p>
 
 <div class="arrowDown">
 	<a href="#"><i class="fas fa-chevron-down"></i></a>
@@ -27,3 +27,14 @@ body_classes: team
         </div> <!-- read more -->
         <button id="btnMore_manifesto" class="btn" onclick="readMore_manifesto()">Read More</button>
     </div>
+    <h2>Tribute</h2>
+    <div class="textBlock">
+        <p>We created Subutai to enable those lacking the resources they needed to pursue their innovative dreams. We want everyone to be able to make a living innovating, wherever they are, whoever they are. The ability to innovate and further knowledge is a terrible thing to waste. We want to contribute our part to make sure human potential is wasted as little as possible. Subutai we hope will help connect people, and provide them with resources when otherwise they would be limited.</p>
+        <button id="btnMore_tribute" class="btn" onclick="readMore_tribute()">Read More</button>
+        <div id="moreTribute">
+            <p>Alex Karasulu, the creator of Subutai, was an intern at Bell Labs and was heavily influenced by Professor Aho, who was also his advisor and professor at Columbia University. Even to this day, we cannot forget the famous words of this pioneer of regular expressions and compiler theory, "Everything can be represented as a string, even you!"</p>
+            <p>Subutai would never have existed without the contributions of several people, most notably Dennis Ritchie. We lost our hero in the same week that Steve Jobs passed away. Although both great figures, we feel enough attention was not given to this legend of computing. Read more about <a href="#" target="_blank">"The Dennis Ritchie Effect"</a>.<p>
+            <i>We dedicate Subutai to his memory. Without you Dennis Ritchie, we certainly know Subutai would never have existed. Thank you! Our corporate logo, /*OptDyn*/, is in recognition and honor of Dennis Ritchie by encasing our name within the "comment delimiters" of the “C” programming language that he created.</i>
+        </div>
+    </div>
+</div>

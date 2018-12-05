@@ -33,20 +33,20 @@ body_classes: bazaar
     <figure class="fullImg">
         <img src="../images/bazaar-panel-globe.jpg">
     </figure>
-</div>
+<!-- </div> -->
 <!-- <div class="smallContainer"> -->
-<div class="container">
+<!-- <div class="container"> -->
     <div class="textBlock">
         <p>The Bazaar authenticates user resources, enabling individuals and companies to become Economy Operators and instantly form an economy with their existing customer base.</p>
     </div>
-</div>
-<div class="container">
+<!-- </div> -->
+<!-- <div class="container"> -->
     <figure class="fullImg">
         <img src="../images/bazaar-panel-02.jpg">
     </figure>
-</div>
+<!-- </div> -->
 <!-- <div class="smallContainer"> -->
-<div class="container">
+<!-- <div class="container"> -->
     <div class="textBlock">
         <p>Using the Subutai Bazaar, Economy Operators can both sell excess compute resources to their customers and be able to purchase resources from their customers —and benefit by generating revenue from this economy.</p>
     </div>

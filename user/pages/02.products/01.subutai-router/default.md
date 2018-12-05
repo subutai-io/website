@@ -6,7 +6,7 @@ body_classes: router
 <div class="banner" markdown="1">
 
 <h1>Subutai™ Blockchain Router v2.0</h1>
-<p>Open Source Peer-to-Peer (P2P) Cloud Computing Internet of Things (IoT)<br> and Cryptocurrency Mining for Everyone</p>
+<p>Open Source Peer-to-Peer (P2P) Cloud Computing Internet of Things (IoT) and Cryptocurrency Mining for Everyone</p>
 <div class="arrowDown">
 <a href="#"><i class="fas fa-chevron-down"></i></a>
 </div>

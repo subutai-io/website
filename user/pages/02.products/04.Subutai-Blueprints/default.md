@@ -1,6 +1,6 @@
 ---
 title: Subutai Blueprints
-body_classes: router
+body_classes: blueprints
 ---
 
 <div class="banner" markdown="1">
@@ -61,13 +61,14 @@ body_classes: router
         <p>Subutai has the Blueprint feature for standing up complicated application stacks over several containers. It’s a simple JSON based templating format similar to Amazon’s Cloud Formation templates. Use these Blueprints to fire up application stacks within environments or build environments using your favorite devops tools for automation.</p>
         <p>Using the Blueprint wizard, finish your build in 4 easy steps as shown below for your Blueprint of choice:</p>
     </div>
-    <figure class="fullImg">
+    <figure class="fullImg hideMobile">
         <img src="../images/blueprint-wizard.jpg">
     </figure>
     <div class="textBlock">
         <p>From defining application variables to building or updating an existing environment, you can stand up your application stack in no time. For example, with the Blockchain-in-a-Box Blueprint, you get an instant environment for writing decentralized blockchain-based applications on Ethereum Network. <a href="#">Find out more about using Blueprints.<a/></p>
     </div>
 </section>
+<div style="height: 40px;" class="hideDesktop"></div>
 <section class="container">
     <h2>Writing Blueprints</h2>
     <div class="textBlock">

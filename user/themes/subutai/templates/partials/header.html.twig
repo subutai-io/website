@@ -29,7 +29,51 @@
                     </li>
                 </ul>
             </nav>
-            <nav id="mainMenu" class="topNav">
+            <nav id="mainMenu">
+                <label for="drop" class="toggle iconBar"><i class="fas fa-bars"></i></label>
+                <input type="checkbox" id="drop" />
+                <ul class="menu">
+                    <li>
+                        <!-- First Tier Drop Down -->
+                        <label for="drop-1" class="toggle">Products +</label>
+                        <a href="#">Products</a>
+                        <input type="checkbox" id="drop-1"/>
+                        <ul>
+                            <li><a href="{{ base_url }}/products/subutai-router">Router</a></li>
+                            <li><a href="{{ base_url }}/products/subutai-peeros">PeerOS</a></li>
+                            <li><a href="{{ base_url }}/products/subutai-bazaar">Bazaar</a></li>
+                            <li><a href="{{ base_url }}/products/subutai-blueprints">Blueprints</a></li>
+                            <li><a href="{{ base_url }}/products/khan">KHAN</a></li>
+                        </ul> 
+                    </li>
+                    <li>
+                        <!-- First Tier Drop Down -->
+                        <label for="drop-2" class="toggle">About +</label>
+                        <a href="#">About</a>
+                        <input type="checkbox" id="drop-2"/>
+                        <ul>
+                            <li><a href="{{ base_url }}/about/leadership">Leadership</a></li>
+                            <li><a href="{{ base_url }}/about/team">Team</a></li>
+                        </ul>
+                    </li>
+                <li><a href="{{ base_url }}/getting-started">Getting Started</a></li>
+                <li><a href="https://docs.subutai.io/" target="_blank">Documentation</a></li>
+                <li>
+                    <!-- First Tier Drop Down -->
+                    <label for="drop-3" class="toggle">Ideation +</label>
+                    <a href="#">Ideation</a>
+                    <input type="checkbox" id="drop-3"/>
+                    <ul>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Hardware Security</a></li>
+                        <li><a href="{{ base_url }}/ideation/p2p-cloud">P2P Cloud</a></li>
+                    </ul>
+                </li>
+                <li><a href="{{ base_url }}/contact">Contact</a></li>
+            </ul>
+        </nav>
+
+            {# <nav id="mainMenu" class="topNav">
                 <div class="dropdown">
                     <button class="dropbtn">Products <i class="fa fa-caret-down"></i></button>
                     <div class="dropdown-content">
@@ -59,7 +103,7 @@
                 </div>
                 <a href="{{ base_url }}/contact">Contact</a>
                 <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
-            </nav>
+            </nav> #}
         </div>
     </div>
 </header>

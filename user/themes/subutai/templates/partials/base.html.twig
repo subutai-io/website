@@ -58,6 +58,17 @@ function readMore_manifesto() {
         btnMore1.innerHTML = "Read Less";
     }
 }
+function readMore_tribute() {
+    moreText_tribute = document.getElementById("moreTribute");
+    btnMore2 = document.getElementById("btnMore_tribute");
+    if (moreText_tribute.style.display === "block") {
+        moreText_tribute.style.display = "none";
+        btnMore2.innerHTML = "Read More";
+    } else {
+        moreText_tribute.style.display = "block";
+        btnMore2.innerHTML = "Read Less";
+    }
+}
 </script>
 
 </body>

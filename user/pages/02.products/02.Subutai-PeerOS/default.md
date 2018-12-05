@@ -28,7 +28,7 @@ body_classes: peer
         <p>o make the platform even easier to implement, Subutai Blueprints specify general instructions for installing, updating, and maintaining P2P distributed cloud applications. The Subutai P2P Cloud combines these instructions with load and resource availability information to optimally place infrastructure resources in P2P cloud environments and run distributed applications. P2P orchestration can occur perpetually to adapt to shifting conditions to keep applications running. From Blockchain-in-a-Box to Apache Usergrid Blueprint for MBaaS for mobile development, Subutai makes it easy to get up and running quickly.</p>
     </div>
 </div>
-<div class="container">
+<div class="container hideMobile">
     <figure class="fullImg">
         <img src="../images/peeros-02.jpg">
     </figure>

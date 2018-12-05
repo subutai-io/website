@@ -1,16 +1,12 @@
 .leadersWrap {
-    padding: 40px;
-    // margin-bottom: 80px;
+    padding: 40px 20px;
+    // margin-bottom: 40px;
     background: #FAFAFA;
     box-shadow: 0 0 40px rgba(0,0,0,.15);
     box-sizing: border-box;
 }
 
 .card {
-    // padding: 60px;
-    // display: flex;
-    // flex-wrap: wrap;
-    // flex-direction: column;
     min-height: 270px;
     text-align: left;
     margin-top: 40px;
@@ -19,7 +15,8 @@
     }
     figure {
         padding: 0 30px 5px 0;
-        width: 250px;
+        // width: 250px;
+        width: 100%;
         float: left;
         img {
             width: 100%;
@@ -41,4 +38,37 @@
         line-height: 1.25;
         margin-top: 1rem;
     }
+}
+
+@media (min-width: 480px) {
+    .card {
+        figure {
+            width: 220px;
+        }
+    }
+}
+@media (min-width: 600px) {
+    .card {
+        figure {
+            width: 250px;
+        }
+    }
+}
+@media (min-width: 768px) {
+	.leadersWrap {
+        padding: 40px;
+    }
+    .card {
+        figure {
+            width: 250px;
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    
+}
+
+@media (min-width: 1200px) {
+	
 }

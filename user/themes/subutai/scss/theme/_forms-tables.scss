@@ -23,15 +23,19 @@
 .tabsWrap {
     width: 100%;
     .tab {
-        display: flex;
         width: 100%;
         margin-top: 20px;
         margin-bottom: 40px;
         overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        .btn {
+            width: 100%;
+        }
         .tabLinks {
             flex-grow: 1;
             box-sizing: border-box;
-            margin: 0 10px;
+            margin: 5px 0;
         }
         .btn {
             font-size: 1.25rem;
@@ -86,12 +90,30 @@
 }
 
 @media (min-width: 768px) {
-    
+    .tabsWrap {
+        width: 100%;
+        .tab {
+            width: 100%;
+            margin-top: 20px;
+            margin-bottom: 40px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: row;
+            .btn {
+                width: auto;
+            }
+            .tabLinks {
+                flex-grow: 1;
+                box-sizing: border-box;
+                margin: 0 10px;
+            }
+        }
+    }
 }
 
 @media (min-width: 992px) {
     #blueprintsTable {
-        margin: 40px auto;
+        margin: 0 auto;
         display: flex;
         flex-wrap: wrap;
         width: 800px;

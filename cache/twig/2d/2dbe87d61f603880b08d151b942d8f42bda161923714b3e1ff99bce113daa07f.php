@@ -64,6 +64,17 @@ function readMore_manifesto() {
         btnMore1.innerHTML = \"Read Less\";
     }
 }
+function readMore_tribute() {
+    moreText_tribute = document.getElementById(\"moreTribute\");
+    btnMore2 = document.getElementById(\"btnMore_tribute\");
+    if (moreText_tribute.style.display === \"block\") {
+        moreText_tribute.style.display = \"none\";
+        btnMore2.innerHTML = \"Read More\";
+    } else {
+        moreText_tribute.style.display = \"block\";
+        btnMore2.innerHTML = \"Read Less\";
+    }
+}
 </script>
 
 </body>
@@ -167,7 +178,7 @@ function readMore_manifesto() {
 
     public function getDebugInfo()
     {
-        return array (  155 => 34,  152 => 33,  149 => 32,  146 => 31,  143 => 30,  140 => 29,  137 => 28,  133 => 23,  131 => 21,  128 => 20,  125 => 19,  123 => 16,  120 => 15,  112 => 35,  110 => 28,  102 => 24,  100 => 15,  97 => 14,  95 => 13,  92 => 11,  81 => 6,  78 => 5,  75 => 4,  53 => 47,  51 => 46,  46 => 44,  43 => 43,  41 => 42,  36 => 40,  32 => 38,  30 => 4,  25 => 2,  22 => 1,);
+        return array (  166 => 34,  163 => 33,  160 => 32,  157 => 31,  154 => 30,  151 => 29,  148 => 28,  144 => 23,  142 => 21,  139 => 20,  136 => 19,  134 => 16,  131 => 15,  123 => 35,  121 => 28,  113 => 24,  111 => 15,  108 => 14,  106 => 13,  103 => 11,  92 => 6,  89 => 5,  86 => 4,  53 => 47,  51 => 46,  46 => 44,  43 => 43,  41 => 42,  36 => 40,  32 => 38,  30 => 4,  25 => 2,  22 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -238,6 +249,17 @@ function readMore_manifesto() {
     } else {
         moreText_manifesto.style.display = \"block\";
         btnMore1.innerHTML = \"Read Less\";
+    }
+}
+function readMore_tribute() {
+    moreText_tribute = document.getElementById(\"moreTribute\");
+    btnMore2 = document.getElementById(\"btnMore_tribute\");
+    if (moreText_tribute.style.display === \"block\") {
+        moreText_tribute.style.display = \"none\";
+        btnMore2.innerHTML = \"Read More\";
+    } else {
+        moreText_tribute.style.display = \"block\";
+        btnMore2.innerHTML = \"Read Less\";
     }
 }
 </script>

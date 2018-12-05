@@ -47,6 +47,13 @@
 .team {
     .banner {
         background-image: url("./../images/SubutaiHeroImageV7.jpg");
+        margin-bottom: 40px;
+    }
+}
+.blueprints {
+    .banner {
+        background-image: url("./../images/SubutaiHeroImageV7.jpg");
+        margin-bottom: 40px;
     }
 }
 // title banner
@@ -54,7 +61,8 @@
     .banner {
         background-color: #04346E;
         background-image: linear-gradient(to bottom right, #04346E, #0758BA);
-        height: 300px;
+        height: 250px;
+        margin-bottom: 40px;
         h1 {
             margin-top: 0;
             margin-bottom: 40px;
@@ -66,12 +74,34 @@
 }
 
 @media (min-width: 768px) {
-	
+	.get-start, .leadership, .p2p {
+        .banner {
+            background-color: #04346E;
+            background-image: linear-gradient(to bottom right, #04346E, #0758BA);
+            height: 300px;
+            // margin-bottom: 0;
+        }
+    }
 }
 
 @media (min-width: 992px) {
     .banner {
         margin-bottom: 80px;
+    }
+    .get-start, .leadership, .p2p {
+        .banner {
+            margin-bottom: 80px;
+        }
+    }
+    .blueprints {
+        .banner {
+            margin-bottom: 80px;
+        }
+    }
+    .team {
+        .banner {
+            margin-bottom: 80px;
+        }
     }
 }
 

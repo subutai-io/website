@@ -29,13 +29,13 @@ body_classes: get-start
 
 <section class="container">
     <h2><img src="images/logo-bazaar-shadow.png" class="titleIcon">Subutai Bazaar</h2>
-    <div class="halfCol">
+    <div class="halfCol no-padding">
         <h4>Quick links</h4>
         <ul class="getStart-list">
-            <li><a href="#">What is Subutai Bazaar</a></li>
+            <li><a href="/subutai/website/products/subutai-bazaar">What is Subutai Bazaar</a></li>
             <li><a href="#">Sign up or log in</a></li>
             <li>For tasks that require authentication (e.g., adding cloud providers), you need to set up PGP keys. You can use the <a href="#">E2E plugin</a> to easily generate and manage these keys. Other software components are available to facilitate administrative tasks on peers and environments.</li>
-            <li>View the <a href="#">complete documentation</a></li>
+            <li>View the <a href="https://docs.subutai.io/Products/Bazaar_toctree.html" target="_blank">complete documentation</a></li>
         </ul>
     </div>
     <figure class="halfCol">
@@ -45,24 +45,24 @@ body_classes: get-start
     <!-- <div class="halfCol"> -->
         <h4>Quick links</h4>
         <ul class="getStart-list">
-            <li>Learn more about <a href="#">Subutai PeerOS</a></li>
+            <li>Learn more about <a href="/subutai/website/products/subutai-peeros">Subutai PeerOS</a></li>
             <li>Install the <a href="#">P2P daemon</a> and <a href="#">Subutai</a> Control Center on your desktop to access your Peers. You may also want to install the <a href="#">E2E plugin</a> that will manage the PGP keys for you</li>
             <li>Choose your preferred way to get the PeerOS up and running:<br><small>Subutai recommends that you use Debian Stretch 9.X to create your Peers</small>
                 <ul>
-                    <li><a href="#">Quick install</a> (about 5 minutes)<br><small>Requirements: any system that uses Vagrant and 100 GB disk space</small></li>
-                    <li><a href="#">Advanced admin install</a> (about 20 minutes)<br><small>Requirements: Debian system (preferably, freshly installed) and 100 GB disk space</small></li>
+                    <li><a href="https://docs.subutai.io/Products/PeerOS/03_Run_PeerOS_with_Vagrant.html" target="_blank">Quick install</a> (about 5 minutes)<br><small>Requirements: any system that uses Vagrant and 100 GB disk space</small></li>
+                    <li><a href="https://docs.subutai.io/Products/PeerOS/02_Install_PeerOS.html" target="_blank">Advanced admin install</a> (about 20 minutes)<br><small>Requirements: Debian system (preferably, freshly installed) and 100 GB disk space</small></li>
                 </ul>
             </li>    
             <li>Learn the basics:
                 <ul>
-                    <li><a href="#">How to use the Subutai Console</a></li>
-                    <li><a href="#">How to update Subutai components</a></li>
+                    <li><a href="https://docs.subutai.io/Products/PeerOS/05_How_to_use_the_Subutai_Console.html" target="_blank">How to use the Subutai Console</a></li>
+                    <li><a href="https://docs.subutai.io/Products/PeerOS/07_How_to_update_Subutai_components.html" target="_blank">How to update Subutai components</a></li>
                 </ul>
             </li>
-            <li>View the <a href="#">complete documentation</a></li>
+            <li>View the <a href="https://docs.subutai.io/Products/PeerOS_toctree.html" target="_blank">complete documentation</a></li>
         </ul>
     <!-- </div> -->
-    <figure class="fullImg">
+    <figure class="fullImg hideMobile">
         <img src="images/peer-panel.jpg">
     </figure>
 </section>
@@ -74,7 +74,7 @@ body_classes: get-start
     <h3>E2E plugin</h3>
     <div class="textBlock">
         <p>Remove the hassle of managing PGP keys that are required to ensure secure communications within the Subutai platform.</p>
-        <p>The E2E plugin is directly available from the official store of main browsers <a href="#">Chrome</a> and <a href="#">Firefox</a>. For other supported browsers, you may download from here.</p>
+        <p>The E2E plugin is directly available from the official store of main browsers <a href="https://chrome.google.com/webstore/detail/subutai-e2e-plugin/ffddnlbamkjlbngpekmdpnoccckapcnh">Chrome</a> and <a href="https://addons.mozilla.org/en-US/firefox/addon/subutai-e2e-plugin/">Firefox</a>. For other supported browsers, you may download from <a href="https://github.com/subutai-io/browser-plugins/releases" target="_blank">here</a>.</p>
     </div>
     <h3>Subutai Control Center</h3>
     <div class="textBlock">
@@ -89,14 +89,14 @@ body_classes: get-start
         </div>
         <div id="windows" class="tabcontent"><!-- windows -->
             <h4>You can download the MSI package for Windows (64-bit):</h4>
-            <a href="#" class="btn">Subutai Control Center x64 7.x</a>
+            <a href="https://bazaar.subutai.io/rest/v1/cdn/raw?name=subutai-control-center.msi&latest&download" class="btn">Subutai Control Center x64 7.x</a>
             <div class="topicWrap">
                 <p>Check the For Developers box to display and download the developer and master versions.
 You may access and test these versions accordingly.</p>
                 <button class="btn" onclick="devControlWin()">For Developers</button>
                 <div id="linksControl-win">
-                    <a class="btn" href="#">Subutai Control Center x64 Dev</a>
-                    <a class="btn" href="#">Subutai Control Center x64 Master</a>
+                    <a class="btn" href="ttps://devbazaar.subutai.io/rest/v1/cdn/raw?name=subutai-control-center-dev.msi&latest&download">Subutai Control Center x64 Dev</a>
+                    <a class="btn" href="https://masterbazaar.subutai.io/rest/v1/cdn/raw?name=subutai-control-center-master.msi&latest&download">Subutai Control Center x64 Master</a>
                 </div>
             </div>
             <h5>Learn more: <a href="#">how to use the Control Center</a></h5>
@@ -106,27 +106,28 @@ You may access and test these versions accordingly.</p>
                 <p>The P2P daemon is available in <b>Windows</b>, <b>Mac</b>, and <b>Linux</b> versions.</p>
             </div>
             <h4>You can download the package for Mac (64-bit):</h4>
-            <a href="#" class="btn">Subutai P2P for Mac OS X ( 64 bit ) 8.x</a>
+            <a href="https://bazaar.subutai.io/rest/v1/cdn/raw?name=subutai-p2p.msi&latest&download" class="btn">Subutai P2P for Mac OS X ( 64 bit ) 8.x</a>
             <div class="topicWrap">
                 <p>Check the For Developers box to display and download the developer and master versions.
 You may access and test these versions accordingly.</p>
                 <button class="btn" onclick="devDaemonWin()">For Developers</button>
                 <div id="linksDaemon-win">
-                    <a class="btn" href="#">Subutai Control Center x64 Dev</a>
-                    <a class="btn" href="#">Subutai Control Center x64 Master</a>
+                    <a class="btn" href="https://devbazaar.subutai.io/rest/v1/cdn/raw?name=subutai-p2p-dev.msi&latest&download">Subutai Control Center x64 Dev</a>
+                    <a class="btn" href="https://masterbazaar.subutai.io/rest/v1/cdn/raw?name=subutai-p2p-master.msi&latest&download">Subutai Control Center x64 Master</a>
                 </div>
             </div>
         </div> <!-- tabcontent -->
+        <!-- mac -->
         <div id="mac" class="tabcontent">
             <h4>You can download the package for Mac (64-bit):</h4>
-            <a href="#" class="btn">Subutai Control Center x64 7.x</a>
+            <a href="https://bazaar.subutai.io/rest/v1/cdn/raw?name=subutai-control-center.pkg&latest&download" class="btn">Subutai Control Center x64 7.x</a>
             <div class="topicWrap">
                 <p>Check the For Developers box to display and download the developer and master versions.
 You may access and test these versions accordingly.</p>
                 <button class="btn" onclick="devControlMac()">For Developers</button>
                 <div id="linksControl-mac">
-                    <a class="btn" href="#">Subutai Control Center x64 Dev</a>
-                    <a class="btn" href="#">Subutai Control Center x64 Master</a>
+                    <a class="btn" href="https://devbazaar.subutai.io/rest/v1/cdn/raw?name=subutai-control-center-dev.pkg&latest&download">Subutai Control Center x64 Dev</a>
+                    <a class="btn" href="https://masterbazaar.subutai.io/rest/v1/cdn/raw?name=subutai-control-center-master.pkg&latest&download">Subutai Control Center x64 Master</a>
                 </div>
             </div>
             <h5>Learn more: <a href="#">how to use the Control Center</a></h5>
@@ -136,27 +137,28 @@ You may access and test these versions accordingly.</p>
                 <p>The P2P daemon is available in Windows, Mac, and Linux versions.</p>
             </div>
             <h4>You can download the package for Mac (64-bit):</h4>
-            <a href="#" class="btn">Subutai P2P for Mac OS X ( 64 bit ) 8.x</a>
+            <a href="https://bazaar.subutai.io/rest/v1/cdn/raw?name=subutai-p2p.pkg&latest&download" class="btn">Subutai P2P for Mac OS X ( 64 bit ) 8.x</a>
             <div class="topicWrap">
                 <p>Check the For Developers box to display and download the developer and master versions.
     You may access and test these versions accordingly.</p>
                 <button class="btn" onclick="devDaemonMac()">For Developers</button>
                 <div id="linksDaemon-mac">
-                    <a class="btn" href="#">Subutai Control Center x64 Dev</a>
-                    <a class="btn" href="#">Subutai Control Center x64 Master</a>
+                    <a class="btn" href="https://devbazaar.subutai.io/rest/v1/cdn/raw?name=subutai-p2p-dev.pkg&latest&download">Subutai Control Center x64 Dev</a>
+                    <a class="btn" href="https://masterbazaar.subutai.io/rest/v1/cdn/raw?name=subutai-p2p-master.pkg&latest&download">Subutai Control Center x64 Master</a>
                 </div>
             </div>
         </div> <!-- tabcontent -->
+        <!-- linux -->
         <div id="linux" class="tabcontent">
             <h4>You can download the DEB package for Linux (64-bit):</h4>
-            <a href="#" class="btn">Subutai Control Center x64 7.x</a>
+            <a href="https://bazaar.subutai.io/rest/v1/cdn/raw?name=subutai-control-center.deb&latest&download" class="btn">Subutai Control Center x64 7.x</a>
             <div class="topicWrap">
                 <p>Check the For <b>Developers</b> box to display and download the developer and master versions.
 You may access and test these versions accordingly.</p>
                 <button class="btn" onclick="devControlLinux()">For Developers</button>
                 <div id="linksControl-linux">
-                    <a class="btn" href="#">Subutai Control Center x64 Dev</a>
-                    <a class="btn" href="#">Subutai Control Center x64 Master</a>
+                    <a class="btn" href="https://devbazaar.subutai.io/rest/v1/cdn/raw?name=subutai-control-center-dev.deb&latest&download">Subutai Control Center x64 Dev</a>
+                    <a class="btn" href="https://masterbazaar.subutai.io/rest/v1/cdn/raw?name=subutai-control-center-master.deb&latest&download">Subutai Control Center x64 Master</a>
                 </div>
             </div>
             <h5>Install the <b>Subutai Control Center Application</b></h5>
@@ -171,14 +173,14 @@ You may access and test these versions accordingly.</p>
                 <p>The P2P daemon is available in Windows, Mac, and Linux versions.</p>
             </div>
             <h4>You can download the DEB package for Linux (64-bit):</h4>
-            <a href="#" class="btn">Subutai P2P for Linux ( 64 bit ) 8.x</a>
+            <a href="https://bazaar.subutai.io/rest/v1/cdn/raw?name=subutai-p2p.deb&latest&download" class="btn">Subutai P2P for Linux ( 64 bit ) 8.x</a>
             <div class="topicWrap">
                 <p>Check the For Developers box to display and download the developer and master versions.
 You may access and test these versions accordingly.</p>
                 <button class="btn" onclick="devDaemonLinux()">For Developers</button>
                 <div id="linksDaemon-linux">
-                    <a class="btn" href="#">Subutai P2P for Linux Dev</a>
-                    <a class="btn" href="#">Subutai P2P for Linux Master</a>
+                    <a class="btn" href="https://devbazaar.subutai.io/rest/v1/cdn/raw?name=subutai-p2p-dev.deb&latest&download">Subutai P2P for Linux Dev</a>
+                    <a class="btn" href="https://masterbazaar.subutai.io/rest/v1/cdn/raw?name=subutai-p2p-master.deb&latest&download">Subutai P2P for Linux Master</a>
                 </div>
             </div>
             <h5>Install the <b>Subutai P2P Daemon</b></h5>

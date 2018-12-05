@@ -4,7 +4,9 @@
     width: 100%;
     max-width: 1000px;
     margin: 0 auto;
-    margin-bottom: 40px;
+    // margin-bottom: 40px;
+    padding: 0 20px;
+    box-sizing: border-box;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -21,12 +23,13 @@
     display: flex;
     flex-wrap: wrap;
     box-sizing: border-box;
+    padding: 40px 0;
 }
 .darkBg {
     width: 100%;
     background: #020E1A;
     color: #FFF;
-    padding: 40px 0;
+    padding: 40px 0 80px 0;
     margin-bottom: 40px;
     box-sizing: border-box;
     display: flex;
@@ -75,8 +78,9 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     a {
+        margin: 0 20px;
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
@@ -84,27 +88,28 @@
     }
 }
 // topic box with row: img + text - Blueprints page
+.blueprints {
+    .topicWrap, .fullImg {
+        margin-bottom: 20px;
+    }
+}
 .topicWrap {
     .itemRow {
-        height: 120px;
+        height: auto;
         margin-top: 40px;
         display: flex;
         flex-wrap: wrap;
         align-items: center;
         justify-content: space-between;
-        figure {
-            width: 120px;
-            img {
-                width: 100%;
-            }
-        }
         p {
-            width: calc(100% - 160px);
+            width: 100%;
+            margin-top: 10px;
         }
     }
 }
 .router {
     .topicWrap {
+        // margin: 40px 20px 0 20px;
         margin-bottom: 40px;
     }
 }
@@ -116,7 +121,19 @@
 }
 
 @media (min-width: 480px) {
-
+    .topicWrap {
+        .itemRow {
+            height: 120px;
+            margin-top: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            p {
+                width: calc(100% - 160px);
+            }
+        }
+    }
 }
 
 @media (min-width: 768px) {
@@ -126,6 +143,7 @@
 @media (min-width: 992px) {
     .container {
         // padding-top: 60px;
+        margin-bottom: 40px;
         p {
             margin-top: 40px;
             &:first-child {
@@ -142,7 +160,7 @@
     }
 	.home {
         .prodWrap {
-            margin-bottom: 100px;
+            margin-bottom: 80px;
             flex-direction: row;
             .prodInfo-wrap {
                 padding-left: 80px;
@@ -158,9 +176,21 @@
     .halfCol {
         width: calc(50% - 20px);
         margin-bottom: 40px;
+        padding: 0;
     }
     .router .container {
         justify-content: space-between;
+    }
+    .router {
+        .topicWrap {
+            margin: 0 0 40px 0;
+        }
+    }
+    .destakLinks-wrap {
+        justify-content: space-around;
+        a {
+            margin: 0;
+        }
     }
 }
 

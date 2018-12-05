@@ -1,3 +1,204 @@
+// menu
+.toggle,
+[id^=drop] {
+	display: none;
+}
+#mainMenu:after {
+	content:"";
+	display:table;
+	clear:both;
+}
+#mainMenu ul {
+	float: right;
+	padding: 0;
+	margin:0;
+	list-style: none;
+    position: relative;
+}
+#mainMenu ul li {
+	margin: 0px;
+	display:inline-block;
+	float: left;
+    // background-color: #254441;
+    background-color: transparent;
+}
+#mainMenu a {
+	display:block;
+    padding:10px 15px;
+    // padding:14px 20px;
+	color:#FFF;
+    font-size: 1.25rem;
+    font-weight: normal;
+	text-decoration:none;
+}
+#mainMenu ul li ul li:hover { background: #000000; }
+/* Background color change on Hover */
+// #mainMenu a:hover { 
+// 	background-color: #000000; 
+// }
+/* Hide Dropdowns by Default
+ * and giving it a position of absolute */
+#mainMenu ul ul {
+	display: none;
+	position: absolute; 
+	/* has to be the same number as the "line-height" of "nav a" */
+	// top: 60px;
+}
+/* Display Dropdowns on Hover */
+#mainMenu ul li:hover > ul {
+    display:inherit;
+    background: rgba(0, 0, 0, 0.8);
+}
+/* Fisrt Tier Dropdown */
+#mainMenu ul ul li {
+	width:170px;
+	float:none;
+	display:list-item;
+	position: relative;
+}
+/* Second, Third and more Tiers	
+ * We move the 2nd and 3rd etc tier dropdowns to the left
+ * by the amount of the width of the first tier.
+*/
+#mainMenu ul ul ul li {
+	position: relative;
+	top:-60px;
+	/* has to be the same number as the "width" of "nav ul ul li" */ 
+	left:170px; 
+}
+/* Change ' +' in order to change the Dropdown symbol */
+// li > a:after { content:  ' +'; }
+// li > a:only-child:after { content: ''; }
+// @media all and (max-width : 768px) {
+@media all and (max-width : 992px) {
+
+	// #logo {
+	// 	display: block;
+	// 	padding: 0;
+	// 	width: 100%;
+	// 	text-align: center;
+	// 	float: none;
+	// }
+
+	#mainMenu {
+        margin: 0;
+        position: absolute;
+        width: 100%;
+        // padding-left: 40px;
+        box-sizing: border-box;
+	}
+    #mainMenu a {
+        // padding:10px 15px;
+        padding:14px 20px;
+    }
+	/* Hide the navigation menu by default */
+	/* Also hide the  */
+	#mainMenu .toggle + a,
+	.menu {
+		display: none;
+    }
+    .menu {
+        background: #212121;
+    }
+
+	/* Stylinf the toggle lable */
+	.toggle {
+		display: block;
+        // background-color: #254441;
+        background-color: transparent;
+		padding:14px 0 14px 20px;	
+        color:#FFF;
+        font-weight: normal;
+		// font-size:1.85rem;
+		text-decoration:none;
+		border:none;
+	}
+
+	// .toggle:hover {
+	// 	background-color: #000000;
+	// }
+
+	/* Display Dropdown when clicked on Parent Lable */
+	#mainMenu [id^=drop]:checked + ul {
+		display: block;
+	}
+    #mainMenu ul {
+        // float: right;
+        padding: 20px 0 20px 40px;
+        // margin:0;
+        // list-style: none;
+        // position: relative;
+    }
+	/* Change menu item's width to 100% */
+	#mainMenu ul li {
+		display: block;
+		width: 100%;
+    }
+    #mainMenu .iconBar {
+        float: right;
+        font-size: 1.85rem;
+    }
+
+    #mainMenu ul ul .toggle,
+	#mainMenu ul ul a {
+		padding: 0 40px;
+	}
+
+	#mainMenu ul ul ul a {
+		padding: 0 80px;
+	}
+
+	#mainMenu a:hover,
+    #mainMenu ul ul ul a {
+		background-color: #000000;
+	}
+  
+	#mainMenu ul li ul li .toggle,
+	#mainMenu ul ul a,
+    #mainMenu ul ul ul a{
+		padding:14px 20px;	
+		color:#FFF;
+		font-size:17px; 
+	}
+	#mainMenu ul li ul li .toggle,
+	#mainMenu ul ul a {
+		background-color: #212121; 
+    }
+    #mainMenu ul ul a {
+        // background-color: #212121; 
+        background-color: transparent;
+	}
+	/* Hide Dropdowns by Default */
+	#mainMenu ul ul {
+		float: none;
+		position:static;
+		color: #ffffff;
+		/* has to be the same number as the "line-height" of "nav a" */
+	}	
+	/* Hide menus on hover */
+	#mainMenu ul ul li:hover > ul,
+	#mainMenu ul li:hover > ul {
+		display: none;
+	}	
+	/* Fisrt Tier Dropdown */
+	#mainMenu ul ul li {
+		display: block;
+		width: 100%;
+	}
+	#mainMenu ul ul ul li {
+		position: static;
+		/* has to be the same number as the "width" of "nav ul ul li" */ 
+	}
+}
+@media all and (max-width : 330px) {
+	#mainMenu ul li {
+		display:block;
+		width: 94%;
+	}
+}
+
+
+
 
 header { 
     background: transparent;
@@ -17,6 +218,7 @@ header {
         box-sizing: border-box;
         .logoWrap {
             width: 200px;
+            margin-bottom: -2px;
             img {
                 width: 100%;
                 display: block;
@@ -48,32 +250,32 @@ header {
                     }
                 }
             }
-            #mainMenu {
-                ul {
-                    ul {
-                        display: flex;
-                        flex-wrap: wrap;
-                        li {
-                            margin-left: 1rem;
-                            a {
-                                font-family: myriad-pro, sans-serif;
-                                font-weight: 300;
-                                font-size: 1.11rem;
-                                color: #FFF;
-                                text-decoration: none;
-                                &:hover {
-                                    text-decoration: none;
-                                }
-                            }
-                            ul {
-                                display: flex;
-                                flex-wrap: wrap;
-                                flex-direction: column;
-                            }
-                        }
-                    }
-                }
-            }
+            // #mainMenu {
+            //     ul {
+            //         ul {
+            //             display: flex;
+            //             flex-wrap: wrap;
+            //             li {
+            //                 margin-left: 1rem;
+            //                 a {
+            //                     font-family: myriad-pro, sans-serif;
+            //                     font-weight: 300;
+            //                     font-size: 1.11rem;
+            //                     color: #FFF;
+            //                     text-decoration: none;
+            //                     &:hover {
+            //                         text-decoration: none;
+            //                     }
+            //                 }
+            //                 ul {
+            //                     display: flex;
+            //                     flex-wrap: wrap;
+            //                     flex-direction: column;
+            //                 }
+            //             }
+            //         }
+            //     }
+            // }
         }
     }
 }
