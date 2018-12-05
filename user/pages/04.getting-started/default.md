@@ -12,14 +12,14 @@ body_classes: get-start
 <div class="smallContainer">
     <h2>To get started with Subutai Bazaar or PeerOS:</h2>
     <div class="topicWrap">
-        <h6>Register at <a href="#">Subutai Bazaar</a>, our social marketplace for user-administered P2P cloud services</h6>
+        <h6>Register at <a href="#bazaarSection">Subutai Bazaar</a>, our social marketplace for user-administered P2P cloud services</h6>
         <ul>
             <li>Create environments on other users' peers</li>
             <li>Choose the products or applications that you need</li>
         </ul>
     </div>
     <div class="topicWrap">
-        <h6>Install the <a href="#">PeerOS</a>, an open source, P2P (peer-to-peer) Cloud and Internet of Things (IoT) software and firmware</h6>
+        <h6>Install the <a href="#peerSection">PeerOS</a>, an open source, P2P (peer-to-peer) Cloud and Internet of Things (IoT) software and firmware</h6>
         <ul>
             <li>Set up your computing resources for sharing, rent, or barter</li>
             <li>Connect IoT devices to cloud applications securely</li>
@@ -27,26 +27,30 @@ body_classes: get-start
     </div>
 </div>
 
+<div id="bazaarSection"></div>
 <section class="container">
     <h2><img src="images/logo-bazaar-shadow.png" class="titleIcon">Subutai Bazaar</h2>
     <div class="halfCol no-padding">
         <h4>Quick links</h4>
         <ul class="getStart-list">
             <li><a href="/subutai/website/products/subutai-bazaar">What is Subutai Bazaar</a></li>
-            <li><a href="#">Sign up or log in</a></li>
-            <li>For tasks that require authentication (e.g., adding cloud providers), you need to set up PGP keys. You can use the <a href="#">E2E plugin</a> to easily generate and manage these keys. Other software components are available to facilitate administrative tasks on peers and environments.</li>
+            <li><a href="https://bazaar.subutai.io/login">Sign up or log in</a></li>
+            <li>For tasks that require authentication (e.g., adding cloud providers), you need to set up PGP keys. You can use the <a href="#E2E">E2E plugin</a> to easily generate and manage these keys. Other software components are available to facilitate administrative tasks on peers and environments.</li>
             <li>View the <a href="https://docs.subutai.io/Products/Bazaar_toctree.html" target="_blank">complete documentation</a></li>
         </ul>
     </div>
     <figure class="halfCol">
         <img style="width: 100%;" src="images/bazaar-panel-03.jpg">
     </figure>
+</section>
+<section class="container">
+    <div id="peerSection"></div>
     <h2><img src="images/logo-peer-os-web-shadow.png" class="titleIcon">Subutai PeerOS</h2>
     <!-- <div class="halfCol"> -->
         <h4>Quick links</h4>
         <ul class="getStart-list">
             <li>Learn more about <a href="/subutai/website/products/subutai-peeros">Subutai PeerOS</a></li>
-            <li>Install the <a href="#">P2P daemon</a> and <a href="#">Subutai</a> Control Center on your desktop to access your Peers. You may also want to install the <a href="#">E2E plugin</a> that will manage the PGP keys for you</li>
+            <li>Install the <a href="#P2P">P2P daemon</a> and <a href="#controlCenter">Subutai Control Center</a> on your desktop to access your Peers. You may also want to install the <a href="#E2E">E2E plugin</a> that will manage the PGP keys for you</li>
             <li>Choose your preferred way to get the PeerOS up and running:<br><small>Subutai recommends that you use Debian Stretch 9.X to create your Peers</small>
                 <ul>
                     <li><a href="https://docs.subutai.io/Products/PeerOS/03_Run_PeerOS_with_Vagrant.html" target="_blank">Quick install</a> (about 5 minutes)<br><small>Requirements: any system that uses Vagrant and 100 GB disk space</small></li>
@@ -71,11 +75,13 @@ body_classes: get-start
     <div class="textBlock">
         <p>Optimize your use of the Subutai Bazaar or PeerOS by installing the following companion software:</p>
     </div>
+    <div id="E2E"></div>
     <h3>E2E plugin</h3>
     <div class="textBlock">
         <p>Remove the hassle of managing PGP keys that are required to ensure secure communications within the Subutai platform.</p>
         <p>The E2E plugin is directly available from the official store of main browsers <a href="https://chrome.google.com/webstore/detail/subutai-e2e-plugin/ffddnlbamkjlbngpekmdpnoccckapcnh">Chrome</a> and <a href="https://addons.mozilla.org/en-US/firefox/addon/subutai-e2e-plugin/">Firefox</a>. For other supported browsers, you may download from <a href="https://github.com/subutai-io/browser-plugins/releases" target="_blank">here</a>.</p>
     </div>
+    <div id="controlCenter"></div>
     <h3>Subutai Control Center</h3>
     <div class="textBlock">
         <p>Access your peers, containers, and environments via SSH or Remote Desktop. Check or update relevant local software and view your GoodWill balance. Equipped with a built-in file transfer system, the Subutai Control Center also enables you to upload and download files from a remote cloud storage in a secure way.</p>
