@@ -34,6 +34,25 @@
     {% endblock %}
     {{ assets.js() }}
 
+    <script>
+        $(document).ready(function() {
+            //apply the smooth to all links at this page
+            $("a").on('click', function(event) {
+                if (this.hash !== "") {
+                    event.preventDefault();
+                    //store hash
+                    var hash = this.hash;
+
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function(){ 
+                        window.location.hash = hash;
+                    });
+                } //end if
+            });
+        });
+    </script>
+
 {% endblock head %}
 </head>
 
