@@ -13,15 +13,16 @@ body_classes: bazaar
 
 </div>
 
-<div class="container">
-    <div class="halfCol">
+<section class="container">
+    <div class="textBlock">
         <p>The Subutai Bazaar is a marketplace that allows anyone to instantly buy, share, or rent computer resources, as well as raise and operate a sharing economy for countless applications using both Subutai's internal currency (a lightweight digital asset known as <a href="#">"GoodWill"</a>), and <a href="#">KHAN™</a>, Subutai's new Ethereum Blockchain-based reserve currency token.</p>
     </div>
-    <div class="halfCol videoWrap">
+</section>
+<section class="videoSection">
+    <div class="videoWrap">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/HtC-wI_VDTE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     </div>
-</div>
-
+</section>
 <!-- <div class="smallContainer"> -->
 <div class="container">
     <div class="textBlock">

@@ -39,21 +39,29 @@ figure.halfCol {
     }
 }
 // video
-.videoWrap {
-    overflow: hidden;
-    padding-bottom: 56.25%;
-    position: relative;
-    height: 0;
+.videoSection {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
     margin-bottom: 40px;
-}
-.videoWrap iframe {
-    left:0;
-    top:0;
-    height:100%;
-    width:100%;
-    position:absolute;
     padding: 0 20px;
     box-sizing: border-box;
+}
+.videoWrap {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    margin-bottom: 40px;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.15);
+}
+.videoWrap iframe {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    // padding: 0 20px;
+    // box-sizing: border-box;
 }
 .topicWrap {
     .itemRow {
@@ -100,14 +108,13 @@ figure.halfCol {
             }
         }
     }
-    .videoWrap {
-        // height: initial;
-        height: -webkit-fill-available;
-        padding-bottom: initial;
-        iframe {
-            padding: 0;
-        }
-    }
+    // .videoWrap {
+    //     height: -webkit-fill-available;
+    //     padding-bottom: initial;
+    //     iframe {
+    //         padding: 0;
+    //     }
+    // }
     .fullImg {
         margin: 0;
     }

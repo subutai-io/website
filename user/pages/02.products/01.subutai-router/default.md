@@ -13,13 +13,18 @@ body_classes: router
 
 </div>
 
-<div class="container">
-    <div class="halfCol">
+<section class="container">
+    <div class="textBlock">
         <p>The Subutai Blockchain Router is a power-efficient, “green” broadband Cloud router and open hardware IoT gateway. It serves as a plug-and-play cryptocurrency wallet and mining device that allows users to easily enter the cryptocurrency economy. Using just 18W (standalone; 60W with additional Mining Drives), the Subutai Blockchain Router is eco-friendly, cost-effective, and 1,000-2,000%+ more energy efficient for the same hash rate over traditional GPU-based mining devices —a critically important consideration in today’s energy-aware environment.</p>
     </div>
-    <div class="halfCol videoWrap">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/KPPqZw0Rxes?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</section>
+<section class="videoSection">
+    <div class="videoWrap">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/LoL78YR178U?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     </div>
+</section>
+</div> <!-- videoSection -->
+<section class="container">
     <div class="topicWrap halfCol">
         <h4>Subutai Blockchain Router</h4>
         <ul>
@@ -40,7 +45,7 @@ body_classes: router
             <li>Easily connects to other Subutai services</li>
         </ul>
     </div>
-</div>
+</section>
 <div class="smallContainer">
     <div class="textBlock">
         <h3>Revenue Generating</h3>

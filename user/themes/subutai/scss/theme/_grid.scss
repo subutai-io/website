@@ -25,6 +25,11 @@
     box-sizing: border-box;
     padding: 40px 0;
 }
+.halfCol-video {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 40px 0;
+}
 .darkBg {
     width: 100%;
     background: #020E1A;
@@ -177,6 +182,9 @@
         width: calc(50% - 20px);
         margin-bottom: 40px;
         padding: 0;
+    }
+    .halfCol-video {
+        width: calc(50% - 20px);
     }
     .router .container {
         justify-content: space-between;

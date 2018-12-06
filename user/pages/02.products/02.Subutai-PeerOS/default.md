@@ -13,13 +13,16 @@ body_classes: peer
 
 </div>
 
-<div class="container">
-    <div class="halfCol">
+<section class="container">
+    <div class="textBlock">
         <p>Subutai™ PeerOS is Open Source, container-based Peer-to-Peer (P2P) Cloud and Internet of Things (IoT) software and firmware. Subutai opens the $760B Cloud and IoT ecosystem through decentralized, self-adaptive, and cost efficient infrastructure that connects end users and devices more effectively along the continuum.</p>
     </div>
-    <div class="halfCol videoWrap">
+</section>
+<section class="videoSection">
+    <div class="videoWrap">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/LoL78YR178U?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     </div>
+</section>
 </div>
 <div class="container">
     <div class="textBlock">

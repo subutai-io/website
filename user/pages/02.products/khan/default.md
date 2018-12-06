@@ -35,12 +35,12 @@ body_classes: khan
 <section class="smallContainer">
     <h5>For more information, download our White Paper Executive Summary</h5>
     <div class="downloadButtons">
-        <a href="media/technical-paper_executive_summary.pdf" class="btn btn-primary" target="_blank">Download PDF<br />(en)</a>
-        <a href="media/technical-paper_executive_summary-ru.pdf" class="btn btn-primary" target="_blank">скачать PDF<br />(ru)</a>
-        <a href="media/technical-paper_executive_summary-pt.pdf" class="btn btn-primary" target="_blank">Baixe o PDF<br />(pt-br)</a>
-        <a href="media/whitepaper_executive_summary_0.8_TR.pdf" class="btn btn-primary" target="_blank">PDF dosyasını indir<br />(tr)</a>
-        <a href="media/ES-technical-paper_executive_summary.pdf" class="btn btn-primary" target="_blank">Descarga el PDF<br />(es)</a>
+        <a href="../images/technical-paper_executive_summary.pdf" class="btn btn-primary" target="_blank">Download PDF<br />(en)</a>
+        <a href="../images/technical-paper_executive_summary-ru.pdf" class="btn btn-primary" target="_blank">скачать PDF<br />(ru)</a>
+        <a href="../images/technical-paper_executive_summary-pt.pdf" class="btn btn-primary" target="_blank">Baixe o PDF<br />(pt-br)</a>
+        <a href="../images/whitepaper_executive_summary_0.8_TR.pdf" class="btn btn-primary" target="_blank">PDF dosyasını indir<br />(tr)</a>
+        <a href="../images/ES-technical-paper_executive_summary.pdf" class="btn btn-primary" target="_blank">Descarga el PDF<br />(es)</a>
         <!-- <a href="media/technical-paper_executive_summary-pt.pdf" class="btn btn-primary" target="_blank">下載 PDF<br />(cn)</a> -->
-        <a class="btn btn-primary" target="_blank">下載 PDF<br />(cn)</a>
+        <a href="../images/technical-paper_executive_summary_0.10-cn-04.pdf" class="btn btn-primary" target="_blank">下載 PDF<br />(cn)</a>
     </div>
 </section>
