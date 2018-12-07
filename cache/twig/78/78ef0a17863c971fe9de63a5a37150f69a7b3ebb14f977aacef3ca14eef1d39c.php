@@ -81,7 +81,7 @@ class __TwigTemplate_f71b644304bb981ffe1670af33c1e01021b41a74e720cf7fd7ba08b39c4
                 </div>
             </div> <!-- menu wrap -->
             <div class=\"socialWrap\">
-                <h3>Lorem ipsum dolor sit</h3>
+                <h3>Contact us</h3>
                 <div class=\"destakLinks-wrap\">
                     <a href=\"https://slack.subutai.io/\" target=\"_blank\">
                         <i class=\"fab fa-slack-hash\"></i>
@@ -190,7 +190,7 @@ class __TwigTemplate_f71b644304bb981ffe1670af33c1e01021b41a74e720cf7fd7ba08b39c4
                 </div>
             </div> <!-- menu wrap -->
             <div class=\"socialWrap\">
-                <h3>Lorem ipsum dolor sit</h3>
+                <h3>Contact us</h3>
                 <div class=\"destakLinks-wrap\">
                     <a href=\"https://slack.subutai.io/\" target=\"_blank\">
                         <i class=\"fab fa-slack-hash\"></i>

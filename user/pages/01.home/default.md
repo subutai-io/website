@@ -9,11 +9,12 @@ body_classes: home
 <p>Open Source Peer-to-Peer (P2P) Cloud Computing Internet of Things (IoT) and Cryptocurrency Mining for Everyone</p>
 
 <div class="arrowDown">
-	<a href="#"><i class="fas fa-chevron-down"></i></a>
+	<a href="#intro"><i class="fas fa-chevron-down"></i></a>
 </div>
 
 </div>
 <!-- intro text -->
+<div id="intro"></div>
 <div class="darkBg">
 	<div class="smallContainer">
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam volutpat velit at ipsum commodo malesuada. Mauris sed eros gravida tortor consequat porta. Praesent lacinia, felis ac ornare eleifend, augue nisl fermentum nunc, ac malesuada orci eros ac justo. Morbi lacinia et erat quis semper. Sed in metus eget quam elementum facilisis. Sed interdum placerat enim, at porta ipsum tristique.</p>
@@ -34,7 +35,7 @@ body_classes: home
 			<h2>Blockchain Router</h2>
 			<p>Power-efficient “green” broadband cloud router and open hardware IoT gateway that serves as a plug-and-play cryptocurrency wallet and mining device.</p>
 			<div class="btnWrap">
-				<a href="#" class="btn">Product Details</a>
+				<a href="/subutai/website/products/subutai-router" class="btn">Product Details</a>
 			</div>
 		</div>
 	</div>
@@ -50,9 +51,9 @@ body_classes: home
 			<h2>Subutai PeerOS</h2>
 			<p>Container-based Open Source P2P Cloud and IoT software and firmware</p>
 			<div class="btnWrap">
-				<a href="#" class="btn">Product Details</a>
-				<a href="#" class="btn">Technical Documentation</a>
-				<a href="#" class="btn">Getting Started</a>
+				<a href="/subutai/website/products/subutai-peeros" class="btn">Product Details</a>
+				<a href="https://docs.subutai.io/working-with-subutai/using-peeros" target="_blank" class="btn">Technical Documentation</a>
+				<a href="/subutai/website/getting-started" class="btn">Getting Started</a>
 			</div>
 		</div>
 	</div>
@@ -64,9 +65,9 @@ body_classes: home
 			<h2>Subutai Bazaar</h2>
 			<p>Global marketplace for trading computing resources and applications</p>
 			<div class="btnWrap">
-				<a href="#" class="btn">Product Details</a>
-				<a href="#" class="btn">Technical Documentation</a>
-				<a href="#" class="btn">Getting Started</a>
+				<a href="/subutai/website/products/subutai-bazaar" class="btn">Product Details</a>
+				<a href="https://docs.subutai.io/working-with-subutai/using-bazaar" target="_blank" class="btn">Technical Documentation</a>
+				<a href="/subutai/website/getting-started" class="btn">Getting Started</a>
 			</div>
 		</div>
 	</div>
@@ -78,8 +79,8 @@ body_classes: home
 			<h2>Subutai Blueprints</h2>
 			<p>Templates to install applications on the Subutai P2P Cloud Platform</p>
 			<div class="btnWrap">
-				<a href="#" class="btn">Product Details</a>
-				<a href="#" class="btn">Blueprints on Github</a>
+				<a href="/subutai/website/products/subutai-blueprints" class="btn">Product Details</a>
+				<a href="https://github.com/subutai-blueprints" target="_blank" class="btn">Blueprints on Github</a>
 			</div>
 		</div>
 	</div>
@@ -95,15 +96,12 @@ body_classes: home
 			<h2>KHAN</h2>
 			<p>An Ethereum blockchain-based reserve currency and staking token of the Subutai platform.</p>
 			<div class="btnWrap">
-				<a href="#" class="btn">Product Details</a>
-				<a href="#" class="btn">Download White Paper (PDF)</a>
+				<a href="/subutai/website/products/khan" class="btn">Product Details</a>
+				<a href="../images/technical-paper_executive_summary.pdf" class="btn">Download White Paper (PDF)</a>
 			</div>
 		</div>
 	</div>
 
 </section>
 
-<!-- <section class="smallContainer videoWrap">
-
-</section> -->
 
