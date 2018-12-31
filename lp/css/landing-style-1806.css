@@ -299,6 +299,17 @@ h1,h2,h3,h4,h5,h6{
 	line-height: 1.5rem;
 	margin-bottom: 20px;
 }
+.refAuthor {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 100;
+	color: #FFF;
+}
+.refAuthor a {
+	color: #FFF; 
+}
+.refAuthor a:hover {
+	font-weight: normal;
+}
 .secondCta {
 	text-align: center;
 }
@@ -662,7 +673,7 @@ h1,h2,h3,h4,h5,h6{
 	.conclusionText p {
 		font-size: 1.5rem;
 		line-height: 2rem;
-		margin-bottom: 0;
+		margin-bottom: 30px;
 	}
 	.secondCta {
 		text-align: center;
