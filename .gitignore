@@ -1,5 +1,6 @@
 .vagrant/
 node_modules/
+package-lock.json
 
 _site/
 ssf/_site/
