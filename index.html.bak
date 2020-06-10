@@ -168,7 +168,7 @@
 			<div id="bannerText">
 				<h1>Conquer the Cloud</h1>
 				<h2>Open Source Peer-to-Peer (P2P) Cloud Computing</h2>
-				<h2 style="color: #ffffff; margin: 5px">&nbsp;</h2>
+				<h2 style="color: #ffffff; margin: 5px">Internet of Things (IoT) and Cryptocurrency Mining for Everyone</h2>
 				<a href="./getting-started.html">Get Started</a>
 			</div>
 		</div>
@@ -233,14 +233,8 @@
 	</section>
 
 	<section id="khanSection" class="container">
-        <div>
-            <a href="/p2p-cloud-plarform.html">
-                <img src="dist/img/subutai-dynamic-edge-clouds.png" />
-            </a>
-        </div>
-        <h2>
-            <a href="/router.html">Subutai Blockchain Router</a>
-        </h2>
+        <h2><a href="https://optdyn.com/about/press/router-gemnet">Announcing</a> Pre-Sales of the Subutai Blockchain Router <a href="https://gemnet.io/" style="color: #06346F !important;">[BUY NOW]</a></h2>
+		<h2>Reprogrammable. Reusable. Unbrickable.</h2>
 		<div class="khanContainer">
 			<div class="helmetSection">
 				<div class="helmetImg">
@@ -248,7 +242,6 @@
 				</div>
 			</div>
 		</div>
-		<h2>Reprogrammable. Reusable. Unbrickable.</h2>
 	</section>
 
 	<!-- Section 3 -->
