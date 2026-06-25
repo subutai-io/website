@@ -114,7 +114,7 @@
   "description": "The most popular front-end framework for developing responsive, mobile first projects on the web.",
   "devDependencies": {
     "@babel/cli": "7.0.0-beta.44",
-    "@babel/core": "7.0.0-beta.44",
+    "@babel/core": "7.29.6",
     "@babel/preset-env": "7.0.0-beta.44",
     "autoprefixer": "^8.3.0",
     "babel-eslint": "^8.2.3",
